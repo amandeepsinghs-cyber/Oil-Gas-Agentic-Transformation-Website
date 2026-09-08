@@ -17,7 +17,10 @@
 | **Stage 04** | **AI Agent: The Intelligent Microservice** | `final_slides/slide_04_the_intelligent_microservice.LOCKED.html` | 2026-09-08 09:12 UTC | **LOCKED & FROZEN** |
 | **Stage 05** | **Structural Resilience of an Agentic Organisation** | `final_slides/slide_05_the_jenga_metaphor.LOCKED.html` | 2026-09-08 09:52 UTC | **LOCKED & FROZEN** |
 | **Stage 06** | **Proof of an Intelligent Microservice: The Petrophysical AI Agent** | `final_slides/slide_06_the_petrophysical_ai_agent.LOCKED.html` | 2026-09-08 10:51 UTC | **LOCKED & FROZEN** |
-| **Stage 07** | **Architecture of an Intelligent Microservice: The Headless AI Agent** | `final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html` | 2026-09-08 11:35 UTC | **LOCKED & FROZEN** |
+| **Stage 07** | **Architecture of an Intelligent Microservice: The Autonomous AI Agent** | `final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html` | 2026-09-08 11:35 UTC | **LOCKED & FROZEN** |
+| **Stage 08** | **Agentic Transformation Across Workforce & Workflows (300 Seams)** | `final_slides/slide_08_the_enterprise_chessboard.LOCKED.html` | 2026-09-08 16:25 UTC | **LOCKED & FROZEN** |
+| **Stage 09** | **The Agentic Value Topology (3D Prioritization Terrain)** | `final_slides/slide_09_the_agentic_value_topology.LOCKED.html` | 2026-09-08 15:15 UTC | **LOCKED & FROZEN** |
+
 
 ---
 
@@ -156,20 +159,20 @@
     - `1–2 critical hours back`
     - `substantially increasing decision accuracy`
     - `high-value reservoir modeling and maximizing asset recovery`
-- **Narrative Bridge:** Bottom transition to Stage 07 (*Next: Architecture of an Intelligent Microservice: The Headless AI Agent*).
+- **Narrative Bridge:** Bottom transition to Stage 07 (*Next: Architecture of an Intelligent Microservice: The Autonomous AI Agent*).
 
 ---
 
 ### Slide 07 Golden Specifications (Approved):
-- **Headline:** *Architecture of an Intelligent Microservice: The Headless AI Agent* (with signature gradient: `#00E5FF` $\rightarrow$ `#00D2B4`).
-- **Kicker:** `07 ARCHITECTURE // HEADLESS MICROSERVICE & CENTRAL CONTROL PLANE`
+- **Headline:** *Architecture of an Intelligent Microservice: The Autonomous AI Agent* (with signature gradient: `#00E5FF` $\rightarrow$ `#00D2B4`).
+- **Kicker:** `07 ARCHITECTURE // AUTONOMOUS MICROSERVICE & CENTRAL CONTROL PLANE`
 - **Subheading:** *Built on Google Agent Development Kit (ADK), deployed on Vertex AI Agent Runtime, and centrally governed in Gemini Enterprise Agent Registry—delivering deterministic physics across conversational chat, visual workstations, and legacy monoliths.*
 - **Official Google Cloud Reference Architecture Diagram (Embedded Vector SVG):**
   - **Banner:** Google Cloud 4-color brand mark, title, metadata badges (`us-central1`, `A2A Protocol v1.0`, `og-agentic-ecosystem`).
   - **Tier 1: Enterprise Consumption Surfaces ("Two Surfaces, One Brain"):**
     - Gemini Enterprise (Central Command Cockpit, plain-English cross-DB discovery).
     - Subsurface Studio on Cloud Run (FastAPI + Dash WebGL 4-track log viewer, live ADK sync).
-    - Automated Pipelines / Monoliths (Cloud Composer, Techlog/Petrel sidecar, headless A2A JSON-RPC).
+    - Automated Pipelines / Monoliths (Cloud Composer, Techlog/Petrel sidecar, autonomous A2A JSON-RPC).
   - **Tier 2: Central Control Plane & Deterministic Execution Runtime:**
     - Gemini Enterprise Agent Registry (`oil-and-gas-agentic-transf_178868...`).
     - Dedicated IAM Service Identity (`splice-agent@og-agentic-ecosystem`, least privilege, block compartmentation).
@@ -194,4 +197,106 @@
 - **Bottom Boardroom Provocation Horizon Bar:**
   - *THE HIGHER PLANE // A REPEATABLE ENTERPRISE BLUEPRINT:*
   - *"Where else do your engineers pull data from Database A, run standard calculation X, and write to System B? That is where your next autonomous agent belongs."*
-  - Interactive link: `Next: The 10×10 Fleet Matrix →` (`page_08.html`).
+  - Interactive link: `Next: The 20×15 Enterprise Chessboard →` (`page_08.html`).
+
+---
+
+### Slide 08 Golden Specifications (Approved):
+- **Main Title (H1):** *Agentic Transformation Across Workforce & Workflows.* (Bold white, 44px display font)
+- **Subheading (H2):** *AI agents creating value across the value chain of the organisation.* (Medium 22px, signature sovereign turquoise `#00D2B4`)
+- **Kicker:** `STAGE 08 // THE ENTERPRISE CHESSBOARD & VALUE SEAMS`
+- **Eyebrow:** `AGENTIC TRANSFORMATION // WORKFORCE & WORKFLOWS` • `300 OPERATIONAL SEAMS ACROSS 20 DISCIPLINES`
+- **Narrative Lead (Paragraph):** *High-consequence operations rely on specialized domain experts executing complex, multi-stage workflows across disconnected systems. AI agents augment the workforce and fortify workflows—unlocking measurable value across discrete operational seams from upstream exploration to downstream refining.*
+- **Scale & Architecture:**
+  - **Dimensions:** 20 Personas (Rows A through T) × 15 Technical Steps (Steps 1 through 15) = **300 Discrete Non-Overlapping Operational Touchpoints**.
+  - **Alphanumeric Coordinate System:** Rows labeled A–T; Columns / Steps numbered 1–15.
+  - **Strict Principle:** Zero task overlap between disciplines. What a petrophysicist does, a geologist never does; what an FCCU engineer does, an ESP technologist never does.
+- **Visual Metaphor & Layout:**
+  - **Dual-Layer Architecture Toggle:**
+    1. *Workforce & Knowledge Seams:* Workflows overlap directly with human domain experts.
+    2. *Physical Operations & Assets:* Workflows diverge and run continuously across physical machinery/SCADA 24/7/365.
+  - **The Lighthouse Benchmark Cell (Row J, Step 8 / J8):**
+    - Persona: `Lead Petrophysicist`
+    - Action: `J8 • Step 8: Multi-Pass Wireline Curve Splicing` (Kansas Well A-12 benchmark).
+    - Styling: Glowing turquoise green pulse (`#00D2B4` $\rightarrow$ `#00A3FF`), pulsing aura, solid sovereign fill.
+  - **Chessboard Cell Numbering (`rowcolumn`):**
+    - Every box displays its unique alphanumeric chessboard coordinate: `rowcolumn` (`A1` through `T15`).
+    - The benchmark petrophysical splicing agent is numbered **`J8`**.
+  - **The Value Seams (CAD Drafting Cross-Hatch Textures):**
+    - `🔴 52 Critical Risk Seams`: Catastrophic blowout / ₹50Cr+ bleed; styled with 45° red CAD drafting cross-hatch.
+    - `🟡 84 Friction Bottlenecks`: 1–4 hr engineering decision lag; styled with -45° amber CAD drafting cross-hatch.
+    - `⚪ 164 Baseline Monoliths`: Legacy commercial software locks; styled in dark blueprint slate.
+- **Interactive Live HUD (Heads-Up Display) Inspector:**
+  - Sticky side panel that dynamically updates on cell hover/click without layout shifts.
+  - Displays: Persona & Segment badge, Action title (`rowcolumn • Step N: Title`), Monolith tool, Status badge.
+  - **High-Contrast Callouts & Governance Modules (Ordered Flow):**
+    - `🔴 THE LATENT VULNERABILITY (VALUE BLEED)`: Concrete operational failure mode.
+    - `⚡ AI AGENT (THE OPPORTUNITY)`: Exact sovereign agent solution, mathematical method, and automation speed.
+    - `VERTEX AI AGENT REGISTRY IDENTITY`: Resource path, deployment lifecycle state, IAM identity, and technical stack.
+    - **Exposure Metrics:** Annual risk mitigation (e.g. ₹45 Cr/yr) and Decision velocity (e.g. 3.2s vs 2.5 Hrs).
+    - **Contextual Action Area:** Slide 06 proof link on J8 anchor, active production/Wave 1 priority tags on candidates. Top toolbar features global `🎯 Focus J8 Anchor`.
+- **Top Metric Ribbon:**
+  - Total Operational Nodes: `300 Touchpoints (Zero Task Overlap)`
+  - Lighthouse Validated: `1 / 300 (0.33%)`
+  - Critical Risk Seams: `52 Seams`
+  - Manual Friction Gaps: `84 Bottlenecks`
+  - Baseline Monoliths: `164 Monolith Silos`
+- **Filter Controls:** All 300 Seams, Lighthouse Only, Critical Red, Friction Amber, Baseline.
+- **Strategic Takeaway Bottom Strip:** Full-width stretched executive callout banner ("Strategic Agent Prioritisation Playbook") spanning left-to-right beneath the grid and HUD, highlighting disciplined, prioritized deployment across high-exposure operational seams rather than attempting to automate every action.
+- **Narrative Bridge:** Bottom transition to Stage 09 (*Next: The Agentic Value Topology: 3D Prioritization Horizon*).
+
+---
+
+### Slide 09 Golden Specifications (Approved):
+- **Headline:** *Agent Economics: The Value Map of Agentic Transformation.*<br>*Mapping value unlock by individual autonomous agents for strategic prioritisation.* (with signature sovereign turquoise highlight `#00D2B4`).
+- **Kicker:** `STAGE 09 // THE AGENTIC VALUE TOPOLOGY`
+- **Eyebrow:** `AGENT ECONOMICS // ENTERPRISE VALUE TOPOLOGY`
+- **Subheading:** *Quantifying 300 operational seams by capital at risk (₹ Cr / yr) establishes an actionable investment topology—sequencing deployment from our proven lighthouse agent directly into the highest-exposure enterprise targets.*
+- **Split-Screen Architecture:**
+  - **Left Panel (Operational Coordinates & Leaderboard):**
+    - High-Exposure Seams & Prioritised Value-Unlock Agents:
+      - `★ Lighthouse Agent (Proven): Lead Petrophysicist`: Wireline Curve Splicing (₹45 Cr / yr, 3.2s SciPy benchmark, Validated in Production).
+      - `Target 01 (Highest Exposure): Hydrocracker Specialist`: Reactor Thermal Runaway & Quench (₹130 Cr / yr, 0.1s multi-point quench).
+      - `Target 02: Drilling Operations Lead`: Anti-Collision Scanning vs Offset Wellbores (₹120 Cr / yr, 0ms collision alert).
+      - `Target 03: FCCU Process Engineer`: Slide Valve Reverse & Cyclone Catalyst Blowout (₹115 Cr / yr, 0.1s differential pressure governor).
+      - `Target 04: CDU Distillation Lead`: Multi-Crude Assay True Boiling Point Blend (₹90 Cr / yr, real-time non-linear assay optimizer).
+    - Interactive 2D Chessboard Coordinate Radar: 300 mini-cells linked bi-directionally to the 3D terrain mesh.
+    - **Engine Specifications (4,389-Node Nebula Particle Surface Engine — 1:1 Match with image78.png):**
+      - **High-Density Nebula Subdivision:** 4× subdivision (`SUB_R = 4, SUB_C = 4`), creating a dense $77 \times 57 = 4,389$-node particle mesh (4,256 quads) that replicates the organic, fluid billowing silk folds of `image78.png`.
+      - **Aesthetic Texture Architecture:** Rather than a static background image, the 3D plot itself renders as the celestial nebula floating in a deep cosmic void (`#061A22` $\rightarrow$ `#030F14` $\rightarrow$ `#01080B`) via a 5-pass rendering pipeline:
+        1. *Pass 1 (Translucent Silk-Cloth Veil):* Depth-sorted quads (Painter's algorithm) with delicate alpha shading (`alpha * 0.32`, `0.45px` hairline stroke) transmitting light through undulating folds.
+        2. *Pass 2 (Flowing Spline Streamlines):* Longitudinal Catmull-Rom streamlines tracing harmonic contours across columns (`strokeWidth 0.7`).
+        3. *Pass 3 (Luminous Stardust Particles — High Summits & Lighthouse Agent Only):* Uncluttered, clean silk cloth across 85%+ of the terrain; stardust dots rendered strictly at peaks (`elev >= 75 Cr`) and Lighthouse Agent Level, with delicate celestial halos on critical summits ($> ₹95\text{ Cr}$).
+        4. *Pass 4 (Summit Light Pillars & Halos):* Ground-to-peak dashed vertical beams, pulsating concentric rings, and 3D billboard tags (`★ LIGHTHOUSE (₹45 Cr)` and `TARGET (₹X Cr)`).
+        5. *Pass 5 (Interactive Radar Cursor Reticle):* Bi-directional hover targeting from the 2D chessboard radar.
+      - **Authentic Tri-Spectrum Engine (1-Click Executive Palette Switcher):**
+        - **Spectrum A: Google Light Spectrum (Default — Physical Visible Wavelength Order ROYGBIV):**
+          - Mapped strictly across the physical visible light spectrum ($\sim 400\text{ nm} \rightarrow 700\text{ nm}$) using official Google brand anchors without non-monotonic optical jumps:
+            $$\text{Cosmic Indigo (400nm)} \longrightarrow \text{Google Blue (460nm, \#4285F4)} \longrightarrow \text{Sovereign Turquoise (490nm, \#00D2B4)} \longrightarrow \text{Google Green (530nm, \#34A853)} \longrightarrow \text{Google Yellow (580nm, \#FBBC04)} \longrightarrow \text{Google Red (650nm, \#EA4335)} \longrightarrow \text{Starburst White (>700nm apex, \#FFFFFF)}$$
+          - `> ₹118 Cr / yr` (`norm >= 0.90`): White-Hot Apex Summits (`#FFFFFF`, pure starburst crowning).
+          - `₹95–118 Cr / yr` (`0.75 <= norm < 0.90`): Google Crimson Red (`#EA4335`, critical process hazards & runaway).
+          - `₹75–95 Cr / yr` (`0.55 <= norm < 0.75`): Google Sun Yellow (`#FBBC04`, friction bottleneck ridges).
+          - `₹50–75 Cr / yr` (`0.35 <= norm < 0.55`): Google Emerald Green (`#34A853`, operational slopes & flanks).
+          - `₹25–50 Cr / yr` (`0.15 <= norm < 0.35`): Electric Cyan & Sovereign Turquoise (`#00D2B4` $\rightarrow$ `#00FFD5`, Lighthouse Agent Level).
+          - `< ₹25 Cr / yr` (`norm < 0.15`): Google Blue & Cosmic Indigo (`#4285F4` $\rightarrow$ `#15173C`, baseline monolith plains).
+          - `Lighthouse Agent Sanctuary`: Radiant Sovereign Turquoise (`#00D2B4`, `#00FFD5`).
+        - **Spectrum B: Oceanic Aqua & Turquoise (Monochrome Cool):**
+          - `> ₹95 Cr / yr`: Starburst Cyan & White Summits (`#00F0FF` $\rightarrow$ `#FFFFFF`).
+          - `₹60–95 Cr / yr`: Solar Gold & Amber Heat Folds (`#EA580C` $\rightarrow$ `#FBBF24`).
+          - `₹25–60 Cr / yr`: Luminous Aqua-Green & Electric Turquoise Flanks (`#00D2B4` $\rightarrow$ `#10B981`).
+          - `< ₹25 Cr / yr`: Deep Oceanic Teal & Marine Void (`rgb(4, 35, 42)` $\rightarrow$ `rgb(8, 72, 78)`).
+        - **Spectrum C: Official Google Gemini Spectrum (Cosmic Violet & Magenta):**
+          - `> ₹115 Cr / yr`: Starburst Cyan & White Summits (`#00F0FF` $\rightarrow$ `#FFFFFF`).
+          - `₹90–115 Cr / yr`: Solar Gold & Amber Heat Folds (`#EA580C` $\rightarrow$ `#FBBF24`).
+          - `₹60–90 Cr / yr`: Gemini Orchid Violet & Radiant Magenta (`#8B5CF6` $\rightarrow$ `#EC4899`).
+          - `₹30–60 Cr / yr`: Sovereign Turquoise & Electric Azure River (`#00D2B4` $\rightarrow$ `#00A3FF`).
+          - `< ₹30 Cr / yr`: Deep Space Indigo Plains (`#0A1026` $\rightarrow$ `#1E1B4B`).
+      - **Rigorous Mathematical Grounding:** $Z$-elevation strictly driven by the financial exposure / capital at risk (₹ Cr / yr) of each operational agent, preserving exact integer coordinates (e.g. Kansas Petrophysicist at ₹45/75 Cr, Hydrocracker at ₹130 Cr, Drilling Anti-Collision at ₹120 Cr, FCCU at ₹115 Cr, CDU at ₹90 Cr).
+      - **Vertical Baseline Re-Alignment:** 3D terrain projection anchor shifted from center screen to bottom 2/3rd (~67% down), eliminating empty space at bottom as mountain summits climb naturally into the cosmic void above.
+    - 3D Interactive Controls: OrbitControls (360° mouse drag, elevation zoom), Auto-Rotate toggle, Top-Down Contour (2D) view, Reset Perspective, Focus Lighthouse Agent (`★ Focus Lighthouse Agent`), and **Minimalist Spectrum Switch Toggle** (`🎨 [ ●━━━━ ]`, no verbose naming) docked on the right-hand side directly next to the 3D plot for seamless 2-way switching between Google Light Spectrum and Oceanic Aqua with synchronized 2D radar and contour legend.
+    - Floating 3D Tooltip: Displays peak title, persona, and elevation value on cursor proximity.
+- **Bottom 3-Phase Playbook Strip:**
+  - `Phase 1: Lighthouse Agent (Proven)`: 1 Agent Validated in Production (Kansas Wireline Splicing, ₹45 Cr exposure eliminated in 3.2s).
+  - `Phase 2: Top 5 High-Value Agents (Target Fleet)`: ₹570 Cr / yr Exposure Mitigated (Hydrocracker, Anti-Collision, FCCU, CDU, Tank Overfill).
+  - `Phase 3: Enterprise-Wide Scale`: 84 Value-Unlock Agents (1–4 hr engineering latency automated across all operational seams).
+

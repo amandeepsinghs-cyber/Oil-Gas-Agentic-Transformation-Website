@@ -1,4 +1,4 @@
-# Slide 07 Build Narrative: Architecture of an Intelligent Microservice: The Headless AI Agent
+# Slide 07 Build Narrative: Architecture of an Intelligent Microservice: The Autonomous AI Agent
 
 ## 1. Executive Purpose & Boardroom Positioning
 
@@ -26,17 +26,17 @@ The visual core of Slide 07 is an official Google Cloud Reference Architecture d
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ STAGE 07 // SOVEREIGN REFERENCE ARCHITECTURE // HEADLESS AGENT & CONTROL PLANE                         │
+│ STAGE 07 // SOVEREIGN REFERENCE ARCHITECTURE // AUTONOMOUS AGENT & CONTROL PLANE                       │
 ├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                                        │
-│  HEADING: Architecture of an Intelligent Microservice: The Headless AI Agent                           │
+│  HEADING: Architecture of an Intelligent Microservice: The Autonomous AI Agent                         │
 │  SUBHEADING: Built on Google Agent Development Kit (ADK), deployed on Vertex AI Agent Runtime, and     │
 │              centrally governed in Gemini Enterprise Agent Registry—delivering deterministic physics.  │
 │                                                                                                        │
 │  ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐  │
 │  │ 1. ENTERPRISE CONSUMPTION SURFACES ("TWO SURFACES, ONE BRAIN")                                   │  │
 │  │  [Card 1: Gemini Enterprise]        [Card 2: Subsurface Studio]        [Card 3: Pipelines/Airflow]│  │
-│  │   Central Command Cockpit            Specialist Petrophysics UI         Headless Batch Automation│  │
+│  │   Central Command Cockpit            Specialist Petrophysics UI         Autonomous Batch          │  │
 │  │   Natural Language Discovery         4-Track WebGL Log Viewer           Techlog / Petrel Sidecar │  │
 │  └──────────────────────────────────────────────────────────────────────────────────────────────────┘  │
 │                     │ (1)                             │ (2)                             │ (3)          │

@@ -1,500 +1,431 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Agentic Value Topology | Sovereign Agentic Transformation</title>
-  <link rel="stylesheet" href="../../assets/styles.css">
-  <style>
-    :root {
-      --slate-bg: #06090E;
-      --slate-panel: rgba(13, 19, 32, 0.85);
-      --slate-border: rgba(255, 255, 255, 0.08);
-      --security-turquoise: #00D2B4;
-      --security-azure: #00A3FF;
-      --nebula-crimson: #EF4444;
-      --hazard-amber: #F59E0B;
-      --font-display: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
-    }
+<!-- ========================================================================= -->
+<!-- SLIDE: STAGE 09 // THE AGENTIC VALUE TOPOLOGY                            -->
+<!-- 3D VALUE ELEVATION MODEL & CAPITAL EXPOSURE TERRAIN                       -->
+<!-- ZERO EXTERNAL DEPENDENCY // AIRLOCK-PROOF PURE CANVAS 3D ENGINE           -->
+<!-- ========================================================================= -->
+<style>
+  #stage-09 {
+    --slate-bg: #06090E;
+    --slate-panel: rgba(13, 19, 32, 0.85);
+    --slate-border: rgba(255, 255, 255, 0.08);
+    --security-turquoise: #00D2B4;
+    --security-azure: #00A3FF;
+    --nebula-crimson: #EF4444;
+    --hazard-amber: #F59E0B;
+    --font-display: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+    background: var(--slate-bg);
+    color: #E2E8F0;
+    padding: 80px max(24px, 3.5vw);
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
+    overflow-x: hidden;
+  }
 
-    body {
-      background: var(--slate-bg);
-      color: #E2E8F0;
-      font-family: var(--font-display);
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
+  /* Background Grids */
+  #stage-09 .slide-bg-media {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
 
-    /* Top Navigation */
-    .executive-top-nav {
-      backdrop-filter: blur(20px);
-      background: rgba(6, 9, 14, 0.90);
-      border-bottom: 1px solid var(--slate-border);
-      padding: 12px max(24px, 3.5vw);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+  #stage-09 .slide-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
 
-    /* Background Grids */
-    .slide-bg-media {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
+  /* 3D Canvas Viewport */
+  #stage-09 #topology-canvas-container {
+    width: 100%;
+    height: 640px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 50%, #0B1323 0%, #06090E 95%);
+    border: 1px solid rgba(0, 210, 180, 0.25);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 40px rgba(0, 210, 180, 0.04);
+  }
 
-    .slide-bg-grid {
-      position: absolute;
-      inset: 0;
-      background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
+  #stage-09 #terrain-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: grab;
+  }
 
-    /* 3D Canvas Viewport */
-    #topology-canvas-container {
-      width: 100%;
-      height: 640px;
-      position: relative;
-      border-radius: 10px;
-      overflow: hidden;
-      background: radial-gradient(circle at 50% 50%, #0B1323 0%, #06090E 95%);
-      border: 1px solid rgba(0, 210, 180, 0.25);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 40px rgba(0, 210, 180, 0.04);
-    }
+  #stage-09 #terrain-canvas:active {
+    cursor: grabbing;
+  }
 
-    #terrain-canvas {
-      width: 100%;
-      height: 100%;
-      display: block;
-      cursor: grab;
-    }
+  /* Leaderboard Peak Cards */
+  #stage-09 .summit-card {
+    background: rgba(13, 19, 32, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+  }
 
-    #terrain-canvas:active {
-      cursor: grabbing;
-    }
+  #stage-09 .summit-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateX(4px);
+    border-color: rgba(255, 255, 255, 0.25);
+  }
 
-    /* Floating 3D HUD Tooltip */
-    #terrain-tooltip {
-      position: absolute;
-      pointer-events: none;
-      background: rgba(6, 9, 14, 0.94);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--security-turquoise);
-      border-radius: 6px;
-      padding: 10px 14px;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: #FFF;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 210, 180, 0.3);
-      z-index: 100;
-      display: none;
-      transform: translate(-50%, -120%);
-      transition: opacity 0.15s ease;
-    }
+  #stage-09 .summit-card.active-summit {
+    background: rgba(0, 210, 180, 0.12);
+    border-color: var(--security-turquoise);
+    box-shadow: 0 0 18px rgba(0, 210, 180, 0.25);
+    transform: translateX(6px);
+  }
 
-    /* Leaderboard Peak Cards */
-    .summit-card {
-      background: rgba(13, 19, 32, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 6px;
-      padding: 12px 14px;
-      margin-bottom: 8px;
-      cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-      position: relative;
-      overflow: hidden;
-    }
+  #stage-09 .summit-card.summit-plugged {
+    background: linear-gradient(135deg, rgba(0, 210, 180, 0.18) 0%, rgba(0, 163, 255, 0.12) 100%);
+    border: 1.5px solid var(--security-turquoise);
+  }
 
-    .summit-card:hover {
-      background: rgba(255, 255, 255, 0.06);
-      transform: translateX(4px);
-      border-color: rgba(255, 255, 255, 0.25);
-    }
+  /* Mini Matrix Grid */
+  #stage-09 .mini-grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 2px;
+    padding: 8px;
+    background: rgba(6, 9, 14, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+  }
 
-    .summit-card.active-summit {
-      background: rgba(0, 210, 180, 0.12);
-      border-color: var(--security-turquoise);
-      box-shadow: 0 0 18px rgba(0, 210, 180, 0.25);
-      transform: translateX(6px);
-    }
+  #stage-09 .mini-cell {
+    height: 10px;
+    border-radius: 1px;
+    background: rgba(255, 255, 255, 0.04);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
 
-    .summit-card.summit-plugged {
-      background: linear-gradient(135deg, rgba(0, 210, 180, 0.18) 0%, rgba(0, 163, 255, 0.12) 100%);
-      border: 1.5px solid var(--security-turquoise);
-    }
+  #stage-09 .mini-cell:hover {
+    transform: scale(1.6);
+    z-index: 10;
+  }
 
-    /* Mini Matrix Grid */
-    .mini-grid {
-      display: grid;
-      grid-template-columns: repeat(15, 1fr);
-      gap: 2px;
-      padding: 8px;
-      background: rgba(6, 9, 14, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 6px;
-    }
+  #stage-09 .mini-cell.mini-plugged { background: var(--security-turquoise); box-shadow: 0 0 8px var(--security-turquoise); }
+  #stage-09 .mini-cell.mini-starburst { background: #FFFFFF; box-shadow: 0 0 6px #FFFFFF; }
+  #stage-09 .mini-cell.mini-red { background: #EA4335; box-shadow: 0 0 4px #EA4335; }
+  #stage-09 .mini-cell.mini-yellow { background: #FBBC04; box-shadow: 0 0 4px #FBBC04; }
+  #stage-09 .mini-cell.mini-green { background: #34A853; }
+  #stage-09 .mini-cell.mini-aquagreen { background: #00D2B4; }
+  #stage-09 .mini-cell.mini-blue { background: #4285F4; }
+  #stage-09 .mini-cell.mini-indigo { background: #1E1B4B; }
+  #stage-09 .mini-cell.mini-amber { background: #F59E0B; box-shadow: 0 0 4px #F59E0B; }
+  #stage-09 .mini-cell.mini-orchid { background: #9333EA; box-shadow: 0 0 4px rgba(147, 51, 234, 0.4); }
+  #stage-09 .mini-cell.mini-teal { background: #064E52; }
 
-    .mini-cell {
-      height: 10px;
-      border-radius: 1px;
-      background: rgba(255, 255, 255, 0.04);
-      cursor: pointer;
-      transition: transform 0.15s ease;
-    }
+  #stage-09 .pill-btn {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 5px 12px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: #94A3B8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
 
-    .mini-cell:hover {
-      transform: scale(1.6);
-      z-index: 10;
-    }
+  #stage-09 .pill-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFF;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
 
-    .mini-cell.mini-plugged { background: var(--security-turquoise); box-shadow: 0 0 8px var(--security-turquoise); }
-    .mini-cell.mini-starburst { background: #FFFFFF; box-shadow: 0 0 6px #FFFFFF; }
-    .mini-cell.mini-red { background: #EA4335; box-shadow: 0 0 4px #EA4335; }
-    .mini-cell.mini-yellow { background: #FBBC04; box-shadow: 0 0 4px #FBBC04; }
-    .mini-cell.mini-green { background: #34A853; }
-    .mini-cell.mini-aquagreen { background: #00D2B4; }
-    .mini-cell.mini-blue { background: #4285F4; }
-    .mini-cell.mini-indigo { background: #1E1B4B; }
-    .mini-cell.mini-amber { background: #F59E0B; box-shadow: 0 0 4px #F59E0B; }
-    .mini-cell.mini-orchid { background: #9333EA; box-shadow: 0 0 4px rgba(147, 51, 234, 0.4); }
-    .mini-cell.mini-teal { background: #064E52; }
+  #stage-09 .pill-btn.active {
+    background: rgba(0, 210, 180, 0.18);
+    border-color: var(--security-turquoise);
+    color: var(--security-turquoise);
+    font-weight: 700;
+  }
+</style>
 
-    /* Custom Buttons */
-    .pill-btn {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      padding: 5px 12px;
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background: rgba(255, 255, 255, 0.04);
-      color: #94A3B8;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
+<section class="slide narrative-stage" id="stage-09">
+  
+  <!-- Atmospheric Grid Backdrop -->
+  <div class="slide-bg-media">
+    <div class="slide-bg-grid"></div>
+    <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 35%, rgba(0, 210, 180, 0.05) 0%, rgba(6, 9, 14, 0.96) 65%, var(--slate-bg) 100%);"></div>
+  </div>
 
-    .pill-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #FFF;
-      border-color: rgba(255, 255, 255, 0.25);
-    }
-
-    .pill-btn.active {
-      background: rgba(0, 210, 180, 0.18);
-      border-color: var(--security-turquoise);
-      color: var(--security-turquoise);
-      font-weight: 700;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Top Executive Navigation Bar -->
-  <header class="executive-top-nav">
-    <a href="../index.html#stage-09" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
-      <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
-      <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2);"></div>
-      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: #FFFFFF; letter-spacing: 1.5px; text-transform: uppercase;">STAGE 09 // THE AGENTIC VALUE TOPOLOGY</span>
-    </a>
-    <nav style="display: flex; align-items: center; gap: 18px;">
-      <a href="page_08.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #94A3B8; text-decoration: none; padding: 4px 12px; border-radius: 6px; background: rgba(255,255,255,0.04); transition: color 0.2s;">← Prev Page (Slide 08)</a>
-      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--security-turquoise); font-weight: 700;">9 / 16</span>
-      <a href="page_10.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 12px; border-radius: 6px; background: rgba(0, 163, 255, 0.08); transition: color 0.2s;">Next Page (Slide 10) →</a>
-      <a href="../index.html#stage-09" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 16px; border-radius: 20px; text-decoration: none; margin-left: 6px;">
-        Continuous Deck View ↗
-      </a>
-    </nav>
-  </header>
-
-  <!-- Main Viewport -->
-  <main id="viewport-scaler" style="padding-top: 75px; min-height: 100vh; position: relative;">
+  <div style="max-width: 1720px; margin: 0 auto; position: relative; z-index: 2;">
     
-    <!-- Atmospheric Grid Backdrop -->
-    <div class="slide-bg-media">
-      <div class="slide-bg-grid"></div>
-      <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 35%, rgba(0, 210, 180, 0.05) 0%, rgba(6, 9, 14, 0.96) 65%, var(--slate-bg) 100%);"></div>
-    </div>
-
-    <div style="max-width: 1720px; margin: 0 auto; padding: 30px max(20px, 2.5vw); position: relative; z-index: 2;">
-      
-      <!-- Stage Header Block -->
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; margin-bottom: 22px; flex-wrap: wrap;">
-        <div>
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-            <span style="font-family: var(--font-mono); font-size: 12px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 2px; text-transform: uppercase;">
-              AGENT ECONOMICS // ENTERPRISE VALUE TOPOLOGY
-            </span>
-            <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise);"></span>
-            <span style="font-family: var(--font-mono); font-size: 11px; color: #94A3B8;">300-TOUCHPOINT VALUE UNLOCK MODEL</span>
-          </div>
-
-          <h1 style="font-size: clamp(32px, 3.3vw, 54px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; color: #FFFFFF; margin: 0 0 10px 0;">
-            Agent Economics: The Value Map of Agentic Transformation.<br>
-            <span style="color: var(--security-turquoise);">Mapping value unlock by individual autonomous agents for strategic prioritisation.</span>
-          </h1>
-
-          <p style="font-size: clamp(14px, 1.05vw, 16px); line-height: 1.45; color: #94A3B8; max-width: 1100px; margin: 0;">
-            Quantifying 300 operational seams by <strong style="color: #FFF;">capital at risk (₹ Cr / yr)</strong> establishes an actionable investment topology—sequencing deployment from our <strong style="color: var(--security-turquoise);">proven lighthouse agent</strong> directly into the highest-exposure enterprise targets.
-          </p>
-        </div>
-
-        <!-- 3D Controls Toolstrip -->
-        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">
-          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-            <button class="pill-btn active" id="btn-auto-rotate" onclick="toggleAutoRotate()">Auto-Rotate: ON</button>
-            <button class="pill-btn" onclick="resetTerrainView()">Reset Perspective</button>
-            <button class="pill-btn" onclick="setTopDownView()">Top-Down Contour (2D)</button>
-            <button class="pill-btn" onclick="focusSummit('s-petro')">★ Focus Lighthouse Agent</button>
-          </div>
-          <span style="font-family: var(--font-mono); font-size: 11px; color: #64748B;">
-            Interactive Orbit: Click &amp; drag to rotate • Scroll to zoom elevation
+    <!-- Stage Header Block -->
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; margin-bottom: 22px; flex-wrap: wrap;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+          <span style="font-family: var(--font-mono); font-size: 12px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 2px; text-transform: uppercase;">
+            AGENT ECONOMICS // ENTERPRISE VALUE TOPOLOGY
           </span>
+          <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise);"></span>
+          <span style="font-family: var(--font-mono); font-size: 11px; color: #94A3B8;">300-TOUCHPOINT VALUE UNLOCK MODEL</span>
         </div>
+
+        <h1 style="font-size: clamp(32px, 3.3vw, 54px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; color: #FFFFFF; margin: 0 0 10px 0;">
+          Agent Economics: The Value Map of Agentic Transformation.<br>
+          <span style="color: var(--security-turquoise);">Mapping value unlock by individual autonomous agents for strategic prioritisation.</span>
+        </h1>
+
+        <p style="font-size: clamp(14px, 1.05vw, 16px); line-height: 1.45; color: #94A3B8; max-width: 1100px; margin: 0;">
+          Quantifying 300 operational seams by <strong style="color: #FFF;">capital at risk (₹ Cr / yr)</strong> establishes an actionable investment topology—sequencing deployment from our <strong style="color: var(--security-turquoise);">proven lighthouse agent</strong> directly into the highest-exposure enterprise targets.
+        </p>
       </div>
 
-      <!-- Split Layout: Left Box (38%) & Right 3D Topographical Map (62%) -->
-      <div style="display: grid; grid-template-columns: 480px minmax(0, 1fr); gap: 24px; align-items: start;">
+      <!-- 3D Controls Toolstrip -->
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <button class="pill-btn active" id="btn-auto-rotate-stage" onclick="toggleAutoRotate()">Auto-Rotate: ON</button>
+          <button class="pill-btn" onclick="resetTerrainView()">Reset Perspective</button>
+          <button class="pill-btn" onclick="setTopDownView()">Top-Down Contour (2D)</button>
+          <button class="pill-btn" onclick="focusSummit('s-petro')">★ Focus Lighthouse Agent</button>
+        </div>
+        <span style="font-family: var(--font-mono); font-size: 11px; color: #64748B;">
+          Interactive Orbit: Click &amp; drag to rotate • Scroll to zoom elevation
+        </span>
+      </div>
+    </div>
+
+    <!-- Split Layout: Left Box (38%) & Right 3D Topographical Map (62%) -->
+    <div style="display: grid; grid-template-columns: 480px minmax(0, 1fr); gap: 24px; align-items: start;">
+      
+      <!-- ================= LEFT PANEL: THE OPERATIONAL COORDINATES ================= -->
+      <div style="display: flex; flex-direction: column; gap: 16px;">
         
-        <!-- ================= LEFT PANEL: THE OPERATIONAL COORDINATES ================= -->
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-          
-          <!-- Sector Filter Bar -->
-          <div style="display: flex; gap: 6px; flex-wrap: wrap; background: rgba(13, 19, 32, 0.7); padding: 8px 12px; border-radius: 6px; border: 1px solid var(--slate-border);">
-            <button class="pill-btn active" onclick="filterTerrainSector('all', this)">All Priority Agents</button>
-            <button class="pill-btn" onclick="filterTerrainSector('geosciences', this)">Geosciences</button>
-            <button class="pill-btn" onclick="filterTerrainSector('drilling', this)">Drilling</button>
-            <button class="pill-btn" onclick="filterTerrainSector('production', this)">Production</button>
-            <button class="pill-btn" onclick="filterTerrainSector('refining', this)">Downstream</button>
+        <!-- Sector Filter Bar -->
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; background: rgba(13, 19, 32, 0.7); padding: 8px 12px; border-radius: 6px; border: 1px solid var(--slate-border);">
+          <button class="pill-btn active" onclick="filterTerrainSector('all', this)">All Priority Agents</button>
+          <button class="pill-btn" onclick="filterTerrainSector('geosciences', this)">Geosciences</button>
+          <button class="pill-btn" onclick="filterTerrainSector('drilling', this)">Drilling</button>
+          <button class="pill-btn" onclick="filterTerrainSector('production', this)">Production</button>
+          <button class="pill-btn" onclick="filterTerrainSector('refining', this)">Downstream</button>
+        </div>
+
+        <!-- The High-Consequence Summit Leaderboard -->
+        <div style="background: rgba(13, 19, 32, 0.85); border: 1px solid var(--slate-border); border-radius: 8px; padding: 18px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+            <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #FFF; letter-spacing: 1px;">
+              PRIORITISED VALUE-UNLOCK AGENTS // HIGH-EXPOSURE SEAMS
+            </span>
+            <span style="font-family: var(--font-mono); font-size: 10px; color: var(--security-turquoise);">CLICK TO INSPECT AGENT</span>
           </div>
 
-          <!-- The High-Consequence Summit Leaderboard -->
-          <div style="background: rgba(13, 19, 32, 0.85); border: 1px solid var(--slate-border); border-radius: 8px; padding: 18px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #FFF; letter-spacing: 1px;">
-                PRIORITISED VALUE-UNLOCK AGENTS // HIGH-EXPOSURE SEAMS
-              </span>
-              <span style="font-family: var(--font-mono); font-size: 10px; color: var(--security-turquoise);">CLICK TO INSPECT AGENT</span>
+          <!-- Summit Item 1: Lighthouse Agent (PROVEN) -->
+          <div class="summit-card summit-plugged active-summit" id="card-petro-stage" onclick="focusSummit('s-petro')">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 10px; background: var(--security-turquoise); color: #06090E; font-weight: 800; padding: 1px 6px; border-radius: 3px;">
+                  ★ LIGHTHOUSE PROVEN
+                </span>
+                <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">Lead Petrophysicist</span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--security-turquoise);">₹45 Cr / yr</span>
             </div>
-
-            <!-- Summit Item 1: Lighthouse Agent (PROVEN) -->
-            <div class="summit-card summit-plugged active-summit" id="card-petro" onclick="focusSummit('s-petro')">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span style="font-family: var(--font-mono); font-size: 10px; background: var(--security-turquoise); color: #06090E; font-weight: 800; padding: 1px 6px; border-radius: 3px;">
-                    ★ LIGHTHOUSE PROVEN
-                  </span>
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">Lead Petrophysicist</span>
-                </div>
-                <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--security-turquoise);">₹45 Cr / yr</span>
-              </div>
-              <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
-                Wireline Curve Splicing (Slide 06 Benchmark)
-              </div>
-              <div style="font-size: 11.5px; color: #94A3B8;">
-                3.2s SciPy execution vs 2.5 hr drift • 2.9cm accuracy • <strong>VALIDATED IN PRODUCTION</strong>
-              </div>
+            <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
+              Wireline Curve Splicing (Slide 06 Benchmark)
             </div>
-
-            <!-- Summit Item 2: Hydrocracker Runaway -->
-            <div class="summit-card" id="card-hydro" onclick="focusSummit('s-hydro')">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #FCA5A5; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
-                    TARGET 01 // HIGHEST EXPOSURE
-                  </span>
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">Hydrocracker Specialist</span>
-                </div>
-                <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--nebula-crimson);">₹130 Cr / yr</span>
-              </div>
-              <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
-                Reactor Thermal Runaway &amp; Hydrogen Quench
-              </div>
-              <div style="font-size: 11.5px; color: #94A3B8;">
-                Exothermic bed spike &gt;450°C • 0.1s multi-point thermocouple quench agent
-              </div>
+            <div style="font-size: 11.5px; color: #94A3B8;">
+              3.2s SciPy execution vs 2.5 hr drift • 2.9cm accuracy • <strong>VALIDATED IN PRODUCTION</strong>
             </div>
-
-            <!-- Summit Item 3: Deepwater Collision & Kick -->
-            <div class="summit-card" id="card-drill" onclick="focusSummit('s-drill')">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #FCA5A5; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
-                    TARGET 02
-                  </span>
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">Drilling Operations Lead</span>
-                </div>
-                <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--nebula-crimson);">₹120 Cr / yr</span>
-              </div>
-              <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
-                Anti-Collision Scanning vs Offset Wellbores
-              </div>
-              <div style="font-size: 11.5px; color: #94A3B8;">
-                Travelling cylinder error ellipse scan • 0ms autonomous collision alert
-              </div>
-            </div>
-
-            <!-- Summit Item 4: FCCU Cyclone Zeolite Loss -->
-            <div class="summit-card" id="card-fccu" onclick="focusSummit('s-fccu')">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #FCA5A5; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
-                    TARGET 03
-                  </span>
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">FCCU Process Engineer</span>
-                </div>
-                <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--nebula-crimson);">₹115 Cr / yr</span>
-              </div>
-              <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
-                Slide Valve Reverse &amp; Cyclone Catalyst Blowout
-              </div>
-              <div style="font-size: 11.5px; color: #94A3B8;">
-                Reversal air surge &amp; ₹8 Cr catalyst loss • 0.1s differential pressure governor
-              </div>
-            </div>
-
-            <!-- Summit Item 5: CDU Multi-Crude Blend Desalter -->
-            <div class="summit-card" id="card-cdu" onclick="focusSummit('s-cdu')">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(245, 158, 11, 0.2); color: #FDE68A; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(245, 158, 11, 0.4);">
-                    TARGET 04
-                  </span>
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">CDU/VDU Distillation Lead</span>
-                </div>
-                <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--hazard-amber);">₹90 Cr / yr</span>
-              </div>
-              <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
-                Crude Assay True Boiling Point Blend
-              </div>
-              <div style="font-size: 11.5px; color: #94A3B8;">
-                High-TAN salt slip &amp; furnace coking • Real-time non-linear assay optimizer
-              </div>
-            </div>
-
           </div>
 
-          <!-- 20×15 Mini Coordinate Radar -->
-          <div style="background: rgba(13, 19, 32, 0.85); border: 1px solid var(--slate-border); border-radius: 8px; padding: 14px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: #94A3B8; letter-spacing: 1px;">
-                2D CHESSBOARD COORDINATE RADAR
-              </span>
-              <span style="font-family: var(--font-mono); font-size: 9px; color: var(--security-turquoise);">HOVER TO LOCATE ON 3D TERRAIN</span>
+          <!-- Summit Item 2: Hydrocracker Runaway -->
+          <div class="summit-card" id="card-hydro-stage" onclick="focusSummit('s-hydro')">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #FCA5A5; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
+                  TARGET 01 // HIGHEST EXPOSURE
+                </span>
+                <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">Hydrocracker Specialist</span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--nebula-crimson);">₹130 Cr / yr</span>
             </div>
-            
-            <div class="mini-grid" id="mini-matrix-radar">
-              <!-- Injected by JS: 300 mini cells -->
+            <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
+              Reactor Thermal Runaway &amp; Hydrogen Quench
+            </div>
+            <div style="font-size: 11.5px; color: #94A3B8;">
+              Exothermic bed spike &gt;450°C • 0.1s multi-point thermocouple quench agent
+            </div>
+          </div>
+
+          <!-- Summit Item 3: Deepwater Collision & Kick -->
+          <div class="summit-card" id="card-drill-stage" onclick="focusSummit('s-drill')">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #FCA5A5; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
+                  TARGET 02
+                </span>
+                <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">Drilling Operations Lead</span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--nebula-crimson);">₹120 Cr / yr</span>
+            </div>
+            <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
+              Anti-Collision Scanning vs Offset Wellbores
+            </div>
+            <div style="font-size: 11.5px; color: #94A3B8;">
+              Travelling cylinder error ellipse scan • 0ms autonomous collision alert
+            </div>
+          </div>
+
+          <!-- Summit Item 4: FCCU Cyclone Zeolite Loss -->
+          <div class="summit-card" id="card-fccu-stage" onclick="focusSummit('s-fccu')">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #FCA5A5; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
+                  TARGET 03
+                </span>
+                <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">FCCU Process Engineer</span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--nebula-crimson);">₹115 Cr / yr</span>
+            </div>
+            <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
+              Slide Valve Reverse &amp; Cyclone Catalyst Blowout
+            </div>
+            <div style="font-size: 11.5px; color: #94A3B8;">
+              Reversal air surge &amp; ₹8 Cr catalyst loss • 0.1s differential pressure governor
+            </div>
+          </div>
+
+          <!-- Summit Item 5: CDU Multi-Crude Blend Desalter -->
+          <div class="summit-card" id="card-cdu-stage" onclick="focusSummit('s-cdu')">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+              <div style="display: flex; align-items: center; gap: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(245, 158, 11, 0.2); color: #FDE68A; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(245, 158, 11, 0.4);">
+                  TARGET 04
+                </span>
+                <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">CDU/VDU Distillation Lead</span>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--hazard-amber);">₹90 Cr / yr</span>
+            </div>
+            <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
+              Crude Assay True Boiling Point Blend
+            </div>
+            <div style="font-size: 11.5px; color: #94A3B8;">
+              High-TAN salt slip &amp; furnace coking • Real-time non-linear assay optimizer
             </div>
           </div>
 
         </div>
 
-        <!-- ================= RIGHT PANEL: THE 3D TOPOGRAPHICAL TERRAIN ================= -->
-        <div style="display: flex; flex-direction: column; gap: 14px;">
+        <!-- 20×15 Mini Coordinate Radar -->
+        <div style="background: rgba(13, 19, 32, 0.85); border: 1px solid var(--slate-border); border-radius: 8px; padding: 14px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: #94A3B8; letter-spacing: 1px;">
+              2D CHESSBOARD COORDINATE RADAR
+            </span>
+            <span style="font-family: var(--font-mono); font-size: 9px; color: var(--security-turquoise);">HOVER TO LOCATE ON 3D TERRAIN</span>
+          </div>
           
-          <!-- 3D Canvas Container (Cosmic Void Backdrop) -->
-          <div id="topology-canvas-container" style="position: relative; width: 100%; height: 640px; border-radius: 10px; overflow: hidden; background: radial-gradient(circle at 50% 50%, #061A22 0%, #030F14 70%, #01080B 100%); border: 1px solid rgba(0, 210, 180, 0.25); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), inset 0 0 50px rgba(0, 210, 180, 0.04);">
-            
-            <!-- Subtle aqua-teal and solar amber ambient glow -->
-            <div style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 65% 45%, rgba(0, 210, 180, 0.10) 0%, rgba(245, 158, 11, 0.05) 45%, transparent 70%);"></div>
+          <div class="mini-grid" id="mini-matrix-radar-stage">
+            <!-- Injected by JS: 300 mini cells -->
+          </div>
+        </div>
 
-            <canvas id="terrain-canvas" style="position: relative; z-index: 1;"></canvas>
+      </div>
 
-            <!-- Floating 3D Hover Tooltip -->
-            <div id="terrain-tooltip">
-              <div style="font-weight: 800; font-size: 12px; margin-bottom: 2px;" id="tt-title">Peak Name</div>
-              <div style="font-size: 10px; color: var(--security-turquoise); margin-bottom: 4px;" id="tt-persona">Persona</div>
-              <div style="font-size: 11px; color: #FFF;" id="tt-elevation">Elevation: ₹0 Cr / yr</div>
+      <!-- ================= RIGHT PANEL: THE 3D TOPOGRAPHICAL TERRAIN ================= -->
+      <div style="display: flex; flex-direction: column; gap: 14px;">
+        
+        <!-- 3D Canvas Container (Cosmic Void Backdrop) -->
+        <div id="topology-canvas-container" style="position: relative; width: 100%; height: 640px; border-radius: 10px; overflow: hidden; background: radial-gradient(circle at 50% 50%, #061A22 0%, #030F14 70%, #01080B 100%); border: 1px solid rgba(0, 210, 180, 0.25); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), inset 0 0 50px rgba(0, 210, 180, 0.04);">
+          
+          <!-- Subtle aqua-teal and solar amber ambient glow -->
+          <div style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 65% 45%, rgba(0, 210, 180, 0.10) 0%, rgba(245, 158, 11, 0.05) 45%, transparent 70%);"></div>
+
+          <canvas id="terrain-canvas" style="position: relative; z-index: 1;"></canvas>
+
+          <!-- Overlay Compass & Contour Legend (Dynamic Multi-Palette Supported) -->
+          <div id="topology-legend-items-stage" style="position: absolute; bottom: 16px; left: 18px; pointer-events: none; font-family: var(--font-mono); font-size: 10px; color: rgba(255, 255, 255, 0.7); display: flex; flex-direction: column; gap: 4px; background: rgba(6, 9, 14, 0.85); backdrop-filter: blur(10px); padding: 10px 14px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.12);">
+            <div style="font-weight: 800; color: #FFF; margin-bottom: 3px; letter-spacing: 0.5px;">GOOGLE LIGHT SPECTRUM (VISIBLE WAVELENGTH ROYGBIV)</div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #FFFFFF; border-radius: 2px; box-shadow: 0 0 8px #FFFFFF;"></span>
+              <span>&gt; ₹118 Cr / yr (White-Hot Apex Summits • 0ms Collision &amp; Runaway)</span>
             </div>
-
-            <!-- Overlay Compass & Contour Legend (Dynamic Multi-Palette Supported) -->
-            <div id="topology-legend-items" style="position: absolute; bottom: 16px; left: 18px; pointer-events: none; font-family: var(--font-mono); font-size: 10px; color: rgba(255, 255, 255, 0.7); display: flex; flex-direction: column; gap: 4px; background: rgba(6, 9, 14, 0.85); backdrop-filter: blur(10px); padding: 10px 14px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.12);">
-              <div style="font-weight: 800; color: #FFF; margin-bottom: 3px; letter-spacing: 0.5px;">GOOGLE LIGHT SPECTRUM (VISIBLE WAVELENGTH ROYGBIV)</div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #FFFFFF; border-radius: 2px; box-shadow: 0 0 8px #FFFFFF;"></span>
-                <span>&gt; ₹118 Cr / yr (White-Hot Apex Summits • 0ms Collision &amp; Runaway)</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #EA4335; border-radius: 2px; box-shadow: 0 0 6px #EA4335;"></span>
-                <span>₹95–118 Cr / yr (Google Crimson Red • Critical Process Hazard Folds)</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #FBBC04; border-radius: 2px; box-shadow: 0 0 6px #FBBC04;"></span>
-                <span>₹75–95 Cr / yr (Google Sun Yellow • Friction Bottleneck Ridges)</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #34A853; border-radius: 2px; box-shadow: 0 0 6px #34A853;"></span>
-                <span>₹50–75 Cr / yr (Google Emerald Green • Operational Flanks &amp; Slopes)</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #00D2B4; border-radius: 2px; box-shadow: 0 0 6px #00D2B4;"></span>
-                <span>₹25–50 Cr / yr (Electric Cyan &amp; Sovereign Turquoise • Lighthouse Agent Level)</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #4285F4; border-radius: 2px; box-shadow: 0 0 6px #4285F4;"></span>
-                <span>&lt; ₹25 Cr / yr (Google Blue &amp; Deep Cosmic Indigo • Monolith Plains)</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #00FFD5; border-radius: 2px; box-shadow: 0 0 8px #00FFD5;"></span>
-                <span>★ Proven Lighthouse Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
-              </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #EA4335; border-radius: 2px; box-shadow: 0 0 6px #EA4335;"></span>
+              <span>₹95–118 Cr / yr (Google Crimson Red • Critical Process Hazard Folds)</span>
             </div>
-
-            <!-- Top Right Controls Dock (Minimalist Toggle Switch + Status Badge) -->
-            <div style="position: absolute; top: 16px; right: 18px; display: flex; align-items: center; gap: 10px; z-index: 10;">
-              <!-- Minimalist Spectrum Toggle Switch (No Verbose Text Naming) -->
-              <div id="btn-palette-toggle" onclick="togglePalette()" title="Toggle Color Spectrum (Google Light Spectrum ⟷ Oceanic Aqua)" style="cursor: pointer; display: flex; align-items: center; gap: 8px; background: rgba(6, 9, 14, 0.88); backdrop-filter: blur(8px); border: 1px solid rgba(66, 133, 244, 0.4); padding: 5px 10px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); user-select: none; transition: all 0.25s ease;">
-                <span style="font-size: 12px; line-height: 1;">🎨</span>
-                <div id="palette-switch-track" style="width: 32px; height: 16px; border-radius: 10px; background: rgba(66, 133, 244, 0.25); border: 1px solid rgba(66, 133, 244, 0.6); position: relative; transition: all 0.25s ease;">
-                  <div id="palette-switch-thumb" style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #4285F4, #EA4335); position: absolute; top: 1px; left: 2px; box-shadow: 0 0 6px #4285F4; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);"></div>
-                </div>
-              </div>
-
-              <!-- Status Indicator -->
-              <div style="font-family: var(--font-mono); font-size: 11px; background: rgba(6, 9, 14, 0.85); border: 1px solid rgba(0, 210, 180, 0.4); padding: 6px 14px; border-radius: 20px; color: var(--security-turquoise); display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise); box-shadow: 0 0 8px var(--security-turquoise); animation: pulse-dot 1.5s infinite alternate;"></span>
-                <span>4,389-NODE NEBULA PARTICLE ENGINE</span>
-              </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #FBBC04; border-radius: 2px; box-shadow: 0 0 6px #FBBC04;"></span>
+              <span>₹75–95 Cr / yr (Google Sun Yellow • Friction Bottleneck Ridges)</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #34A853; border-radius: 2px; box-shadow: 0 0 6px #34A853;"></span>
+              <span>₹50–75 Cr / yr (Google Emerald Green • Operational Flanks &amp; Slopes)</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #00D2B4; border-radius: 2px; box-shadow: 0 0 6px #00D2B4;"></span>
+              <span>₹25–50 Cr / yr (Electric Cyan &amp; Sovereign Turquoise • Lighthouse Agent Level)</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #4285F4; border-radius: 2px; box-shadow: 0 0 6px #4285F4;"></span>
+              <span>&lt; ₹25 Cr / yr (Google Blue &amp; Deep Cosmic Indigo • Monolith Plains)</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #00FFD5; border-radius: 2px; box-shadow: 0 0 8px #00FFD5;"></span>
+              <span>★ Proven Lighthouse Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
             </div>
           </div>
 
-          <!-- Bottom Metric & Strategic Playbook Horizon -->
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
-            
-            <div style="background: rgba(13, 19, 32, 0.7); border: 1px solid var(--slate-border); border-left: 3px solid var(--security-turquoise); padding: 14px 18px; border-radius: 6px;">
-              <div style="font-family: var(--font-mono); font-size: 10px; color: var(--security-turquoise); font-weight: 800; letter-spacing: 1px;">
-                PHASE 1: LIGHTHOUSE AGENT (PROVEN)
+          <!-- Top Right Controls Dock (Minimalist Toggle Switch + Status Badge) -->
+          <div style="position: absolute; top: 16px; right: 18px; display: flex; align-items: center; gap: 10px; z-index: 10;">
+            <!-- Minimalist Spectrum Toggle Switch (No Verbose Text Naming) -->
+            <div id="btn-palette-toggle-stage" onclick="togglePalette()" title="Toggle Color Spectrum (Google Light Spectrum ⟷ Oceanic Aqua)" style="cursor: pointer; display: flex; align-items: center; gap: 8px; background: rgba(6, 9, 14, 0.88); backdrop-filter: blur(8px); border: 1px solid rgba(66, 133, 244, 0.4); padding: 5px 10px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); user-select: none; transition: all 0.25s ease;">
+              <span style="font-size: 12px; line-height: 1;">🎨</span>
+              <div id="palette-switch-track-stage" style="width: 32px; height: 16px; border-radius: 10px; background: rgba(66, 133, 244, 0.25); border: 1px solid rgba(66, 133, 244, 0.6); position: relative; transition: all 0.25s ease;">
+                <div id="palette-switch-thumb-stage" style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #4285F4, #EA4335); position: absolute; top: 1px; left: 2px; box-shadow: 0 0 6px #4285F4; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);"></div>
               </div>
-              <div style="font-size: 18px; font-weight: 800; color: #FFF; margin: 2px 0;">1 Agent Validated in Production</div>
-              <div style="font-size: 12px; color: #94A3B8;">Kansas Wireline Splicing • ₹45 Cr exposure eliminated in 3.2s</div>
             </div>
 
-            <div style="background: rgba(13, 19, 32, 0.7); border: 1px solid var(--slate-border); border-left: 3px solid var(--nebula-crimson); padding: 14px 18px; border-radius: 6px;">
-              <div style="font-family: var(--font-mono); font-size: 10px; color: var(--nebula-crimson); font-weight: 800; letter-spacing: 1px;">
-                PHASE 2: TOP 5 HIGH-VALUE AGENTS (TARGET FLEET)
-              </div>
-              <div style="font-size: 18px; font-weight: 800; color: #FFF; margin: 2px 0;">₹570 Cr / yr Exposure Mitigated</div>
-              <div style="font-size: 12px; color: #94A3B8;">Hydrocracker, Anti-Collision, FCCU, CDU, Tank Overfill</div>
+            <!-- Status Indicator -->
+            <div style="font-family: var(--font-mono); font-size: 11px; background: rgba(6, 9, 14, 0.85); border: 1px solid rgba(0, 210, 180, 0.4); padding: 6px 14px; border-radius: 20px; color: var(--security-turquoise); display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+              <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise); box-shadow: 0 0 8px var(--security-turquoise); animation: pulse-dot 1.5s infinite alternate;"></span>
+              <span>4,389-NODE NEBULA PARTICLE ENGINE</span>
             </div>
+          </div>
+        </div>
 
-            <div style="background: rgba(13, 19, 32, 0.7); border: 1px solid var(--slate-border); border-left: 3px solid var(--hazard-amber); padding: 14px 18px; border-radius: 6px;">
-              <div style="font-family: var(--font-mono); font-size: 10px; color: var(--hazard-amber); font-weight: 800; letter-spacing: 1px;">
-                PHASE 3: ENTERPRISE-WIDE SCALE
-              </div>
-              <div style="font-size: 18px; font-weight: 800; color: #FFF; margin: 2px 0;">84 Value-Unlock Agents</div>
-              <div style="font-size: 12px; color: #94A3B8;">1–4 hr engineering latency automated across all operational seams</div>
+        <!-- Bottom Metric & Strategic Playbook Horizon -->
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+          
+          <div style="background: rgba(13, 19, 32, 0.7); border: 1px solid var(--slate-border); border-left: 3px solid var(--security-turquoise); padding: 14px 18px; border-radius: 6px;">
+            <div style="font-family: var(--font-mono); font-size: 10px; color: var(--security-turquoise); font-weight: 800; letter-spacing: 1px;">
+              PHASE 1: LIGHTHOUSE AGENT (PROVEN)
             </div>
+            <div style="font-size: 18px; font-weight: 800; color: #FFF; margin: 2px 0;">1 Agent Validated in Production</div>
+            <div style="font-size: 12px; color: #94A3B8;">Kansas Wireline Splicing • ₹45 Cr exposure eliminated in 3.2s</div>
+          </div>
 
+          <div style="background: rgba(13, 19, 32, 0.7); border: 1px solid var(--slate-border); border-left: 3px solid var(--nebula-crimson); padding: 14px 18px; border-radius: 6px;">
+            <div style="font-family: var(--font-mono); font-size: 10px; color: var(--nebula-crimson); font-weight: 800; letter-spacing: 1px;">
+              PHASE 2: TOP 5 HIGH-VALUE AGENTS (TARGET FLEET)
+            </div>
+            <div style="font-size: 18px; font-weight: 800; color: #FFF; margin: 2px 0;">₹570 Cr / yr Exposure Mitigated</div>
+            <div style="font-size: 12px; color: #94A3B8;">Hydrocracker, Anti-Collision, FCCU, CDU, Tank Overfill</div>
+          </div>
+
+          <div style="background: rgba(13, 19, 32, 0.7); border: 1px solid var(--slate-border); border-left: 3px solid var(--hazard-amber); padding: 14px 18px; border-radius: 6px;">
+            <div style="font-family: var(--font-mono); font-size: 10px; color: var(--hazard-amber); font-weight: 800; letter-spacing: 1px;">
+              PHASE 3: ENTERPRISE-WIDE SCALE
+            </div>
+            <div style="font-size: 18px; font-weight: 800; color: #FFF; margin: 2px 0;">84 Value-Unlock Agents</div>
+            <div style="font-size: 12px; color: #94A3B8;">1–4 hr engineering latency automated across all operational seams</div>
           </div>
 
         </div>
@@ -503,17 +434,20 @@
 
     </div>
 
-  </main>
+  </div>
 
-  <!-- Self-Contained 3D Topographical Canvas Engine (Zero External Dependencies) -->
-  <script>
+</section>
+
+<!-- Self-Contained 3D Topographical Canvas Engine (Zero External Dependencies) -->
+<script>
+  (function() {
     // 1. Definition of Key Summits (Matching image78.png High Crests & Glowing Cores)
     const SUMMIT_COORDINATES = {
-      's-petro': { x: 7, y: 9, name: 'Lead Petrophysicist (Lighthouse)', action: 'Wireline Splicing (Slide 06 Benchmark)', value: 45, color: '#00D2B4', cardId: 'card-petro' },
-      's-hydro': { x: 0, y: 16, name: 'Hydrocracker Specialist', action: 'Reactor Thermal Runaway & Quench', value: 130, color: '#00F0FF', cardId: 'card-hydro' },
-      's-drill': { x: 1, y: 3, name: 'Drilling Operations Lead', action: 'Anti-Collision & Collision Scanning', value: 120, color: '#00F0FF', cardId: 'card-drill' },
-      's-fccu':  { x: 0, y: 15, name: 'FCCU Process Engineer', action: 'Slide Valve Reverse & Catalyst Loss', value: 115, color: '#FFE600', cardId: 'card-fccu' },
-      's-cdu':   { x: 0, y: 14, name: 'CDU/VDU Distillation Lead', action: 'Crude Assay True Boiling Point Blend', value: 90, color: '#F59E0B', cardId: 'card-cdu' }
+      's-petro': { x: 7, y: 9, name: 'Lead Petrophysicist (Lighthouse)', action: 'Wireline Splicing (Slide 06 Benchmark)', value: 45, color: '#00D2B4', cardId: 'card-petro-stage' },
+      's-hydro': { x: 0, y: 16, name: 'Hydrocracker Specialist', action: 'Reactor Thermal Runaway & Quench', value: 130, color: '#00F0FF', cardId: 'card-hydro-stage' },
+      's-drill': { x: 1, y: 3, name: 'Drilling Operations Lead', action: 'Anti-Collision & Collision Scanning', value: 120, color: '#00F0FF', cardId: 'card-drill-stage' },
+      's-fccu':  { x: 0, y: 15, name: 'FCCU Process Engineer', action: 'Slide Valve Reverse & Catalyst Loss', value: 115, color: '#FFE600', cardId: 'card-fccu-stage' },
+      's-cdu':   { x: 0, y: 14, name: 'CDU/VDU Distillation Lead', action: 'Crude Assay True Boiling Point Blend', value: 90, color: '#F59E0B', cardId: 'card-cdu-stage' }
     };
 
     // 2. Generate 20×15 Elevation Grid (₹ Cr Capital at Risk)
@@ -580,7 +514,7 @@
     }
 
     // 3. Render 2D Mini Coordinate Radar on Left (Nebula Coordinated Colors)
-    const miniRadarEl = document.getElementById('mini-matrix-radar');
+    const miniRadarEl = document.getElementById('mini-matrix-radar-stage') || document.getElementById('mini-matrix-radar');
     if (miniRadarEl) {
       let radarHTML = '';
       for (let r = 0; r < ROWS; r++) {
@@ -592,8 +526,8 @@
             <div class="mini-cell ${statusClass}" 
                  id="mcell-${r}-${c}"
                  data-r="${r}" data-c="${c}" data-val="${val.toFixed(0)}"
-                 onmouseenter="highlightRadarCell(${r}, ${c})"
-                 onclick="focusGridCoordinate(${r}, ${c})"
+                 onmouseenter="window.highlightRadarCell && window.highlightRadarCell(${r}, ${c})"
+                 onclick="window.focusGridCoordinate && window.focusGridCoordinate(${r}, ${c})"
                  title="Row ${r+1}, Col ${c+1}: ₹${val.toFixed(0)} Cr / yr"></div>
           `;
         }
@@ -615,11 +549,8 @@
     // 4. Pure HTML5 Canvas 3D Nebula Topography Engine
     const canvas = document.getElementById('terrain-canvas');
     const container = document.getElementById('topology-canvas-container');
+    if (!canvas || !container) return;
     const ctx = canvas.getContext('2d');
-    const tooltipEl = document.getElementById('terrain-tooltip');
-    const ttTitle = document.getElementById('tt-title');
-    const ttPersona = document.getElementById('tt-persona');
-    const ttElevation = document.getElementById('tt-elevation');
 
     // Camera State
     let angleX = 0.65; // Pitch (vertical tilt)
@@ -675,7 +606,6 @@
       };
     }
 
-    // 2D Bicubic Catmull-Rom Spline Interpolation Engine
     function catmullRom1D(p0, p1, p2, p3, t) {
       const t2 = t * t;
       const t3 = t2 * t;
@@ -1160,11 +1090,6 @@
         }
       }
 
-      // Auto-rotation increment
-      if (autoRotate && !isDragging) {
-        angleY += 0.0022;
-      }
-
       requestAnimationFrame(render3D);
     }
 
@@ -1174,16 +1099,14 @@
       lastMouseX = e.clientX;
       lastMouseY = e.clientY;
       autoRotate = false;
-      const btn = document.getElementById('btn-auto-rotate');
+      const btn = document.getElementById('btn-auto-rotate-stage') || document.getElementById('btn-auto-rotate');
       if (btn) {
         btn.innerText = 'Auto-Rotate: OFF';
         btn.classList.remove('active');
       }
     });
 
-    window.addEventListener('mouseup', () => {
-      isDragging = false;
-    });
+    window.addEventListener('mouseup', () => { isDragging = false; });
 
     window.addEventListener('mousemove', (e) => {
       if (!isDragging) return;
@@ -1204,10 +1127,10 @@
       zoom = Math.max(0.55, Math.min(2.2, zoom + delta));
     }, { passive: false });
 
-    // Buttons
+    // Buttons & Interactivity Functions
     function toggleAutoRotate() {
       autoRotate = !autoRotate;
-      const btn = document.getElementById('btn-auto-rotate');
+      const btn = document.getElementById('btn-auto-rotate-stage') || document.getElementById('btn-auto-rotate');
       if (btn) {
         btn.innerText = `Auto-Rotate: ${autoRotate ? 'ON' : 'OFF'}`;
         btn.classList.toggle('active', autoRotate);
@@ -1259,7 +1182,7 @@
       if (!s) return;
 
       document.querySelectorAll('.summit-card').forEach(c => c.classList.remove('active-summit'));
-      const activeCard = document.getElementById(s.cardId);
+      const activeCard = document.getElementById(s.cardId) || document.getElementById(s.cardId.replace('-stage', ''));
       if (activeCard) activeCard.classList.add('active-summit');
 
       highlightedCoord = { r: s.y, c: s.x };
@@ -1267,7 +1190,7 @@
 
       // Rotate camera toward summit
       autoRotate = false;
-      const btn = document.getElementById('btn-auto-rotate');
+      const btn = document.getElementById('btn-auto-rotate-stage') || document.getElementById('btn-auto-rotate');
       if (btn) {
         btn.innerText = 'Auto-Rotate: OFF';
         btn.classList.remove('active');
@@ -1297,7 +1220,7 @@
     function focusGridCoordinate(r, c) {
       highlightRadarCell(r, c);
       autoRotate = false;
-      const btn = document.getElementById('btn-auto-rotate');
+      const btn = document.getElementById('btn-auto-rotate-stage') || document.getElementById('btn-auto-rotate');
       if (btn) {
         btn.innerText = 'Auto-Rotate: OFF';
         btn.classList.remove('active');
@@ -1319,10 +1242,10 @@
     function togglePalette() {
       currentPalette = (currentPalette === 'google') ? 'aqua' : 'google';
 
-      const thumb = document.getElementById('palette-switch-thumb') || document.getElementById('palette-switch-thumb-stage');
-      const track = document.getElementById('palette-switch-track') || document.getElementById('palette-switch-track-stage');
-      const containerBtn = document.getElementById('btn-palette-toggle') || document.getElementById('btn-palette-toggle-stage');
-      const legendEl = document.getElementById('topology-legend-items') || document.getElementById('topology-legend-items-stage');
+      const thumb = document.getElementById('palette-switch-thumb-stage') || document.getElementById('palette-switch-thumb');
+      const track = document.getElementById('palette-switch-track-stage') || document.getElementById('palette-switch-track');
+      const containerBtn = document.getElementById('btn-palette-toggle-stage') || document.getElementById('btn-palette-toggle');
+      const legendEl = document.getElementById('topology-legend-items-stage') || document.getElementById('topology-legend-items');
 
       if (thumb && track) {
         if (currentPalette === 'google') {
@@ -1427,7 +1350,5 @@
     } else {
       initTopologyEngine();
     }
-  </script>
-
-</body>
-</html>
+  })();
+</script>

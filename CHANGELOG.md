@@ -12,6 +12,164 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ---
 
+## [Slide 08] - 2026-09-08
+### Slide 08: Agentic Transformation Across Workforce & Workflows
+- **Strategic Narrative & Title Realignment (Workforce & Workflows)**:
+  - Addressed executive feedback to ground Slide 08 directly in the dual foundation of enterprise operations (**Workforce & Workflows**):
+    - **Updated Title & Subheading**: *Agentic Transformation Across Workforce & Workflows.* (H1) / *AI agents creating value across the value chain of the organisation.* (H2)
+    - **Updated Eyebrow**: `AGENTIC TRANSFORMATION // WORKFORCE & WORKFLOWS` • `OPERATIONAL SEAMS ACROSS 20 DISCIPLINES`
+    - **Updated Executive Subtitle**: *High-consequence operations rely on specialized domain experts executing complex, multi-stage workflows across disconnected systems. AI agents augment the workforce and fortify workflows—unlocking measurable value across discrete operational seams from upstream exploration to downstream refining.*
+  - **HUD Card Architecture & Terminology Refinements**:
+    - Positioned the **Vertex AI Agent Registry Identity** card directly after the AI Agent Opportunity section.
+    - Replaced the phrase "Agentic Plug" with **"AI Agent"** (`⚡ AI AGENT (THE OPPORTUNITY)`) across the interactive HUD, fallback logic, and CSV exports.
+    - Replaced redundant static re-center buttons with dynamic contextual action tags.
+  - **Strategic Agent Prioritisation Playbook (Full-Width Banner)**:
+    - Reconfigured the bottom takeaway into a full-width stretched banner (*Strategic Agent Prioritisation Playbook*) spanning left to right across the base of the slide.
+    - Clarified narrative focus: eliminated rigid fixation on fixed node counts ("300-Node"), emphasizing instead that enterprise operations contain numerous operational seams and that the organization strategically prioritizes high-exposure seams rather than claiming to automate every single action.
+    - Excised the three Phase 1/2/3 callout chips to eliminate the visual conflict with the slide's risk & friction status colors (Red/Amber/Slate/Turquoise) and keep phased capital sequencing dedicated to Slide 09.
+  - **Distinct Distinction Between Workforce and Workflows**: Explicitly separates the human domain expertise (Workforce: 20 specialized engineering disciplines) from multi-stage operational processes (Workflows), showing how autonomous agents unlock measurable economic value at every seam across the entire enterprise value chain.
+- **Alphanumeric Coordinate System Transformation (Rows A–T × Steps 1–15)**:
+  - Addressed executive feedback to replace dual-numeric indexing (Row 01–20 × Col 01–15) with an intuitive chessboard/spreadsheet alphanumeric coordinate matrix:
+    - **Disciplines / Personas (Rows)**: Converted from numbers `01`–`20` to letters **`A` through `T`** (`A. Exploration Geophysicist` through `T. Process Safety Lead`).
+    - **Workflows / Technical Actions (Columns / Steps)**: Converted from zero-padded numbers `01`–`15` to clean step indicators **`1` through `15`** (`Step 1` through `Step 15`).
+    - **Chessboard Cell Numbering (`rowcolumn`)**:
+      - Inside the grid, each of the 300 boxes is now directly numbered by its alphanumeric coordinate combining row and column: **`rowcolumn`** (`A1`, `A2` ... `J8` ... `T15`), exactly mirroring standard chess notation.
+      - The Kansas Well A-12 petrophysical splicing benchmark is numbered **`J8`**.
+      - The Live HUD action title and static inspector now display `J8 • Step 8: Multi-Pass Wireline Curve Splicing` (and respectively `{coord} • Step {N}: {Title}` for all cells).
+      - Re-center action button updated to `★ Re-Center On Proven Splicing Plug (J8)`.
+    - **Lighthouse Benchmark Anchor**: The proven Kansas Well A-12 petrophysical benchmark is indexed as **`Row J • Step 8`** (`J8`), with the HUD displaying `Lead Petrophysicist` and `J8 • Step 8: Multi-Pass Wireline Curve Splicing`.
+  - **Grid & Layout Enhancements**:
+    - Replaced the top-left corner header with `ROWS A–T // DISCIPLINES` and `STEPS 1–15`.
+    - Compacted cell numbers from separate step digits to unified chessboard coordinates (`A1`–`T15`), significantly improving readability, navigation, and cross-discipline identification across all 300 cells.
+    - Updated tooltips with `[coord]` tags (`[J8] Lead Petrophysicist • Step 8: Multi-Pass Wireline Curve Splicing`), live HUD inspector title/action fields, sticky row headers, and mode switcher data structures.
+- **Persona & Label Refinement**:
+  - **Removed Redundant Alphabet Prefixes Before Names**: Eliminated awkward alphabetic prefixes directly before discipline titles (e.g., `F. Directional Drilling & MWD Lead` is now cleanly `Directional Drilling & MWD Lead`, and `J. Lead Petrophysicist` is now `Lead Petrophysicist`), while retaining the designated row letter badge (`[A]`–`[T]`) positioned cleanly after the name on the grid.
+  - Removed decorative star symbol `★` and redundant label `(Center Anchor)` from `Lead Petrophysicist` in the interactive chessboard grid, HUD inspector, and 3D topology summits.
+  - Since Row J, Step 8 (`J8`) is visibly the unique plugged lighthouse benchmark on the entire matrix, the persona name is now cleanly presented as **`Lead Petrophysicist`** (and correspondingly `Offshore Production Separation Platform` in physical asset mode).
+  - Replaced lingering references to `headless agents` with `autonomous agents` in the bottom strategic takeaway strip.
+  - Synchronized across `working_deck/pages/page_08.html`, `final_slides/slide_08_the_enterprise_chessboard.html`, `final_slides/slide_08_the_enterprise_chessboard.LOCKED.html`, `working_deck/pages/page_09.html`, `final_slides/slide_09_the_agentic_value_topology.html`, `final_slides/slide_09_the_agentic_value_topology.LOCKED.html`, and `LOCKED_SLIDES.md`.
+
+## [Slide 07] - 2026-09-08
+### Slide 07: Architecture of an Intelligent Microservice: The Autonomous AI Agent
+- **Title & Terminology Overhaul**:
+  - Addressed executive feedback to eliminate developer jargon ("Headless") from the slide headline and architectural framing:
+    - **Previous Title**: *Architecture of an Intelligent Microservice: The Headless AI Agent*
+    - **Updated Title**: *Architecture of an Intelligent Microservice: The Autonomous AI Agent*
+    - **Previous Kicker**: `07 ARCHITECTURE // HEADLESS MICROSERVICE & CENTRAL CONTROL PLANE`
+    - **Updated Kicker**: `07 ARCHITECTURE // AUTONOMOUS MICROSERVICE & CENTRAL CONTROL PLANE`
+  - Replaced all visual diagram mentions of "Headless" in the SVG reference architecture with "Autonomous" (`Autonomous Petrophysical Agent — Sovereign Reference Architecture`, `Autonomous A2A JSON-RPC Protocol`).
+  - Synchronized changes across `working_deck/pages/page_07.html`, `final_slides/slide_07_the_headless_petrophysical_agent.html`, `final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html`, `LOCKED_SLIDES.md`, and `slide_narratives/slide_07/NARRATIVE.md`.
+
+## [Slide 09] - 2026-09-08
+### Slide 09: Agent Economics: The Value Map of Agentic Transformation
+- **Narrative Realignment & Executive Terminology Overhaul**:
+  - Addressed executive feedback to replace figurative mountaineering tropes ("Every operational seam has a price. Prioritize the high summits, not the plains... deploy autonomous sovereign agents to conquer the highest peaks first") with rigorous corporate strategy and portfolio sequencing:
+    - **New Stage Eyebrow**: `AGENT ECONOMICS // ENTERPRISE VALUE TOPOLOGY`
+    - **New H1 Title**: *Agent Economics: The Value Map of Agentic Transformation.*
+    - **New Strategic Subtitle**: *Mapping value unlock by individual autonomous agents for strategic prioritisation.*
+    - **New Executive Narrative**: *Quantifying 300 operational seams by capital at risk (₹ Cr / yr) establishes an actionable investment topology—sequencing deployment from our proven lighthouse agent directly into the highest-exposure enterprise targets.*
+  - **Complete Elimination of "Base Camp"**:
+    - Replaced all instances of "Base Camp 01" across UI cards, toolstrip buttons, 3D billboard tags, 2D radar legends, canvas rendering routines, code comments, and the 3-phase strategic horizon with **"Lighthouse Agent (Proven)"** / **"Proven Lighthouse Agent (Kansas Well A-12 • Slide 06 Benchmark)"**.
+    - Replaced "High Summits" with **"Prioritised Value-Unlock Agents // High-Exposure Seams"** and "Peak 01–04" with **"Target 01–04"**.
+    - Updated 3-Phase Horizon Strip to:
+      - `Phase 1: Lighthouse Agent (Proven)`: 1 Agent Validated in Production (Kansas Wireline Splicing • ₹45 Cr exposure eliminated in 3.2s).
+      - `Phase 2: Top 5 High-Value Agents (Target Fleet)`: ₹570 Cr / yr Exposure Mitigated (Hydrocracker, Anti-Collision, FCCU, CDU, Tank Overfill).
+      - `Phase 3: Enterprise-Wide Scale`: 84 Value-Unlock Agents (1–4 hr engineering latency automated across all operational seams).
+- **Authoring Milestone**:
+  - Authored **The Agentic Value Topology** translating the 300 discrete operational touchpoints from Slide 08 into an intuitive, undulating **3D Value Elevation Model** using an airlock-proof, pure HTML5 Canvas 3D engine with zero external dependencies (no Three.js, no WebGL plugin, no GSAP CDN).
+  - Aligned directly with the native visual language of energy executives (3D seismic horizons, reservoir bathymetry, structure contour maps).
+  - Placed **Z-Elevation proportional to Capital at Risk / Value Exposure (₹ Cr / yr)**:
+    - 🔴 **High-Exposure Seams (> ₹80 Cr / yr)**: Critical high-risk operational targets (Hydrocracker Runaway, Anti-Collision, FCCU Slide Valve Reverse, Desalter Upset).
+    - 🟡 **Mid-Elevation Ridges (₹30–80 Cr / yr)**: High-friction engineering decision bottlenecks.
+    - 🔵 **Lowland Plains (< ₹30 Cr / yr)**: Baseline operations in legacy monoliths.
+    - 🟢 **Lighthouse Agent Level (₹45 Cr / yr)**: Marked with a glowing sovereign turquoise beacon and vertical dashed light beam at Kansas Well A-12 (Slide 06 benchmark).
+  - Implemented **Split-Screen Executive Architecture**:
+    - **Left**: Prioritised Value-Unlock Agents Leaderboard and interactive 2D Coordinate Radar (300 cells).
+    - **Right**: Fully interactive Pure HTML5 Canvas 3D terrain with 360° mouse drag orbit, scroll zoom, auto-rotation toggle, 2D top-down contour view, depth-sorted quads (painter's algorithm), and smooth native cubic camera tweening.
+- **Visual & Mathematical Refinements (4,389-Node Nebula Particle Surface Engine — 1:1 Match with image78.png)**:
+  - **Transformation of 3D Plot into Living Nebula**:
+    - Addressed user feedback to make the 3D plot grid size, texture, and color scheme directly replicate the celestial nebula in `image78.png`, rather than using a static background image.
+    - Completely removed static `image78.png` backdrop element from `#topology-canvas-container`.
+    - Placed canvas within a deep cosmic void (`radial-gradient(circle at 50% 50%, #0D1322 0%, #06090E 75%, #020408 100%)`) with faint orbital radar rings and ambient stardust glow so the 3D topographical mesh *itself* becomes the glowing nebula floating in space.
+  - **4× Mesh Subdivision & Stardust Particle Matrix (4,389 Nodes)**:
+    - Upgraded bicubic Catmull-Rom spline subdivision from 3× to 4× (`SUB_R = 4, SUB_C = 4`), yielding **$77 \times 57 = 4,389$ fine vertices** and **4,256 quads**.
+    - Infused natural harmonic wave billows (`Math.sin(r * 0.42 + c * 0.25) * 8`) creating organic cloth billows that mirror the fluid folds of `image78.png`.
+    - Preserved 100% mathematical fidelity to the 300 discrete operational touchpoints and exact financial exposure values at all integer coordinates (Kansas Petrophysicist at ₹45/75 Cr, Hydrocracker at ₹130 Cr, Drilling Anti-Collision at ₹120 Cr, FCCU at ₹115 Cr, CDU at ₹90 Cr).
+  - **Multi-Pass Particle Surface Pipeline & Refinements**:
+    - **Pass 1 (Translucent Silk Veil)**: Depth-sorted quads rendered with low-alpha celestial fills (`alpha * 0.32`, `0.45px` hairline strokes) allowing light to transmit across billowing folds.
+    - **Pass 2 (Flowing Spline Streamlines)**: Longitudinal Catmull-Rom streamlines tracing harmonic contours across columns (`strokeWidth 0.7`).
+    - **Pass 3 (Luminous Stardust Particles — High Peaks & Lighthouse Agent Only)**: Addressed user feedback regarding dot clutter; eliminated dots across 85%+ of the terrain mesh, strictly reserving luminous stardust dots for high peaks (`elev >= 75 Cr`) and Lighthouse Agent Level, with subtle celestial halos on critical summits ($> ₹95\text{ Cr}$).
+    - **Pass 4 (Beacon Light Pillars)**: Ground-to-peak dashed vertical light pillars, pulsating concentric halos, and 3D billboard tags (`★ LIGHTHOUSE (₹45 Cr)` and `TARGET (₹X Cr)`).
+    - **Pass 5 (Interactive Reticle Cursor)**: Bi-directional cursor reticle linked to 2D chessboard radar.
+  - **Google Light Spectrum & Tri-Spectrum Engine (Physical Wavelength ROYGBIV Order)**:
+    - Addressed user feedback to map Google's official brand colors onto the physical visible light spectrum in wavelength order:
+      - **Spectrum A: Google Light Spectrum (Default — Monotonic Optical Wavelength ROYGBIV)**:
+        - Maps physical visible wavelength monotonically from deep space to white-hot summits without arbitrary color jumps:
+          $$\text{Cosmic Indigo (400nm)} \longrightarrow \text{Google Blue (460nm, \#4285F4)} \longrightarrow \text{Sovereign Turquoise (490nm, \#00D2B4)} \longrightarrow \text{Google Green (530nm, \#34A853)} \longrightarrow \text{Google Yellow (580nm, \#FBBC04)} \longrightarrow \text{Google Red (650nm, \#EA4335)} \longrightarrow \text{Starburst White (>700nm apex, \#FFFFFF)}$$
+        - Lowland / Baseline plains (`< ₹25 Cr`): Google Blue (`#4285F4`) & Cosmic Indigo.
+        - Lighthouse Agent Level (`₹25–50 Cr`): Sovereign Turquoise & Electric Cyan (`#00D2B4` $\rightarrow$ `#00FFD5`).
+        - Operational slopes (`₹50–75 Cr`): Google Emerald Green (`#34A853`).
+        - Friction bottleneck ridges (`₹75–95 Cr`): Google Sun Yellow (`#FBBC04`).
+        - Critical process hazard folds (`₹95–118 Cr`): Google Crimson Red (`#EA4335`).
+        - White-hot apex summits (`> ₹118 Cr`): Pure Starburst White (`#FFFFFF`).
+      - **Spectrum B: Oceanic Aqua & Turquoise**: Subdued, technical monochrome cool palette (`< ₹25 Cr` oceanic teal, `₹25–60 Cr` aqua-green, `₹60–95 Cr` amber folds, `> ₹95 Cr` white-hot summits).
+      - **Spectrum C: Official Google Gemini Spectrum**: Cosmic Violet & Magenta palette (`< ₹30 Cr` indigo, `₹30–60 Cr` turquoise, `₹60–90 Cr` violet/magenta, `₹90–115 Cr` solar amber, `> ₹115 Cr` starburst cyan).
+    - **Vertical Baseline Re-Alignment (Starting from Bottom 2/3rd of Screen)**:
+      - Addressed user feedback regarding empty void at bottom of screen caused by high peaks rising upwards from center.
+      - Re-anchored projection $Y$-baseline from middle (`height / 2 + 35` $\approx 55\%$) down to bottom $2/3\text{rd}$ of the screen (`height * (0.67 - (angleX - 0.65) * 0.20)` $\approx 67\%$).
+      - As mountain summits ($₹130\text{ Cr}$, $₹120\text{ Cr}$) ascend upward, the terrain is naturally grounded without empty space below, while dynamic pitch compensation glides to `height * 0.51` in top-down 2D view.
+      - Realigned cosmic orbital radar rings to center at `height * 0.67`.
+    - **Minimalist Spectrum Toggle Switch Docked on Right Next to Plot**:
+      - Addressed user feedback to simplify the switcher without verbose naming text and relocate it next to the plot.
+      - Removed bulky text button (`🎨 Spectrum: Google Light Spectrum`) from top header controls toolstrip.
+      - Added a sleek, minimalist animated toggle switch (`🎨 [ ●━━━━ ]`) inside `#topology-canvas-container` at the top right, docked immediately beside the 4,389-node engine status indicator.
+      - Implemented seamless 2-way toggle between **Google Light Spectrum** and **Oceanic Aqua** with smooth sliding thumb and dynamic glow transitions.
+- **Airlock-Proof Engineering**:
+  - Replaced external CDN dependencies (Three.js, OrbitControls, GSAP) with standard mathematical projection (Euler yaw/pitch rotation, perspective division) and native `requestAnimationFrame` tweening.
+  - Guaranteed 100% offline and Cloudtop/Corp Airlock immunity with zero blank canvases or missing plugin errors.
+- **Files Created & Updated**:
+  - `working_deck/pages/page_09.html` (Standalone interactive 3D slide with Agent Economics narrative, Lighthouse terminology, 2/3rd baseline, and right-side toggle switch)
+  - `final_slides/slide_09_the_agentic_value_topology.html` & `slide_09_the_agentic_value_topology.LOCKED.html` (Synchronized golden masters)
+  - `LOCKED_SLIDES.md` (Updated Stage 09 specifications and Golden Master registry)
+  - `CHANGELOG.md` (Documented Agent Economics overhaul and complete elimination of Base Camp)
+
+---
+
+## [Slide 08] - 2026-09-08
+### Slide 08: The Enterprise Footprint: 300 Operational Seams
+- **Narrative Realignment & Executive Terminology Overhaul**:
+  - Replaced academic consulting jargon (`SYSTEMIC VULNERABILITY TAXONOMY // 20 PERSONAS × 15 ACTIONS (MECE)` and `300 NON-OVERLAPPING OPERATIONAL TOUCHPOINTS`) and theatrical phrasing (`You’ve seen one plug sealed. Now behold the entire enterprise chessboard.`) with crisp, authoritative enterprise architecture terminology:
+    - **New Eyebrow**: `ENTERPRISE AGENTIC FOOTPRINT // 20 DISCIPLINES × 15 WORKFLOWS` • `300 DISCRETE OPERATIONAL TOUCHPOINTS`
+    - **New H1 Title**: *The Enterprise Footprint: 300 Operational Seams.*
+    - **New Subtitle**: *Scaling from our proven lighthouse agent across the entire energy value chain.*
+    - **New Executive Narrative**: *Operational friction and capital risk concentrate at the manual handoffs between specialized engineering disciplines. Following our validated Petrophysical lighthouse benchmark, this matrix maps all 300 operational seams across upstream, midstream, and downstream ready for autonomous agent deployment.*
+  - **Metric Ribbon Synchronization**:
+    - Replaced `★ PLUGGED & DEPLOYED` with **`★ LIGHTHOUSE VALIDATED`** (Lead Petrophysicist Benchmark • Slide 06).
+    - Updated Total Operational Nodes caption to `Zero Task Overlap // 20 Disciplines`.
+- **Authoring Milestone**:
+  - Authored the **Enterprise Footprint Matrix** representing **300 discrete, non-overlapping operational touchpoints** across the energy enterprise (Upstream Geosciences, Drilling, Reservoir & Production, Midstream Pipelines & Marine Terminals, Downstream Refining & Petrochemicals, and Process Safety).
+  - Designed with strict principles: zero task overlap between disciplines.
+  - Positioned **Lead Petrophysicist** in Row 10 with the **Multi-Pass Wireline Curve Splicing** benchmark placed dead center in Column 08 (`cell-plugged`, pulsing sovereign turquoise `#00D2B4`).
+  - Styled remaining 299 unmonitored seams with authentic CAD drafting cross-hatch textures:
+    - 🔴 **52 Critical Risk Seams** (Catastrophic blowout, reactor runaway, ESD burst, ₹50Cr+ capital bleed).
+    - 🟡 **84 Manual Friction Bottlenecks** (1–4 hr engineering latency, handovers, unstructured logs).
+    - ⚪ **164 Baseline Monoliths** (Legacy desktop software locks).
+  - Implemented interactive **Live HUD Inspector** with instant telemetry on hover/click, displaying:
+    - Exact latent vulnerability (where value bleeds)
+    - Sovereign agentic solution (mathematical engine, automation velocity)
+    - Exposure metrics (annual risk mitigation & decision speed)
+  - Included interactive **Dual-Layer Mode Switcher** toggling between:
+    - *Workforce & Knowledge Seams* (20 Personas × 15 Human Actions)
+    - *Physical Operations & Assets* (20 Industrial Units × 15 Continuous DCS/SCADA loops)
+  - Implemented status filter controls (`All 300`, `Lighthouse Only`, `Critical Red`, `Friction Amber`, `Baseline`).
+- **Files Created & Updated**:
+  - `working_deck/pages/page_08.html` (Complete standalone interactive slide with executive top nav)
+  - `final_slides/slide_08_the_enterprise_chessboard.html` & `slide_08_the_enterprise_chessboard.LOCKED.html`
+  - `LOCKED_SLIDES.md` (Updated Stage 08 specifications and Golden Master registry)
+  - `working_deck/pages/page_07.html` & `final_slides/slide_07_the_headless_petrophysical_agent.html` (Updated forward links)
+
+---
+
 ## [Refinements] - 2026-09-08
 ### Slide 02: Display Headline Refinement (Process Safety Terminology)
 - **Refined Headline**:
@@ -60,7 +218,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ---
 
-### Slide 07: Architecture of an Intelligent Microservice: The Headless AI Agent (Locked & Frozen)
+### Slide 07: Architecture of an Intelligent Microservice: The Autonomous AI Agent (Locked & Frozen)
 
 #### Added
 - **Dedicated Standalone Slide**: [`working_deck/pages/page_07.html`](working_deck/pages/page_07.html)

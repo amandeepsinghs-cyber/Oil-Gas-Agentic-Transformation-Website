@@ -1,0 +1,504 @@
+<!-- ========================================================================= -->
+<!-- SLIDE: STAGE 08 // THE ENTERPRISE VULNERABILITY CHESSBOARD               -->
+<!-- 20 PERSONAS × 15 ACTIONS (300 MECE TOUCHPOINTS)                           -->
+<!-- DUAL-LAYER: WORKFORCE & KNOWLEDGE SEAMS VS PHYSICAL ASSET INFRASTRUCTURE  -->
+<!-- LOCKED GOLDEN MASTER FILE                                                 -->
+<!-- ========================================================================= -->
+<style>
+  #stage-08 {
+    --slate-bg: #06090E;
+    --slate-panel: rgba(13, 19, 32, 0.75);
+    --slate-border: rgba(255, 255, 255, 0.08);
+    --security-turquoise: #00D2B4;
+    --security-azure: #00A3FF;
+    --nebula-crimson: #EF4444;
+    --hazard-amber: #F59E0B;
+    --font-display: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+    background: var(--slate-bg);
+    color: #E2E8F0;
+    position: relative;
+    padding: 80px max(24px, 3.5vw);
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  /* Atmospheric Blueprint Backdrop */
+  #stage-08 .slide-bg-media {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  #stage-08 .slide-bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  #stage-08 .slide-bg-radial {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 25%, rgba(0, 210, 180, 0.04) 0%, rgba(6, 9, 14, 0.96) 60%, var(--slate-bg) 100%);
+  }
+
+  /* Chessboard Cell Drafting Styles */
+  #stage-08 .board-cell {
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    height: 38px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 700;
+    transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    user-select: none;
+  }
+
+  #stage-08 .board-cell:hover {
+    transform: scale(1.18);
+    z-index: 50;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  }
+
+  #stage-08 .board-cell.active-selected {
+    transform: scale(1.22);
+    z-index: 60;
+    outline: 2px solid #FFF;
+    box-shadow: 0 0 20px rgba(0, 210, 180, 0.8);
+  }
+
+  /* Cell Types */
+  #stage-08 .cell-plugged {
+    background: linear-gradient(135deg, rgba(0, 210, 180, 0.35) 0%, rgba(0, 163, 255, 0.30) 100%);
+    border: 1.5px solid var(--security-turquoise);
+    color: #FFFFFF;
+    box-shadow: 0 0 16px rgba(0, 210, 180, 0.45);
+    animation: pulse-turquoise 2.8s infinite alternate;
+  }
+
+  @keyframes pulse-turquoise {
+    0% { box-shadow: 0 0 12px rgba(0, 210, 180, 0.35); border-color: rgba(0, 210, 180, 0.7); }
+    100% { box-shadow: 0 0 24px rgba(0, 210, 180, 0.85); border-color: #00FFD5; }
+  }
+
+  #stage-08 .cell-critical {
+    background-color: rgba(239, 68, 68, 0.08);
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(239, 68, 68, 0.28) 0,
+      rgba(239, 68, 68, 0.28) 2px,
+      transparent 2px,
+      transparent 7px
+    );
+    border: 1px solid rgba(239, 68, 68, 0.45);
+    color: #FCA5A5;
+  }
+
+  #stage-08 .cell-critical:hover {
+    border-color: var(--nebula-crimson);
+    background-color: rgba(239, 68, 68, 0.22);
+    color: #FFFFFF;
+  }
+
+  #stage-08 .cell-friction {
+    background-color: rgba(245, 158, 11, 0.06);
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(245, 158, 11, 0.24) 0,
+      rgba(245, 158, 11, 0.24) 2px,
+      transparent 2px,
+      transparent 7px
+    );
+    border: 1px solid rgba(245, 158, 11, 0.40);
+    color: #FDE68A;
+  }
+
+  #stage-08 .cell-friction:hover {
+    border-color: var(--hazard-amber);
+    background-color: rgba(245, 158, 11, 0.20);
+    color: #FFFFFF;
+  }
+
+  #stage-08 .cell-baseline {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #64748B;
+  }
+
+  #stage-08 .cell-baseline:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+    color: #CBD5E1;
+  }
+
+  #stage-08 .persona-row-label {
+    padding: 6px 12px;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #94A3B8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(13, 19, 32, 0.85);
+    position: sticky;
+    left: 0;
+    z-index: 10;
+    width: 250px;
+    min-width: 250px;
+    box-sizing: border-box;
+    height: 38px;
+  }
+
+  #stage-08 .persona-row-label.highlight-row {
+    background: rgba(0, 210, 180, 0.15);
+    color: #FFFFFF;
+    border-right-color: var(--security-turquoise);
+  }
+
+  #stage-08 .action-col-header {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #64748B;
+    text-align: center;
+    padding: 8px 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(13, 19, 32, 0.85);
+    position: sticky;
+    top: 0;
+    z-index: 15;
+  }
+
+  #stage-08 .action-col-header.highlight-col {
+    color: var(--security-turquoise);
+    border-bottom-color: var(--security-turquoise);
+  }
+
+  #stage-08 .badge-sector {
+    font-size: 9px;
+    font-family: var(--font-mono);
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 800;
+  }
+
+  #stage-08 .sector-geosciences { background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.3); }
+  #stage-08 .sector-drilling { background: rgba(59, 130, 246, 0.15); color: #60A5FA; border: 1px solid rgba(59, 130, 246, 0.3); }
+  #stage-08 .sector-reservoir { background: rgba(6, 182, 212, 0.15); color: #22D3EE; border: 1px solid rgba(6, 182, 212, 0.3); }
+  #stage-08 .sector-midstream { background: rgba(139, 92, 246, 0.15); color: #A78BFA; border: 1px solid rgba(139, 92, 246, 0.3); }
+  #stage-08 .sector-downstream { background: rgba(244, 63, 94, 0.15); color: #FB7185; border: 1px solid rgba(244, 63, 94, 0.3); }
+  #stage-08 .sector-safety { background: rgba(245, 158, 11, 0.15); color: #FBBF24; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+  #stage-08 .filter-chip {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: #94A3B8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  #stage-08 .filter-chip:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFF;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+  #stage-08 .filter-chip.active {
+    background: rgba(0, 210, 180, 0.15);
+    border-color: var(--security-turquoise);
+    color: var(--security-turquoise);
+    font-weight: 700;
+  }
+
+  #stage-08 .view-switcher-pill {
+    background: rgba(13, 19, 32, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 4px;
+    display: inline-flex;
+    gap: 4px;
+  }
+  #stage-08 .view-btn {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    padding: 6px 16px;
+    border-radius: 18px;
+    border: none;
+    background: transparent;
+    color: #94A3B8;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.2s ease;
+  }
+  #stage-08 .view-btn.active {
+    background: #FFFFFF;
+    color: #06090E;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  }
+</style>
+
+<section class="slide narrative-stage" id="stage-08">
+  
+  <!-- Atmospheric Background -->
+  <div class="slide-bg-media">
+    <div class="slide-bg-grid"></div>
+    <div class="slide-bg-radial"></div>
+  </div>
+
+  <div style="max-width: 1720px; margin: 0 auto; position: relative; z-index: 2;">
+    
+    <!-- Stage Header Block -->
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; margin-bottom: 24px; flex-wrap: wrap;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+          <span style="font-family: var(--font-mono); font-size: 12px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 2px; text-transform: uppercase;">
+            AGENTIC TRANSFORMATION // WORKFORCE &amp; WORKFLOWS
+          </span>
+          <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise);"></span>
+          <span style="font-family: var(--font-mono); font-size: 11px; color: #94A3B8;">OPERATIONAL SEAMS ACROSS 20 DISCIPLINES</span>
+        </div>
+
+        <h1 style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 46px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: #FFFFFF; margin: 0 0 8px 0;">
+          Agentic Transformation Across Workforce &amp; Workflows.
+        </h1>
+        <h2 style="font-family: var(--font-display); font-size: clamp(18px, 1.4vw, 24px); font-weight: 600; line-height: 1.35; color: var(--security-turquoise); letter-spacing: -0.3px; margin: 0 0 12px 0;">
+          AI agents creating value across the value chain of the organisation.
+        </h2>
+
+        <p style="font-size: clamp(14px, 1.05vw, 16px); line-height: 1.45; color: #94A3B8; max-width: 1080px; margin: 0;">
+          High-consequence operations rely on specialized domain experts executing complex, multi-stage workflows across disconnected systems. AI agents augment the workforce and fortify workflows—unlocking measurable value across discrete operational seams from upstream exploration to downstream refining.
+        </p>
+      </div>
+
+      <!-- Mode Switcher (Workforce vs Physical Operations) -->
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
+        <div class="view-switcher-pill">
+          <button class="view-btn active" id="btn-mode-workforce-stage" onclick="setBoardMode('workforce')">
+            Workforce &amp; Knowledge Seams (20 Personas)
+          </button>
+          <button class="view-btn" id="btn-mode-physical-stage" onclick="setBoardMode('physical')">
+            Physical Operations &amp; Assets (20 Units)
+          </button>
+        </div>
+        <span style="font-family: var(--font-mono); font-size: 11px; color: #64748B;" id="mode-caption-stage">
+          Workforce: Workflows overlap directly with human domain experts.
+        </span>
+      </div>
+    </div>
+
+    <!-- Live Metric Strip & Status Ribbon -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 22px;">
+      
+      <div style="background: rgba(13, 19, 32, 0.65); border: 1px solid var(--slate-border); border-left: 3px solid var(--security-turquoise); padding: 12px 18px; border-radius: 6px;">
+        <div style="font-family: var(--font-mono); font-size: 10.5px; color: #94A3B8; letter-spacing: 1px;">TOTAL OPERATIONAL NODES</div>
+        <div style="font-size: 26px; font-weight: 800; color: #FFF; font-family: var(--font-display);">300 <span style="font-size: 13px; font-weight: 500; color: #64748B;">Touchpoints</span></div>
+        <div style="font-family: var(--font-mono); font-size: 10px; color: var(--security-turquoise);">Zero Task Overlap // 20 Disciplines</div>
+      </div>
+
+      <div style="background: rgba(13, 19, 32, 0.65); border: 1px solid rgba(0, 210, 180, 0.3); border-left: 3px solid var(--security-turquoise); padding: 12px 18px; border-radius: 6px; box-shadow: inset 0 0 20px rgba(0, 210, 180, 0.05);">
+        <div style="font-family: var(--font-mono); font-size: 10.5px; color: var(--security-turquoise); letter-spacing: 1px; font-weight: 700;">★ LIGHTHOUSE VALIDATED</div>
+        <div style="font-size: 26px; font-weight: 800; color: var(--security-turquoise); font-family: var(--font-display);">1 / 300 <span style="font-size: 13px; font-weight: 500; color: #94A3B8;">(0.33%)</span></div>
+        <div style="font-family: var(--font-mono); font-size: 10px; color: #FFF;">Lead Petrophysicist Benchmark (Slide 06)</div>
+      </div>
+
+      <div style="background: rgba(13, 19, 32, 0.65); border: 1px solid rgba(239, 68, 68, 0.3); border-left: 3px solid var(--nebula-crimson); padding: 12px 18px; border-radius: 6px;">
+        <div style="font-family: var(--font-mono); font-size: 10.5px; color: #FCA5A5; letter-spacing: 1px;">🔴 CRITICAL RISK SEAMS</div>
+        <div style="font-size: 26px; font-weight: 800; color: var(--nebula-crimson); font-family: var(--font-display);">52 <span style="font-size: 13px; font-weight: 500; color: #64748B;">Seams</span></div>
+        <div style="font-family: var(--font-mono); font-size: 10px; color: #FCA5A5;">Catastrophic Blowout / ₹50Cr+ Bleed</div>
+      </div>
+
+      <div style="background: rgba(13, 19, 32, 0.65); border: 1px solid rgba(245, 158, 11, 0.3); border-left: 3px solid var(--hazard-amber); padding: 12px 18px; border-radius: 6px;">
+        <div style="font-family: var(--font-mono); font-size: 10.5px; color: #FDE68A; letter-spacing: 1px;">🟡 MANUAL FRICTION GAPS</div>
+        <div style="font-size: 26px; font-weight: 800; color: var(--hazard-amber); font-family: var(--font-display);">84 <span style="font-size: 13px; font-weight: 500; color: #64748B;">Bottlenecks</span></div>
+        <div style="font-family: var(--font-mono); font-size: 10px; color: #FDE68A;">1–4 Hr Engineering Decision Lag</div>
+      </div>
+
+      <div style="background: rgba(13, 19, 32, 0.65); border: 1px solid var(--slate-border); border-left: 3px solid #64748B; padding: 12px 18px; border-radius: 6px;">
+        <div style="font-family: var(--font-mono); font-size: 10.5px; color: #94A3B8; letter-spacing: 1px;">⚪ BASELINE MONOLITHS</div>
+        <div style="font-size: 26px; font-weight: 800; color: #CBD5E1; font-family: var(--font-display);">164 <span style="font-size: 13px; font-weight: 500; color: #64748B;">Monolith Silos</span></div>
+        <div style="font-family: var(--font-mono); font-size: 10px; color: #64748B;">Legacy Desktop Software Locks</div>
+      </div>
+
+    </div>
+
+    <!-- Filter Controls Bar -->
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        <span style="font-family: var(--font-mono); font-size: 11px; color: #64748B; margin-right: 4px;">FILTER BY STATUS:</span>
+        <button class="filter-chip active" id="chip-all-stage" onclick="filterByStatus('all')">All 300 Seams</button>
+        <button class="filter-chip" id="chip-plugged-stage" onclick="filterByStatus('plugged')" style="border-color: rgba(0, 210, 180, 0.4); color: var(--security-turquoise);">
+          ★ Plugged Only (1)
+        </button>
+        <button class="filter-chip" id="chip-critical-stage" onclick="filterByStatus('critical')" style="border-color: rgba(239, 68, 68, 0.4); color: #F87171;">
+          🔴 Critical Red (52)
+        </button>
+        <button class="filter-chip" id="chip-friction-stage" onclick="filterByStatus('friction')" style="border-color: rgba(245, 158, 11, 0.4); color: #FBBF24;">
+          🟡 Friction Amber (84)
+        </button>
+        <button class="filter-chip" id="chip-baseline-stage" onclick="filterByStatus('baseline')">
+          ⚪ Baseline (164)
+        </button>
+      </div>
+
+      <!-- Legend -->
+      <div style="display: flex; align-items: center; gap: 14px; font-family: var(--font-mono); font-size: 11px; color: #94A3B8;">
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <div style="width: 14px; height: 14px; background: var(--security-turquoise); border-radius: 2px;"></div>
+          <span>Plugged Agent</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <div style="width: 14px; height: 14px; background: repeating-linear-gradient(45deg, rgba(239, 68, 68, 0.5) 0, rgba(239, 68, 68, 0.5) 2px, transparent 2px, transparent 4px); border: 1px solid #EF4444; border-radius: 2px;"></div>
+          <span>Critical Seam</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <div style="width: 14px; height: 14px; background: repeating-linear-gradient(-45deg, rgba(245, 158, 11, 0.5) 0, rgba(245, 158, 11, 0.5) 2px, transparent 2px, transparent 4px); border: 1px solid #F59E0B; border-radius: 2px;"></div>
+          <span>Friction Gap</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <div style="width: 14px; height: 14px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); border-radius: 2px;"></div>
+          <span>Baseline Silo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dual-Pane Layout: Chessboard Grid + Interactive Live HUD -->
+    <div style="display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 24px; align-items: start;">
+      
+      <!-- Chessboard Scrollable Grid Container -->
+      <div class="chessboard-scroll-pane" style="background: rgba(13, 19, 32, 0.85); border: 1px solid var(--slate-border); border-radius: 8px; overflow-x: auto; max-height: 740px; overflow-y: auto; position: relative;">
+        
+        <div id="chessboard-table-stage" style="display: grid; grid-template-columns: 250px repeat(15, minmax(44px, 1fr)); min-width: 950px; position: relative;">
+          
+          <!-- Top Left Corner Fixed Cell -->
+          <div style="position: sticky; top: 0; left: 0; z-index: 30; background: #0B101B; padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.15); border-right: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: #FFF; letter-spacing: 1px;">ROWS A–T // DISCIPLINES</span>
+            <span style="font-family: var(--font-mono); font-size: 9px; color: var(--security-turquoise); font-weight: 700;">STEPS 1–15</span>
+          </div>
+
+          <!-- Column Headers -->
+          <div id="col-headers-anchor-stage" style="display: contents;"></div>
+
+          <!-- Grid Rows -->
+          <div id="grid-rows-anchor-stage" style="display: contents;"></div>
+
+        </div>
+
+      </div>
+
+      <!-- Interactive Live HUD Inspector -->
+      <div id="hud-panel-stage" style="position: sticky; top: 20px; background: rgba(13, 19, 32, 0.95); backdrop-filter: blur(20px); border: 1px solid rgba(0, 210, 180, 0.35); border-radius: 8px; padding: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.6);">
+        
+        <!-- HUD Header -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 12px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--security-turquoise); animation: pulse-turquoise 1.5s infinite alternate;" id="hud-pulse-stage"></span>
+            <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 1.5px;" id="hud-kicker-stage">
+              LIVE SEAM INSPECTOR // TOUCHPOINT FOCUS
+            </span>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 10.5px; background: rgba(0, 210, 180, 0.15); color: var(--security-turquoise); padding: 2px 8px; border-radius: 4px; border: 1px solid rgba(0, 210, 180, 0.3);" id="hud-status-badge-stage">
+            ★ PLUGGED (SLIDE 06)
+          </span>
+        </div>
+
+        <!-- Persona & Action Title -->
+        <div style="margin-bottom: 16px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
+            <span class="badge-sector sector-geosciences" id="hud-sector-badge-stage">SUBSURFACE GEOSCIENCES</span>
+            <span style="font-family: var(--font-mono); font-size: 11px; color: #64748B;" id="hud-monolith-stage">Legacy: Techlog / IP</span>
+          </div>
+          <h3 style="font-size: 20px; font-weight: 800; color: #FFF; margin: 0 0 4px 0; line-height: 1.25;" id="hud-persona-title-stage">
+            Lead Petrophysicist
+          </h3>
+          <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: var(--security-turquoise);" id="hud-action-title-stage">
+            J8 • Step 8: Multi-Pass Wireline Curve Splicing
+          </div>
+        </div>
+
+        <!-- The Latent Seam (Vulnerability / Bleed) -->
+        <div style="background: rgba(239, 68, 68, 0.08); border-left: 3px solid var(--nebula-crimson); border-radius: 4px; padding: 14px; margin-bottom: 16px;">
+          <div style="display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #FCA5A5; margin-bottom: 6px; letter-spacing: 1px;">
+            <span>🔴 THE LATENT VULNERABILITY (VALUE BLEED)</span>
+          </div>
+          <p style="font-size: 13.5px; line-height: 1.55; color: #CBD5E1; margin: 0;" id="hud-vuln-desc-stage">
+            1–2 hr manual curve shifting; cable stretch error (+1.48m shift) risks placing casing shoe into high-pressure gas sand, triggering unexpected well kicks and blowout alarms.
+          </p>
+        </div>
+
+        <!-- The Sovereign AI Agent (Opportunity) -->
+        <div style="background: rgba(0, 210, 180, 0.08); border-left: 3px solid var(--security-turquoise); border-radius: 4px; padding: 14px; margin-bottom: 18px;">
+          <div style="display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-turquoise); margin-bottom: 6px; letter-spacing: 1px;">
+            <span>⚡ AI AGENT (THE OPPORTUNITY)</span>
+          </div>
+          <p style="font-size: 13.5px; line-height: 1.55; color: #E2E8F0; margin: 0;" id="hud-plug-desc-stage">
+            <strong>SciPy Curve Splicing Agent (Slide 06)</strong>: 3.2-second autonomous execution, 2.9cm depth error, Pearson $r=0.9899$, automated sanity verification and immutable BigQuery audit ledger.
+          </p>
+        </div>
+
+        <!-- Quantified Exposure / ROI Metric Strip -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; padding: 12px; margin-bottom: 18px;">
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 10px; color: #94A3B8;">ANNUAL RISK MITIGATION</div>
+            <div style="font-family: var(--font-display); font-size: 18px; font-weight: 800; color: #FFF;" id="hud-impact-stat-stage">
+              ₹45 Cr / yr
+            </div>
+          </div>
+          <div>
+            <div style="font-family: var(--font-mono); font-size: 10px; color: #94A3B8;">DECISION VELOCITY</div>
+            <div style="font-family: var(--font-display); font-size: 18px; font-weight: 800; color: var(--security-turquoise);" id="hud-speed-stat-stage">
+              3.2s vs 2.5 Hrs
+            </div>
+          </div>
+        </div>
+
+        <!-- Deep Action CTA -->
+        <div style="display: flex; gap: 10px;">
+          <button onclick="focusCenterHero()" style="flex: 1; padding: 10px 14px; border-radius: 6px; background: linear-gradient(135deg, rgba(0, 210, 180, 0.25), rgba(0, 163, 255, 0.25)); border: 1px solid var(--security-turquoise); color: #FFF; font-family: var(--font-mono); font-size: 11px; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+            ★ Re-Center On Proven Splicing Plug (J8)
+          </button>
+          <a href="working_deck/pages/page_06.html" style="padding: 10px 14px; border-radius: 6px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #CBD5E1; text-decoration: none; font-family: var(--font-mono); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center;">
+            View Slide 06 Proof ↗
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Strategic Narrative Bottom Strip -->
+    <div style="margin-top: 32px; padding: 22px 32px; background: rgba(13, 19, 32, 0.5); border: 1px solid var(--slate-border); border-radius: 8px; width: 100%; box-sizing: border-box;">
+      <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 1.5px; margin-bottom: 6px;">
+        STRATEGIC EXECUTIVE TAKEAWAY // PRIORITISED DEPLOYMENT
+      </div>
+      <h4 style="font-size: 20px; font-weight: 800; color: #FFF; margin: 0 0 8px 0;">
+        Strategic Agent Prioritisation Playbook
+      </h4>
+      <p style="font-size: 14px; line-height: 1.65; color: #94A3B8; margin: 0; max-width: 100%;">
+        Across enterprise operations, there are numerous operational seams where human latency, dark data, or siloed calculations threaten the balance sheet. Rather than deploying agents to every single action, the enterprise strategically prioritises high-exposure seams by financial criticality—deploying autonomous AI agents where they unlock the greatest measurable value, eliminate systemic bottlenecks, and fortify enterprise workflows.
+      </p>
+    </div>
+
+  </div>
+
+</section>
