@@ -12,6 +12,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ---
 
+## [Repository Hygiene & Decluttering] - 2026-09-08
+### Architecture Streamlining & Slide 09 Polish
+- **Purged Obsolete Legacy Assets**:
+  - Deleted `baseline_deck/` (unversioned legacy 16-stage continuous prototype).
+  - Deleted `dump/` (unreferenced scratchpad and draft fragments).
+  - Deleted `slides_legacy/` (22 pre-pivot fixed 16:9 slides), `deck_legacy.html`, and `build_deck_legacy.py`.
+- **Slide 09 Typographic Alignment**:
+  - Restructured Slide 09 headline into explicit H1 Title (*Agent Economics: The Value Map of Agentic Transformation.*) and H2 Subheading (*Mapping value unlock by individual autonomous agents for strategic prioritisation.* in signature turquoise `#00D2B4`), matching Slide 08's executive visual hierarchy.
+- **Repository Blueprint**:
+  - Updated `build.md` directory tree and `LOCKED_SLIDES.md` specifications.
+
+---
+
 ## [Slide 08] - 2026-09-08
 ### Slide 08: Agentic Transformation Across Workforce & Workflows
 - **Strategic Narrative & Title Realignment (Workforce & Workflows)**:
@@ -66,7 +79,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
   - Addressed executive feedback to replace figurative mountaineering tropes ("Every operational seam has a price. Prioritize the high summits, not the plains... deploy autonomous sovereign agents to conquer the highest peaks first") with rigorous corporate strategy and portfolio sequencing:
     - **New Stage Eyebrow**: `AGENT ECONOMICS // ENTERPRISE VALUE TOPOLOGY`
     - **New H1 Title**: *Agent Economics: The Value Map of Agentic Transformation.*
-    - **New Strategic Subtitle**: *Mapping value unlock by individual autonomous agents for strategic prioritisation.*
+    - **New H2 Subheading**: *Mapping value unlock by individual autonomous agents for strategic prioritisation.* (formatted as an explicit `<h2>` in signature turquoise `#00D2B4`, exactly mirroring Slide 08's executive typographic hierarchy).
     - **New Executive Narrative**: *Quantifying 300 operational seams by capital at risk (₹ Cr / yr) establishes an actionable investment topology—sequencing deployment from our proven lighthouse agent directly into the highest-exposure enterprise targets.*
   - **Complete Elimination of "Base Camp"**:
     - Replaced all instances of "Base Camp 01" across UI cards, toolstrip buttons, 3D billboard tags, 2D radar legends, canvas rendering routines, code comments, and the 3-phase strategic horizon with **"Lighthouse Agent (Proven)"** / **"Proven Lighthouse Agent (Kansas Well A-12 • Slide 06 Benchmark)"**.

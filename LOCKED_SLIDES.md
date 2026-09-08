@@ -248,7 +248,8 @@
 ---
 
 ### Slide 09 Golden Specifications (Approved):
-- **Headline:** *Agent Economics: The Value Map of Agentic Transformation.*<br>*Mapping value unlock by individual autonomous agents for strategic prioritisation.* (with signature sovereign turquoise highlight `#00D2B4`).
+- **Headline:** *Agent Economics: The Value Map of Agentic Transformation.* (H1 Main Title)
+- **Subheading:** *Mapping value unlock by individual autonomous agents for strategic prioritisation.* (H2 Subheading with signature sovereign turquoise highlight `#00D2B4`).
 - **Kicker:** `STAGE 09 // THE AGENTIC VALUE TOPOLOGY`
 - **Eyebrow:** `AGENT ECONOMICS // ENTERPRISE VALUE TOPOLOGY`
 - **Subheading:** *Quantifying 300 operational seams by capital at risk (₹ Cr / yr) establishes an actionable investment topology—sequencing deployment from our proven lighthouse agent directly into the highest-exposure enterprise targets.*

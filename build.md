@@ -35,29 +35,15 @@ We resolve the tension between "an ugly, rigid slide deck" and "an unstructured 
 ```
 O&G_slidedeck_agentic_transformation/
 ├── deck.html                              # Master fluid executive web platform shell
-├── deck_legacy.html                       # Master legacy fixed 16:9 presentation deck shell
-├── build_deck.py                          # Automated compiler stitching slides/ into deck.html (or --legacy)
-├── build_deck_legacy.py                   # Dedicated compiler stitching slides_legacy/ into deck_legacy.html
+├── index.html                             # Executive root entrypoint
+├── build_deck.py                          # Automated compiler stitching slides/ into deck.html
 ├── build.md                               # Architectural blueprint & component contracts (this file)
 ├── skills.md                              # Fluid design system, tokens, and UI standards
-├── narrative.md                           # Complete 15-slide boardroom speech tracks & narrative
-├── slides_legacy/                         # Modular Legacy Slide Components (16 Fixed 16:9 Units)
-│   ├── slide_00_title.html                # Hero Cover & Presentation Intro
-│   ├── slide_01_capital_reality.html      # Capital Reality & High-Stakes Macro Numbers
-│   ├── slide_02_swiss_cheese.html         # Swiss Cheese Failure Model
-│   ├── slide_03_mece_traps.html           # 3 MECE Traps
-│   ├── slide_04_workforce_personas.html   # Workforce Personas & Daily Friction
-│   ├── slide_05_vulnerability_matrix.html # 2D Vulnerability Matrix
-│   ├── slide_06_solution_criteria.html    # 5 Solution Criteria
-│   ├── slide_07_introducing_agents.html   # Autonomous Agents & Dual-Engine Split
-│   ├── slide_08_jenga_comparison.html     # Jenga Organization Comparison
-│   ├── slide_09_splicing_architecture.html# Proof Benchmark Splicing Architecture
-│   ├── slide_10_demo_part1_ingestion.html # Demo Part 1: GCS Ingestion & A2UI
-│   ├── slide_11_demo_part2_splicing.html  # Demo Part 2: SPWLA 4-Track Vector Canvas
-│   ├── slide_12_demo_ledger_takeaways.html# Demo Part 3: Tool Calibration & BigQuery Audit
-│   ├── slide_13_enterprise_fleet.html     # Enterprise Multi-Surface Platform & Fleet
-│   ├── slide_14_discovery_workshop.html   # Discovery Workshop & Action for Business
-│   └── slide_15_next_steps.html           # Executive Authorization & Digital Charter
+├── working_deck/                          # Isolated per-slide authoring & preview environment
+│   └── pages/                             # Individual slide pages (page_00.html to page_09.html)
+├── final_slides/                          # Immutable approved golden master slides (*.LOCKED.html)
+├── data/                                  # Centralized MECE matrix data (CSV + JS)
+└── scripts/                               # Data sync and build automation scripts
 ├── assets/
 │   ├── styles.css                         # Fluid design system, responsive grid & nebula tokens
 │   ├── presenter.js                       # Dual-mode engine: scroll-spy, keyboard nav, fullscreen
