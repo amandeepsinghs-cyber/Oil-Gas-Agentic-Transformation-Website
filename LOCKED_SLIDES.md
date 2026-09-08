@@ -50,7 +50,7 @@
 ---
 
 ### Slide 02 Golden Specifications (Approved):
-- **Headline:** *Prof. James Reason's Swiss Cheese Model* — Latent Trajectory to Disaster.
+- **Headline:** *A major Incident is never a single failure. It’s the quiet alignment of invisible gaps.* (Prof. James Reason's System Safety Model)
 - **Kicker:** `ROOT CAUSE TAXONOMY // SYSTEMIC VULNERABILITY`
 - **Interactive Switcher:** Active Seams Sealed by Agent vs. Unmonitored Domino Failure Chain.
 - **The 4 Seams:**
@@ -74,7 +74,7 @@
   3. `03 Intelligent` (Understands unstructured logs & domain context)
   4. `04 Governed` (Centrally controlled, immutable audit trail, human veto)
   5. `05 Robust` (Deterministic physics and exact mathematical solvers)
-- **BAM Proclamation Card:** *A system that is Surgical, Automated, Intelligent, Governed, and Robust has a name. That is an AI Agent.*
+- **Conclusion Definition Banner:** *A system that is Surgical, Automated, Intelligent, Governed, and Robust embodies the core characteristics of an Enterprise AI Agent.* (Kicker: `THE ARCHITECTURAL DEFINITION // CORE CHARACTERISTICS`)
 - **Narrative Bridge:** Bottom transition to Stage 04 (*AI Agent: The Intelligent Microservice*).
 
 ---

@@ -120,7 +120,7 @@
 * **Tactile State Switcher:**
   - `⚠ Baseline: 4 Aligned Gaps` (Crimson active state)
   - `🛡 Fortified: Deterministic Plugs Active` (Turquoise sealed state)
-* **Display Headline:** `Disaster is never a single failure. It’s the quiet alignment of invisible gaps.`
+* **Display Headline:** `A major Incident is never a single failure. It’s the quiet alignment of invisible gaps.`
 * **Narrative Lead:** `Rooted in Prof. James Reason’s System Safety model, high-consequence disasters never stem from a single colossal error but a series of missteps and micro vulnerabilities.`
 * **Three Monumental Executive Truth Shelves:**
   1. **Shelf 1 (Azure Bar):** `PROF. JAMES REASON'S SYSTEM SAFETY PRINCIPLE`  
@@ -188,12 +188,12 @@
   5. **CRITERION 05 — Robust (Radiant Lavender `#C084FC`):**  
      *Title:* **Robust**  
      *Requirement:* Grounded in deterministic physics and exact mathematical solvers.  
-* **The Monumental BAM Proclamation Card:**
-  - *Kicker:* `THE ARCHITECTURAL REVELATION // THE BAM MOMENT`
-  - *Proclamation:*  
-    **A system that is Surgical, Automated, Intelligent, Governed, and Robust has a name.**  
-    **That is an AI Agent.**
-  - *Subtext:* *"Energy leadership agrees to the five engineering constraints before ever naming the technology. AI cynicism is disarmed because we defined the rigorous physics plug first."*
+* **The Architectural Definition Banner:**
+  - *Kicker:* `THE ARCHITECTURAL DEFINITION // CORE CHARACTERISTICS`
+  - *Definition:*  
+    **A system that is Surgical, Automated, Intelligent, Governed, and Robust**  
+    **embodies the core characteristics of an Enterprise AI Agent.**
+  - *Subtext:* *"These five non-negotiable characteristics separate mission-critical enterprise infrastructure from consumer chatbots—guaranteeing deterministic physical calculations, strict human oversight, and zero operational hallucination."*
   - *Badge Strip:* `STRATEGIC PIVOT: SPECIFICATION ➔ AI AGENT · MINUTE 4.5 SOLUTION REVEAL`
 * **Editorial Transition to Stage 04:**
   - *Question:* *"Where does the AI Agent create enterprise value?"*
@@ -202,7 +202,7 @@
 
 ### 2. Core Strategic Intent & Boardroom Point
 * **The Psychology of the Pitch:** If you begin an executive meeting pitching "AI Agents", energy leaders are immediately cynical. But if you lead them through the exact operational requirements needed to solve the Swiss cheese seams, they agree that any solution *must* be Surgical, Automated, Intelligent, Governed, and Robust.
-* **The BAM Moment:** When we reveal *"That is an AI Agent"*, the room experiences an intellectual epiphany. We have not sold them an AI tool; we have given a name to the defensive engineering plug their operations desperately require.
+* **The Core Definition:** When we establish that a system satisfying these five criteria embodies the core characteristics of an Enterprise AI Agent, the room aligns around engineering rigor. We have not sold them a speculative tool; we have defined the defensive engineering standard their operations require.
 
 ### 3. Boardroom Spoken Script (CMD & CEO Track)
 > *"Before we talk about any technology vendor or software platform, let us ask a fundamental engineering question:
@@ -217,9 +217,7 @@
 > 4. **It must be Governed:** Centrally controlled, strictly permissioned, with an immutable audit trail and non-negotiable Human-in-the-Loop expert veto.
 > 5. **And it must be Robust:** Grounded in deterministic physics and exact mathematical solvers.
 > 
-> A system that is Surgical, Automated, Intelligent, Governed, and Robust has a name.
-> 
-> **That is an AI Agent.**
+> A system that is Surgical, Automated, Intelligent, Governed, and Robust embodies the core characteristics of an Enterprise AI Agent.
 > 
 > The question now is: where does this AI Agent create immediate enterprise value across your organization?"*
 

@@ -153,7 +153,7 @@ O&G_slidedeck_agentic_transformation/
   3. Intelligent (Security Turquoise `#00D2B4`): Understands unstructured logs, domain context, and cross-discipline data.
   4. Governed (Security Mint `#10B981`): Centrally controlled, strictly permissioned, with an immutable audit trail and non-negotiable Human-in-the-Loop expert veto.
   5. Robust (Radiant Lavender `#C084FC`): Grounded in deterministic physics and exact mathematical solvers.
-* **The BAM Moment:** "A system that is Surgical, Automated, Intelligent, Governed, and Robust has a name. That is an AI Agent."
+* **The Core Definition Banner:** "A system that is Surgical, Automated, Intelligent, Governed, and Robust embodies the core characteristics of an Enterprise AI Agent."
 * **Component Contract:**
   * Tag: `.slide.narrative-stage.theme-blue#stage-03`
   * High-contrast styling: `#CBD5E1` body text, `#FFFFFF` titles, `0.92` opacity numerals.

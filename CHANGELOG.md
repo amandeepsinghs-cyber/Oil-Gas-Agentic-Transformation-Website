@@ -12,7 +12,36 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ---
 
-## [Uncommitted] - 2026-09-08
+## [Refinements] - 2026-09-08
+### Slide 02: Display Headline Refinement (Process Safety Terminology)
+- **Refined Headline**:
+  - Replaced *"Disaster is never a single failure. It’s the quiet alignment of invisible gaps."*
+  - With **"A major Incident is never a single failure. It’s the quiet alignment of invisible gaps."**
+  - Grounds the James Reason Swiss Cheese framework in formal oil & gas Process Safety Management (PSM) and high-consequence engineering taxonomy rather than sensationalist disaster wording.
+- **Synchronized Files**:
+  - `working_deck/pages/page_02.html`
+  - `final_slides/slide_02_swiss_cheese.LOCKED.html` & `final_slides/slide_02_swiss_cheese.html`
+  - `index.html`, `deck.html`, and `working_deck/index.html`
+  - `working_deck/slides/slide_02_swiss_cheese.html` & `slides/slide_02_swiss_cheese.html`
+  - `LOCKED_SLIDES.md` & `AGENTIC_PITCH_BIBLE.md`
+
+---
+
+### Slide 03: Architectural Conclusion Banner Refinement (Core Characteristics)
+- **Refined Phrasing**:
+  - **Kicker**: `THE ARCHITECTURAL DEFINITION // CORE CHARACTERISTICS` (replaced theatrical *"THE ARCHITECTURAL REVELATION // THE BAM MOMENT"*)
+  - **Headline**: *A system that is Surgical, Automated, Intelligent, Governed, and Robust embodies the core characteristics of an Enterprise AI Agent.* (replaced melodramatic *"has a name. That is an AI Agent."*)
+  - **Supporting Copy**: *These five non-negotiable characteristics separate mission-critical enterprise infrastructure from consumer chatbots—guaranteeing deterministic physical calculations, strict human oversight, and zero operational hallucination.*
+- **Synchronized Across Entire Fleet**:
+  - `working_deck/pages/page_03.html`
+  - `final_slides/slide_03_the_need_criteria.LOCKED.html` & `final_slides/slide_03_the_need_criteria.html`
+  - `index.html`, `deck.html`, and `working_deck/index.html`
+  - `working_deck/slides/slide_03_the_need_criteria.html`, `working_deck/slides/slide_03_mece_traps.html`
+  - `slides/slide_03_the_need_criteria.html`, `slides/slide_03_mece_traps.html`
+  - `LOCKED_SLIDES.md`, `AGENTIC_PITCH_BIBLE.md`, `build.md`
+
+---
+
 ### Slide 02: Swiss Cheese Model Visual Assets Refinement (Executive Dark Studio Upgrade)
 
 #### Updated Assets
