@@ -1,0 +1,729 @@
+<!-- ========================================================================= -->
+<!-- SLIDE: STAGE 07 // ARCHITECTURE OF AN INTELLIGENT MICROSERVICE            -->
+<!-- THE HEADLESS AI AGENT & CENTRAL CONTROL PLANE                             -->
+<!-- REFERENCE COPY (Matches LOCKED Golden Master)                             -->
+<!-- ========================================================================= -->
+<style>
+  #stage-07 {
+    --security-turquoise: #00D2B4;
+    --security-azure: #00A3FF;
+    --nebula-cyan-bright: #00E5FF;
+    --nebula-amber: #F29900;
+    --security-mint: #34A853;
+    --google-blue: #1A73E8;
+  }
+
+  #stage-07 .gradient-text {
+    background: linear-gradient(135deg, #00E5FF 0%, #00D2B4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Architecture Visual Frame */
+  #stage-07 .arch-frame {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 32px rgba(0, 229, 255, 0.08);
+    margin-bottom: 24px;
+    position: relative;
+  }
+
+  #stage-07 .arch-frame svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* The 5 Core Attributes Grid */
+  #stage-07 .attributes-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: 1200px) {
+    #stage-07 .attributes-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+  }
+
+  #stage-07 .attr-card {
+    background: rgba(13, 17, 23, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 14px 16px;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #stage-07 .attr-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+
+  #stage-07 .attr-card-surgical::before { background: var(--nebula-cyan-bright); }
+  #stage-07 .attr-card-autonomous::before { background: var(--security-turquoise); }
+  #stage-07 .attr-card-intelligent::before { background: var(--security-azure); }
+  #stage-07 .attr-card-governed::before { background: var(--nebula-amber); }
+  #stage-07 .attr-card-deterministic::before { background: var(--security-mint); }
+
+  #stage-07 .attr-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  #stage-07 .attr-icon {
+    font-size: 16px;
+  }
+
+  #stage-07 .attr-title {
+    font-family: var(--font-mono, 'Roboto Mono', monospace);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  #stage-07 .attr-sub {
+    font-size: 12.5px;
+    line-height: 1.45;
+    color: #94A3B8;
+    margin: 0;
+  }
+
+  #stage-07 .attr-sub strong {
+    color: #E2E8F0;
+  }
+
+  /* Bottom Boardroom Provocation Horizon Bar */
+  #stage-07 .provocation-bar {
+    background: linear-gradient(135deg, rgba(0, 210, 180, 0.12) 0%, rgba(0, 229, 255, 0.08) 100%), rgba(13, 17, 23, 0.95);
+    border: 1px solid rgba(0, 229, 255, 0.35);
+    border-left: 4px solid var(--security-turquoise);
+    border-radius: 12px;
+    padding: 18px 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  #stage-07 .provocation-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  #stage-07 .provocation-eyebrow {
+    font-family: var(--font-mono, 'Roboto Mono', monospace);
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--security-turquoise);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  #stage-07 .provocation-text {
+    font-size: 15.5px;
+    line-height: 1.45;
+    color: #FFFFFF;
+    font-weight: 500;
+  }
+
+  #stage-07 .provocation-text strong {
+    color: var(--nebula-cyan-bright);
+  }
+
+  #stage-07 .provocation-link {
+    font-family: var(--font-display, 'Google Sans', sans-serif);
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #06090E;
+    background: linear-gradient(135deg, #00E5FF 0%, #00D2B4 100%);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 14px rgba(0, 229, 255, 0.3);
+  }
+
+  #stage-07 .provocation-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 229, 255, 0.45);
+  }
+</style>
+
+<section class="slide narrative-stage theme-turquoise" id="stage-07" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-start; padding: 90px max(24px, 4vw) 60px; position: relative; background: #06090E;">
+  
+  <!-- Atmospheric Cinematic Backdrop -->
+  <div class="slide-bg-media" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
+    <img src="assets/media/retail_agentic/image8.png" alt="Neural AI Stardust" class="slide-bg-img" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.14; filter: blur(24px) brightness(0.22);">
+    <div class="slide-bg-overlay" style="position: absolute; inset: 0; background: radial-gradient(circle at 40% 30%, rgba(0, 210, 180, 0.05) 0%, rgba(6, 9, 14, 0.94) 55%, rgba(6, 9, 14, 0.99) 100%);"></div>
+    <div class="slide-glow-mesh" style="position: absolute; inset: 0; background: radial-gradient(circle at 80% 20%, rgba(0, 163, 255, 0.07) 0%, transparent 60%);"></div>
+  </div>
+
+  <div class="editorial-container" style="max-width: 1480px; margin: 0 auto; width: 100%; position: relative; z-index: 2;">
+    
+    <!-- 1. Eyebrow & Display Headline -->
+    <div style="font-family: var(--font-mono, 'Roboto Mono', monospace); font-size: 13px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;">
+      07 ARCHITECTURE // HEADLESS MICROSERVICE &amp; CENTRAL CONTROL PLANE
+    </div>
+
+    <h1 style="font-family: var(--font-display, 'Google Sans', sans-serif); font-size: clamp(32px, 3.4vw, 52px); font-weight: 800; line-height: 1.12; letter-spacing: -1.5px; color: #FFFFFF; margin: 0 0 14px 0;">
+      Architecture of an Intelligent Microservice: <span class="gradient-text">The Headless AI Agent</span>
+    </h1>
+
+    <!-- 2. Subtitle / Narrative Anchor -->
+    <p style="font-size: clamp(15px, 1.1vw, 18.5px); line-height: 1.5; color: #94A3B8; max-width: 1280px; margin: 0 0 24px 0; font-weight: 400;">
+      Built on <strong style="color: #FFF;">Google Agent Development Kit (ADK)</strong>, deployed on <strong style="color: #FFF;">Vertex AI Agent Runtime</strong>, and centrally governed in <strong style="color: #FFF;">Gemini Enterprise Agent Registry</strong>—delivering deterministic physics across conversational chat, visual workstations, and legacy monoliths.
+    </p>
+
+    <!-- 3. MAIN ARCHITECTURAL STAGE: Embedded Official Reference Architecture SVG -->
+    <div class="arch-frame">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 1050" width="100%" height="100%" style="background-color: #FFFFFF; font-family: 'Google Sans', Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;">
+        <defs>
+          <!-- Gradients -->
+          <linearGradient id="gcpBannerGrad_ref" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#1A73E8"/>
+            <stop offset="40%" stop-color="#4285F4"/>
+            <stop offset="70%" stop-color="#34A853"/>
+            <stop offset="100%" stop-color="#FBBC04"/>
+          </linearGradient>
+
+          <linearGradient id="geminiSparkleGrad_ref" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#4285F4"/>
+            <stop offset="50%" stop-color="#1A73E8"/>
+            <stop offset="100%" stop-color="#9333EA"/>
+          </linearGradient>
+
+          <!-- Drop Shadows -->
+          <filter id="boxShadow_ref" x="-10%" y="-10%" width="125%" height="125%">
+            <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.06"/>
+            <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000000" flood-opacity="0.04"/>
+          </filter>
+
+          <filter id="heavyShadow_ref" x="-10%" y="-10%" width="125%" height="125%">
+            <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#1A73E8" flood-opacity="0.08"/>
+            <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000000" flood-opacity="0.04"/>
+          </filter>
+
+          <!-- Arrow Markers -->
+          <marker id="arrowBlue_ref" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <polygon points="0 1, 8 4.5, 0 8" fill="#1A73E8"/>
+          </marker>
+          <marker id="arrowGreen_ref" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <polygon points="0 1, 8 4.5, 0 8" fill="#1E8E3E"/>
+          </marker>
+          <marker id="arrowPurple_ref" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <polygon points="0 1, 8 4.5, 0 8" fill="#9333EA"/>
+          </marker>
+          <marker id="arrowRed_ref" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+            <polygon points="0 1, 8 4.5, 0 8" fill="#DC2626"/>
+          </marker>
+
+          <!-- Grid Pattern -->
+          <pattern id="lightGrid_ref" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#F1F3F4" stroke-width="1"/>
+          </pattern>
+
+          <!-- ================================================================= -->
+          <!-- OFFICIAL GOOGLE CLOUD PRODUCT ICONS (Vector Paths)                -->
+          <!-- ================================================================= -->
+
+          <!-- Google Cloud 4-Color Logo -->
+          <g id="iconGCP_ref">
+            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" fill="#4285F4"/>
+            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4c-1.12 0-2.18.25-3.13.7l6.32 6.32c.98-.32 2.05-.51 3.16-.51.34 0 .68.03 1 .09v-.56z" fill="#EA4335"/>
+            <path d="M6 20h13c1.65 0 3.11-.8 4.02-2.04l-6.22-6.22C16.29 11.89 15.7 12 15 12c-2.76 0-5-2.24-5-5 0-.7.11-1.29.26-1.8L5.35 8.04C2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6z" fill="#34A853"/>
+            <path d="M8.87 4.7C6.6 5.64 5.35 8.04 5.35 8.04L10.26 5.2C9.8 5 9.35 4.83 8.87 4.7z" fill="#FBBC04"/>
+          </g>
+
+          <!-- Gemini Enterprise Sparkle Logo -->
+          <g id="iconGemini_ref">
+            <rect width="36" height="36" rx="8" fill="#E8F0FE"/>
+            <path d="M18 4 C18 11.7, 11.7 18, 4 18 C11.7 18, 18 24.3, 18 32 C18 24.3, 24.3 18, 32 18 C24.3 18, 18 11.7, 18 4 Z" fill="url(#geminiSparkleGrad_ref)"/>
+            <circle cx="28" cy="8" r="3" fill="#4285F4"/>
+          </g>
+
+          <!-- Vertex AI Official Blue Hexagon Logo -->
+          <g id="iconVertexAI_ref">
+            <rect width="36" height="36" rx="8" fill="#E8F0FE"/>
+            <polygon points="18,5 31,12.5 31,27.5 18,35 5,27.5 5,12.5" fill="none" stroke="#1A73E8" stroke-width="2.5" stroke-linejoin="round"/>
+            <circle cx="18" cy="14" r="3.5" fill="#1A73E8"/>
+            <circle cx="11" cy="25" r="3" fill="#4285F4"/>
+            <circle cx="25" cy="25" r="3" fill="#4285F4"/>
+            <line x1="18" y1="14" x2="11" y2="25" stroke="#1A73E8" stroke-width="1.8"/>
+            <line x1="18" y1="14" x2="25" y2="25" stroke="#1A73E8" stroke-width="1.8"/>
+            <line x1="11" y1="25" x2="25" y2="25" stroke="#1A73E8" stroke-width="1.8"/>
+          </g>
+
+          <!-- Cloud Run Official Blue Cloud Logo -->
+          <g id="iconCloudRun_ref">
+            <rect width="36" height="36" rx="8" fill="#E8F0FE"/>
+            <path d="M7 15 L14 11 L14 25 L7 21 Z" fill="#4285F4"/>
+            <path d="M16 9 L25 4 L25 32 L16 27 Z" fill="#1A73E8"/>
+            <polygon points="27,14 32,11 32,25 27,22" fill="#4285F4"/>
+          </g>
+
+          <!-- Google Cloud Storage (GCS) Official Green Logo -->
+          <g id="iconCloudStorage_ref">
+            <rect width="36" height="36" rx="8" fill="#E6F4EA"/>
+            <rect x="7" y="7" width="22" height="6" rx="2" fill="#34A853"/>
+            <rect x="7" y="15" width="22" height="6" rx="2" fill="#1E8E3E"/>
+            <rect x="7" y="23" width="22" height="6" rx="2" fill="#137333"/>
+            <circle cx="11" cy="10" r="1" fill="#FFFFFF"/>
+            <circle cx="11" cy="18" r="1" fill="#FFFFFF"/>
+            <circle cx="11" cy="26" r="1" fill="#FFFFFF"/>
+          </g>
+
+          <!-- BigQuery Official Purple Analytics Logo -->
+          <g id="iconBigQuery_ref">
+            <rect width="36" height="36" rx="8" fill="#FAF5FF"/>
+            <circle cx="16" cy="16" r="9" fill="none" stroke="#9333EA" stroke-width="2.5"/>
+            <line x1="23" y1="23" x2="31" y2="31" stroke="#9333EA" stroke-width="3" stroke-linecap="round"/>
+            <rect x="11" y="12" width="3" height="7" fill="#A855F7"/>
+            <rect x="15" y="10" width="3" height="9" fill="#9333EA"/>
+            <rect x="19" y="14" width="3" height="5" fill="#C084FC"/>
+          </g>
+
+          <!-- Cloud IAM Official Security Shield Logo -->
+          <g id="iconCloudIAM_ref">
+            <rect width="36" height="36" rx="8" fill="#FEF7E0"/>
+            <path d="M18 5 L7 10 L7 19 C7 25.5 11.7 31.6 18 33 C24.3 31.6 29 25.5 29 19 L29 10 Z" fill="#F29900"/>
+            <path d="M18 5 L18 33 C24.3 31.6 29 25.5 29 19 L29 10 Z" fill="#E37400"/>
+            <circle cx="18" cy="15" r="3.5" fill="#FFFFFF"/>
+            <path d="M13 25 C13 22 15 20 18 20 C21 20 23 22 23 25 Z" fill="#FFFFFF"/>
+          </g>
+
+          <!-- Cloud Composer / Orchestration Logo -->
+          <g id="iconComposer_ref">
+            <rect width="36" height="36" rx="8" fill="#E8F0FE"/>
+            <circle cx="10" cy="18" r="4" fill="#4285F4"/>
+            <circle cx="26" cy="11" r="4" fill="#1A73E8"/>
+            <circle cx="26" cy="25" r="4" fill="#1A73E8"/>
+            <line x1="14" y1="18" x2="22" y2="12" stroke="#4285F4" stroke-width="2"/>
+            <line x1="14" y1="18" x2="22" y2="24" stroke="#4285F4" stroke-width="2"/>
+          </g>
+
+          <!-- Google Cloud Memorystore / Enterprise Redis Logo -->
+          <g id="iconRedis_ref">
+            <rect width="36" height="36" rx="8" fill="#FCE8E6"/>
+            <path d="M6 12 L18 6 L30 12 L18 18 Z" fill="#EA4335"/>
+            <path d="M6 15.5 L18 21.5 L30 15.5 L30 19.5 L18 25.5 L6 19.5 Z" fill="#DC2626"/>
+            <path d="M6 23 L18 29 L30 23 L30 27 L18 33 L6 27 Z" fill="#B91C1C"/>
+            <circle cx="18" cy="12" r="2.5" fill="#FFFFFF"/>
+          </g>
+        </defs>
+
+        <!-- Background Canvas -->
+        <rect width="1480" height="1050" fill="#F8FAFD"/>
+        <rect width="1480" height="1050" fill="url(#lightGrid_ref)"/>
+
+        <!-- ========================================================================= -->
+        <!-- TOP HEADER / BANNER (Official Google Cloud Architecture Style)           -->
+        <!-- ========================================================================= -->
+        <rect x="0" y="0" width="1480" height="88" fill="#FFFFFF" stroke="#E8EAED" stroke-width="1"/>
+        <rect x="0" y="84" width="1480" height="4" fill="url(#gcpBannerGrad_ref)"/>
+
+        <!-- Google Cloud Logo Cluster -->
+        <g transform="translate(45, 26)">
+          <use href="#iconGCP_ref" transform="scale(1.5)"/>
+        </g>
+
+        <text x="95" y="38" font-size="20" font-weight="700" fill="#202124" letter-spacing="-0.3">Headless Petrophysical Agent — Sovereign Reference Architecture</text>
+        <text x="95" y="60" font-size="13" font-weight="400" fill="#5F6368">Google Cloud Well-Architected Framework • Two Surfaces, One Brain • Zero-Hallucination Deterministic Engine</text>
+
+        <!-- Header Right Metadata Badges -->
+        <g transform="translate(940, 26)">
+          <rect x="0" y="0" width="135" height="32" rx="16" fill="#E8F0FE" stroke="#D2E3FC" stroke-width="1"/>
+          <circle cx="14" cy="16" r="5" fill="#1A73E8"/>
+          <text x="26" y="20" font-size="11" font-weight="600" fill="#1A73E8">us-central1</text>
+
+          <rect x="145" y="0" width="175" height="32" rx="16" fill="#E6F4EA" stroke="#CEEAD6" stroke-width="1"/>
+          <circle cx="159" cy="16" r="5" fill="#1E8E3E"/>
+          <text x="171" y="20" font-size="11" font-weight="600" fill="#1E8E3E">A2A Protocol v1.0</text>
+
+          <rect x="330" y="0" width="165" height="32" rx="16" fill="#FEF7E0" stroke="#FEEFC3" stroke-width="1"/>
+          <circle cx="344" cy="16" r="5" fill="#F29900"/>
+          <text x="356" y="20" font-size="11" font-weight="600" fill="#B45309">og-agentic-ecosystem</text>
+        </g>
+
+        <!-- ========================================================================= -->
+        <!-- TIER 1: CONSUMPTION & CLIENT SURFACES ("Two Surfaces, One Brain")          -->
+        <!-- ========================================================================= -->
+        <g transform="translate(45, 115)">
+          <rect x="0" y="0" width="1390" height="175" rx="12" fill="#FFFFFF" stroke="#D2E3FC" stroke-width="1.5" stroke-dasharray="6,4" filter="url(#boxShadow_ref)"/>
+          
+          <rect x="20" y="-12" width="340" height="24" rx="12" fill="#1A73E8"/>
+          <text x="32" y="5" font-size="11" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">1. ENTERPRISE CONSUMPTION SURFACES ("TWO SURFACES, ONE BRAIN")</text>
+
+          <!-- Card 1: Gemini Enterprise Portal -->
+          <g transform="translate(30, 26)" filter="url(#boxShadow_ref)">
+            <rect x="0" y="0" width="410" height="128" rx="8" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+            <rect x="0" y="0" width="410" height="6" rx="3" fill="#1A73E8"/>
+            
+            <g transform="translate(16, 16)">
+              <use href="#iconGemini_ref"/>
+            </g>
+            <text x="60" y="32" font-size="14" font-weight="700" fill="#202124">Gemini Enterprise (Central Command)</text>
+            <text x="60" y="48" font-size="11" font-weight="500" fill="#1A73E8">vertexaisearch.cloud.google.com</text>
+
+            <line x1="16" y1="62" x2="394" y2="62" stroke="#F1F3F4" stroke-width="1"/>
+            <text x="16" y="80" font-size="11" fill="#3C4043">• Target: Asset Leads, Drilling Supervisors, VP Geosciences</text>
+            <text x="16" y="98" font-size="11" fill="#3C4043">• Natural Language Cross-DB Discovery &amp; Triage</text>
+            <text x="16" y="116" font-size="11" fill="#3C4043">• Native Google A2UI v0.9 Declarative Cards &amp; Report Links</text>
+          </g>
+
+          <!-- Card 2: Subsurface Studio (Cloud Run) -->
+          <g transform="translate(480, 26)" filter="url(#boxShadow_ref)">
+            <rect x="0" y="0" width="440" height="128" rx="8" fill="#FFFFFF" stroke="#1A73E8" stroke-width="1.5"/>
+            <rect x="0" y="0" width="440" height="6" rx="3" fill="#1A73E8"/>
+
+            <g transform="translate(16, 16)">
+              <use href="#iconCloudRun_ref"/>
+            </g>
+            <text x="60" y="32" font-size="14" font-weight="700" fill="#202124">Subsurface Studio (Cloud Run)</text>
+            <text x="60" y="48" font-size="11" font-weight="500" fill="#1E8E3E">FastAPI + Dash WebGL (Local :8051 / Cloud Run :8080)</text>
+
+            <line x1="16" y1="62" x2="424" y2="62" stroke="#E8EAED" stroke-width="1"/>
+            <text x="16" y="80" font-size="11" fill="#3C4043">• Target: Specialist Petrophysicists (Domain Muscle-Memory)</text>
+            <text x="16" y="98" font-size="11" fill="#3C4043">• 4-Track SPWLA Standard Viewer (GR, RESD, RHOB/NPOR, DT)</text>
+            <text x="16" y="116" font-size="11" fill="#3C4043">• Pinned Vertical Depth Slider &amp; Live ADK Copilot Sync</text>
+          </g>
+
+          <!-- Card 3: Headless Pipelines / Orchestration -->
+          <g transform="translate(960, 26)" filter="url(#boxShadow_ref)">
+            <rect x="0" y="0" width="395" height="128" rx="8" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+            <rect x="0" y="0" width="395" height="6" rx="3" fill="#34A853"/>
+
+            <g transform="translate(16, 16)">
+              <use href="#iconComposer_ref"/>
+            </g>
+            <text x="60" y="32" font-size="14" font-weight="700" fill="#202124">Automated Pipeline / Monoliths</text>
+            <text x="60" y="48" font-size="11" font-weight="500" fill="#5F6368">Cloud Composer / Airflow &amp; SLB Techlog/Petrel</text>
+
+            <line x1="16" y1="62" x2="379" y2="62" stroke="#F1F3F4" stroke-width="1"/>
+            <text x="16" y="80" font-size="11" fill="#3C4043">• Headless A2A JSON-RPC Protocol (`/a2a/agent/rpc`)</text>
+            <text x="16" y="98" font-size="11" fill="#3C4043">• Batch Multi-Well Campaigns on GCS LAS Ingestion</text>
+            <text x="16" y="116" font-size="11" fill="#3C4043">• Petrel / Geolog Python Plugin Sidecar (No Rip-and-Replace)</text>
+          </g>
+        </g>
+
+        <!-- ========================================================================= -->
+        <!-- TIER 2: CENTRAL AGENT RUNTIME & DETERMINISTIC ENGINE                       -->
+        <!-- ========================================================================= -->
+        <g transform="translate(45, 315)">
+          <rect x="0" y="0" width="1390" height="445" rx="14" fill="#FFFFFF" stroke="#1A73E8" stroke-width="2" filter="url(#heavyShadow_ref)"/>
+          
+          <rect x="20" y="-13" width="530" height="26" rx="13" fill="#1A73E8"/>
+          <text x="32" y="4" font-size="11" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">2. CENTRAL CONTROL PLANE &amp; DETERMINISTIC EXECUTION RUNTIME</text>
+
+          <!-- Left Column: Registry and Identity Cards -->
+          <g transform="translate(30, 30)">
+            <!-- Agent Registry Card -->
+            <g filter="url(#boxShadow_ref)">
+              <rect x="0" y="0" width="350" height="180" rx="8" fill="#FFFFFF" stroke="#CEEAD6" stroke-width="1.5"/>
+              <rect x="0" y="0" width="350" height="6" rx="3" fill="#1E8E3E"/>
+              
+              <g transform="translate(16, 16)">
+                <use href="#iconGemini_ref"/>
+              </g>
+              <text x="60" y="32" font-size="13" font-weight="700" fill="#1E8E3E">Gemini Enterprise Agent Registry</text>
+              <text x="60" y="48" font-size="11" font-weight="600" fill="#202124">App: oil-and-gas-agentic-transf_178868...</text>
+              
+              <line x1="16" y1="62" x2="334" y2="62" stroke="#F1F3F4" stroke-width="1"/>
+              <text x="16" y="82" font-size="11" fill="#3C4043">• Catalog Name: "Petrophysics Splice Agent"</text>
+              <text x="16" y="100" font-size="11" fill="#3C4043">• Published via `agents-cli publish gemini-enterprise`</text>
+              <text x="16" y="118" font-size="11" fill="#3C4043">• Mode: Google ADK (`--registration-type adk`)</text>
+              <text x="16" y="136" font-size="11" fill="#3C4043">• Discovery: Appears under "From your organization"</text>
+              <text x="16" y="154" font-size="11" fill="#3C4043">• Fleet Control: The single plane for 100+ agents</text>
+            </g>
+
+            <!-- Cloud IAM Card -->
+            <g transform="translate(0, 200)" filter="url(#boxShadow_ref)">
+              <rect x="0" y="0" width="350" height="185" rx="8" fill="#FFFFFF" stroke="#FEEFC3" stroke-width="1.5"/>
+              <rect x="0" y="0" width="350" height="6" rx="3" fill="#F29900"/>
+
+              <g transform="translate(16, 16)">
+                <use href="#iconCloudIAM_ref"/>
+              </g>
+              <text x="60" y="32" font-size="13" font-weight="700" fill="#B45309">Dedicated IAM Service Identity</text>
+              <text x="60" y="48" font-size="11" font-weight="600" fill="#202124">splice-agent@og-agentic-ecosystem</text>
+
+              <line x1="16" y1="62" x2="334" y2="62" stroke="#F1F3F4" stroke-width="1"/>
+              <text x="16" y="82" font-size="11" fill="#3C4043">• Per-Agent Dedicated Identity: Least Privilege</text>
+              <text x="16" y="100" font-size="11" fill="#3C4043">• GCS: `roles/storage.objectAdmin` on petro bucket only</text>
+              <text x="16" y="118" font-size="11" fill="#3C4043">• BigQuery: `roles/bigquery.dataEditor` on `petro` dataset</text>
+              <text x="16" y="136" font-size="11" fill="#3C4043">• Sovereign JV &amp; block-level data compartmentation</text>
+              <text x="16" y="154" font-size="11" fill="#3C4043">• Zero cross-bucket breach risk / SAIF compliant</text>
+            </g>
+          </g>
+
+          <!-- Center and Right: ADK Agent and Deterministic Engine -->
+          <g transform="translate(410, 30)">
+            <!-- Vertex AI ADK Agent Card -->
+            <g filter="url(#boxShadow_ref)">
+              <rect x="0" y="0" width="945" height="125" rx="8" fill="#FFFFFF" stroke="#1A73E8" stroke-width="1.5"/>
+              <rect x="0" y="0" width="945" height="6" rx="3" fill="#1A73E8"/>
+              
+              <g transform="translate(20, 16)">
+                <use href="#iconVertexAI_ref"/>
+              </g>
+              <text x="66" y="32" font-size="14" font-weight="700" fill="#1A73E8">Vertex AI Reasoning Engine • Google ADK Agent (`depth_match_splice_agent`)</text>
+              <text x="66" y="48" font-size="11" font-weight="500" fill="#5F6368">Model: Gemini 2.5 Flash / Pro • A2A Executor • Resource ID: .../reasoningEngines/1264866631721418752</text>
+              
+              <line x1="20" y1="62" x2="925" y2="62" stroke="#F1F3F4" stroke-width="1"/>
+              <text x="20" y="82" font-size="10.5" fill="#202124"><tspan font-weight="bold">Agent Decision Loop:</tspan> Basin Triage → Status QC → Multi-Run Inspection → Overlap Focus → Shift Optimization → Ground Truth QC → Lakehouse Release</text>
+              <text x="20" y="104" font-size="11" fill="#1A73E8"><tspan font-weight="bold">A2A Protocol Card:</tspan> https://.../agent-card.json • <tspan font-weight="bold" fill="#DC2626">Enterprise Redis Session Service</tspan> <tspan fill="#5F6368">(Distributed Memory, Zero 429 Quota Limits)</tspan></text>
+            </g>
+
+            <!-- Deterministic Petrophysical Engine Box -->
+            <g transform="translate(0, 145)" filter="url(#boxShadow_ref)">
+              <rect x="0" y="0" width="945" height="240" rx="8" fill="#FFFFFF" stroke="#DADCE0" stroke-width="1"/>
+              <rect x="0" y="0" width="945" height="6" rx="3" fill="#34A853"/>
+
+              <g transform="translate(20, 16)">
+                <rect width="36" height="36" rx="8" fill="#E6F4EA"/>
+                <text x="18" y="24" font-size="18" font-weight="bold" fill="#1E8E3E" text-anchor="middle">∑</text>
+              </g>
+              <text x="66" y="32" font-size="14" font-weight="700" fill="#1E8E3E">Deterministic Mathematics &amp; Tool Execution (`app/engine.py`)</text>
+              <text x="66" y="48" font-size="11" font-weight="500" fill="#5F6368">Zero LLM Hallucination on Physics • Strictly Deterministic Python Algorithms • SPWLA Standards</text>
+              <line x1="20" y1="62" x2="925" y2="62" stroke="#F1F3F4" stroke-width="1"/>
+
+              <!-- 4 Math Tool Modules -->
+              <g transform="translate(20, 75)">
+                <rect x="0" y="0" width="215" height="145" rx="6" fill="#F8FAFD" stroke="#D2E3FC" stroke-width="1"/>
+                <text x="12" y="22" font-size="12" font-weight="700" fill="#1A73E8">1. Overlap Detection</text>
+                <text x="12" y="40" font-size="10" font-weight="600" fill="#3C4043">`detect_overlap()`</text>
+                <text x="12" y="60" font-size="10" fill="#5F6368">• Scans depth indices</text>
+                <text x="12" y="78" font-size="10" fill="#5F6368">• Casing shoe tie-in windows</text>
+                <text x="12" y="96" font-size="10" fill="#5F6368">• Join 1: 1,321.4 – 1,359.6 m</text>
+                <text x="12" y="114" font-size="10" fill="#5F6368">• Join 2: 1,572.3 – 1,615.2 m</text>
+              </g>
+
+              <g transform="translate(250, 75)">
+                <rect x="0" y="0" width="215" height="145" rx="6" fill="#F8FAFD" stroke="#D2E3FC" stroke-width="1"/>
+                <text x="12" y="22" font-size="12" font-weight="700" fill="#1A73E8">2. Cross-Correlation</text>
+                <text x="12" y="40" font-size="10" font-weight="600" fill="#3C4043">`depth_match()`</text>
+                <text x="12" y="60" font-size="10" fill="#5F6368">• Maximum Pearson r(δ)</text>
+                <text x="12" y="78" font-size="10" fill="#5F6368">• Search: ±5m @ 0.05m step</text>
+                <text x="12" y="96" font-size="10" fill="#1E8E3E">• Join 1: -1.829m (r=0.953)</text>
+                <text x="12" y="114" font-size="10" fill="#1E8E3E">• Join 2: +1.067m (r=0.972)</text>
+              </g>
+
+              <g transform="translate(480, 75)">
+                <rect x="0" y="0" width="215" height="145" rx="6" fill="#F8FAFD" stroke="#D2E3FC" stroke-width="1"/>
+                <text x="12" y="22" font-size="12" font-weight="700" fill="#1A73E8">3. Tool Gain Calibration</text>
+                <text x="12" y="40" font-size="10" font-weight="600" fill="#3C4043">`check_scale()`</text>
+                <text x="12" y="60" font-size="10" fill="#5F6368">• Service company drift</text>
+                <text x="12" y="78" font-size="10" fill="#5F6368">• Amplitude ratio normalisation</text>
+                <text x="12" y="96" font-size="10" fill="#1E8E3E">• Run 3 GR scaled: 0.9167</text>
+                <text x="12" y="114" font-size="10" fill="#5F6368">• Eliminates non-physical steps</text>
+              </g>
+
+              <g transform="translate(710, 75)">
+                <rect x="0" y="0" width="215" height="145" rx="6" fill="#F8FAFD" stroke="#D2E3FC" stroke-width="1"/>
+                <text x="12" y="22" font-size="12" font-weight="700" fill="#1A73E8">4. Ground Truth QC</text>
+                <text x="12" y="40" font-size="10" font-weight="600" fill="#3C4043">`compare_to_original()`</text>
+                <text x="12" y="60" font-size="10" fill="#5F6368">• SPWLA Ground Truth Gate</text>
+                <text x="12" y="78" font-size="10" fill="#1E8E3E">• GR r = 0.9899 (PASS)</text>
+                <text x="12" y="96" font-size="10" fill="#1E8E3E">• DT r = 0.9915 (PASS)</text>
+                <text x="12" y="114" font-size="10" fill="#1E8E3E">• RESD r = 0.9939 (PASS)</text>
+              </g>
+            </g>
+          </g>
+        </g>
+
+        <!-- ========================================================================= -->
+        <!-- TIER 3: LAKEHOUSE STORAGE, ENTERPRISE REDIS & AUDIT GOVERNANCE            -->
+        <!-- ========================================================================= -->
+        <g transform="translate(45, 785)">
+          <rect x="0" y="0" width="1390" height="185" rx="12" fill="#FFFFFF" stroke="#CEEAD6" stroke-width="1.5" stroke-dasharray="6,4" filter="url(#boxShadow_ref)"/>
+          
+          <rect x="20" y="-12" width="310" height="24" rx="12" fill="#1E8E3E"/>
+          <text x="32" y="5" font-size="11" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">3. DATA PERSISTENCE &amp; SOVEREIGN GOVERNANCE</text>
+
+          <!-- Card 1: Cloud Storage (GCS) -->
+          <g transform="translate(25, 26)" filter="url(#boxShadow_ref)">
+            <rect x="0" y="0" width="430" height="138" rx="8" fill="#FFFFFF" stroke="#34A853" stroke-width="1.5"/>
+            <rect x="0" y="0" width="430" height="6" rx="3" fill="#34A853"/>
+
+            <g transform="translate(16, 16)">
+              <use href="#iconCloudStorage_ref"/>
+            </g>
+            <text x="60" y="32" font-size="13" font-weight="700" fill="#202124">Google Cloud Storage (GCS)</text>
+            <text x="60" y="48" font-size="11" font-weight="600" fill="#1E8E3E">gs://og-agentic-petrophysics-data/</text>
+
+            <line x1="16" y1="62" x2="414" y2="62" stroke="#E8EAED" stroke-width="1"/>
+            <text x="16" y="80" font-size="11" fill="#3C4043"><tspan font-weight="bold">• Raw Runs:</tspan> gs://.../raw/A-12/ (RUN1, RUN2, RUN3)</text>
+            <text x="16" y="98" font-size="11" fill="#3C4043"><tspan font-weight="bold">• Spliced LAS:</tspan> gs://.../composites/A-12_COMPOSITE.las</text>
+            <text x="16" y="116" font-size="11" fill="#3C4043"><tspan font-weight="bold">• Inspection Reports:</tspan> gs://.../reports/ (SPWLA HTML)</text>
+          </g>
+
+          <!-- Card 2: Enterprise Redis (Cloud Memorystore) -->
+          <g transform="translate(480, 26)" filter="url(#boxShadow_ref)">
+            <rect x="0" y="0" width="430" height="138" rx="8" fill="#FFFFFF" stroke="#DC2626" stroke-width="1.5"/>
+            <rect x="0" y="0" width="430" height="6" rx="3" fill="#DC2626"/>
+
+            <g transform="translate(16, 16)">
+              <use href="#iconRedis_ref"/>
+            </g>
+            <text x="60" y="32" font-size="13" font-weight="700" fill="#202124">Enterprise Redis Tier (Cloud Memorystore)</text>
+            <text x="60" y="48" font-size="11" font-weight="600" fill="#DC2626">Session State Store &amp; Subsurface Curve Cache</text>
+
+            <line x1="16" y1="62" x2="414" y2="62" stroke="#E8EAED" stroke-width="1"/>
+            <text x="16" y="80" font-size="11" fill="#3C4043"><tspan font-weight="bold">• EnterpriseRedisSessionService:</tspan> Zero 429 quota exhaustion</text>
+            <text x="16" y="98" font-size="11" fill="#3C4043"><tspan font-weight="bold">• Distributed Memory:</tspan> Cross-instance ADK state persistence</text>
+            <text x="16" y="116" font-size="11" fill="#3C4043"><tspan font-weight="bold">• RedisCurveCache:</tspan> Sub-ms curve arrays &amp; Pearson r(δ) shifts</text>
+          </g>
+
+          <!-- Card 3: BigQuery Immutable Audit Ledger -->
+          <g transform="translate(935, 26)" filter="url(#boxShadow_ref)">
+            <rect x="0" y="0" width="430" height="138" rx="8" fill="#FFFFFF" stroke="#9333EA" stroke-width="1.5"/>
+            <rect x="0" y="0" width="430" height="6" rx="3" fill="#9333EA"/>
+
+            <g transform="translate(16, 16)">
+              <use href="#iconBigQuery_ref"/>
+            </g>
+            <text x="60" y="32" font-size="13" font-weight="700" fill="#202124">BigQuery Audit Ledger (`petro.splice_audit`)</text>
+            <text x="60" y="48" font-size="11" font-weight="600" fill="#9333EA">og-agentic-ecosystem.petro.splice_audit</text>
+
+            <line x1="16" y1="62" x2="414" y2="62" stroke="#E8EAED" stroke-width="1"/>
+            <text x="16" y="80" font-size="11" fill="#3C4043"><tspan font-weight="bold">• Schema:</tspan> well, join_idx, computed_shift_m, r, gain_norm</text>
+            <text x="16" y="98" font-size="11" fill="#3C4043"><tspan font-weight="bold">• Provenance:</tspan> approved_by, approved_at, output_gcs_uri</text>
+            <text x="16" y="116" font-size="11" fill="#3C4043"><tspan font-weight="bold">• Compliance:</tspan> 100% reproducible subsurface audit custody</text>
+          </g>
+        </g>
+
+        <!-- ========================================================================= -->
+        <!-- DIRECTIONAL CONNECTORS & STEP BADGES                                      -->
+        <!-- ========================================================================= -->
+        <!-- 1. GE Chat to Agent Registry -->
+        <path d="M 250 285 L 250 325" fill="none" stroke="#1A73E8" stroke-width="2" marker-end="url(#arrowBlue_ref)"/>
+        <circle cx="250" cy="305" r="10" fill="#1A73E8"/>
+        <text x="250" y="309" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+
+        <!-- 2. Subsurface Studio to ADK Root Agent -->
+        <path d="M 700 285 L 700 325" fill="none" stroke="#1A73E8" stroke-width="2" marker-end="url(#arrowBlue_ref)"/>
+        <circle cx="700" cy="305" r="10" fill="#1A73E8"/>
+        <text x="700" y="309" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+
+        <!-- 3. Orchestrator to Reasoning Engine -->
+        <path d="M 1160 285 L 1160 325" fill="none" stroke="#34A853" stroke-width="2" marker-end="url(#arrowGreen_ref)"/>
+        <circle cx="1160" cy="305" r="10" fill="#1E8E3E"/>
+        <text x="1160" y="309" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+
+        <!-- 4. Deterministic Engine to GCS Lakehouse -->
+        <path d="M 420 760 L 420 810" fill="none" stroke="#1E8E3E" stroke-width="2" marker-end="url(#arrowGreen_ref)"/>
+        <circle cx="420" cy="785" r="10" fill="#1E8E3E"/>
+        <text x="420" y="789" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+
+        <!-- 5. Central Runtime to Enterprise Redis -->
+        <path d="M 740 760 L 740 810" fill="none" stroke="#DC2626" stroke-width="2" marker-end="url(#arrowRed_ref)"/>
+        <circle cx="740" cy="785" r="10" fill="#DC2626"/>
+        <text x="740" y="789" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">5</text>
+
+        <!-- 6. Deterministic Engine to BigQuery Audit Ledger -->
+        <path d="M 1195 760 L 1195 810" fill="none" stroke="#9333EA" stroke-width="2" marker-end="url(#arrowPurple_ref)"/>
+        <circle cx="1195" cy="785" r="10" fill="#9333EA"/>
+        <text x="1195" y="789" font-size="10" font-weight="bold" fill="#FFFFFF" text-anchor="middle">6</text>
+
+        <!-- ========================================================================= -->
+        <!-- FOOTER: WELL-ARCHITECTED PILLARS                                          -->
+        <!-- ========================================================================= -->
+        <g transform="translate(45, 990)">
+          <rect x="0" y="0" width="1390" height="38" rx="8" fill="#FFFFFF" stroke="#E8EAED" stroke-width="1"/>
+          
+          <text x="18" y="24" font-size="11" font-weight="700" fill="#202124">WELL-ARCHITECTED PILLARS:</text>
+
+          <circle cx="215" cy="19" r="5" fill="#1E8E3E"/>
+          <text x="226" y="23" font-size="10.5" font-weight="600" fill="#3C4043">Operational Excellence: <tspan font-weight="400" fill="#5F6368">BigQuery Audit Ledger</tspan></text>
+
+          <circle cx="495" cy="19" r="5" fill="#DC2626"/>
+          <text x="506" y="23" font-size="10.5" font-weight="600" fill="#3C4043">Performance Efficiency: <tspan font-weight="400" fill="#5F6368">Redis Curve Cache &amp; State Memory</tspan></text>
+
+          <circle cx="810" cy="19" r="5" fill="#1A73E8"/>
+          <text x="821" y="23" font-size="10.5" font-weight="600" fill="#3C4043">Security: <tspan font-weight="400" fill="#5F6368">Dedicated Least-Privilege IAM Identity</tspan></text>
+
+          <circle cx="1080" cy="19" r="5" fill="#F29900"/>
+          <text x="1091" y="23" font-size="10.5" font-weight="600" fill="#3C4043">Reliability: <tspan font-weight="400" fill="#5F6368">Deterministic Math (r &gt; 0.985)</tspan></text>
+
+          <circle cx="1295" cy="19" r="5" fill="#9333EA"/>
+          <text x="1306" y="23" font-size="10.5" font-weight="600" fill="#3C4043">Cost: <tspan font-weight="400" fill="#5F6368">Serverless Scale-to-Zero</tspan></text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- 4. The 5 Core Attributes Pill-Bar -->
+    <div class="attributes-grid">
+      <div class="attr-card attr-card-surgical">
+        <div class="attr-header">
+          <span class="attr-icon">🎯</span>
+          <span class="attr-title">01 SURGICAL</span>
+        </div>
+        <p class="attr-sub">Targets the <strong>exact operational seam</strong> at the edge of the monolith (LAS parsing, Z-score, casing tie-in).</p>
+      </div>
+
+      <div class="attr-card attr-card-autonomous">
+        <div class="attr-header">
+          <span class="attr-icon">⚡</span>
+          <span class="attr-title">02 AUTONOMOUS</span>
+        </div>
+        <p class="attr-sub"><strong>24/7 event-driven execution</strong>; discovers runs, calculates shifts, and builds composite in 3.2s.</p>
+      </div>
+
+      <div class="attr-card attr-card-intelligent">
+        <div class="attr-header">
+          <span class="attr-icon">🧠</span>
+          <span class="attr-title">03 INTELLIGENT</span>
+        </div>
+        <p class="attr-sub"><strong>Natural language triage</strong> across enterprise DBs &amp; messy vendor log synthesis via Gemini.</p>
+      </div>
+
+      <div class="attr-card attr-card-governed">
+        <div class="attr-header">
+          <span class="attr-icon">🛡️</span>
+          <span class="attr-title">04 GOVERNED</span>
+        </div>
+        <p class="attr-sub">Managed in <strong>Agent Registry</strong>, bounded by dedicated IAM least privilege &amp; BigQuery audit.</p>
+      </div>
+
+      <div class="attr-card attr-card-deterministic">
+        <div class="attr-header">
+          <span class="attr-icon">🔬</span>
+          <span class="attr-title">05 DETERMINISTIC</span>
+        </div>
+        <p class="attr-sub"><strong>Pure SciPy signal physics</strong> &amp; mathematical proof; zero generative guessing on curves.</p>
+      </div>
+    </div>
+
+    <!-- 5. Bottom Boardroom Provocation Horizon Bar -->
+    <footer class="provocation-bar">
+      <div class="provocation-left">
+        <div class="provocation-eyebrow">THE HIGHER PLANE // A REPEATABLE ENTERPRISE BLUEPRINT:</div>
+        <div class="provocation-text">
+          Where else do your engineers pull data from Database A, run standard calculation X, and write to System B? <strong>That is where your next autonomous agent belongs.</strong>
+        </div>
+      </div>
+      <a href="working_deck/pages/page_08.html" class="provocation-link">
+        Next: The 10×10 Fleet Matrix &rarr;
+      </a>
+    </footer>
+
+  </div>
+</section>

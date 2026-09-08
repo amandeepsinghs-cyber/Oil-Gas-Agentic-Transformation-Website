@@ -13,6 +13,34 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ---
 
 ## [Uncommitted] - 2026-09-08
+### Slide 07: Architecture of an Intelligent Microservice: The Headless AI Agent (Locked & Frozen)
+
+#### Added
+- **Dedicated Standalone Slide**: [`working_deck/pages/page_07.html`](working_deck/pages/page_07.html)
+- **Frozen Golden Masters**:
+  - [`final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html`](final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html) (Immutable safety copy)
+  - [`final_slides/slide_07_the_headless_petrophysical_agent.html`](final_slides/slide_07_the_headless_petrophysical_agent.html) (Reference copy)
+- **Dedicated Build Narrative Bible**: [`slide_narratives/slide_07/NARRATIVE.md`](slide_narratives/slide_07/NARRATIVE.md)
+
+#### Key Architectural & Higher-Plane Implementations
+- **The "Higher Plane" Strategic Reframing**:
+  - Moved beyond the tactical subsurface log-splicing outcome to showcase the repeatable enterprise architectural loop.
+  - Demonstrated how the agent can be called from multiple enterprise surfaces, immediately discover unstructured data across DBs via plain-English Gemini queries, execute deterministic cross-correlation without LLM hallucination, persist standardized composites to GCS, and maintain an immutable 30-year BigQuery audit ledger.
+- **Official Google Cloud Reference Architecture Vector Diagram**:
+  - Authored authentic SVG diagram matching external customer presentation standards with vector Google Cloud brand marks: GCP 4-color logo, Gemini Enterprise sparkle, Vertex AI hexagon, Cloud Run, GCS, BigQuery, Cloud IAM, Composer, and Redis.
+  - **Tier 1 (Consumption Surfaces)**: Gemini Enterprise (Central Command & cross-DB discovery), Subsurface Studio on Cloud Run (4-track interactive WebGL viewer), Automated Pipelines (Cloud Composer, Petrel/Techlog sidecars via headless A2A JSON-RPC).
+  - **Tier 2 (Control Plane & Deterministic Engine)**: Gemini Enterprise Agent Registry, dedicated per-agent IAM identity (`splice-agent@...`), Vertex AI Reasoning Engine (ADK `depth_match_splice_agent`), and pure Python/SciPy mathematical engine (`app/engine.py`).
+  - **Tier 3 (Persistence & Governance)**: Google Cloud Storage bucket (`gs://og-agentic-petrophysics-data/`), Enterprise Redis tier (Cloud Memorystore session state & sub-ms curve cache), BigQuery immutable audit ledger (`petro.splice_audit`).
+  - **6 Numbered Directional Connectors & Well-Architected Framework Banner**.
+- **The 5 Core Attributes Grounded**:
+  - Surgical, Autonomous, Intelligent, Governed, Deterministic pill-cards illuminated above the horizon bar.
+- **The Boardroom Provocation Horizon Bar**:
+  - *"Where else do your engineers pull data from Database A, run standard calculation X, and write to System B? That is where your next autonomous agent belongs."*
+- **Governance Registry**:
+  - Formally registered Stage 07 as **LOCKED & FROZEN** in [`LOCKED_SLIDES.md`](LOCKED_SLIDES.md).
+
+---
+
 ### Slide 06: Proof of an Intelligent Microservice: The Petrophysical AI Agent (Locked & Frozen)
 
 #### Added

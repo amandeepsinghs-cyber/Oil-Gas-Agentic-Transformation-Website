@@ -17,6 +17,7 @@
 | **Stage 04** | **AI Agent: The Intelligent Microservice** | `final_slides/slide_04_the_intelligent_microservice.LOCKED.html` | 2026-09-08 09:12 UTC | **LOCKED & FROZEN** |
 | **Stage 05** | **Structural Resilience of an Agentic Organisation** | `final_slides/slide_05_the_jenga_metaphor.LOCKED.html` | 2026-09-08 09:52 UTC | **LOCKED & FROZEN** |
 | **Stage 06** | **Proof of an Intelligent Microservice: The Petrophysical AI Agent** | `final_slides/slide_06_the_petrophysical_ai_agent.LOCKED.html` | 2026-09-08 10:51 UTC | **LOCKED & FROZEN** |
+| **Stage 07** | **Architecture of an Intelligent Microservice: The Headless AI Agent** | `final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html` | 2026-09-08 11:35 UTC | **LOCKED & FROZEN** |
 
 ---
 
@@ -152,4 +153,42 @@
     - `1–2 critical hours back`
     - `substantially increasing decision accuracy`
     - `high-value reservoir modeling and maximizing asset recovery`
-- **Narrative Bridge:** Bottom transition to Stage 07 (*Next: The 10×10 Fleet Map →*).
+- **Narrative Bridge:** Bottom transition to Stage 07 (*Next: Architecture of an Intelligent Microservice: The Headless AI Agent*).
+
+---
+
+### Slide 07 Golden Specifications (Approved):
+- **Headline:** *Architecture of an Intelligent Microservice: The Headless AI Agent* (with signature gradient: `#00E5FF` $\rightarrow$ `#00D2B4`).
+- **Kicker:** `07 ARCHITECTURE // HEADLESS MICROSERVICE & CENTRAL CONTROL PLANE`
+- **Subheading:** *Built on Google Agent Development Kit (ADK), deployed on Vertex AI Agent Runtime, and centrally governed in Gemini Enterprise Agent Registry—delivering deterministic physics across conversational chat, visual workstations, and legacy monoliths.*
+- **Official Google Cloud Reference Architecture Diagram (Embedded Vector SVG):**
+  - **Banner:** Google Cloud 4-color brand mark, title, metadata badges (`us-central1`, `A2A Protocol v1.0`, `og-agentic-ecosystem`).
+  - **Tier 1: Enterprise Consumption Surfaces ("Two Surfaces, One Brain"):**
+    - Gemini Enterprise (Central Command Cockpit, plain-English cross-DB discovery).
+    - Subsurface Studio on Cloud Run (FastAPI + Dash WebGL 4-track log viewer, live ADK sync).
+    - Automated Pipelines / Monoliths (Cloud Composer, Techlog/Petrel sidecar, headless A2A JSON-RPC).
+  - **Tier 2: Central Control Plane & Deterministic Execution Runtime:**
+    - Gemini Enterprise Agent Registry (`oil-and-gas-agentic-transf_178868...`).
+    - Dedicated IAM Service Identity (`splice-agent@og-agentic-ecosystem`, least privilege, block compartmentation).
+    - Vertex AI Reasoning Engine with Google ADK `root_agent` (`depth_match_splice_agent`, Gemini 2.5 Flash/Pro).
+    - Deterministic Mathematics Engine (`app/engine.py`) with 4 modular tools:
+      1. Overlap Detection (`detect_overlap()`)
+      2. Cross-Correlation (`depth_match()`, search $\pm 5\text{m}$, step $0.05\text{m}$)
+      3. Tool Gain Calibration (`check_scale()`, amplitude ratio normalization)
+      4. Ground Truth QC (`compare_to_original()`, SPWLA gate $r > 0.985$)
+  - **Tier 3: Data Persistence & Sovereign Governance:**
+    - Google Cloud Storage (`gs://og-agentic-petrophysics-data/` raw runs, composites, SPWLA HTML reports).
+    - Enterprise Redis Tier (Cloud Memorystore session state, distributed memory, sub-ms curve arrays).
+    - BigQuery Immutable Audit Ledger (`og-agentic-ecosystem.petro.splice_audit`, 30-year reproducible trace).
+  - **6 Numbered Directional Connectors:** Seamlessly linking surfaces $\rightarrow$ runtime $\rightarrow$ persistence and audit.
+  - **Well-Architected Pillars:** Operational Excellence, Performance Efficiency, Security, Reliability, Cost.
+- **The 5 Core Attributes Pill-Grid:**
+  1. `01 SURGICAL`: Targets exact seam at edge of monolith (LAS parsing, casing tie-in).
+  2. `02 AUTONOMOUS`: 24/7 event-driven execution; discovers runs and splices in 3.2s.
+  3. `03 INTELLIGENT`: Natural language cross-DB triage & messy vendor log synthesis via Gemini.
+  4. `04 GOVERNED`: Managed in Agent Registry, bounded by dedicated IAM & BigQuery audit.
+  5. `05 DETERMINISTIC`: Pure SciPy signal physics & mathematical proof; zero generative guessing.
+- **Bottom Boardroom Provocation Horizon Bar:**
+  - *THE HIGHER PLANE // A REPEATABLE ENTERPRISE BLUEPRINT:*
+  - *"Where else do your engineers pull data from Database A, run standard calculation X, and write to System B? That is where your next autonomous agent belongs."*
+  - Interactive link: `Next: The 10×10 Fleet Matrix →` (`page_08.html`).
