@@ -12,6 +12,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ---
 
+## [Deck Streamlining & Act III Finalization] - 2026-09-08
+### 12-Slide Lean Executive Architecture & Act III Finalization
+- **Streamlined Presentation to 12 High-Velocity Slides**:
+  - Eliminated redundant Kansas deep-dive fragments and static fleet slides, which were already unified and proven in Slide 06 (Petrophysical AI Agent), Slide 08 (Workforce & Workflows Chessboard), and Slide 09 (Agent Economics Topology).
+  - Promoted Discovery Sprint to **Stage 10** and Strategic Mandate to **Stage 11**.
+  - Synchronized top navigation and floating HUD counters across all 12 pages (`page_00.html` through `page_11.html`) to reflect the exact `X / 12` cadence.
+- **Stage 10 Finalized (The 6-Week Sovereign Discovery Sprint)**:
+  - Updated to `STAGE 10 // SOVEREIGN DISCOVERY SPRINT` (`11 / 12`).
+  - Tied 3-step structured sprint directly to the Slide 08 Chessboard and Slide 09 Topology:
+    1. *Weeks 01–02 // Map & Prioritise*: Convene sprint and map high-friction seams on the 20×15 matrix.
+    2. *Weeks 03–04 // Ingest & Ground*: Unearth dark PDF mudlogs and anchor ground-truth physics in BigQuery.
+    3. *Weeks 05–06 // Deploy & Prove*: Deploy targeted microservices against historical benchmarks with cryptographic audit.
+  - Locked golden master in `final_slides/slide_10_the_discovery_sprint.LOCKED.html`.
+- **Stage 11 Finalized (The Strategic Mandate & Asset Nomination)**:
+  - Updated to `STAGE 11 // STRATEGIC MANDATE & NEXT STEPS` (`12 / 12`).
+  - Established the 3 boardroom action items:
+    1. *Step 01 // Today*: Nominate the operating asset (Barmer, Mumbai Offshore, or Flagship Refinery).
+    2. *Step 02 // Alignment*: Appoint technical liaisons (Domain + Cloud architects).
+    3. *Step 03 // Activate*: Authorize sovereign MeitY workspace in Mumbai/Delhi GCP regions.
+  - Locked golden master in `final_slides/slide_11_the_strategic_mandate.LOCKED.html`.
+- **Registry & Documentation**:
+  - Registered Stage 10 and Stage 11 in `LOCKED_SLIDES.md` with complete golden specifications.
+
+---
+
 ## [Repository Hygiene & Decluttering] - 2026-09-08
 ### Architecture Streamlining & Slide 09 Polish
 - **Purged Obsolete Legacy Assets**:

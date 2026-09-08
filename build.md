@@ -25,12 +25,12 @@ We resolve the tension between "an ugly, rigid slide deck" and "an unstructured 
    * Arrow keys (`ArrowDown`, `ArrowUp`, `Space`, `PageDown`, `PageUp`) glide smoothly between slides with keyboard traps for deep interactive widgets.
    * Print styling (`@media print`) formats each slide into a clean 16:9 PDF export without cutoff boxes or scrolling overflow.
 3. **Strict Modularity & Build Tooling:**
-   * Every slide lives in an independent HTML component file in `slides/` (`slide_01_capital_stakes.html` through `slide_15_next_steps.html`).
-   * A Python compiler script (`build_deck.py`) automatically compiles the 15 modular slide files into the unified production shell `deck.html`.
+   * Every slide lives in an independent HTML component file in `final_slides/` (`slide_00_overview.LOCKED.html` through `slide_11_the_strategic_mandate.LOCKED.html`).
+   * A Python compiler script (`build_deck.py`) automatically compiles the 12 modular slide files into the unified production shell `deck.html`.
 
 ---
 
-## 2. Master 15-Slide Component Directory
+## 2. Master 12-Slide Component Directory
 
 ```
 O&G_slidedeck_agentic_transformation/
@@ -40,69 +40,57 @@ O&G_slidedeck_agentic_transformation/
 ├── build.md                               # Architectural blueprint & component contracts (this file)
 ├── skills.md                              # Fluid design system, tokens, and UI standards
 ├── working_deck/                          # Isolated per-slide authoring & preview environment
-│   └── pages/                             # Individual slide pages (page_00.html to page_09.html)
+│   └── pages/                             # Individual slide pages (page_00.html to page_11.html)
 ├── final_slides/                          # Immutable approved golden master slides (*.LOCKED.html)
 ├── data/                                  # Centralized MECE matrix data (CSV + JS)
-└── scripts/                               # Data sync and build automation scripts
+├── scripts/                               # Data sync and build automation scripts
 ├── assets/
 │   ├── styles.css                         # Fluid design system, responsive grid & nebula tokens
 │   ├── presenter.js                       # Dual-mode engine: scroll-spy, keyboard nav, fullscreen
 │   ├── interactive.js                     # Interactive studio logic (matrix, log canvas, ledger, charter)
 │   └── media/                             # Curated high-res authentic assets
-│       ├── wip/image78.png                # Hero: Multi-spectral cosmic cloth nebula
-│       ├── retail_agentic/image10.png     # Slide 01: Radiant solar/amber core
-│       ├── wip/image74.jpg                # Slide 02 & 08: Fortified architectural Jenga tower
-│       ├── retail_agentic/image11.png     # Slide 11: Subterranean emerald crystal depth
-│       ├── retail_agentic/image8.png      # Slide 13: 3D particle stardust constellation
-│       └── aitd/image263.png              # Signature Security 4-stop gradient
-└── slides/                                # Modular Slide Components (15 Surgical Units)
-    ├── slide_01_capital_stakes.html       # Slide 01: Capital Reality & High-Stakes Macro Numbers
-    ├── slide_02_swiss_cheese.html         # Slide 02: The Compounding Mechanism (Swiss Cheese Model)
-    ├── slide_03_the_need_criteria.html    # Slide 03: The Need: The 5 Non-Negotiable Criteria (AI Agent Reveal)
-    ├── slide_04_workforce_personas.html   # Slide 04: Workforce Personas & Daily Friction Points
-    ├── slide_05_vulnerability_matrix.html # Slide 05: The Vulnerability Matrix (Lifecycle vs Roles)
-    ├── slide_06_solution_criteria.html    # Slide 06: The 5 Criteria for the Solution
-    ├── slide_07_introducing_agents.html   # Slide 07: Autonomous Agents & Dual-Engine Architecture
-    ├── slide_08_jenga_comparison.html     # Slide 08: The Visceral Jenga Comparison (Fragile vs Fortified)
-    ├── slide_09_splicing_architecture.html# Slide 09: Proof Benchmark: Splicing Agent Architecture
-    ├── slide_10_demo_part1_ingestion.html # Slide 10: Demo Journey Part 1: GCS Ingestion & A2UI
-    ├── slide_11_demo_part2_splicing.html  # Slide 11: Demo Journey Part 2: Kansas Well A-12 Math Studio
-    ├── slide_12_demo_ledger_takeaways.html# Slide 12: Demo Takeaways & BigQuery Cryptographic Ledger
-    ├── slide_13_enterprise_fleet.html     # Slide 13: The Enterprise Fleet Across the Energy Value Chain
-    ├── slide_14_discovery_workshop.html   # Slide 14: Case in Point & The Discovery Workshop
-    └── slide_15_next_steps.html           # Slide 15: Strategic Mandate, Field Nomination & Q&A
+└── final_slides/                          # Modular Golden Master Slides (12 Surgical Units)
+    ├── slide_00_overview.LOCKED.html      # Slide 00: Executive Overview & Hero Command Cockpit
+    ├── slide_01_capital_reality.LOCKED.html # Slide 01: The Capital Reality (High-Consequence Stakes)
+    ├── slide_02_swiss_cheese.LOCKED.html  # Slide 02: Prof. James Reason's Swiss Cheese Model
+    ├── slide_03_the_need_criteria.LOCKED.html # Slide 03: The Need: 5 Non-Negotiable Criteria of the Plug
+    ├── slide_04_the_intelligent_microservice.LOCKED.html # Slide 04: AI Agent: The Intelligent Microservice
+    ├── slide_05_the_jenga_metaphor.LOCKED.html # Slide 05: Structural Resilience of an Agentic Organisation
+    ├── slide_06_the_petrophysical_ai_agent.LOCKED.html # Slide 06: Proof: The Petrophysical AI Agent (Kansas A-12)
+    ├── slide_07_the_headless_petrophysical_agent.LOCKED.html # Slide 07: Architecture: Autonomous AI Agent & Control Plane
+    ├── slide_08_the_enterprise_chessboard.LOCKED.html # Slide 08: Agentic Transformation Across Workforce & Workflows
+    ├── slide_09_the_agentic_value_topology.LOCKED.html # Slide 09: Agent Economics: The Value Map (3D Topology)
+    ├── slide_10_the_discovery_sprint.LOCKED.html # Slide 10: The 6-Week Sovereign Discovery Sprint
+    └── slide_11_the_strategic_mandate.LOCKED.html # Slide 11: The Strategic Mandate & Asset Nomination
 ```
 
 ---
 
-## 3. The 15 Modular Slide Specifications
+## 3. The 12 Modular Slide Specifications
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │  STICKY TOP NAV: Google Cloud Sovereign AI · MeitY Verified · Acts 1-3 Links · Fullscreen│
 ├────────────────────────────────────────────────────────────────────────────────────────┤
-│  ACT I: THE MACRO PROBLEM & COMPOUNDING MICRO-VULNERABILITIES                          │
-│  Slide 01: Capital Reality (₹200-500 Cr Wells, NPT Burn Slider, Solar Amber Core)      │
-│  Slide 02: Swiss Cheese Failure Model (Compounding Seams, 3D Isometric Slices)         │
-│  Slide 03: 3 MECE Buckets (Latency Trap, Cognitive Janitorial Trap, Siloed Data)       │
-│  Slide 04: Workforce Personas (Petrophysicist, Exploration Geologist, Prod Engineer)   │
-│  Slide 05: Vulnerability Matrix (Lifecycle vs Roles Heatmap, Clickable Hazards)        │
+│  ACT I: THE STAKES, SYSTEMIC VULNERABILITY & COEXISTENCE (SLIDES 00–05)                │
+│  Slide 00: Executive Overview & Hero Command Cockpit (Sovereign Mission, Natural Query) │
+│  Slide 01: The Capital Reality (₹200–500 Cr Wells, High-Consequence Physical Stakes)  │
+│  Slide 02: Prof. James Reason's Swiss Cheese Model (Compounding Latent Seams)          │
+│  Slide 03: The Need: 5 Non-Negotiable Criteria of the Plug (Surgical, Automated, ...)  │
+│  Slide 04: AI Agent: The Intelligent Microservice & Monolith Coexistence Paradigm     │
+│  Slide 05: Structural Resilience of an Agentic Organisation (Jenga: Fragile vs Fortified)│
 ├────────────────────────────────────────────────────────────────────────────────────────┤
-│  ACT II: THE AGENTIC SOLUTION & STRUCTURAL FORTIFICATION                               │
-│  Slide 06: The 5 Criteria (Surgical, Automated, Intelligent, Governed, Robust)         │
-│  Slide 07: Introducing Agents (Defusing Non-Deterministic Fear, Dual-Engine Split)     │
-│  Slide 08: Visceral Comparison (Jenga Tower: Fragile vs Fortified, Mid-Pitch Pivot)   │
+│  ACT II: THE PROOF, THE GRID & THE ECONOMICS (SLIDES 06–09)                            │
+│  Slide 06: Proof of an Intelligent Microservice: Kansas Well A-12 SciPy Benchmark     │
+│  Slide 07: Architecture of an Intelligent Microservice: Google ADK & Vertex AI Plane   │
+│  Slide 08: Agentic Transformation Across Workforce & Workflows (20×15 Chessboard)     │
+│  Slide 09: Agent Economics: The Value Map of Agentic Transformation (3D Topology)      │
 ├────────────────────────────────────────────────────────────────────────────────────────┤
-│  ACT III: GROUNDED PROOF, ENTERPRISE FLEET & THE MANDATE                               │
-│  Slide 09: Proof Benchmark Architecture (Google ADK, Agent Registry, Headless APIs)    │
-│  Slide 10: Demo Part 1: GCS Multimodal Ingestion & Dynamic UI (A2UI Protocols)         │
-│  Slide 11: Demo Part 2: Physical Math: Kansas Well A-12 (2.9 cm Alignment, SPWLA Log)  │
-│  Slide 12: Demo Takeaways & Ledger (BigQuery SHA-256 Provenance, Governance)           │
-│  Slide 13: Enterprise Fleet (Upstream, Midstream, Downstream Constellation)            │
-│  Slide 14: Case in Point & The Ask (Discovery Workshop, Risk & Opportunity Map) │
-│  Slide 15: Strategic Mandate & Discussion (Nominating the Lighthouse Field, Q&A)       │
-├────────────────────────────────────────────────────────────────────────────────────────┤
-│  FLOATING CHAPTER DOCK: 15 Stage Indicators with Hover Labels & Active Progress Rail   │
+│  ACT III: THE ROAD TO PRODUCTION (SLIDES 10–11)                                        │
+│  Slide 10: The 6-Week Sovereign Discovery Sprint (Map & Prioritise → Ingest → Deploy)   │
+│  Slide 11: The Strategic Mandate & Asset Nomination (Boardroom Decision & Next Steps)  │
+└────────────────────────────────────────────────────────────────────────────────────────┤
+│  FLOATING CHAPTER DOCK: 12 Stage Indicators with Hover Labels & Active Progress Rail   │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 

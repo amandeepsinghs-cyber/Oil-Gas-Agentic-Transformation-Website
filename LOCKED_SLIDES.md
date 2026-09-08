@@ -20,6 +20,8 @@
 | **Stage 07** | **Architecture of an Intelligent Microservice: The Autonomous AI Agent** | `final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html` | 2026-09-08 11:35 UTC | **LOCKED & FROZEN** |
 | **Stage 08** | **Agentic Transformation Across Workforce & Workflows (300 Seams)** | `final_slides/slide_08_the_enterprise_chessboard.LOCKED.html` | 2026-09-08 16:25 UTC | **LOCKED & FROZEN** |
 | **Stage 09** | **The Agentic Value Topology (3D Prioritization Terrain)** | `final_slides/slide_09_the_agentic_value_topology.LOCKED.html` | 2026-09-08 15:15 UTC | **LOCKED & FROZEN** |
+| **Stage 10** | **The 6-Week Sovereign Discovery Sprint** | `final_slides/slide_10_the_discovery_sprint.LOCKED.html` | 2026-09-08 17:20 UTC | **LOCKED & FROZEN** |
+| **Stage 11** | **The Strategic Mandate & Asset Nomination** | `final_slides/slide_11_the_strategic_mandate.LOCKED.html` | 2026-09-08 17:20 UTC | **LOCKED & FROZEN** |
 
 
 ---
@@ -300,4 +302,63 @@
   - `Phase 1: Lighthouse Agent (Proven)`: 1 Agent Validated in Production (Kansas Wireline Splicing, ₹45 Cr exposure eliminated in 3.2s).
   - `Phase 2: Top 5 High-Value Agents (Target Fleet)`: ₹570 Cr / yr Exposure Mitigated (Hydrocracker, Anti-Collision, FCCU, CDU, Tank Overfill).
   - `Phase 3: Enterprise-Wide Scale`: 84 Value-Unlock Agents (1–4 hr engineering latency automated across all operational seams).
+
+---
+
+### Slide 10 Golden Specifications (Approved):
+- **Headline (H1):** *Identify use cases. Expose latent risks.* (Bold white, 44px display font)
+- **Subheading (H2):** *Plug the seams with sovereign agentic microservices.* (Signature sovereign turquoise & azure gradient `#00D2B4` $\rightarrow$ `#00A3FF`)
+- **Kicker:** `STAGE 10 // SOVEREIGN DISCOVERY SPRINT`
+- **Eyebrow:** `THE ROAD TO PRODUCTION // 6-WEEK SOVEREIGN DISCOVERY SPRINT` • `SPRINT PLAYBOOK`
+- **Narrative Lead (Paragraph):** *We do not ask for a multi-year consulting engagement. In energy, capital discipline demands proof before commitment. We propose a focused 6-Week Sovereign Discovery Sprint to expose latent micro-risks, map unmonitored human handovers, and build your enterprise Risk & Opportunity Map.*
+- **The 3 Structured Steps (Tied directly to the 20×15 Chessboard & Value Topology):**
+  1. `WEEKS 01–02 // MAP & PRIORITISE`:
+     - *Convene Discovery Sprint // Map Seams on the Enterprise Chessboard*
+     - Convene domain leads across subsurface, drilling, facilities, and refining. Map high-friction operational seams against the 20×15 matrix where expert time stalls and handovers bleed value.
+     - Telemetry: Zero IT installation • Pure workflow telemetry.
+  2. `WEEKS 03–04 // INGEST & GROUND`:
+     - *Expose Latent Micro-Risks // Unearth Dark Data & Anchor Ground Truth*
+     - Ingest stranded legacy mudlog PDFs, wireline logs, and shift logs into sovereign BigQuery/Vertex AI. Quantify compounding balance-sheet exposure and establish exact baseline math.
+     - Telemetry: 100% In-Country Sovereign GCP • Parallel validation.
+  3. `WEEKS 05–06 // DEPLOY & PROVE`:
+     - *Plug Gaps with Microservices // Live Deployment Against Historical Benchmark*
+     - Deploy targeted dual-engine sentinels into your nominated asset. Run deterministic solvers against historical blind tests, verify mathematical convergence with domain leads, and prove ROI.
+     - Telemetry: Cryptographic BigQuery audit log • Executive signoff.
+- **Dynamic Asset Nomination Toggle:**
+  - `Barmer Basin (Upstream)`: Wireline logging cable stretch (+1.48m shift) & Dark-data historical mudlog PDF ingestion. Expected ROI: ₹65–95 Cr / yr.
+  - `Mumbai Offshore (E&P)`: Deepwater drilling kick early detection & Casing shoe pressure margin advisor. Expected ROI: ₹110–180 Cr / yr.
+  - `Flagship Refinery (Downstream)`: CDU crude blend assay optimizer & Heat exchanger furnace fouling prediction. Expected ROI: ₹140–250 Cr / yr.
+- **Navigation Controls:** Executive top nav (`STAGE 10 // SOVEREIGN DISCOVERY SPRINT`, `11 / 12`, Prev: `page_09.html`, Next: `page_11.html`) and floating bottom dock (`PAGE 11 // SOVEREIGN DISCOVERY SPRINT`).
+- **Narrative Bridge:** Transition to Stage 11 (*Strategic Mandate & Discussion →*).
+
+---
+
+### Slide 11 Golden Specifications (Approved):
+- **Headline (H1):** *The mandate is clear.* (Bold white, 44px display font)
+- **Subheading (H2):** *Your data remains sovereign. Your math remains exact.* (Signature sovereign turquoise & azure gradient `#00D2B4` $\rightarrow$ `#00A3FF`)
+- **Kicker:** `STAGE 11 // STRATEGIC MANDATE & NEXT STEPS`
+- **Eyebrow:** `STRATEGIC MANDATE // BOARDROOM DECISION & ACTIVATION` • `EXECUTIVE FORUM`
+- **Sovereign Trust Badge:** `CONFIDENTIAL BRIEFING CONCLUDED` (Pulsing mint dot, sovereign border).
+- **Narrative Lead (Paragraph):** *The unseen fractures on your operating balance sheet are measurable, identifiable, and permanently solvable. We do not ask you to rip and replace Petrel, Techlog, or SAP—we deploy autonomous dual-engine sentinels directly into the seams where profit bleeds.*
+- **Three Actionable Steps to Production:**
+  1. `STEP 01 // TODAY: Nominate the Operating Asset`:
+     - *Select One High-Value Operating Footprint*
+     - Designate one onshore or offshore asset (e.g., Barmer Basin, Mumbai Offshore) or one major refining complex. Establish the boundaries for our Sovereign Discovery Sprint.
+     - Value: Immediate executive sponsorship • Defined operational scope.
+  2. `STEP 02 // ALIGNMENT: Appoint Technical Liaisons`:
+     - *Subsurface & IT Engineering Leads*
+     - Assign one Subsurface/Refining domain expert and one IT/Cloud architect to work alongside Google Cloud specialists. Map existing data models without code disruption.
+     - Value: Domain ground truth • Zero workflow interruption.
+  3. `STEP 03 // ACTIVATE: Authorize Sovereign Workspace`:
+     - *100% In-Country MeitY Boundary*
+     - Provision the sovereign project workspace in Google Cloud Mumbai/Delhi data centers. Connect your historical LAS and CSV logs with immutable BigQuery auditing.
+     - Value: MeitY certified • Complete cryptographic audit trail.
+- **Executive Boardroom Call-to-Action Cockpit:**
+  - *Open for Executive Dialogue & Scrutiny*
+  - Dual action pills: `Confirm Asset Nomination →` (Primary gradient) and `Return to Overview` (Secondary frosted glass targeting `page_00.html`).
+- **Sovereign Governance Stamp:**
+  - `GOOGLE CLOUD SOVEREIGN PLATFORM // MEITY EMPANELED • MUMBAI & DELHI RESIDENCY`
+  - `CONFIDENTIAL BRIEFING • PREPARED FOR CHAIRMAN & MANAGING DIRECTOR / CHIEF EXECUTIVE OFFICER`
+- **Navigation Controls:** Executive top nav (`STAGE 11 // STRATEGIC MANDATE & NEXT STEPS`, `12 / 12`, Prev: `page_10.html`, Next: `page_00.html`) and floating bottom dock (`PAGE 12 // STRATEGIC MANDATE & NEXT STEPS`, Next: `Overview ↺`).
+
 
