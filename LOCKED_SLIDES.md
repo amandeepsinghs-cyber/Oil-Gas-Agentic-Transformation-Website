@@ -58,6 +58,9 @@
   2. `Real-Time Drilling & Petrophysics` (1.48m wireline cable stretch)
   3. `Operations & Shift Changeover` (3:00 AM graveyard shift communication lag)
   4. `Capital Consequence` (Casing shoe misplaced in gas sand -> ₹50+ Cr NPT)
+- **Visual Assets (Refined Dark Studio Polish):**
+  - Baseline State: `assets/media/photos/swiss_cheese_clean_baseline.jpg` (Clean dark executive studio `#080B11`, zero stars/galaxy, disciplined plain red trajectory ray passing through aligned holes into alarm).
+  - Fortified State: `assets/media/photos/swiss_cheese_clean_fortified.jpg` (Same dark studio, precision-engineered cylindrical cyber-plugs with cyan LED rings sealing holes, plain red ray stopped cleanly at barrier 1, zero chaotic lightning explosion).
 - **Narrative Bridge:** Bottom transition to Stage 03 (*The Need: 5 Non-Negotiable Criteria of the Plug*).
 
 ---

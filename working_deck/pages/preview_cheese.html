@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visual Review: Refined Swiss Cheese Images | Sovereign Agentic Transformation</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700;800&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    :root {
+      --font-display: 'Google Sans', 'SF Pro Display', -apple-system, sans-serif;
+      --font-mono: 'Roboto Mono', monospace;
+      --security-turquoise: #00D2B4;
+      --security-azure: #00A3FF;
+      --nebula-crimson: #EF4444;
+      --nebula-amber: #F59E0B;
+    }
+
+    body {
+      background: #06090E;
+      color: #CBD5E1;
+      font-family: var(--font-display);
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .preview-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .kicker {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--security-turquoise);
+      margin-bottom: 8px;
+    }
+
+    .title {
+      font-size: 36px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin: 0 0 12px 0;
+      letter-spacing: -1px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #94A3B8;
+      max-width: 1100px;
+      margin: 0 0 32px 0;
+    }
+
+    /* Interactive Switcher Canvas */
+    .interactive-card {
+      background: rgba(13, 17, 23, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 48px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    }
+
+    .switcher-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .canvas-viewport {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      max-height: 540px;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: #080B11;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.8);
+    }
+
+    .canvas-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      transition: opacity 0.4s ease;
+    }
+
+    .toggle-btn {
+      font-family: var(--font-display);
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .toggle-btn-active-red {
+      background: rgba(239, 68, 68, 0.25);
+      border-color: rgba(239, 68, 68, 0.6);
+      color: #FFFFFF;
+      box-shadow: 0 0 16px rgba(239, 68, 68, 0.3);
+    }
+
+    .toggle-btn-active-cyan {
+      background: rgba(0, 210, 180, 0.2);
+      border-color: rgba(0, 210, 180, 0.6);
+      color: #FFFFFF;
+      box-shadow: 0 0 16px rgba(0, 210, 180, 0.3);
+    }
+
+    .toggle-btn-idle {
+      background: transparent;
+      color: #64748B;
+      border-color: transparent;
+    }
+
+    .toggle-btn-idle:hover {
+      color: #E2E8F0;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Side-by-Side Comparison Grid */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: 960px) {
+      .comparison-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .comp-card {
+      background: rgba(13, 17, 23, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .comp-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .comp-badge {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .comp-badge-red {
+      background: rgba(239, 68, 68, 0.15);
+      color: var(--nebula-crimson);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .comp-badge-cyan {
+      background: rgba(0, 210, 180, 0.15);
+      color: var(--security-turquoise);
+      border: 1px solid rgba(0, 210, 180, 0.3);
+    }
+
+    .comp-img-frame {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: #080B11;
+    }
+
+    .comp-img-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .comp-notes {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: #94A3B8;
+    }
+
+    .comp-notes strong {
+      color: #FFFFFF;
+    }
+
+    /* Before vs After Original Comparison Section */
+    .delta-section {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 14px;
+      padding: 24px;
+    }
+
+    .delta-title {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--security-azure);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .delta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .delta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .delta-item {
+      background: rgba(6, 9, 14, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .delta-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: #64748B;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .delta-val {
+      font-size: 13.5px;
+      line-height: 1.45;
+      color: #E2E8F0;
+    }
+
+    .delta-val span.old {
+      color: #F87171;
+      text-decoration: line-through;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .delta-val span.new {
+      color: var(--security-turquoise);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header style="padding: 16px 24px; border-bottom: 1px solid rgba(255, 255, 255, 0.08); background: rgba(6, 9, 14, 0.9); display: flex; justify-content: space-between; align-items: center;">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <a href="page_02.html" style="color: var(--security-turquoise); text-decoration: none; font-family: var(--font-mono); font-size: 12px; font-weight: 700;">
+        ← Back to Slide 02
+      </a>
+      <span style="color: rgba(255,255,255,0.2);">|</span>
+      <span style="font-family: var(--font-mono); font-size: 12px; color: #FFF; font-weight: 700;">
+        VISUAL REVIEW // NEW SWISS CHEESE STUDIO ASSETS
+      </span>
+    </div>
+    <a href="page_02.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #06090E; background: linear-gradient(135deg, #00E5FF 0%, #00D2B4 100%); padding: 6px 14px; border-radius: 20px; text-decoration: none;">
+      Open Live Slide 02 ↗
+    </a>
+  </header>
+
+  <main class="preview-container">
+    <div class="kicker">IMAGE CANDIDATE PREVIEW // BOARDROOM POLISH</div>
+    <h1 class="title">Refined Swiss Cheese Model Visuals</h1>
+    <p class="subtitle">
+      Eliminated the deep-space starfield and cosmic nebulae in favor of a clean, dark executive studio backdrop. Softened the harsh lens flare into a disciplined, plain red trajectory beam, and replaced the chaotic lightning storm with clean plug termination.
+    </p>
+
+    <!-- 1. Interactive Switcher Demo -->
+    <div class="interactive-card">
+      <div class="switcher-header">
+        <div>
+          <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--security-azure); letter-spacing: 1.5px; text-transform: uppercase;">
+            INTERACTIVE SLIDE-02 SIMULATOR
+          </div>
+          <div style="font-size: 14px; color: #E2E8F0; font-weight: 600; margin-top: 2px;">
+            Test the cross-fade transition between the two new images:
+          </div>
+        </div>
+
+        <div style="display: inline-flex; background: rgba(6, 9, 14, 0.95); padding: 4px; border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.12);">
+          <button id="btn-baseline" class="toggle-btn toggle-btn-active-red" onclick="switchState('baseline')">
+            ⚠ Baseline: Plain Ray (No Stars)
+          </button>
+          <button id="btn-fortified" class="toggle-btn toggle-btn-idle" onclick="switchState('fortified')">
+            🛡 Fortified: Plugs Active (No Explosion)
+          </button>
+        </div>
+      </div>
+
+      <!-- Canvas Viewport -->
+      <div class="canvas-viewport">
+        <img id="img-baseline" src="../../assets/media/photos/swiss_cheese_clean_baseline.jpg" alt="Clean Baseline Swiss Cheese" class="canvas-img" style="opacity: 1;">
+        <img id="img-fortified" src="../../assets/media/photos/swiss_cheese_clean_fortified.jpg" alt="Clean Fortified Swiss Cheese" class="canvas-img" style="opacity: 0;">
+      </div>
+
+      <div id="status-indicator" style="margin-top: 14px; font-family: var(--font-mono); font-size: 12px; color: var(--nebula-crimson); font-weight: 700;">
+        🔴 STATE: BASELINE — Disciplined plain red ray passes through 4 aligned gaps. Clean dark studio background.
+      </div>
+    </div>
+
+    <!-- 2. Side-by-Side Static Cards -->
+    <h2 style="font-size: 20px; font-weight: 700; color: #FFF; margin: 0 0 16px 0;">
+      Side-by-Side Full Resolution Inspection
+    </h2>
+
+    <div class="comparison-grid">
+      <!-- Card 1: Baseline -->
+      <div class="comp-card">
+        <div class="comp-card-header">
+          <span style="font-size: 15px; font-weight: 700; color: #FFF;">State 1: Baseline Failure Vector</span>
+          <span class="comp-badge comp-badge-red">Unmonitored Seams</span>
+        </div>
+        <div class="comp-img-frame">
+          <img src="../../assets/media/photos/swiss_cheese_clean_baseline.jpg" alt="Clean Baseline View">
+        </div>
+        <div class="comp-notes">
+          • <strong>Background:</strong> Pure dark executive studio backdrop (#080B11). All stars, galaxies, and cosmic dust removed.<br>
+          • <strong>Hazard Ray:</strong> Plain, sharp, disciplined red beam passing straight through aligned holes without blinding radial glare.
+        </div>
+      </div>
+
+      <!-- Card 2: Fortified -->
+      <div class="comp-card">
+        <div class="comp-card-header">
+          <span style="font-size: 15px; font-weight: 700; color: #FFF;">State 2: Fortified Agentic Mesh</span>
+          <span class="comp-badge comp-badge-cyan">Plugs Active &amp; Sealed</span>
+        </div>
+        <div class="comp-img-frame">
+          <img src="../../assets/media/photos/swiss_cheese_clean_fortified.jpg" alt="Clean Fortified View">
+        </div>
+        <div class="comp-notes">
+          • <strong>Threat Stopped:</strong> Plain red ray terminates cleanly inside Barrier 1. Chaotic lightning explosion completely removed.<br>
+          • <strong>Cyber-Plugs:</strong> Cylindrical plugs seated with precision, glowing with understated cyan rings. Alarm box remains unlit.
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Key Delta Table -->
+    <div class="delta-section">
+      <div class="delta-title">Executive Comparison vs Original Imagery</div>
+      <div class="delta-grid">
+        <div class="delta-item">
+          <div class="delta-label">Background Atmosphere</div>
+          <div class="delta-val">
+            <span class="old">Twinkling stars &amp; deep-space galaxy nebula</span>
+            <span class="new">✓ Clean matte charcoal executive studio backdrop</span>
+          </div>
+        </div>
+
+        <div class="delta-item">
+          <div class="delta-label">Hazard Vector (Red Ray)</div>
+          <div class="delta-val">
+            <span class="old">Harsh radial lens flares &amp; glowing starbursts</span>
+            <span class="new">✓ Disciplined, plain, uniform trajectory beam</span>
+          </div>
+        </div>
+
+        <div class="delta-item">
+          <div class="delta-label">Barrier Impact &amp; Plugs</div>
+          <div class="delta-val">
+            <span class="old">Violent turquoise lightning storm / plasma burst</span>
+            <span class="new">✓ Clean beam absorption at fortified plug face</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function switchState(state) {
+      const imgBase = document.getElementById('img-baseline');
+      const imgFort = document.getElementById('img-fortified');
+      const btnBase = document.getElementById('btn-baseline');
+      const btnFort = document.getElementById('btn-fortified');
+      const status = document.getElementById('status-indicator');
+
+      if (state === 'baseline') {
+        imgBase.style.opacity = '1';
+        imgFort.style.opacity = '0';
+        btnBase.className = 'toggle-btn toggle-btn-active-red';
+        btnFort.className = 'toggle-btn toggle-btn-idle';
+        status.innerHTML = '🔴 STATE: BASELINE — Disciplined plain red ray passes through 4 aligned gaps. Clean dark studio background.';
+        status.style.color = '#EF4444';
+      } else {
+        imgBase.style.opacity = '0';
+        imgFort.style.opacity = '1';
+        btnBase.className = 'toggle-btn toggle-btn-idle';
+        btnFort.className = 'toggle-btn toggle-btn-active-cyan';
+        status.innerHTML = '🛡 STATE: FORTIFIED — Autonomous plugs active. Plain ray stopped cleanly at barrier 1. Alarm safe.';
+        status.style.color = '#00D2B4';
+      }
+    }
+  </script>
+</body>
+</html>
