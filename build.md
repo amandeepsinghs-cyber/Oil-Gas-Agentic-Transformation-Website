@@ -72,7 +72,7 @@ O&G_slidedeck_agentic_transformation/
 └── slides/                                # Modular Slide Components (15 Surgical Units)
     ├── slide_01_capital_stakes.html       # Slide 01: Capital Reality & High-Stakes Macro Numbers
     ├── slide_02_swiss_cheese.html         # Slide 02: The Compounding Mechanism (Swiss Cheese Model)
-    ├── slide_03_mece_traps.html           # Slide 03: The Three MECE Traps (Latency, Janitorial, Silos)
+    ├── slide_03_the_need_criteria.html    # Slide 03: The Need: The 5 Non-Negotiable Criteria (AI Agent Reveal)
     ├── slide_04_workforce_personas.html   # Slide 04: Workforce Personas & Daily Friction Points
     ├── slide_05_vulnerability_matrix.html # Slide 05: The Vulnerability Matrix (Lifecycle vs Roles)
     ├── slide_06_solution_criteria.html    # Slide 06: The 5 Criteria for the Solution
@@ -143,17 +143,20 @@ O&G_slidedeck_agentic_transformation/
   * Visual Studio: 4 isometric defense slices (Ingestion, Interpretation, Modeling, Rig Execution).
   * Interactive Toggle: `[Legacy Risk Alignment]` (red failure ray cuts through holes) vs `[Agentic Deflection]` (cyan plugs lock apertures and deflect the beam).
 
-### Slide 03: The Three MECE Traps
-* **File:** `slides/slide_03_mece_traps.html`
-* **Visual Anchor:** 3-Column Glass Monoliths (Amber, Cyan, Crimson accents)
-* **Design Pattern:** Mutually Exclusive, Collectively Exhaustive diagnostic cards.
+### Slide 03: The Need — The 5 Non-Negotiable Criteria of the Plug
+* **File:** `slides/slide_03_the_need_criteria.html`
+* **Visual Anchor:** 5-Column High-Contrast Glass Pillars & Monumental BAM Reveal Card
+* **Design Pattern:** The Need defined first as rigorous operational requisites, culminating in the naming of the AI Agent.
 * **Key Content:** 
-  1. The Latency Trap (sensor to approval lag, drilling ahead blind)
-  2. The Cognitive Janitorial Trap (60% time on manual wrangling & work about work)
-  3. The Siloed Data Trap (80% historical reports, legacy mudlogs unindexed)
+  1. Surgical (Nebula Amber `#F59E0B`): Targets the exact seam where the vulnerability lives.
+  2. Automated (Security Azure `#00A3FF`): Triggers instantaneously on live operational data, guarding handovers 24/7 without human delay.
+  3. Intelligent (Security Turquoise `#00D2B4`): Understands unstructured logs, domain context, and cross-discipline data.
+  4. Governed (Security Mint `#10B981`): Centrally controlled, strictly permissioned, with an immutable audit trail and non-negotiable Human-in-the-Loop expert veto.
+  5. Robust (Radiant Lavender `#C084FC`): Grounded in deterministic physics and exact mathematical solvers.
+* **The BAM Moment:** "A system that is Surgical, Automated, Intelligent, Governed, and Robust has a name. That is an AI Agent."
 * **Component Contract:**
-  * Tag: `.deck-page.theme-nebula`
-  * 3 interactive cards with hover elevation, expanding to show time-allocation and risk metrics.
+  * Tag: `.slide.narrative-stage.theme-blue#stage-03`
+  * High-contrast styling: `#CBD5E1` body text, `#FFFFFF` titles, `0.92` opacity numerals.
 
 ### Slide 04: Workforce Personas & Daily Friction Points
 * **File:** `slides/slide_04_workforce_personas.html`

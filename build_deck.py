@@ -112,7 +112,7 @@ SLIDE_ORDER = [
     "slide_00_title.html",
     "slide_01_capital_reality.html",
     "slide_02_swiss_cheese.html",
-    "slide_03_mece_traps.html",
+    "slide_03_the_need_criteria.html",
     "slide_04_workforce_personas.html",
     "slide_05_vulnerability_matrix.html",
     "slide_06_solution_criteria.html",

@@ -15,8 +15,24 @@
 
 <body>
 
+  <!-- Archival Notice Banner -->
+  <div style="background: linear-gradient(90deg, #991B1B 0%, #DC2626 50%, #991B1B 100%); color: #FFFFFF; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; left: 0; right: 0; z-index: 99999; box-shadow: 0 4px 20px rgba(0,0,0,0.6); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13.5px; font-weight: 600;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <span style="background: #FFF; color: #DC2626; font-size: 11px; font-weight: 900; padding: 2px 8px; border-radius: 4px; letter-spacing: 0.5px;">ARCHIVED LEGACY</span>
+      <span>This is the legacy 16-slide presentation draft (pre-pivot).</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <a href="index.html" style="background: #FFFFFF; color: #111827; padding: 6px 14px; border-radius: 20px; font-weight: 700; text-decoration: none; font-size: 12.5px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
+        Open Current Master Deck →
+      </a>
+      <a href="working_deck/pages/page_00.html" style="background: rgba(255, 255, 255, 0.2); color: #FFFFFF; padding: 6px 14px; border-radius: 20px; font-weight: 700; text-decoration: none; font-size: 12.5px; border: 1px solid rgba(255, 255, 255, 0.4);">
+        Slide-by-Slide Review Mode →
+      </a>
+    </div>
+  </div>
+
   <!-- Fixed 16:9 Master Viewport Scaler (1920x1080) -->
-  <div id="viewport-scaler">
+  <div id="viewport-scaler" style="margin-top: 48px;">
 
     <!-- SLIDE 00: THE IMMERSIVE TITLE EXPERIENCE (HERO) -->
     <section class="slide active slide-title-hero" id="slide-00"

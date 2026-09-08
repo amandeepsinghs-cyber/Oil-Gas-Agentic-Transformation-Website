@@ -50,7 +50,7 @@ SLIDE_NAMES = [
     ("stage-00", "slide_00_hero.html", "EXECUTIVE OVERVIEW"),
     ("stage-01", "slide_01_capital_reality.html", "CAPITAL REALITY"),
     ("stage-02", "slide_02_swiss_cheese.html", "SWISS CHEESE MODEL"),
-    ("stage-03", "slide_03_mece_traps.html", "THE 3 MECE TRAPS"),
+    ("stage-03", "slide_03_the_need_criteria.html", "THE 5 CRITERIA OF THE PLUG"),
     ("stage-04", "slide_04_workforce_personas.html", "WORKFORCE PERSONAS"),
     ("stage-05", "slide_05_vulnerability_matrix.html", "2D VULNERABILITY MATRIX"),
     ("stage-06", "slide_06_solution_criteria.html", "THE 5 CRITERIA"),
