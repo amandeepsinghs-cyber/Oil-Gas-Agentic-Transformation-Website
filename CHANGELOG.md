@@ -13,6 +13,37 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 ---
 
 ## [Uncommitted] - 2026-09-08
+### Slide 06: Proof of an Intelligent Microservice: The Petrophysical AI Agent (Locked & Frozen)
+
+#### Added
+- **Dedicated Standalone Slide**: [`working_deck/pages/page_06.html`](working_deck/pages/page_06.html)
+- **Frozen Golden Masters**:
+  - [`final_slides/slide_06_the_petrophysical_ai_agent.LOCKED.html`](final_slides/slide_06_the_petrophysical_ai_agent.LOCKED.html) (Immutable safety copy)
+  - [`final_slides/slide_06_the_petrophysical_ai_agent.html`](final_slides/slide_06_the_petrophysical_ai_agent.html) (Reference copy)
+
+#### Key Architectural & Design Implementations
+- **Core Narrative Arc (Super Simple, 3 Spaced-Out Blocks)**:
+  - `01 CONTEXT // THE PETROPHYSICIST'S ROLE`: Domain expert evaluating porosity, permeability, and hydrocarbon quantification.
+  - `02 THE BOTTLENECK // OPERATIONAL FRICTION & BUSINESS RISK`: 1–2 hours of manual curve alignment per run; severe business risks if rushed at 3:00 AM (distorted reserves, casing placement errors).
+  - `03 THE NEED // AN INTELLIGENT SYSTEM`: Automating physics workflows—Gamma Ray cross-correlation over overlap, exact depth shift, tool recalibration normalization, 1-click human verification in 3.2s.
+- **Visual Evidence & Live Cloud Deployment**:
+  - Ground-truth Kansas Well A-12 Gamma Ray overlap comparison plot (`3_overlap_detail.png` from `splice_agent_v8`).
+  - Zoomed presentation (`max-height: 440px`, default `scale(1.06)` inside `.plot-frame` with `#FFFFFF` background, interactive `scale(1.12)` on hover).
+  - Direct live deployment link to Google Gemini Enterprise (`ID: 7dab71a6...5c05`).
+- **Mathematical Baseline Alignment**:
+  - Left 3 narrative blocks and Right 2 visual components locked to the identical vertical baseline via `.layout-grid { align-items: stretch; }`.
+- **Expanded Opportunity Horizon Bar**:
+  - Full-width horizon bar formatted cleanly into 2 balanced lines without artificial width caps.
+  - Core business values illuminated in signature gradient turquoise (`#00D2B4` $\rightarrow$ `#00E5FF`):
+    - *1–2 critical hours back*
+    - *substantially increasing decision accuracy*
+    - *high-value reservoir modeling and maximizing asset recovery*
+- **Governance Registry**:
+  - Formally registered Stage 06 as **LOCKED & FROZEN** in [`LOCKED_SLIDES.md`](LOCKED_SLIDES.md).
+
+---
+
+## [d91e842] - 2026-09-08
 ### Slide 05: Structural Resilience of an Agentic Organisation (Locked & Synchronized)
 
 #### Added

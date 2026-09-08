@@ -1,0 +1,311 @@
+<!-- ========================================================================= -->
+<!-- FINALIZED SLIDE: STAGE 06 // PROOF OF AN INTELLIGENT MICROSERVICE          -->
+<!-- THE PETROPHYSICAL AI AGENT                                                 -->
+<!-- STATUS: FINALIZED & FROZEN                                                -->
+<!-- APPROVED: 2026-09-08                                                      -->
+<!-- ========================================================================= -->
+<style>
+  #stage-06 .layout-grid {
+    display: grid;
+    grid-template-columns: 0.98fr 1.02fr;
+    gap: 28px;
+    align-items: stretch;
+  }
+  @media (max-width: 1080px) {
+    #stage-06 .layout-grid {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+  }
+  #stage-06 .narrative-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 16px;
+  }
+  #stage-06 .narrative-block {
+    background: rgba(13, 17, 23, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 22px 24px;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    margin-bottom: 0;
+  }
+  #stage-06 .narrative-block-role {
+    border-left: 3px solid var(--security-azure);
+  }
+  #stage-06 .narrative-block-bottleneck {
+    border-left: 3px solid var(--nebula-amber);
+  }
+  #stage-06 .narrative-block-need {
+    border-left: 3px solid var(--nebula-cyan-bright);
+    background: rgba(0, 229, 255, 0.03);
+  }
+  #stage-06 .visual-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    gap: 16px;
+  }
+  #stage-06 .plot-container {
+    background: #06090E;
+    border: 1px solid rgba(0, 229, 255, 0.25);
+    border-radius: 14px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5);
+    flex: 1;
+  }
+  #stage-06 .plot-frame {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    position: relative;
+  }
+  #stage-06 .plot-img {
+    max-height: 440px;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transform: scale(1.06);
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+  }
+  #stage-06 .plot-frame:hover .plot-img {
+    transform: scale(1.12);
+  }
+  #stage-06 .demo-card {
+    background: linear-gradient(135deg, rgba(26, 115, 232, 0.12) 0%, rgba(155, 114, 203, 0.12) 50%, rgba(234, 67, 53, 0.08) 100%), rgba(13, 17, 23, 0.95);
+    border: 1px solid rgba(66, 133, 244, 0.4);
+    border-radius: 12px;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+  }
+  #stage-06 .demo-card:hover {
+    border-color: rgba(66, 133, 244, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(26, 115, 232, 0.25);
+  }
+  #stage-06 .gemini-btn {
+    background: linear-gradient(90deg, #1A73E8 0%, #4285F4 35%, #9B72CB 65%, #D96570 85%, #EA4335 100%);
+    color: #FFFFFF;
+    font-family: var(--font-display);
+    font-size: 14.5px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 24px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 18px rgba(66, 133, 244, 0.4);
+    transition: all 0.2s ease;
+  }
+  #stage-06 .gemini-btn:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 24px rgba(155, 114, 203, 0.6);
+    border-color: #FFF;
+  }
+</style>
+
+<section class="slide narrative-stage theme-blue" id="stage-06" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 60px max(24px, 4vw); position: relative; background: #06090E; box-sizing: border-box;">
+  
+  <!-- Atmospheric Backdrop with Futuristic Nebula Glow -->
+  <div class="slide-bg-media" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
+    <div class="slide-bg-overlay" style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 15%, rgba(0, 229, 255, 0.07) 0%, rgba(6, 9, 14, 0.94) 55%, rgba(6, 9, 14, 0.99) 100%);"></div>
+    <div class="slide-glow-mesh" style="position: absolute; inset: 0; background: radial-gradient(circle at 80% 40%, rgba(129, 140, 248, 0.09) 0%, transparent 60%), radial-gradient(circle at 20% 70%, rgba(192, 132, 252, 0.06) 0%, transparent 55%);"></div>
+  </div>
+
+  <div class="editorial-container" style="max-width: 1440px; margin: 0 auto; width: 100%; position: relative; z-index: 2;">
+    
+    <!-- Top Eyebrow -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 12px;">
+      <div class="title-kicker" style="display: flex; align-items: center; gap: 10px;">
+        <span class="kicker-bar" style="width: 24px; height: 3px; background: linear-gradient(90deg, #00E5FF, #818CF8, #C084FC); border-radius: 2px;"></span>
+        <span style="color: var(--nebula-cyan-bright); font-family: var(--font-display); font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">
+          STAGE 06 // PROOF OF AN INTELLIGENT MICROSERVICE
+        </span>
+        <span style="color: rgba(255, 255, 255, 0.25);">//</span>
+        <span style="background: linear-gradient(90deg, #00E5FF, #818CF8, #C084FC); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: var(--font-mono); font-size: 13px; font-weight: 700; letter-spacing: 0.5px;">
+          THE PETROPHYSICAL AI AGENT
+        </span>
+      </div>
+
+      <div style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(129, 140, 248, 0.35); border-radius: 20px;">
+        <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--nebula-cyan-bright); box-shadow: 0 0 8px #818CF8;"></span>
+        <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.8px;">
+          KANSAS WELL A-12 BENCHMARK
+        </span>
+      </div>
+    </div>
+
+    <!-- Monumental Heading & Lead with Futuristic Nebula Gradient Signature -->
+    <h1 style="font-family: var(--font-display); font-size: clamp(30px, 3.5vw, 44px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: #FFFFFF; margin: 0 0 6px 0;">
+      Proof of an Intelligent Microservice: <span style="background: linear-gradient(90deg, #00E5FF 0%, #38BDF8 25%, #818CF8 55%, #C084FC 80%, #F472B6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.35));">The Petrophysical AI Agent</span>
+    </h1>
+
+    <p style="font-family: var(--font-display); font-size: clamp(14px, 1.1vw, 17px); line-height: 1.4; color: #94A3B8; margin: 0 0 20px 0; max-width: 1200px;">
+      How an intelligent microservice automates high-stakes subsurface physics workflows—giving valuable time back to domain experts and increasing workflow decision accuracy.
+    </p>
+
+    <!-- ========================================================================= -->
+    <!-- TWO BALANCED WINGS: LEFT NARRATIVE (SUPER SIMPLE) | RIGHT PLOT & DEMO LINK -->
+    <!-- ========================================================================= -->
+    <div class="layout-grid">
+      
+      <!-- LEFT WING: The Problem, The Stakes & What is Needed -->
+      <div class="narrative-col">
+        
+        <!-- Part 1: Context (The Petrophysicist's Role) -->
+        <div class="narrative-block narrative-block-role">
+          <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-azure); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px;">
+            01 CONTEXT // THE PETROPHYSICIST'S ROLE
+          </div>
+          <div style="font-family: var(--font-display); font-size: 18px; font-weight: 700; color: #FFFFFF; line-height: 1.3; margin-bottom: 12px;">
+            Reservoir Characterization & Hydrocarbon Quantification
+          </div>
+          <p style="font-size: 14px; color: #CBD5E1; line-height: 1.6; margin: 0;">
+            The Petrophysicist is the high-stakes domain expert tasked with interpreting porosity, permeability, and quantifying how much oil and gas is in the reservoir. This evaluation is one of the most critical decisions in oil & gas exploration and production.
+          </p>
+        </div>
+
+        <!-- Part 2: The Bottleneck (Operational Friction & Business Risk) -->
+        <div class="narrative-block narrative-block-bottleneck">
+          <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--nebula-amber); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 10px;">
+            02 THE BOTTLENECK // OPERATIONAL FRICTION & BUSINESS RISK
+          </div>
+          <div style="font-family: var(--font-display); font-size: 18px; font-weight: 700; color: #FFFFFF; line-height: 1.3; margin-bottom: 12px;">
+            1–2 Hours of Manual Effort & Operational Risk
+          </div>
+          <p style="font-size: 14px; color: #CBD5E1; line-height: 1.6; margin: 0;">
+            To quantify oil and accurately plan casing depths, separate wireline logging passes must be depth-matched and spliced. Splicing properly requires <strong>1–2 hours</strong> of intensive manual effort. If done improperly or rushed at 3:00 AM, it introduces severe <strong>business risks</strong>—distorting reserve calculations and compromising casing depth integrity.
+          </p>
+        </div>
+
+        <!-- Part 3: The Need (An Intelligent System) -->
+        <div class="narrative-block narrative-block-need">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--nebula-cyan-bright); letter-spacing: 1.5px; text-transform: uppercase;">
+              03 THE NEED // AN INTELLIGENT SYSTEM
+            </span>
+            <span style="font-family: var(--font-mono); font-size: 10.5px; color: #5EEAD4; background: rgba(0, 210, 180, 0.15); padding: 3px 9px; border-radius: 4px; font-weight: 700;">
+              3.2s EXECUTION
+            </span>
+          </div>
+          <div style="font-family: var(--font-display); font-size: 18px; font-weight: 700; color: #FFFFFF; line-height: 1.3; margin-bottom: 12px;">
+            Physics Workflows: Cross-Correlation & Auto-Correction
+          </div>
+          <p style="font-size: 14px; color: #CBD5E1; line-height: 1.6; margin: 0;">
+            An intelligent system that replicates the petrophysicist's physical workflow: runs <strong>signal cross-correlation on Gamma Ray</strong> over the overlap, calculates and applies the exact depth shift, normalizes tool recalibration drift, and presents an already-spliced composite log for 1-click human verification.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT WING: The Plot & The Live Demo Link -->
+      <div class="visual-col">
+        
+        <!-- Plot Container: Genuine Kansas Well A-12 Output -->
+        <div class="plot-container" style="width: 100%; box-sizing: border-box;">
+          
+          <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--nebula-cyan-bright); text-transform: uppercase;">
+              WELL A-12: OVERLAP INTERVAL (GAMMA RAY)
+            </span>
+            <span style="font-family: var(--font-mono); font-size: 10.5px; color: #94A3B8;">
+              SciPy r = 0.9899 · 2.9 cm Error
+            </span>
+          </div>
+
+          <!-- Plot Frame with Zoomed Image -->
+          <div class="plot-frame">
+            <img src="file:///usr/local/google/home/amandeepsinghs/Downloads/Petrophysicist-20260906T060323Z-1-001/Petrophysicist/splice_agent_v8/outputs/3_overlap_detail.png" 
+                 alt="Well A-12 Gamma Ray Overlap Interval - Before vs After Shift" 
+                 class="plot-img"
+                 onerror="this.onerror=null; this.src='assets/media/3_overlap_detail.png';">
+          </div>
+
+          <!-- Plot Caption & Ground Truth Telemetry -->
+          <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 10px; font-family: var(--font-mono); font-size: 11px; color: #94A3B8; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 8px;">
+            <div>
+              <span style="color: #F87171;">As Recorded:</span> 1.83m offset
+            </div>
+            <div style="color: #64748B;">→</div>
+            <div>
+              <span style="color: #34D399;">Shifted -1.829m:</span> Exact physical alignment
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Prominent Gemini Enterprise Demo Link Card -->
+        <div class="demo-card">
+          <div style="display: flex; align-items: center; gap: 14px;">
+            <img src="assets/media/gemini_enterprise_logo.svg" alt="Gemini Enterprise" style="width: 44px; height: 44px; flex-shrink: 0; filter: drop-shadow(0 0 8px rgba(66, 133, 244, 0.5));">
+            <div>
+              <div style="font-family: var(--font-display); font-size: 17px; font-weight: 800; color: #FFFFFF;">
+                Live AI Agent Demonstration
+              </div>
+              <div style="font-family: var(--font-mono); font-size: 11px; color: #94A3B8;">
+                Deployed on Gemini Enterprise · <span style="color: var(--nebula-cyan-bright);">ID: 7dab71a6...5c05</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <a href="https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05?hl=en_US" target="_blank" rel="noopener noreferrer" class="gemini-btn" title="Launch Kansas Well A-12 Agent on Gemini Enterprise">
+              <span>Launch Demo</span>
+              <span style="font-size: 16px;">↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar: The Opportunity + Bridge to Next Page -->
+    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding: 12px 20px; margin-top: 20px; gap: 20px; background: rgba(13, 17, 23, 0.6); border-radius: 10px; border: 1px solid rgba(0, 229, 255, 0.25);">
+      <div style="display: flex; align-items: center; gap: 14px; flex: 1; min-width: 0;">
+        <span style="font-size: 20px; line-height: 1; flex-shrink: 0;">⚡</span>
+        <div style="flex: 1; min-width: 0; line-height: 1.55;">
+          <span style="background: linear-gradient(90deg, #00D2B4 0%, #00E5FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: var(--font-mono); font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;">
+            THE OPPORTUNITY // TIME RECOVERED &amp; DECISION ACCURACY:
+          </span>
+          <span style="font-size: 13.5px; color: #E2E8F0; margin-left: 6px;">
+            Automating mechanical curve alignment gives <strong style="color: var(--security-turquoise); background: linear-gradient(90deg, #00D2B4 0%, #00E5FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">1–2 critical hours back</strong> to the petrophysicist on every run while <strong style="color: var(--security-turquoise); background: linear-gradient(90deg, #00D2B4 0%, #00E5FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">substantially increasing decision accuracy</strong>—allowing domain experts to focus on <strong style="color: var(--security-turquoise); background: linear-gradient(90deg, #00D2B4 0%, #00E5FF 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 800;">high-value reservoir modeling and maximizing asset recovery</strong>.
+          </span>
+        </div>
+      </div>
+      <a href="#stage-07" style="flex-shrink: 0; font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--nebula-cyan-bright); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 20px; background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.3); transition: all 0.2s; white-space: nowrap;">
+        <span>Next: The 10×10 Fleet Map</span>
+        <span style="font-size: 14px;">→</span>
+      </a>
+    </div>
+
+  </div>
+</section>

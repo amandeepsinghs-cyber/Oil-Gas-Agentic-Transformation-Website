@@ -16,6 +16,7 @@
 | **Stage 03** | **The Need: 5 Non-Negotiable Criteria of the Plug** | `final_slides/slide_03_the_need_criteria.LOCKED.html` | 2026-09-08 06:40 UTC | **LOCKED & FROZEN** |
 | **Stage 04** | **AI Agent: The Intelligent Microservice** | `final_slides/slide_04_the_intelligent_microservice.LOCKED.html` | 2026-09-08 09:12 UTC | **LOCKED & FROZEN** |
 | **Stage 05** | **Structural Resilience of an Agentic Organisation** | `final_slides/slide_05_the_jenga_metaphor.LOCKED.html` | 2026-09-08 09:52 UTC | **LOCKED & FROZEN** |
+| **Stage 06** | **Proof of an Intelligent Microservice: The Petrophysical AI Agent** | `final_slides/slide_06_the_petrophysical_ai_agent.LOCKED.html` | 2026-09-08 10:51 UTC | **LOCKED & FROZEN** |
 
 ---
 
@@ -119,7 +120,36 @@
   - **Left Tower:** Box boundary, badge dot, border-top, and highlight callout aligned to **Warm Amber / Honey Wood** (`#F59E0B` / `rgba(245, 158, 11, 0.4)`), harmonizing directly with the warm oak wood blocks of the fragile tower.
   - **Right Tower:** Box boundary, badge dot, border-top, and highlight callout aligned to **Electric Neon Cyan** (`#00E5FF` / `rgba(0, 229, 255, 0.45)` / `#38BDF8`), harmonizing directly with the glowing neon cyber-plugs.
 - **Uncluttered Canvas:** Removed boardroom punchline box completely to give maximum vertical breathing room to the visual metaphor.
-- **Narrative Bridge:** Bottom transition to Stage 06 (*Living Proof: Petrophysical Wireline Splicing Sentinel*).
+- **Narrative Bridge:** Bottom transition to Stage 06 (*Proof of an Intelligent Microservice: The Petrophysical AI Agent*).
 
+---
 
-
+### Slide 06 Golden Specifications (Approved):
+- **Headline:** *Proof of an Intelligent Microservice: The Petrophysical AI Agent* (with futuristic Nebula multi-stop linear gradient: `#00E5FF` $\rightarrow$ `#38BDF8` $\rightarrow$ `#818CF8` $\rightarrow$ `#C084FC` $\rightarrow$ `#F472B6`).
+- **Subheading:** *How an intelligent microservice automates high-stakes subsurface physics workflows—giving valuable time back to domain experts and increasing workflow decision accuracy.*
+- **Kicker:** `STAGE 06 // PROOF OF AN INTELLIGENT MICROSERVICE // THE PETROPHYSICAL AI AGENT`
+- **Telemetry Badge:** `KANSAS WELL A-12 BENCHMARK`
+- **Balanced 2-Wing Architecture (`0.98fr 1.02fr`, `align-items: stretch`):**
+  - **Left Wing (The 3 Narrative Blocks with Vertical Breathing Room):**
+    1. `01 CONTEXT // THE PETROPHYSICIST'S ROLE`: Reservoir characterization & hydrocarbon quantification; interpreting porosity, permeability, quantifying oil/gas in reservoir.
+    2. `02 THE BOTTLENECK // OPERATIONAL FRICTION & BUSINESS RISK`: 1–2 hours of manual effort & operational risk; wireline log passes must be depth-matched; risk of distorted reserves & misplaced casing if rushed at 3:00 AM.
+    3. `03 THE NEED // AN INTELLIGENT SYSTEM` (`3.2s EXECUTION`): Replicates physical workflow; Gamma Ray cross-correlation over overlap, exact depth shift, tool recalibration normalization, 1-click human verification.
+  - **Right Wing (Visual Proof & Live Enterprise Demonstration):**
+    1. **Well A-12 Gamma Ray Overlap Plot Container:**
+       - Authentic Kansas Well A-12 benchmark (`3_overlap_detail.png` from `splice_agent_v8`).
+       - Zoomed presentation (`max-height: 440px`, default `scale(1.06)` inside `.plot-frame` with `#FFFFFF` background).
+       - Smooth interactive hover zoom (`scale(1.12)`).
+       - Telemetry: SciPy $r = 0.9899 \cdot 2.9\text{ cm Error}$; As Recorded $1.83\text{m}$ offset $\rightarrow$ Shifted $-1.829\text{m}$ exact physical alignment.
+    2. **Live AI Agent Demonstration Card:**
+       - Google Gemini Enterprise vector gradient brand mark.
+       - Direct live deployment link to Gemini Enterprise (`ID: 7dab71a6...5c05`).
+       - Gradient button `Launch Demo ↗` targeting `https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05?hl=en_US`.
+- **Baseline Alignment:** Left 3 boxes and right 2 visual elements mathematically locked to the exact same vertical depth.
+- **The Opportunity Horizon Bar:**
+  - Full-width bottom bar stretching to the right, formatted cleanly into 2 balanced lines.
+  - Core business values illuminated in signature gradient turquoise (`linear-gradient(90deg, #00D2B4 0%, #00E5FF 100%)`):
+    - `THE OPPORTUNITY // TIME RECOVERED & DECISION ACCURACY:`
+    - `1–2 critical hours back`
+    - `substantially increasing decision accuracy`
+    - `high-value reservoir modeling and maximizing asset recovery`
+- **Narrative Bridge:** Bottom transition to Stage 07 (*Next: The 10×10 Fleet Map →*).
