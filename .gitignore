@@ -6,6 +6,7 @@
 *.pptx
 Agentic Decks for Templates/
 baseline_deck/
+dump/
 
 # 2. Media: Ignore all uncurated image/GIF dumps, keep ONLY website images
 assets/media/*

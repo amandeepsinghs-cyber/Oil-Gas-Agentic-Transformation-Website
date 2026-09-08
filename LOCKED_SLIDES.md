@@ -12,35 +12,8 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **Stage 00** | **Executive Overview & Hero Command Cockpit** | `final_slides/slide_00_overview.LOCKED.html` | 2026-09-07 18:37 UTC | **LOCKED & FROZEN** |
 | **Stage 01** | **The Capital Reality (High-Consequence Stakes)** | `final_slides/slide_01_capital_reality.LOCKED.html` | 2026-09-07 18:47 UTC | **LOCKED & FROZEN** |
-| **Stage 02** | **The Swiss Cheese Model (Compounding Latent Seams)** | `final_slides/slide_02_swiss_cheese.LOCKED.html` | 2026-09-08 07:28 UTC | **LOCKED & FROZEN** |
-| **Stage 03** | **The Need of the Hour (5 Non-Negotiable Criteria)** | `final_slides/slide_03_the_need_criteria.LOCKED.html` | 2026-09-08 07:28 UTC | **LOCKED & FROZEN** |
-
----
-
-### Slide 02 Golden Specifications (Approved):
-- **Headline:** *Catastrophe is never a single failure. It is compounding micro-gaps.*
-- **Kicker:** `PHYSICAL REALITY // PROF. JAMES REASON'S SYSTEM HAZARD MODEL`
-- **Interactive Architecture:** Dynamic mode toggle (`legacy` vs `agentic`).
-- **4 Latent Seam Pins:**
-  1. *Subsurface / Data Ingestion:* Scanned Mudlog in Dark PDF (2004 Offset Well · 0 Searchability)
-  2. *Geosteering / Real-Time:* Drill-String Vibration Spike ignored (45-min manual log delay)
-  3. *Production Operations:* ESP Cavitation Alert silenced as sensor noise
-  4. *Refinery / Integrity:* Corrosion coupon log missing from SAP PM schedule
-- **Dynamic Keynote Shelves:** 3 responsive cards revealing operational consequences and agentic defense closures.
-
----
-
-### Slide 03 Golden Specifications (Approved):
-- **Headline:** *The Need of the Hour: What an Energy System Actually Requires.*
-- **Kicker:** `OPERATIONAL CRITERIA // ZERO ROOM FOR ILLUSION`
-- **The 5 Non-Negotiable Criteria:**
-  1. `CRITERION 01 — SURGICAL`: Pinpoint accuracy, exact depths, zero hallucinations.
-  2. `CRITERION 02 — AUTOMATED`: Eliminates manual transcription, file hopping, and copy-paste friction.
-  3. `CRITERION 03 — INTELLIGENT`: Understands unstructured logs, domain context, and cross-discipline data.
-  4. `CRITERION 04 — GOVERNED`: Centrally controlled, strictly permissioned, with an immutable audit trail and non-negotiable Human-in-the-Loop expert veto.
-  5. `CRITERION 05 — ROBUST`: Grounded in deterministic physics and exact mathematical solvers.
-- **The Golden Pivot (BAM Card):** *"A system that is Surgical, Automated, Intelligent, Governed, and Robust has a name. That is an AI Agent."*
-- **Executive Punchline:** *"You do not need a chatbot. You need autonomous operational agents grounded in deterministic physics."*
+| **Stage 02** | **Prof. James Reason's Swiss Cheese Model** | `final_slides/slide_02_swiss_cheese.LOCKED.html` | 2026-09-08 05:45 UTC | **LOCKED & FROZEN** |
+| **Stage 03** | **The Need: 5 Non-Negotiable Criteria of the Plug** | `final_slides/slide_03_the_need_criteria.LOCKED.html` | 2026-09-08 06:40 UTC | **LOCKED & FROZEN** |
 
 ---
 
