@@ -1,0 +1,246 @@
+    <!-- SECTION 09: THE PROOF OF CAPABILITY — PETROPHYSICAL MISSION BRIEFING -->
+    <section class="slide" id="slide-09"
+      data-notes="Transition to the Demo: We just looked at the entire Jenga tower across your company. Now, let me show you one single block being plugged in real time: the Petrophysical Splicing Agent. Problem: 90 minutes of subjective curve nudging. Solution: Google ADK + Cloud Run deterministic signal processing. Value: 3 seconds to continuous composite, 2.9 cm accuracy, zero rig standby.">
+      <div class="slide-header">
+        <div class="header-left">
+          <div class="act-kicker">09 · GROUNDING PROOF // UPSTREAM SUB-SURFACE PILOT</div>
+          <h1 class="slide-title">From 90 Minutes of Fatigue to 3 Seconds of Mathematical Certainty</h1>
+          <p class="slide-subtitle">Demonstrating one surgical block plugged in real time: Kansas Well A-12 multi-run
+            wireline log splicing and recalibration</p>
+        </div>
+        <div class="header-right">
+          <div class="slide-num"><span>09</span> / 15</div>
+        </div>
+      </div>
+
+      <div class="slide-body" style="display: flex; flex-direction: column; gap: 12px; height: calc(100% - 130px);">
+
+        <!-- Top Live Well Telemetry Ribbon -->
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; background: rgba(18, 23, 28, 0.85); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 6px 14px;">
+          <div style="display: flex; align-items: center; gap: 16px; font-size: 11px; font-family: var(--font-mono);">
+            <span><strong style="color: var(--accent-cyan);">TARGET WELL:</strong> Kansas Well A-12</span>
+            <span><strong style="color: var(--text-dim);">INTERVAL:</strong> 1,066.2 m – 1,865.9 m MD</span>
+            <span><strong style="color: var(--accent-amber);">OVERLAPS:</strong> 38.1 m (Join 1) & 42.9 m (Join
+              2)</span>
+            <span><strong style="color: #F87171;">ANOMALY:</strong> Run 3 GR +9% Tool Calibration Drift</span>
+          </div>
+          <div
+            style="color: var(--accent-emerald); font-size: 11px; font-family: var(--font-mono); font-weight: 700; display: flex; align-items: center; gap: 6px;">
+            <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-emerald);"></span>
+            <span>CLOUD RUN MICROSERVICE ACTIVE</span>
+          </div>
+        </div>
+
+        <!-- Main Stage: Wellbore Telemetry Column (Left) + Interactive Transformation Comparator (Right) -->
+        <div style="display: grid; grid-template-columns: 1.15fr 1.35fr; gap: 16px; flex: 1; min-height: 0;">
+
+          <!-- Left: Interactive Wellbore Telemetry & Overlap Schematic -->
+          <div
+            style="background: rgba(18, 23, 28, 0.9); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span
+                  style="font-family: var(--font-display); font-size: 13px; font-weight: 700; color: #FFF; text-transform: uppercase;">
+                  Well A-12 Logging Architecture
+                </span>
+                <span
+                  style="font-size: 10px; font-weight: 800; color: var(--accent-cyan); font-family: var(--font-mono); background: rgba(56, 189, 248, 0.15); padding: 2px 8px; border-radius: 4px;">
+                  3 RUN PASSES
+                </span>
+              </div>
+
+              <!-- Wellbore Stratigraphic Schematic SVG -->
+              <div
+                style="background: #060910; border: 1px solid var(--border-subtle); border-radius: 8px; padding: 8px; height: 230px; position: relative;">
+                <svg viewBox="0 0 450 215" width="100%" height="100%">
+                  <!-- Wellbore Casing Outer -->
+                  <rect x="50" y="10" width="350" height="195" rx="4" fill="#0A0F1D" stroke="#1E293B" />
+
+                  <!-- Run 1 Pass (Upper Interval) -->
+                  <rect x="70" y="25" width="310" height="50" rx="3" fill="rgba(56, 189, 248, 0.12)"
+                    stroke="var(--accent-cyan)" />
+                  <text x="80" y="45" fill="#FFF" font-size="11" font-weight="700" font-family="monospace">RUN 1:
+                    1,066.2 m – 1,379.2 m MD</text>
+                  <text x="80" y="62" fill="var(--text-muted)" font-size="9" font-family="monospace">Base Wireline Pass
+                    · 0.1524m step · Standard Calibration</text>
+
+                  <!-- Overlap 1 (Join 1) -->
+                  <rect x="70" y="65" width="310" height="20" fill="rgba(245, 158, 11, 0.25)" stroke="#F59E0B"
+                    stroke-dasharray="3,3" />
+                  <text x="225" y="79" fill="#F59E0B" font-size="9" font-weight="800" font-family="monospace"
+                    text-anchor="middle">OVERLAP 1: 38.1 m (Join 1 at 1,341 m)</text>
+
+                  <!-- Run 2 Pass (Middle Interval) -->
+                  <rect x="70" y="80" width="310" height="55" rx="3" fill="rgba(16, 185, 129, 0.12)"
+                    stroke="var(--accent-emerald)" />
+                  <text x="80" y="102" fill="#FFF" font-size="11" font-weight="700" font-family="monospace">RUN 2:
+                    1,341.1 m – 1,658.1 m MD</text>
+                  <text x="80" y="120" fill="var(--text-muted)" font-size="9" font-family="monospace">Intermediate Pass
+                    · Cable Stretch: -1.829 m shift needed</text>
+
+                  <!-- Overlap 2 (Join 2) -->
+                  <rect x="70" y="125" width="310" height="20" fill="rgba(245, 158, 11, 0.25)" stroke="#F59E0B"
+                    stroke-dasharray="3,3" />
+                  <text x="225" y="139" fill="#F59E0B" font-size="9" font-weight="800" font-family="monospace"
+                    text-anchor="middle">OVERLAP 2: 42.9 m (Join 2 at 1,615 m)</text>
+
+                  <!-- Run 3 Pass (Target Reservoir Deep Section) -->
+                  <rect x="70" y="140" width="310" height="55" rx="3" fill="rgba(239, 68, 68, 0.12)"
+                    stroke="var(--accent-crimson)" />
+                  <text x="80" y="162" fill="#FFF" font-size="11" font-weight="700" font-family="monospace">RUN 3:
+                    1,615.2 m – 1,865.9 m MD</text>
+                  <text x="80" y="180" fill="#FCA5A5" font-size="9" font-family="monospace">Deep Section · +9% Hot Tool
+                    Drift · Recalibration Factor: 0.9167x</text>
+                </svg>
+              </div>
+            </div>
+
+            <div
+              style="background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); padding: 8px 12px; border-radius: 6px; font-size: 11px; display: flex; justify-content: space-between;">
+              <span style="color: var(--text-dim);">Standard Operating Procedure:</span>
+              <span style="color: var(--accent-cyan); font-weight: 600;">SPWLA Composite Log Standards</span>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Impact Comparator Console -->
+          <div
+            style="background: rgba(18, 23, 28, 0.95); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <!-- Tab Bar for Mode Selection -->
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <span
+                  style="font-family: var(--font-display); font-size: 13px; font-weight: 700; color: #FFF; text-transform: uppercase;">
+                  Execution Model Comparison
+                </span>
+                <div style="display: flex; gap: 6px;">
+                  <button id="btn-mode-legacy" onclick="switchSplicingMode('legacy')"
+                    style="background: rgba(239, 68, 68, 0.15); border: 1px solid var(--accent-crimson); color: #FFF; padding: 4px 10px; border-radius: 4px; font-size: 10px; font-weight: 700; cursor: pointer;">
+                    Legacy Manual Trap
+                  </button>
+                  <button id="btn-mode-agent" onclick="switchSplicingMode('agent')"
+                    style="background: transparent; border: 1px solid var(--border-subtle); color: var(--text-muted); padding: 4px 10px; border-radius: 4px; font-size: 10px; font-weight: 600; cursor: pointer;">
+                    Governed Agent
+                  </button>
+                </div>
+              </div>
+
+              <!-- Dynamic Panel Content -->
+              <div id="mode-detail-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                  <span id="mode-badge"
+                    style="font-size: 10px; font-weight: 800; color: var(--accent-crimson); background: rgba(239, 68, 68, 0.15); padding: 3px 8px; border-radius: 4px; font-family: var(--font-mono);">
+                    CURRENT BOTTLENECK: MANUAL DESKTOP SPLICING
+                  </span>
+                  <span id="mode-cost"
+                    style="font-size: 12px; font-weight: 800; color: var(--accent-crimson); font-family: var(--font-mono);">
+                    ₹25–50 LAKHS RIG NPT
+                  </span>
+                </div>
+
+                <h3 id="mode-title" style="color: #FFF; font-size: 16px; font-weight: 700; margin-bottom: 6px;">
+                  Subjective Screen-Nudging & Night-Shift Latency
+                </h3>
+                <p id="mode-desc"
+                  style="font-size: 11px; color: var(--text-muted); line-height: 1.45; margin-bottom: 12px;">
+                  Specialists spend 90 to 120 minutes per well manually dragging curves in desktop software. Due to
+                  cable stretch under high downhole tension, depth shifts are visually guessed. Drilling rigs wait on
+                  standby for composite approval before casing shoe decisions.
+                </p>
+
+                <div id="mode-metrics"
+                  style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px;">
+                  <div
+                    style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.25); padding: 10px; border-radius: 6px;">
+                    <div style="font-size: 9px; color: var(--text-dim); font-family: var(--font-mono);">CYCLE TIME</div>
+                    <div id="mode-kpi-1" style="font-size: 20px; font-weight: 800; color: var(--accent-crimson);">90–120
+                      Mins</div>
+                    <div style="font-size: 10px; color: var(--text-muted);">Fatigued human specialist</div>
+                  </div>
+                  <div
+                    style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.25); padding: 10px; border-radius: 6px;">
+                    <div style="font-size: 9px; color: var(--text-dim); font-family: var(--font-mono);">NUMERICAL
+                      ACCURACY</div>
+                    <div id="mode-kpi-2" style="font-size: 20px; font-weight: 800; color: #FBBF24;">±1.2 Meters</div>
+                    <div style="font-size: 10px; color: var(--text-muted);">Subjective eye-balling</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid var(--border-subtle); font-size: 11px;">
+              <span style="color: var(--text-dim);">Live Multi-Step Demonstration:</span>
+              <span style="color: var(--accent-cyan); font-weight: 700;">Proceed to Steps 1 & 2 (Discovery) ➔</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="slide-footer">
+        <div class="footer-badge">Empirical Proof</div>
+        <div class="footer-text">
+          This is not theoretical slideware. <em>The mathematics, Cloud Run container, and BigQuery governance are
+            operational on live Kansas Well A-12 logs today.</em>
+        </div>
+      </div>
+
+      <script>
+        function switchSplicingMode(mode) {
+          const btnLegacy = document.getElementById('btn-mode-legacy');
+          const btnAgent = document.getElementById('btn-mode-agent');
+          const badge = document.getElementById('mode-badge');
+          const cost = document.getElementById('mode-cost');
+          const title = document.getElementById('mode-title');
+          const desc = document.getElementById('mode-desc');
+          const kpi1 = document.getElementById('mode-kpi-1');
+          const kpi2 = document.getElementById('mode-kpi-2');
+
+          if (mode === 'legacy') {
+            btnLegacy.style.background = 'rgba(239, 68, 68, 0.15)';
+            btnLegacy.style.borderColor = 'var(--accent-crimson)';
+            btnLegacy.style.color = '#FFF';
+            btnAgent.style.background = 'transparent';
+            btnAgent.style.borderColor = 'var(--border-subtle)';
+            btnAgent.style.color = 'var(--text-muted)';
+
+            badge.innerText = 'CURRENT BOTTLENECK: MANUAL DESKTOP SPLICING';
+            badge.style.color = 'var(--accent-crimson)';
+            badge.style.background = 'rgba(239, 68, 68, 0.15)';
+            cost.innerText = '₹25–50 LAKHS RIG NPT';
+            cost.style.color = 'var(--accent-crimson)';
+
+            title.innerText = 'Subjective Screen-Nudging & Night-Shift Latency';
+            desc.innerText = 'Specialists spend 90 to 120 minutes per well manually dragging curves in desktop software. Due to cable stretch under high downhole tension, depth shifts are visually guessed. Drilling rigs wait on standby for composite approval before casing shoe decisions.';
+
+            kpi1.innerText = '90–120 Mins';
+            kpi1.style.color = 'var(--accent-crimson)';
+            kpi2.innerText = '±1.2 Meters';
+            kpi2.style.color = '#FBBF24';
+          } else {
+            btnAgent.style.background = 'rgba(16, 185, 129, 0.15)';
+            btnAgent.style.borderColor = 'var(--accent-emerald)';
+            btnAgent.style.color = '#FFF';
+            btnLegacy.style.background = 'transparent';
+            btnLegacy.style.borderColor = 'var(--border-subtle)';
+            btnLegacy.style.color = 'var(--text-muted)';
+
+            badge.innerText = 'AGENTIC REVOLUTION: CLOUD RUN + SCIPY';
+            badge.style.color = 'var(--accent-emerald)';
+            badge.style.background = 'rgba(16, 185, 129, 0.15)';
+            cost.innerText = 'ZERO RIG STANDBY';
+            cost.style.color = 'var(--accent-emerald)';
+
+            title.innerText = 'Deterministic Cross-Correlation in 3 Seconds';
+            desc.innerText = 'Google Cloud Run executes containerized SciPy normalized cross-correlation across overlap windows. It computes the mathematical global peak, applies depth shift vectors down to 2.9 cm accuracy, auto-normalizes hot tools (0.9167x), and signs off in BigQuery.';
+
+            kpi1.innerText = '< 3 Seconds';
+            kpi1.style.color = 'var(--accent-emerald)';
+            kpi2.innerText = '2.9 cm (r=0.9899)';
+            kpi2.style.color = 'var(--accent-emerald)';
+          }
+        }
+      </script>
+    </section>

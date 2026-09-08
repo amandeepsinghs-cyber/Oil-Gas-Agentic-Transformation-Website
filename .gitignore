@@ -1,0 +1,53 @@
+# =============================================================================
+# Git Ignore: Sovereign Oil & Gas Agentic Transformation Platform
+# =============================================================================
+
+# 1. Large PowerPoint Decks (GitHub 100MB limit; these range from 68MB to 115MB)
+*.pptx
+Agentic Decks for Templates/
+baseline_deck/
+
+# 2. Media: Ignore all uncurated image/GIF dumps, keep ONLY website images
+assets/media/*
+
+# Whitelist ONLY the exact images actively used in the website/slides:
+!assets/media/gemini_enterprise_logo.svg
+!assets/media/photos/
+!assets/media/photos/swiss_cheese_nebula.jpg
+!assets/media/photos/swiss_cheese_fortified.jpg
+
+!assets/media/retail_agentic/
+assets/media/retail_agentic/*
+!assets/media/retail_agentic/image4.png
+!assets/media/retail_agentic/image7.png
+!assets/media/retail_agentic/image8.png
+!assets/media/retail_agentic/image10.png
+!assets/media/retail_agentic/image11.png
+!assets/media/retail_agentic/image23.png
+!assets/media/retail_agentic/image36.png
+!assets/media/retail_agentic/image39.png
+!assets/media/retail_agentic/image42.png
+!assets/media/retail_agentic/image44.png
+!assets/media/retail_agentic/image45.png
+
+!assets/media/wip/
+assets/media/wip/*
+!assets/media/wip/image25.png
+!assets/media/wip/image74.jpg
+!assets/media/wip/image77.jpg
+!assets/media/wip/image78.png
+
+# 3. Python, Virtual Environments & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+
+# 4. OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini

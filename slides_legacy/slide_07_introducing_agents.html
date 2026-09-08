@@ -1,0 +1,237 @@
+    <!-- SECTION 07: THE AGENTIC PARADIGM & DUAL-ENGINE TOPOLOGY -->
+    <section class="slide" id="slide-07"
+      data-notes="Defuse the CTO and Asset VP's fear of AI hallucinations. Clearly articulate the dual-engine architecture: Gemini Enterprise is the cognitive reasoning and tool orchestrator; deterministic Python/SciPy is the numerical physics engine. The LLM never touches or guesses curve numbers. Click 'Simulate Pipeline' to demonstrate the live execution flow from natural intent to BigQuery audit commit.">
+      <div class="slide-header">
+        <div class="header-left">
+          <div class="act-kicker">07 · SYSTEM TOPOLOGY // DUAL-ENGINE AGENTIC ARCHITECTURE</div>
+          <h1 class="slide-title">Introducing the Agent: Physics-Backed, Governed Microservices</h1>
+          <p class="slide-subtitle">A dual-engine system separating cognitive orchestration from compiled, deterministic
+            numerical mathematics</p>
+        </div>
+        <div class="header-right">
+          <div class="slide-num"><span>07</span> / 15</div>
+        </div>
+      </div>
+
+      <div class="slide-body" style="display: flex; flex-direction: column; gap: 12px; height: calc(100% - 130px);">
+
+        <!-- Top Interactive Pipeline Simulation Trigger Bar -->
+        <div
+          style="display: flex; justify-content: space-between; align-items: center; background: rgba(18, 23, 28, 0.85); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 6px 14px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <span
+              style="font-size: 11px; font-weight: 800; color: var(--text-dim); text-transform: uppercase; font-family: var(--font-mono); letter-spacing: 0.5px;">LIVE
+              SYSTEM TOPOLOGY:</span>
+            <button id="btn-run-sim" onclick="runSimulatedPipeline()"
+              style="background: linear-gradient(90deg, #32BBED 0%, #4285F4 100%); border: none; color: #FFF; padding: 6px 14px; border-radius: 4px; font-size: 11px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; box-shadow: 0 0 12px rgba(66, 133, 244, 0.3);">
+              <span>▶</span> Simulate Live Pipeline Execution (Kansas A-12)
+            </button>
+          </div>
+          <div id="sim-status-chip"
+            style="font-size: 11px; font-family: var(--font-mono); color: var(--accent-cyan); display: flex; align-items: center; gap: 6px;">
+            <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-cyan);"></span>
+            <span>STATUS: READY FOR TELEMETRY INGESTION</span>
+          </div>
+        </div>
+
+        <!-- Main System Topology Grid -->
+        <div style="display: grid; grid-template-columns: 1.6fr 0.9fr; gap: 16px; flex: 1; min-height: 0;">
+
+          <!-- Left: Interactive 3-Tier Dual Engine Architecture Flow -->
+          <div
+            style="background: rgba(18, 23, 28, 0.9); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between;">
+
+            <!-- Layer 1: Cognitive Reasoning Engine -->
+            <div id="node-engine-1"
+              style="background: rgba(139, 92, 246, 0.08); border: 1px solid rgba(139, 92, 246, 0.4); border-radius: 8px; padding: 12px 16px; transition: all 0.3s;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span
+                    style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-purple); box-shadow: 0 0 8px var(--accent-purple);"></span>
+                  <span style="font-family: var(--font-display); font-weight: 700; color: #FFF; font-size: 13px;">TIER 1
+                    · COGNITIVE REASONING & ORCHESTRATION</span>
+                </div>
+                <span
+                  style="font-size: 10px; font-weight: 800; color: var(--accent-purple); font-family: var(--font-mono); background: rgba(139, 92, 246, 0.2); padding: 2px 6px; border-radius: 3px;">
+                  GEMINI ENTERPRISE (VERTEX AI)
+                </span>
+              </div>
+              <div style="font-size: 11px; color: var(--text-muted); line-height: 1.4;">
+                Understands domain intent, inspects wireline header metadata, evaluates borehole caliper washout flags,
+                and plans deterministic tool calls. Never calculates or invents physical numbers.
+              </div>
+              <div id="sim-log-1"
+                style="margin-top: 6px; font-size: 10px; font-family: var(--font-mono); color: var(--accent-purple); display: none;">
+                ➜ [Gemini AP] Parsed prompt: "Splice Run 1 & 2 GR curves across Kansas A-12 overlap interval 2450–2550m"
+              </div>
+            </div>
+
+            <!-- High-Speed Tool Bus (A2A Protocol) -->
+            <div id="node-bus" style="display: flex; align-items: center; justify-content: center; padding: 2px 0;">
+              <div
+                style="display: flex; align-items: center; gap: 10px; background: #0A0F1D; border: 1px solid var(--border-subtle); padding: 5px 16px; border-radius: 20px; font-size: 10px; font-family: var(--font-mono); color: var(--text-muted); transition: all 0.3s;">
+                <span id="bus-arrow">⬇</span> SECURE A2A PROTOCOL · STRICT JSON SCHEMAS · LEAST-PRIVILEGE IAM <span
+                  id="bus-arrow-2">⬇</span>
+              </div>
+            </div>
+
+            <!-- Layer 2: Deterministic Numerical Engine -->
+            <div id="node-engine-2"
+              style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 8px; padding: 12px 16px; transition: all 0.3s;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span
+                    style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-emerald); box-shadow: 0 0 8px var(--accent-emerald);"></span>
+                  <span style="font-family: var(--font-display); font-weight: 700; color: #FFF; font-size: 13px;">TIER 2
+                    · DETERMINISTIC NUMERICAL PHYSICS ENGINE</span>
+                </div>
+                <span
+                  style="font-size: 10px; font-weight: 800; color: var(--accent-emerald); font-family: var(--font-mono); background: rgba(16, 185, 129, 0.2); padding: 2px 6px; border-radius: 3px;">
+                  COMPILED SCIPY / NUMPY ON CLOUD RUN
+                </span>
+              </div>
+              <div style="font-size: 11px; color: var(--text-muted); line-height: 1.4;">
+                Executes normalized cross-correlation (<span
+                  style="font-family: var(--font-mono); color: var(--accent-emerald);">signal.correlate</span>),
+                calculates depth shift vector, and applies 0.9167x tool gain correction. 100% deterministic signal math.
+              </div>
+              <div id="sim-log-2"
+                style="margin-top: 6px; font-size: 10px; font-family: var(--font-mono); color: var(--accent-emerald); display: none;">
+                ➜ [SciPy Solver] Peak correlation r = 0.963 at shift = +1.067 m | Gain factor = 0.9167x | Completed in
+                184ms
+              </div>
+            </div>
+
+            <!-- Layer 3: Immutable Governance & Storage -->
+            <div id="node-engine-3"
+              style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 8px; padding: 12px 16px; transition: all 0.3s;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span
+                    style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-cyan); box-shadow: 0 0 8px var(--accent-cyan);"></span>
+                  <span style="font-family: var(--font-display); font-weight: 700; color: #FFF; font-size: 13px;">TIER 3
+                    · SOVEREIGN GOVERNANCE & PROVENANCE LEDGER</span>
+                </div>
+                <span
+                  style="font-size: 10px; font-weight: 800; color: var(--accent-cyan); font-family: var(--font-mono); background: rgba(56, 189, 248, 0.2); padding: 2px 6px; border-radius: 3px;">
+                  BIGQUERY `petro.splice_audit`
+                </span>
+              </div>
+              <div style="font-size: 11px; color: var(--text-muted); line-height: 1.4;">
+                Captures cryptographic SHA-256 transformation hash, engineer sign-off certificate, and stores spliced
+                composite curve into Google Cloud Storage with 30-year regulatory DGH audit compliance.
+              </div>
+              <div id="sim-log-3"
+                style="margin-top: 6px; font-size: 10px; font-family: var(--font-mono); color: var(--accent-cyan); display: none;">
+                ➜ [BigQuery Ledger] Committed row: well_id='Kansas-A-12', sha256='e3b0c44298fc...',
+                status='VERIFIED_HUMAN_APPROVED'
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Three Non-Negotiable Enterprise Guarantees -->
+          <div style="display: flex; flex-direction: column; gap: 10px; justify-content: space-between;">
+
+            <div
+              style="background: rgba(18, 23, 28, 0.9); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 8px; padding: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <span
+                  style="font-size: 10px; font-weight: 800; color: var(--accent-emerald); font-family: var(--font-mono);">CORE
+                  GUARANTEE 01</span>
+                <span style="font-size: 10px; color: var(--accent-emerald); font-weight: 700;">MATHEMATICALLY
+                  RIGOROUS</span>
+              </div>
+              <h4 style="font-size: 14px; color: #FFF; font-weight: 700; margin-bottom: 4px;">Zero Hallucination on
+                Curve Physics</h4>
+              <p style="font-size: 11px; color: var(--text-muted); line-height: 1.45;">
+                The LLM is strictly decoupled from numerical computation. All physical values, depth shifts, and
+                calibration adjustments are executed by compiled C-solvers running on Cloud Run.
+              </p>
+            </div>
+
+            <div
+              style="background: rgba(18, 23, 28, 0.9); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 8px; padding: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <span
+                  style="font-size: 10px; font-weight: 800; color: var(--accent-cyan); font-family: var(--font-mono);">CORE
+                  GUARANTEE 02</span>
+                <span style="font-size: 10px; color: var(--accent-cyan); font-weight: 700;">HUMAN-IN-THE-LOOP</span>
+              </div>
+              <h4 style="font-size: 14px; color: #FFF; font-weight: 700; margin-bottom: 4px;">Human Retains 100%
+                Sign-Off Authority</h4>
+              <p style="font-size: 11px; color: var(--text-muted); line-height: 1.45;">
+                The agent acts as an autonomous tire-less co-pilot. It prepares publication-grade SPWLA tracks and
+                presents confidence scores; the specialist retains final approval before committing to production.
+              </p>
+            </div>
+
+            <div
+              style="background: rgba(18, 23, 28, 0.9); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 8px; padding: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <span
+                  style="font-size: 10px; font-weight: 800; color: var(--accent-amber); font-family: var(--font-mono);">CORE
+                  GUARANTEE 03</span>
+                <span style="font-size: 10px; color: var(--accent-amber); font-weight: 700;">SURGICAL SEAM PLUG</span>
+              </div>
+              <h4 style="font-size: 14px; color: #FFF; font-weight: 700; margin-bottom: 4px;">Zero Platform Disruption
+              </h4>
+              <p style="font-size: 11px; color: var(--text-muted); line-height: 1.45;">
+                Plugs into the hollow gaps between existing software (Petrel, Techlog, SAP, Maximo). Zero
+                rip-and-replace of monolithic software suites; zero retraining of asset teams.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="slide-footer">
+        <div class="footer-badge">Technical Certainty</div>
+        <div class="footer-text">
+          The LLM plans and orchestrates; deterministic mathematics computes the physics. <em>Oil & Gas operations
+            achieve machine speed without sacrificing scientific rigor.</em>
+        </div>
+      </div>
+
+      <script>
+        function runSimulatedPipeline() {
+          const statusChip = document.getElementById('sim-status-chip');
+          const log1 = document.getElementById('sim-log-1');
+          const log2 = document.getElementById('sim-log-2');
+          const log3 = document.getElementById('sim-log-3');
+          const node1 = document.getElementById('node-engine-1');
+          const node2 = document.getElementById('node-engine-2');
+          const node3 = document.getElementById('node-engine-3');
+          const bus = document.getElementById('node-bus');
+
+          statusChip.innerHTML = `<span style="width: 6px; height: 6px; border-radius: 50%; background: #FBBF24;"></span><span style="color: #FBBF24;">STAGE 1: GEMINI REASONING & INTENT PARSING...</span>`;
+          node1.style.boxShadow = '0 0 20px rgba(139, 92, 246, 0.4)';
+          log1.style.display = 'block';
+
+          setTimeout(() => {
+            statusChip.innerHTML = `<span style="width: 6px; height: 6px; border-radius: 50%; background: #38BDF8;"></span><span style="color: #38BDF8;">STAGE 2: DISPATCHING VIA SECURE A2A BUS...</span>`;
+            bus.querySelector('div').style.borderColor = 'var(--accent-cyan)';
+            bus.querySelector('div').style.boxShadow = '0 0 16px rgba(56, 189, 248, 0.3)';
+          }, 700);
+
+          setTimeout(() => {
+            statusChip.innerHTML = `<span style="width: 6px; height: 6px; border-radius: 50%; background: #10B981;"></span><span style="color: #10B981;">STAGE 3: COMPILED SCIPY NUMERICAL SOLVER EXECUTING...</span>`;
+            node2.style.boxShadow = '0 0 20px rgba(16, 185, 129, 0.4)';
+            log2.style.display = 'block';
+          }, 1400);
+
+          setTimeout(() => {
+            statusChip.innerHTML = `<span style="width: 6px; height: 6px; border-radius: 50%; background: #38BDF8;"></span><span style="color: #38BDF8;">STAGE 4: COMMITTING TO BIGQUERY AUDIT LEDGER...</span>`;
+            node3.style.boxShadow = '0 0 20px rgba(56, 189, 248, 0.4)';
+            log3.style.display = 'block';
+          }, 2100);
+
+          setTimeout(() => {
+            statusChip.innerHTML = `<span style="width: 6px; height: 6px; border-radius: 50%; background: #10B981;"></span><span style="color: #10B981; font-weight: 700;">PIPELINE COMPLETE · ZERO HALLUCINATION VERIFIED (284ms)</span>`;
+          }, 2800);
+        }
+      </script>
+    </section>

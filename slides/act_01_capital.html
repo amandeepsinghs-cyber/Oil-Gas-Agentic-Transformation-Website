@@ -1,0 +1,506 @@
+<!-- PAGE 02: MACRO-CAPITAL STAKES & COMPOUNDING MICRO-FRICTION -->
+<section class="deck-page slide narrative-stage" id="page-02" data-notes="Opening executive hook: Anchor on enterprise capital gravity immediately. Do not pitch generic AI. Frame across Upstream, Midstream, and Downstream: ₹200-500 Cr per offshore well, $30k-$150k/day rig NPT, ₹25-100 Cr refinery turnaround day. The visual is an interactive web-native cascade simulator demonstrating how invisible micro-frictions in daily workflows compound into tens of crores of balance-sheet loss.">
+  
+  <!-- Act Header (Editorial Layout) -->
+  <div class="editorial-header" style="margin-bottom: 24px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+      <span class="ceo-badge" style="background: rgba(245, 158, 11, 0.15); border: 1px solid var(--nebula-amber); color: var(--nebula-amber);">
+        BOARDROOM DIRECTIVE // FOR CMD &amp; CEO REVIEW
+      </span>
+      <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--security-turquoise); letter-spacing: 1.5px;">
+        ACT 01 · STRATEGIC CONTEXT // ENTERPRISE CAPITAL GRAVITY
+      </span>
+    </div>
+    <h1 class="editorial-title" style="font-size: clamp(34px, 3.8vw, 54px); font-weight: 800; color: #FFF; line-height: 1.15; letter-spacing: -1.2px;">
+      Oil &amp; Gas is a High-Stakes Business Where Every Micro-Friction Compounds
+    </h1>
+    <p class="editorial-subtitle" style="font-size: 17px; color: #CBD5E1; line-height: 1.6; max-width: 1100px; margin-top: 8px;">
+      In an industry governed by massive capital commitments, billions leak not in catastrophic failures, but in the unseen fractures between siloed workflows.
+    </p>
+  </div>
+
+  <!-- Main Panoramic Canvas: 2-Column Responsive Layout -->
+  <div style="display: flex; flex-direction: column; gap: 16px; flex: 1;">
+    
+    <!-- Horizontal Cross-Domain Sector Switcher -->
+    <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(13, 17, 23, 0.7); border: 1px solid var(--border-hairline); border-radius: 8px; padding: 8px 16px; backdrop-filter: blur(12px);">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--security-azure); letter-spacing: 1.2px; text-transform: uppercase;">
+          CROSS-DOMAIN SECTOR CONSOLE:
+        </span>
+        <div style="display: flex; gap: 8px;" id="act1-domain-tabs">
+          <button type="button" class="tab-btn active" onclick="switchAct1Domain('upstream')" id="act1-btn-upstream" style="font-size: 12px; padding: 7px 16px; background: rgba(0,163,255,0.15); border: 1px solid var(--security-azure); color: #FFF; border-radius: 4px; cursor: pointer; font-weight: 600;">
+            Upstream E&amp;P (Flagship)
+          </button>
+          <button type="button" class="tab-btn" onclick="switchAct1Domain('midstream')" id="act1-btn-midstream" style="font-size: 12px; padding: 7px 16px; background: transparent; border: 1px solid var(--border-hairline); color: var(--text-muted); border-radius: 4px; cursor: pointer; font-weight: 600;">
+            Midstream Pipelines &amp; LNG
+          </button>
+          <button type="button" class="tab-btn" onclick="switchAct1Domain('downstream')" id="act1-btn-downstream" style="font-size: 12px; padding: 7px 16px; background: transparent; border: 1px solid var(--border-hairline); color: var(--text-muted); border-radius: 4px; cursor: pointer; font-weight: 600;">
+            Downstream Refining &amp; Petrochemicals
+          </button>
+          <button type="button" class="tab-btn" onclick="switchAct1Domain('commercial')" id="act1-btn-commercial" style="font-size: 12px; padding: 7px 16px; background: transparent; border: 1px solid var(--border-hairline); color: var(--text-muted); border-radius: 4px; cursor: pointer; font-weight: 600;">
+            Commercial Trading &amp; Cargo
+          </button>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 11px; color: var(--text-dim); font-family: var(--font-mono);">REAL-TIME CAPITAL LOSS MULTIPLIER</span>
+        <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--nebula-crimson); box-shadow: 0 0 10px var(--nebula-crimson);"></span>
+      </div>
+    </div>
+
+    <!-- Workspace: Asymmetric 2-Column Split -->
+    <div style="display: grid; grid-template-columns: 1.15fr 1fr; gap: 24px; flex: 1; min-height: 0;">
+      
+      <!-- Left Column: Ambient Visual & Sector Vitals -->
+      <div style="position: relative; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border-hairline);">
+        <!-- Full-bleed background with atmospheric solar core (image10.png) -->
+        <div style="position: absolute; inset: 0; z-index: 1;">
+          <img id="act1-bg-image" src="assets/media/retail_agentic/image10.png" alt="Capital Gravity Solar Nebula" style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.45) contrast(1.25); transition: all 0.4s ease;">
+          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6,9,14,0.3) 0%, rgba(6,9,14,0.85) 60%, rgba(6,9,14,0.98) 100%);"></div>
+        </div>
+
+        <!-- Upper Overlay: Domain Telemetry Header -->
+        <div style="position: relative; z-index: 2; padding: 28px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+            <span id="act1-badge-tag" style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--nebula-amber); letter-spacing: 1.5px; text-transform: uppercase;">
+              ACTIVE SPREAD TELEMETRY // OFFSHORE &amp; DEEPWATER
+            </span>
+            <span id="act1-risk-badge" style="font-size: 11px; font-weight: 700; color: var(--nebula-crimson); background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.4); padding: 4px 12px; border-radius: 4px;">
+              CAPITAL BURN: CONTINUOUS
+            </span>
+          </div>
+          <h2 id="act1-domain-title" style="font-size: 28px; font-weight: 800; color: #FFF; line-height: 1.25; margin-bottom: 10px;">
+            Deepwater Rig Spread &amp; Multi-Billion Well Commitments
+          </h2>
+          <p id="act1-domain-desc" style="font-size: 14.5px; color: #CBD5E1; line-height: 1.6; max-width: 95%;">
+            Once an exploratory rig mobilizes (₹25–100 Cr/well) or an offshore concession PSC is executed, capital burn is continuous. A 12-hour analytical wait or 1.5m wireline misalignment immediately triggers tens of crores in rig standby and remedial cementing.
+          </p>
+        </div>
+
+        <!-- Lower Overlay: Live Sector Benchmark Metrics -->
+        <div style="position: relative; z-index: 2; padding: 24px; background: rgba(13, 17, 23, 0.92); border-top: 1px solid var(--border-hairline); backdrop-filter: blur(14px);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 1px; color: var(--text-muted); text-transform: uppercase;">
+              ANNUALIZED INDUSTRY FRICTION BENCHMARKS
+            </div>
+            <div style="font-size: 11px; color: var(--nebula-amber); font-family: var(--font-mono);">
+              INTERACTIVE P&amp;L EXPOSURE ENGINE
+            </div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+            <div style="border-left: 2px solid var(--nebula-crimson); padding-left: 14px;">
+              <div style="font-size: 11px; color: var(--text-dim); text-transform: uppercase;">AVERAGE NPT PER WELL</div>
+              <div id="act1-m1-val" style="font-size: 28px; font-weight: 800; color: var(--nebula-crimson); font-family: var(--font-display);">14.2%</div>
+              <div id="act1-m1-sub" style="font-size: 11.5px; color: var(--text-muted);">Waiting on evaluations</div>
+            </div>
+            <div style="border-left: 2px solid var(--nebula-amber); padding-left: 14px;">
+              <div style="font-size: 11px; color: var(--text-dim); text-transform: uppercase;">TIE-IN REWORK LAG</div>
+              <div id="act1-m2-val" style="font-size: 28px; font-weight: 800; color: var(--nebula-amber); font-family: var(--font-display);">36–48 Hrs</div>
+              <div id="act1-m2-sub" style="font-size: 11.5px; color: var(--text-muted);">Per multi-run wireline log</div>
+            </div>
+            <div style="border-left: 2px solid var(--security-turquoise); padding-left: 14px;">
+              <div style="font-size: 11px; color: var(--text-dim); text-transform: uppercase;">DRY HOLE EXPOSURE</div>
+              <div id="act1-m3-val" style="font-size: 28px; font-weight: 800; color: var(--security-turquoise); font-family: var(--font-display);">₹500 Cr</div>
+              <div id="act1-m3-sub" style="font-size: 11.5px; color: var(--text-muted);">Per complex deepwater wildcat</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Micro-Friction Diagnostic Lab -->
+      <div style="background: rgba(13, 17, 23, 0.7); border: 1px solid var(--border-hairline); border-radius: 8px; padding: 22px; display: flex; flex-direction: column; justify-content: space-between; backdrop-filter: blur(12px);">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 1px solid var(--border-hairline);">
+            <div>
+              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--nebula-crimson); letter-spacing: 1.2px; text-transform: uppercase;">
+                INTERACTIVE SEAM DIAGNOSTIC
+              </span>
+              <h3 style="font-size: 18px; font-weight: 700; color: #FFF; margin-top: 2px;">
+                Select a Micro-Friction to Trace Balance Sheet Loss
+              </h3>
+            </div>
+            <span style="font-size: 11px; background: rgba(255,255,255,0.06); padding: 4px 10px; border-radius: 4px; color: var(--text-muted); font-family: var(--font-mono);">
+              4 LIVE SEAMS
+            </span>
+          </div>
+
+          <!-- Clickable Micro-Friction Selector Cards -->
+          <div style="display: flex; flex-direction: column; gap: 8px;" id="act1-seam-list">
+            <!-- Item 1 -->
+            <div class="s1-seam-card active" onclick="selectAct1Seam(0)" id="act1-seam-0" style="background: rgba(0, 163, 255, 0.08); border: 1px solid var(--security-azure); border-radius: 6px; padding: 12px 16px; cursor: pointer; transition: all 0.2s ease;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="font-weight: 700; font-size: 14px; color: #FFF;" id="act1-seam-0-title">
+                  1.5m Cable Stretch &amp; Log Depth Misalignment
+                </div>
+                <div style="font-family: var(--font-mono); font-weight: 800; font-size: 13.5px; color: var(--nebula-crimson);" id="act1-seam-0-cost">
+                  ₹85 Cr Impact
+                </div>
+              </div>
+              <div style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px;" id="act1-seam-0-desc">
+                Petrophysicist manually nudges tie-in curves under fatigue; casing seat selected 1.5m too shallow into permeable fracture.
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="s1-seam-card" onclick="selectAct1Seam(1)" id="act1-seam-1" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-hairline); border-radius: 6px; padding: 12px 16px; cursor: pointer; transition: all 0.2s ease;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="font-weight: 700; font-size: 14px; color: #E2E8F0;" id="act1-seam-1-title">
+                  4-Hour Shift Handover Email Waiting Queue
+                </div>
+                <div style="font-family: var(--font-mono); font-weight: 800; font-size: 13.5px; color: var(--nebula-amber);" id="act1-seam-1-cost">
+                  $25,000 NPT Burn
+                </div>
+              </div>
+              <div style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px;" id="act1-seam-1-desc">
+                Rig waiting on town office composite log confirmation; offshore spread sits in full idle standby during crew change.
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="s1-seam-card" onclick="selectAct1Seam(2)" id="act1-seam-2" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-hairline); border-radius: 6px; padding: 12px 16px; cursor: pointer; transition: all 0.2s ease;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="font-weight: 700; font-size: 14px; color: #E2E8F0;" id="act1-seam-2-title">
+                  Buried Mudlog Gas Ratio Anomalies in Scanned PDFs
+                </div>
+                <div style="font-family: var(--font-mono); font-weight: 800; font-size: 13.5px; color: var(--security-azure);" id="act1-seam-2-cost">
+                  ₹45 Cr Sidetrack
+                </div>
+              </div>
+              <div style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px;" id="act1-seam-2-desc">
+                Gas peak noted in 1994 well report missed during offset review; kick causes drillstring stuck in hole.
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="s1-seam-card" onclick="selectAct1Seam(3)" id="act1-seam-3" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-hairline); border-radius: 6px; padding: 12px 16px; cursor: pointer; transition: all 0.2s ease;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="font-weight: 700; font-size: 14px; color: #E2E8F0;" id="act1-seam-3-title">
+                  Unsynchronized Crude Assay vs Distillation Blend
+                </div>
+                <div style="font-family: var(--font-mono); font-weight: 800; font-size: 13.5px; color: var(--security-turquoise);" id="act1-seam-3-cost">
+                  ₹12 Cr/Mo Yield Loss
+                </div>
+              </div>
+              <div style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px;" id="act1-seam-3-desc">
+                Refinery lab assay delayed by 36 hours; CDU runs conservative cuts, downgrading high-value kerosene.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Cascade Step Breakdown Box -->
+        <div style="background: #06090E; border: 1px solid var(--border-hairline); border-radius: 6px; padding: 14px; margin-top: 12px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--nebula-amber); text-transform: uppercase;" id="act1-cascade-lbl">
+              CASCADE EVENT TRACE // SEAM 01
+            </span>
+            <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-dim);">
+              DETERMINISTIC COMPOUNDING
+            </span>
+          </div>
+          <!-- 3-Step Cascade Visual -->
+          <div style="display: grid; grid-template-columns: 1fr 20px 1fr 20px 1fr; align-items: center; gap: 6px; font-size: 11.5px;">
+            <div style="background: rgba(255,255,255,0.04); border: 1px solid var(--border-hairline); padding: 8px 10px; border-radius: 4px;">
+              <div style="font-weight: 700; color: var(--security-azure); font-size: 10px; text-transform: uppercase;">1. LATENT MICRO-GAP</div>
+              <div id="act1-step-1" style="color: #FFF; margin-top: 2px;">Centimeter curve offset in Run 2 tie-in</div>
+            </div>
+            <div style="color: var(--nebula-amber); font-weight: 800; text-align: center;">→</div>
+            <div style="background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.3); padding: 8px 10px; border-radius: 4px;">
+              <div style="font-weight: 700; color: var(--nebula-amber); font-size: 10px; text-transform: uppercase;">2. WORKFLOW MULTIPLIER</div>
+              <div id="act1-step-2" style="color: #FFF; margin-top: 2px;">Casing shoe set in permeable shale streak</div>
+            </div>
+            <div style="color: var(--nebula-crimson); font-weight: 800; text-align: center;">→</div>
+            <div style="background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.4); padding: 8px 10px; border-radius: 4px;">
+              <div style="font-weight: 700; color: var(--nebula-crimson); font-size: 10px; text-transform: uppercase;">3. CAPITAL IMPAIRMENT</div>
+              <div id="act1-step-3" style="color: #FFF; margin-top: 2px;">Pressure integrity test failure &amp; remedial cement</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live Interactive Exposure Dial Slider -->
+        <div style="margin-top: 12px; padding: 12px 16px; background: rgba(0, 163, 255, 0.05); border: 1px solid rgba(0, 163, 255, 0.2); border-radius: 6px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--security-turquoise); text-transform: uppercase;">
+              SIMULATE DECISION WAIT LATENCY:
+            </span>
+            <span id="act1-slider-val" style="font-family: var(--font-mono); font-size: 12px; font-weight: 800; color: #FFF;">
+              6 Hours Standby
+            </span>
+          </div>
+          <input type="range" id="act1-slider" min="1" max="24" value="6" oninput="updateAct1Slider(this.value)" style="width: 100%; accent-color: var(--security-azure); cursor: pointer;">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px; font-size: 11px; color: var(--text-dim); font-family: var(--font-mono);">
+            <span>1 Hr (₹12 Lakhs)</span>
+            <span id="act1-slider-loss" style="color: var(--nebula-crimson); font-weight: 800;">Estimated Spread Standby Burn: ₹72 Lakhs</span>
+            <span>24 Hrs (₹2.88 Cr)</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Editorial Bottom Note -->
+  <div style="margin-top: 16px; padding: 12px 20px; background: rgba(26, 115, 232, 0.08); border-left: 3px solid var(--security-blue); border-radius: 0 6px 6px 0; font-size: 13.5px; color: #E2E8F0;">
+    <strong>Executive Takeaway:</strong> In upstream operations, there are no small decisions. <em>A 12-hour analytical delay or misaligned wireline curve compounds directly into tens of crores in lost capital.</em>
+  </div>
+</section>
+
+<!-- Act 01 Interactive JavaScript -->
+<script>
+  const act1DomainData = {
+    upstream: {
+      tag: "ACTIVE SPREAD TELEMETRY // OFFSHORE & DEEPWATER",
+      risk: "CAPITAL BURN: CONTINUOUS",
+      title: "Deepwater Asset Spread & Concession Gravity",
+      desc: "Once an exploratory rig mobilizes (₹25–100 Cr/well) or an offshore concession PSC is executed, capital burn is continuous. A 12-hour analytical wait or 1.5m wireline misalignment immediately triggers tens of crores in rig standby and remedial cementing.",
+      bg: "assets/media/retail_agentic/image10.png",
+      m1Val: "14.2%", m1Sub: "Waiting on evaluations",
+      m2Val: "36–48 Hrs", m2Sub: "Per multi-run log",
+      m3Val: "₹500 Cr", m3Sub: "Per complex wildcat",
+      seams: [
+        {
+          title: "1.5m Cable Stretch & Log Depth Misalignment", cost: "₹85 Cr Impact",
+          desc: "Petrophysicist manually nudges tie-in curves under fatigue; casing seat selected 1.5m too shallow into permeable fracture.",
+          s1: "Centimeter curve offset in Run 2 tie-in",
+          s2: "Casing shoe set in permeable shale streak",
+          s3: "Pressure test failure & remedial cement squeeze"
+        },
+        {
+          title: "4-Hour Shift Handover Email Waiting Queue", cost: "$25,000 NPT Burn",
+          desc: "Rig waiting on town office composite log confirmation; offshore spread sits in full idle standby during crew change.",
+          s1: "Analyst exports DLIS to local drive at 18:00",
+          s2: "Night superintendent halts drilling without sign-off",
+          s3: "12 hours standby day-rate burned with zero footage"
+        },
+        {
+          title: "Buried Mudlog Gas Ratio Anomalies in Scanned PDFs", cost: "₹45 Cr Sidetrack",
+          desc: "Gas peak noted in 1994 well report missed during offset review; kick causes drillstring stuck in hole.",
+          s1: "Mudlog PDF buried in unstructured archive folder",
+          s2: "Underbalanced overpressure zone drilled unprepared",
+          s3: "Kick influx, pipe stuck, forced mechanical sidetrack"
+        },
+        {
+          title: "Uncalibrated Dual Induction Tool Gain Drift", cost: "₹120 Cr Hydrocarbon Bias",
+          desc: "Tool environmental drift uncorrected across run boundaries; false high water saturation calculated.",
+          s1: "0.91x tool gain drift ignored in legacy LAS file",
+          s2: "Water saturation ($S_w$) calculated at 48% vs 24%",
+          s3: "Commercial hydrocarbon pay zone bypassed and abandoned"
+        }
+      ]
+    },
+    midstream: {
+      tag: "PIPELINE & LNG NETWORK TELEMETRY",
+      risk: "THROUGHPUT DERATING RISK",
+      title: "Cross-Country Pipeline & LNG Liquefaction Gravity",
+      desc: "Gas transmission networks and cryogenic LNG trains run at razor-thin margins where compressor trip latencies or unpredicted hydrate plugs trigger massive downstream curtailments.",
+      bg: "assets/media/retail_agentic/image8.png",
+      m1Val: "4.8 hrs", m1Sub: "Hydrate detection lag",
+      m2Val: "$180k/hr", m2Sub: "LNG train trip burn",
+      m3Val: "₹45 Cr", m3Sub: "Pipeline curtailment fine",
+      seams: [
+        {
+          title: "Unsynchronized Compressor Station Telemetry", cost: "₹38 Cr Trip",
+          desc: "SCADA temperature spike at booster station 4 missed; vibration excursion trips main gas trunkline.",
+          s1: "Bearing thermal drift unflagged by batched SCADA",
+          s2: "Centrifugal compressor auto-trips on vibration high",
+          s3: "Trunkline pressure wave forces upstream field choke"
+        },
+        {
+          title: "LNG Boil-Off Gas (BOG) Optimization Lag", cost: "$65,000/Day",
+          desc: "Ambient marine temperature shift unmodeled in real-time; re-liquefaction plant vents excess gas.",
+          s1: "2°C diurnal ambient rise uncoupled from BOG model",
+          s2: "Subcooler capacity lags cryogenic tank pressure",
+          s3: "High-value methane flared to atmosphere"
+        },
+        {
+          title: "Pipeline Nominations vs Gas Quality Mismatch", cost: "₹18 Cr Penalty",
+          desc: "Off-spec CO2 slug enters distribution grid unnoticed due to 4-hour chromatograph lab latency.",
+          s1: "Upstream sweetening unit amine breakthrough",
+          s2: "City gate chromatograph flags out-of-spec delivery",
+          s3: "Offtake contracts penalized and shut down"
+        },
+        {
+          title: "Marine Vessel Loading Berth Deadweight Delay", cost: "$42,000 Demurrage",
+          desc: "Customs manifest and tank level reconciliation performed via manual spreadsheet copy-paste.",
+          s1: "Manual tank ullage calculation dispute",
+          s2: "Vessel turnaround window missed by 90 minutes",
+          s3: "Demurrage charges compound per charter party"
+        }
+      ]
+    },
+    downstream: {
+      tag: "REFINING & PETROCHEMICAL OPTIMIZATION",
+      risk: "MARGIN CRACK COMPRESSION",
+      title: "Refinery Complex Turnaround & Margin Volatility",
+      desc: "A 300,000 BPD refinery processes crude in continuous equilibrium. A 24-hour turnaround slippage burns ₹50-100 Cr, while uncoordinated crude assay shifts bleed millions in degraded yields.",
+      bg: "assets/media/retail_agentic/image7.png",
+      m1Val: "₹75 Cr/Day", m1Sub: "Turnaround slip burn",
+      m2Val: "36 Hrs", m2Sub: "Crude assay lab lag",
+      m3Val: "₹180 Cr", m3Sub: "Annual catalyst poisoning",
+      seams: [
+        {
+          title: "Crude Assay Delay vs Distillation Cut Points", cost: "₹14 Cr/Month",
+          desc: "Lab assay for incoming high-TAN crude delayed; CDU runs conservative cuts, shifting kerosene to gasoil.",
+          s1: "Lab assay reports TAN and sulfur 36 hours late",
+          s2: "Tower profile runs suboptimal tray temperatures",
+          s3: "High-value jet fuel cracked into low-margin fuel oil"
+        },
+        {
+          title: "FCCU Catalyst Poisoning from Heavy Metals", cost: "₹42 Cr Turnaround",
+          desc: "Nickel and Vanadium ppm spikes in feed undetected; fluid catalytic cracking catalyst deactivates.",
+          s1: "Transient vacuum gas oil slug contains 8 ppm Nickel",
+          s2: "Catalyst micro-activity drops 15% in regenerator",
+          s3: "Unplanned emergency shutdown for catalyst changeout"
+        },
+        {
+          title: "Steam & Power Co-Generation Imbalance", cost: "₹8.5 Cr/Quarter",
+          desc: "High-pressure steam header venting while auxiliary boilers fire natural gas under manual supervisory control.",
+          s1: "Hydrogen plant trip vents 40 bar steam to atmosphere",
+          s2: "Boiler dispatch logic not linked to real-time grid",
+          s3: "Severe thermal fuel waste and carbon tax exposure"
+        },
+        {
+          title: "Hydrotreater Bed Hotspot Hydrogen Quench Lag", cost: "₹28 Cr Excursion",
+          desc: "Exothermic temperature excursion detected only after bed delta-T exceeds operating limits.",
+          s1: "Coking precursor initiates local thermal runaway",
+          s2: "Quench hydrogen valve modulation delayed by 4 minutes",
+          s3: "Reactor emergency trip and coked catalyst bed"
+        }
+      ]
+    },
+    commercial: {
+      tag: "GLOBAL COMMODITY & RISK ARBITRAGE",
+      risk: "BALANCE SHEET PRICE EXPOSURE",
+      title: "Crude Procurement & Cargo Arbitrage Gravity",
+      desc: "Global energy trading desks commit hundreds of millions of dollars on single VLCC fixtures. Analytical latency in crack-spread visibility or freight demurrage erodes entire operating margins.",
+      bg: "assets/media/wip/image78.png",
+      m1Val: "$450k", m1Sub: "Per VLCC demurrage slip",
+      m2Val: "1.8%", m2Sub: "Arbitrage margin decay",
+      m3Val: "₹95 Cr", m3Sub: "FX & basis mismatch",
+      seams: [
+        {
+          title: "Freight Optimization & Demurrage Exposure", cost: "$520,000/Cargo",
+          desc: "Port congestion and terminal pumping rates unsynchronized with charter party laytime agreements.",
+          s1: "Discharge berth queue extends past allowable laytime",
+          s2: "Charter party dispute on weather delay clauses",
+          s3: "Massive liquidated damages paid to shipowners"
+        },
+        {
+          title: "Crack Spread Hedging Execution Lag", cost: "₹32 Cr Basis Loss",
+          desc: "Refinery product slate adjustments not mirrored in paper derivative hedges due to batch ETRM sync.",
+          s1: "Physical CDU yields adjusted for winter diesel demand",
+          s2: "Risk management system updates ledger at end-of-day",
+          s3: "Intraday crude price swing erodes crack margin"
+        },
+        {
+          title: "Contractual Force Majeure & Deviation Claims", cost: "₹65 Cr Exposure",
+          desc: "Geopolitical shipping lane rerouting costs calculated via manual legal review across 400-page contracts.",
+          s1: "Red Sea freight diversion adds 14 sailing days",
+          s2: "Contract clauses across multiple buyers conflict",
+          s3: "Unrecovered bunker fuel surcharges and arbitration"
+        },
+        {
+          title: "Carbon Offset & Tax Reconciliation Seams", cost: "₹15 Cr/Year",
+          desc: "Scope 1 and Scope 2 emissions data reconciled in disparate spreadsheets, missing trading arbitrage.",
+          s1: "Monthly flaring and venting logs batched late",
+          s2: "Compliance carbon credits purchased at spot premium",
+          s3: "Penalties for non-compliance with domestic mandates"
+        }
+      ]
+    }
+  };
+
+  let act1CurrentDomain = 'upstream';
+
+  function switchAct1Domain(domain) {
+    act1CurrentDomain = domain;
+    const data = act1DomainData[domain];
+    if (!data) return;
+
+    // Update buttons
+    const btnIds = ['upstream', 'midstream', 'downstream', 'commercial'];
+    btnIds.forEach(id => {
+      const btn = document.getElementById(`act1-btn-${id}`);
+      if (btn) {
+        if (id === domain) {
+          btn.classList.add('active');
+          btn.style.background = 'rgba(0,163,255,0.15)';
+          btn.style.borderColor = 'var(--security-azure)';
+          btn.style.color = '#FFF';
+        } else {
+          btn.classList.remove('active');
+          btn.style.background = 'transparent';
+          btn.style.borderColor = 'var(--border-hairline)';
+          btn.style.color = 'var(--text-muted)';
+        }
+      }
+    });
+
+    // Update content
+    document.getElementById('act1-badge-tag').innerText = data.tag;
+    document.getElementById('act1-risk-badge').innerText = data.risk;
+    document.getElementById('act1-domain-title').innerText = data.title;
+    document.getElementById('act1-domain-desc').innerText = data.desc;
+    document.getElementById('act1-bg-image').src = data.bg;
+
+    // Update metrics
+    document.getElementById('act1-m1-val').innerText = data.m1Val;
+    document.getElementById('act1-m1-sub').innerText = data.m1Sub;
+    document.getElementById('act1-m2-val').innerText = data.m2Val;
+    document.getElementById('act1-m2-sub').innerText = data.m2Sub;
+    document.getElementById('act1-m3-val').innerText = data.m3Val;
+    document.getElementById('act1-m3-sub').innerText = data.m3Sub;
+
+    // Render seams
+    data.seams.forEach((seam, idx) => {
+      const titleEl = document.getElementById(`act1-seam-${idx}-title`);
+      const costEl = document.getElementById(`act1-seam-${idx}-cost`);
+      const descEl = document.getElementById(`act1-seam-${idx}-desc`);
+      if (titleEl) titleEl.innerText = seam.title;
+      if (costEl) costEl.innerText = seam.cost;
+      if (descEl) descEl.innerText = seam.desc;
+    });
+
+    selectAct1Seam(0);
+  }
+
+  function selectAct1Seam(index) {
+    const data = act1DomainData[act1CurrentDomain];
+    if (!data || !data.seams[index]) return;
+
+    for (let i = 0; i < 4; i++) {
+      const card = document.getElementById(`act1-seam-${i}`);
+      if (card) {
+        if (i === index) {
+          card.classList.add('active');
+          card.style.background = 'rgba(0,163,255,0.08)';
+          card.style.borderColor = 'var(--security-azure)';
+        } else {
+          card.classList.remove('active');
+          card.style.background = 'rgba(255,255,255,0.02)';
+          card.style.borderColor = 'var(--border-hairline)';
+        }
+      }
+    }
+
+    const seam = data.seams[index];
+    document.getElementById('act1-cascade-lbl').innerText = `CASCADE EVENT TRACE // SEAM 0${index + 1}`;
+    document.getElementById('act1-step-1').innerText = seam.s1;
+    document.getElementById('act1-step-2').innerText = seam.s2;
+    document.getElementById('act1-step-3').innerText = seam.s3;
+  }
+
+  function updateAct1Slider(val) {
+    const hours = parseInt(val, 10);
+    const hourlyRateLakhs = 12; // ₹12 Lakhs/hr avg deepwater spread rate
+    const totalBurnLakhs = hours * hourlyRateLakhs;
+    document.getElementById('act1-slider-val').innerText = `${hours} Hours Standby`;
+    if (totalBurnLakhs >= 100) {
+      const cr = (totalBurnLakhs / 100).toFixed(2);
+      document.getElementById('act1-slider-loss').innerText = `Estimated Spread Standby Burn: ₹${cr} Crores`;
+    } else {
+      document.getElementById('act1-slider-loss').innerText = `Estimated Spread Standby Burn: ₹${totalBurnLakhs} Lakhs`;
+    }
+  }
+</script>
