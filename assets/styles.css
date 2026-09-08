@@ -1259,6 +1259,58 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
+/* Slide 05: The Jenga Organization (Structural Resilience Metaphor) */
+.jenga-card {
+  background: rgba(13, 17, 23, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+.jenga-card-fragile {
+  border-top: 3px solid var(--nebula-amber);
+}
+.jenga-card-fragile:hover {
+  border-color: rgba(245, 158, 11, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(245, 158, 11, 0.18);
+}
+.jenga-card-fortified {
+  border-top: 3px solid var(--nebula-cyan-bright);
+  background: rgba(0, 229, 255, 0.03);
+}
+.jenga-card-fortified:hover {
+  border-color: var(--nebula-cyan-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 229, 255, 0.22);
+}
+.jenga-img-box {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #06090E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.jenga-img-box img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.jenga-card:hover .jenga-img-box img {
+  transform: scale(1.02);
+}
+
 /* ==========================================================================
    1-Click Print / PDF Stylesheet (16:9 Landscape Perfection)
    ========================================================================== */

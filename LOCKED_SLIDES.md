@@ -15,6 +15,7 @@
 | **Stage 02** | **Prof. James Reason's Swiss Cheese Model** | `final_slides/slide_02_swiss_cheese.LOCKED.html` | 2026-09-08 05:45 UTC | **LOCKED & FROZEN** |
 | **Stage 03** | **The Need: 5 Non-Negotiable Criteria of the Plug** | `final_slides/slide_03_the_need_criteria.LOCKED.html` | 2026-09-08 06:40 UTC | **LOCKED & FROZEN** |
 | **Stage 04** | **AI Agent: The Intelligent Microservice** | `final_slides/slide_04_the_intelligent_microservice.LOCKED.html` | 2026-09-08 09:12 UTC | **LOCKED & FROZEN** |
+| **Stage 05** | **Structural Resilience of an Agentic Organisation** | `final_slides/slide_05_the_jenga_metaphor.LOCKED.html` | 2026-09-08 09:52 UTC | **LOCKED & FROZEN** |
 
 ---
 
@@ -91,5 +92,34 @@
   4. `04 Governed` — Centrally controlled, immutable audit trail, and non-negotiable Human-in-the-Loop veto.
   5. `05 Deterministic` — Grounded in physical science and exact mathematical solvers—zero generative guesswork.
 - **Narrative Bridge:** Bottom transition to Stage 05 (*The Jenga Metaphor: Fragile vs. Fortified*).
+ 
+---
+
+### Slide 05 Golden Specifications (Approved):
+- **Headline:** *Structural Resilience of an Agentic Organisation*
+- **Subheading:** *Operational vulnerabilities exist across both workflows and workforce. AI Agents address these seams to build a future-proof organisation.*
+- **Kicker:** `THE VISCERAL REALITY // STRUCTURAL RESILIENCE METAPHOR`
+- **Badge:** `SYSTEMIC RESILIENCE`
+- **Visual Assets:**
+  - `assets/media/wip/image74_left.jpg`: High-resolution standalone unbraced wooden tower, missing blocks, tabletop base clearly visible.
+  - `assets/media/wip/image74_right.jpg`: High-resolution standalone cyan neon-fortified tower, tabletop base clearly visible.
+- **Side-by-Side Dual Tower Architecture:**
+  - **Left Tower (Without AI Agents):**
+    - Badge: `WITHOUT AGENTS // EXPOSED GAPS`
+    - Kicker: `THE UNBRACED TOWER // HIGH SYSTEMIC FRAGILITY`
+    - Copy: *Gaps across disconnected workflows and stretched workforce leave critical operational seams unmonitored and vulnerable to friction.*
+    - Operational Consequence: *Under Operational Stress: Latent vulnerabilities across workflows and workforce trigger compounding NPT (₹50+ Cr).*
+  - **Right Tower (With AI Agents):**
+    - Badge: `WITH AGENTS // FORTIFIED SEAMS`
+    - Kicker: `THE FORTIFIED MESH // FUTURE-PROOF RESILIENCE`
+    - Copy: *AI Agents augment both workforce and workflows—bridging seams with 24/7 autonomous monitoring and exact solvers.*
+    - Operational Consequence: *Future-Proof Resilience: AI Agents permanently fortify workflows, empower teams, and protect capital.*
+- **Workforce & Workflow Focus:** Zero human-blaming. Acknowledges that both workflows and workforce face systemic seams in high-consequence operations.
+- **Color Harmonization (1:1 Match with Images):**
+  - **Left Tower:** Box boundary, badge dot, border-top, and highlight callout aligned to **Warm Amber / Honey Wood** (`#F59E0B` / `rgba(245, 158, 11, 0.4)`), harmonizing directly with the warm oak wood blocks of the fragile tower.
+  - **Right Tower:** Box boundary, badge dot, border-top, and highlight callout aligned to **Electric Neon Cyan** (`#00E5FF` / `rgba(0, 229, 255, 0.45)` / `#38BDF8`), harmonizing directly with the glowing neon cyber-plugs.
+- **Uncluttered Canvas:** Removed boardroom punchline box completely to give maximum vertical breathing room to the visual metaphor.
+- **Narrative Bridge:** Bottom transition to Stage 06 (*Living Proof: Petrophysical Wireline Splicing Sentinel*).
+
 
 
