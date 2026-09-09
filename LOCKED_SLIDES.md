@@ -27,16 +27,15 @@
 ---
 
 ### Slide 00 Golden Specifications (Approved):
-- **Headline:** *Agentic Transformation for India’s Energy Giants*
+- **Headline:** *Agentic Transformation* (signature gradient `var(--grad-security)`) *for India’s Energy Giants* (solid high-contrast white `#FFFFFF`).
 - **Kicker:** `STRATEGIC TRANSFORMATION BLUEPRINT // ENERGY ENTERPRISE GIANTS`
 - **Official Brand Mark:** Authentic Google Gemini Enterprise vector multi-stop linear gradient SVG.
-- **Physics-Based Command Bar:** *"Calibrate wireline cable stretch on Well A-12 and execute SciPy depth alignment across Runs 1–3..."*
-- **Telemetry Drawer:** SciPy signal alignment tool ($r = 0.9899$, $-1.829\text{m}$ depth shift), 420ms latency, MeitY boundary certification.
-- **Meta Grid (Pillars):**
-  1. `OPERATIONAL DOMAIN SCOPE`
-  2. `SOVEREIGN GOVERNANCE & TRUST`
-  3. `DETERMINISTIC PHYSICS ARCHITECTURE` (*Autonomous Agentic Reasoning · Scientific Solvers for Physical Math · Zero Generative Guesswork*)
-- **Navigation Controls:** Executive top navigation bar (`STAGE 00 // EXECUTIVE OVERVIEW`, `1 / 16`, `Next Page →`) and floating bottom HUD controls (`◀ Prev | 01 / 16 | Next Slide ▶`).
+- **Physics-Based Command Bar:** Clean visual command cockpit bar displaying *"Calibrate wireline cable stretch on Well A-12 and execute SciPy depth alignment across Runs 1–3..."* with authentic untruncated 28×28px Gemini Enterprise brand lockup and `Execute Run ↵` pill (interactive drawer removed to eliminate unnecessary presentation complexity).
+- **Meta Grid (Pillars):** Harmonized executive glass cards (`rgba(15, 23, 42, 0.45)`) with unified high-legibility off-white values (`#E2E8F0`), soft slate dot separators (`rgba(148, 163, 184, 0.4)`), and architectural turquoise left-border accents:
+  1. `FULL VALUE CHAIN`: Upstream · Midstream · Downstream
+  2. `SOVEREIGN GOVERNANCE & TRUST`: MeitY Compliant · Identity-Governed Access · Immutable Audit
+  3. `DETERMINISTIC PHYSICS ARCHITECTURE`: Autonomous Reasoning · Scientific Solvers · Deterministic Output
+- **Navigation Controls:** Executive top navigation bar (`00 Overview`, `1 / 12`, `Next Page →`) and floating bottom HUD controls (`◀ Prev | 01 / 12 | Next Slide ▶`).
 
 ---
 

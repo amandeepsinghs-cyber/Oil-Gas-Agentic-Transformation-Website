@@ -349,10 +349,18 @@ body {
   font-family: var(--font-display);
   font-size: 64px;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.12;
   letter-spacing: -1.5px;
   color: var(--text-primary);
-  margin-bottom: 20px;
+  margin-bottom: 14px;
+}
+
+.gemini-logo-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .title-gradient-span {
@@ -379,8 +387,10 @@ body {
 .gemini-search-pill {
   background: rgba(18, 23, 28, 0.85);
   border: 1px solid rgba(66, 133, 244, 0.4);
-  border-radius: 40px;
-  padding: 14px 24px;
+  border-radius: 28px;
+  padding: 18px 26px;
+  min-height: 76px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -398,6 +408,7 @@ body {
 
 .gemini-search-content {
   flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -411,19 +422,23 @@ body {
 }
 
 .gemini-prompt-text {
-  font-size: 17.5px;
+  font-size: 16px;
   color: var(--text-primary);
   font-style: italic;
+  line-height: 1.45;
+  white-space: normal;
 }
 
 .gemini-enter-key {
   font-family: var(--font-mono);
   font-size: 14.5px;
-  padding: 5px 12px;
+  padding: 8px 16px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
+  border-radius: 8px;
   color: var(--text-muted);
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .title-meta-grid {
