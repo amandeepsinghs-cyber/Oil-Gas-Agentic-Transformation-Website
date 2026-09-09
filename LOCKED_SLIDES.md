@@ -51,21 +51,41 @@
 - **Alignment:** Mathematically locked horizontal baseline across all 4 columns, single-line typography (`white-space: nowrap;`).
 - **Narrative Bridge:** Bottom transition to Stage 02 (*The Swiss Cheese Model of Compounding Gaps*).
 
----
-
 ### Slide 02 Golden Specifications (Approved):
-- **Headline:** *A major Incident is never a single failure. It’s the quiet alignment of invisible gaps.* (Prof. James Reason's System Safety Model)
-- **Kicker:** `ROOT CAUSE TAXONOMY // SYSTEMIC VULNERABILITY`
-- **Interactive Switcher:** Active Seams Sealed by Agent vs. Unmonitored Domino Failure Chain.
-- **The 4 Seams:**
-  1. `Subsurface & Well Planning` (Scanned dark PDF mudlog)
-  2. `Real-Time Drilling & Petrophysics` (1.48m wireline cable stretch)
-  3. `Operations & Shift Changeover` (3:00 AM graveyard shift communication lag)
-  4. `Capital Consequence` (Casing shoe misplaced in gas sand -> ₹50+ Cr NPT)
+- **Monumental Billboard Display Headline (`<h2>`, `clamp(30px, 3.4vw, 46px)`)**:
+  - **Baseline State**: *A major incident is never a single failure.* (Pure white `#FFF`, 800 bold)
+  - **Fortified State (Vulnerabilities Sealed)**: *Every latent vulnerability is intercepted before it aligns.* (Pure white `#FFF`, 800 bold)
+- **Executive Subheading (`<p id="s2-headline-accent">`, `clamp(17px, 1.3vw, 22px)`)**:
+  - Converted secondary lines to dedicated subheadings, matching the visual hierarchy of subsequent stages (Stages 04, 05, 06):
+    - **Baseline State**: *It’s the quiet alignment of invisible gaps.* (Soft slate `#94A3B8`, 600 weight, 10px bottom margin before narrative lead)
+    - **Fortified State**: *Permanently sealed at source by deterministic physics Agents.* (Google Cloud turquoise `var(--security-turquoise)` / `#00D2B4`, 600 weight, 10px bottom margin before narrative lead, single unbroken line via `white-space: nowrap;` and `physics&nbsp;Agents.`)
+- **Foundational Methodology Narrative Lead (Main Premise Retained Across Both States)**:
+  - *Rooted in Prof. James Reason’s System Safety model: disasters in high-consequence operations rarely stem from a single colossal error, but from routine friction and unmonitored seams lining up across siloed disciplines.*
+  - Retained across both toggle screens to anchor the academic and systems-engineering thesis of the slide. Keeping this core premise stable ensures executive audiences digest the foundational concept while observing the dynamic transformation of the headline, 3D barrier model, and 4 defense agent cards.
+- **Affirmative Transition Bridge to Stage 03**:
+  - **Title**: *We need a defensive system that permanently seals these seams.* (Converted from passive inquiry to affirmative executive mandate)
+  - **Subtitle**: *Before selecting a technology, energy operations demand five non-negotiable engineering criteria for autonomous agents.*
+- **Kicker:** `PROF. JAMES REASON’S SWISS CHEESE MODEL // SYSTEMIC LATENT RISK` (Google Cloud turquoise `var(--security-turquoise)` / `#00D2B4`)
+- **Interactive Switcher:** Tactile executive dual-state toggle:
+  - `● Baseline: 3 Aligned Vulnerabilities` (Soft slate `#94A3B8` / Warning amber `#F59E0B`)
+  - `🛡 Fortified: Autonomous Agents` (Calm Google Cloud turquoise `var(--security-turquoise)` / `#00D2B4`, replacing loud mint green)
+- **Visual Presentation:**
+  - Clean, unobstructed 3D Swiss Cheese model on top (16:9 canvas, no floating HUD badges).
+  - Four clean barrier columns directly beneath, aligned 1:1 to the 4 cheese slices:
+    1. `LAYER 01 // ARCHIVE` (`Vulnerability 1` badge · Legacy Mudlog in PDF Archive · 2004 Offset Well)
+    2. `LAYER 02 // PETROPHYSICS` (`Vulnerability 2` badge · Wireline Cable Stretch · 1.48m Uncalibrated Discrepancy)
+    3. `LAYER 03 // RIG HANDOVER` (`Vulnerability 3` badge · Rig Crew Changeover · 4-Hour Communication Lag)
+    4. `LAYER 04 // DRILLING TARGET` (`CRITICAL HAZARD` badge · Casing Shoe Misplacement · Cumulative 2m Error)
+  - Fortified state engages `AGENT 01: ACTIVE` (PDF-to-LAS & BigQuery Agent), `AGENT 02: ACTIVE` (Deterministic Splice Agent), `AGENT 03: ACTIVE` (Live Rig Agent), and `100% PROTECTED` (Governed Casing Barrier).
+  - **High-Contrast Pure White Typography (`#FFF`)**:
+    - `BARRIER TOPOLOGY // 4 DEFENSIVE LAYERS` header text and its indicator dot converted to pure high-contrast white (`#FFF`).
+    - Fortified state card titles and secondary metric subtitles set to pure crisp white (`#FFF`), reserving Google Cloud turquoise (`#00D2B4`) strictly for interactive status badges (`AGENT 01: ACTIVE`, etc.) and the active status dot. This eliminates visual fatigue ("color soup") and aligns with executive Apple Keynote / Google design aesthetics.
+  - Terminology shifted from informal "plugs" to enterprise "Agents" / "Autonomous Agents" across all slide copy, buttons, badges, and navigation bridges.
+  - Replaced loud alarm red and aggressive mint green with disciplined, harmonized Google Cloud turquoise (`#00D2B4`), amber warnings (`#F59E0B`), and soft slate (`#94A3B8`).
 - **Visual Assets (Refined Dark Studio Polish):**
-  - Baseline State: `assets/media/photos/swiss_cheese_clean_baseline.jpg` (Clean dark executive studio `#080B11`, zero stars/galaxy, disciplined plain red trajectory ray passing through aligned holes into alarm).
-  - Fortified State: `assets/media/photos/swiss_cheese_clean_fortified.jpg` (Same dark studio, precision-engineered cylindrical cyber-plugs with cyan LED rings sealing holes, plain red ray stopped cleanly at barrier 1, zero chaotic lightning explosion).
-- **Narrative Bridge:** Bottom transition to Stage 03 (*The Need: 5 Non-Negotiable Criteria of the Plug*).
+  - Baseline State: `assets/media/photos/swiss_cheese_clean_baseline.jpg` (Clean dark executive studio `#080B11`, zero stars/galaxy, disciplined plain red trajectory ray passing through aligned holes).
+  - Fortified State: `assets/media/photos/swiss_cheese_clean_fortified.jpg` (Same dark studio, precision-engineered cylindrical cyber-plugs with cyan LED rings sealing holes, plain red ray stopped cleanly at barrier 1).
+- **Narrative Bridge:** Bottom transition to Stage 03 (*The 5 Non-Negotiable Criteria of the Agent →*).
 
 ---
 

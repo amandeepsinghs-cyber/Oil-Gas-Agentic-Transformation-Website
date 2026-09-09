@@ -479,81 +479,235 @@
       const btnAgentic = document.getElementById('s2-btn-agentic');
       const imgBaseline = document.getElementById('s2-img-baseline');
       const imgFortified = document.getElementById('s2-img-fortified');
+      const headlineMain = document.getElementById('s2-headline-main');
       const headlineAccent = document.getElementById('s2-headline-accent');
-      const statusPill = document.getElementById('s2-status-pill');
+      const narrativeLead = document.getElementById('s2-narrative-lead');
+      const statusDot = document.getElementById('s2-status-dot');
+      const statusText = document.getElementById('s2-status-text');
 
-      const t1Title = document.getElementById('s2-tier-1-title');
-      const t1Desc = document.getElementById('s2-tier-1-desc');
-      const t2Title = document.getElementById('s2-tier-2-title');
-      const t2Desc = document.getElementById('s2-tier-2-desc');
-      const t5Title = document.getElementById('s2-tier-5-title');
-      const t5Desc = document.getElementById('s2-tier-5-desc');
+      const tiers = [1, 2, 3, 4].map(i => ({
+        card: document.getElementById(`s2-tier-${i}`),
+        badge: document.getElementById(`s2-tier-${i}-badge`),
+        title: document.getElementById(`s2-tier-${i}-title`),
+        metric: document.getElementById(`s2-tier-${i}-metric`),
+        desc: document.getElementById(`s2-tier-${i}-desc`)
+      }));
 
       if (state === 'agentic') {
         if (btnAgentic) {
-          btnAgentic.style.background = 'rgba(0, 210, 180, 0.25)';
+          btnAgentic.style.background = 'rgba(0, 210, 180, 0.2)';
+          btnAgentic.style.borderColor = 'rgba(0, 210, 180, 0.5)';
           btnAgentic.style.color = '#FFF';
         }
         if (btnLegacy) {
           btnLegacy.style.background = 'transparent';
+          btnLegacy.style.borderColor = 'transparent';
           btnLegacy.style.color = 'var(--text-dim)';
         }
         if (imgFortified) imgFortified.style.opacity = '1';
-        if (imgBaseline) imgBaseline.style.opacity = '0.15';
+        if (imgBaseline) imgBaseline.style.opacity = '0.12';
+        if (headlineMain) {
+          headlineMain.innerText = 'Every latent vulnerability is intercepted before it aligns.';
+        }
         if (headlineAccent) {
-          headlineAccent.style.color = 'var(--security-mint)';
-          headlineAccent.innerText = 'Permanently sealed at source by surgical agentic plugs.';
+          headlineAccent.style.color = 'var(--security-turquoise)';
+          headlineAccent.innerHTML = 'Permanently sealed at source by deterministic physics&nbsp;Agents.';
+          headlineAccent.style.marginBottom = '10px';
         }
-        if (statusPill) {
-          statusPill.innerHTML = `
-            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--security-mint); box-shadow: 0 0 10px var(--security-mint);"></span>
-            <span style="color: var(--security-mint);">Failure Vector: Terminated at Tier 1 &amp; Tier 2 · 100% Capital Preserved</span>
-          `;
+        if (narrativeLead) {
+          narrativeLead.style.display = 'block';
         }
-        if (t1Title) {
-          t1Title.innerHTML = '<span style="color: var(--security-mint);">Plug 01: Ingestion Sentinel</span>';
-          t1Desc.innerText = 'Standardizes raw LAS/DLIS in 42ms directly to GCS/BigQuery.';
+        if (statusDot) {
+          statusDot.style.background = 'var(--security-turquoise)';
+          statusDot.style.boxShadow = '0 0 10px rgba(0, 210, 180, 0.5)';
         }
-        if (t2Title) {
-          t2Title.innerHTML = '<span style="color: var(--security-mint);">Plug 02: SciPy Splicer</span>';
-          t2Desc.innerText = 'Reconciles 1.48m cable stretch in 3.2s with Pearson r = 0.9899.';
+        if (statusText) {
+          statusText.style.color = 'var(--security-turquoise)';
+          statusText.innerText = 'Active Defense: Autonomous Agents Intercepting Vulnerabilities (0 NPT)';
         }
-        if (t5Title) {
-          t5Title.innerHTML = '<span style="color: var(--security-mint);">₹0 Loss // 100% Margin Protected</span>';
-          t5Desc.innerText = 'Drillstring protected. 0 NPT hours. Zero refinery column trip.';
+
+        // Tier 1: Subsurface Ingestion Agent
+        if (tiers[0].card) {
+          tiers[0].card.style.borderColor = 'rgba(0, 210, 180, 0.4)';
+          tiers[0].card.style.background = 'rgba(0, 210, 180, 0.04)';
         }
+        if (tiers[0].badge) {
+          tiers[0].badge.style.background = 'rgba(0, 210, 180, 0.18)';
+          tiers[0].badge.style.borderColor = 'rgba(0, 210, 180, 0.5)';
+          tiers[0].badge.style.color = 'var(--security-turquoise)';
+          tiers[0].badge.innerText = 'AGENT 01: ACTIVE';
+        }
+        if (tiers[0].title) tiers[0].title.innerHTML = '<span style="color: #FFF;">PDF-to-LAS & BigQuery Agent</span>';
+        if (tiers[0].metric) {
+          tiers[0].metric.style.color = '#FFF';
+          tiers[0].metric.innerText = '42ms Parse · GCS Bucket & BigQuery';
+        }
+        if (tiers[0].desc) tiers[0].desc.innerText = 'Extracts legacy 2004 PDF mudlogs into clean LAS format stored in GCS and indexed in BigQuery—instantly alerting well planners of gas zones.';
+
+        // Tier 2: Deterministic Splice Agent
+        if (tiers[1].card) {
+          tiers[1].card.style.borderColor = 'rgba(0, 210, 180, 0.4)';
+          tiers[1].card.style.background = 'rgba(0, 210, 180, 0.04)';
+        }
+        if (tiers[1].badge) {
+          tiers[1].badge.style.background = 'rgba(0, 210, 180, 0.18)';
+          tiers[1].badge.style.borderColor = 'rgba(0, 210, 180, 0.5)';
+          tiers[1].badge.style.color = 'var(--security-turquoise)';
+          tiers[1].badge.innerText = 'AGENT 02: ACTIVE';
+        }
+        if (tiers[1].title) tiers[1].title.innerHTML = '<span style="color: #FFF;">Deterministic Splice Agent</span>';
+        if (tiers[1].metric) {
+          tiers[1].metric.style.color = '#FFF';
+          tiers[1].metric.innerText = '3.2s Exec · SciPy Match (r = 0.9899)';
+        }
+        if (tiers[1].desc) tiers[1].desc.innerText = 'Pre-built deterministic SciPy engine calculates cable stretch dynamics, removing the 1.48m error with cms-precision curve correlation.';
+
+        // Tier 3: Rig Handover Agent
+        if (tiers[2].card) {
+          tiers[2].card.style.borderColor = 'rgba(0, 210, 180, 0.4)';
+          tiers[2].card.style.background = 'rgba(0, 210, 180, 0.04)';
+        }
+        if (tiers[2].badge) {
+          tiers[2].badge.style.background = 'rgba(0, 210, 180, 0.18)';
+          tiers[2].badge.style.borderColor = 'rgba(0, 210, 180, 0.5)';
+          tiers[2].badge.style.color = 'var(--security-turquoise)';
+          tiers[2].badge.innerText = 'AGENT 03: ACTIVE';
+        }
+        if (tiers[2].title) tiers[2].title.innerHTML = '<span style="color: #FFF;">Live Rig Agent</span>';
+        if (tiers[2].metric) {
+          tiers[2].metric.style.color = '#FFF';
+          tiers[2].metric.innerText = 'Real-Time WITSML Push · 0ms Lag';
+        }
+        if (tiers[2].desc) tiers[2].desc.innerText = 'Streams live depth corrections directly to driller consoles across 3:00 AM shift changeovers, eliminating communication lag entirely.';
+
+        // Tier 4: Zero-Defect Operational Barrier
+        if (tiers[3].card) {
+          tiers[3].card.style.borderColor = 'rgba(0, 210, 180, 0.6)';
+          tiers[3].card.style.background = 'rgba(0, 210, 180, 0.06)';
+        }
+        if (tiers[3].badge) {
+          tiers[3].badge.style.background = 'rgba(0, 210, 180, 0.25)';
+          tiers[3].badge.style.borderColor = 'rgba(0, 210, 180, 0.6)';
+          tiers[3].badge.style.color = '#FFF';
+          tiers[3].badge.innerText = '100% PROTECTED';
+        }
+        if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: #FFF;">Governed Casing Barrier</span>';
+        if (tiers[3].metric) {
+          tiers[3].metric.style.color = '#FFF';
+          tiers[3].metric.innerText = '0 NPT · Zero Blowout Risk';
+        }
+        if (tiers[3].desc) {
+          tiers[3].desc.style.color = '#CBD5E1';
+          tiers[3].desc.innerText = 'Failure ray intercepted at source. Casing shoe seats with cms precision in solid caprock—preventing kicks, stuck pipe, and saving ₹50+ Cr.';
+        }
+
       } else {
         if (btnLegacy) {
-          btnLegacy.style.background = 'rgba(239, 68, 68, 0.25)';
+          btnLegacy.style.background = 'rgba(255, 255, 255, 0.1)';
+          btnLegacy.style.borderColor = 'rgba(255, 255, 255, 0.2)';
           btnLegacy.style.color = '#FFF';
         }
         if (btnAgentic) {
           btnAgentic.style.background = 'transparent';
+          btnAgentic.style.borderColor = 'transparent';
           btnAgentic.style.color = 'var(--text-dim)';
         }
         if (imgFortified) imgFortified.style.opacity = '0';
         if (imgBaseline) imgBaseline.style.opacity = '1';
+        if (headlineMain) {
+          headlineMain.innerText = 'A major incident is never a single failure.';
+        }
         if (headlineAccent) {
-          headlineAccent.style.color = 'var(--nebula-crimson)';
+          headlineAccent.style.color = '#94A3B8';
           headlineAccent.innerText = 'It’s the quiet alignment of invisible gaps.';
+          headlineAccent.style.marginBottom = '10px';
         }
-        if (statusPill) {
-          statusPill.innerHTML = `
-            <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--nebula-crimson); box-shadow: 0 0 10px var(--nebula-crimson);"></span>
-            <span style="color: var(--nebula-crimson);">Failure Vector: Active · Penetrating 5 Tiers to P&amp;L</span>
-          `;
+        if (narrativeLead) {
+          narrativeLead.style.display = 'block';
+          narrativeLead.innerHTML = 'Rooted in <strong style="color: #FFF;">Prof. James Reason’s System Safety model</strong>: disasters in high-consequence operations rarely stem from a single colossal error, but from routine friction and unmonitored seams lining up across siloed disciplines.';
         }
-        if (t1Title) {
-          t1Title.innerText = 'Unindexed Mud Logs';
-          t1Desc.innerText = 'Dark data stranded in PDF/TIFF archives. Zero cross-well automated search.';
+        if (statusDot) {
+          statusDot.style.background = '#F59E0B';
+          statusDot.style.boxShadow = 'none';
         }
-        if (t2Title) {
-          t2Title.innerText = 'Cable Stretch Drift';
-          t2Desc.innerText = '1.48m uncorrected wireline shift propagated to casing seat design.';
+        if (statusText) {
+          statusText.style.color = '#94A3B8';
+          statusText.innerText = 'Latent Hazard Path: Unmonitored Cross-Discipline Vulnerabilities';
         }
-        if (t5Title) {
-          t5Title.innerText = '₹25–100 Cr Loss';
-          t5Desc.innerText = 'Stuck drillstring, lost bottom-hole assembly, or 24-hr refinery outage.';
+
+        // Tier 1 Reset
+        if (tiers[0].card) {
+          tiers[0].card.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+          tiers[0].card.style.background = 'rgba(15, 23, 42, 0.45)';
+        }
+        if (tiers[0].badge) {
+          tiers[0].badge.style.background = 'rgba(255, 255, 255, 0.06)';
+          tiers[0].badge.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+          tiers[0].badge.style.color = '#94A3B8';
+          tiers[0].badge.innerText = 'Vulnerability 1';
+        }
+        if (tiers[0].title) tiers[0].title.innerText = 'Legacy Mudlog in PDF Archive';
+        if (tiers[0].metric) {
+          tiers[0].metric.style.color = '#F59E0B';
+          tiers[0].metric.innerText = '2004 Offset Well · Unindexed Scan';
+        }
+        if (tiers[0].desc) tiers[0].desc.innerText = 'A critical gas kick from a 2004 offset well remained buried in an unindexed PDF scan, unread during well planning.';
+
+        // Tier 2 Reset
+        if (tiers[1].card) {
+          tiers[1].card.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+          tiers[1].card.style.background = 'rgba(15, 23, 42, 0.45)';
+        }
+        if (tiers[1].badge) {
+          tiers[1].badge.style.background = 'rgba(255, 255, 255, 0.06)';
+          tiers[1].badge.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+          tiers[1].badge.style.color = '#94A3B8';
+          tiers[1].badge.innerText = 'Vulnerability 2';
+        }
+        if (tiers[1].title) tiers[1].title.innerText = 'Wireline Cable Stretch';
+        if (tiers[1].metric) {
+          tiers[1].metric.style.color = '#F59E0B';
+          tiers[1].metric.innerText = '1.48m Uncalibrated Discrepancy';
+        }
+        if (tiers[1].desc) tiers[1].desc.innerText = 'Mechanical cable stretch shifted logging depth by 1.48m. Approximated manually, placing the caprock 1.5m deeper than reality.';
+
+        // Tier 3 Reset
+        if (tiers[2].card) {
+          tiers[2].card.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+          tiers[2].card.style.background = 'rgba(15, 23, 42, 0.45)';
+        }
+        if (tiers[2].badge) {
+          tiers[2].badge.style.background = 'rgba(255, 255, 255, 0.06)';
+          tiers[2].badge.style.borderColor = 'rgba(255, 255, 255, 0.12)';
+          tiers[2].badge.style.color = '#94A3B8';
+          tiers[2].badge.innerText = 'Vulnerability 3';
+        }
+        if (tiers[2].title) tiers[2].title.innerText = 'Rig Crew Changeover';
+        if (tiers[2].metric) {
+          tiers[2].metric.style.color = '#F59E0B';
+          tiers[2].metric.innerText = '4-Hour Communication Lag';
+        }
+        if (tiers[2].desc) tiers[2].desc.innerText = 'Updated depth warnings were lost in an email handover at 3:00 AM. The rig crew continued drilling ahead unaware of the danger window.';
+
+        // Tier 4 Reset
+        if (tiers[3].card) {
+          tiers[3].card.style.borderColor = 'rgba(245, 158, 11, 0.3)';
+          tiers[3].card.style.background = 'rgba(15, 23, 42, 0.45)';
+        }
+        if (tiers[3].badge) {
+          tiers[3].badge.style.background = 'rgba(245, 158, 11, 0.15)';
+          tiers[3].badge.style.borderColor = 'rgba(245, 158, 11, 0.35)';
+          tiers[3].badge.style.color = '#F59E0B';
+          tiers[3].badge.innerText = 'CRITICAL HAZARD';
+        }
+        if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: #FFF;">Casing Shoe Misplacement</span>';
+        if (tiers[3].metric) {
+          tiers[3].metric.style.color = '#F59E0B';
+          tiers[3].metric.innerText = 'Cumulative 2m Error · Gas Sand Landed';
+        }
+        if (tiers[3].desc) {
+          tiers[3].desc.style.color = '#94A3B8';
+          tiers[3].desc.innerText = 'The casing shoe seated directly into the fractured gas sand rather than solid rock, causing an uncontrollable kick and stuck drillstring.';
         }
       }
     }

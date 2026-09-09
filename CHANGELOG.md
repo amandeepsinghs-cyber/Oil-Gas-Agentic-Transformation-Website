@@ -10,6 +10,212 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - **Synchronization**: Injected into continuous master decks (`index.html`, `deck.html`, `working_deck/index.html`).
 - **Audit**: Formal registration in `LOCKED_SLIDES.md` and narrative recorded in `slide_narratives/slide_XX/NARRATIVE.md`.
 
+## [Slide 02 Refinement: Retention of Foundational Premise Across Both Toggle States] - 2026-09-09
+### Stage 02 (Prof. James Reason's Swiss Cheese Model // Systemic Latent Risk)
+- **Retained Core System Safety Premise Across Both Screens**:
+  - The narrative lead (*"Rooted in Prof. James Reason’s System Safety model: disasters in high-consequence operations rarely stem from a single colossal error, but from routine friction and unmonitored seams lining up across siloed disciplines."*) now remains visible across both Baseline and Fortified states.
+  - **Strategic Rationale**:
+    - Keeps the academic anchor and systems-engineering rigor visible throughout the stage discussion.
+    - Prevents jarring visual jumping during live executive presentations, allowing the audience to digest the core thesis while observing the active transformation of the headline, 3D barrier model, and 4 defense agent cards.
+    - The 4 autonomous defense agents directly fulfill the thesis by actively intercepting the friction at the seams.
+  - Standardized unified vertical spacing with 10px bottom margin on the subheading leading directly into the narrative lead in both toggle states.
+- **Synchronized Across All 7 Master Controllers & Pages**:
+  - `working_deck/pages/page_02.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `assets/interactive.js`
+  - `working_deck/footer_template.html`
+  - `working_deck/pages/page_01.html`
+
+## [Slide 02 Refinement: Dual-State Subheading Visual Hierarchy Alignment] - 2026-09-09
+### Stage 02 (Prof. James Reason's Swiss Cheese Model // Systemic Latent Risk)
+- **Converted Secondary Accent Lines to Dedicated Executive Subheadings**:
+  - Aligned Slide 02's headline and subtitle architecture with the presentation hierarchy established in subsequent slides (Stages 04, 05, 06).
+  - Separated the secondary sentences from the `<h2>` tag into a dedicated `<p id="s2-headline-accent">` styled with `font-family: var(--font-display); font-size: clamp(17px, 1.3vw, 22px); font-weight: 600; line-height: 1.4;`:
+    - **Baseline State**:
+      - Headline (`<h2>`, `clamp(30px, 3.4vw, 46px)`): *"A major incident is never a single failure."* (`#FFFFFF`, 800 bold)
+      - Subheading (`<p>`, `clamp(17px, 1.3vw, 22px)`): *"It’s the quiet alignment of invisible gaps."* (`#94A3B8`, 600 weight, 10px bottom margin)
+    - **Fortified State (Vulnerabilities Sealed)**:
+      - Headline (`<h2>`, `clamp(30px, 3.4vw, 46px)`): *"Every latent vulnerability is intercepted before it aligns."* (`#FFFFFF`, 800 bold)
+      - Subheading (`<p>`, `clamp(17px, 1.3vw, 22px)`): *"Permanently sealed at source by deterministic physics Agents."* (`var(--security-turquoise)`, 600 weight, 20px bottom margin, single line via `white-space: nowrap;` and `physics&nbsp;Agents.`)
+  - Dynamically manages bottom spacing (`marginBottom = '20px'` when `#s2-narrative-lead` is hidden in Fortified state; `'10px'` in Baseline state) to preserve perfect vertical rhythm and breathing room above the 3D canvas.
+- **Synchronized Across All 8 Slide Files & 7 Master Controllers**:
+  - `working_deck/pages/page_02.html`
+  - `working_deck/slides/slide_02_swiss_cheese.html`
+  - `final_slides/slide_02_swiss_cheese.html`
+  - `final_slides/slide_02_swiss_cheese.LOCKED.html`
+  - `slides/slide_02_swiss_cheese.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `assets/interactive.js`
+  - `working_deck/footer_template.html`
+  - `working_deck/pages/page_01.html`
+
+## [Slide 02 Refinement: Baseline-Exclusive Narrative Lead Omission on Fortified View] - 2026-09-09
+### Stage 02 (Prof. James Reason's Swiss Cheese Model // Systemic Latent Risk)
+- **Eliminated System Safety Hazard Narrative on Fortified Defense View**:
+  - The Reason citation (*"Rooted in Prof. James Reason’s System Safety model: disasters in high-consequence operations rarely stem from a single colossal error, but from routine friction and unmonitored seams lining up across siloed disciplines."*) defines the hazard path where unmonitored seams align to cause catastrophic failure.
+  - On the Fortified toggle screen (`state === 'agentic'`), all seams are actively intercepted and sealed at source by autonomous agents; keeping the disaster explanation text created cognitive dissonance and visual clutter.
+  - Dynamically manages `#s2-narrative-lead`:
+    - **Baseline State**: Displayed (`narrativeLead.style.display = 'block'`) to contextualize the systemic failure mechanism.
+    - **Fortified State**: Hidden (`narrativeLead.style.display = 'none'`), elevating the 3D fortified render canvas and the 4 active defense agent cards to dominate the visual hierarchy with no awkward whitespace.
+- **Synchronized Across All 7 Master Controllers & Pages**:
+  - `working_deck/pages/page_02.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `assets/interactive.js`
+  - `working_deck/footer_template.html`
+  - `working_deck/pages/page_01.html`
+
+## [Slide 02 & 07 Technical Calibration: Operational Realism (cms vs. millimeter precision)] - 2026-09-09
+### Stage 02 & Stage 07 Technical Integrity
+- **Calibrated Subsurface Precision Claim from "millimeter" to "cms"**:
+  - Replaced overclaiming "millimeter precision" with operationally credible "cms precision" across wireline depth matching and casing shoe placement:
+    - **Tier 2 (Deterministic Splice Agent)**: *"removing the 1.48m error with cms-precision curve correlation."* (previously *millimeter-precision*)
+    - **Tier 4 (Governed Casing Barrier)**: *"Casing shoe seats with cms precision in solid caprock—preventing kicks, stuck pipe, and saving ₹50+ Cr."* (previously *millimeter precision*)
+    - **Stage 07 (Deterministic Math Repeatability)**: *"you will receive the exact same 1.48m depth-shift result down to the cms."* (previously *down to the millimeter*)
+  - Preserves technical credibility with Chief Petrophysicists, Drilling Superintendents, and Subsurface Managers.
+
+## [Slide 02 Refinement: Restored Monumental Billboard Display Headline Size] - 2026-09-09
+### Stage 02 (Prof. James Reason's Swiss Cheese Model // Systemic Latent Risk)
+- **Restored Previous Monumental Display Size for Dual-Line Headline (`clamp(28px, 3vw, 44px)`)**:
+  - Reunited both lines into the high-impact billboard display `<h2>` container:
+    - **Line 1 (`#s2-headline-main`)**: *"A major incident is never a single failure."* (Pure white `#FFF`, 800 bold) / Fortified: *"Every latent vulnerability is intercepted before it aligns."*
+    - **Line 2 (`#s2-headline-accent`)**: *"It’s the quiet alignment of invisible gaps."* (Soft slate `#94A3B8`, 600 weight) / Fortified: *"Permanently sealed at source by deterministic physics Agents."* (Google Cloud turquoise `var(--security-turquoise)`)
+  - Both lines retain monumental scale at `clamp(28px, 3vw, 44px)`.
+  - With `max-width: 1400px;`, `white-space: nowrap;`, and non-breaking space binding (`physics&nbsp;Agents.`), Line 2 stays strictly on one unbroken sentence across all displays.
+- **Removed Verbose Dynamic Fortified Lead Paragraph (Executive Restraint)**:
+  - Removed the dynamic modification of `#s2-narrative-lead` (*"Engineered for Prof. James Reason’s Defense-in-Depth..."*).
+  - Kept the foundational methodology citation static across both toggle states:
+    *"Rooted in **Prof. James Reason’s System Safety model**: disasters in high-consequence operations rarely stem from a single colossal error, but from routine friction and unmonitored seams lining up across siloed disciplines."*
+- **Affirmative Transition Bridge to Stage 03**:
+  - Replaced the passive question (*"What kind of defensive system permanently seals these seams?"*) with an authoritative executive mandate:
+    - **Title**: *"We need a defensive system that permanently seals these seams."*
+    - **Subtitle**: *"Before selecting a technology, energy operations demand five non-negotiable engineering criteria for autonomous agents."*
+- **Synchronized Across All Presentation Formats & Scripts**:
+  - `working_deck/pages/page_02.html`
+  - `working_deck/slides/slide_02_swiss_cheese.html`
+  - `final_slides/slide_02_swiss_cheese.html`
+  - `final_slides/slide_02_swiss_cheese.LOCKED.html`
+  - `slides/slide_02_swiss_cheese.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `assets/interactive.js`
+  - `working_deck/footer_template.html`
+  - `working_deck/pages/page_01.html`
+
+## [Slide 02 Refinement: Dual-State Dynamic Billboard Headline Synchronization] - 2026-09-09
+### Stage 02 (Prof. James Reason's Swiss Cheese Model // Systemic Latent Risk)
+- **Eliminated Disjointed Headline Phrasing in Fortified State**:
+  - Previously, switching the toggle to Fortified only modified the secondary accent line (*"Permanently sealed at source by deterministic physics Agents."*), leaving the top line untouched as *"A major incident is never a single failure."* This created an awkward, incoherent combination.
+  - Dynamically coupled the top display line via `<span id="s2-headline-main">`:
+    - **Baseline State**:
+      - Line 1: *"A major incident is never a single failure."* (`#FFFFFF`, 800 bold)
+      - Line 2: *"It’s the quiet alignment of invisible gaps."* (`#94A3B8`, 600 weight)
+    - **Fortified State (Vulnerabilities Sealed)**:
+      - Line 1: *"Every latent vulnerability is intercepted before it aligns."* (`#FFFFFF`, 800 bold)
+      - Line 2: *"Permanently sealed at source by deterministic physics Agents."* (`var(--security-turquoise)`, 600 weight)
+  - This perfectly harmonizes both lines into a grammatically seamless, authoritative executive statement directly answering the sequential vulnerabilities (`Vulnerability 1`, `Vulnerability 2`, `Vulnerability 3`).
+- **Synchronized Across All Presentation Formats & Controller Scripts**:
+  - `working_deck/pages/page_02.html`
+  - `working_deck/slides/slide_02_swiss_cheese.html`
+  - `final_slides/slide_02_swiss_cheese.html`
+  - `final_slides/slide_02_swiss_cheese.LOCKED.html`
+  - `slides/slide_02_swiss_cheese.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `assets/interactive.js`
+  - `working_deck/footer_template.html`
+  - `working_deck/pages/page_01.html`
+
+## [Slide 02 Refinement: Pure White Executive Typography for Topology & Fortified Cards] - 2026-09-09
+### Stage 02 (Prof. James Reason's Swiss Cheese Model // Systemic Latent Risk)
+- **High-Contrast Pure White Typography (`#FFF`)**:
+  - Converted `BARRIER TOPOLOGY // 4 DEFENSIVE LAYERS` header text and its indicator dot from azure blue (`var(--security-azure)`) to pure high-contrast white (`#FFF`), ensuring clear legibility against the dark background.
+  - Converted all Fortified state card titles and secondary metric subtitles to crisp pure white (`#FFF`):
+    - `PDF-to-LAS & BigQuery Agent` + `42ms Parse · GCS Bucket & BigQuery`
+    - `Deterministic Splice Agent` + `3.2s Exec · SciPy Match (r = 0.9899)`
+    - `Live Rig Agent` + `Real-Time WITSML Push · 0ms Lag`
+    - `Governed Casing Barrier` + `0 NPT · Zero Blowout Risk`
+  - Reserved Google Cloud turquoise (`#00D2B4`) strictly for interactive status badges (`AGENT 01–03: ACTIVE`, `100% PROTECTED`) and system status indicators, eliminating visual clutter ("color soup") and elevating the slide to executive Apple Keynote / Google presentation standards.
+- **Synchronized Across All Presentation Formats & Templates**:
+  - `working_deck/pages/page_02.html`
+  - `working_deck/slides/slide_02_swiss_cheese.html`
+  - `final_slides/slide_02_swiss_cheese.html`
+  - `final_slides/slide_02_swiss_cheese.LOCKED.html`
+  - `slides/slide_02_swiss_cheese.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `assets/interactive.js`
+  - `working_deck/footer_template.html`
+  - `working_deck/pages/page_01.html`
+
+## [Slide 02 Refinement: Sequential Vulnerabilities, Agent Terminology & Calm Turquoise Palette] - 2026-09-09
+### Stage 02 (Prof. James Reason's Swiss Cheese Model // Systemic Latent Risk)
+- **Sequential Numbered Vulnerabilities (Baseline)**:
+  - Replaced repetitive `LATENT SEAM` badges with sequential badges: `Vulnerability 1`, `Vulnerability 2`, and `Vulnerability 3` across Layers 01–03 to demonstrate that a catastrophe requires the alignment of multiple distinct vulnerabilities.
+  - Layer 04 retained its critical warning designation: `CRITICAL HAZARD`.
+  - Updated toggle button copy to: `● Baseline: 3 Aligned Vulnerabilities`.
+- **Terminology Shift from "Plugs" to "Agents"**:
+  - Replaced informal "plugs" phrasing with authoritative enterprise terms: `Agents` / `Autonomous Agents`.
+  - Renamed Fortified Layer 03 to `Live Rig Agent`.
+  - Updated headline accent to: *"Permanently sealed at source by deterministic physics Agents."*
+  - Updated status pill to: *"Active Defense: Autonomous Agents Intercepting Vulnerabilities (0 NPT)"*.
+  - Updated transition bridge to: *"The 5 Non-Negotiable Criteria of the Agent →"*.
+  - Updated toggle button to: `🛡 Fortified: Autonomous Agents`.
+- **Color Harmonization with Calm Google Cloud Turquoise**:
+  - De-escalated loud neon mint green (`var(--security-mint)`, `#2ED573`) to calm, authoritative Google Cloud turquoise (`var(--security-turquoise)`, `#00D2B4`).
+  - Aligned fortified active states, agent badges (`AGENT 01–03: ACTIVE`), fortified titles, and button borders with the exact turquoise hue used in `PROF. JAMES REASON’S SWISS CHEESE MODEL`.
+- **Comprehensive Synchronization Across All 9 File Locations**:
+  - `working_deck/pages/page_02.html`
+  - `working_deck/slides/slide_02_swiss_cheese.html`
+  - `final_slides/slide_02_swiss_cheese.html`
+  - `final_slides/slide_02_swiss_cheese.LOCKED.html`
+  - `slides/slide_02_swiss_cheese.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `assets/interactive.js`
+  - `working_deck/footer_template.html`
+  - `working_deck/pages/page_01.html`
+
+## [Slide 02 Simplification: Calm Executive Palette & Minimalist 4-Barrier Architecture] - 2026-09-09
+### Stage 02 (Prof. James Reason's Swiss Cheese Model // Systemic Latent Risk)
+- **Elimination of Neon Crimson Visual Fatigue**:
+  - Replaced alarmist, aggressive neon red (`var(--nebula-crimson)` glows and borders) with calm, disciplined tones: soft slate (`#94A3B8`), subtle warning amber (`#F59E0B`), and Google Cloud turquoise (`var(--security-mint)` / `#00D2B4`) for the fortified state.
+- **De-cluttering & Text Density Reduction**:
+  - Removed 3 redundant, text-heavy "Executive Truths" cards (Apple Keynote shelves) that caused cognitive overload.
+  - Removed the loud "Domino Equation Strip" (`#s2-domino-strip`) and the floating HUD telemetry badge (`#s2-hud-badge`) overlaid across the 3D model.
+  - The 3D Swiss Cheese render now sits completely unobstructed in its 16:9 canvas.
+- **Aligned 4-Column Barrier Architecture**:
+  - Added 4 clean, minimalist barrier columns directly beneath the 3D visual, corresponding 1:1 to the 4 cheese slices:
+    1. `LAYER 01 // ARCHIVE`: Legacy Mudlog in PDF Archive (2004 Offset Well · Unindexed Scan)
+    2. `LAYER 02 // PETROPHYSICS`: Wireline Cable Stretch (1.48m Uncalibrated Discrepancy)
+    3. `LAYER 03 // RIG HANDOVER`: Rig Crew Changeover (4-Hour Communication Lag)
+    4. `LAYER 04 // DRILLING TARGET`: Casing Shoe Misplacement (Cumulative 2m Error · Gas Sand Landed)
+- **Dynamic Dual-State Toggle Refactoring**:
+  - Updated `setCheeseState('legacy' | 'agentic')` across all scripts (`page_02.html`, `interactive.js`, `footer_template.html`, `page_01.html`) to cleanly toggle the 4 barrier cards, status dot, and headline accent without broken DOM references.
+- **Synchronized Across All Presentation Formats**:
+  - `working_deck/pages/page_02.html`
+  - `final_slides/slide_02_swiss_cheese.html`
+  - `final_slides/slide_02_swiss_cheese.LOCKED.html`
+  - `slides/slide_02_swiss_cheese.html`
+  - `working_deck/slides/slide_02_swiss_cheese.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `assets/interactive.js`
+  - `working_deck/footer_template.html`
+  - `working_deck/pages/page_01.html`
+
+---
+
 ## [Slide 00 Simplification: Streamlined Scope Typography & Clean Visual Cockpit] - 2026-09-09
 ### Stage 00 (Executive Overview & Hero Cockpit)
 - **Concise Scope Metadata (Deterministic Physics Architecture)**:
