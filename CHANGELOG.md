@@ -6,9 +6,202 @@ All notable changes, architectural pivots, and slide finalization milestones for
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and adheres to the **"Zero-Anxiety Cadence"**:
 - **Authoring**: Built and verified in isolated slide view (`working_deck/pages/page_XX.html`).
 - **Review**: Visual and narrative sign-off by executive review.
-- **Locking**: Immutable golden master frozen in `final_slides/slide_XX_*.LOCKED.html`.
-- **Synchronization**: Injected into continuous master decks (`index.html`, `deck.html`, `working_deck/index.html`).
-- **Audit**: Formal registration in `LOCKED_SLIDES.md` and narrative recorded in `slide_narratives/slide_XX/NARRATIVE.md`.
+## [Slide 03 Refinement: Streamlining Criterion 04 (Governed)] - 2026-09-09
+### Stage 03 (Architectural Requisites // The Defensive Plug / Solution)
+- **Concise Governance Pillar Specification**:
+  - **Previous**: *"Centrally controlled, with identity and access management, with an immutable audit trail and non-negotiable Human-in-the-Loop expert veto."*
+  - **Updated**: *"Centrally controlled, with identity and access management, with an immutable audit trail."*
+  - **Strategic Rationale**: Keeps the card punchy, focused, and symmetrical with the other criteria cards by eliminating trailing qualifier phrases while maintaining core IAM and immutable audit trail standards.
+- **Synchronized Across All 10 Slide Representations, Master Decks & Governance Specs**:
+  - `working_deck/pages/page_03.html`
+  - `working_deck/slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.LOCKED.html`
+  - `slides/slide_03_the_need_criteria.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `working_deck/slides/slide_03_mece_traps.html`
+  - `slides/slide_03_mece_traps.html`
+  - `LOCKED_SLIDES.md`
+  - `AGENTIC_PITCH_BIBLE.md`
+  - `build.md`
+
+## [Slide 03 Refinement: Headline Refinement to "Targeted Solutions"] - 2026-09-09
+### Stage 03 (Architectural Requisites // The Defensive Plug / Solution)
+- **Updated Display Headline**:
+  - **Previous**: `To seal micro-vulnerabilities, you need surgical solutions.`
+  - **Updated**: `To seal micro-vulnerabilities, you need targeted solutions.`
+  - **Strategic Context**: Replaces "surgical" in the headline with "targeted" to eliminate semantic repetition with Criterion 01 (*"Surgical"*), giving the headline broader operational clarity while preserving the surgical focus inside the first pillar.
+- **Synchronized Across All 10 Slide Representations, Master Decks & Governance Specs**:
+  - `working_deck/pages/page_03.html`
+  - `working_deck/slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.LOCKED.html`
+  - `slides/slide_03_the_need_criteria.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `working_deck/slides/slide_03_mece_traps.html`
+  - `slides/slide_03_mece_traps.html`
+  - `LOCKED_SLIDES.md`
+
+## [Slide 03 & 04 Refinement: Precision Criteria & IAM Governance Copy] - 2026-09-09
+### Stage 03 & Stage 04 (Solution Criteria & Agent Features)
+- **Refined Criterion 01 (Surgical)**:
+  - Updated from *"Targets the exact seam where the vulnerability lives."* to *"Targets the exact workflow where the vulnerability lives."*
+- **Streamlined Criterion 02 (Automated)**:
+  - Updated from *"Triggers instantaneously on live operational data, guarding handovers 24/7 without human delay."* to *"Triggers instantaneously on live operational data 24/7 without human delay."*
+- **Focused Criterion 03 (Intelligent)**:
+  - Updated from *"Understands unstructured logs, domain context, and cross-discipline data."* to *"Understands domain context, and cross-discipline data."*
+  - Synchronized across Stage 03 and Stage 04 (Intelligent Microservice Feature 3).
+- **Hardened Enterprise Governance in Criterion 04 (Governed)**:
+  - Updated from *"Centrally controlled, strictly permissioned, with an immutable audit trail and non-negotiable Human-in-the-Loop expert veto."* to *"Centrally controlled, with identity and access management, with an immutable audit trail and non-negotiable Human-in-the-Loop expert veto."*
+  - Directly incorporates explicit IAM (Identity & Access Management) terminology into the architectural defense specification.
+- **Synchronized Across All Slide Representations, Master Decks & Governance Specs**:
+  - `working_deck/pages/page_03.html`
+  - `working_deck/slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.LOCKED.html`
+  - `slides/slide_03_the_need_criteria.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `working_deck/slides/slide_03_mece_traps.html`
+  - `slides/slide_03_mece_traps.html`
+  - `final_slides/slide_04_the_intelligent_microservice.html`
+  - `final_slides/slide_04_the_intelligent_microservice.LOCKED.html`
+  - `working_deck/pages/page_04.html`
+  - `slide_narratives/slide_04/NARRATIVE.md`
+  - `LOCKED_SLIDES.md`
+  - `AGENTIC_PITCH_BIBLE.md`
+  - `build.md`
+
+## [Slide 03 Refinement: Monumental Headline & Subhead Architecture] - 2026-09-09
+### Stage 03 (Architectural Requisites // The Defensive Plug / Solution)
+- **Implemented Two-Tier Billboard Headline + Subhead Hierarchy**:
+  - **Headline (`<h2>`)**:
+    `To seal micro-vulnerabilities, you need surgical solutions.`
+  - **Subheading Accent (`<p>`)**:
+    `The five non-negotiable solution criteria for mission-critical operations.`
+    Styled with the signature cyan-blue multi-stop gradient (`linear-gradient(135deg, #00D2B4 0%, #00A3FF 50%, #38BDF8 100%)`).
+  - **Narrative Lead (`<p>`)**:
+    *"Before selecting a technology, energy operations must define the architectural requisites of defense—permanently eliminating friction and latent risk across siloed disciplines without endangering high-consequence physical assets:"*
+- **Design & Tone Alignment**:
+  - Mirrors the rhythm and visual hierarchy established in Stage 02 (*"Disasters in high-consequence operations rarely stem from a single colossal error..."*) and Stage 04 (*"AI Agent: The Intelligent Microservice"*).
+  - Explicitly addresses industrial process safety without unintended cybersecurity or military attack connotations.
+- **Synchronized Across All 10 Slide Files & Master Decks**:
+  - `working_deck/pages/page_03.html`
+  - `working_deck/slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.LOCKED.html`
+  - `slides/slide_03_the_need_criteria.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `working_deck/slides/slide_03_mece_traps.html`
+  - `slides/slide_03_mece_traps.html`
+
+## [Slide 03 Refinement: Headline Streamlining, Intelligent Narrative Lead & BAM Typography] - 2026-09-09
+### Stage 03 (Architectural Requisites // The Defensive Plug)
+- **Streamlined Display Headline**:
+  - Removed low-value top line (`What energy operations demand:<br>`).
+  - Single punchy, direct billboard headline:
+    `The non-negotiable criteria of the surgical solution.`
+- **Elevated Narrative Lead to Contextual Engineering Prose**:
+  - **Previous**: *"Before naming a technology, define the defensive plug. If you ask your Head of Subsurface, VP of Drilling, and Chief Risk Officer what is required to permanently seal these seams without risking physical assets, they outline five non-negotiable criteria:"*
+  - **Updated**: *"Before selecting a technology, energy operations must define the architectural requisites of defense. To permanently eliminate friction and latent risk across siloed disciplines without endangering physical assets, engineering leadership mandates five non-negotiable criteria:"*
+  - **Strategic Context**: Replaces colloquial rhetorical questions and deprecated "plug" terminology with authoritative systems-architecture specifications grounded in cross-discipline risk management.
+- **Refined BAM Banner Typographic Hierarchy**:
+  - Kept *"embodies the core characteristics of an "* in pure white (`#FFFFFF`), reserving the turquoise-to-sky gradient accent exclusively for the climax punchline:
+    `A system that is Surgical, Automated, Intelligent, Governed, and Robust embodies the core characteristics of an `**`<span ...>Enterprise AI Agent.</span>`**
+- **Synchronized Across All 10 Slide Files & Presentation Formats**:
+  - `working_deck/pages/page_03.html`
+  - `working_deck/slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.LOCKED.html`
+  - `slides/slide_03_the_need_criteria.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `working_deck/slides/slide_03_mece_traps.html`
+  - `slides/slide_03_mece_traps.html`
+
+## [Slide 03 Refinement: Surgical Solution Headline & Removal of Strategic Pivot Box] - 2026-09-09
+### Stage 03 (Architectural Requisites // The Defensive Plug)
+- **Updated Display Headline to "Surgical Solution"**:
+  - **Previous**:
+    ```html
+    What energy operations demand:<br>
+    The non-negotiable criteria of the plug.
+    ```
+  - **Updated**:
+    ```html
+    What energy operations demand:<br>
+    The non-negotiable criteria of the surgical solution.
+    ```
+  - **Strategic Context**: Seamlessly connects to Stage 02's transition bridge (*"permanently and surgically seals these gaps"*) and Criterion 01 (*"Surgical"*), eliminating crude oilfield "plug" slang in favor of refined architectural vocabulary.
+- **Removed Redundant Strategic Pivot Reveal Box**:
+  - Removed the side card (`STRATEGIC PIVOT: SPECIFICATION ➔ AI AGENT · MINUTE 4.5 SOLUTION REVEAL`) from the BAM Proclamation Card.
+  - Allowed the architectural proclamation (*"A system that is Surgical, Automated, Intelligent, Governed, and Robust embodies the core characteristics of an Enterprise AI Agent."*) to occupy the full 100% width of the card cleanly, eliminating visual clutter.
+- **Synchronized Across All 10 Slide Files & Presentation Formats**:
+  - `working_deck/pages/page_03.html`
+  - `working_deck/slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.LOCKED.html`
+  - `slides/slide_03_the_need_criteria.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `working_deck/slides/slide_03_mece_traps.html`
+  - `slides/slide_03_mece_traps.html`
+
+## [Slide 03 Refinement: Continuous Proclamation Banner Flow & Viewport Expansion] - 2026-09-09
+### Stage 03 (Architectural Requisites // The Defensive Plug)
+- **Removed Artificial Line Break After "Robust"**:
+  - **Previous**:
+    ```html
+    A system that is Surgical, Automated, Intelligent, Governed, and Robust<br>
+    <span>embodies the core characteristics of an Enterprise AI Agent.</span>
+    ```
+  - **Updated**:
+    ```html
+    A system that is Surgical, Automated, Intelligent, Governed, and Robust <span>embodies the core characteristics of an Enterprise AI Agent.</span>
+    ```
+- **Strategic & Visual Impact**:
+  - Allows the architectural definition to read as a single, fluid, authoritative proclamation without an abrupt visual break between "Robust" and the gradient punchline.
+  - Expanded parent container `max-width` from `900px` to `1020px`, allowing the proclamation to comfortably stretch across wide executive viewports while wrapping gracefully on constrained displays.
+- **Synchronized Across All 10 Slide Files & Presentation Formats**:
+  - `working_deck/pages/page_03.html`
+  - `working_deck/slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.LOCKED.html`
+  - `slides/slide_03_the_need_criteria.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `working_deck/slides/slide_03_mece_traps.html`
+  - `slides/slide_03_mece_traps.html`
+
+## [Slide 02 Refinement: Transition Bridge Architectural Terminology Alignment] - 2026-09-09
+### Stage 02 (Prof. James Reason's Swiss Cheese Model // Systemic Latent Risk)
+- **Refined Editorial Transition Title Leading into Stage 03**:
+  - Updated the affirmative mandate title:
+    - **Previous**: *"We need a defensive system that permanently seals these seams."*
+    - **Updated**: *"We need a defensive system that permanently and surgically seals these gaps."*
+  - **Strategic Context**:
+    - Introduces the word *"surgically"*, creating a direct narrative setup for **Criterion 01: Surgical** (*"Targets the exact seam where the vulnerability lives"*) on Stage 03.
+    - Reinforces *"gaps"*, harmonizing with the slide's subheading (*"It’s the quiet alignment of invisible gaps."*).
+  - Preserved the explanatory subtitle: *"Before selecting a technology, energy operations demand five non-negotiable engineering criteria for autonomous agents."*
+- **Synchronized Across All 8 Slide Files & Presentation Formats**:
+  - `working_deck/pages/page_02.html`
+  - `working_deck/slides/slide_02_swiss_cheese.html`
+  - `final_slides/slide_02_swiss_cheese.html`
+  - `final_slides/slide_02_swiss_cheese.LOCKED.html`
+  - `slides/slide_02_swiss_cheese.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
 
 ## [Slide 02 Refinement: Retention of Foundational Premise Across Both Toggle States] - 2026-09-09
 ### Stage 02 (Prof. James Reason's Swiss Cheese Model // Systemic Latent Risk)

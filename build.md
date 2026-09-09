@@ -122,10 +122,10 @@ O&G_slidedeck_agentic_transformation/
 * **Visual Anchor:** 5-Column High-Contrast Glass Pillars & Monumental BAM Reveal Card
 * **Design Pattern:** The Need defined first as rigorous operational requisites, culminating in the naming of the AI Agent.
 * **Key Content:** 
-  1. Surgical (Nebula Amber `#F59E0B`): Targets the exact seam where the vulnerability lives.
-  2. Automated (Security Azure `#00A3FF`): Triggers instantaneously on live operational data, guarding handovers 24/7 without human delay.
-  3. Intelligent (Security Turquoise `#00D2B4`): Understands unstructured logs, domain context, and cross-discipline data.
-  4. Governed (Security Mint `#10B981`): Centrally controlled, strictly permissioned, with an immutable audit trail and non-negotiable Human-in-the-Loop expert veto.
+  1. Surgical (Nebula Amber `#F59E0B`): Targets the exact workflow where the vulnerability lives.
+  2. Automated (Security Azure `#00A3FF`): Triggers instantaneously on live operational data 24/7 without human delay.
+  3. Intelligent (Security Turquoise `#00D2B4`): Understands domain context, and cross-discipline data.
+  4. Governed (Security Mint `#10B981`): Centrally controlled, with identity and access management, with an immutable audit trail.
   5. Robust (Radiant Lavender `#C084FC`): Grounded in deterministic physics and exact mathematical solvers.
 * **The Core Definition Banner:** "A system that is Surgical, Automated, Intelligent, Governed, and Robust embodies the core characteristics of an Enterprise AI Agent."
 * **Component Contract:**

@@ -175,16 +175,16 @@
 * **The 5 Sculptural Criteria Pillars (5-Column Grid · Streamlined Title + First Sentence Only):**
   1. **CRITERION 01 — Surgical (Nebula Amber `#F59E0B`):**  
      *Title:* **Surgical**  
-     *Requirement:* Targets the exact seam where the vulnerability lives.  
+     *Requirement:* Targets the exact workflow where the vulnerability lives.  
   2. **CRITERION 02 — Automated (Security Azure `#00A3FF`):**  
      *Title:* **Automated**  
-     *Requirement:* Triggers instantaneously on live operational data, guarding handovers 24/7 without human delay.  
+     *Requirement:* Triggers instantaneously on live operational data 24/7 without human delay.  
   3. **CRITERION 03 — Intelligent (Security Turquoise `#00D2B4`):**  
      *Title:* **Intelligent**  
-     *Requirement:* Understands unstructured logs, domain context, and cross-discipline data.  
+     *Requirement:* Understands domain context, and cross-discipline data.  
   4. **CRITERION 04 — Governed (Security Mint `#10B981`):**  
      *Title:* **Governed**  
-     *Requirement:* Centrally controlled, strictly permissioned, with an immutable audit trail and non-negotiable Human-in-the-Loop expert veto.  
+     *Requirement:* Centrally controlled, with identity and access management, with an immutable audit trail.  
   5. **CRITERION 05 — Robust (Radiant Lavender `#C084FC`):**  
      *Title:* **Robust**  
      *Requirement:* Grounded in deterministic physics and exact mathematical solvers.  
@@ -211,10 +211,10 @@
 > 
 > If you sit down with your Head of Subsurface, your VP of Drilling, and your Chief Risk Officer, they will establish five non-negotiable criteria:
 > 
-> 1. **It must be Surgical:** Targeting the exact seam where the vulnerability lives.
-> 2. **It must be Automated:** Triggering instantaneously on live operational data, guarding handovers 24/7 without human delay.
-> 3. **It must be Intelligent:** Understanding unstructured logs, domain context, and cross-discipline data.
-> 4. **It must be Governed:** Centrally controlled, strictly permissioned, with an immutable audit trail and non-negotiable Human-in-the-Loop expert veto.
+> 1. **It must be Surgical:** Targeting the exact workflow where the vulnerability lives.
+> 2. **It must be Automated:** Triggering instantaneously on live operational data 24/7 without human delay.
+> 3. **It must be Intelligent:** Understanding domain context, and cross-discipline data.
+> 4. **It must be Governed:** Centrally controlled, with identity and access management, with an immutable audit trail.
 > 5. **And it must be Robust:** Grounded in deterministic physics and exact mathematical solvers.
 > 
 > A system that is Surgical, Automated, Intelligent, Governed, and Robust embodies the core characteristics of an Enterprise AI Agent.

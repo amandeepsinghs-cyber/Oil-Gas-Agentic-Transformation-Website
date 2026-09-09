@@ -63,7 +63,7 @@
   - *Rooted in Prof. James Reason’s System Safety model: disasters in high-consequence operations rarely stem from a single colossal error, but from routine friction and unmonitored seams lining up across siloed disciplines.*
   - Retained across both toggle screens to anchor the academic and systems-engineering thesis of the slide. Keeping this core premise stable ensures executive audiences digest the foundational concept while observing the dynamic transformation of the headline, 3D barrier model, and 4 defense agent cards.
 - **Affirmative Transition Bridge to Stage 03**:
-  - **Title**: *We need a defensive system that permanently seals these seams.* (Converted from passive inquiry to affirmative executive mandate)
+  - **Title**: *We need a defensive system that permanently and surgically seals these gaps.* (Affirmative executive mandate directly establishing the bridge to Criterion 01: Surgical on Stage 03)
   - **Subtitle**: *Before selecting a technology, energy operations demand five non-negotiable engineering criteria for autonomous agents.*
 - **Kicker:** `PROF. JAMES REASON’S SWISS CHEESE MODEL // SYSTEMIC LATENT RISK` (Google Cloud turquoise `var(--security-turquoise)` / `#00D2B4`)
 - **Interactive Switcher:** Tactile executive dual-state toggle:
@@ -90,13 +90,15 @@
 ---
 
 ### Slide 03 Golden Specifications (Approved):
-- **Headline:** *What energy operations demand: The non-negotiable criteria of the plug.*
+- **Headline:** *To seal micro-vulnerabilities, you need targeted solutions.*
+- **Subheading:** *The five non-negotiable solution criteria for mission-critical operations.*
+- **Narrative Lead:** *Before selecting a technology, energy operations must define the architectural requisites of defense—permanently eliminating friction and latent risk across siloed disciplines without endangering high-consequence physical assets:*
 - **Kicker:** `THE NEED // ARCHITECTURAL REQUISITES // THE DEFENSIVE PLUG`
 - **The 5 Criteria Cards:**
-  1. `01 Surgical` (Targets exact seam)
-  2. `02 Automated` (Triggers instantaneously 24/7)
-  3. `03 Intelligent` (Understands unstructured logs & domain context)
-  4. `04 Governed` (Centrally controlled, immutable audit trail, human veto)
+  1. `01 Surgical` (Targets exact workflow where the vulnerability lives)
+  2. `02 Automated` (Triggers instantaneously on live operational data 24/7 without human delay)
+  3. `03 Intelligent` (Understands domain context, and cross-discipline data)
+  4. `04 Governed` (Centrally controlled, with identity and access management, with an immutable audit trail)
   5. `05 Robust` (Deterministic physics and exact mathematical solvers)
 - **Conclusion Definition Banner:** *A system that is Surgical, Automated, Intelligent, Governed, and Robust embodies the core characteristics of an Enterprise AI Agent.* (Kicker: `THE ARCHITECTURAL DEFINITION // CORE CHARACTERISTICS`)
 - **Narrative Bridge:** Bottom transition to Stage 04 (*AI Agent: The Intelligent Microservice*).
@@ -117,7 +119,7 @@
 - **The 5 Features of an AI Agent (Mapped from Slide 03):**
   1. `01 Surgical` — Targets the exact seam where the operational vulnerability lives.
   2. `02 Autonomous` — Triggers instantaneously on live operational data, guarding handovers 24/7 without delay.
-  3. `03 Intelligent` — Understands unstructured logs, domain context, and cross-discipline data.
+  3. `03 Intelligent` — Understands domain context, and cross-discipline data.
   4. `04 Governed` — Centrally controlled, immutable audit trail, and non-negotiable Human-in-the-Loop veto.
   5. `05 Deterministic` — Grounded in physical science and exact mathematical solvers—zero generative guesswork.
 - **Narrative Bridge:** Bottom transition to Stage 05 (*The Jenga Metaphor: Fragile vs. Fortified*).

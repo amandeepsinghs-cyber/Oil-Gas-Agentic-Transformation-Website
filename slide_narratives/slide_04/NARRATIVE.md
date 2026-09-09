@@ -14,7 +14,7 @@ Slide 04 immediately follows to define and justify that agent within enterprise 
 2. **Features of an AI Agent (Mapped 1:1 from Slide 03 Criteria):**  
    - **01 // Surgical:** Targets the exact seam where the operational vulnerability lives.
    - **02 // Autonomous:** Triggers instantaneously on live operational data, guarding handovers 24/7 without delay.
-   - **03 // Intelligent:** Understands unstructured logs, domain context, and cross-discipline data.
+   - **03 // Intelligent:** Understands domain context, and cross-discipline data.
    - **04 // Governed:** Centrally controlled, immutable audit trail, and non-negotiable Human-in-the-Loop veto.
    - **05 // Deterministic:** Grounded in physical science and exact mathematical solvers—zero generative guesswork.
 
