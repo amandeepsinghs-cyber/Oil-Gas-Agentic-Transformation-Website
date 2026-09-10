@@ -6,6 +6,36 @@ All notable changes, architectural pivots, and slide finalization milestones for
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and adheres to the **"Zero-Anxiety Cadence"**:
 - **Authoring**: Built and verified in isolated slide view (`working_deck/pages/page_XX.html`).
 - **Review**: Visual and narrative sign-off by executive review.
+## [Slide 04 Refinement: Coexistence of Software Monoliths & Workflows] - 2026-09-10
+### Stage 04 (Higher-Level Software Engineering // The Coexistence Paradigm)
+- **Subheading Architectural Alignment**:
+  - **Previous**: *"The future of energy is the coexistence of the monolith and intelligent microservices."*
+  - **Updated**: *"The future of enterprise workflows is in the coexistence of software monoliths and intelligent microservices."*
+  - **Rationale**:
+    1. Elevates scope from narrow operations to cross-functional enterprise workflows.
+    2. Recognizes the reality of multiple, deep domain software monoliths (plural) running the enterprise rather than a single monolithic stack.
+    3. Retains strong positive framing for existing software monoliths as indispensable domain-expert systems of record coexisting with agile intelligent microservices.
+- **Visual Coexistence Equation Refinement**:
+  - **Box 1 (Left)**:
+    - *Previous*: `BEDROCK // SYSTEMS OF RECORD` | `The Monoliths` | `Zero Rip-and-Replace`
+    - *Updated*: `PROVEN DOMAIN ENGINES` | `Domain Monoliths` | `Deep Domain Logic & Enterprise Truth`
+  - **Box 2 (Center Hero)**:
+    - *Previous*: `THE SEAM SENTINEL // NEED OF THE HOUR` | `Intelligent Microservices` | `AI Agents in the Seams`
+    - *Updated*: `TARGETED WORKFLOW INTELLIGENCE` | `Intelligent Microservices` | `AI Agents Targeting High-Risk Gaps & Optimization Value`
+  - **Box 3 (Right)**:
+    - *Previous*: `THE DESTINATION // OPERATING MODEL` | `Agentic Organization` | `Orchestrated & Governed Fleet`
+    - *Updated*: `THE UNIFIED OPERATING MODEL` | `Agentic Organization` | `Governed Fleet of Specialized Agents`
+  - **Strategic Rationale**: Replaces poetic metaphors (*"seam sentinel"*) and defensive language (*"zero rip-and-replace"*) with precise, engineering-led boardroom terminology that honors existing software investments and clearly states agent business value.
+- **Synchronized Across All Master Decks, Slide Views & Narrative Specs**:
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `working_deck/pages/page_04.html`
+  - `final_slides/slide_04_the_intelligent_microservice.html`
+  - `final_slides/slide_04_the_intelligent_microservice.LOCKED.html`
+  - `slide_narratives/slide_04/NARRATIVE.md`
+  - `LOCKED_SLIDES.md`
+
 ## [Slide 03 Refinement: Clarifying Transition to Enterprise AI Agent] - 2026-09-10
 ### Stage 03 (Architectural Requisites // Transition to Intelligent Microservice)
 - **BAM Card Copy Refinement**:

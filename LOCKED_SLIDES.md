@@ -107,15 +107,15 @@
 
 ### Slide 04 Golden Specifications (Approved):
 - **Headline:** *AI Agent: The Intelligent Microservice*
-- **Subheading:** *The future of energy is the coexistence of the monolith and intelligent microservices.*
+- **Subheading:** *The future of enterprise workflows is in the coexistence of software monoliths and intelligent microservices.*
 - **Kicker:** `HIGHER-LEVEL SOFTWARE ENGINEERING // THE COEXISTENCE PARADIGM`
 - **Badge:** `NOT EITHER/OR. IT IS BOTH.`
 - **Ultra-Clean Visual Coexistence Schematic:**
-  - `The Monoliths` (*Bedrock // Systems of Record // Zero Rip-and-Replace*)
+  - `Domain Monoliths` (*Proven Domain Engines // Deep Domain Logic & Enterprise Truth*)
   - `+`
-  - `Intelligent Microservices` (*The Seam Sentinel // Need of the Hour // AI Agents in the Seams*)
+  - `Intelligent Microservices` (*Targeted Workflow Intelligence // AI Agents Targeting High-Risk Gaps & Optimization Value*)
   - `=`
-  - `Agentic Organization` (*The Destination // Operating Model // Orchestrated & Governed Fleet*)
+  - `Agentic Organization` (*The Unified Operating Model // Governed Fleet of Specialized Agents*)
 - **The 5 Features of an AI Agent (Mapped from Slide 03):**
   1. `01 Surgical` — Targets the exact seam where the operational vulnerability lives.
   2. `02 Autonomous` — Triggers instantaneously on live operational data, guarding handovers 24/7 without delay.

@@ -6,11 +6,11 @@
 At the climax of Slide 03, we named the defensive plug: *"That is an AI Agent."*  
 Slide 04 immediately follows to define and justify that agent within enterprise software engineering:
 - **Main Heading:** **AI Agent: The Intelligent Microservice**
-- **Subheading:** **The future of energy is the coexistence of the monolith and intelligent microservices.**
+- **Subheading:** **The future of enterprise workflows is in the coexistence of software monoliths and intelligent microservices.**
 
 ### The 2 Core Deliverables on Canvas
 1. **The Visual Coexistence Equation:**  
-   `The Monoliths (Bedrock // Systems of Record)` + `Intelligent Microservices (The Seam Sentinel // Need of the Hour)` = `Agentic Organization (The Destination // Operating Model)`.
+   `Domain Monoliths (Proven Domain Engines // Deep Domain Logic & Enterprise Truth)` + `Intelligent Microservices (Targeted Workflow Intelligence // AI Agents Targeting High-Risk Gaps & Optimization Value)` = `Agentic Organization (The Unified Operating Model // Governed Fleet of Specialized Agents)`.
 2. **Features of an AI Agent (Mapped 1:1 from Slide 03 Criteria):**  
    - **01 // Surgical:** Targets the exact seam where the operational vulnerability lives.
    - **02 // Autonomous:** Triggers instantaneously on live operational data, guarding handovers 24/7 without delay.
@@ -28,13 +28,14 @@ Slide 04 immediately follows to define and justify that agent within enterprise 
 ├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                                        │
 │  HEADING: AI Agent: The Intelligent Microservice                                                       │
-│  SUBHEADING: The future of energy is the coexistence of the monolith and intelligent microservices.   │
+│  SUBHEADING: The future of enterprise workflows is in the coexistence of software                      │
+│              monoliths and intelligent microservices.                                                  │
 │                                                                                                        │
 │  ┌─────────────────────────┐     ┌────────────────────────────────┐     ┌───────────────────────────┐  │
-│  │     THE MONOLITHS       │     │   INTELLIGENT MICROSERVICES    │     │   AGENTIC ORGANIZATION    │  │
-│  │  Bedrock // Systems     │  +  │    The Seam Sentinel //        │  =  │   The Destination //      │  │
-│  │       of Record         │     │     Need of the Hour           │     │     Operating Model       │  │
-│  │  Zero Rip-and-Replace   │     │   AI Agents in the Seams       │     │ Orchestrated & Governed   │  │
+│  │    DOMAIN MONOLITHS     │     │   INTELLIGENT MICROSERVICES    │     │   AGENTIC ORGANIZATION    │  │
+│  │ Proven Domain Engines   │  +  │  Targeted Workflow Intel.      │  =  │   Unified Operating Model │  │
+│  │ Deep Domain Logic &     │     │  AI Agents Targeting High-Risk │     │ Governed Fleet of         │  │
+│  │ Enterprise Truth        │     │  Gaps & Optimization Value     │     │ Specialized Agents        │  │
 │  └─────────────────────────┘     └────────────────────────────────┘     └───────────────────────────┘  │
 │                                                                                                        │
 │  FEATURES OF AN AI AGENT // THE 5 CORE ATTRIBUTES (MAPPED FROM SLIDE 03)                               │
@@ -57,7 +58,7 @@ Slide 04 immediately follows to define and justify that agent within enterprise 
 > 
 > **AI Agent: The Intelligent Microservice.**
 > 
-> The future of energy is the coexistence of the monolith and intelligent microservices. It is not either/or. It is both.
+> The future of enterprise workflows is in the coexistence of software monoliths and intelligent microservices. It is not either/or. It is both.
 > 
 > You keep your monoliths. Petrel, Techlog, SAP, Honeywell—they represent decades of specialized physics and billions in capital. They are world-class at what they do. We don't touch them. We don't rip and replace them.
 > 
