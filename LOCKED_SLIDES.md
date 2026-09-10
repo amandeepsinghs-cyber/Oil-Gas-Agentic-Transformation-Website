@@ -272,13 +272,13 @@
 
 ### Slide 09 Golden Specifications (Approved):
 - **Headline:** *Agent Economics: The Value Map of Agentic Transformation.* (H1 Main Title)
-- **Subheading:** *Mapping value unlock by individual autonomous agents for strategic prioritisation.* (H2 Subheading with signature sovereign turquoise highlight `#00D2B4`).
+- **Subheading:** *Strategic prioritization and continuous value tracking ensure every deployed agent remains strictly net positive.* (H2 Subheading with signature sovereign turquoise highlight `#00D2B4`).
 - **Kicker:** `STAGE 09 // THE AGENTIC VALUE TOPOLOGY`
 - **Eyebrow:** `AGENT ECONOMICS // ENTERPRISE VALUE TOPOLOGY`
-- **Subheading:** *Quantifying 300 operational seams by capital at risk (₹ Cr / yr) establishes an actionable investment topology—sequencing deployment from our proven lighthouse agent directly into the highest-exposure enterprise targets.*
+- **Lead Text:** *Quantifying a fleet of autonomous agents by capital at risk and value unlock (₹ Cr / yr) establishes a clear investment topology, sequencing rollouts directly into your highest-impact enterprise targets. Ongoing economic tracking continuously audits delivered value, guaranteeing every deployed agent operates with strictly net-positive Agentic AI ROI.*
 - **Split-Screen Architecture:**
   - **Left Panel (Operational Coordinates & Leaderboard):**
-    - High-Exposure Seams & Prioritised Value-Unlock Agents:
+    - High-Exposure Targets & Prioritised Value-Unlock Agents:
       - `★ Lighthouse Agent (Proven): Lead Petrophysicist`: Wireline Curve Splicing (₹45 Cr / yr, 3.2s SciPy benchmark, Validated in Production).
       - `Target 01 (Highest Exposure): Hydrocracker Specialist`: Reactor Thermal Runaway & Quench (₹130 Cr / yr, 0.1s multi-point quench).
       - `Target 02: Drilling Operations Lead`: Anti-Collision Scanning vs Offset Wellbores (₹120 Cr / yr, 0ms collision alert).
