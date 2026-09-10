@@ -6,6 +6,28 @@ All notable changes, architectural pivots, and slide finalization milestones for
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and adheres to the **"Zero-Anxiety Cadence"**:
 - **Authoring**: Built and verified in isolated slide view (`working_deck/pages/page_XX.html`).
 - **Review**: Visual and narrative sign-off by executive review.
+## [Slide 03 Refinement: Clarifying Transition to Enterprise AI Agent] - 2026-09-10
+### Stage 03 (Architectural Requisites // Transition to Intelligent Microservice)
+- **BAM Card Copy Refinement**:
+  - Replaced *"guaranteeing deterministic physical calculations..."* with *"providing deterministic physical calculations..."* for a grounded, non-academic tone.
+- **Section 6 Editorial Transition Alignment**:
+  - Updated transition question and subtext to:
+    - **Title**: *"What is an Enterprise AI Agent?"*
+    - **Subtext**: *"An intelligent microservice that coexists with your monoliths to create an agentic organization."*
+    - **Button**: *"Next: 04 The Intelligent Microservice →"*
+- **Synchronized Across All 10 Slide Representations, Master Decks & Specs**:
+  - `slides/slide_03_the_need_criteria.html`
+  - `working_deck/slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.html`
+  - `final_slides/slide_03_the_need_criteria.LOCKED.html`
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `working_deck/pages/page_03.html`
+  - `slides/slide_03_mece_traps.html`
+  - `working_deck/slides/slide_03_mece_traps.html`
+  - `AGENTIC_PITCH_BIBLE.md`
+
 ## [Slide 03 Refinement: Streamlining Criterion 04 (Governed)] - 2026-09-09
 ### Stage 03 (Architectural Requisites // The Defensive Plug / Solution)
 - **Concise Governance Pillar Specification**:

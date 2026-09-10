@@ -193,12 +193,12 @@
   - *Definition:*  
     **A system that is Surgical, Automated, Intelligent, Governed, and Robust**  
     **embodies the core characteristics of an Enterprise AI Agent.**
-  - *Subtext:* *"These five non-negotiable characteristics separate mission-critical enterprise infrastructure from consumer chatbots—guaranteeing deterministic physical calculations, strict human oversight, and zero operational hallucination."*
+  - *Subtext:* *"These five non-negotiable characteristics separate mission-critical enterprise infrastructure from consumer chatbots—providing deterministic physical calculations, strict human oversight, and zero operational hallucination."*
   - *Badge Strip:* `STRATEGIC PIVOT: SPECIFICATION ➔ AI AGENT · MINUTE 4.5 SOLUTION REVEAL`
 * **Editorial Transition to Stage 04:**
-  - *Question:* *"Where does the AI Agent create enterprise value?"*
-  - *Lead:* *"Not by replacing human experts, but by unleashing a dual transformation: across your workforce, and across your workflows."*
-  - *Link:* `The Dual Transformation: Workforce & Workflows (Slide 04) →`
+  - *Question:* *"What is an Enterprise AI Agent?"*
+  - *Lead:* *"An intelligent microservice that coexists with your monoliths to create an agentic organization."*
+  - *Link:* `Next: 04 The Intelligent Microservice (Slide 04) →`
 
 ### 2. Core Strategic Intent & Boardroom Point
 * **The Psychology of the Pitch:** If you begin an executive meeting pitching "AI Agents", energy leaders are immediately cynical. But if you lead them through the exact operational requirements needed to solve the Swiss cheese seams, they agree that any solution *must* be Surgical, Automated, Intelligent, Governed, and Robust.
