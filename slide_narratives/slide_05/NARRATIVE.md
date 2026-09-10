@@ -19,7 +19,7 @@ Crucially, this slide avoids placing blame on human operators or engineering tea
 - **Workflows** are often fragmented across disparate legacy software, spreadsheets, and shift handovers.
 - **Workforce** teams are stretched across intense operational tempos, juggling multiple critical streams simultaneously.
 
-The vulnerabilities are systemic—residing at the intersection of workflows and workforce. AI Agents do not replace human experts; they fortify workflows and empower the workforce to build a truly future-proof organisation.
+The vulnerabilities are systemic—residing at the intersection of workflows and workforce. AI Agents do not replace human experts; they fortify workflows and empower the workforce to build a structurally resilient organization.
 
 ---
 
@@ -34,21 +34,18 @@ The master visual (`assets/media/wip/image74.jpg`) is split vertically into two 
 │                                                                                                        │
 │  HEADING: Structural Resilience of an Agentic Organisation                                             │
 │  SUBHEADING: Operational vulnerabilities exist across both workflows and workforce.                    │
-│              AI Agents address these seams to build a future-proof organisation.                       │
+│              AI Agents eliminate these operational gaps to build a structurally resilient organization.│
 │                                                                                                        │
 │  ┌──────────────────────────────────────────────┐    ┌──────────────────────────────────────────────┐  │
 │  │  [ LEFT JENGA: WOBBLY TOWER ]                │    │  [ RIGHT JENGA: FORTIFIED TOWER ]            │  │
-│  │  (Missing wooden blocks, unstable tilt)      │    │  (Cyan neon AI Agents plugged into seams)    │  │
+│  │  (Missing wooden blocks, unstable tilt)      │    │  (Cyan neon AI Agents fortifying workflows)  │  │
 │  │                                              │    │                                              │  │
 │  │  THE UNBRACED TOWER                          │    │  THE FORTIFIED MESH                          │  │
 │  │  Without AI Agents                           │    │  With AI Agents                              │  │
 │  │                                              │    │                                              │  │
 │  │  • Gaps across disconnected workflows and   │    │  • AI Agents augment both workforce and      │  │
-│  │    stretched workforce leave critical seams  │    │    workflows—bridging seams with 24/7        │  │
-│  │    unmonitored and vulnerable to friction.   │    │    autonomous monitoring and exact solvers.  │  │
-│  │                                              │    │                                              │  │
-│  │  • Under stress: Latent vulnerabilities      │    │  • Future-Proof Resilience: AI Agents        │  │
-│  │    across workflows & workforce trigger NPT  │    │    permanently fortify workflows & teams.    │  │
+│  │    a stretched workforce leave mission-      │    │    workflows—bridging operational gaps with  │  │
+│  │    critical processes unmonitored.           │    │    24/7 monitoring and exact solvers.        │  │
 │  └──────────────────────────────────────────────┘    └──────────────────────────────────────────────┘  │
 │                                                                                                        │
 │  TRANSITION: "Now, let us examine one single plug in action: The Petrophysical Splicing Sentinel →"    │
@@ -61,13 +58,13 @@ The master visual (`assets/media/wip/image74.jpg`) is split vertically into two 
 
 > *"The tower on the left represents an unbraced enterprise. 
 > 
-> Every missing block represents an operational seam where disconnected workflows and a stretched workforce create latent vulnerability. In calm conditions, those gaps remain invisible. But under operational stress on the rig floor or in the refinery, unmonitored seams compound into severe delays and catastrophic non-productive time.
+> Every missing block represents an operational gap where disconnected workflows and a stretched workforce create latent vulnerability. In calm conditions, those gaps remain invisible. But under operational stress on the rig floor or in the refinery, unmonitored processes compound into severe delays and catastrophic non-productive time.
 > 
 > The tower on the right is fortified.
 > 
-> AI Agents augment both our workforce and our workflows—bridging the seams with continuous 24/7 monitoring and deterministic mathematical solvers.
+> AI Agents augment both our workforce and our workflows—bridging operational gaps with continuous 24/7 monitoring and deterministic mathematical solvers.
 > 
-> This is how we address systemic vulnerabilities to build an agile, future-proof energy organisation."*
+> This is how we eliminate operational gaps to build a structurally resilient energy organization."*
 
 ---
 
@@ -76,7 +73,7 @@ The master visual (`assets/media/wip/image74.jpg`) is split vertically into two 
 1. **Visceral Structural Clarity:**  
    Executives instantly grasp physical stability vs. structural collapse. The visual contrast communicates more in 3 seconds than 10 slides of workflow diagrams.
 2. **Workforce Respect & Empowerment:**  
-   Rather than scapegoating human error, the narrative frames the problem accurately: workflows and workforce both face systemic operational seams that require automated, intelligent support.
+   Rather than scapegoating human error, the narrative frames the problem accurately: workflows and workforce both face systemic operational gaps that require automated, intelligent support.
 3. **Zero Defensiveness, Pure Resilience:**  
    The presentation doesn't apologize or get defensive about legacy technology. It focuses squarely on operational continuity, risk absorption, and future-proofing.
 4. **Natural Gateway to Live Technical Proof:**  

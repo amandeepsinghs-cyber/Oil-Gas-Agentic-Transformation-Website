@@ -6,6 +6,37 @@ All notable changes, architectural pivots, and slide finalization milestones for
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and adheres to the **"Zero-Anxiety Cadence"**:
 - **Authoring**: Built and verified in isolated slide view (`working_deck/pages/page_XX.html`).
 - **Review**: Visual and narrative sign-off by executive review.
+## [Slide 05 Refinement: Structural Resilience & Engineering Rigor] - 2026-09-10
+### Stage 05 (The Visceral Reality // Structural Resilience Metaphor)
+- **Subheading Strategic Realignment**:
+  - **Previous**: *"Operational vulnerabilities exist across both workflows and workforce. AI Agents address these seams to build a future-proof organisation."*
+  - **Updated**: *"Operational vulnerabilities exist across both workflows and workforce. AI Agents eliminate these operational gaps to build a structurally resilient organization."*
+  - **Strategic Rationale**: Replaces poetic metaphor ("seams") with rigorous systems-engineering language ("operational gaps"), and replaces hyperbole with exact architectural framing ("structurally resilient organization").
+- **Card Content & Badge De-Jargonization**:
+  - **Left Card (The Unbraced Tower // Without AI Agents)**:
+    - *Previous*: *"Gaps across disconnected workflows and stretched workforce leave critical operational seams unmonitored and vulnerable to friction."*
+    - *Updated*: *"Gaps across disconnected workflows and a stretched workforce leave mission-critical processes unmonitored and vulnerable to friction."*
+    - *Rationale*: Acknowledges that systemic friction spans multi-step computational, real-time safety, and cross-functional processes rather than merely narrow handovers.
+  - **Right Card Badge**:
+    - *Previous*: `WITH AGENTS // FORTIFIED SEAMS`
+    - *Updated*: `WITH AGENTS // FORTIFIED WORKFLOWS`
+  - **Right Card (The Fortified Mesh // With AI Agents)**:
+    - *Previous*: *"AI Agents augment both workforce and workflows—bridging seams with 24/7 autonomous monitoring and exact solvers."*
+    - *Updated*: *"AI Agents augment both workforce and workflows—bridging operational gaps with 24/7 autonomous monitoring and exact solvers."*
+- **Removal of Redundant Callout Boxes (Option 1 Execution)**:
+  - Removed the lower callout banners (`Under Operational Stress: Latent vulnerabilities across workflows and workforce trigger compounding NPT (₹50+ Cr)` on the left, and `Future-Proof Resilience: AI Agents permanently fortify workflows, empower teams, and protect capital` on the right).
+  - **Boardroom Impact**: Eliminates triple repetition of *"workflows and workforce"*, removes ungrounded *"₹50+ Cr"* anchor from a visual metaphor slide, and gives the twin Jenga towers full vertical breathing room and visual dignity.
+  - Aligned the Right Card kicker from `FUTURE-PROOF RESILIENCE` to `STRUCTURAL RESILIENCE` for 100% cohesion with the slide title.
+- **Synchronized Files**:
+  - `deck.html`
+  - `index.html`
+  - `working_deck/index.html`
+  - `working_deck/pages/page_05.html`
+  - `final_slides/slide_05_the_jenga_metaphor.html`
+  - `final_slides/slide_05_the_jenga_metaphor.LOCKED.html`
+  - `slide_narratives/slide_05/NARRATIVE.md`
+  - `LOCKED_SLIDES.md`
+
 ## [Slide 09 Refinement: Net-Positive Agent Economics & Value Tracking] - 2026-09-10
 ### Stage 09 (Agent Economics // Enterprise Value Topology)
 - **H2 Subheading Strategic Realignment**:
