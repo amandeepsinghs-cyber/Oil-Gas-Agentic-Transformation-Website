@@ -17,7 +17,7 @@
 | **Stage 04** | **AI Agent: The Intelligent Microservice** | `final_slides/slide_04_the_intelligent_microservice.LOCKED.html` | 2026-09-08 09:12 UTC | **LOCKED & FROZEN** |
 | **Stage 05** | **Structural Resilience of an Agentic Organisation** | `final_slides/slide_05_the_jenga_metaphor.LOCKED.html` | 2026-09-08 09:52 UTC | **LOCKED & FROZEN** |
 | **Stage 06** | **The Petrophysical AI Agent** | `final_slides/slide_06_the_petrophysical_ai_agent.LOCKED.html` | 2026-09-08 10:51 UTC | **LOCKED & FROZEN** |
-| **Stage 07** | **Architecture of an Autonomous AI Agent** | `final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html` | 2026-09-08 11:35 UTC | **LOCKED & FROZEN** |
+| **Stage 07** | **Architecture of the Petrophysical AI Agent** | `final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html` | 2026-09-08 11:35 UTC | **LOCKED & FROZEN** |
 | **Stage 08** | **Agentic Transformation Across Workforce & Workflows (300 Seams)** | `final_slides/slide_08_the_enterprise_chessboard.LOCKED.html` | 2026-09-08 16:25 UTC | **LOCKED & FROZEN** |
 | **Stage 09** | **The Agentic Value Topology (3D Prioritization Terrain)** | `final_slides/slide_09_the_agentic_value_topology.LOCKED.html` | 2026-09-08 15:15 UTC | **LOCKED & FROZEN** |
 | **Stage 10** | **The 6-Week Sovereign Discovery Sprint** | `final_slides/slide_10_the_discovery_sprint.LOCKED.html` | 2026-09-08 17:20 UTC | **LOCKED & FROZEN** |
@@ -183,9 +183,9 @@
 ---
 
 ### Slide 07 Golden Specifications (Approved):
-- **Headline:** *Architecture of an Autonomous AI Agent* (with signature gradient: `#00E5FF` $\rightarrow$ `#00D2B4`).
-- **Kicker:** `07 ARCHITECTURE // AUTONOMOUS AGENT & CENTRAL CONTROL PLANE`
-- **Subheading:** *Built on Google Agent Development Kit (ADK), deployed on Vertex AI Agent Runtime, and centrally governed in Gemini Enterprise Agent Registry—delivering deterministic physics across conversational chat, visual workstations, and legacy monoliths.*
+- **Headline:** *Architecture of the Petrophysical AI Agent* (with signature gradient: `#00E5FF` $\rightarrow$ `#00D2B4`).
+- **Kicker:** `07 ARCHITECTURE // PRODUCTION AGENT & CENTRAL CONTROL PLANE`
+- **Subheading:** *The production anatomy of our subsurface agent—built on Google Agent Development Kit (ADK), powered by deterministic physics, and centrally governed as the reference blueprint for enterprise scale.*
 - **Official Google Cloud Reference Architecture Diagram (Embedded Vector SVG):**
   - **Banner:** Google Cloud 4-color brand mark, title, metadata badges (`us-central1`, `A2A Protocol v1.0`, `og-agentic-ecosystem`).
   - **Tier 1: Enterprise Consumption Surfaces ("Two Surfaces, One Brain"):**

@@ -35,9 +35,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
   - Plot Caption updated from academic statistical notation to plain-English before/after proof: `Raw Log: 1.83m offset (misaligned) → Agent Shifted -1.829m: Snapped into exact match within seconds`.
   - Execution Time Metric: Calibrated from overly specific benchmark (`3.2s`) to executive-friendly velocity claim (`within seconds`).
 - **Downstream Slide 07 Title Alignment**:
-  - Aligned Slide 07 title to eliminate "microservice" and maintain unified vocabulary:
-    - *Kicker*: `07 ARCHITECTURE // AUTONOMOUS AGENT & CENTRAL CONTROL PLANE`
-    - *Headline (H1)*: `Architecture of an Autonomous AI Agent`
+  - Aligned Slide 07 title to ground it directly in the Petrophysical AI Agent as the production reference implementation:
+    - *Kicker*: `07 ARCHITECTURE // PRODUCTION AGENT & CENTRAL CONTROL PLANE`
+    - *Headline (H1)*: `Architecture of the Petrophysical AI Agent`
+    - *Subtitle*: `The production anatomy of our subsurface agent—built on Google Agent Development Kit (ADK), powered by deterministic physics, and centrally governed as the reference blueprint for enterprise scale.`
+  - **SVG Reference Architecture Fixes**:
+    - Expanded Tier 1 header pill box width from `340px` to `485px` so the label `1. ENTERPRISE CONSUMPTION SURFACES ("TWO SURFACES, ONE BRAIN")` fits with comfortable padding and zero text overflow.
+    - Expanded Tier 3 header pill box width from `310px` to `340px` for optimal typographic breathing room.
 - **Synchronized Files**:
   - `final_slides/slide_06_the_petrophysical_ai_agent.html`
   - `final_slides/slide_06_the_petrophysical_ai_agent.LOCKED.html`

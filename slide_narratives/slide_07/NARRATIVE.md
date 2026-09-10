@@ -1,4 +1,4 @@
-# Slide 07 Build Narrative: Architecture of an Autonomous AI Agent
+# Slide 07 Build Narrative: Architecture of the Petrophysical AI Agent
 
 ## 1. Executive Purpose & Boardroom Positioning
 
@@ -7,7 +7,7 @@ In Stage 06, the board witnessed the tangible proof of an autonomous agent on a 
 
 However, the strategic message of this transformation is **not** merely that we automated wireline log splicing. 
 
-**On a higher plane, Stage 07 unveils the repeatable, sovereign enterprise blueprint:**
+**On a higher plane, Stage 07 unveils the production architecture of this agent as a repeatable, sovereign enterprise blueprint:**
 1. **Central Command & Multimodal Discovery (Gemini Enterprise)**: The agent is registered and controlled in a central enterprise plane. An executive or engineer uses plain English to immediately identify and triage assets across siloed databases without manual folder hunting.
 2. **Headless & Omnichannel ("Two Surfaces, One Brain")**: The agent is headless. It does not force users into a single proprietary UI. It can be invoked from the central Gemini Enterprise cockpit, an interactive specialist GUI (Subsurface Studio on Cloud Run), or headless batch pipelines (Cloud Composer / Airflow, Petrel / Techlog monoliths).
 3. **Governed Sovereign Ingestion**: The agent operates under strict enterprise IAM boundaries (`splice-agent@og-agentic-ecosystem`). It accesses only authorized block/joint-venture partitions with zero cross-tenant contamination.
@@ -26,12 +26,12 @@ The visual core of Slide 07 is an official Google Cloud Reference Architecture d
 
 ```
 ┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ STAGE 07 // SOVEREIGN REFERENCE ARCHITECTURE // AUTONOMOUS AGENT & CONTROL PLANE                       │
+│ STAGE 07 // PRODUCTION REFERENCE ARCHITECTURE // AGENT & CONTROL PLANE                                │
 ├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                                        │
-│  HEADING: Architecture of an Autonomous AI Agent                                                       │
-│  SUBHEADING: Built on Google Agent Development Kit (ADK), deployed on Vertex AI Agent Runtime, and     │
-│              centrally governed in Gemini Enterprise Agent Registry—delivering deterministic physics.  │
+│  HEADING: Architecture of the Petrophysical AI Agent                                                   │
+│  SUBHEADING: The production anatomy of our subsurface agent—built on Google Agent Development Kit      │
+│              (ADK), powered by deterministic physics, and governed as our enterprise blueprint.        │
 │                                                                                                        │
 │  ┌──────────────────────────────────────────────────────────────────────────────────────────────────┐  │
 │  │ 1. ENTERPRISE CONSUMPTION SURFACES ("TWO SURFACES, ONE BRAIN")                                   │  │
@@ -91,7 +91,7 @@ The visual core of Slide 07 is an official Google Cloud Reference Architecture d
 
 > *"Chairman, Members of the Board:
 > 
-> What you just witnessed in Kansas Well A-12 was not an isolated software trick. On a higher plane, it represents the foundational architecture of an Autonomous AI Agent.
+> What you just witnessed in Kansas Well A-12 was not an isolated software trick. Here is the production architecture of that Petrophysical AI Agent—and why it serves as the foundational blueprint for our entire enterprise fleet.
 > 
 > Notice how this works:
 > At the top, we have 'Two Surfaces, One Brain.' The agent is completely headless. An asset director can discover, query, and command it directly inside Gemini Enterprise using plain English. A specialist petrophysicist can interact with it inside Subsurface Studio with 4-track visual depth synchronization. And your overnight batch pipelines or legacy Petrel monoliths can call it via standard APIs.
