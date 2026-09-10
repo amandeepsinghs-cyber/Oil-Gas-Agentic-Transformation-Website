@@ -6,6 +6,50 @@ All notable changes, architectural pivots, and slide finalization milestones for
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and adheres to the **"Zero-Anxiety Cadence"**:
 - **Authoring**: Built and verified in isolated slide view (`working_deck/pages/page_XX.html`).
 - **Review**: Visual and narrative sign-off by executive review.
+
+## [Slide 06 & 07 Refinement: Executive Simplification, Agent-First Framing & 4-Stage Arc] - 2026-09-10
+### Stage 06 (Living Proof // The Petrophysical AI Agent)
+- **Elimination of "Microservice" & Direct Agent-First Framing**:
+  - The architectural concept of "Monoliths of Record + Intelligent Microservices" was fully established in Slides 03, 04, and 05. Repeating "Proof of an Intelligent Microservice" on Slide 06 labored a technical term and cluttered the true hero of the slide.
+  - **Slide 06 Headline (H1)**:
+    - *Previous*: `Proof of an Intelligent Microservice: The Petrophysical AI Agent`
+    - *Updated*: `The Petrophysical AI Agent`
+    - *Rationale*: Strips out 5 redundant words; lets the Agent stand bold and confident as the single hero in full Nebula gradient.
+  - **Slide 06 Kicker**:
+    - *Previous*: `STAGE 06 // PROOF OF AN INTELLIGENT MICROSERVICE // THE PETROPHYSICAL AI AGENT`
+    - *Updated*: `STAGE 06 // LIVING PROOF // THE SUBSURFACE SENTINEL`
+  - **Slide 06 Subheading**:
+    - *Previous*: *"Eliminating hours of manual curve alignment with an autonomous subsurface physics microservice."*
+    - *Updated*: *"Eliminating hours of manual curve alignment with an autonomous subsurface physics agent."*
+- **Executive Simplification & 4-Stage Narrative Arc**:
+  - Transformed the slide from petrophysics textbook jargon (*porosity, permeability, Gamma Ray cross-correlation, tool recalibration drift, SciPy r = 0.9899*) into an intuitive, crystal-clear 4-step executive sequence:
+    1. `01 THE CHALLENGE // MANUAL CURVE ALIGNMENT`: Raw Well Logs Arrive Mismatched & Disconnected. Separate wireline passes never line up due to cable stretch and sensor drift; senior petrophysicists spend 1–2 hours manually nudging curves at 3:00 AM risking multi-crore drilling depth errors.
+    2. `02 WHAT IS NEEDED // TARGETED PHYSICS INTELLIGENCE`: Automated Deterministic Alignment. A targeted solution that works alongside existing subsurface systems—normalizing tool calibration drift, running signal cross-correlation across the overlap, and locking in the exact depth offset where curve alignment is mathematically maximized.
+    3. `03 WHAT THE AGENT BUILDS // UNIFIED COMPOSITE LOG` (Within Seconds): Verified Composite Well Log Within Seconds. Ingests raw passes, normalizes curve scales, and executes the optimal -1.8m shift where cross-correlation peaks ($r = 0.99$), delivering an audit-ready composite log for instant visual verification.
+    4. `⚡ THE ENTERPRISE PAYOFF:` Renders 4 high-contrast executive badges without numbering or cluttering text: `[ Capital Protection ]` `[ Operational Speed ]` `[ Talent Elevation ]` `[ Decision Accuracy ]`. Zero fine-print clutter; maximum scannability from the back of the boardroom.
+  - **Navigation Bridge Correction**:
+    - Replaced outdated placeholder `Next: The 10×10 Fleet Map` with accurate destination: `Next: Agent Architecture Blueprint` (linking to Stage 07, which leads into the 20 Personas / Organizational Matrix on Stage 08).
+- **Visual Callout & Telemetry Grounding**:
+  - Plot Header updated to: `KANSAS WELL A-12 // AUTOMATED OVERLAP ALIGNMENT` | `PEAK CORRELATION: r = 0.99`.
+  - Replaced inaccurate claim of "99% mathematical convergence" with genuine signal processing telemetry: normalizing tool calibration drift, running sliding cross-correlation, and locking in the exact depth of peak correlation ($r = 0.99$).
+  - Plot Caption updated from academic statistical notation to plain-English before/after proof: `Raw Log: 1.83m offset (misaligned) → Agent Shifted -1.829m: Snapped into exact match within seconds`.
+  - Execution Time Metric: Calibrated from overly specific benchmark (`3.2s`) to executive-friendly velocity claim (`within seconds`).
+- **Downstream Slide 07 Title Alignment**:
+  - Aligned Slide 07 title to eliminate "microservice" and maintain unified vocabulary:
+    - *Kicker*: `07 ARCHITECTURE // AUTONOMOUS AGENT & CENTRAL CONTROL PLANE`
+    - *Headline (H1)*: `Architecture of an Autonomous AI Agent`
+- **Synchronized Files**:
+  - `final_slides/slide_06_the_petrophysical_ai_agent.html`
+  - `final_slides/slide_06_the_petrophysical_ai_agent.LOCKED.html`
+  - `working_deck/pages/page_06.html`
+  - `final_slides/slide_07_the_headless_petrophysical_agent.html`
+  - `final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html`
+  - `working_deck/pages/page_07.html`
+  - `slide_narratives/slide_06/NARRATIVE.md`
+  - `slide_narratives/slide_07/NARRATIVE.md`
+  - `LOCKED_SLIDES.md`
+  - `CHANGELOG.md`
+
 ## [Slide 05 Refinement: Structural Resilience & Engineering Rigor] - 2026-09-10
 ### Stage 05 (The Visceral Reality // Structural Resilience Metaphor)
 - **Subheading Strategic Realignment**:

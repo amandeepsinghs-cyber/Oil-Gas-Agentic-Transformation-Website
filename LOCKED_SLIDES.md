@@ -16,8 +16,8 @@
 | **Stage 03** | **The Need: 5 Non-Negotiable Criteria of the Plug** | `final_slides/slide_03_the_need_criteria.LOCKED.html` | 2026-09-08 06:40 UTC | **LOCKED & FROZEN** |
 | **Stage 04** | **AI Agent: The Intelligent Microservice** | `final_slides/slide_04_the_intelligent_microservice.LOCKED.html` | 2026-09-08 09:12 UTC | **LOCKED & FROZEN** |
 | **Stage 05** | **Structural Resilience of an Agentic Organisation** | `final_slides/slide_05_the_jenga_metaphor.LOCKED.html` | 2026-09-08 09:52 UTC | **LOCKED & FROZEN** |
-| **Stage 06** | **Proof of an Intelligent Microservice: The Petrophysical AI Agent** | `final_slides/slide_06_the_petrophysical_ai_agent.LOCKED.html` | 2026-09-08 10:51 UTC | **LOCKED & FROZEN** |
-| **Stage 07** | **Architecture of an Intelligent Microservice: The Autonomous AI Agent** | `final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html` | 2026-09-08 11:35 UTC | **LOCKED & FROZEN** |
+| **Stage 06** | **The Petrophysical AI Agent** | `final_slides/slide_06_the_petrophysical_ai_agent.LOCKED.html` | 2026-09-08 10:51 UTC | **LOCKED & FROZEN** |
+| **Stage 07** | **Architecture of an Autonomous AI Agent** | `final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html` | 2026-09-08 11:35 UTC | **LOCKED & FROZEN** |
 | **Stage 08** | **Agentic Transformation Across Workforce & Workflows (300 Seams)** | `final_slides/slide_08_the_enterprise_chessboard.LOCKED.html` | 2026-09-08 16:25 UTC | **LOCKED & FROZEN** |
 | **Stage 09** | **The Agentic Value Topology (3D Prioritization Terrain)** | `final_slides/slide_09_the_agentic_value_topology.LOCKED.html` | 2026-09-08 15:15 UTC | **LOCKED & FROZEN** |
 | **Stage 10** | **The 6-Week Sovereign Discovery Sprint** | `final_slides/slide_10_the_discovery_sprint.LOCKED.html` | 2026-09-08 17:20 UTC | **LOCKED & FROZEN** |
@@ -148,45 +148,43 @@
   - **Left Tower:** Box boundary, badge dot, border-top, and highlight callout aligned to **Warm Amber / Honey Wood** (`#F59E0B` / `rgba(245, 158, 11, 0.4)`), harmonizing directly with the warm oak wood blocks of the fragile tower.
   - **Right Tower:** Box boundary, badge dot, border-top, and highlight callout aligned to **Electric Neon Cyan** (`#00E5FF` / `rgba(0, 229, 255, 0.45)` / `#38BDF8`), harmonizing directly with the glowing neon cyber-plugs.
 - **Uncluttered Canvas:** Removed redundant lower callout boxes completely to eliminate buzzword repetition and give maximum vertical breathing room to the twin visual towers.
-- **Narrative Bridge:** Bottom transition to Stage 06 (*Proof of an Intelligent Microservice: The Petrophysical AI Agent*).
+- **Narrative Bridge:** Bottom transition to Stage 06 (*The Petrophysical AI Agent*).
 
 ---
 
 ### Slide 06 Golden Specifications (Approved):
-- **Headline:** *Proof of an Intelligent Microservice: The Petrophysical AI Agent* (with futuristic Nebula multi-stop linear gradient: `#00E5FF` $\rightarrow$ `#38BDF8` $\rightarrow$ `#818CF8` $\rightarrow$ `#C084FC` $\rightarrow$ `#F472B6`).
-- **Subheading:** *How an intelligent microservice automates high-stakes subsurface physics workflows—giving valuable time back to domain experts and increasing workflow decision accuracy.*
-- **Kicker:** `STAGE 06 // PROOF OF AN INTELLIGENT MICROSERVICE // THE PETROPHYSICAL AI AGENT`
+- **Headline:** *The Petrophysical AI Agent* (with futuristic Nebula multi-stop linear gradient: `#00E5FF` $\rightarrow$ `#38BDF8` $\rightarrow$ `#818CF8` $\rightarrow$ `#C084FC` $\rightarrow$ `#F472B6`).
+- **Subheading:** *Eliminating hours of manual curve alignment with an autonomous subsurface physics agent.*
+- **Kicker:** `STAGE 06 // LIVING PROOF // THE SUBSURFACE SENTINEL`
 - **Telemetry Badge:** `KANSAS WELL A-12 BENCHMARK`
 - **Balanced 2-Wing Architecture (`0.98fr 1.02fr`, `align-items: stretch`):**
   - **Left Wing (The 3 Narrative Blocks with Vertical Breathing Room):**
-    1. `01 CONTEXT // THE PETROPHYSICIST'S ROLE`: Reservoir characterization & hydrocarbon quantification; interpreting porosity, permeability, quantifying oil/gas in reservoir.
-    2. `02 THE BOTTLENECK // OPERATIONAL FRICTION & BUSINESS RISK`: 1–2 hours of manual effort & operational risk; wireline log passes must be depth-matched; risk of distorted reserves & misplaced casing if rushed at 3:00 AM.
-    3. `03 THE NEED // AN INTELLIGENT SYSTEM` (`3.2s EXECUTION`): Replicates physical workflow; Gamma Ray cross-correlation over overlap, exact depth shift, tool recalibration normalization, 1-click human verification.
+    1. `01 THE CHALLENGE // MANUAL CURVE ALIGNMENT`: Raw Well Logs Arrive Mismatched & Disconnected. Separate wireline passes never line up due to cable stretch and sensor drift; senior petrophysicists spend 1–2 hours manually nudging curves at 3:00 AM risking multi-crore drilling depth errors.
+    2. `02 WHAT IS NEEDED // TARGETED PHYSICS INTELLIGENCE`: Automated Deterministic Alignment. A targeted solution that works alongside existing subsurface systems—normalizing tool calibration drift, running signal cross-correlation across the overlap, and locking in the exact depth offset where curve alignment is mathematically maximized.
+    3. `03 WHAT THE AGENT BUILDS // UNIFIED COMPOSITE LOG` (`WITHIN SECONDS`): Verified Composite Well Log Within Seconds. AI Agent ingests raw passes, normalizes curve scales, and executes the optimal -1.8m shift where cross-correlation peaks ($r = 0.99$), delivering an audit-ready composite log for instant visual verification.
   - **Right Wing (Visual Proof & Live Enterprise Demonstration):**
     1. **Well A-12 Gamma Ray Overlap Plot Container:**
        - Authentic Kansas Well A-12 benchmark (`3_overlap_detail.png` from `splice_agent_v8`).
+       - Header: `KANSAS WELL A-12 // AUTOMATED OVERLAP ALIGNMENT` | `PEAK CORRELATION: r = 0.99`.
        - Zoomed presentation (`max-height: 440px`, default `scale(1.06)` inside `.plot-frame` with `#FFFFFF` background).
        - Smooth interactive hover zoom (`scale(1.12)`).
-       - Telemetry: SciPy $r = 0.9899 \cdot 2.9\text{ cm Error}$; As Recorded $1.83\text{m}$ offset $\rightarrow$ Shifted $-1.829\text{m}$ exact physical alignment.
+       - Telemetry Caption: `Raw Log: 1.83m offset (misaligned)` $\rightarrow$ `Agent Shifted -1.829m: Snapped into exact match within seconds`.
     2. **Live AI Agent Demonstration Card:**
        - Google Gemini Enterprise vector gradient brand mark.
        - Direct live deployment link to Gemini Enterprise (`ID: 7dab71a6...5c05`).
        - Gradient button `Launch Demo ↗` targeting `https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05?hl=en_US`.
 - **Baseline Alignment:** Left 3 boxes and right 2 visual elements mathematically locked to the exact same vertical depth.
-- **The Opportunity Horizon Bar:**
-  - Full-width bottom bar stretching to the right, formatted cleanly into 2 balanced lines.
-  - Core business values illuminated in signature gradient turquoise (`linear-gradient(90deg, #00D2B4 0%, #00E5FF 100%)`):
-    - `THE OPPORTUNITY // TIME RECOVERED & DECISION ACCURACY:`
-    - `1–2 critical hours back`
-    - `substantially increasing decision accuracy`
-    - `high-value reservoir modeling and maximizing asset recovery`
-- **Narrative Bridge:** Bottom transition to Stage 07 (*Next: Architecture of an Intelligent Microservice: The Autonomous AI Agent*).
+- **The Enterprise Payoff Horizon Bar:**
+  - Full-width bottom bar stretching to the right, formatted as an ultra-clean executive badge row:
+    - Kicker: `⚡ THE ENTERPRISE PAYOFF:`
+    - 4 Executive Pillar Badges: `[ Capital Protection ]` `[ Operational Speed ]` `[ Talent Elevation ]` `[ Decision Accuracy ]`
+- **Narrative Bridge:** Bottom transition to Stage 07 (*Next: Agent Architecture Blueprint*).
 
 ---
 
 ### Slide 07 Golden Specifications (Approved):
-- **Headline:** *Architecture of an Intelligent Microservice: The Autonomous AI Agent* (with signature gradient: `#00E5FF` $\rightarrow$ `#00D2B4`).
-- **Kicker:** `07 ARCHITECTURE // AUTONOMOUS MICROSERVICE & CENTRAL CONTROL PLANE`
+- **Headline:** *Architecture of an Autonomous AI Agent* (with signature gradient: `#00E5FF` $\rightarrow$ `#00D2B4`).
+- **Kicker:** `07 ARCHITECTURE // AUTONOMOUS AGENT & CENTRAL CONTROL PLANE`
 - **Subheading:** *Built on Google Agent Development Kit (ADK), deployed on Vertex AI Agent Runtime, and centrally governed in Gemini Enterprise Agent Registry—delivering deterministic physics across conversational chat, visual workstations, and legacy monoliths.*
 - **Official Google Cloud Reference Architecture Diagram (Embedded Vector SVG):**
   - **Banner:** Google Cloud 4-color brand mark, title, metadata badges (`us-central1`, `A2A Protocol v1.0`, `og-agentic-ecosystem`).

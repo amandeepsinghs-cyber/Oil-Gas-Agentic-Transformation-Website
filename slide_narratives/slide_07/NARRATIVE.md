@@ -1,9 +1,9 @@
-# Slide 07 Build Narrative: Architecture of an Intelligent Microservice: The Autonomous AI Agent
+# Slide 07 Build Narrative: Architecture of an Autonomous AI Agent
 
 ## 1. Executive Purpose & Boardroom Positioning
 
 ### The Transition from "Petrophysical Outcome" to the "Higher Plane"
-In Stage 06, the board witnessed the tangible proof of an intelligent microservice on a live operational well: the Petrophysical AI Agent executing wireline depth-splicing in 3.2 seconds on Kansas Well A-12 with $r = 0.9899$ accuracy.
+In Stage 06, the board witnessed the tangible proof of an autonomous agent on a live operational well: the Petrophysical AI Agent executing wireline depth-splicing within seconds on Kansas Well A-12 with $r = 0.9899$ accuracy.
 
 However, the strategic message of this transformation is **not** merely that we automated wireline log splicing. 
 
@@ -29,7 +29,7 @@ The visual core of Slide 07 is an official Google Cloud Reference Architecture d
 │ STAGE 07 // SOVEREIGN REFERENCE ARCHITECTURE // AUTONOMOUS AGENT & CONTROL PLANE                       │
 ├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                                        │
-│  HEADING: Architecture of an Intelligent Microservice: The Autonomous AI Agent                         │
+│  HEADING: Architecture of an Autonomous AI Agent                                                       │
 │  SUBHEADING: Built on Google Agent Development Kit (ADK), deployed on Vertex AI Agent Runtime, and     │
 │              centrally governed in Gemini Enterprise Agent Registry—delivering deterministic physics.  │
 │                                                                                                        │
@@ -91,7 +91,7 @@ The visual core of Slide 07 is an official Google Cloud Reference Architecture d
 
 > *"Chairman, Members of the Board:
 > 
-> What you just witnessed in Kansas Well A-12 was not an isolated software trick. On a higher plane, it represents the foundational architecture of an Intelligent Microservice.
+> What you just witnessed in Kansas Well A-12 was not an isolated software trick. On a higher plane, it represents the foundational architecture of an Autonomous AI Agent.
 > 
 > Notice how this works:
 > At the top, we have 'Two Surfaces, One Brain.' The agent is completely headless. An asset director can discover, query, and command it directly inside Gemini Enterprise using plain English. A specialist petrophysicist can interact with it inside Subsurface Studio with 4-track visual depth synchronization. And your overnight batch pipelines or legacy Petrel monoliths can call it via standard APIs.
@@ -106,7 +106,7 @@ The visual core of Slide 07 is an official Google Cloud Reference Architecture d
 > So here is the question every executive in this room should now ask:
 > Where else in your organisation do engineers pull data from Database A, perform a standard calculation or rule check, and write the result to System B?
 > 
-> That is where your next intelligent microservice belongs."*
+> That is where your next autonomous agent belongs."*
 
 ---
 
