@@ -6,27 +6,6 @@ All notable changes, architectural pivots, and slide finalization milestones for
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and adheres to the **"Zero-Anxiety Cadence"**:
 - **Authoring**: Built and verified in isolated slide view (`working_deck/pages/page_XX.html`).
 - **Review**: Visual and narrative sign-off by executive review.
-## [Slide 03 Elevation: High-Level Software Engineering Definition of AI Agents] - 2026-09-10
-### Stage 03 (Architectural Requisites // Higher-Level Software Engineering)
-- **Elevated Architectural Definition Card**:
-  - **Previous Headline**: *"A system that is Surgical, Automated, Intelligent, Governed, and Robust embodies the core characteristics of an Enterprise AI Agent."*
-  - **Updated Headline**: *"What is an Enterprise AI Agent? An intelligent microservice that coexists with your monoliths to create an agentic organization."*
-  - **Previous Subtext**: *"These five non-negotiable characteristics separate mission-critical enterprise infrastructure from consumer chatbots—guaranteeing deterministic physical calculations, strict human oversight, and zero operational hallucination."*
-  - **Updated Subtext**: *"It doesn't replace your systems of record—it wraps legacy ERPs, SCADA, and historians with surgical intelligence, providing deterministic physical calculations, strict human oversight, and zero operational hallucination."*
-  - **Strategic Rationale**: Shifts the presentation from abstract academic definitions to practical, senior software engineering architecture. Grounds the AI Agent as an event-driven, intelligent microservice that wraps legacy monoliths rather than proposing a costly and disruptive rip-and-replace.
-- **Synchronized Across All Slide Representations, Master Decks & Specs**:
-  - `slides/slide_03_the_need_criteria.html`
-  - `working_deck/slides/slide_03_the_need_criteria.html`
-  - `final_slides/slide_03_the_need_criteria.html`
-  - `final_slides/slide_03_the_need_criteria.LOCKED.html`
-  - `deck.html`
-  - `index.html`
-  - `working_deck/index.html`
-  - `working_deck/pages/page_03.html`
-  - `slides/slide_03_mece_traps.html`
-  - `working_deck/slides/slide_03_mece_traps.html`
-  - `AGENTIC_PITCH_BIBLE.md`
-
 ## [Slide 03 Refinement: Streamlining Criterion 04 (Governed)] - 2026-09-09
 ### Stage 03 (Architectural Requisites // The Defensive Plug / Solution)
 - **Concise Governance Pillar Specification**:

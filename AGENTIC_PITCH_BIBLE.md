@@ -189,10 +189,11 @@
      *Title:* **Robust**  
      *Requirement:* Grounded in deterministic physics and exact mathematical solvers.  
 * **The Architectural Definition Banner:**
-  - *Kicker:* `THE ARCHITECTURAL DEFINITION // HIGHER-LEVEL SOFTWARE ENGINEERING`
+  - *Kicker:* `THE ARCHITECTURAL DEFINITION // CORE CHARACTERISTICS`
   - *Definition:*  
-    **What is an Enterprise AI Agent? An intelligent microservice that coexists with your monoliths to create an agentic organization.**
-  - *Subtext:* *"It doesn't replace your systems of record—it wraps legacy ERPs, SCADA, and historians with surgical intelligence, providing deterministic physical calculations, strict human oversight, and zero operational hallucination."*
+    **A system that is Surgical, Automated, Intelligent, Governed, and Robust**  
+    **embodies the core characteristics of an Enterprise AI Agent.**
+  - *Subtext:* *"These five non-negotiable characteristics separate mission-critical enterprise infrastructure from consumer chatbots—guaranteeing deterministic physical calculations, strict human oversight, and zero operational hallucination."*
   - *Badge Strip:* `STRATEGIC PIVOT: SPECIFICATION ➔ AI AGENT · MINUTE 4.5 SOLUTION REVEAL`
 * **Editorial Transition to Stage 04:**
   - *Question:* *"Where does the AI Agent create enterprise value?"*
@@ -201,7 +202,7 @@
 
 ### 2. Core Strategic Intent & Boardroom Point
 * **The Psychology of the Pitch:** If you begin an executive meeting pitching "AI Agents", energy leaders are immediately cynical. But if you lead them through the exact operational requirements needed to solve the Swiss cheese seams, they agree that any solution *must* be Surgical, Automated, Intelligent, Governed, and Robust.
-* **The Core Definition:** At the higher level of software engineering, an Enterprise AI Agent is an intelligent microservice that coexists with existing monoliths. Rather than forcing a costly and disruptive rip-and-replace of SCADA or SAP, it wraps core systems with deterministic intelligence to build an agile, agentic organization.
+* **The Core Definition:** When we establish that a system satisfying these five criteria embodies the core characteristics of an Enterprise AI Agent, the room aligns around engineering rigor. We have not sold them a speculative tool; we have defined the defensive engineering standard their operations require.
 
 ### 3. Boardroom Spoken Script (CMD & CEO Track)
 > *"Before we talk about any technology vendor or software platform, let us ask a fundamental engineering question:
