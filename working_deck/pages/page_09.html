@@ -196,6 +196,32 @@
       font-weight: 700;
     }
   </style>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('deck-theme') || 'dark';
+      if (saved === 'light') {
+        document.documentElement.classList.add('theme-light');
+      }
+    })();
+    function toggleTheme() {
+      const isCurrentlyLight = document.documentElement.classList.toggle('theme-light');
+      if (document.body) document.body.classList.toggle('theme-light', isCurrentlyLight);
+      localStorage.setItem('deck-theme', isCurrentlyLight ? 'light' : 'dark');
+      updateThemeButtons(isCurrentlyLight);
+    }
+    function updateThemeButtons(isLight) {
+      document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+        btn.innerHTML = isLight 
+          ? '<span style="font-size: 13px; line-height: 1;">🌙</span><span>Dark Mode</span>' 
+          : '<span style="font-size: 13px; line-height: 1;">☀️</span><span>Light Mode</span>';
+        btn.setAttribute('title', isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const isLight = document.documentElement.classList.contains('theme-light');
+      updateThemeButtons(isLight);
+    });
+  </script>
 </head>
 <body>
 
@@ -206,7 +232,11 @@
       <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2);"></div>
       <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: #FFFFFF; letter-spacing: 1.5px; text-transform: uppercase;">STAGE 09 // THE AGENTIC VALUE TOPOLOGY</span>
     </a>
-    <nav style="display: flex; align-items: center; gap: 18px;">
+    <nav style="display: flex; align-items: center; gap: 16px;">
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Light Mode">
+        <span style="font-size: 13px; line-height: 1;">☀️</span>
+        <span>Light Mode</span>
+      </button>
       <a href="page_08.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #94A3B8; text-decoration: none; padding: 4px 12px; border-radius: 6px; background: rgba(255,255,255,0.04); transition: color 0.2s;">← Prev Page (Slide 08)</a>
       <span style="font-family: var(--font-mono); font-size: 13px; color: var(--security-turquoise); font-weight: 700;">10 / 11</span>
       <a href="page_10.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 12px; border-radius: 6px; background: rgba(0, 163, 255, 0.08); transition: color 0.2s;">Next Page (Slide 11) →</a>
@@ -217,7 +247,7 @@
   </header>
 
   <!-- Main Viewport -->
-  <main id="viewport-scaler" style="padding-top: 75px; min-height: 100vh; position: relative;">
+  <main id="viewport-scaler" class="stage-09 stage-container" style="padding-top: 75px; min-height: 100vh; position: relative;">
     
     <!-- Atmospheric Grid Backdrop -->
     <div class="slide-bg-media">
@@ -225,7 +255,7 @@
       <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 35%, rgba(0, 210, 180, 0.05) 0%, rgba(6, 9, 14, 0.96) 65%, var(--slate-bg) 100%);"></div>
     </div>
 
-    <div style="max-width: 1720px; margin: 0 auto; padding: 30px max(20px, 2.5vw); position: relative; z-index: 2;">
+    <div id="stage-09" style="max-width: 1720px; margin: 0 auto; padding: 30px max(20px, 2.5vw); position: relative; z-index: 2;">
       
       <!-- Stage Header Block -->
       <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; margin-bottom: 22px; flex-wrap: wrap;">
@@ -282,7 +312,7 @@
           <!-- The High-Consequence Summit Leaderboard -->
           <div style="background: rgba(13, 19, 32, 0.85); border: 1px solid var(--slate-border); border-radius: 8px; padding: 18px;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #FFF; letter-spacing: 1px;">
+              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--text-primary, #FFF); letter-spacing: 1px;">
                 PRIORITISED VALUE-UNLOCK AGENTS // HIGH-EXPOSURE TARGETS
               </span>
               <span style="font-family: var(--font-mono); font-size: 10px; color: var(--security-turquoise);">CLICK TO INSPECT AGENT</span>
@@ -295,15 +325,15 @@
                   <span style="font-family: var(--font-mono); font-size: 10px; background: var(--security-turquoise); color: #06090E; font-weight: 800; padding: 1px 6px; border-radius: 3px;">
                     ★ PROVEN AGENT
                   </span>
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">Lead Petrophysicist</span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">Lead Petrophysicist</span>
                 </div>
                 <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--security-turquoise);">₹45 Cr / yr</span>
               </div>
-              <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
+              <div style="font-size: 13px; font-weight: 700; color: var(--text-primary, #FFF); margin-bottom: 2px;">
                 Wireline Curve Splicing (Slide 06 Benchmark)
               </div>
               <div style="font-size: 11.5px; color: #94A3B8;">
-                3.2s SciPy execution vs 2.5 hr drift • 2.9cm accuracy • <strong>VALIDATED IN PRODUCTION</strong>
+                SciPy execution in seconds vs 2.5 hr drift • 2.9cm accuracy • <strong>VALIDATED IN PRODUCTION</strong>
               </div>
             </div>
 
@@ -314,11 +344,11 @@
                   <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #FCA5A5; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
                     TARGET 01 // HIGHEST EXPOSURE
                   </span>
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">Hydrocracker Specialist</span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">Hydrocracker Specialist</span>
                 </div>
                 <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--nebula-crimson);">₹130 Cr / yr</span>
               </div>
-              <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
+              <div style="font-size: 13px; font-weight: 700; color: var(--text-primary, #FFF); margin-bottom: 2px;">
                 Reactor Thermal Runaway &amp; Hydrogen Quench
               </div>
               <div style="font-size: 11.5px; color: #94A3B8;">
@@ -333,11 +363,11 @@
                   <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #FCA5A5; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
                     TARGET 02
                   </span>
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">Drilling Operations Lead</span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">Drilling Operations Lead</span>
                 </div>
                 <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--nebula-crimson);">₹120 Cr / yr</span>
               </div>
-              <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
+              <div style="font-size: 13px; font-weight: 700; color: var(--text-primary, #FFF); margin-bottom: 2px;">
                 Anti-Collision Scanning vs Offset Wellbores
               </div>
               <div style="font-size: 11.5px; color: #94A3B8;">
@@ -352,11 +382,11 @@
                   <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #FCA5A5; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
                     TARGET 03
                   </span>
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">FCCU Process Engineer</span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">FCCU Process Engineer</span>
                 </div>
                 <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--nebula-crimson);">₹115 Cr / yr</span>
               </div>
-              <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
+              <div style="font-size: 13px; font-weight: 700; color: var(--text-primary, #FFF); margin-bottom: 2px;">
                 Slide Valve Reverse &amp; Cyclone Catalyst Blowout
               </div>
               <div style="font-size: 11.5px; color: #94A3B8;">
@@ -371,11 +401,11 @@
                   <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(245, 158, 11, 0.2); color: #FDE68A; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(245, 158, 11, 0.4);">
                     TARGET 04
                   </span>
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">CDU/VDU Distillation Lead</span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">CDU/VDU Distillation Lead</span>
                 </div>
                 <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--hazard-amber);">₹90 Cr / yr</span>
               </div>
-              <div style="font-size: 13px; font-weight: 700; color: #FFF; margin-bottom: 2px;">
+              <div style="font-size: 13px; font-weight: 700; color: var(--text-primary, #FFF); margin-bottom: 2px;">
                 Crude Assay True Boiling Point Blend
               </div>
               <div style="font-size: 11.5px; color: #94A3B8;">
@@ -416,12 +446,11 @@
             <div id="terrain-tooltip">
               <div style="font-weight: 800; font-size: 12px; margin-bottom: 2px;" id="tt-title">Peak Name</div>
               <div style="font-size: 10px; color: var(--security-turquoise); margin-bottom: 4px;" id="tt-persona">Persona</div>
-              <div style="font-size: 11px; color: #FFF;" id="tt-elevation">Elevation: ₹0 Cr / yr</div>
+              <div style="font-size: 11px; color: var(--text-primary, #FFF);" id="tt-elevation">Elevation: ₹0 Cr / yr</div>
             </div>
 
             <!-- Overlay Compass & Contour Legend (Dynamic Multi-Palette Supported) -->
             <div id="topology-legend-items" style="position: absolute; bottom: 16px; left: 18px; pointer-events: none; font-family: var(--font-mono); font-size: 10px; color: rgba(255, 255, 255, 0.7); display: flex; flex-direction: column; gap: 4px; background: rgba(6, 9, 14, 0.85); backdrop-filter: blur(10px); padding: 10px 14px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.12);">
-              <div style="font-weight: 800; color: #FFF; margin-bottom: 3px; letter-spacing: 0.5px;">GOOGLE LIGHT SPECTRUM (VISIBLE WAVELENGTH ROYGBIV)</div>
               <div style="display: flex; align-items: center; gap: 8px;">
                 <span style="display: inline-block; width: 12px; height: 12px; background: #FFFFFF; border-radius: 2px; box-shadow: 0 0 8px #FFFFFF;"></span>
                 <span>&gt; ₹118 Cr / yr (White-Hot Apex Summits • 0ms Collision &amp; Runaway)</span>
@@ -477,24 +506,24 @@
               <div style="font-family: var(--font-mono); font-size: 10px; color: var(--security-turquoise); font-weight: 800; letter-spacing: 1px;">
                 PHASE 1: PROVEN AGENT
               </div>
-              <div style="font-size: 18px; font-weight: 800; color: #FFF; margin: 2px 0;">1 Agent Validated in Production</div>
-              <div style="font-size: 12px; color: #94A3B8;">Kansas Wireline Splicing • ₹45 Cr exposure eliminated in 3.2s</div>
+              <div class="phase-metric-val" style="font-size: 18px; font-weight: 800; color: var(--text-primary, #FFF); margin: 2px 0;">1 Agent Validated in Production</div>
+              <div class="phase-metric-desc" style="font-size: 12px; color: #94A3B8;">Kansas Wireline Splicing • ₹45 Cr exposure eliminated in seconds</div>
             </div>
 
             <div style="background: rgba(13, 19, 32, 0.7); border: 1px solid var(--slate-border); border-left: 3px solid var(--nebula-crimson); padding: 14px 18px; border-radius: 6px;">
               <div style="font-family: var(--font-mono); font-size: 10px; color: var(--nebula-crimson); font-weight: 800; letter-spacing: 1px;">
                 PHASE 2: TOP 5 HIGH-VALUE AGENTS (TARGET FLEET)
               </div>
-              <div style="font-size: 18px; font-weight: 800; color: #FFF; margin: 2px 0;">₹570 Cr / yr Exposure Mitigated</div>
-              <div style="font-size: 12px; color: #94A3B8;">Hydrocracker, Anti-Collision, FCCU, CDU, Tank Overfill</div>
+              <div class="phase-metric-val" style="font-size: 18px; font-weight: 800; color: var(--text-primary, #FFF); margin: 2px 0;">₹570 Cr / yr Exposure Mitigated</div>
+              <div class="phase-metric-desc" style="font-size: 12px; color: #94A3B8;">Hydrocracker, Anti-Collision, FCCU, CDU, Tank Overfill</div>
             </div>
 
             <div style="background: rgba(13, 19, 32, 0.7); border: 1px solid var(--slate-border); border-left: 3px solid var(--hazard-amber); padding: 14px 18px; border-radius: 6px;">
               <div style="font-family: var(--font-mono); font-size: 10px; color: var(--hazard-amber); font-weight: 800; letter-spacing: 1px;">
                 PHASE 3: ENTERPRISE-WIDE SCALE
               </div>
-              <div style="font-size: 18px; font-weight: 800; color: #FFF; margin: 2px 0;">84 Value-Unlock Agents</div>
-              <div style="font-size: 12px; color: #94A3B8;">1–4 hr engineering latency eliminated across all operational workflows</div>
+              <div class="phase-metric-val" style="font-size: 18px; font-weight: 800; color: var(--text-primary, #FFF); margin: 2px 0;">84 Value-Unlock Agents</div>
+              <div class="phase-metric-desc" style="font-size: 12px; color: #94A3B8;">1–4 hr engineering latency eliminated across all operational workflows</div>
             </div>
 
           </div>
@@ -1347,7 +1376,6 @@
       if (legendEl) {
         if (currentPalette === 'google') {
           legendEl.innerHTML = `
-            <div style="font-weight: 800; color: #FFF; margin-bottom: 3px; letter-spacing: 0.5px;">GOOGLE LIGHT SPECTRUM (VISIBLE WAVELENGTH ROYGBIV)</div>
             <div style="display: flex; align-items: center; gap: 8px;">
               <span style="display: inline-block; width: 12px; height: 12px; background: #FFFFFF; border-radius: 2px; box-shadow: 0 0 8px #FFFFFF;"></span>
               <span>&gt; ₹118 Cr / yr (White-Hot Apex Summits • 0ms Collision &amp; Runaway)</span>
@@ -1379,7 +1407,7 @@
           `;
         } else {
           legendEl.innerHTML = `
-            <div style="font-weight: 800; color: #FFF; margin-bottom: 3px; letter-spacing: 0.5px;">OCEANIC AQUA SPECTRUM (₹ CAPITAL EXPOSURE)</div>
+            <div style="font-weight: 800; color: var(--text-primary, #FFF); margin-bottom: 3px; letter-spacing: 0.5px;">OCEANIC AQUA SPECTRUM (₹ CAPITAL EXPOSURE)</div>
             <div style="display: flex; align-items: center; gap: 8px;">
               <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #00F0FF, #FFFFFF); border-radius: 2px; box-shadow: 0 0 8px #00F0FF;"></span>
               <span>&gt; ₹95 Cr / yr (Starburst Cyan &amp; White Summits • Stardust Crests)</span>

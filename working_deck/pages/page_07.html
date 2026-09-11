@@ -185,6 +185,32 @@
       box-shadow: 0 6px 20px rgba(0, 229, 255, 0.45);
     }
   </style>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('deck-theme') || 'dark';
+      if (saved === 'light') {
+        document.documentElement.classList.add('theme-light');
+      }
+    })();
+    function toggleTheme() {
+      const isCurrentlyLight = document.documentElement.classList.toggle('theme-light');
+      if (document.body) document.body.classList.toggle('theme-light', isCurrentlyLight);
+      localStorage.setItem('deck-theme', isCurrentlyLight ? 'light' : 'dark');
+      updateThemeButtons(isCurrentlyLight);
+    }
+    function updateThemeButtons(isLight) {
+      document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+        btn.innerHTML = isLight 
+          ? '<span style="font-size: 13px; line-height: 1;">🌙</span><span>Dark Mode</span>' 
+          : '<span style="font-size: 13px; line-height: 1;">☀️</span><span>Light Mode</span>';
+        btn.setAttribute('title', isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const isLight = document.documentElement.classList.contains('theme-light');
+      updateThemeButtons(isLight);
+    });
+  </script>
 </head>
 <body>
 
@@ -195,7 +221,11 @@
       <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2);"></div>
       <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: #FFFFFF; letter-spacing: 1.5px; text-transform: uppercase;">STAGE 07 // SOVEREIGN REFERENCE ARCHITECTURE</span>
     </a>
-    <nav style="display: flex; align-items: center; gap: 20px;">
+    <nav style="display: flex; align-items: center; gap: 16px;">
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Light Mode">
+        <span style="font-size: 13px; line-height: 1;">☀️</span>
+        <span>Light Mode</span>
+      </button>
       <a href="page_06.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #94A3B8; text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(255,255,255,0.04); transition: color 0.2s;">← Prev Page</a>
       <span style="font-family: var(--font-mono); font-size: 13px; color: var(--security-turquoise); font-weight: 700;">8 / 11</span>
       <a href="page_08.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(0, 163, 255, 0.08); transition: color 0.2s;">Next Page →</a>
@@ -723,7 +753,7 @@
               <span class="attr-icon">⚡</span>
               <span class="attr-title">02 AUTONOMOUS</span>
             </div>
-            <p class="attr-sub"><strong>24/7 event-driven execution</strong>; discovers runs, calculates shifts, and builds composite in 3.2s.</p>
+            <p class="attr-sub"><strong>24/7 event-driven execution</strong>; discovers runs, calculates shifts, and builds composite in seconds.</p>
           </div>
 
           <div class="attr-card attr-card-intelligent">

@@ -314,7 +314,7 @@
       </div>
 
       <div style="background: rgba(13, 19, 32, 0.65); border: 1px solid rgba(0, 210, 180, 0.3); border-left: 3px solid var(--security-turquoise); padding: 12px 18px; border-radius: 6px; box-shadow: inset 0 0 20px rgba(0, 210, 180, 0.05);">
-        <div style="font-family: var(--font-mono); font-size: 10.5px; color: var(--security-turquoise); letter-spacing: 1px; font-weight: 700;">★ PLUGGED AUTONOMOUS AGENTS</div>
+        <div style="font-family: var(--font-mono); font-size: 10.5px; color: var(--security-turquoise); letter-spacing: 1px; font-weight: 700;">★ READY AUTONOMOUS AGENTS</div>
         <div style="font-size: 26px; font-weight: 800; color: var(--security-turquoise); font-family: var(--font-display);" id="kpi-plugged-count-stage">1 / 300 <span style="font-size: 13px; font-weight: 500; color: #94A3B8;">(0.33%)</span></div>
         <div style="font-family: var(--font-mono); font-size: 10px; color: #FFF;" id="kpi-plugged-sub-stage">Lead Petrophysicist Benchmark (J8)</div>
       </div>
@@ -347,13 +347,13 @@
         <span style="font-family: var(--font-mono); font-size: 11px; color: #64748B; margin-right: 4px;">FILTER BY STATUS:</span>
         <button class="filter-chip active" id="chip-all-stage" onclick="filterByStatus('all')">All 300 Touchpoints</button>
         <button class="filter-chip" id="chip-plugged-stage" onclick="filterByStatus('plugged')" style="border-color: rgba(0, 210, 180, 0.4); color: var(--security-turquoise);">
-          ★ Plugged Only (1)
+          ★ Ready Only (1)
         </button>
         <button class="filter-chip" id="chip-critical-stage" onclick="filterByStatus('critical')" style="border-color: rgba(239, 68, 68, 0.4); color: #F87171;">
-          🔴 Critical Red (52)
+          🔴 Critical (52)
         </button>
         <button class="filter-chip" id="chip-friction-stage" onclick="filterByStatus('friction')" style="border-color: rgba(245, 158, 11, 0.4); color: #FBBF24;">
-          🟡 Friction Amber (84)
+          🟡 Friction (84)
         </button>
         <button class="filter-chip" id="chip-baseline-stage" onclick="filterByStatus('baseline')">
           ⚪ Baseline (164)
@@ -364,7 +364,7 @@
       <div style="display: flex; align-items: center; gap: 14px; font-family: var(--font-mono); font-size: 11px; color: #94A3B8;">
         <div style="display: flex; align-items: center; gap: 6px;">
           <div style="width: 14px; height: 14px; background: var(--security-turquoise); border-radius: 2px;"></div>
-          <span>Plugged Agent</span>
+          <span>Ready Agent</span>
         </div>
         <div style="display: flex; align-items: center; gap: 6px;">
           <div style="width: 14px; height: 14px; background: repeating-linear-gradient(45deg, rgba(239, 68, 68, 0.5) 0, rgba(239, 68, 68, 0.5) 2px, transparent 2px, transparent 4px); border: 1px solid #EF4444; border-radius: 2px;"></div>
@@ -416,8 +416,8 @@
               LIVE SEAM INSPECTOR // TOUCHPOINT FOCUS
             </span>
           </div>
-          <span style="font-family: var(--font-mono); font-size: 10.5px; background: rgba(0, 210, 180, 0.15); color: var(--security-turquoise); padding: 2px 8px; border-radius: 4px; border: 1px solid rgba(0, 210, 180, 0.3);" id="hud-status-badge-stage">
-            ★ PLUGGED (SLIDE 06)
+          <span style="font-family: var(--font-mono); font-size: 10.5px; background: rgba(0, 210, 180, 0.15); color: var(--security-turquoise); padding: 2px 8px; border-radius: 4px; border: 1px solid rgba(0, 210, 180, 0.3); white-space: nowrap; flex-shrink: 0; display: inline-flex; align-items: center;" id="hud-status-badge-stage">
+            READY (SLIDE 06)
           </span>
         </div>
 
@@ -451,7 +451,7 @@
             <span id="hud-plug-heading-stage">⚡ AI AGENT (THE OPPORTUNITY)</span>
           </div>
           <p style="font-size: 13.5px; line-height: 1.55; color: #E2E8F0; margin: 0;" id="hud-plug-desc-stage">
-            <strong>SciPy Curve Splicing Agent (Slide 06)</strong>: 3.2-second autonomous execution, 2.9cm depth error, Pearson $r=0.9899$, automated sanity verification and immutable BigQuery audit ledger.
+            <strong>SciPy Curve Splicing Agent (Slide 06)</strong>: Autonomous execution in seconds, 2.9cm depth error, Pearson $r=0.9899$, automated sanity verification and immutable BigQuery audit ledger.
           </p>
         </div>
 
@@ -490,7 +490,7 @@
           <div>
             <div style="font-family: var(--font-mono); font-size: 10px; color: #94A3B8;">DECISION VELOCITY</div>
             <div style="font-family: var(--font-display); font-size: 18px; font-weight: 800; color: var(--security-turquoise);" id="hud-speed-stat-stage">
-              3.2s vs 2.5 Hrs
+              Seconds vs 2.5 Hrs
             </div>
           </div>
         </div>
@@ -592,9 +592,9 @@
         const chipBaseline = document.getElementById("chip-baseline-stage");
 
         if (chipAll) chipAll.innerText = `All ${total} Seams`;
-        if (chipPlugged) chipPlugged.innerText = `★ Plugged (${plugged})`;
-        if (chipCritical) chipCritical.innerText = `🔴 Critical Red (${critical})`;
-        if (chipFriction) chipFriction.innerText = `🟡 Friction Amber (${friction})`;
+        if (chipPlugged) chipPlugged.innerText = `★ Ready (${plugged})`;
+        if (chipCritical) chipCritical.innerText = `🔴 Critical (${critical})`;
+        if (chipFriction) chipFriction.innerText = `🟡 Friction (${friction})`;
         if (chipBaseline) chipBaseline.innerText = `⚪ Baseline (${baseline})`;
       }
 
@@ -780,43 +780,54 @@
           }
         }
 
-        // Status-specific styling with custom kicker and badge support
+        // Status-specific styling with custom kicker and clean badge support
         const customKicker = actObj.kicker || actObj.hud_kicker;
         const customBadge = actObj.statusBadge || actObj.hud_status_badge;
+        let displayBadge = (customBadge || "").replace(/^[🔴🟡⚪★]\s*/, "");
+        if (displayBadge === "CRITICAL SEAM") displayBadge = "CRITICAL";
+        if (displayBadge === "FRICTION GAP") displayBadge = "FRICTION";
 
         if (hudPulse && hudKicker && hudStatusBadge) {
+          const isLight = document.documentElement.classList.contains('theme-light');
+          hudStatusBadge.className = "";
           if (actObj.status === "plugged") {
-            hudPulse.style.background = "var(--security-turquoise)";
+            hudStatusBadge.classList.add("badge-plugged");
+            hudPulse.style.display = "inline-block";
+            hudPulse.style.background = isLight ? "#00897B" : "var(--security-turquoise)";
+            hudKicker.style.display = "inline";
             hudKicker.innerText = customKicker || "★ DEPLOYED PROOF // KANSAS WELL A-12";
-            hudKicker.style.color = "var(--security-turquoise)";
-            hudStatusBadge.innerText = customBadge || "★ PLUGGED (SLIDE 06 PROVEN)";
-            hudStatusBadge.style.background = "rgba(0, 210, 180, 0.25)";
-            hudStatusBadge.style.borderColor = "var(--security-turquoise)";
-            hudStatusBadge.style.color = "#FFF";
+            hudKicker.style.color = isLight ? "#00897B" : "var(--security-turquoise)";
+            hudStatusBadge.innerText = displayBadge || "READY (SLIDE 06)";
+            hudStatusBadge.style.background = isLight ? "linear-gradient(135deg, #00897B, #0284C7)" : "rgba(0, 210, 180, 0.25)";
+            hudStatusBadge.style.borderColor = isLight ? "#00897B" : "var(--security-turquoise)";
+            hudStatusBadge.style.color = "#FFFFFF";
           } else if (actObj.status === "critical") {
-            hudPulse.style.background = "var(--nebula-crimson)";
-            hudKicker.innerText = customKicker || "🔴 CRITICAL CAPITAL BLEED // CATASTROPHIC RISK";
-            hudKicker.style.color = "var(--nebula-crimson)";
-            hudStatusBadge.innerText = customBadge || "🔴 CRITICAL SEAM";
-            hudStatusBadge.style.background = "rgba(239, 68, 68, 0.25)";
-            hudStatusBadge.style.borderColor = "var(--nebula-crimson)";
-            hudStatusBadge.style.color = "#FCA5A5";
+            hudStatusBadge.classList.add("badge-critical");
+            hudPulse.style.display = "none";
+            hudKicker.style.display = "none";
+            hudKicker.innerText = "";
+            hudStatusBadge.innerText = displayBadge || "CRITICAL";
+            hudStatusBadge.style.background = isLight ? "#FEE2E2" : "rgba(239, 68, 68, 0.25)";
+            hudStatusBadge.style.borderColor = isLight ? "#EF4444" : "var(--nebula-crimson)";
+            hudStatusBadge.style.color = isLight ? "#991B1B" : "#FCA5A5";
           } else if (actObj.status === "friction") {
-            hudPulse.style.background = "var(--hazard-amber)";
-            hudKicker.innerText = customKicker || "🟡 HUMAN BOTTLENECK // 1–4 HR DECISION LATENCY";
-            hudKicker.style.color = "var(--hazard-amber)";
-            hudStatusBadge.innerText = customBadge || "🟡 FRICTION GAP";
-            hudStatusBadge.style.background = "rgba(245, 158, 11, 0.25)";
-            hudStatusBadge.style.borderColor = "var(--hazard-amber)";
-            hudStatusBadge.style.color = "#FDE68A";
+            hudStatusBadge.classList.add("badge-friction");
+            hudPulse.style.display = "none";
+            hudKicker.style.display = "none";
+            hudKicker.innerText = "";
+            hudStatusBadge.innerText = displayBadge || "FRICTION";
+            hudStatusBadge.style.background = isLight ? "#FEF3C7" : "rgba(245, 158, 11, 0.25)";
+            hudStatusBadge.style.borderColor = isLight ? "#F59E0B" : "var(--hazard-amber)";
+            hudStatusBadge.style.color = isLight ? "#92400E" : "#FDE68A";
           } else {
-            hudPulse.style.background = "#94A3B8";
-            hudKicker.innerText = customKicker || "⚪ BASELINE SILO // COMMERCIAL MONOLITH LOCK";
-            hudKicker.style.color = "#94A3B8";
-            hudStatusBadge.innerText = customBadge || "⚪ BASELINE MONOLITH";
-            hudStatusBadge.style.background = "rgba(255, 255, 255, 0.08)";
-            hudStatusBadge.style.borderColor = "rgba(255, 255, 255, 0.2)";
-            hudStatusBadge.style.color = "#CBD5E1";
+            hudStatusBadge.classList.add("badge-baseline");
+            hudPulse.style.display = "none";
+            hudKicker.style.display = "none";
+            hudKicker.innerText = "";
+            hudStatusBadge.innerText = displayBadge || "BASELINE MONOLITH";
+            hudStatusBadge.style.background = isLight ? "#F1F5F9" : "rgba(255, 255, 255, 0.08)";
+            hudStatusBadge.style.borderColor = isLight ? "#CBD5E1" : "rgba(255, 255, 255, 0.2)";
+            hudStatusBadge.style.color = isLight ? "#334155" : "#CBD5E1";
           }
         }
 
@@ -825,29 +836,29 @@
         if (actionContainer) {
           if (rowLetter === "J" && colNum === 8) {
             actionContainer.innerHTML = `
-              <a href="working_deck/pages/page_06.html" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 11px 16px; border-radius: 6px; background: linear-gradient(135deg, rgba(0, 210, 180, 0.3), rgba(0, 163, 255, 0.3)); border: 1.5px solid var(--security-turquoise); color: #FFF; text-decoration: none; font-family: var(--font-mono); font-size: 11px; font-weight: 800; transition: all 0.2s; box-shadow: 0 0 20px rgba(0, 210, 180, 0.25); text-align: center; box-sizing: border-box;">
+              <a href="working_deck/pages/page_06.html" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 11px 16px; border-radius: 6px; background: ${isLight ? 'linear-gradient(135deg, #00897B, #0284C7)' : 'linear-gradient(135deg, rgba(0, 210, 180, 0.3), rgba(0, 163, 255, 0.3))'}; border: 1.5px solid ${isLight ? '#00897B' : 'var(--security-turquoise)'}; color: #FFFFFF; text-decoration: none; font-family: var(--font-mono); font-size: 11px; font-weight: 800; transition: all 0.2s; box-shadow: 0 0 20px ${isLight ? 'rgba(0, 137, 123, 0.25)' : 'rgba(0, 210, 180, 0.25)'}; text-align: center; box-sizing: border-box;">
                 ★ View Slide 06 Production Benchmark (Kansas Well A-12) ↗
               </a>
             `;
           } else if (actObj.status === "plugged") {
             actionContainer.innerHTML = `
-              <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 6px; background: rgba(0, 210, 180, 0.12); border: 1px solid var(--security-turquoise); font-family: var(--font-mono); font-size: 11px; box-sizing: border-box;">
-                <span style="color: var(--security-turquoise); font-weight: 800;">⚡ PRODUCTION AUTONOMOUS AGENT</span>
-                <span style="color: #FFF; font-weight: 700;">ACTIVE IN REGISTRY</span>
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 6px; background: ${isLight ? '#F0FDFA' : 'rgba(0, 210, 180, 0.12)'}; border: 1px solid ${isLight ? '#00897B' : 'var(--security-turquoise)'}; font-family: var(--font-mono); font-size: 11px; box-sizing: border-box;">
+                <span style="color: ${isLight ? '#00897B' : 'var(--security-turquoise)'}; font-weight: 800;">⚡ PRODUCTION AUTONOMOUS AGENT</span>
+                <span style="color: ${isLight ? '#0F172A' : '#FFF'}; font-weight: 700;">ACTIVE IN REGISTRY</span>
               </div>
             `;
           } else if (deploymentStatus.toLowerCase().includes("wave 1") || actObj.status === "critical") {
             actionContainer.innerHTML = `
-              <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 6px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.4); font-family: var(--font-mono); font-size: 11px; box-sizing: border-box;">
-                <span style="color: #FCA5A5; font-weight: 800;">🔴 PROPOSED WAVE 1 AGENT</span>
-                <span style="color: #FFF; font-weight: 700;">CAPITAL BLEED: ${actObj.impact}</span>
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 6px; background: ${isLight ? '#FEE2E2' : 'rgba(239, 68, 68, 0.1)'}; border: 1px solid ${isLight ? '#EF4444' : 'rgba(239, 68, 68, 0.4)'}; font-family: var(--font-mono); font-size: 11px; box-sizing: border-box;">
+                <span style="color: ${isLight ? '#DC2626' : '#FCA5A5'}; font-weight: 800;">🔴 PROPOSED WAVE 1 AGENT</span>
+                <span style="color: ${isLight ? '#991B1B' : '#FFF'}; font-weight: 700;">CAPITAL BLEED: ${actObj.impact}</span>
               </div>
             `;
           } else if (actObj.status === "friction") {
             actionContainer.innerHTML = `
-              <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 6px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); font-family: var(--font-mono); font-size: 11px; box-sizing: border-box;">
-                <span style="color: #FDE68A; font-weight: 800;">🟡 WAVE 2 CANDIDATE</span>
-                <span style="color: #94A3B8;">LATENCY BOTTLENECK</span>
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 6px; background: ${isLight ? '#FEF3C7' : 'rgba(245, 158, 11, 0.08)'}; border: 1px solid ${isLight ? '#F59E0B' : 'rgba(245, 158, 11, 0.3)'}; font-family: var(--font-mono); font-size: 11px; box-sizing: border-box;">
+                <span style="color: ${isLight ? '#92400E' : '#FDE68A'}; font-weight: 800;">🟡 WAVE 2 CANDIDATE</span>
+                <span style="color: ${isLight ? '#B45309' : '#94A3B8'}; font-weight: 700;">LATENCY BOTTLENECK</span>
               </div>
             `;
           } else {
@@ -1043,15 +1054,17 @@
             let hudStatusBadge = act.statusBadge || "";
             if (!hudKicker) {
               if (act.status === "plugged") hudKicker = "★ DEPLOYED PROOF // KANSAS WELL A-12";
-              else if (act.status === "critical") hudKicker = "🔴 CRITICAL CAPITAL BLEED // CATASTROPHIC RISK";
-              else if (act.status === "friction") hudKicker = "🟡 HUMAN BOTTLENECK // 1–4 HR DECISION LATENCY";
-              else hudKicker = "⚪ BASELINE SILO // COMMERCIAL MONOLITH LOCK";
+              else hudKicker = "";
             }
             if (!hudStatusBadge) {
-              if (act.status === "plugged") hudStatusBadge = "★ PLUGGED (SLIDE 06 PROVEN)";
-              else if (act.status === "critical") hudStatusBadge = "🔴 CRITICAL SEAM";
-              else if (act.status === "friction") hudStatusBadge = "🟡 FRICTION GAP";
-              else hudStatusBadge = "⚪ BASELINE MONOLITH";
+              if (act.status === "plugged") hudStatusBadge = "READY (SLIDE 06)";
+              else if (act.status === "critical") hudStatusBadge = "CRITICAL";
+              else if (act.status === "friction") hudStatusBadge = "FRICTION";
+              else hudStatusBadge = "BASELINE MONOLITH";
+            } else {
+              hudStatusBadge = hudStatusBadge.replace(/^[🔴🟡⚪★]\s*/, "");
+              if (hudStatusBadge === "CRITICAL SEAM") hudStatusBadge = "CRITICAL";
+              if (hudStatusBadge === "FRICTION GAP") hudStatusBadge = "FRICTION";
             }
 
             const line = [

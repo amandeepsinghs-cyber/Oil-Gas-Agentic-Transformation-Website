@@ -76,16 +76,18 @@ def sync():
             kicker_val = row.get("hud_kicker", "").strip()
             if not kicker_val:
                 if status_val == "plugged": kicker_val = "★ DEPLOYED PROOF // KANSAS WELL A-12"
-                elif status_val == "critical": kicker_val = "🔴 CRITICAL CAPITAL BLEED // CATASTROPHIC RISK"
-                elif status_val == "friction": kicker_val = "🟡 HUMAN BOTTLENECK // 1–4 HR DECISION LATENCY"
-                else: kicker_val = "⚪ BASELINE SILO // COMMERCIAL MONOLITH LOCK"
+                else: kicker_val = ""
 
             badge_val = row.get("hud_status_badge", "").strip()
             if not badge_val:
-                if status_val == "plugged": badge_val = "★ PLUGGED (SLIDE 06 PROVEN)"
-                elif status_val == "critical": badge_val = "🔴 CRITICAL SEAM"
-                elif status_val == "friction": badge_val = "🟡 FRICTION GAP"
-                else: badge_val = "⚪ BASELINE MONOLITH"
+                if status_val == "plugged": badge_val = "READY (SLIDE 06)"
+                elif status_val == "critical": badge_val = "CRITICAL"
+                elif status_val == "friction": badge_val = "FRICTION"
+                else: badge_val = "BASELINE MONOLITH"
+            else:
+                badge_val = badge_val.lstrip("🔴🟡⚪★ ").strip()
+                if badge_val == "CRITICAL SEAM": badge_val = "CRITICAL"
+                if badge_val == "FRICTION GAP": badge_val = "FRICTION"
 
             action_title_val = row.get("action_full_title", "").strip()
             if not action_title_val:

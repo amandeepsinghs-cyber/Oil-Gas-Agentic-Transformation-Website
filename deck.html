@@ -913,9 +913,9 @@
         drawerTimestamp.innerText = 'LATENCY: 510ms · 14 WELLS RETRIEVED VIA VECTOR SEARCH';
       } else if (type === 'splicing') {
         promptText.innerText = '"Kansas Well A-12: Align Runs 1, 2, and 3 LAS wireline logs and verify overlap..."';
-        drawerBody.innerHTML = 'Dispatched SciPy cross-correlation engine over Kansas Well A-12. Recovered <strong>-1.829m depth shift</strong> on Run 2 with Pearson <strong>r = 0.9899</strong>. Continuous 1,200m composite generated in <strong>3.2 seconds</strong> with zero manual fatigue.';
+        drawerBody.innerHTML = 'Dispatched SciPy cross-correlation engine over Kansas Well A-12. Recovered <strong>-1.829m depth shift</strong> on Run 2 with Pearson <strong>r = 0.9899</strong>. Continuous 1,200m composite generated in <strong>seconds</strong> with zero manual fatigue.';
         drawerStatus.innerText = 'PETROPHYSICAL SPLICING AGENT // SUB-SECOND CONVERGENCE';
-        drawerTimestamp.innerText = 'LATENCY: 3.2s · DETERMINISTIC NUMPY/SCIPY PROVENANCE';
+        drawerTimestamp.innerText = 'LATENCY: SECONDS · DETERMINISTIC NUMPY/SCIPY PROVENANCE';
       } else if (type === 'cdu') {
         promptText.innerText = '"Refinery CDU: Synchronize real-time crude assay with distillation cut schedule..."';
         drawerBody.innerHTML = 'Detected 36-hour delay in lab assay for incoming heavy sour parcel. Synthetic NIR agent projected true API gravity & sulfur content within 0.15% error, preventing <strong>₹12 Cr/month yield downgrade</strong> to atmospheric residue.';
@@ -1018,7 +1018,7 @@
         if (tiers[1].title) tiers[1].title.innerHTML = '<span style="color: #FFF;">Deterministic Splice Agent</span>';
         if (tiers[1].metric) {
           tiers[1].metric.style.color = '#FFF';
-          tiers[1].metric.innerText = '3.2s Exec · SciPy Match (r = 0.9899)';
+          tiers[1].metric.innerText = 'Seconds Exec · SciPy Match (r = 0.9899)';
         }
         if (tiers[1].desc) tiers[1].desc.innerText = 'Pre-built deterministic SciPy engine calculates cable stretch dynamics, removing the 1.48m error with cms-precision curve correlation.';
 

@@ -35,7 +35,8 @@
   1. `FULL VALUE CHAIN`: Upstream · Midstream · Downstream
   2. `SOVEREIGN GOVERNANCE & TRUST`: MeitY Compliant · Identity-Governed Access · Immutable Audit
   3. `DETERMINISTIC PHYSICS ARCHITECTURE`: Autonomous Reasoning · Scientific Solvers · Deterministic Output
-- **Navigation Controls:** Executive top navigation bar (`00 Overview`, `1 / 12`, `Next Page →`) and floating bottom HUD controls (`◀ Prev | 01 / 12 | Next Slide ▶`).
+- **Navigation & Theme Controls:** Executive top navigation bar (`00 Overview`, `1 / 12`, `Next Page →`), global Light/Dark mode toggle button (`☀️ Light Mode` / `🌙 Dark Mode`), and floating bottom HUD controls (`◀ Prev | 01 / 12 | Next Slide ▶`).
+- **Executive Daylight Light Theme Support:** When toggled to Light Mode, background cleanly transitions from obsidian `#06090E` to paper white `#FFFFFF`. Typography, prompt bar, and meta cards transition to deep executive slate (`#0F172A`, `#1E293B`, `#334155`) with high contrast and zero white-on-white text. Theme choice is persisted across slides via `localStorage`.
 
 ---
 
@@ -209,7 +210,7 @@
   - **Well-Architected Pillars:** Operational Excellence, Performance Efficiency, Security, Reliability, Cost.
 - **The 5 Core Attributes Pill-Grid:**
   1. `01 SURGICAL`: Targets exact seam at edge of monolith (LAS parsing, casing tie-in).
-  2. `02 AUTONOMOUS`: 24/7 event-driven execution; discovers runs and splices in 3.2s.
+  2. `02 AUTONOMOUS`: 24/7 event-driven execution; discovers runs and splices in seconds.
   3. `03 INTELLIGENT`: Natural language cross-DB triage & messy vendor log synthesis via Gemini.
   4. `04 GOVERNED`: Managed in Agent Registry, bounded by dedicated IAM & BigQuery audit.
   5. `05 DETERMINISTIC`: Pure SciPy signal physics & mathematical proof; zero generative guessing.
@@ -252,7 +253,7 @@
     - `🔴 THE LATENT VULNERABILITY (VALUE BLEED)`: Concrete operational failure mode.
     - `⚡ AI AGENT (THE OPPORTUNITY)`: Exact sovereign agent solution, mathematical method, and automation speed.
     - `VERTEX AI AGENT REGISTRY IDENTITY`: Resource path, deployment lifecycle state, IAM identity, and technical stack.
-    - **Exposure Metrics:** Annual risk mitigation (e.g. ₹45 Cr/yr) and Decision velocity (e.g. 3.2s vs 2.5 Hrs).
+    - **Exposure Metrics:** Annual risk mitigation (e.g. ₹45 Cr/yr) and Decision velocity (e.g. Seconds vs 2.5 Hrs).
     - **Contextual Action Area:** Slide 06 proof link on J8 anchor, active production/Wave 1 priority tags on candidates.
 - **Top Metric Ribbon:**
   - Total Operational Nodes: `300 Touchpoints (Zero Task Overlap)`
@@ -274,7 +275,7 @@
 - **Split-Screen Architecture:**
   - **Left Panel (Operational Coordinates & Leaderboard):**
     - High-Exposure Targets & Prioritised Value-Unlock Agents:
-      - `★ Proven Agent: Lead Petrophysicist`: Wireline Curve Splicing (₹45 Cr / yr, 3.2s SciPy benchmark, Validated in Production).
+      - `★ Proven Agent: Lead Petrophysicist`: Wireline Curve Splicing (₹45 Cr / yr, SciPy benchmark in seconds, Validated in Production).
       - `Target 01 (Highest Exposure): Hydrocracker Specialist`: Reactor Thermal Runaway & Quench (₹130 Cr / yr, 0.1s multi-point quench).
       - `Target 02: Drilling Operations Lead`: Anti-Collision Scanning vs Offset Wellbores (₹120 Cr / yr, 0ms collision alert).
       - `Target 03: FCCU Process Engineer`: Slide Valve Reverse & Cyclone Catalyst Blowout (₹115 Cr / yr, 0.1s differential pressure governor).
@@ -315,7 +316,7 @@
     - 3D Interactive Controls: OrbitControls (360° mouse drag, elevation zoom), Auto-Rotate toggle, Top-Down Contour (2D) view, Reset Perspective, Focus Proven Agent (`★ Focus Proven Agent`), and **Minimalist Spectrum Switch Toggle** (`🎨 [ ●━━━━ ]`, no verbose naming) docked on the right-hand side directly next to the 3D plot for seamless 2-way switching between Google Light Spectrum and Oceanic Aqua with synchronized 2D radar and contour legend.
     - Floating 3D Tooltip: Displays peak title, persona, and elevation value on cursor proximity.
 - **Bottom 3-Phase Playbook Strip:**
-  - `Phase 1: Proven Agent`: 1 Agent Validated in Production (Kansas Wireline Splicing, ₹45 Cr exposure eliminated in 3.2s).
+  - `Phase 1: Proven Agent`: 1 Agent Validated in Production (Kansas Wireline Splicing, ₹45 Cr exposure eliminated in seconds).
   - `Phase 2: Top 5 High-Value Agents (Target Fleet)`: ₹570 Cr / yr Exposure Mitigated (Hydrocracker, Anti-Collision, FCCU, CDU, Tank Overfill).
   - `Phase 3: Enterprise-Wide Scale`: 84 Value-Unlock Agents (1–4 hr engineering latency automated across all operational seams).
 

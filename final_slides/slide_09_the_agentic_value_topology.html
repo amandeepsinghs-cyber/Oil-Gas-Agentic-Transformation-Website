@@ -155,6 +155,75 @@
     color: var(--security-turquoise);
     font-weight: 700;
   }
+
+  /* Light Mode Overrides */
+  .theme-light #stage-09 {
+    --slate-bg: #F8FAFC;
+    --slate-panel: #FFFFFF;
+    --slate-border: #E2E8F0;
+    --security-turquoise: #00897B;
+    --security-azure: #0284C7;
+    --nebula-crimson: #DC2626;
+    --hazard-amber: #D97706;
+    background: #F8FAFC !important;
+    color: #0F172A !important;
+  }
+  .theme-light #stage-09 h1 { color: #0F172A !important; }
+  .theme-light #stage-09 h2 { color: #00897B !important; }
+  .theme-light #stage-09 p { color: #334155 !important; }
+  .theme-light #stage-09 p strong { color: #0F172A !important; }
+  .theme-light #stage-09 .summit-card {
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+  }
+  .theme-light #stage-09 .summit-card:hover {
+    background: #F8FAFC !important;
+    border-color: #CBD5E1 !important;
+  }
+  .theme-light #stage-09 .summit-card.active-summit {
+    background: #F0FDF4 !important;
+    border-color: #00897B !important;
+  }
+  .theme-light #stage-09 .summit-card span,
+  .theme-light #stage-09 .summit-card div {
+    color: #0F172A !important;
+  }
+  .theme-light #stage-09 .summit-card div:last-child {
+    color: #475569 !important;
+  }
+  .theme-light #stage-09 .pill-btn {
+    background: #FFFFFF !important;
+    border: 1px solid #CBD5E1 !important;
+    color: #475569 !important;
+  }
+  .theme-light #stage-09 .pill-btn:hover {
+    background: #F1F5F9 !important;
+    color: #0F172A !important;
+  }
+  .theme-light #stage-09 .pill-btn.active {
+    background: #0F172A !important;
+    border-color: #0F172A !important;
+    color: #FFFFFF !important;
+  }
+  .theme-light #stage-09 #topology-legend-items {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid #CBD5E1 !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  }
+  .theme-light #stage-09 #topology-legend-items,
+  .theme-light #stage-09 #topology-legend-items div,
+  .theme-light #stage-09 #topology-legend-items span {
+    color: #334155 !important;
+  }
+  .theme-light #stage-09 #topology-legend-items div:first-child {
+    color: #0F172A !important;
+  }
+  .theme-light #stage-09 #topology-canvas-container {
+    background: #F8FAFC !important;
+    border-color: #CBD5E1 !important;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06) !important;
+  }
 </style>
 
 <section class="slide narrative-stage" id="stage-09">
@@ -243,7 +312,7 @@
               Wireline Curve Splicing (Slide 06 Benchmark)
             </div>
             <div style="font-size: 11.5px; color: #94A3B8;">
-              3.2s SciPy execution vs 2.5 hr drift • 2.9cm accuracy • <strong>VALIDATED IN PRODUCTION</strong>
+              SciPy execution in seconds vs 2.5 hr drift • 2.9cm accuracy • <strong>VALIDATED IN PRODUCTION</strong>
             </div>
           </div>
 
@@ -354,7 +423,6 @@
 
           <!-- Overlay Compass & Contour Legend (Dynamic Multi-Palette Supported) -->
           <div id="topology-legend-items-stage" style="position: absolute; bottom: 16px; left: 18px; pointer-events: none; font-family: var(--font-mono); font-size: 10px; color: rgba(255, 255, 255, 0.7); display: flex; flex-direction: column; gap: 4px; background: rgba(6, 9, 14, 0.85); backdrop-filter: blur(10px); padding: 10px 14px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.12);">
-            <div style="font-weight: 800; color: #FFF; margin-bottom: 3px; letter-spacing: 0.5px;">GOOGLE LIGHT SPECTRUM (VISIBLE WAVELENGTH ROYGBIV)</div>
             <div style="display: flex; align-items: center; gap: 8px;">
               <span style="display: inline-block; width: 12px; height: 12px; background: #FFFFFF; border-radius: 2px; box-shadow: 0 0 8px #FFFFFF;"></span>
               <span>&gt; ₹118 Cr / yr (White-Hot Apex Summits • 0ms Collision &amp; Runaway)</span>
@@ -411,7 +479,7 @@
               PHASE 1: PROVEN AGENT
             </div>
             <div style="font-size: 18px; font-weight: 800; color: #FFF; margin: 2px 0;">1 Agent Validated in Production</div>
-            <div style="font-size: 12px; color: #94A3B8;">Kansas Wireline Splicing • ₹45 Cr exposure eliminated in 3.2s</div>
+            <div style="font-size: 12px; color: #94A3B8;">Kansas Wireline Splicing • ₹45 Cr exposure eliminated in seconds</div>
           </div>
 
           <div style="background: rgba(13, 19, 32, 0.7); border: 1px solid var(--slate-border); border-left: 3px solid var(--nebula-crimson); padding: 14px 18px; border-radius: 6px;">
@@ -1270,7 +1338,6 @@
       if (legendEl) {
         if (currentPalette === 'google') {
           legendEl.innerHTML = `
-            <div style="font-weight: 800; color: #FFF; margin-bottom: 3px; letter-spacing: 0.5px;">GOOGLE LIGHT SPECTRUM (VISIBLE WAVELENGTH ROYGBIV)</div>
             <div style="display: flex; align-items: center; gap: 8px;">
               <span style="display: inline-block; width: 12px; height: 12px; background: #FFFFFF; border-radius: 2px; box-shadow: 0 0 8px #FFFFFF;"></span>
               <span>&gt; ₹118 Cr / yr (White-Hot Apex Summits • 0ms Collision &amp; Runaway)</span>

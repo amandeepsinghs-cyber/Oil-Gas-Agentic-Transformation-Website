@@ -28,9 +28,9 @@ function setHeroQuery(type, e) {
     if (drawerTimestamp) drawerTimestamp.innerText = 'LATENCY: 510ms · 14 WELLS RETRIEVED VIA VECTOR SEARCH';
   } else if (type === 'splicing') {
     if (promptText) promptText.innerText = '"Kansas Well A-12: Align Runs 1, 2, and 3 LAS wireline logs and verify overlap..."';
-    if (drawerBody) drawerBody.innerHTML = 'Dispatched SciPy cross-correlation engine over Kansas Well A-12. Recovered <strong>-1.829m depth shift</strong> on Run 2 with Pearson <strong>r = 0.9899</strong>. Continuous 1,200m composite generated in <strong>3.2 seconds</strong> with zero manual fatigue.';
+    if (drawerBody) drawerBody.innerHTML = 'Dispatched SciPy cross-correlation engine over Kansas Well A-12. Recovered <strong>-1.829m depth shift</strong> on Run 2 with Pearson <strong>r = 0.9899</strong>. Continuous 1,200m composite generated in <strong>seconds</strong> with zero manual fatigue.';
     if (drawerStatus) drawerStatus.innerText = 'PETROPHYSICAL SPLICING AGENT // SUB-SECOND CONVERGENCE';
-    if (drawerTimestamp) drawerTimestamp.innerText = 'LATENCY: 3.2s · DETERMINISTIC NUMPY/SCIPY PROVENANCE';
+    if (drawerTimestamp) drawerTimestamp.innerText = 'LATENCY: SECONDS · DETERMINISTIC NUMPY/SCIPY PROVENANCE';
   } else if (type === 'cdu') {
     if (promptText) promptText.innerText = '"Refinery CDU: Synchronize real-time crude assay with distillation cut schedule..."';
     if (drawerBody) drawerBody.innerHTML = 'Detected 36-hour delay in lab assay for incoming heavy sour parcel. Synthetic NIR agent projected true API gravity & sulfur content within 0.15% error, preventing <strong>₹12 Cr/month yield downgrade</strong> to atmospheric residue.';
@@ -424,9 +424,9 @@ const act2LayerData = {
     title: "Multi-Run Curve Splicing Seam",
     platform: "<strong>Techlog (SLB) & OpenWorks (Halliburton):</strong> Premier specialized petrophysics suites. Outstanding for individual well analysis, but blind to unmonitored cross-system handovers.",
     gap: "Wireline runs 1 & 2 spliced manually by visual drag-and-drop. Cable stretch causes a 1.5-meter depth shift across the tie-in casing shoe. Unnoticed in batch review.",
-    sol: "Autonomous Splicing Agent automatically executes SciPy multi-window cross-correlation. Aligns Run 2 within 2.9 cm variance in 3.2 seconds. Commits SHA-256 audit row to BigQuery.",
+    sol: "Autonomous Splicing Agent automatically executes SciPy multi-window cross-correlation. Aligns Run 2 within 2.9 cm variance in seconds. Commits SHA-256 audit row to BigQuery.",
     cost: "₹85 Cr Remedial Casing Squeeze",
-    speed: "3.2 Seconds"
+    speed: "Seconds"
   },
   3: {
     tag: "INSPECTING TIER 03 // GEOMODELING",
@@ -909,7 +909,7 @@ function setCheeseState(state) {
     if (tiers[1].title) tiers[1].title.innerHTML = '<span style="color: #FFF;">Deterministic Splice Agent</span>';
     if (tiers[1].metric) {
       tiers[1].metric.style.color = '#FFF';
-      tiers[1].metric.innerText = '3.2s Exec · SciPy Match (r = 0.9899)';
+      tiers[1].metric.innerText = 'Seconds Exec · SciPy Match (r = 0.9899)';
     }
     if (tiers[1].desc) tiers[1].desc.innerText = 'Pre-built deterministic SciPy engine calculates cable stretch dynamics, removing the 1.48m error with cms-precision curve correlation.';
 
@@ -1064,5 +1064,52 @@ function setCheeseState(state) {
     }
   }
 }
+
+/* ==========================================================================
+   Global Theme Controller (Dark / Light Mode)
+   ========================================================================== */
+function applyDeckTheme(theme) {
+  const isLight = (theme === 'light');
+  if (isLight) {
+    document.documentElement.classList.add('theme-light');
+    if (document.body) document.body.classList.add('theme-light');
+  } else {
+    document.documentElement.classList.remove('theme-light');
+    if (document.body) document.body.classList.remove('theme-light');
+  }
+  updateThemeButtonsUI(isLight);
+}
+
+function updateThemeButtonsUI(isLight) {
+  const buttons = document.querySelectorAll('.theme-toggle-btn');
+  buttons.forEach(btn => {
+    btn.innerHTML = isLight 
+      ? '<span style="font-size: 13px; line-height: 1;">🌙</span><span>Dark Mode</span>' 
+      : '<span style="font-size: 13px; line-height: 1;">☀️</span><span>Light Mode</span>';
+    btn.setAttribute('title', isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+  });
+}
+
+window.toggleTheme = function() {
+  const isCurrentlyLight = document.documentElement.classList.contains('theme-light');
+  const nextTheme = isCurrentlyLight ? 'dark' : 'light';
+  localStorage.setItem('deck-theme', nextTheme);
+  applyDeckTheme(nextTheme);
+};
+
+// Immediate execution to sync on DOM load
+(function() {
+  const saved = localStorage.getItem('deck-theme') || 'dark';
+  if (saved === 'light') {
+    document.documentElement.classList.add('theme-light');
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      applyDeckTheme(localStorage.getItem('deck-theme') || 'dark');
+    });
+  } else {
+    applyDeckTheme(saved);
+  }
+})();
 
 

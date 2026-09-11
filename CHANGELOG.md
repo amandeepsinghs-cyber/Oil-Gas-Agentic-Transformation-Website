@@ -6,6 +6,150 @@ All notable changes, architectural pivots, and slide finalization milestones for
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and adheres to the **"Zero-Anxiety Cadence"**:
 - **Authoring**: Built and verified in isolated slide view (`working_deck/pages/page_XX.html`).
 - **Review**: Visual and narrative sign-off by executive review.
+## [HUD Header Streamlining, Breathing Space & Status Badge Cleanliness] - 2026-09-11
+### Slide 08 Enterprise Chessboard
+- **HUD Agent Card Header Streamlining & Breathing Space**:
+  - Removed kickers across all matrix categories:
+    - Critical: removed `🔴 CRITICAL CAPITAL BLEED // CATASTROPHIC RISK`
+    - Friction: removed `🟡 HUMAN BOTTLENECK // 1–4 HR DECISION LATENCY`
+    - Baseline: removed `⚪ BASELINE SILO // COMMERCIAL MONOLITH LOCK`
+  - Dynamically hid the pulse indicator dot (`hudPulse.style.display = "none"`) and kicker label (`hudKicker.style.display = "none"`) for critical, friction, and baseline touchpoints, creating consistent, uncluttered breathing space at the top-left of the HUD header with zero placeholder artifacts or orphan dots.
+  - Retained the production proof benchmark kicker (`★ DEPLOYED PROOF // KANSAS WELL A-12`) and pulsing turquoise indicator exclusively for Kansas Well A-12 (J8).
+- **HUD Status Badge Streamlining**:
+  - Removed emoji dots and symbols from status badges across runtime inspector logic, HTML templates, and CSV exports:
+    - `🔴 CRITICAL` ➔ `CRITICAL`
+    - `🟡 FRICTION GAP` ➔ `FRICTION` (dropped dot and `"GAP"`)
+    - `⚪ BASELINE MONOLITH` ➔ `BASELINE MONOLITH`
+    - Kansas Well A-12 ➔ `READY (SLIDE 06)`
+  - Enforced single-line rendering via `white-space: nowrap !important; flex-shrink: 0 !important; display: inline-flex !important; align-items: center !important;` in `assets/styles.css` and templates to guarantee badges never break onto two lines.
+- **Cross-File Synchronization**:
+  - Synchronized across `working_deck/pages/page_08.html`, `final_slides/slide_08_the_enterprise_chessboard.html`, `final_slides/slide_08_the_enterprise_chessboard.LOCKED.html`, `assets/styles.css`, and `scripts/sync_matrix_data.py`.
+
+
+## [Daylight KPI & HUD Seam Inspector Contrast Hardening & Terminology Streamlining] - 2026-09-11
+### Slide 08 & 09 Daylight Light Mode High-Contrast Rectification
+- **Slide 08 Baseline Monoliths Contrast Hardening**:
+  - Inverted `⚪ BASELINE MONOLITHS` KPI card header from pale slate `#94A3B8` (2.6:1 contrast) to authoritative deep slate `#1E293B` (**10.5:1 AAA contrast**).
+  - Hardened metric count (`#kpi-baseline-count` / `-stage`) to `#0F172A` (**15.8:1 AAA contrast**), unit label `Monolith Silos` to bold `#475569` (**5.2:1 contrast**), and subtext `Legacy Desktop Software Locks` to rich `#334155` (**7.2:1 AAA contrast**).
+  - Deepened left accent border to `#334155` in light mode for crisp definition.
+- **Slide 08 Terminology Streamlining (Executive Precision)**:
+  - **"Plugged" → "Ready Autonomous Agents"**: Replaced `★ PLUGGED AUTONOMOUS AGENTS` with `★ READY AUTONOMOUS AGENTS` across KPI cards, filter chips (`★ Ready Only (1)` / `★ Ready (${plugged})`), legend (`Ready Agent`), and HUD status badge (`★ READY (SLIDE 06 PROVEN)`), accurately reflecting that agents are production-ready benchmarks rather than already implemented.
+  - **"Critical Seam" / "Critical Red" → "Critical"**: Removed "Seam" and "Red", updating the HUD status badge to `🔴 CRITICAL` and filter chip to `🔴 Critical (52)`.
+  - **"Friction Amber" → "Friction"**: Simplified filter chip label to `🟡 Friction (84)`.
+- **Slide 08 Manual Friction Gaps & Critical KPI Contrast Hardening**:
+  - Replaced pale yellow `#FDE68A` (which produced a near-invisible 1.25:1 contrast against white backgrounds) with deep executive burnt amber `#B45309` (6.2:1 AAA contrast) across the `🟡 MANUAL FRICTION GAPS` KPI card header, the `84 Bottlenecks` value (`#D97706` / `#B45309`), and the `1–4 Hr Engineering Decision Lag` subtext.
+  - Hardened `🔴 CRITICAL PROCESS RISKS` KPI card text from pale pink `#FCA5A5` to bold crimson `#DC2626` (6.5:1 AAA contrast) and subtext.
+  - Inverted `Lead Petrophysicist Benchmark (J8)` subtext (`#kpi-plugged-sub` / `-stage`) from `#FFF` to high-contrast slate `#475569`.
+  - Dual-scoped all KPI selectors across `assets/styles.css` to cover both standalone page (`page_08.html`) and presentation stage (`slide_08_the_enterprise_chessboard.html` & `.LOCKED.html`).
+- **Slide 08 Interactive HUD Seam Inspector Contrast Rectification**:
+  - Fixed the "white-on-yellow" / light-yellow-on-yellow low-contrast bug in the HUD Seam Inspector when a friction cell is clicked:
+    - Replaced `color: #FDE68A` over `rgba(245, 158, 11, 0.25)` with bold deep amber `#92400E` over warm amber pill `#FEF3C7` with `#F59E0B` border (contrast 7.8:1).
+    - Upgraded `🔴 CRITICAL` status badge to deep crimson `#991B1B` over soft red `#FEE2E2` with `#EF4444` border (contrast 7.5:1).
+    - Upgraded `★ READY` badge to rich executive gradient (`linear-gradient(135deg, #00897B, #0284C7)`) with `#FFFFFF` text (contrast 5.1:1).
+    - Upgraded `⚪ BASELINE MONOLITH` badge to crisp `#334155` over `#F1F5F9` with `#CBD5E1` border (contrast 7.2:1).
+  - Hardened HUD Latent Vulnerability box (`#FEF2F2` background, `#DC2626` heading, `#334155` text) and AI Opportunity box (`#F0FDFA` background, `#00897B` heading, `#334155` text).
+  - Hardened HUD Action Container (`#hud-action-container` & `#hud-action-container-stage`):
+    - `🟡 WAVE 2 CANDIDATE`: deep amber `#92400E` over `#FEF3C7` with `#F59E0B` border and `#B45309` subtext.
+    - `🔴 PROPOSED WAVE 1 AGENT`: bold crimson `#DC2626` over `#FEE2E2` with `#991B1B` impact text.
+    - `⚡ PRODUCTION AUTONOMOUS AGENT`: executive teal `#00897B` over `#F0FDFA` with `#0F172A` text.
+    - Slide 06 Benchmark Link: high-contrast executive gradient with white text.
+  - Inverted the chessboard top-left corner fixed cell (`ROWS A–T // DISCIPLINES`) to crisp slate `#475569` over `#FFFFFF` in both `page_08.html` and `slide_08_the_enterprise_chessboard.html`.
+- **Slide 09 Summit Card Target Badges**:
+  - Replaced broken attribute selectors (`span[style*="TARGET 04"]`) with exact color style selectors (`span[style*="#FDE68A"]`) and element ID anchors (`#card-cdu span:first-child`, `#card-hydro span:first-child`, etc.), ensuring TARGET badges render with deep amber (`#92400E` on `#FEF3C7`) and deep red (`#DC2626` on `#FEE2E2`).
+
+## [Slide 09 Legend Streamlining] - 2026-09-11
+### Slide 09 3D Terrain Legend Overlay
+- **Removed Redundant Spectrum Header**:
+  - Removed `GOOGLE LIGHT SPECTRUM (VISIBLE WAVELENGTH ROYGBIV)` header from both static HTML markup and dynamic palette toggle JavaScript in `working_deck/pages/page_09.html`, `final_slides/slide_09_the_agentic_value_topology.html`, and `final_slides/slide_09_the_agentic_value_topology.LOCKED.html`.
+  - The floating contour legend now begins cleanly with the white-hot apex summits tier and value ranges without the optical physics header hovering over the 3D surface.
+
+## [Graph Daylight Background & Chessboard Color Systems Restoration] - 2026-09-11
+### Slide 09 Graph Viewport & Slide 08/09 Chessboard Palette
+- **3D Graph Canvas Background Restored**:
+  - Restored `background: #F8FAFC !important;` to `#topology-canvas-container` in `assets/styles.css` and both `final_slides/slide_09_the_agentic_value_topology.html` and `.LOCKED.html`, returning the 3D elevation terrain viewport to its clean daylight styling.
+- **Slide 09 2D Chessboard Radar Colors Restored**:
+  - Removed the destructive blanket `.mini-cell { background: ... !important; }` rule that stripped cell styling down to monochrome gray, restoring the full Google ROYGBIV spectral palette across all 300 cells (`.mini-red`, `.mini-yellow`, `.mini-green`, `.mini-blue`, `.mini-amber`, `.mini-plugged`).
+- **Slide 08 Chessboard Cells Daylight Tuning**:
+  - Upgraded Critical Seam cells (`.cell-critical`) to bold crimson `#DC2626` over soft red CAD hatching on `#FEF2F2` with `#F87171` borders.
+  - Upgraded Friction Seam cells (`.cell-friction`) to crisp amber `#D97706` over amber CAD hatching on `#FFFBEB` with `#FBBF24` borders.
+  - Upgraded Plugged cells (`.cell-plugged`) to rich teal/azure gradient (`linear-gradient(135deg, #00897B, #0284C7)`) with `#FFFFFF` text.
+  - Upgraded all 6 Sector Badges on persona row headers to high-contrast daylight colorways.
+
+## [Slide 09 & 08 Daylight Contrast & White-on-White Rectification] - 2026-09-11
+### Slide 09 (Value Topology) & Slide 08 (Enterprise Chessboard) Daylight Hardening
+- **Root Cause Resolution**:
+  - Eliminated scoping disconnect where standalone slide pages (`working_deck/pages/page_09.html` and `page_08.html`) used `<main id="viewport-scaler">` without stage IDs (`id="stage-09"` and `id="stage-08"`), causing CSS rules in `assets/styles.css` to be skipped.
+  - Added `id="stage-09"` and `class="stage-09"` to `page_09.html`, `id="stage-08"` and `class="stage-08"` to `page_08.html`, and updated `assets/styles.css` to dual-scope and unscope all component selectors (`.summit-card`, `.pill-btn`, `#topology-legend-items`, `.mini-grid`).
+- **Zero White-on-White Rectification on Slide 09**:
+  - **Summit Leaderboard & 5 High-Exposure Cards**: Inverted cards to pure white (`#FFFFFF`) with `#E2E8F0` borders, `#0F172A` titles, `#475569` descriptions, and high-contrast badges (`#00897B`, `#DC2626`, `#D97706`).
+  - **Canvas Overlay Legend (`#topology-legend-items`)**: Inverted all 7 legend labels from `rgba(255, 255, 255, 0.7)` to crisp `#334155` text with `#0F172A` header, ensuring both initial load and dynamic `togglePalette()` updates are cleanly readable.
+  - **Pill Buttons (`.pill-btn`)**: Fixed active state (`Auto-Rotate: ON`, `All Priority Agents`) to high-contrast dark navy `#0F172A` with `#FFFFFF` text, and fixed hover state to `#F1F5F9` with `#0F172A` text (eliminating white-on-white on hover).
+  - **Bottom Phase Horizon Cards**: Styled all 3 phase cards (`1 Agent Validated in Production`, `₹570 Cr / yr Exposure Mitigated`, `84 Value-Unlock Agents`) to `#0F172A` text on `#FFFFFF` cards with retained colored left accent borders.
+  - **3D Telemetry Overlays**: Styled `#terrain-tooltip`, `#btn-palette-toggle`, and the particle engine status pill to crisp daylight contrast.
+  - **Global CSS Custom Properties**: Added `:root.theme-light, html.theme-light` variables mapping `--security-turquoise` to `#00897B` (deep executive teal instead of neon cyan), `--slate-panel` to `#FFFFFF`, and `--slate-border` to `#CBD5E1`.
+
+## [Comprehensive Daylight Light Mode Audit & Contrast Rectification] - 2026-09-11
+### Rigorous Deck-Wide Audit & Universal Zero White-on-White Rectification
+- **Full Slide-by-Slide Audit (Stages 00–10 + Docks)**:
+  - Conducted a comprehensive audit of all rendered HTML and computed styles across the presentation deck in light mode (`.theme-light`), identifying and rectifying all contrast gaps:
+    - **Stage 01**: Inverted transition question banner (`Where does this capital actually disappear?`) from white to deep slate `#0F172A`.
+    - **Stage 02**: Hardened dynamic JS interactive state transitions (`🛡 Fortified: Autonomous Agents`) so agentic titles and metrics automatically adapt with deep contrast regardless of browser inline `color: rgb(...)` formatting.
+    - **Stage 03**: Sealed contrast on the MeitY Sovereignty chip (`100% MEITY IN-COUNTRY SOVEREIGNTY`) with crisp forest-green text `#065F46` over `#F0FDF4`, corrected the BAM Proclamation card, and inverted the bottom transition title (`What is an Enterprise AI Agent?`).
+    - **Stage 04**: Full light theme support for the coexistence schematic (`.coexist-box`), giving `Domain Monoliths`, `Intelligent Microservices`, and `Agentic Organization` crisp slate headings on white elevated surfaces, alongside the `NOT EITHER/OR. IT IS BOTH.` badge.
+    - **Stage 05**: Inverted `SYSTEMIC RESILIENCE` badge, Jenga image captions, and strong emphasis tags (`workflows and workforce`) to high-contrast slate.
+    - **Stage 06**: Converted the 4 Enterprise Payoff pill badges (`Capital Protection`, `Operational Speed`, `Talent Elevation`, `Decision Accuracy`) from white-on-cyan to slate `#0F172A` on `#F1F5F9` pills with `#CBD5E1` borders.
+    - **Stage 07**: Styled `.provocation-bar` with pure white background, dark teal left accent border, and inverted the keynote boardroom question (`If we can automate this petrophysical seam across Kansas Well A-12... what happens when we scale this across the entire enterprise?`) to high-contrast `#0F172A`.
+    - **Stage 08**: 
+      - Rectified row label child span styling: all 20 persona names now render in crisp `#0F172A` slate (or bold `#00897B` when highlighted) across the 20×15 chessboard.
+      - Styled the sticky `#hud-panel` inspector and `#hud-agent-registry-box` to clean white cards with deep slate typography, eliminating the black-on-black title bug.
+      - Inverted all 5 top KPI summary boxes (`Total Operational Nodes`, `Plugged Agents`, `Critical Risks`, etc.) to white cards with `#CBD5E1` borders.
+      - Styled the mode switcher pill (`.view-switcher-pill`) and the top-left chessboard fixed corner cell.
+    - **Stage 09**: Styled the left leaderboard container and `.summit-card` elements to white cards with deep slate text and active teal indicators.
+    - **Stage 10**: Replaced low-contrast `#CBD5E1` bullet text in all 3 milestone cards with legible slate `#334155`, and adapted SVG roadmap callout boxes for clean daylight rendering.
+    - **Universal Docks**: Fixed bottom floating dock (`.floating-dock`) and HUD controls (`.hud-controls`) so `◀` and `▶` buttons, counters, and stage text maintain deep contrast.
+
+## [Deck-Wide Executive Light/Dark Theme System Across All Slides (Stages 00–10)] - 2026-09-11
+### Global Theme Controller & All Slide Stages (00 to 10)
+- **Deck-Wide High-Contrast Executive Light Mode System**:
+  - Implemented `.theme-light` design system in `assets/styles.css` converting dark obsidian canvas (`#06090E`) to pure daylight executive white (`#FFFFFF`) across all 11 slides (Stages 00 through 10).
+  - Strict zero white-on-white text guarantee: all typography (headings, taglines, kickers, prompt bar texts, meta tags, table text, matrix cells, and values) transitions to deep executive slates (`#0F172A`, `#1E293B`, `#334155`).
+  - Dark frosted glass cards invert to clean white cards with `#E2E8F0` hairline borders, subtle elevation dropshadows, and bold accent anchors.
+  - Stage-specific light mode overrides:
+    - **Stage 00 (Overview)**: White prompt command bar with dark slate query text, crisp meta cards, and ethereal mist canvas.
+    - **Stage 01 (Capital Reality)**: Pure white stat cards with deep slate metric labels, dark subtitles, and framed asset preview.
+    - **Stage 02 (Swiss Cheese)**: High-contrast slice cards, crisp failure path typography, and clean mitigation indicators.
+    - **Stage 03 (5 Non-Negotiable Criteria)**: Deep slate criteria cards, dark contrast badges, and clean metric readouts.
+    - **Stage 04 (Intelligent Microservice)**: White architectural card blocks, crisp API/tool telemetry, and dark contrast flow indicators.
+    - **Stage 05 (Resilience / Jenga Metaphor)**: Contrast-inverted structural pillars and deep slate systemic vulnerability analysis.
+    - **Stage 06 (Petrophysical AI Agent)**: Crisp log-plot visualization containers, clean white workflow cards, and high-contrast parameter tags.
+    - **Stage 07 (Agent Architecture)**: White container backgrounds for agent orchestration layers, deterministic solver specs, and secure execution telemetry.
+    - **Stage 08 (Workforce & Workflow 20x15 Matrix)**: High-contrast row labels, column headers, baseline cells, and sticky HUD inspector cleanly legible against white daylight backgrounds.
+    - **Stage 09 (Value Topology)**: Transparent 3D isometric terrain rendering over `#F8FAFC` container with clean slate axis legends and leaderboard metrics.
+    - **Stage 10 (100 Days Roadmap)**: Crisp white phase cards, dark roadmap curve typography, and high-contrast milestone badges.
+- **Global Theme Toggle Button**:
+  - Embedded global toggle button (`☀️ Light Mode` / `🌙 Dark Mode`) in the top navigation bar across all entry points: `index.html`, `working_deck/index.html`, and `working_deck/pages/page_00.html` through `page_10.html`.
+  - Seamless persistence across page reloads and slide transitions via `localStorage.getItem('deck-theme')`.
+  - Zero flash-of-dark-theme on initial load via early synchronous `<head>` script execution.
+- **Latency Polish Verification**:
+  - Replaced all lingering instances of `"3.2 seconds"` and `"3.2s"` with `"seconds"` and `"Seconds"` across `assets/interactive.js`, `working_deck/pages/page_00.html`, `final_slides/slide_00_overview.html`, `final_slides/slide_00_overview.LOCKED.html`, and `working_deck/pages/page_07.html`.
+
+## [Executive Light/Dark Theme System Tested on Stage 00 Home Slide] - 2026-09-11
+### Global Theme Controller & Stage 00 (Executive Overview & Hero Cockpit)
+- **High-Contrast Executive Light Mode System**:
+  - Initial proof of concept implemented on Stage 00, verifying contrast, zero white-on-white text, and theme persistence.
+
+## [Latency Polish: Simplified Lead Petrophysicist Execution to 'Seconds'] - 2026-09-11
+### Deck-Wide Petrophysical Splicing Agent Benchmarks (Slides 07, 08, 09, Matrix Data)
+- **Simplified Latency Wording**:
+  - Replaced overly specific `"3.2 seconds"` and `"3.2s"` references with clean, confident `"seconds"` / `"Seconds vs 2.5 Hrs"` across the Lead Petrophysicist card, HUD inspector, 3D topology leaderboard, milestone cards, and matrix data files.
+- **Synchronized Files**:
+  - `final_slides/slide_07_the_headless_petrophysical_agent.html` & `.LOCKED.html`
+  - `final_slides/slide_08_the_enterprise_chessboard.html` & `.LOCKED.html`
+  - `final_slides/slide_09_the_agentic_value_topology.html` & `.LOCKED.html`
+  - `working_deck/pages/page_08.html` & `working_deck/pages/page_09.html`
+  - `data/enterprise_matrix_300.js` & `data/enterprise_matrix_300.csv`
+  - `LOCKED_SLIDES.md`
+  - `CHANGELOG.md`
 
 ## [Slide 11 Polish: Removed High-Priority Roles Executive Badge] - 2026-09-11
 ### Stage 10 / Slide 11 (100 Days to Proof of Value)
