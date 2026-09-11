@@ -62,3 +62,9 @@ ENV/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# 5. Confidential / proprietary source material — NEVER commit.
+# This remote is a personal GitHub repo. The PDF below is Google Cloud branded
+# and marked "Proprietary & Confidential" on 11 of its 22 pages. Ideas and
+# public sources may be ported into the deck; the file itself must not be.
+alternate_pitch_Oil_&_Gas_Slides_WIP.pdf
