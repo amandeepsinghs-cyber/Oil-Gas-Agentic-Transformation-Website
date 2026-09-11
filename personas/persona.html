@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persona Deep Dive | Sovereign Agentic Transformation</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+  <style>
+    :root {
+      --slate-bg: #06090E;
+      --slate-panel: rgba(13, 19, 32, 0.75);
+      --slate-border: rgba(255, 255, 255, 0.08);
+      --security-turquoise: #00D2B4;
+      --security-azure: #00A3FF;
+      --nebula-crimson: #EF4444;
+      --hazard-amber: #F59E0B;
+      --font-display: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+      /* Persona page surface tokens (dark default) */
+      --p-canvas: #06090E;
+      --p-surface: rgba(13, 19, 32, 0.78);
+      --p-surface-2: rgba(255, 255, 255, 0.03);
+      --p-border: rgba(255, 255, 255, 0.10);
+      --p-text: #E2E8F0;
+      --p-text-strong: #FFFFFF;
+      --p-text-muted: #94A3B8;
+      --p-text-dim: #64748B;
+      --p-accent: #00D2B4;
+      --p-crimson: #EF4444;
+      --p-amber: #F59E0B;
+      /* A 50px blur at 55% opacity, repeated down thirteen stacked cards,
+         reads as consumer skeuomorphism. The 1px border defines the card;
+         the shadow only needs to lift it off the canvas. */
+      --p-shadow: 0 1px 3px rgba(0, 0, 0, 0.34);
+    }
+
+    /* ---------- Light theme token overrides ---------- */
+    html.theme-light {
+      --p-canvas: #F8FAFC;
+      --p-surface: #FFFFFF;
+      --p-surface-2: #F1F5F9;
+      --p-border: #E2E8F0;
+      --p-text: #334155;
+      --p-text-strong: #0F172A;
+      --p-text-muted: #64748B;
+      --p-text-dim: #94A3B8;
+      --p-accent: #00897B;
+      --p-crimson: #DC2626;
+      --p-amber: #D97706;
+      --p-shadow: 0 8px 28px rgba(15, 23, 42, 0.07);
+    }
+
+    body {
+      background: var(--p-canvas);
+      color: var(--p-text);
+      font-family: var(--font-display);
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    /* ---------- Atmospheric backdrop ---------- */
+    .slide-bg-media { position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .slide-bg-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    html.theme-light .slide-bg-grid {
+      background-image:
+        linear-gradient(to right, rgba(15,23,42,0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15,23,42,0.035) 1px, transparent 1px);
+    }
+    .slide-bg-radial {
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 15%, rgba(0,210,180,0.05) 0%, rgba(6,9,14,0.96) 60%, var(--p-canvas) 100%);
+    }
+    html.theme-light .slide-bg-radial {
+      background: radial-gradient(circle at 50% 12%, rgba(0,137,123,0.05) 0%, rgba(248,250,252,0.9) 55%, var(--p-canvas) 100%);
+    }
+
+    /* ---------- Shell ---------- */
+    .persona-wrap { max-width: 1560px; margin: 0 auto; padding: 30px max(20px, 2.5vw) 90px; position: relative; z-index: 2; }
+
+    .pblock {
+      background: var(--p-surface);
+      border: 1px solid var(--p-border);
+      border-radius: 10px;
+      padding: 24px 26px;
+      margin-bottom: 18px;
+      box-shadow: var(--p-shadow);
+    }
+    .pblock > h2 {
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--p-accent);
+      margin: 0 0 14px 0;
+    }
+    /* Prose runs the full width of the card. An earlier measure cap (78ch)
+       left the accountability statements stopping short of the right edge,
+       which read as a rendering fault rather than a typographic choice. */
+    .pblock p { color: var(--p-text); line-height: 1.62; font-size: 14px; }
+
+    /* ---------- Static topline ---------- */
+    /* Fixed above the role rail. States the argument once, so a persona page
+       is read as evidence for a thesis rather than as one person's problems.
+       A rule closes the block so it reads as a masthead over the roles rather
+       than as text floating above them. */
+    .persona-topline {
+      padding-bottom: 20px; margin-bottom: 4px;
+      border-bottom: 1px solid var(--p-border);
+    }
+    .topline-eyebrow {
+      font-family: var(--font-mono); font-size: 11.5px; font-weight: 800;
+      letter-spacing: 1.6px; text-transform: uppercase;
+      color: var(--p-accent); margin-bottom: 10px;
+    }
+    .topline-title {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 3.4vw, 40px); font-weight: 800;
+      letter-spacing: -1.2px; line-height: 1.1;
+      color: var(--p-text-strong); margin: 0 0 10px;
+    }
+    /* Turquoise sub-headline, matching the Slide 08 header hierarchy. Carries
+       the plain-language claim; the h1 above carries the shape of the change. */
+    .topline-sub {
+      font-family: var(--font-display); font-size: 20px; font-weight: 600;
+      line-height: 1.35; letter-spacing: -0.3px;
+      color: var(--p-accent); margin: 0 0 12px;
+    }
+    /* No measure cap. Prose runs the full width of the column, as everywhere
+       else on this page -- a cap here left the lede stopping short of the
+       right edge, which reads as a rendering fault rather than a choice. */
+    .topline-lede {
+      font-size: 16px; line-height: 1.62; color: var(--p-text-muted);
+      margin: 0;
+    }
+    @media (max-width: 720px) {
+      .topline-lede { font-size: 14px; }
+      .persona-topline { padding-bottom: 16px; }
+    }
+
+    /* ---------- Persona identity header ---------- */
+    .persona-id-card {
+      display: grid;
+      grid-template-columns: minmax(0,1fr) auto;
+      gap: 28px;
+      align-items: start;
+      background: var(--p-surface);
+      border: 1px solid var(--p-border);
+      border-left: 4px solid var(--p-accent);
+      border-radius: 10px;
+      padding: 26px 28px;
+      margin-bottom: 18px;
+      box-shadow: var(--p-shadow);
+    }
+
+    /* Profile row: spans the full card beneath the portrait and the headline
+       figure, so identity and accountability are read as one unit. */
+    .identity-mandate {
+      grid-column: 1 / -1;
+      margin-top: 20px; padding-top: 18px;
+      border-top: 1px solid var(--p-border);
+    }
+    .mandate-body {
+      margin: 0; font-size: 14px; line-height: 1.62; color: var(--p-text);
+    }
+
+    /* Today / with-the-agent, side by side. The contrast is the argument, so
+       the two halves are placed against each other rather than in sequence. */
+    .journey-split {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start;
+    }
+    .journey-half { border-radius: 8px; padding: 15px 17px; }
+    .journey-half p { font-size: 14px; line-height: 1.6; color: var(--p-text); }
+    .jh-today {
+      background: var(--p-surface-2);
+      border: 1px solid var(--p-border);
+      border-top: 3px solid var(--p-crimson);
+    }
+    .jh-agent {
+      background: color-mix(in srgb, var(--p-accent) 6%, var(--p-surface));
+      border: 1px solid color-mix(in srgb, var(--p-accent) 28%, var(--p-border));
+      border-top: 3px solid var(--p-accent);
+    }
+    .jh-label {
+      font-family: var(--font-mono); font-size: 10px; font-weight: 800;
+      letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px;
+    }
+    .jh-today .jh-label { color: var(--p-crimson); }
+    .jh-agent .jh-label { color: var(--p-accent); }
+    @media (max-width: 1000px) {
+      .journey-split { grid-template-columns: 1fr; }
+    }
+
+    /* .row-chip removed: the 34px filled turquoise letter badge is gone from
+       both the identity card and the asset block. */
+
+    /* ---------- Touchpoint status filter ---------- */
+    .filter-bar {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;
+    }
+    .filter-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-family: var(--font-mono); font-size: 11.5px; font-weight: 800;
+      letter-spacing: .4px; padding: 7px 13px; border-radius: 999px;
+      border: 1px solid var(--p-border); background: var(--p-surface);
+      color: var(--p-text-muted); cursor: pointer;
+      transition: border-color .15s ease, color .15s ease, background .15s ease;
+    }
+    .filter-btn:hover { border-color: var(--p-accent); color: var(--p-accent); }
+    .filter-btn .fb-dot {
+      width: 7px; height: 7px; border-radius: 50%; flex: 0 0 7px;
+      background: var(--p-text-dim);
+    }
+    .filter-btn .fb-n {
+      font-size: 10px; font-weight: 700; color: var(--p-text-dim);
+      padding-left: 2px;
+    }
+    /* Dots carry the same colour as the cards they filter. */
+    .fb-plugged  .fb-dot { background: var(--p-accent); }
+    .fb-critical .fb-dot { background: var(--p-crimson); }
+    .fb-friction .fb-dot { background: var(--p-amber); }
+    .fb-baseline .fb-dot { background: var(--p-text-dim); }
+    /* The active button takes the colour of the status it is showing, so the
+       grid below never looks partial by accident -- it is obvious what is on. */
+    .filter-btn.active {
+      background: var(--p-text-strong); border-color: var(--p-text-strong);
+      color: var(--p-canvas);
+    }
+    .filter-btn.active .fb-n { color: var(--p-canvas); opacity: .7; }
+    .filter-btn.fb-critical.active {
+      background: var(--p-crimson); border-color: var(--p-crimson); color: #FFFFFF;
+    }
+    .filter-btn.fb-friction.active {
+      background: var(--p-amber); border-color: var(--p-amber); color: #FFFFFF;
+    }
+    .filter-btn.fb-plugged.active {
+      background: var(--p-accent); border-color: var(--p-accent); color: #FFFFFF;
+    }
+    .filter-btn.active .fb-dot { background: currentColor; opacity: .85; }
+    .filter-btn.fb-critical.active .fb-n,
+    .filter-btn.fb-friction.active .fb-n,
+    .filter-btn.fb-plugged.active .fb-n { color: #FFFFFF; opacity: .8; }
+    .action-card.is-hidden { display: none; }
+
+    .sector-pill {
+      font-family: var(--font-mono); font-size: 10px; font-weight: 800;
+      letter-spacing: 1.1px; padding: 3px 10px; border-radius: 20px;
+      background: var(--p-surface-2); color: var(--p-text-muted);
+      border: 1px solid var(--p-border);
+    }
+
+    /* Colour restraint. Previously all five values fired at once in crimson,
+       amber, turquoise and slate -- when everything is urgent nothing is.
+       The accent rail on the left still encodes the category; only the
+       genuinely critical figure is allowed to carry colour. */
+
+    /* ---------- Pain point quotes ---------- */
+    .pain-quote {
+      border-left: 3px solid var(--p-amber);
+      background: var(--p-surface-2);
+      border-radius: 0 8px 8px 0;
+      padding: 13px 18px; margin-bottom: 10px;
+    }
+    .pain-quote .q { font-size: 14px; line-height: 1.55; color: var(--p-text-strong); font-style: italic; }
+    .pain-quote .c { font-family: var(--font-mono); font-size: 10px; color: var(--p-text-dim); margin-top: 6px; letter-spacing: 0.6px; }
+
+    /* ---------- Action cards ---------- */
+    .action-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(390px, 1fr)); gap: 13px; }
+    .action-card {
+      background: var(--p-surface-2);
+      border: 1px solid var(--p-border);
+      border-top: 3px solid var(--p-text-dim);
+      border-radius: 8px; padding: 15px 17px;
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
+    }
+    .action-card:hover { transform: translateY(-2px); box-shadow: var(--p-shadow); }
+    .action-card.st-plugged  { border-top-color: var(--p-accent); background: linear-gradient(180deg, rgba(0,210,180,0.10) 0%, var(--p-surface-2) 55%); }
+    .action-card.st-critical { border-top-color: var(--p-crimson); }
+    .action-card.st-friction { border-top-color: var(--p-amber); }
+
+    .status-tag {
+      font-family: var(--font-mono); font-size: 10px; font-weight: 800;
+      letter-spacing: 0.9px; padding: 2px 7px; border-radius: 3px; text-transform: uppercase;
+    }
+    .status-tag.st-plugged  { background: var(--p-accent); color: #FFFFFF; }
+    .status-tag.st-critical { background: rgba(239,68,68,0.16); color: var(--p-crimson); border: 1px solid rgba(239,68,68,0.4); }
+    .status-tag.st-friction { background: rgba(245,158,11,0.16); color: var(--p-amber); border: 1px solid rgba(245,158,11,0.4); }
+    .status-tag.st-baseline { background: var(--p-surface-2); color: var(--p-text-muted); border: 1px solid var(--p-border); }
+
+    .vp-line { font-size: 12.5px; line-height: 1.5; margin: 7px 0 0; }
+    .vp-line .k { font-family: var(--font-mono); font-size: 10px; font-weight: 800; letter-spacing: 0.8px; display: block; margin-bottom: 2px; }
+    .vp-vuln .k { color: var(--p-crimson); }
+    .vp-plug .k { color: var(--p-accent); }
+    .vp-line .v { color: var(--p-text); }
+
+    /* .tbl-latency rules removed with blockLatency. */
+
+    /* ---------- Sign-off gates ---------- */
+    .signoff-row {
+      display: grid; grid-template-columns: 62px minmax(0,1fr) auto; gap: 14px; align-items: start;
+      padding: 13px 0; border-bottom: 1px solid var(--p-border);
+    }
+    .signoff-row:last-child { border-bottom: none; }
+    .authority-pill {
+      font-family: var(--font-mono); font-size: 10px; font-weight: 800;
+      padding: 3px 9px; border-radius: 4px; white-space: nowrap;
+      background: var(--p-surface-2); color: var(--p-text-muted); border: 1px solid var(--p-border);
+    }
+    .authority-pill.lvl-4 { background: rgba(0,210,180,0.14); color: var(--p-accent); border-color: rgba(0,210,180,0.42); }
+    .authority-pill.lvl-1 { background: rgba(245,158,11,0.14); color: var(--p-amber); border-color: rgba(245,158,11,0.42); }
+
+    /* ================================================================== */
+    /* PERSONA RAIL                                                        */
+    /* A horizontal, scrollable bar of all 20 roles. Replaces the old      */
+    /* <select>: a dropdown hides the size of the estate, the rail shows   */
+    /* it. Sticky, so the roster stays reachable while reading a long      */
+    /* record.                                                             */
+    /* ================================================================== */
+    .persona-rail-wrap {
+      position: sticky; top: 0; z-index: 40;
+      background: color-mix(in srgb, var(--p-canvas) 88%, transparent);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--p-border);
+      margin: 0 0 20px; padding: 11px 0 12px;
+    }
+    .rail-head {
+      display: flex; align-items: baseline; gap: 12px; margin-bottom: 9px;
+      font-family: var(--font-mono); font-size: 10px; font-weight: 800;
+      letter-spacing: 1.2px; text-transform: uppercase; color: var(--p-text-muted);
+    }
+    .rail-head .rail-count { color: var(--p-text-dim); letter-spacing: 0.8px; }
+
+    .persona-rail {
+      display: flex; gap: 7px; overflow-x: auto; padding: 3px 2px 9px;
+      scroll-behavior: smooth; scroll-snap-type: x proximity;
+    }
+    .persona-rail::-webkit-scrollbar { height: 5px; }
+    .persona-rail::-webkit-scrollbar-track { background: transparent; }
+    .persona-rail::-webkit-scrollbar-thumb { background: var(--p-border); border-radius: 3px; }
+    .persona-rail:hover::-webkit-scrollbar-thumb { background: var(--p-text-dim); }
+
+    .rail-chip {
+      position: relative; scroll-snap-align: center;
+      display: inline-flex; align-items: center; gap: 8px; flex: 0 0 auto;
+      padding: 5px 13px 5px 5px; border-radius: 999px;
+      background: var(--p-surface); border: 1px solid var(--p-border);
+      cursor: pointer; text-decoration: none; white-space: nowrap;
+      transition: border-color .16s ease, background .16s ease, transform .16s ease;
+      font-family: var(--font-display);
+    }
+    .rail-chip:hover { border-color: var(--p-accent); transform: translateY(-1px); }
+    .rail-chip.active {
+      background: var(--p-accent); border-color: var(--p-accent);
+      box-shadow: 0 3px 12px color-mix(in srgb, var(--p-accent) 34%, transparent);
+    }
+
+    .rail-avatar {
+      width: 28px; height: 28px; border-radius: 999px; flex-shrink: 0;
+      background-size: cover; background-position: center top;
+      background-color: var(--p-surface-2);
+      border: 1px solid var(--p-border);
+      display: grid; place-items: center;
+      font-family: var(--font-mono); font-size: 10px; font-weight: 800;
+      color: var(--p-text-dim);
+    }
+    .rail-chip.active .rail-avatar { border-color: rgba(255,255,255,.55); }
+
+    .rail-letter {
+      font-family: var(--font-mono); font-size: 11.5px; font-weight: 800;
+      color: var(--p-accent); letter-spacing: .4px;
+    }
+    .rail-name { font-size: 12.5px; font-weight: 600; color: var(--p-text); letter-spacing: -.1px; }
+    .rail-chip.active .rail-letter,
+    .rail-chip.active .rail-name { color: #FFFFFF; }
+
+    /* Readiness dot: at-a-glance, which disciplines already have agents. */
+    .rail-dot {
+      width: 6px; height: 6px; border-radius: 999px; flex-shrink: 0;
+      background: var(--p-text-dim);
+    }
+    .rail-dot.is-live    { background: var(--p-accent); box-shadow: 0 0 0 2.5px color-mix(in srgb, var(--p-accent) 22%, transparent); }
+    .rail-dot.is-planned { background: var(--p-amber); }
+    .rail-dot.is-none    { background: transparent; border: 1px solid var(--p-text-dim); }
+    .rail-chip.active .rail-dot.is-live,
+    .rail-chip.active .rail-dot.is-planned { background: #FFFFFF; box-shadow: none; }
+    .rail-chip.active .rail-dot.is-none { border-color: rgba(255,255,255,.7); }
+
+    /* ---------- Hero portrait ---------- */
+    .persona-portrait {
+      position: relative; overflow: hidden; flex-shrink: 0;
+      width: 116px; height: 116px; border-radius: 12px;
+      background-size: cover; background-position: center top;
+      background-color: var(--p-surface-2);
+      border: 1px solid var(--p-border);
+      box-shadow: var(--p-shadow);
+    }
+    /* Initials sit behind the photo, so a missing or slow file degrades to a
+       legible monogram rather than an empty tile. */
+    .portrait-fallback {
+      position: absolute; inset: 0; z-index: -1;
+      display: grid; place-items: center;
+      font-family: var(--font-display); font-size: 28px; font-weight: 800;
+      color: var(--p-text-dim); background: var(--p-surface-2);
+    }
+    .portrait-col { display: flex; flex-direction: column; align-items: center; gap: 7px; }
+    .portrait-cap {
+      font-family: var(--font-mono); font-size: 10px; font-weight: 800;
+      letter-spacing: 1px; text-transform: uppercase; color: var(--p-text-dim);
+    }
+    .identity-main { display: flex; gap: 22px; align-items: flex-start; min-width: 0; }
+
+    /* ================================================================== */
+    /* AGENT SQUAD                                                         */
+    /* Three states, and the visual gap between them is the whole point:   */
+    /* one agent is actually in production, thirty-five are only planned,  */
+    /* and six disciplines have none at all.                               */
+    /* ================================================================== */
+    .squad-grid {
+      display: grid; gap: 12px;
+      grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+    }
+    .squad-card {
+      display: flex; flex-direction: column; gap: 9px;
+      border: 1px solid var(--p-border); border-radius: 9px;
+      padding: 15px 16px; background: var(--p-surface-2);
+      border-left: 3px solid var(--p-text-dim);
+    }
+    .squad-card.is-live {
+      border-left-color: var(--p-accent);
+      background: color-mix(in srgb, var(--p-accent) 7%, var(--p-surface));
+      border-color: color-mix(in srgb, var(--p-accent) 32%, var(--p-border));
+    }
+    .squad-card.is-planned { border-left-color: var(--p-amber); border-style: dashed; }
+    .squad-card.is-planned .squad-name { color: var(--p-text); }
+
+    .squad-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .squad-coord {
+      font-family: var(--font-mono); font-size: 11.5px; font-weight: 800;
+      color: var(--p-accent); background: var(--p-surface);
+      border: 1px solid var(--p-border); border-radius: 4px; padding: 2px 7px;
+    }
+    .squad-name {
+      font-family: var(--font-mono); font-size: 12.5px; font-weight: 700;
+      color: var(--p-text-strong); word-break: break-word; line-height: 1.35;
+    }
+    .squad-step { font-size: 12.5px; color: var(--p-text); line-height: 1.5; }
+    .squad-meta {
+      font-family: var(--font-mono); font-size: 10px; color: var(--p-text-muted);
+      display: flex; flex-wrap: wrap; gap: 4px 12px;
+    }
+
+    .readiness-tag {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-family: var(--font-mono); font-size: 10px; font-weight: 800;
+      letter-spacing: .7px; text-transform: uppercase;
+      padding: 3px 9px; border-radius: 999px; white-space: nowrap;
+    }
+    .readiness-tag.rt-live {
+      background: color-mix(in srgb, var(--p-accent) 16%, transparent);
+      color: var(--p-accent); border: 1px solid color-mix(in srgb, var(--p-accent) 42%, transparent);
+    }
+    .readiness-tag.rt-planned {
+      background: color-mix(in srgb, var(--p-amber) 14%, transparent);
+      color: var(--p-amber); border: 1px solid color-mix(in srgb, var(--p-amber) 40%, transparent);
+    }
+
+    /* ---------- Launch chips ---------- */
+    .launch-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto; padding-top: 3px; }
+    .launch-chip {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-family: var(--font-mono); font-size: 10px; font-weight: 800;
+      letter-spacing: .4px; padding: 5px 11px; border-radius: 999px;
+      border: 1px solid var(--p-border); background: var(--p-surface);
+      color: var(--p-text-muted); text-decoration: none; line-height: 1.5;
+      transition: border-color .15s ease, color .15s ease, transform .15s ease;
+    }
+    a.launch-chip:hover { border-color: var(--p-accent); color: var(--p-accent); transform: translateY(-1px); }
+    /* A single chip style. This appears up to nine times on a page, so it is
+       an outline rather than a filled slab -- filled turquoise repeated down a
+       grid reads as noise and competes with the content it sits under. */
+    .launch-chip.chip-gemini {
+      border-color: color-mix(in srgb, var(--p-accent) 45%, transparent);
+      color: var(--p-accent);
+      background: color-mix(in srgb, var(--p-accent) 8%, transparent);
+    }
+    a.launch-chip.chip-gemini:hover {
+      border-color: var(--p-accent); color: var(--p-accent);
+      background: color-mix(in srgb, var(--p-accent) 16%, transparent);
+    }
+
+    .launch-agent-id {
+      font-family: var(--font-mono); font-size: 10px; color: var(--p-text-dim);
+      align-self: center; word-break: break-all;
+    }
+
+
+    @media (max-width: 720px) {
+      .identity-main { flex-direction: column; gap: 14px; }
+      .persona-portrait { width: 88px; height: 88px; }
+      .rail-name { display: none; }
+    }
+
+    /* ---------- Notices ---------- */
+    .notice-pending {
+      border: 1px dashed var(--p-amber);
+      background: rgba(245,158,11,0.06);
+      border-radius: 8px; padding: 15px 18px;
+      font-size: 14px; line-height: 1.55; color: var(--p-text);
+    }
+    .notice-pending strong { color: var(--p-amber); }
+
+    /* ---------- Provenance banner ---------- */
+
+    /* ---------- Technical drawer ---------- */
+    details.tech-drawer { background: var(--p-surface); border: 1px solid var(--p-border); border-radius: 10px; padding: 0; margin-bottom: 18px; }
+    details.tech-drawer > summary {
+      cursor: pointer; list-style: none; padding: 16px 26px;
+      font-family: var(--font-mono); font-size: 11.5px; font-weight: 800;
+      letter-spacing: 1.4px; text-transform: uppercase; color: var(--p-text-muted);
+    }
+    details.tech-drawer > summary::-webkit-details-marker { display: none; }
+    details.tech-drawer > summary:hover { color: var(--p-accent); }
+    details.tech-drawer[open] > summary { border-bottom: 1px solid var(--p-border); color: var(--p-accent); }
+    .drawer-body { padding: 18px 26px 24px; }
+    .drawer-body table { width: 100%; border-collapse: collapse; font-family: var(--font-mono); font-size: 11.5px; }
+    .drawer-body th { text-align: left; padding: 7px 9px; color: var(--p-text-muted); border-bottom: 1px solid var(--p-border); font-size: 10px; letter-spacing: 0.9px; text-transform: uppercase; }
+    .drawer-body td { padding: 7px 9px; border-bottom: 1px solid var(--p-border); color: var(--p-text); word-break: break-all; }
+
+    /* ---------- Persona switcher ---------- */
+    .persona-switch-bar {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      background: var(--p-surface); border: 1px solid var(--p-border);
+      border-radius: 10px; padding: 13px 18px; margin-bottom: 18px;
+      box-shadow: var(--p-shadow);
+    }
+    .persona-switch-bar select {
+      font-family: var(--font-display); font-size: 14px; font-weight: 600;
+      padding: 8px 12px; border-radius: 7px; min-height: 40px;
+      background: var(--p-surface-2); color: var(--p-text-strong);
+      border: 1px solid var(--p-border); cursor: pointer; min-width: 300px;
+    }
+    .nav-persona-btn {
+      font-family: var(--font-mono); font-size: 11.5px; font-weight: 800;
+      padding: 8px 14px; border-radius: 7px; min-height: 40px;
+      background: var(--p-surface-2); color: var(--p-text-muted);
+      border: 1px solid var(--p-border); cursor: pointer; text-decoration: none;
+      display: inline-flex; align-items: center;
+    }
+    .nav-persona-btn:hover { color: var(--p-accent); border-color: var(--p-accent); }
+
+    @media (max-width: 900px) {
+      .persona-id-card { grid-template-columns: 1fr; }
+      .action-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script>
+    /* Theme bootstrap — light is the working default for this deck.
+       Shares the `deck-theme` key with every other page so the choice
+       carries across navigation. */
+    (function() {
+      var saved = localStorage.getItem('deck-theme') || 'light';
+      if (saved === 'light') {
+        document.documentElement.classList.add('theme-light');
+      } else {
+        document.documentElement.classList.remove('theme-light');
+      }
+    })();
+    function toggleTheme() {
+      var isLight = document.documentElement.classList.toggle('theme-light');
+      if (document.body) document.body.classList.toggle('theme-light', isLight);
+      localStorage.setItem('deck-theme', isLight ? 'light' : 'dark');
+      updateThemeButtons(isLight);
+    }
+    function updateThemeButtons(isLight) {
+      document.querySelectorAll('.theme-toggle-btn').forEach(function(btn) {
+        btn.innerHTML = isLight
+          ? '<span style="font-size:14px;line-height:1;">🌙</span><span>Dark Mode</span>'
+          : '<span style="font-size:14px;line-height:1;">☀️</span><span>Light Mode</span>';
+        btn.setAttribute('title', isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+      });
+    }
+  </script>
+</head>
+<body>
+
+  <!-- ===================== Executive Top Navigation ===================== -->
+  <header class="executive-top-nav">
+    <a href="../working_deck/pages/page_08.html" style="display:flex;align-items:center;gap:14px;text-decoration:none;">
+      <img src="../assets/media/wip/image25.png" alt="Google Cloud" style="height:32px;width:auto;">
+      <div style="width:1px;height:20px;background:rgba(255,255,255,0.2);"></div>
+      <span style="font-family:var(--font-mono);font-size:11.5px;font-weight:700;color:#FFFFFF;letter-spacing:1.5px;text-transform:uppercase;">
+        PERSONA DEEP DIVE // WORKFORCE &amp; WORKFLOW RECORD
+      </span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:16px;">
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Dark Mode">
+        <span style="font-size:14px;line-height:1;">🌙</span>
+        <span>Dark Mode</span>
+      </button>
+      <a href="../working_deck/pages/page_08.html" style="font-family:var(--font-display);font-size:14px;font-weight:700;color:#94A3B8;text-decoration:none;padding:4px 12px;border-radius:6px;background:rgba(255,255,255,0.04);">← Back to Chessboard</a>
+      <span style="font-family:var(--font-mono);font-size:14px;color:var(--security-turquoise);font-weight:700;" id="persona-counter">— / 20</span>
+      <a href="../working_deck/index.html#stage-08" style="font-family:var(--font-display);font-size:12.5px;font-weight:700;color:#000;background:#FFF;padding:6px 16px;border-radius:20px;text-decoration:none;margin-left:6px;">
+        Continuous Deck View ↗
+      </a>
+    </nav>
+  </header>
+
+  <!-- ===================== Main Content ===================== -->
+  <main id="viewport-scaler" class="stage-persona stage-container" style="padding-top:75px;min-height:100vh;position:relative;">
+
+    <div class="slide-bg-media">
+      <div class="slide-bg-grid"></div>
+      <div class="slide-bg-radial"></div>
+    </div>
+
+    <!-- Static topline. Deliberately OUTSIDE #persona-root so it survives
+         every in-place persona switch: the argument does not change when the
+         role does. Structure matches the Slide 08 header convention exactly
+         (eyebrow // h1 // turquoise sub-headline // lede), because these pages
+         are the drill-down from that board and should read as its continuation. -->
+    <div class="persona-wrap persona-topline">
+      <div class="topline-eyebrow">Agentic Transformation &nbsp;//&nbsp; Workforce &amp; Workflows</div>
+      <h1 class="topline-title">From Reconstruction to Judgement.</h1>
+      <div class="topline-sub">An agentic taskforce transforming human workflows and operational processes.</div>
+      <p class="topline-lede">
+        Twenty enterprise roles, three hundred touchpoints, one workflow spine &mdash; upstream
+        exploration through downstream refining. The engineer&rsquo;s signature still carries the
+        decision. The agent removes the manual reconstruction, the waiting and the unwatched
+        interval that stand between them and it.
+      </p>
+    </div>
+
+    <div class="persona-wrap" id="persona-root">
+      <!-- Injected by renderPersona() -->
+    </div>
+
+  </main>
+
+  <!-- ===================== Data ===================== -->
+  <script src="../data/enterprise_matrix_300.js"></script>
+  <script src="../data/persona_narratives.js"></script>
+
+  <!-- ===================== Renderer ===================== -->
+  <script>
+  (function() {
+    "use strict";
+
+    var ROW_LETTERS = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T"];
+    var MATRIX      = window.ENTERPRISE_MATRIX_DATA || [];
+    var ASSETS      = window.PHYSICAL_ASSETS_DATA   || [];
+    var NARRATIVES  = window.PERSONA_NARRATIVES     || {};
+
+    /* ------------------------------------------------------------------ */
+    /* Gemini Enterprise                                                   */
+    /* ------------------------------------------------------------------ */
+    /* One workspace holds the whole agent estate, so this is a single URL
+       rather than one per agent. CHANGE THIS to the real workspace address
+       before the deck is shown -- it is deliberately the only place the URL
+       appears. Overridable from the host page via window.GEMINI_ENTERPRISE_URL. */
+    var GEMINI_ENTERPRISE_URL = window.GEMINI_ENTERPRISE_URL ||
+      "https://geminienterprise.google.com/";
+
+    /* ------------------------------------------------------------------ */
+    /* Helpers                                                             */
+    /* ------------------------------------------------------------------ */
+
+    function esc(s) {
+      return String(s == null ? "" : s)
+        .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+
+    /* Resolve which persona to render. Accepts ?role=J (row letter),
+       ?p=p10 (matrix id), or ?i=9 (zero-based index). Defaults to the
+       proven benchmark persona, J. */
+    function resolvePersonaIndex() {
+      var params = new URLSearchParams(window.location.search);
+      var role = params.get("role");
+      var pid  = params.get("p");
+      var idx  = params.get("i");
+
+      if (role) {
+        var r = ROW_LETTERS.indexOf(role.trim().toUpperCase());
+        if (r >= 0 && r < MATRIX.length) return r;
+      }
+      if (pid) {
+        for (var k = 0; k < MATRIX.length; k++) {
+          if (MATRIX[k].id === pid.trim().toLowerCase()) return k;
+        }
+      }
+      if (idx !== null && idx !== "") {
+        var n = parseInt(idx, 10);
+        if (!isNaN(n) && n >= 0 && n < MATRIX.length) return n;
+      }
+      var fallback = ROW_LETTERS.indexOf("J");
+      return (fallback >= 0 && fallback < MATRIX.length) ? fallback : 0;
+    }
+
+    /* Roll the 15 actions up into the exposure summary shown at the top. */
+    function summarise(persona) {
+      var out = { total: 0, plugged: 0, critical: 0, friction: 0, baseline: 0,
+                  crTotal: 0, crCritical: 0, crFriction: 0, crReady: 0 };
+      persona.actions.forEach(function(a) {
+        out.total++;
+        var cr = Number(a.capitalCr) || 0;
+        out.crTotal += cr;
+        if (a.status === "plugged")       { out.plugged++;  out.crReady     += cr; }
+        else if (a.status === "critical") { out.critical++; out.crCritical  += cr; }
+        else if (a.status === "friction") { out.friction++; out.crFriction  += cr; }
+        else                              { out.baseline++; }
+      });
+      return out;
+    }
+
+    function statusLabel(s) {
+      if (s === "plugged")  return "Ready";
+      if (s === "critical") return "Critical";
+      if (s === "friction") return "Friction";
+      return "Baseline";
+    }
+
+    /* Only the two ends of the ladder are coloured: L1 (amber -- the agent may
+       only recommend) and L4 (turquoise -- autonomous and safety-instrumented).
+       L2 and L3 stay neutral deliberately, so the eye goes to the boundaries of
+       agent authority rather than to all four rungs at once. */
+    function authorityClass(auth) {
+      if (/L4/.test(auth)) return " lvl-4";
+      if (/L1/.test(auth)) return " lvl-1";
+      return "";
+    }
+
+    /* ------------------------------------------------------------------ */
+    /* Portraits                                                           */
+    /* ------------------------------------------------------------------ */
+
+    /* Files are keyed to the persona id, so p10 -> p10_persona.jpg. No
+       lookup table to drift out of sync with the dataset.
+       Full-res (1024px) is used for the hero; the 96px thumbnail is used in
+       the rail, because the rail shows all twenty at once and the full set
+       of originals is ~14 MB. */
+    /* This page lives in personas/, so portraits resolve relative to it. */
+    var AVATAR_BASE = "avatars/";
+
+    function portraitPath(persona) {
+      return AVATAR_BASE + persona.id + "_persona.jpg";
+    }
+    function thumbPath(persona) {
+      return AVATAR_BASE + "thumbs/" + persona.id + "_thumb.jpg";
+    }
+
+    function initialsOf(name) {
+      return String(name || "").split(/[\s&/]+/)
+        .filter(function(w) { return /^[A-Za-z]/.test(w); })
+        .map(function(w) { return w.charAt(0).toUpperCase(); })
+        .join("").slice(0, 2);
+    }
+
+    /* ------------------------------------------------------------------ */
+    /* Agents + readiness                                                  */
+    /* ------------------------------------------------------------------ */
+
+    /* Every named agent this persona owns, in coordinate order. Only actions
+       carrying a registry id count -- a friction point with no agent named
+       against it is a gap, and is reported as one. */
+    function agentsOf(persona) {
+      var out = [];
+      persona.actions.forEach(function(a, i) {
+        if (!a.agentRegistryId) return;
+        out.push({
+          coord:    a.coord || "",
+          step:     a.name || ("Step " + (i + 1)),
+          id:       a.agentRegistryId,
+          uri:      a.agentRegistryUri || "",
+          status:   a.agentDeploymentStatus || "",
+          fw:       a.agentFramework || "",
+          impact:   a.impact || "",
+          speed:    a.speed || "",
+          live:     a.status === "plugged",
+          action:   a
+        });
+      });
+      return out;
+    }
+
+    /* Three states only. "Live" means it is running in production today --
+       exactly one agent across the whole estate currently qualifies. */
+    function readinessOf(persona) {
+      var ag = agentsOf(persona);
+      if (!ag.length) return "none";
+      return ag.some(function(a) { return a.live; }) ? "live" : "planned";
+    }
+
+    /* ------------------------------------------------------------------ */
+    /* Gemini Enterprise launch chip                                       */
+    /* ------------------------------------------------------------------ */
+
+    /* One workspace holds the whole estate, so every touchpoint resolves to
+       the same address -- the destination does not change, only what you
+       find when you arrive. The chip is therefore identical everywhere it
+       appears: same style, same label, on action cards and agent cards alike.
+
+       Every open touchpoint links, including the 122 with no agent named yet.
+       Withholding the link from those would hide exactly the work this deck
+       exists to argue for. Build state is reported by the readiness tag and
+       by the chessboard, and repeated in this chip's tooltip -- never by
+       making the button itself look like a different button.
+
+       opts.hideId suppresses the registry id when the surrounding card is
+       already displaying it. */
+    function launchRow(a, opts) {
+      var st = a.status || "baseline";
+      if (st !== "plugged" && st !== "critical" && st !== "friction") return "";
+
+
+      /* One style, one label, everywhere. Whether an agent is built, planned
+         or unclaimed is already stated by the readiness tag on the card and by
+         the chessboard on Slide 08; saying it a third time in the button text
+         made the same control look like three different controls. The state
+         survives in the tooltip, where it informs without shouting. */
+      var title;
+      if (st === "plugged") {
+        title = (a.agentRegistryId ? a.agentRegistryId + " \u2014 " : "") +
+                "running in production. Open it in the workspace.";
+      } else if (a.agentRegistryId) {
+        title = a.agentRegistryId + " \u2014 " +
+                (a.agentDeploymentStatus || "Planned") +
+                ". Specified, not yet deployed.";
+      } else {
+        title = "No agent is named against this touchpoint yet. " +
+                "Open the workspace to scope one.";
+      }
+
+      var showId = a.agentRegistryId && !(opts && opts.hideId);
+
+      return '<div class="launch-row">' +
+          '<a class="launch-chip chip-gemini" href="' + esc(GEMINI_ENTERPRISE_URL) + '" ' +
+             'target="_blank" rel="noopener noreferrer" title="' + esc(title) + '">' +
+            "\u2726 Open in Gemini Enterprise" +
+          '</a>' +
+          (showId
+            ? '<span class="launch-agent-id" title="Agent registry identifier">' +
+              esc(a.agentRegistryId) + '</span>'
+            : '') +
+        '</div>';
+    }
+
+
+
+    /* ------------------------------------------------------------------ */
+    /* Block renderers                                                     */
+    /* ------------------------------------------------------------------ */
+
+    function blockIdentity(persona, rowLetter, sum, nar) {
+      var agents = agentsOf(persona);
+      var ready  = readinessOf(persona);
+      var live   = agents.filter(function(a) { return a.live; }).length;
+
+      var readyTag =
+        ready === "live"
+          ? '<span class="readiness-tag rt-live">\u25CF ' + live + ' agent live in production</span>'
+          : ready === "planned"
+            ? '<span class="readiness-tag rt-planned">\u25CB ' + agents.length + ' agent' +
+              (agents.length === 1 ? '' : 's') + ' planned \u2014 none live</span>'
+            : '';
+
+      /* The profile belongs with the face, not four blocks further down. It is
+         a single third-person paragraph: the governing question used to sit
+         above this in the first person, and the voice-shift read as a quote
+         bolted onto a biography. It is now folded into the prose itself. */
+      var mandate = "";
+      if (nar && nar.accountableFor) {
+        mandate =
+          '<div class="identity-mandate">' +
+            '<p class="mandate-body">' + esc(nar.accountableFor) + '</p>' +
+          '</div>';
+      }
+
+      return '' +
+      '<div class="persona-id-card">' +
+        '<div class="identity-main">' +
+          '<div class="portrait-col">' +
+            '<div class="persona-portrait" style="background-image:url(\'' + esc(portraitPath(persona)) + '\');">' +
+              '<span class="portrait-fallback">' + esc(initialsOf(persona.name)) + '</span>' +
+            '</div>' +
+            '<span class="portrait-cap">Row ' + esc(rowLetter) + '</span>' +
+          '</div>' +
+          '<div style="min-width:0;">' +
+            '<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;">' +
+              /* The row letter used to sit here as a 34px filled turquoise
+                 badge -- the loudest element in the card, for what is only a
+                 lookup key into the Slide 08 board. It is still stated, quietly,
+                 as the portrait caption ("Row A"), which is what the A13-style
+                 coordinates further down the page refer back to. */
+              '<span class="sector-pill">' + esc(persona.sector) + '</span>' +
+              readyTag +
+            '</div>' +
+            '<h1 style="font-family:var(--font-display);font-size:clamp(26px,3vw,42px);font-weight:800;letter-spacing:-1px;line-height:1.12;color:var(--p-text-strong);margin:0 0 8px;">' +
+              esc(persona.name) +
+            '</h1>' +
+            /* The named incumbent stack ("Petrel / DecisionSpace / SeisSpace")
+               was removed. It varies by operator, by asset and by vintage, so
+               it is asserted without evidence in the room; being right earns
+               nothing and being wrong costs the credibility of the page. The
+               argument does not depend on it. */
+          '</div>' +
+        '</div>' +
+        '<div style="text-align:right;">' +
+          '<div style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.6px;color:var(--p-text-muted);">Annual exposure</div>' +
+          '<div style="font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--p-accent);line-height:1.05;">₹' + sum.crTotal + ' Cr</div>' +
+          '<div style="font-family:var(--font-mono);font-size:10px;color:var(--p-text-dim);">Across ' + sum.total + ' touchpoints</div>' +
+        '</div>' +
+        mandate +
+      '</div>';
+    }
+
+    /* Board register, not pitch register. The figures are unchanged; only the
+       volume is. Emotive sublabels ("BLEEDING", "SECURED", "LEGACY DESKTOP
+       LOCK") were doing persuasion the numbers already do on their own. */
+
+    /* Provenance banner. The qualitative layer is drafted from the matrix and
+       has NOT yet been validated by the person who actually does this job.
+       That distinction is shown, never hidden. */
+
+    /* The authored content moved into the identity card. This now only
+       carries the honest notice for a persona with no narrative pack. */
+    function blockAccountable(nar, persona) {
+      if (nar && nar.accountableFor) return "";
+      return '' +
+      '<section class="pblock">' +
+        '<h2>What this role is answerable for</h2>' +
+        '<div class="notice-pending">' +
+          '<strong>Narrative pack not yet authored.</strong> The quantitative record for ' +
+          esc(persona.name) + ' is complete below — all ' + persona.actions.length +
+          ' workflow touchpoints, capital exposure and decision latency are drawn live from the ' +
+          'enterprise matrix. The qualitative layer (accountability statement, operator pain ' +
+          'points, shift journey) has not been written for this persona yet and is not being ' +
+          'invented to fill the space.' +
+        '</div>' +
+      '</section>';
+    }
+
+    function blockPain(nar) {
+      if (!nar || !nar.painPoints || !nar.painPoints.length) return "";
+      return '' +
+      '<section class="pblock">' +
+        '<h2>Where the day actually goes</h2>' +
+        /* The draft caveat lives here rather than in a banner on every page.
+           These quotes are the only invented content on the page -- everything
+           else is drawn from the matrix -- so the qualifier belongs against
+           them, in one clause, not restated in a block twenty times. */
+        '<p style="margin:0 0 14px;color:var(--p-text-muted);font-size:14px;">' +
+          'Operator-voice friction, each traced to the specific touchpoint that produces it. ' +
+          'Composed from the recorded vulnerability at each coordinate and written to be ' +
+          'argued with \u2014 not yet the testimony of someone who does the job.' +
+        '</p>' +
+        nar.painPoints.map(function(p) {
+          return '<div class="pain-quote">' +
+                   '<div class="q">“' + esc(p.quote) + '”</div>' +
+                   '<div class="c">TRACES TO TOUCHPOINT ' + esc(p.coord) + '</div>' +
+                 '</div>';
+        }).join("") +
+      '</section>';
+    }
+
+    function blockActions(persona, rowLetter) {
+      var cards = persona.actions.map(function(a, i) {
+        var st = a.status || "baseline";
+        return '' +
+        '<div class="action-card st-' + esc(st) + '" data-status="' + esc(st) + '">' +
+          '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:7px;">' +
+            '<span style="font-family:var(--font-mono);font-size:11.5px;font-weight:800;color:var(--p-accent);">' +
+              esc(a.coord) + ' &nbsp;·&nbsp; STEP ' + (i + 1) +
+            '</span>' +
+            '<span class="status-tag st-' + esc(st) + '">' + esc(statusLabel(st)) + '</span>' +
+          '</div>' +
+          '<div style="font-family:var(--font-display);font-size:16px;font-weight:800;color:var(--p-text-strong);line-height:1.3;">' +
+            esc(a.name) +
+          '</div>' +
+          '<div class="vp-line vp-vuln"><span class="k">VULNERABILITY</span><span class="v">' + esc(a.vuln) + '</span></div>' +
+          '<div class="vp-line vp-plug"><span class="k">AGENT PLUG</span><span class="v">' + esc(a.plug) + '</span></div>' +
+          '<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;padding-top:10px;border-top:1px solid var(--p-border);">' +
+            '<span style="font-family:var(--font-mono);font-size:14px;font-weight:800;color:' +
+              (st === "critical" ? "var(--p-crimson)" : st === "friction" ? "var(--p-amber)" : "var(--p-accent)") +
+            ';">' + esc(a.impact) + '</span>' +
+            '<span style="font-family:var(--font-mono);font-size:11.5px;color:var(--p-text-muted);">' + esc(a.speed) + '</span>' +
+          '</div>' +
+          launchRow(a) +
+        '</div>';
+      }).join("");
+
+      /* Status filter. Counts come from the data, and a button is only shown
+         for a status this role actually has -- so a filter can never produce
+         an empty grid. Order runs most-urgent to least, with All first. */
+      var counts = { plugged: 0, critical: 0, friction: 0, baseline: 0 };
+      persona.actions.forEach(function(a) {
+        counts[a.status || "baseline"] = (counts[a.status || "baseline"] || 0) + 1;
+      });
+
+      var filters = [{ key: "all", label: "All", n: persona.actions.length }];
+      ["plugged", "critical", "friction", "baseline"].forEach(function(k) {
+        if (counts[k]) filters.push({ key: k, label: statusLabel(k), n: counts[k] });
+      });
+
+      var bar = '<div class="filter-bar" role="group" aria-label="Filter touchpoints by status">' +
+        filters.map(function(f) {
+          return '<button type="button" class="filter-btn fb-' + esc(f.key) + '' +
+                   (f.key === "all" ? ' active' : '') + '" ' +
+                   'data-filter="' + esc(f.key) + '" ' +
+                   'aria-pressed="' + (f.key === "all" ? "true" : "false") + '">' +
+                   (f.key === "all" ? '' : '<span class="fb-dot"></span>') +
+                   esc(f.label) +
+                   '<span class="fb-n">' + f.n + '</span>' +
+                 '</button>';
+        }).join("") +
+      '</div>';
+
+      return '' +
+      '<section class="pblock">' +
+        '<h2>The ' + persona.actions.length + ' workflow touchpoints this role owns</h2>' +
+        '<p style="margin:0 0 14px;color:var(--p-text-muted);font-size:14px;">' +
+          'Row ' + esc(rowLetter) + ' of the enterprise chessboard, expanded. Each touchpoint pairs the ' +
+          'operational vulnerability that exists today with the agent that closes it.' +
+        '</p>' +
+        bar +
+        '<div class="action-grid">' + cards + '</div>' +
+      '</section>';
+    }
+
+    /* blockLatency was removed: it rendered a.speed and a.impact in a table,
+       which blockActions already shows on every one of the same 15 cards.
+       Fifteen duplicate rows per persona, 300 across the deck. */
+
+    /* The shift narrative is the strongest argument on the page -- it is the
+       only place that explains why an agent changes the NATURE of the work
+       rather than merely speeding it up. But as one 1,000-1,750 character
+       paragraph it was a wall nobody would read.
+
+       Every narrative already turns at the same point: from what happens
+       today to what the agent does instead. Splitting there costs no words
+       and makes the contrast the point, side by side, in roughly half the
+       height. If the turn cannot be located the text renders whole. */
+    function splitJourney(text) {
+      if (!text) return null;
+      // Decimals ("0.9899", "8.1 seconds") would otherwise be read as sentence
+      // endings, which splits the very sentence that names the agent and makes
+      // the whole split fail. Mask the inner period, split, then restore.
+      var MASK = "\u0001";
+      var masked = text.replace(/(\d)\.(\d)/g, "$1" + MASK + "$2");
+      var sentences = masked.match(/[^.!?]+[.!?]+(?:\s|$)/g);
+      if (sentences) {
+        sentences = sentences.map(function (s) {
+          return s.split(MASK).join(".");
+        });
+      }
+      if (!sentences || sentences.length < 4) return null;
+
+      var minChars = text.length * 0.25;
+      var seen = 0;
+      for (var i = 0; i < sentences.length; i++) {
+        if (seen > minChars && /\b[A-Z]\d{1,2}\b/.test(sentences[i])) {
+          var before = sentences.slice(0, i).join("").trim();
+          var after  = sentences.slice(i).join("").trim();
+          if (before.length > 120 && after.length > 120) {
+            return { today: before, agent: after };
+          }
+        }
+        seen += sentences[i].length;
+      }
+      return null;
+    }
+
+    function blockJourney(nar) {
+      if (!nar || !nar.journey) return "";
+      var parts = splitJourney(nar.journey.summary);
+
+      var body = parts
+        ? '<div class="journey-split">' +
+            '<div class="journey-half jh-today">' +
+              '<div class="jh-label">Today</div>' +
+              '<p style="margin:0;">' + esc(parts.today) + '</p>' +
+            '</div>' +
+            '<div class="journey-half jh-agent">' +
+              '<div class="jh-label">With the agent</div>' +
+              '<p style="margin:0;">' + esc(parts.agent) + '</p>' +
+            '</div>' +
+          '</div>'
+        : '<p style="margin:0;">' + esc(nar.journey.summary) + '</p>';
+
+      return '' +
+      '<section class="pblock" style="border-left:4px solid var(--p-accent);">' +
+        '<h2>A day in the life</h2>' +
+        '<div style="font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--p-text-strong);margin-bottom:14px;">' +
+          esc(nar.journey.title) +
+        '</div>' +
+        body +
+      '</section>';
+    }
+
+    /* ------------------------------------------------------------------ */
+    /* Agent squad                                                         */
+    /* ------------------------------------------------------------------ */
+
+    /* The bridge between the friction above and the proof below: the actual
+       named agents that answer this persona's pain. Deployment state is
+       reported exactly as the registry holds it, via the readiness tag. Every
+       agent carries a launch link regardless of state -- see launchRow. */
+    function blockAgentSquad(persona) {
+      var agents = agentsOf(persona);
+
+      /* Six of the twenty roles have no agent named yet. Those pages now show
+         no squad section at all rather than a paragraph announcing the
+         absence -- the unclaimed exposure is already visible on the action
+         grid and on the Slide 08 board, which is where the gap belongs. */
+      if (!agents.length) return "";
+
+      var liveCount = agents.filter(function(a) { return a.live; }).length;
+      var lede = liveCount
+        ? liveCount + ' of ' + agents.length + ' agents for this role ' +
+          (liveCount === 1 ? 'is' : 'are') + ' running in production today. The remainder are scheduled, not deployed.'
+        : 'All ' + agents.length + ' agents named for this role are scheduled for Wave 1. ' +
+          'None are running in production today.';
+
+      return '' +
+      '<section class="pblock">' +
+        '<h2>Agent squad</h2>' +
+        '<p style="margin:0 0 14px;color:var(--p-text-muted);font-size:14px;">' + esc(lede) + '</p>' +
+        '<div class="squad-grid">' +
+          agents.map(function(a) {
+            var tag = a.live
+              ? '<span class="readiness-tag rt-live">\u25CF Live</span>'
+              : '<span class="readiness-tag rt-planned">\u25CB ' + esc(a.status || "Planned") + '</span>';
+
+            /* Same chip as the action cards, from the same helper, so the
+               wording never diverges between the two places an agent is
+               named on this page. The id is suppressed here because
+               squad-name above is already showing it. */
+            return '<article class="squad-card ' + (a.live ? 'is-live' : 'is-planned') + '">' +
+              '<div class="squad-top">' +
+                '<span class="squad-coord">' + esc(a.coord) + '</span>' + tag +
+              '</div>' +
+              '<div class="squad-name">' + esc(a.id) + '</div>' +
+              '<div class="squad-step">' + esc(a.step) + '</div>' +
+              '<div class="squad-meta">' +
+                (a.fw     ? '<span>' + esc(a.fw) + '</span>' : '') +
+                (a.impact ? '<span>' + esc(a.impact) + '</span>' : '') +
+                (a.speed  ? '<span>' + esc(a.speed) + '</span>' : '') +
+              '</div>' +
+              launchRow(a.action, { hideId: true }) +
+            '</article>';
+          }).join("") +
+        '</div>' +
+      '</section>';
+    }
+
+    function blockSignoffs(nar) {
+      if (!nar || !nar.signoffs || !nar.signoffs.length) return "";
+      return '' +
+      '<section class="pblock">' +
+        '<h2>Decision rights</h2>' +
+        /* Was "Waiting on your sign-off". The second person addressed the
+           reader directly, which clashes with the third-person profile, and
+           "waiting on" implied a queue that does not exist. This block is a
+           governance specification, so it is named as one. */
+        '<p style="margin:0 0 12px;color:var(--p-text-muted);font-size:14px;">' +
+          'Which decisions an agent may take alone, which require human confirmation, ' +
+          'and which stay entirely with the accountable chain.' +
+        '</p>' +
+        nar.signoffs.map(function(s) {
+          return '<div class="signoff-row">' +
+            '<span style="font-family:var(--font-mono);font-size:11.5px;font-weight:800;color:var(--p-accent);">' + esc(s.coord) + '</span>' +
+            '<div>' +
+              '<div style="font-size:14px;font-weight:700;color:var(--p-text-strong);margin-bottom:3px;">' + esc(s.gate) + '</div>' +
+              '<div style="font-size:12.5px;line-height:1.5;color:var(--p-text-muted);">' + esc(s.note) + '</div>' +
+            '</div>' +
+            '<span class="authority-pill' + authorityClass(s.authority) + '">' + esc(s.authority) + '</span>' +
+          '</div>';
+        }).join("") +
+      '</section>';
+    }
+
+    function blockAsset(idx) {
+      var asset = ASSETS[idx];
+      if (!asset) return "";
+      return '' +
+      '<section class="pblock">' +
+        '<h2>The physical asset this role instruments</h2>' +
+        '<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">' +
+          /* No letter badge here. PHYSICAL_ASSETS_DATA[n].num is just this
+             asset's position in a parallel 20-item list -- it rendered as a
+             second identical turquoise "A" on the page and meant nothing.
+             The asset name and sector identify it on their own. */
+          '<div>' +
+            '<div style="font-family:var(--font-display);font-size:16px;font-weight:800;color:var(--p-text-strong);">' + esc(asset.name) + '</div>' +
+            '<div class="sector-pill" style="display:inline-block;margin-top:5px;">' + esc(asset.sector) + '</div>' +
+          '</div>' +
+        '</div>' +
+      '</section>';
+    }
+
+
+    function blockDrawer(persona) {
+      var rows = persona.actions.map(function(a) {
+        return '<tr>' +
+          '<td style="color:var(--p-accent);font-weight:700;">' + esc(a.coord) + '</td>' +
+          '<td>' + esc(a.agentRegistryId || "—") + '</td>' +
+          '<td>' + esc(a.agentDeploymentStatus || "—") + '</td>' +
+          '<td>' + esc(a.agentFramework || "—") + '</td>' +
+          '<td>' + esc(a.agentIamIdentity || "—") + '</td>' +
+        '</tr>';
+      }).join("");
+      return '' +
+      '<details class="tech-drawer">' +
+        '<summary>▸ Technical drawer — agent registry, IAM identity &amp; deployment state</summary>' +
+        '<div class="drawer-body">' +
+          '<table>' +
+            '<thead><tr><th>Coord</th><th>Registry ID</th><th>Deployment</th><th>Framework</th><th>IAM service account</th></tr></thead>' +
+            '<tbody>' + rows + '</tbody>' +
+          '</table>' +
+        '</div>' +
+      '</details>';
+    }
+
+    /* The roster bar. A dropdown hid both the scale of the estate and which
+       disciplines already have agents; the rail shows twenty roles at once,
+       each with a readiness dot, so coverage is legible before any click. */
+    function blockRail(idx) {
+      var live = 0, planned = 0, none = 0;
+      MATRIX.forEach(function(p) {
+        var r = readinessOf(p);
+        if (r === "live") live++; else if (r === "planned") planned++; else none++;
+      });
+
+      var chips = MATRIX.map(function(p, i) {
+        var letter = ROW_LETTERS[i] || String.fromCharCode(65 + i);
+        var ready  = readinessOf(p);
+        var active = i === idx;
+
+        /* Trim the trailing role noun so twenty chips stay scannable;
+           the full title is on the chip's tooltip and in the hero. */
+        var shortName = String(p.name || "")
+          .replace(/\s*(Engineer|Specialist|Technologist|Lead|Superintendent|Dispatcher|Chemist|Geologist|Geophysicist)\b.*$/i, "")
+          .trim() || p.name;
+
+        return '<a class="rail-chip' + (active ? ' active' : '') + '" ' +
+                 'href="?role=' + esc(letter) + '" ' +
+                 'data-idx="' + i + '" ' +
+                 'title="' + esc(letter + " \u2014 " + p.name) + '" ' +
+                 (active ? 'aria-current="page" ' : '') + '>' +
+            '<span class="rail-avatar" style="background-image:url(\'' + esc(thumbPath(p)) + '\');"></span>' +
+            '<span class="rail-letter">' + esc(letter) + '</span>' +
+            '<span class="rail-name">' + esc(shortName) + '</span>' +
+            '<span class="rail-dot is-' + ready + '"></span>' +
+          '</a>';
+      }).join("");
+
+      return '' +
+      '<div class="persona-rail-wrap">' +
+        '<div class="rail-head">' +
+          '<span>The workforce \u2014 20 disciplines</span>' +
+          '<span class="rail-count">' +
+            live + ' live \u00B7 ' + planned + ' planned \u00B7 ' + none + ' unassigned' +
+          '</span>' +
+        '</div>' +
+        '<nav class="persona-rail" aria-label="Select persona">' + chips + '</nav>' +
+      '</div>';
+    }
+
+    /* ------------------------------------------------------------------ */
+    /* Compose                                                             */
+    /* ------------------------------------------------------------------ */
+
+    /* forceIdx lets the rail re-render in place. When it is omitted the
+       index is resolved from the URL, which is what a cold load needs. */
+    function renderPersona(forceIdx) {
+      var root = document.getElementById("persona-root");
+      if (!root) return;
+
+      if (!MATRIX.length) {
+        root.innerHTML =
+          '<div class="notice-pending"><strong>Matrix dataset unavailable.</strong> ' +
+          'Could not load <code>data/enterprise_matrix_300.js</code>. ' +
+          'Verify the relative path from this page.</div>';
+        return;
+      }
+
+      var idx       = (typeof forceIdx === "number") ? forceIdx : resolvePersonaIndex();
+      var persona   = MATRIX[idx];
+      var rowLetter = ROW_LETTERS[idx] || String.fromCharCode(65 + idx);
+      var nar       = NARRATIVES[persona.id] || null;
+      var sum       = summarise(persona);
+
+      document.title = persona.name + " | Persona Deep Dive";
+      var counter = document.getElementById("persona-counter");
+      if (counter) counter.innerText = (idx + 1) + " / " + MATRIX.length;
+
+      /* blockExposure removed: the identity card already carries the annual
+         exposure and the touchpoint count, and the action grid carries the
+         per-touchpoint status. The summary strip restated both and added
+         nothing.
+         blockProvenance removed: an identical draft banner on all 20 pages is
+         wallpaper. The caveat now sits on the pain points, which are the only
+         fabricated content on the page.
+         blockHonestLimit removed from the render; the authored text is
+         retained in data/persona_narratives.js as interview material. */
+      root.innerHTML =
+        blockRail(idx) +
+        blockIdentity(persona, rowLetter, sum, nar) +
+        blockAccountable(nar, persona) +
+        blockPain(nar) +
+        blockAgentSquad(persona, sum) +
+        blockJourney(nar) +
+        blockActions(persona, rowLetter) +
+        blockSignoffs(nar) +
+        blockAsset(idx) +
+        blockDrawer(persona);
+
+      wireRail(root);
+      wireFilters(root);
+      scrollActiveChipIntoView(root);
+    }
+
+    /* Switching role rebuilds the page in place. The old dropdown assigned
+       window.location.search, which reloaded the document and re-fetched the
+       158 KB dataset on every change; that reload flash was the single
+       biggest reason the page felt heavier than it needed to. The URL is
+       still updated, so deep links and the back button keep working. */
+    function wireRail(root) {
+      var chips = root.querySelectorAll(".rail-chip");
+      Array.prototype.forEach.call(chips, function(chip) {
+        chip.addEventListener("click", function(e) {
+          /* Let modified clicks open a new tab as the user expects. */
+          if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+          e.preventDefault();
+
+          var i = parseInt(chip.getAttribute("data-idx"), 10);
+          if (isNaN(i) || i < 0 || i >= MATRIX.length) return;
+
+          if (window.history && window.history.pushState) {
+            window.history.pushState({ idx: i }, "", "?role=" + ROW_LETTERS[i]);
+          }
+          renderPersona(i);
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    }
+
+    /* Status filter over the touchpoint grid. This shows and hides cards that
+       are already in the DOM rather than re-rendering the section, so it is
+       instant and the launch chips keep their listeners. Re-bound on every
+       persona render, which also resets the view to All. */
+    function wireFilters(root) {
+      var btns  = root.querySelectorAll(".filter-btn");
+      var cards = root.querySelectorAll(".action-card");
+      if (!btns.length || !cards.length) return;
+
+      Array.prototype.forEach.call(btns, function(btn) {
+        btn.addEventListener("click", function() {
+          var want = btn.getAttribute("data-filter");
+
+          Array.prototype.forEach.call(btns, function(b) {
+            var on = b === btn;
+            b.classList.toggle("active", on);
+            b.setAttribute("aria-pressed", on ? "true" : "false");
+          });
+
+          Array.prototype.forEach.call(cards, function(card) {
+            var st = card.getAttribute("data-status");
+            card.classList.toggle("is-hidden", want !== "all" && st !== want);
+          });
+        });
+      });
+    }
+
+    /* With twenty chips the active one is frequently off-screen. */
+    function scrollActiveChipIntoView(root) {
+      var rail   = root.querySelector(".persona-rail");
+      var active = root.querySelector(".rail-chip.active");
+      if (!rail || !active) return;
+      var target = active.offsetLeft - (rail.clientWidth / 2) + (active.offsetWidth / 2);
+      rail.scrollLeft = Math.max(0, target);
+    }
+
+    window.addEventListener("popstate", function() {
+      renderPersona();
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      updateThemeButtons(document.documentElement.classList.contains("theme-light"));
+      renderPersona();
+    });
+  })();
+  </script>
+
+</body>
+</html>

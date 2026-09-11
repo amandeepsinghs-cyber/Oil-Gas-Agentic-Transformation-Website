@@ -1348,6 +1348,19 @@ body {
 .jenga-card:hover .jenga-img-box img {
   transform: scale(1.02);
 }
+.jenga-img-light {
+  display: none !important;
+}
+.jenga-img-dark {
+  display: block !important;
+}
+.theme-light .jenga-img-dark {
+  display: none !important;
+}
+.theme-light .jenga-img-light {
+  display: block !important;
+}
+
 
 /* ==========================================================================
    1-Click Print / PDF Stylesheet (16:9 Landscape Perfection)

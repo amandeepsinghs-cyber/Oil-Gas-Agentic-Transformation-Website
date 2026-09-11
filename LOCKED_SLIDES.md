@@ -133,8 +133,10 @@
 - **Kicker:** `THE VISCERAL REALITY // STRUCTURAL RESILIENCE METAPHOR`
 - **Badge:** `SYSTEMIC RESILIENCE`
 - **Visual Assets:**
-  - `assets/media/wip/image74_left.jpg`: High-resolution standalone unbraced wooden tower, missing blocks, tabletop base clearly visible.
-  - `assets/media/wip/image74_right.jpg`: High-resolution standalone cyan neon-fortified tower, tabletop base clearly visible.
+  - `assets/media/wip/image74_left.jpg`: High-resolution standalone unbraced wooden tower, missing blocks, tabletop base clearly visible (Dark Mode).
+  - `assets/media/wip/image74_left_light.jpg`: Daylight studio unbraced wooden tower on clean white/slate background (Light Mode).
+  - `assets/media/wip/image74_right.jpg`: High-resolution standalone cyan neon-fortified tower, tabletop base clearly visible (Dark Mode).
+  - `assets/media/wip/image74_right_light.jpg`: Daylight studio cyan neon-fortified tower on clean white/slate background (Light Mode).
 - **Side-by-Side Dual Tower Architecture:**
   - **Left Tower (Without AI Agents):**
     - Badge: `WITHOUT AGENTS // EXPOSED GAPS`
@@ -243,9 +245,9 @@
     - Every box displays its unique alphanumeric coordinate: `rowcolumn` (`A1` through `T15`).
     - The benchmark petrophysical splicing agent is numbered **`J8`**.
   - **The Operational Vulnerabilities (CAD Drafting Cross-Hatch Textures):**
-    - `🔴 52 Critical Process Risks`: Catastrophic blowout / ₹50Cr+ bleed; styled with 45° red CAD drafting cross-hatch.
-    - `🟡 84 Friction Bottlenecks`: 1–4 hr engineering decision lag; styled with -45° amber CAD drafting cross-hatch.
-    - `⚪ 164 Baseline Monoliths`: Legacy commercial software locks; styled in dark blueprint slate.
+    - `🔴 86 Critical Process Risks`: Catastrophic blowout / ₹50Cr+ bleed; styled with 45° red CAD drafting cross-hatch.
+    - `🟡 71 Friction Bottlenecks`: 1–4 hr engineering decision lag; styled with -45° amber CAD drafting cross-hatch.
+    - `⚪ 142 Baseline Monoliths`: Legacy commercial software locks; styled in dark blueprint slate.
 - **Interactive Live HUD (Heads-Up Display) Inspector:**
   - Sticky side panel that dynamically updates on cell hover/click without layout shifts.
   - Displays: Persona & Segment badge, Action title (`rowcolumn • Step N: Title`), Monolith tool, Status badge.
@@ -255,12 +257,19 @@
     - `VERTEX AI AGENT REGISTRY IDENTITY`: Resource path, deployment lifecycle state, IAM identity, and technical stack.
     - **Exposure Metrics:** Annual risk mitigation (e.g. ₹45 Cr/yr) and Decision velocity (e.g. Seconds vs 2.5 Hrs).
     - **Contextual Action Area:** Slide 06 proof link on J8 anchor, active production/Wave 1 priority tags on candidates.
+    - **Persona Record Link (always present):** `▸ FULL PERSONA RECORD // <PERSONA NAME>` — rendered for every cell state, links to the persona deep-dive page for that row.
+- **Persona Deep-Dive Drill-Down (`personas/persona.html?role=<LETTER>`):**
+  - Each of the 20 row labels carries a `↗` affordance (`.persona-drill-btn`) revealed on hover / row-highlight. It must call `event.stopPropagation()` so the existing click-to-inspect HUD behaviour is preserved.
+  - Path is resolved through the `PERSONA_PAGE_BASE` constant so each host file (final_slides vs working_deck/pages) supplies its own relative path.
+  - The deep-dive page reads live from `data/enterprise_matrix_300.js` (no duplicated figures) plus the qualitative `data/persona_narratives.js` layer, and renders eight blocks: answerable-for + governing question, where the day goes, a day in the life, the 15 owned touchpoints, ordinary vs agentic latency, sign-off authority gates, the physical asset instrumented, and the honest limit.
+  - Personas without an authored narrative pack render an explicit *"Narrative pack not yet authored"* notice; quotes and journeys are **never** fabricated.
 - **Top Metric Ribbon:**
   - Total Operational Nodes: `300 Touchpoints (Zero Task Overlap)`
   - Proven Agent Validated: `1 / 300 (0.33%)`
-  - Critical Process Risks: `52 Vulnerabilities`
-  - Manual Friction Gaps: `84 Bottlenecks`
-  - Baseline Monoliths: `164 Monolith Silos`
+  - Critical Process Risks: `86 Vulnerabilities`
+  - Manual Friction Gaps: `71 Bottlenecks`
+  - Baseline Monoliths: `142 Monolith Silos`
+  - **Source of truth:** these five figures are computed at runtime by `updateFilterCounts()` directly from `data/enterprise_matrix_300.js`. The hardcoded HTML values exist only for the pre-JavaScript paint and **must be kept in sync with the data** — never hand-edited to a different figure. Board total capital at risk: **₹11,159 Cr / yr**.
 - **Filter Controls:** All 300 Touchpoints, Proven Agent Only, Critical Red, Friction Amber, Baseline.
 - **Narrative Bridge:** Bottom transition to Stage 09 (*Next: The Agentic Value Topology: 3D Prioritization Horizon*).
 

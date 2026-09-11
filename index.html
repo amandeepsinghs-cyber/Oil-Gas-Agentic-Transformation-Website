@@ -450,6 +450,231 @@
     </section>
 
     <!-- ========================================================================= -->
+    <!-- STAGE 02B: THE MASSIVE CREW CHANGE — INSTITUTIONAL MEMORY LOSS            -->
+    <!-- Inserted between the Swiss Cheese mechanism and the 5 Criteria. The       -->
+    <!-- argument depends on Stage 02 already being on screen: it claims the gaps  -->
+    <!-- shown there are closed today by a person, and that person is retiring.    -->
+    <!-- ========================================================================= -->
+<section class="slide narrative-stage" id="stage-02b" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 100px max(24px, 4vw); position: relative; background: #06090E;">
+
+          <!-- Atmospheric Cinematic Backdrop -->
+          <div class="slide-bg-media" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
+            <div class="slide-bg-overlay" style="background: radial-gradient(circle at 50% 25%, rgba(239, 68, 68, 0.04) 0%, rgba(6, 9, 14, 0.95) 55%, rgba(6, 9, 14, 0.99) 100%);"></div>
+            <div class="slide-glow-mesh" style="background: radial-gradient(circle at 80% 20%, rgba(0, 210, 180, 0.06) 0%, transparent 60%);"></div>
+          </div>
+
+          <div class="editorial-container" style="max-width: 1440px; margin: 0 auto; width: 100%; position: relative; z-index: 2;">
+
+            <!-- 1. Header: Eyebrow Kicker & Interactive State Switcher -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 14px;">
+              <div class="title-kicker" style="display: flex; align-items: center; gap: 10px;">
+                <span class="kicker-bar" style="width: 24px; height: 3px; background: var(--grad-security); border-radius: 2px;"></span>
+                <span style="color: var(--security-turquoise); font-family: var(--font-display); font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">THE MASSIVE CREW CHANGE</span>
+                <span style="color: var(--border-hairline);">//</span>
+                <span style="color: var(--text-dim); font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.5px;">INSTITUTIONAL MEMORY LOSS</span>
+              </div>
+
+              <!-- Tactile Executive State Selector (mirrors Stage 02 convention) -->
+              <div style="display: inline-flex; background: rgba(13, 17, 23, 0.95); padding: 4px; border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+                <button id="s2b-btn-today" onclick="setCrewState('today')" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; padding: 6px 16px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #FFF; border-radius: 20px; cursor: pointer; transition: all 0.25s;">
+                  ● The Workforce That Holds It
+                </button>
+                <button id="s2b-btn-exposure" onclick="setCrewState('exposure')" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; padding: 6px 16px; background: transparent; border: 1px solid transparent; color: var(--text-dim); border-radius: 20px; cursor: pointer; transition: all 0.25s;">
+                  ⚠ What Happens When They Go
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. Monumental Billboard Display Headline -->
+            <h2 style="font-family: var(--font-display); font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: #FFFFFF; max-width: 1400px; margin: 0 0 8px 0;">
+              <span id="s2b-headline-main">In oil and gas, the last barrier is a person.</span>
+            </h2>
+
+            <!-- Subheading -->
+            <p id="s2b-headline-accent" style="font-family: var(--font-display); font-size: clamp(17px, 1.3vw, 22px); font-weight: 600; line-height: 1.4; color: #94A3B8; margin: 0 0 10px 0; max-width: 1200px; transition: color 0.3s ease;">Four in ten have already gone. The rest retire inside a decade.</p>
+
+            <!-- 3. Secondary Voice / Narrative Lead -->
+            <p id="s2b-narrative-lead" style="font-size: clamp(14.5px, 1.05vw, 16.5px); line-height: 1.6; color: #94A3B8; max-width: 1180px; margin: 0 0 22px 0; font-weight: 400; transition: color 0.3s ease;">
+              On the last slide, three latent gaps aligned into one stuck drillstring. Each of them had a defence, and in every case that defence was somebody's memory — of a 2004 well, of how that tool behaves, of why you telephone at three in the morning rather than send an email. <strong style="color: #FFF;">None of it is written down. None of it appears on a barrier diagram.</strong> And it is walking out of the building.
+            </p>
+
+            <!-- 4. Chart + Findings -->
+            <div style="display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 28px; align-items: start; margin-bottom: 22px;">
+
+              <!-- Chart column -->
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 10px;">
+                  <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF; letter-spacing: 1.5px; text-transform: uppercase; display: flex; align-items: center; gap: 8px;">
+                    <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #FFF;"></span>
+                    <span>INDIA · PUBLIC SECTOR REGULAR WORKFORCE (LAKH)</span>
+                  </div>
+                  <div id="s2b-status-pill" style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 600; color: #94A3B8; letter-spacing: 0.8px; text-transform: uppercase; display: flex; align-items: center; gap: 8px;">
+                    <span id="s2b-status-dot" style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--security-turquoise);"></span>
+                    <span id="s2b-status-text">13.49 lakh in FY14 &nbsp;=&nbsp; 5.7 gone &nbsp;+&nbsp; 7.8 still here</span>
+                  </div>
+                </div>
+
+                <div style="position: relative; width: 100%; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.12); background: rgba(15, 23, 42, 0.32); padding: 10px 6px 6px; box-shadow: 0 16px 40px rgba(0,0,0,0.45);">
+                  <svg viewBox="0 0 900 340" style="width: 100%; height: auto; display: block; overflow: visible;" role="img" aria-label="Public sector regular workforce declining from 13.49 lakh in FY14 to 7.8 lakh today, projected to trend through FY35, with rising organisational exposure.">
+                    <defs>
+                      <linearGradient id="s2bWindowFill" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#00D2B4" stop-opacity="0.20"/>
+                        <stop offset="100%" stop-color="#00D2B4" stop-opacity="0.02"/>
+                      </linearGradient>
+                      <linearGradient id="s2bRiskFill" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#EF4444" stop-opacity="0.26"/>
+                        <stop offset="100%" stop-color="#EF4444" stop-opacity="0.02"/>
+                      </linearGradient>
+                      <linearGradient id="s2bRiskLine" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#F59E0B"/>
+                        <stop offset="100%" stop-color="#EF4444"/>
+                      </linearGradient>
+                    </defs>
+
+                    <!-- Gridlines -->
+                    <line x1="70" y1="270" x2="860" y2="270" stroke="currentColor" stroke-opacity="0.22" stroke-width="1"/>
+                    <line x1="70" y1="187.8" x2="860" y2="187.8" stroke="currentColor" stroke-opacity="0.10" stroke-width="1" stroke-dasharray="3,4"/>
+                    <line x1="70" y1="105.7" x2="860" y2="105.7" stroke="currentColor" stroke-opacity="0.10" stroke-width="1" stroke-dasharray="3,4"/>
+
+                    <!-- Y axis labels -->
+                    <text x="56" y="274" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" fill="currentColor" fill-opacity="0.45">0</text>
+                    <text x="56" y="192" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" fill="currentColor" fill-opacity="0.45">5</text>
+                    <text x="56" y="110" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11" fill="currentColor" fill-opacity="0.45">10</text>
+
+                    <!-- FY14 reference line at 13.49 -->
+                    <line x1="70" y1="48.4" x2="478.6" y2="48.4" stroke="currentColor" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="4,5"/>
+
+                    <!-- The five-year window band (TODAY -> FY30) -->
+                    <rect id="s2b-window-band" x="478.6" y="40" width="185.7" height="230" fill="url(#s2bWindowFill)"/>
+                    <line x1="664.3" y1="40" x2="664.3" y2="270" stroke="#00D2B4" stroke-opacity="0.30" stroke-width="1" stroke-dasharray="3,4"/>
+
+                    <!-- Exposure wash beyond the window (state 2 only) -->
+                    <rect id="s2b-risk-wash" x="664.3" y="40" width="195.7" height="230" fill="url(#s2bRiskFill)" opacity="0" style="transition: opacity 0.55s ease;"/>
+
+                    <!-- Measured decline FY14 -> FY25 -->
+                    <path d="M70,48.4 L292.9,118.9 L441.4,136.2 L478.6,141.8"
+                          fill="none" stroke="#94A3B8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+                    <!-- Projected decline FY25 -> FY35 -->
+                    <path d="M478.6,141.8 L664.3,159.9 L850,178"
+                          fill="none" stroke="#00D2B4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7,6"/>
+
+                    <!-- Risk / exposure curve — DIRECTION ONLY, deliberately unscaled (state 2) -->
+                    <path id="s2b-risk-curve"
+                          d="M70,255 C150,250 220,246 292.9,243 C360,238 410,234 478.6,228 C540,215 600,180 664.3,140 C720,105 790,75 850,55"
+                          fill="none" stroke="url(#s2bRiskLine)" stroke-width="3.5" stroke-linecap="round"
+                          opacity="0" style="transition: opacity 0.55s ease;"/>
+
+                    <!-- Crossing marker (state 2) -->
+                    <g id="s2b-crossing" opacity="0" style="transition: opacity 0.55s ease;">
+                      <circle cx="629" cy="156.5" r="7" fill="none" stroke="#EF4444" stroke-width="2.5"/>
+                      <circle cx="629" cy="156.5" r="2.5" fill="#EF4444"/>
+                    </g>
+
+                    <!-- TODAY marker -->
+                    <line x1="478.6" y1="34" x2="478.6" y2="270" stroke="#00D2B4" stroke-width="2"/>
+                    <circle cx="478.6" cy="141.8" r="6" fill="#06090E" stroke="#00D2B4" stroke-width="3"/>
+
+                    <!-- Annotations -->
+                    <text x="300" y="86" font-family="Google Sans, sans-serif" font-size="21" font-weight="800" fill="currentColor" fill-opacity="0.78">5.7 lakh</text>
+                    <text x="300" y="103" font-family="Google Sans, sans-serif" font-size="12.5" fill="currentColor" fill-opacity="0.48">already gone</text>
+
+                    <text x="497" y="203" font-family="Google Sans, sans-serif" font-size="23" font-weight="800" fill="#00D2B4">7.8 lakh</text>
+                    <text x="497" y="221" font-family="Google Sans, sans-serif" font-size="12.5" fill="#00D2B4" fill-opacity="0.80">still here — the window for action</text>
+
+                    <text id="s2b-risk-label-1" x="700" y="96" font-family="Google Sans, sans-serif" font-size="13.5" font-weight="800" fill="#EF4444" opacity="0" style="transition: opacity 0.55s ease;">RISK CARRIED BY</text>
+                    <text id="s2b-risk-label-2" x="700" y="113" font-family="Google Sans, sans-serif" font-size="13.5" font-weight="800" fill="#EF4444" opacity="0" style="transition: opacity 0.55s ease;">UNDOCUMENTED JUDGEMENT</text>
+                    <text id="s2b-risk-label-3" x="700" y="130" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#EF4444" fill-opacity="0.7" opacity="0" style="transition: opacity 0.55s ease;">direction only — no scale</text>
+
+                    <!-- X axis labels -->
+                    <text x="70" y="292" text-anchor="start" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="600" fill="currentColor" fill-opacity="0.45">FY14</text>
+                    <text x="478.6" y="292" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="700" fill="#00D2B4">TODAY</text>
+                    <text x="664.3" y="292" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="600" fill="currentColor" fill-opacity="0.45">FY30</text>
+                    <text x="850" y="292" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="600" fill="currentColor" fill-opacity="0.45">FY35</text>
+
+                    <!-- Window caption -->
+                    <text x="571" y="315" text-anchor="middle" font-family="Google Sans, sans-serif" font-size="12" font-weight="700" fill="#00D2B4" fill-opacity="0.85">27% aged 55+ — retiring within five years</text>
+                  </svg>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 8px; flex-wrap: wrap;">
+                  <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--text-dim); letter-spacing: 0.4px;">Public Enterprises Survey (DPE): 13.49 lakh FY14 · 9.2 FY20 · 8.14 FY24 · 7.8 FY25 &nbsp;·&nbsp; FY26–FY35 projected at trend</span>
+                  <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--text-dim); letter-spacing: 0.4px;">Source: pib.gov.in</span>
+                </div>
+              </div>
+
+              <!-- Findings column -->
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+
+                <div style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-left: 3px solid var(--security-azure); border-radius: 8px; padding: 15px 17px;">
+                  <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--security-azure); letter-spacing: 1.2px; margin-bottom: 7px;">01 · THE INVISIBLE LOSS</div>
+                  <p style="margin: 0; font-size: 14px; line-height: 1.55; color: #CBD5E1;"><strong style="color: #FFF;">The art is not in the reports.</strong> Critical judgement was never captured in institutional records or IT systems. It lives in the minds of the stalwarts, and nowhere else.</p>
+                </div>
+
+                <div style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-left: 3px solid var(--nebula-amber); border-radius: 8px; padding: 15px 17px;">
+                  <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--nebula-amber); letter-spacing: 1.2px; margin-bottom: 7px;">02 · THE DEMOGRAPHIC CLIFF</div>
+                  <p style="margin: 0; font-size: 14px; line-height: 1.55; color: #CBD5E1;"><strong style="color: #FFF;">A massive crew change is under way.</strong> Lifetimes of compounded experience walk out permanently, every year — and the departure rate is accelerating, not easing.</p>
+                </div>
+
+                <div style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-left: 3px solid var(--nebula-crimson); border-radius: 8px; padding: 15px 17px;">
+                  <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--nebula-crimson); letter-spacing: 1.2px; margin-bottom: 7px;">03 · THE SYSTEMIC FAILURE</div>
+                  <p style="margin: 0; font-size: 14px; line-height: 1.55; color: #CBD5E1;"><strong style="color: #FFF;">Systems store explicit data, not tacit experience.</strong> No mechanism captures the judgement before it is gone. The next generation will inherit the systems. They will not inherit the judgement.</p>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- 5. Vulnerability callback — the three gaps from Stage 02, each answered by a human barrier -->
+            <div style="margin-bottom: 22px;">
+              <div style="font-family: var(--font-mono); font-size: 10.5px; font-weight: 700; color: var(--text-dim); letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 10px;">WHO CLOSED THOSE THREE GAPS YESTERDAY // STAGE 02 RECALL</div>
+              <div style="display: grid; grid-template-columns: repeat(3, 1fr) auto; gap: 14px; align-items: stretch;">
+
+                <div style="background: rgba(15, 23, 42, 0.32); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 8px; padding: 13px 15px;">
+                  <div style="font-family: var(--font-mono); font-size: 9.5px; font-weight: 800; color: var(--text-dim); letter-spacing: 1.1px; margin-bottom: 6px;">VULNERABILITY 01</div>
+                  <div style="font-size: 13px; line-height: 1.5; color: #CBD5E1;">A 2004 gas kick buried in an unindexed PDF — <strong style="color: #FFF;">someone remembered that well.</strong></div>
+                </div>
+
+                <div style="background: rgba(15, 23, 42, 0.32); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 8px; padding: 13px 15px;">
+                  <div style="font-family: var(--font-mono); font-size: 9.5px; font-weight: 800; color: var(--text-dim); letter-spacing: 1.1px; margin-bottom: 6px;">VULNERABILITY 02</div>
+                  <div style="font-size: 13px; line-height: 1.5; color: #CBD5E1;">1.48 m of uncalibrated cable stretch — <strong style="color: #FFF;">someone knew that tool's behaviour.</strong></div>
+                </div>
+
+                <div style="background: rgba(15, 23, 42, 0.32); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 8px; padding: 13px 15px;">
+                  <div style="font-family: var(--font-mono); font-size: 9.5px; font-weight: 800; color: var(--text-dim); letter-spacing: 1.1px; margin-bottom: 6px;">VULNERABILITY 03</div>
+                  <div style="font-size: 13px; line-height: 1.5; color: #CBD5E1;">A 3 a.m. handover lost in an email — <strong style="color: #FFF;">someone would have picked up the phone.</strong></div>
+                </div>
+
+                <div style="background: rgba(239, 68, 68, 0.07); border: 1px solid rgba(239, 68, 68, 0.28); border-radius: 8px; padding: 13px 20px; display: flex; align-items: center; min-width: 210px;">
+                  <div style="font-size: 14.5px; font-weight: 800; line-height: 1.4; color: #FFF;">In all three, the barrier was a person.<br><span style="color: var(--nebula-crimson);">Not a system.</span></div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- 6. Closing band + bridge to Stage 03 -->
+            <div style="background: linear-gradient(90deg, rgba(0, 210, 180, 0.08) 0%, rgba(15, 23, 42, 0.5) 55%, rgba(15, 23, 42, 0.3) 100%); border: 1px solid rgba(255, 255, 255, 0.10); border-left: 3px solid var(--security-turquoise); border-radius: 10px; padding: 20px 24px; margin-bottom: 18px;">
+              <p style="margin: 0 0 8px 0; font-family: var(--font-display); font-size: clamp(17px, 1.45vw, 24px); font-weight: 700; line-height: 1.35; color: #FFFFFF;">
+                Oil &amp; gas is <span style="color: var(--security-turquoise);">half science, half art</span> — and the art leaves with the person doing it.
+              </p>
+              <p style="margin: 0; font-size: clamp(14px, 1.05vw, 16.5px); line-height: 1.6; color: #94A3B8;">
+                <strong style="color: #FFF;">What you know can now outlast your tenure. That has never been true before.</strong> The window is not the years until the last expert retires — it is the years while they are still here to teach the system what they know.
+              </p>
+            </div>
+
+            <!-- Bridge (inherited from Stage 02 outro) -->
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;">
+              <p style="margin: 0; font-size: clamp(14px, 1.05vw, 16px); line-height: 1.55; color: #94A3B8; max-width: 900px;">
+                The defence therefore cannot be a person. Before selecting a technology, energy operations demand five non-negotiable engineering criteria for autonomous agents.
+              </p>
+              <a href="page_03.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #06090E; background: var(--security-turquoise); padding: 10px 20px; border-radius: 22px; text-decoration: none; white-space: nowrap;">
+                The 5 Non-Negotiable Criteria of the Agent →
+              </a>
+            </div>
+
+          </div>
+        </section>
+
+    <!-- ========================================================================= -->
     <!-- FINALIZED STAGE 03: THE NEED — 5 CRITERIA & THE AI AGENT REVEAL           -->
     <!-- ========================================================================= -->
     <section class="slide narrative-stage theme-blue" id="stage-03" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 100px max(24px, 4vw); position: relative; background: #06090E;">
@@ -840,7 +1065,8 @@
           <div class="jenga-card jenga-card-fragile">
             <!-- Dedicated Left Jenga Image -->
             <div class="jenga-img-box" style="border: 1px solid rgba(245, 158, 11, 0.4);">
-              <img src="assets/media/wip/image74_left.jpg" alt="An Enterprise Without Agents - The Fragile Jenga Tower">
+              <img class="jenga-img-dark" src="assets/media/wip/image74_left.jpg" alt="An Enterprise Without Agents - The Fragile Jenga Tower">
+              <img class="jenga-img-light" src="assets/media/wip/image74_left_light.jpg" alt="An Enterprise Without Agents - The Fragile Jenga Tower">
               <div style="position: absolute; top: 12px; left: 16px; background: rgba(13, 17, 23, 0.92); border: 1px solid rgba(245, 158, 11, 0.5); backdrop-filter: blur(8px); padding: 5px 12px; border-radius: 20px; display: flex; align-items: center; gap: 6px;">
                 <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--nebula-amber); box-shadow: 0 0 6px var(--nebula-amber);"></span>
                 <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #FFF; letter-spacing: 0.8px;">WITHOUT AGENTS // EXPOSED GAPS</span>
@@ -870,7 +1096,8 @@
           <div class="jenga-card jenga-card-fortified">
             <!-- Dedicated Right Jenga Image -->
             <div class="jenga-img-box" style="border: 1px solid rgba(0, 229, 255, 0.45);">
-              <img src="assets/media/wip/image74_right.jpg" alt="An Enterprise Fortified by Agents - The Fortified Jenga Tower">
+              <img class="jenga-img-dark" src="assets/media/wip/image74_right.jpg" alt="An Enterprise Fortified by Agents - The Fortified Jenga Tower">
+              <img class="jenga-img-light" src="assets/media/wip/image74_right_light.jpg" alt="An Enterprise Fortified by Agents - The Fortified Jenga Tower">
               <div style="position: absolute; top: 12px; right: 16px; background: rgba(13, 17, 23, 0.92); border: 1px solid rgba(0, 229, 255, 0.5); backdrop-filter: blur(8px); padding: 5px 12px; border-radius: 20px; display: flex; align-items: center; gap: 6px;">
                 <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--nebula-cyan-bright); box-shadow: 0 0 6px var(--nebula-cyan-bright);"></span>
                 <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #FFF; letter-spacing: 0.8px;">WITH AGENTS // FORTIFIED WORKFLOWS</span>
@@ -1202,6 +1429,50 @@
           tiers[3].desc.innerText = 'The casing shoe seated directly into the fractured gas sand rather than solid rock, causing an uncontrollable kick and stuck drillstring.';
         }
       }
+    }
+  </script>
+  <script>
+    /* Two-state reveal, mirroring Stage 02's setCheeseState() convention.
+       State 'today'    : the measured DPE decline only.
+       State 'exposure' : the organisational risk curve rises out of it.
+
+       The risk curve is deliberately unscaled and carries no axis. It is a
+       statement of consequence, not a measurement, and the chart says so in
+       plain text ("direction only — no scale"). Do not attach numbers to it. */
+    function setCrewState(state) {
+      const isExposure = state === 'exposure';
+
+      const btnToday    = document.getElementById('s2b-btn-today');
+      const btnExposure = document.getElementById('s2b-btn-exposure');
+      const activeCSS   = 'rgba(255, 255, 255, 0.1)';
+
+      btnToday.style.background    = isExposure ? 'transparent' : activeCSS;
+      btnToday.style.border        = isExposure ? '1px solid transparent' : '1px solid rgba(255, 255, 255, 0.2)';
+      btnToday.style.color         = isExposure ? 'var(--text-dim)' : '#FFF';
+      btnExposure.style.background = isExposure ? 'rgba(239, 68, 68, 0.16)' : 'transparent';
+      btnExposure.style.border     = isExposure ? '1px solid rgba(239, 68, 68, 0.45)' : '1px solid transparent';
+      btnExposure.style.color      = isExposure ? '#FFF' : 'var(--text-dim)';
+
+      ['s2b-risk-curve', 's2b-risk-wash', 's2b-crossing',
+       's2b-risk-label-1', 's2b-risk-label-2', 's2b-risk-label-3'].forEach(function(id) {
+        const el = document.getElementById(id);
+        if (el) el.setAttribute('opacity', isExposure ? '1' : '0');
+      });
+
+      document.getElementById('s2b-headline-main').textContent = isExposure
+        ? 'Every year, that barrier gets thinner.'
+        : 'In oil and gas, the last barrier is a person.';
+
+      document.getElementById('s2b-headline-accent').textContent = isExposure
+        ? 'The exposure does not retire with them. It stays, and it compounds.'
+        : 'Four in ten have already gone. The rest retire inside a decade.';
+
+      document.getElementById('s2b-status-dot').style.background =
+        isExposure ? 'var(--nebula-crimson)' : 'var(--security-turquoise)';
+
+      document.getElementById('s2b-status-text').innerHTML = isExposure
+        ? 'Exposure rises as judgement leaves — the only variable you control is whether it lands on a person or a system'
+        : '13.49 lakh in FY14 &nbsp;=&nbsp; 5.7 gone &nbsp;+&nbsp; 7.8 still here';
     }
   </script>
 </body>

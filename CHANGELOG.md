@@ -6,6 +6,324 @@ All notable changes, architectural pivots, and slide finalization milestones for
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and adheres to the **"Zero-Anxiety Cadence"**:
 - **Authoring**: Built and verified in isolated slide view (`working_deck/pages/page_XX.html`).
 - **Review**: Visual and narrative sign-off by executive review.
+
+## [Sign-off Block Renamed to "Decision rights"] - 2026-09-11
+Reviewed for removal and **kept** — it is the only block that states what an
+agent may do without a human, which is the question that gates deployment in a
+DGMS/OISD-regulated setting.
+
+The heading was the weak part, not the content. *"Waiting on your sign-off"*
+addressed the reader in the second person, which clashed with the third-person
+profile voice, and "waiting on" implied a queue that does not exist. It is now
+**Decision rights**, with a lede covering all four rungs rather than two:
+*"Which decisions an agent may take alone, which require human confirmation, and
+which stay entirely with the accountable chain."*
+
+Also fixed: `authorityClass()` returned `""` for L2 and L3, emitting
+`class="authority-pill "` with a dangling space. The two-tone scheme is
+deliberate — only L1 (amber, recommend only) and L4 (turquoise, autonomous and
+safety-instrumented) are coloured, so the eye goes to the boundaries of agent
+authority — and that intent is now documented rather than looking like an
+oversight.
+
+Audited across the dataset: 88 sign-off gates, **zero missing** an authority
+level. Distribution: 15 × L1, 27 × L2, 23 × L3, 23 × L4.
+
+## [Persona Pages — Static Topline, and Four Blocks Cut] - 2026-09-11
+### Added: a fixed thesis above the roles
+Borrowing the structure from the mining deck's Screen 3 (eyebrow → title →
+lede → role strip), the persona pages now open with a statement that does not
+change when the role does:
+
+> **• Workforce & workflow transformation**
+> **An Agentic Workforce, Transforming the Human One**
+> Twenty enterprise oil & gas roles — exploration through refining and process
+> safety — each mapped across the same fifteen workflow steps. The agents do not
+> replace the accountable engineer. They remove the manual reconstruction, the
+> waiting and the unwatched interval, and hand the judgement back with the
+> evidence attached.
+
+It is deliberately rendered **outside `#persona-root`**, so it survives every
+in-place persona switch. Without it each page read as one person's list of
+problems rather than as evidence for an argument.
+
+> [!NOTE]
+> The mining lede claims "every persona is supported by a dedicated
+> collaborative swarm". That claim is **not** carried over: six of our twenty
+> roles have no agent named. The lede was written to avoid asserting coverage
+> we do not have.
+
+### Removed: exposure summary strip
+`blockExposure` deleted. The identity card already states annual exposure and
+touchpoint count; the action grid already states per-touchpoint status. The
+strip restated both and added nothing.
+
+### Removed: the draft banner, compressed to one clause
+`blockProvenance` deleted. An identical amber banner on all 20 pages is
+wallpaper — if it is everywhere it informs nowhere. The caveat now rides on the
+pain points lede, which is where the only invented content on the page sits:
+*"Composed from the recorded vulnerability at each coordinate and written to be
+argued with — not yet the testimony of someone who does the job."*
+
+### Removed: "Primary system of record"
+The named incumbent stack (Petrel / DecisionSpace / SeisSpace and equivalents)
+is gone from the identity card. It varies by operator, asset and vintage, and it
+was asserted without evidence: being right earns nothing, being wrong costs the
+credibility of everything beside it. `persona.monolith` remains in the dataset,
+unrendered.
+
+### Removed: agent squad empty-state notice
+Roles with no named agent now render no squad section at all, instead of a
+paragraph announcing the absence. The unclaimed exposure is still visible on the
+action grid and on the Slide 08 board.
+
+### Removed: honest limit block
+`blockHonestLimit` deleted from the render at the user's direction. **The
+authored text is retained in `data/persona_narratives.js`** — 392–849 characters
+per persona — as material for the SME interviews. Restoring it is a one-line
+change.
+
+### Test coverage
+`render_all_personas.js` now asserts each removed block stays removed
+(`exposure-grid`, `prov-banner`, `Honest limit`, `Primary system of record`),
+and that squad-card count equals the agent count from the matrix (0 where a role
+has none). Dead CSS for all removed blocks stripped: 23 rules.
+
+**Verification:** render 20/20 · polish guards pass · integrity 300 touchpoints
+pass · `slide_05` and `slide_08` in sync with `.LOCKED` · HTTP 200.
+
+## [One Button, One Voice — Uniform Launch Chip + Third-Person Profiles] - 2026-09-11
+### The Gemini Enterprise button is now one control
+It previously rendered in three styles with three labels — filled turquoise
+"Open", amber outline "View", dashed neutral "Build" — which made a single
+control look like three different controls depending on where you landed. There
+is now **one style and one label everywhere**: `✦ Open in Gemini Enterprise`, a
+quiet turquoise outline, identical on action cards, agent squad cards and the
+Slide 08 HUD. Filled turquoise was dropped because the chip appears up to
+fourteen times on a page and a repeated solid slab reads as noise.
+
+Build state is not lost — it is reported by the readiness tag on the card, by
+the registry pill on the HUD, and by the chessboard itself, and it is repeated
+in the chip's tooltip. It is simply no longer encoded a fourth time in the
+button's appearance. `chip-planned`, `chip-build` and `chip-pending` are deleted.
+
+Squad cards now pass `hideId`, because the card's own title was already printing
+the registry id that the chip printed again beside it.
+
+### Profiles rewritten in one voice
+`governingQuestion` was authored in the **first person** ("...the depth I am
+quoting...") and rendered immediately above `accountableFor`, which is written
+in the **third person**. On the profile card the voice-shift read as a quote
+bolted onto a biography rather than as one person's profile.
+
+The question has been restated in the third person and folded into the closing
+sentence of each profile, for **all 20 personas**. Lead-ins are varied so the
+set does not read as a filled-in form. The `governingQuestion` field, its render
+path and its CSS are removed — one source of truth for the profile prose.
+Profiles now run 804–914 characters.
+
+### Test coverage
+`render_all_personas.js` now asserts a single chip class, a single label string
+across every chip on the page, the expected chip count per persona, no
+duplicated registry id on squad cards, and that no first-person question block
+survives. `validate_personas.js` no longer requires the removed field.
+
+**Verification:** render 20/20 · polish guards pass · integrity 300 touchpoints
+pass · no variant classes remain anywhere in the repo · `slide_05` and
+`slide_08` in sync with their `.LOCKED` copies.
+
+## [Persona Page — Mandate Moved Into the Profile, Journey Split Two-Up] - 2026-09-11
+### Governing question and accountability relocated
+The governing question and the role's accountability statement were rendering as
+free-standing blocks partway down the page, detached from the person they
+describe. Both now sit inside the identity card, directly beneath the portrait
+and the exposure figure, so identity and accountability read as one unit.
+`blockAccountable` is now reduced to the not-yet-authored notice and returns
+empty when a narrative pack exists.
+
+### "A day in the life" kept, but restructured
+The block was reviewed for removal on space grounds. It is retained: it is the
+only place on the page that argues an agent changes the *nature* of the work
+rather than its speed, which is the deck's actual thesis. It was, however, a
+1,043–1,751 character wall. It is now split into two side-by-side halves —
+**Today** (crimson rule) and **With the agent** (turquoise rule) — at the
+sentence where the agent enters. Same words, roughly half the height, and the
+contrast now carries the argument. Collapses to one column under 1000px.
+
+### Fixed: decimals were breaking the journey split
+`splitJourney` treated the period inside a decimal (`0.9899`, `8.1 seconds`) as
+a sentence ending. That fragmented the sentence naming the agent, so personas
+**J** and **Q** silently fell back to a single undivided block — exactly the
+wall the layout exists to prevent. Decimal points are now masked before
+sentence segmentation. All 20 personas split, with halves of 481–928 characters.
+
+### Test coverage
+`render_all_personas.js` gained assertions that the mandate block exists exactly
+once *inside* the identity card, and that the journey genuinely splits into two
+halves. The silent fallback was invisible before these were added; it was the
+new assertion that surfaced the J/Q bug.
+
+**Verification:** render 20/20 · polish guards pass · integrity 300 touchpoints
+pass · `slide_05` and `slide_08` byte-identical to their `.LOCKED` copies.
+
+## [Gemini Enterprise Links Across Every Open Touchpoint] - 2026-09-11
+### Persona pages + Slide 08 HUD
+Previously the Gemini Enterprise link appeared on exactly one card in the whole
+deck. It now appears on every touchpoint that represents agentic work, with the
+label carrying the build state.
+
+- **One shared `launchRow()` helper** drives every chip, so the wording cannot
+  diverge between the action grid, the squad roster and the chessboard HUD.
+  Follows the mining model: a single workspace URL for the whole estate.
+- **Three states.** The destination is identical; only the label and weight change:
+
+  | State | Label | Count (action grid) |
+  |---|---|---|
+  | Running in production | **Open in Gemini Enterprise** (filled turquoise) | 1 |
+  | Named, Planned Wave 1 | **View in Gemini Enterprise** (amber outline) | 35 |
+  | No agent named yet | **Build in Gemini Enterprise** (neutral dashed) | 122 |
+
+- **Baseline touchpoints get no chip** — 142 of the 300 are not agentic work
+  and adding a chip there would have diluted the signal.
+- **Registry id rendered inline** beside the chip wherever one exists.
+- **Squad cards now use the same helper.** Planned agents previously showed a
+  dead "Not yet deployed" span; they now carry a working *View* link.
+- **Slide 08 HUD registry box gained the same chip**, with matching three-state
+  logic. Synced across all three copies (`final_slides`, `.LOCKED`,
+  `working_deck/pages/page_08.html`).
+
+### Data note
+All 35 planned agents sit on **critical** touchpoints. **No friction touchpoint
+has an agent named against it** — 71 open, all showing *Build*.
+
+### Verification
+- Deck-wide chip reconciliation: **158 action-grid chips = 157 critical/friction
+  + 1 plugged**, matching the dataset exactly.
+- Harness asserts per-persona counts for all three states, and that *Open*
+  appears only where `status === "plugged"`. An agent with a registry id renders
+  twice by design (workflow step + squad roster), asserted at 2×.
+- All 20 personas render; polish guards pass; `slide_05` / `slide_08`
+  byte-identical to `.LOCKED`.
+
+## [Persona Page — Portraits, Role Rail, Agent Squad + Polish Pass] - 2026-09-11
+### Persona Deep-Dive Records (`personas/persona.html`)
+Adopted the strongest parts of the mining repo's persona template, then a
+professionalism pass across the whole page.
+
+- **Portraits (20/20).** Wired `personas/avatars/pNN_persona.jpg` into the hero
+  at 116px, keyed directly to the persona `id` so there is no mapping table to
+  drift. Initials monogram sits behind as a fallback for a missing file.
+- **Thumbnail set generated** at `personas/avatars/thumbs/` (96px, ImageMagick).
+  The rail displays all twenty faces at once; at full resolution that was a
+  **14 MB** page load. Now **84 KB** — a 170× reduction. Hero keeps full-res.
+- **Role rail replaces the `<select>`.** Sticky, horizontally scrollable, one
+  chip per discipline with photo, row letter and a **readiness dot**
+  (turquoise = live, amber = planned, hollow = none). Header summarises
+  `1 live · 13 planned · 6 unassigned`. Active chip auto-scrolls into view.
+- **Navigation is now in-place.** The dropdown assigned
+  `window.location.search`, reloading the document and re-fetching the 158 KB
+  dataset on every role change. The rail re-renders via `pushState`; deep links
+  (`?role=Q`) and the back button still work.
+- **Agent squad block added.** Surfaces all **36 registry agents across 14 of
+  the 20 personas** — previously invisible on this page. Three states:
+  *live* (1: J8), *Planned Wave 1* (35), and an explicit unclaimed-exposure
+  notice for the 6 disciplines with no agent named.
+- **Gemini Enterprise launch links**, gated on `status === "plugged"` so only a
+  genuinely running agent is clickable. Single configurable constant
+  `GEMINI_ENTERPRISE_URL` — **currently a placeholder pending the real URL.**
+
+### Polish pass
+- **Type scale: 20 ad-hoc sizes → 8.** Collapsed onto
+  `10 / 11.5 / 12.5 / 14 / 16 / 20 / 28 / 40`px (49 declarations rewritten;
+  `12.8px` was an accident).
+- **Copy moved from pitch register to board register.** Removed eleven all-caps
+  marketing phrases — `₹590 Cr BLEEDING` → `₹590 Cr at risk`,
+  `TRAPPED IN LEGACY MONOLITH` → `Primary system of record`,
+  `ZERO TASK OVERLAP` → `No duplicates`. Figures unchanged; only the volume.
+- **Dark-mode shadow flattened** from `0 20px 50px rgba(0,0,0,.55)` to
+  `0 1px 3px rgba(0,0,0,.34)`; the 1px border now defines the card.
+- **Colour restraint** on the exposure strip: only the critical figure carries
+  semantic red. The left-hand rail still encodes category.
+- **Prose left full-bleed.** A `78ch` measure cap was trialled and reverted:
+  it left the accountability statements stopping short of the right edge, which
+  read as a rendering fault rather than a typographic choice.
+- **`blockLatency` deleted** — it re-rendered `a.speed` / `a.impact` already
+  shown on all 15 action cards. 15 duplicate rows per persona, 300 deck-wide.
+  Orphaned `.tbl-latency` CSS removed with it.
+
+### Verification
+- All 20 personas render via the real shipped renderer: `chips=20 thumbs=20
+  portrait=1 cards=15`; squad counts match the registry exactly; `launch=1`
+  and `live=1` on **J only**; no `<select>` remains.
+- Harness asserts `launchLinks === liveAgentTags`, so the page cannot render a
+  clickable link for an agent that is not running.
+- New polish guards (type scale, shadow blur, banned copy, latency table,
+  prose cap) — all pass.
+- Data integrity suite passes; `slide_05` and `slide_08` byte-identical to
+  their `.LOCKED` counterparts.
+
+## [Full Persona Narrative Coverage (20/20) + Draft Lifecycle] - 2026-09-11
+### Slide 08 Persona Deep-Dive Records
+- **All 20 narrative packs drafted** in `data/persona_narratives.js` (was 2 of 20):
+  - Newly authored: A Exploration Geophysicist, B Structural & Basin Geologist, C Development & Reservoir Geologist, D Drilling Operations Engineer, E Drilling Fluids & Mud Chemist, F Directional Drilling & MWD Lead, G Well Integrity & Casing Design, H Reservoir Simulation Engineer, I Production & Artificial Lift, K Facilities & Separation, L Flow Assurance & Hydrate, M Gas Pipeline Grid Dispatcher, N Marine Terminal Superintendent, O CDU/VDU Distillation Lead, P FCCU Process Engineer, R Reforming & Aromatics Chemist, S Refinery Blending & Offsites, T Process Safety (PSM) Lead.
+  - Each pack carries: `governingQuestion`, `accountableFor`, 6 × `painPoints` (operator voice, each traced to a real coord), a `journey` (one high-consequence shift narrated end to end), 4–5 × `signoffs` (HITL authority gates) and an `honestLimit`.
+  - **Every single statement is traceable.** Each pain point and sign-off cites a coordinate that exists in `ENTERPRISE_MATRIX_DATA`, and the operator voice is written from the `vuln` string recorded against that coordinate. Machine-validated — zero dangling references.
+- **Narrative lifecycle introduced (`narrativeStatus`)** to keep drafted content honestly separated from validated content:
+  - `"draft"` — written from the matrix, internally consistent and traceable, **not yet checked with the person who holds the role**. Renders an amber provenance banner; quotes are deliberately unattributed.
+  - `"validated"` — reviewed and confirmed by a practitioner. Renders a turquoise banner; quotes attributed.
+  - *(absent)* — renders the "not yet authored" notice and the quantitative record only.
+  - All 20 packs are currently **`draft`**, pending SME interview.
+- **`personas/persona.html`**: new `blockProvenance()` renderer plus `.prov-banner` / `.prov-draft` / `.prov-validated` styles, inserted between the exposure strip and the accountability block so the provenance claim is read before the narrative.
+- **Agentic framing**: every pack resolves its friction into a named agent and an explicit authority level — L1 Recommend only, L2 Act with confirmation, L3 Autonomous with audit, L4 Autonomous & safety-instrumented. L4 is claimed **only** where the physics closes the human reaction window (milliseconds to seconds), and every L4 gate is paired with an `honestLimit` stating the functional-safety evidence still owed (IEC 61511, shadow-mode first, no SIL claim without assessment).
+- **Verification**: `node --check` clean; integrity harness extended to enforce 20/20 coverage, valid lifecycle status, required fields, minimum pack depth (≥4 pain points, ≥3 sign-offs) and `L1–L4` authority format — **all checks passed**.
+
+## [Slide 08 KPI Reconciliation — Data as Source of Truth] - 2026-09-11
+### Slide 08 Enterprise Chessboard
+- **Resolved a three-way KPI inconsistency** between the hardcoded HTML, the `LOCKED_SLIDES.md` golden spec, and the actual computed data.
+  - Was: `52 critical / 84 friction / 164 baseline` in the markup and the spec.
+  - Now: **`86 critical / 71 friction / 142 baseline`** — the values actually computed from `data/enterprise_matrix_300.js`.
+  - The live slide already displayed 86/71/142 because `updateFilterCounts()` overwrites the markup at runtime; the stale figures were only visible in the pre-JavaScript paint and in any PDF/print export captured before scripts ran.
+- **Direction of the fix**: the data is the source of truth. The labels were corrected to match the dataset rather than re-classifying 34 touchpoints to match the label, since severity classification is a content judgement.
+- Applied to the metric ribbon and the filter chips in `final_slides/slide_08_the_enterprise_chessboard.html`, its `.LOCKED.html` (re-synced, 0 diff), and `working_deck/pages/page_08.html`.
+- `LOCKED_SLIDES.md` updated with the corrected figures plus an explicit **source-of-truth note**: these five values are computed at runtime and must never be hand-edited away from the dataset. Board total capital at risk recorded as **₹11,159 Cr / yr**.
+- A static-vs-computed drift detector is now part of the validation harness (section 5b) so this cannot silently recur.
+
+## [Persona Deep-Dive Drill-Down System - Slide 08 Workforce & Workflow Records] - 2026-09-11
+### New Capability: Per-Persona Deep-Dive Pages
+- **New dynamic page `personas/persona.html`**:
+  - A single self-contained page that renders a full deep-dive record for any of the 20 chessboard personas (rows A–T), selected via `?role=<LETTER>` (also accepts `?p=` / `?i=`; defaults to `J`).
+  - **Zero data duplication**: reads live from the existing `data/enterprise_matrix_300.js` (`ENTERPRISE_MATRIX_DATA` + `PHYSICAL_ASSETS_DATA`). All capital, status counts and latency figures are computed at render time, so the persona pages can never drift from the chessboard.
+  - Renders eight narrative blocks in order: (1) What this role is answerable for + the governing question, (2) Where the day actually goes (operator-voice friction, each traced to a coord), (3) A day in the life, (4) The 15 workflow touchpoints this role owns (vulnerability → agent plug → impact → speed), (5) An ordinary day against the agentic day (latency table), (6) Waiting on your sign-off (HITL authority gates L1–L4), (7) The physical asset this role instruments, (8) Honest limit.
+  - Plus a persona identity card, a five-card exposure metric strip, a `JUMP TO PERSONA` switcher with prev/next navigation, and a collapsible technical drawer (agent registry ID / deployment status / framework / IAM identity).
+  - Adopts the deck design system end-to-end (Cabinet Grotesk + JetBrains Mono, shared `assets/styles.css` tokens) and honours the shared `deck-theme` localStorage contract. **Defaults to Light Mode**; the dark/light toggle is fully functional.
+- **New narrative layer `data/persona_narratives.js`**:
+  - `window.PERSONA_NARRATIVES`, keyed by matrix persona `id` (`p01`–`p20`), carrying the qualitative content that does not belong in the quantitative matrix: `governingQuestion`, `accountableFor`, `painPoints[]`, `journey`, `signoffs[]` and `honestLimit`.
+  - Fully authored for the two exemplar personas: **J — Lead Petrophysicist** (`p10`, the row carrying the only production agent, J8) and **Q — Hydrocracker Specialist** (`p17`).
+  - The remaining 18 personas are deliberately absent. The page renders an explicit *"Narrative pack not yet authored"* notice and still renders all 15 quantitative touchpoint cards — **no quotes or journeys are fabricated**.
+  - Every `coord` referenced by a narrative is validated to resolve to a real action in the matrix.
+- **Drill-down wiring on Slide 08**:
+  - Each of the 20 chessboard row labels now carries a `↗` deep-dive affordance (`.persona-drill-btn`, styled for both dark and `.theme-light`) that appears on hover/row-highlight. It calls `event.stopPropagation()` so the existing click-to-inspect HUD behaviour is unchanged.
+  - The Live Seam Inspector HUD now always appends a **`▸ FULL PERSONA RECORD // <NAME>`** link beneath its contextual status banner, for every cell state (ready / critical / friction / baseline).
+  - Path resolution is handled by a `PERSONA_PAGE_BASE` constant (overridable via `window.PERSONA_PAGE_BASE`) so each host file supplies its own relative path.
+- **Cross-File Synchronization**:
+  - Applied to `final_slides/slide_08_the_enterprise_chessboard.html`, `final_slides/slide_08_the_enterprise_chessboard.LOCKED.html` (verified byte-identical), and `working_deck/pages/page_08.html` (unsuffixed IDs / unprefixed CSS variant).
+- **Verification**: `node --check` on both data files; a dedicated integrity harness (20 personas × 15 touchpoints = 300 actions, all coords well-formed, all narrative cross-references resolvable, exposure arithmetic reconciled); and real headless-Chrome DOM renders for J, Q and A confirming exact block, card, quote, sign-off and latency-row counts in both themes.
+
+## [Slide 05 Daylight Studio Jenga Towers Integration - Solid Structural Integrity Enhancement] - 2026-09-11
+### Slide 05 Structural Resilience (Jenga Metaphor)
+- **Direct Black-to-Light Background Transformation & Solid Integrity Upgrade**:
+  - Replaced initial daylight renders with high-fidelity cinematic light renders derived directly from the original black master (`image74.jpg`):
+    - `assets/media/wip/image74_left_light.jpg`: Unbraced, fragile dark walnut tower with missing blocks and structural lean, rendered in a crisp daylight executive studio on white/slate surface (`#F8FAFC` / `#FFFFFF`) with natural soft contact shadows.
+    - `assets/media/wip/image74_right_light.jpg`: Fortified dark walnut tower with **100% solid, load-bearing electric cyan reinforcement keystones**, completely eliminating hollow/glassy light-bleed and restoring authentic structural integrity.
+  - Preserved original cinematic dark-mode images (`image74_left.jpg` and `image74_right.jpg`) for Dark Mode.
+- **Instant CSS Dual-Image Theme Switching**:
+  - Implemented `.jenga-img-dark` and `.jenga-img-light` classes with CSS-driven display toggling:
+    - Dark Mode: `.jenga-img-dark` active, `.jenga-img-light` hidden.
+    - Light Mode (`.theme-light`): `.jenga-img-light` active, `.jenga-img-dark` hidden.
+  - Completely eliminates dark rectangular image cutout boxes when viewing Slide 05 in Light Mode.
+- **Cross-File Synchronization**:
+  - Synchronized across `final_slides/slide_05_the_jenga_metaphor.html`, `final_slides/slide_05_the_jenga_metaphor.LOCKED.html`, `working_deck/pages/page_05.html`, `index.html`, `deck.html`, `working_deck/index.html`, `assets/styles.css`, and `LOCKED_SLIDES.md`.
+
 ## [HUD Header Streamlining, Breathing Space & Status Badge Cleanliness] - 2026-09-11
 ### Slide 08 Enterprise Chessboard
 - **HUD Agent Card Header Streamlining & Breathing Space**:
