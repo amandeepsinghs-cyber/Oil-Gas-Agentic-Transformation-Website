@@ -256,7 +256,7 @@
             <button class="pill-btn active" id="btn-auto-rotate" onclick="toggleAutoRotate()">Auto-Rotate: ON</button>
             <button class="pill-btn" onclick="resetTerrainView()">Reset Perspective</button>
             <button class="pill-btn" onclick="setTopDownView()">Top-Down Contour (2D)</button>
-            <button class="pill-btn" onclick="focusSummit('s-petro')">★ Focus Lighthouse Agent</button>
+            <button class="pill-btn" onclick="focusSummit('s-petro')">★ Focus Proven Agent</button>
           </div>
           <span style="font-family: var(--font-mono); font-size: 11px; color: #64748B;">
             Interactive Orbit: Click &amp; drag to rotate • Scroll to zoom elevation
@@ -288,12 +288,12 @@
               <span style="font-family: var(--font-mono); font-size: 10px; color: var(--security-turquoise);">CLICK TO INSPECT AGENT</span>
             </div>
 
-            <!-- Summit Item 1: Lighthouse Agent (PROVEN) -->
+            <!-- Summit Item 1: Proven Agent -->
             <div class="summit-card summit-plugged active-summit" id="card-petro" onclick="focusSummit('s-petro')">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
                 <div style="display: flex; align-items: center; gap: 6px;">
                   <span style="font-family: var(--font-mono); font-size: 10px; background: var(--security-turquoise); color: #06090E; font-weight: 800; padding: 1px 6px; border-radius: 3px;">
-                    ★ LIGHTHOUSE PROVEN
+                    ★ PROVEN AGENT
                   </span>
                   <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF;">Lead Petrophysicist</span>
                 </div>
@@ -440,7 +440,7 @@
               </div>
               <div style="display: flex; align-items: center; gap: 8px;">
                 <span style="display: inline-block; width: 12px; height: 12px; background: #00D2B4; border-radius: 2px; box-shadow: 0 0 6px #00D2B4;"></span>
-                <span>₹25–50 Cr / yr (Electric Cyan &amp; Sovereign Turquoise • Lighthouse Agent Level)</span>
+                <span>₹25–50 Cr / yr (Electric Cyan &amp; Sovereign Turquoise • Proven Agent Level)</span>
               </div>
               <div style="display: flex; align-items: center; gap: 8px;">
                 <span style="display: inline-block; width: 12px; height: 12px; background: #4285F4; border-radius: 2px; box-shadow: 0 0 6px #4285F4;"></span>
@@ -448,7 +448,7 @@
               </div>
               <div style="display: flex; align-items: center; gap: 8px;">
                 <span style="display: inline-block; width: 12px; height: 12px; background: #00FFD5; border-radius: 2px; box-shadow: 0 0 8px #00FFD5;"></span>
-                <span>★ Proven Lighthouse Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
+                <span>★ Proven Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
               </div>
             </div>
 
@@ -475,7 +475,7 @@
             
             <div style="background: rgba(13, 19, 32, 0.7); border: 1px solid var(--slate-border); border-left: 3px solid var(--security-turquoise); padding: 14px 18px; border-radius: 6px;">
               <div style="font-family: var(--font-mono); font-size: 10px; color: var(--security-turquoise); font-weight: 800; letter-spacing: 1px;">
-                PHASE 1: LIGHTHOUSE AGENT (PROVEN)
+                PHASE 1: PROVEN AGENT
               </div>
               <div style="font-size: 18px; font-weight: 800; color: #FFF; margin: 2px 0;">1 Agent Validated in Production</div>
               <div style="font-size: 12px; color: #94A3B8;">Kansas Wireline Splicing • ₹45 Cr exposure eliminated in 3.2s</div>
@@ -511,7 +511,7 @@
   <script>
     // 1. Definition of Key Summits (Matching image78.png High Crests & Glowing Cores)
     const SUMMIT_COORDINATES = {
-      's-petro': { x: 7, y: 9, name: 'Lead Petrophysicist (Lighthouse)', action: 'Wireline Splicing (Slide 06 Benchmark)', value: 45, color: '#00D2B4', cardId: 'card-petro' },
+      's-petro': { x: 7, y: 9, name: 'Lead Petrophysicist (Proven Agent)', action: 'Wireline Splicing (Slide 06 Benchmark)', value: 45, color: '#00D2B4', cardId: 'card-petro' },
       's-hydro': { x: 0, y: 16, name: 'Hydrocracker Specialist', action: 'Reactor Thermal Runaway & Quench', value: 130, color: '#00F0FF', cardId: 'card-hydro' },
       's-drill': { x: 1, y: 3, name: 'Drilling Operations Lead', action: 'Anti-Collision & Collision Scanning', value: 120, color: '#00F0FF', cardId: 'card-drill' },
       's-fccu':  { x: 0, y: 15, name: 'FCCU Process Engineer', action: 'Slide Valve Reverse & Catalyst Loss', value: 115, color: '#FFE600', cardId: 'card-fccu' },
@@ -536,7 +536,7 @@
         else if (r >= 2 && r <= 6) val += 14 + Math.cos(c * 0.75) * 12;
 
         // Specific high-consequence operational peaks (exact financial exposure)
-        if (r === 9 && c === 7) val = 75; // Kansas Petrophysicist Center (Lighthouse Agent)
+        if (r === 9 && c === 7) val = 75; // Kansas Petrophysicist Center (Proven Agent)
         else if (r === 16 && c === 0) val = 130; // Hydrocracker runaway
         else if (r === 3 && c === 1) val = 120; // Drilling anti-collision
         else if (r === 15 && c === 0) val = 115; // FCCU Slide valve
@@ -1126,7 +1126,7 @@
 
         // 3D Billboard Summit Tag
         ctx.font = 'bold 10px "JetBrains Mono", monospace';
-        const labelText = (s.value === 45) ? '★ LIGHTHOUSE (₹45 Cr)' : `TARGET (₹${s.value} Cr)`;
+        const labelText = (s.value === 45) ? '★ PROVEN AGENT (₹45 Cr)' : `TARGET (₹${s.value} Cr)`;
         ctx.fillStyle = 'rgba(6, 9, 14, 0.88)';
         const textWidth = ctx.measureText(labelText).width;
         ctx.fillRect(screenPt.x - textWidth / 2 - 6, screenPt.y - 24, textWidth + 12, 16);
@@ -1366,7 +1366,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
               <span style="display: inline-block; width: 12px; height: 12px; background: #00D2B4; border-radius: 2px; box-shadow: 0 0 6px #00D2B4;"></span>
-              <span>₹25–50 Cr / yr (Electric Cyan &amp; Sovereign Turquoise • Lighthouse Agent Level)</span>
+              <span>₹25–50 Cr / yr (Electric Cyan &amp; Sovereign Turquoise • Proven Agent Level)</span>
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
               <span style="display: inline-block; width: 12px; height: 12px; background: #4285F4; border-radius: 2px; box-shadow: 0 0 6px #4285F4;"></span>
@@ -1374,7 +1374,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
               <span style="display: inline-block; width: 12px; height: 12px; background: #00FFD5; border-radius: 2px; box-shadow: 0 0 8px #00FFD5;"></span>
-              <span>★ Proven Lighthouse Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
+              <span>★ Proven Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
             </div>
           `;
         } else {
@@ -1398,7 +1398,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
               <span style="display: inline-block; width: 12px; height: 12px; background: #00FFD5; border-radius: 2px; box-shadow: 0 0 8px #00FFD5;"></span>
-              <span>★ Proven Lighthouse Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
+              <span>★ Proven Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
             </div>
           `;
         }

@@ -222,27 +222,27 @@
 
 ### Slide 08 Golden Specifications (Approved):
 - **Main Title (H1):** *Agentic Transformation Across Workforce & Workflows.* (Bold white, 44px display font)
-- **Subheading (H2):** *AI agents creating value across the value chain of the organisation.* (Medium 22px, signature sovereign turquoise `#00D2B4`)
-- **Kicker:** `STAGE 08 // THE ENTERPRISE CHESSBOARD & VALUE SEAMS`
-- **Eyebrow:** `AGENTIC TRANSFORMATION // WORKFORCE & WORKFLOWS` • `300 OPERATIONAL SEAMS ACROSS 20 DISCIPLINES`
-- **Narrative Lead (Paragraph):** *High-consequence operations rely on specialized domain experts executing complex, multi-stage workflows across disconnected systems. AI agents augment the workforce and fortify workflows—unlocking measurable value across discrete operational seams from upstream exploration to downstream refining.*
+- **Subheading (H2):** *Mapping personas and workflows to identify and prioritize operational risks, friction, and vulnerabilities.* (Medium 22px, signature sovereign turquoise `#00D2B4`)
+- **Kicker:** `STAGE 08 // WORKFORCE & WORKFLOW PRIORITIZATION MAP`
+- **Eyebrow:** `AGENTIC TRANSFORMATION // WORKFORCE & WORKFLOWS`
+- **Narrative Lead (Paragraph):** *High-consequence operations rely on specialized domain experts executing complex, multi-stage workflows across disconnected systems. AI agents augment the workforce and fortify workflows—unlocking measurable value across critical operational handoffs from upstream exploration to downstream refining.*
 - **Scale & Architecture:**
   - **Dimensions:** 20 Personas (Rows A through T) × 15 Technical Steps (Steps 1 through 15) = **300 Discrete Non-Overlapping Operational Touchpoints**.
   - **Alphanumeric Coordinate System:** Rows labeled A–T; Columns / Steps numbered 1–15.
   - **Strict Principle:** Zero task overlap between disciplines. What a petrophysicist does, a geologist never does; what an FCCU engineer does, an ESP technologist never does.
 - **Visual Metaphor & Layout:**
   - **Dual-Layer Architecture Toggle:**
-    1. *Workforce & Knowledge Seams:* Workflows overlap directly with human domain experts.
+    1. *Workforce & Role Handoffs:* Workflows overlap directly with human domain experts.
     2. *Physical Operations & Assets:* Workflows diverge and run continuously across physical machinery/SCADA 24/7/365.
-  - **The Lighthouse Benchmark Cell (Row J, Step 8 / J8):**
+  - **The Proven Benchmark Cell (Row J, Step 8 / J8):**
     - Persona: `Lead Petrophysicist`
     - Action: `J8 • Step 8: Multi-Pass Wireline Curve Splicing` (Kansas Well A-12 benchmark).
     - Styling: Glowing turquoise green pulse (`#00D2B4` $\rightarrow$ `#00A3FF`), pulsing aura, solid sovereign fill.
-  - **Chessboard Cell Numbering (`rowcolumn`):**
-    - Every box displays its unique alphanumeric chessboard coordinate: `rowcolumn` (`A1` through `T15`).
+  - **Matrix Cell Numbering (`rowcolumn`):**
+    - Every box displays its unique alphanumeric coordinate: `rowcolumn` (`A1` through `T15`).
     - The benchmark petrophysical splicing agent is numbered **`J8`**.
-  - **The Value Seams (CAD Drafting Cross-Hatch Textures):**
-    - `🔴 52 Critical Risk Seams`: Catastrophic blowout / ₹50Cr+ bleed; styled with 45° red CAD drafting cross-hatch.
+  - **The Operational Vulnerabilities (CAD Drafting Cross-Hatch Textures):**
+    - `🔴 52 Critical Process Risks`: Catastrophic blowout / ₹50Cr+ bleed; styled with 45° red CAD drafting cross-hatch.
     - `🟡 84 Friction Bottlenecks`: 1–4 hr engineering decision lag; styled with -45° amber CAD drafting cross-hatch.
     - `⚪ 164 Baseline Monoliths`: Legacy commercial software locks; styled in dark blueprint slate.
 - **Interactive Live HUD (Heads-Up Display) Inspector:**
@@ -253,15 +253,14 @@
     - `⚡ AI AGENT (THE OPPORTUNITY)`: Exact sovereign agent solution, mathematical method, and automation speed.
     - `VERTEX AI AGENT REGISTRY IDENTITY`: Resource path, deployment lifecycle state, IAM identity, and technical stack.
     - **Exposure Metrics:** Annual risk mitigation (e.g. ₹45 Cr/yr) and Decision velocity (e.g. 3.2s vs 2.5 Hrs).
-    - **Contextual Action Area:** Slide 06 proof link on J8 anchor, active production/Wave 1 priority tags on candidates. Top toolbar features global `🎯 Focus J8 Anchor`.
+    - **Contextual Action Area:** Slide 06 proof link on J8 anchor, active production/Wave 1 priority tags on candidates.
 - **Top Metric Ribbon:**
   - Total Operational Nodes: `300 Touchpoints (Zero Task Overlap)`
-  - Lighthouse Validated: `1 / 300 (0.33%)`
-  - Critical Risk Seams: `52 Seams`
+  - Proven Agent Validated: `1 / 300 (0.33%)`
+  - Critical Process Risks: `52 Vulnerabilities`
   - Manual Friction Gaps: `84 Bottlenecks`
   - Baseline Monoliths: `164 Monolith Silos`
-- **Filter Controls:** All 300 Seams, Lighthouse Only, Critical Red, Friction Amber, Baseline.
-- **Strategic Takeaway Bottom Strip:** Full-width stretched executive callout banner ("Strategic Agent Prioritisation Playbook") spanning left-to-right beneath the grid and HUD, highlighting disciplined, prioritized deployment across high-exposure operational seams rather than attempting to automate every action.
+- **Filter Controls:** All 300 Touchpoints, Proven Agent Only, Critical Red, Friction Amber, Baseline.
 - **Narrative Bridge:** Bottom transition to Stage 09 (*Next: The Agentic Value Topology: 3D Prioritization Horizon*).
 
 ---
@@ -275,7 +274,7 @@
 - **Split-Screen Architecture:**
   - **Left Panel (Operational Coordinates & Leaderboard):**
     - High-Exposure Targets & Prioritised Value-Unlock Agents:
-      - `★ Lighthouse Agent (Proven): Lead Petrophysicist`: Wireline Curve Splicing (₹45 Cr / yr, 3.2s SciPy benchmark, Validated in Production).
+      - `★ Proven Agent: Lead Petrophysicist`: Wireline Curve Splicing (₹45 Cr / yr, 3.2s SciPy benchmark, Validated in Production).
       - `Target 01 (Highest Exposure): Hydrocracker Specialist`: Reactor Thermal Runaway & Quench (₹130 Cr / yr, 0.1s multi-point quench).
       - `Target 02: Drilling Operations Lead`: Anti-Collision Scanning vs Offset Wellbores (₹120 Cr / yr, 0ms collision alert).
       - `Target 03: FCCU Process Engineer`: Slide Valve Reverse & Cyclone Catalyst Blowout (₹115 Cr / yr, 0.1s differential pressure governor).
@@ -286,8 +285,8 @@
       - **Aesthetic Texture Architecture:** Rather than a static background image, the 3D plot itself renders as the celestial nebula floating in a deep cosmic void (`#061A22` $\rightarrow$ `#030F14` $\rightarrow$ `#01080B`) via a 5-pass rendering pipeline:
         1. *Pass 1 (Translucent Silk-Cloth Veil):* Depth-sorted quads (Painter's algorithm) with delicate alpha shading (`alpha * 0.32`, `0.45px` hairline stroke) transmitting light through undulating folds.
         2. *Pass 2 (Flowing Spline Streamlines):* Longitudinal Catmull-Rom streamlines tracing harmonic contours across columns (`strokeWidth 0.7`).
-        3. *Pass 3 (Luminous Stardust Particles — High Summits & Lighthouse Agent Only):* Uncluttered, clean silk cloth across 85%+ of the terrain; stardust dots rendered strictly at peaks (`elev >= 75 Cr`) and Lighthouse Agent Level, with delicate celestial halos on critical summits ($> ₹95\text{ Cr}$).
-        4. *Pass 4 (Summit Light Pillars & Halos):* Ground-to-peak dashed vertical beams, pulsating concentric rings, and 3D billboard tags (`★ LIGHTHOUSE (₹45 Cr)` and `TARGET (₹X Cr)`).
+        3. *Pass 3 (Luminous Stardust Particles — High Summits & Proven Agent Only):* Uncluttered, clean silk cloth across 85%+ of the terrain; stardust dots rendered strictly at peaks (`elev >= 75 Cr`) and Proven Agent Level, with delicate celestial halos on critical summits ($> ₹95\text{ Cr}$).
+        4. *Pass 4 (Summit Light Pillars & Halos):* Ground-to-peak dashed vertical beams, pulsating concentric rings, and 3D billboard tags (`★ PROVEN AGENT (₹45 Cr)` and `TARGET (₹X Cr)`).
         5. *Pass 5 (Interactive Radar Cursor Reticle):* Bi-directional hover targeting from the 2D chessboard radar.
       - **Authentic Tri-Spectrum Engine (1-Click Executive Palette Switcher):**
         - **Spectrum A: Google Light Spectrum (Default — Physical Visible Wavelength Order ROYGBIV):**
@@ -297,9 +296,9 @@
           - `₹95–118 Cr / yr` (`0.75 <= norm < 0.90`): Google Crimson Red (`#EA4335`, critical process hazards & runaway).
           - `₹75–95 Cr / yr` (`0.55 <= norm < 0.75`): Google Sun Yellow (`#FBBC04`, friction bottleneck ridges).
           - `₹50–75 Cr / yr` (`0.35 <= norm < 0.55`): Google Emerald Green (`#34A853`, operational slopes & flanks).
-          - `₹25–50 Cr / yr` (`0.15 <= norm < 0.35`): Electric Cyan & Sovereign Turquoise (`#00D2B4` $\rightarrow$ `#00FFD5`, Lighthouse Agent Level).
+          - `₹25–50 Cr / yr` (`0.15 <= norm < 0.35`): Electric Cyan & Sovereign Turquoise (`#00D2B4` $\rightarrow$ `#00FFD5`, Proven Agent Level).
           - `< ₹25 Cr / yr` (`norm < 0.15`): Google Blue & Cosmic Indigo (`#4285F4` $\rightarrow$ `#15173C`, baseline monolith plains).
-          - `Lighthouse Agent Sanctuary`: Radiant Sovereign Turquoise (`#00D2B4`, `#00FFD5`).
+          - `Proven Agent Sanctuary`: Radiant Sovereign Turquoise (`#00D2B4`, `#00FFD5`).
         - **Spectrum B: Oceanic Aqua & Turquoise (Monochrome Cool):**
           - `> ₹95 Cr / yr`: Starburst Cyan & White Summits (`#00F0FF` $\rightarrow$ `#FFFFFF`).
           - `₹60–95 Cr / yr`: Solar Gold & Amber Heat Folds (`#EA580C` $\rightarrow$ `#FBBF24`).
@@ -313,10 +312,10 @@
           - `< ₹30 Cr / yr`: Deep Space Indigo Plains (`#0A1026` $\rightarrow$ `#1E1B4B`).
       - **Rigorous Mathematical Grounding:** $Z$-elevation strictly driven by the financial exposure / capital at risk (₹ Cr / yr) of each operational agent, preserving exact integer coordinates (e.g. Kansas Petrophysicist at ₹45/75 Cr, Hydrocracker at ₹130 Cr, Drilling Anti-Collision at ₹120 Cr, FCCU at ₹115 Cr, CDU at ₹90 Cr).
       - **Vertical Baseline Re-Alignment:** 3D terrain projection anchor shifted from center screen to bottom 2/3rd (~67% down), eliminating empty space at bottom as mountain summits climb naturally into the cosmic void above.
-    - 3D Interactive Controls: OrbitControls (360° mouse drag, elevation zoom), Auto-Rotate toggle, Top-Down Contour (2D) view, Reset Perspective, Focus Lighthouse Agent (`★ Focus Lighthouse Agent`), and **Minimalist Spectrum Switch Toggle** (`🎨 [ ●━━━━ ]`, no verbose naming) docked on the right-hand side directly next to the 3D plot for seamless 2-way switching between Google Light Spectrum and Oceanic Aqua with synchronized 2D radar and contour legend.
+    - 3D Interactive Controls: OrbitControls (360° mouse drag, elevation zoom), Auto-Rotate toggle, Top-Down Contour (2D) view, Reset Perspective, Focus Proven Agent (`★ Focus Proven Agent`), and **Minimalist Spectrum Switch Toggle** (`🎨 [ ●━━━━ ]`, no verbose naming) docked on the right-hand side directly next to the 3D plot for seamless 2-way switching between Google Light Spectrum and Oceanic Aqua with synchronized 2D radar and contour legend.
     - Floating 3D Tooltip: Displays peak title, persona, and elevation value on cursor proximity.
 - **Bottom 3-Phase Playbook Strip:**
-  - `Phase 1: Lighthouse Agent (Proven)`: 1 Agent Validated in Production (Kansas Wireline Splicing, ₹45 Cr exposure eliminated in 3.2s).
+  - `Phase 1: Proven Agent`: 1 Agent Validated in Production (Kansas Wireline Splicing, ₹45 Cr exposure eliminated in 3.2s).
   - `Phase 2: Top 5 High-Value Agents (Target Fleet)`: ₹570 Cr / yr Exposure Mitigated (Hydrocracker, Anti-Collision, FCCU, CDU, Tank Overfill).
   - `Phase 3: Enterprise-Wide Scale`: 84 Value-Unlock Agents (1–4 hr engineering latency automated across all operational seams).
 
@@ -327,7 +326,6 @@
 - **Subheading (H2):** *Building an agentic workforce to automate workflows.* (Signature sovereign turquoise & azure gradient `#00D2B4` $\rightarrow$ `#00A3FF`)
 - **Kicker:** `STAGE 10 // 100 DAYS TO PROOF OF VALUE`
 - **Eyebrow:** `THE ROADMAP // 100-DAY PROOF OF VALUE` • `EXECUTIVE EXECUTION MODEL`
-- **Executive Badge (Top Right):** `YOU NOMINATE THE HIGH-PRIORITY ROLES & WORKFLOWS` (Pulsing turquoise dot, sovereign border).
 - **Narrative Lead (Concise 1-Line):** *Solving specific operational bottlenecks on your historical data—proving measurable value and mathematical accuracy in 100 days before scaling across the enterprise.*
 - **The Centerpiece Visual (Compounding Value-Over-Time Graph):**
   - **Type:** Responsive high-contrast SVG visualization (`viewBox="0 0 1200 310"`).

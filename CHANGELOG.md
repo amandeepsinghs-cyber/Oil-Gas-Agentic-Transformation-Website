@@ -7,6 +7,59 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - **Authoring**: Built and verified in isolated slide view (`working_deck/pages/page_XX.html`).
 - **Review**: Visual and narrative sign-off by executive review.
 
+## [Slide 11 Polish: Removed High-Priority Roles Executive Badge] - 2026-09-11
+### Stage 10 / Slide 11 (100 Days to Proof of Value)
+- **Refined Header Area**:
+  - Removed top-right executive badge (`YOU NOMINATE THE HIGH-PRIORITY ROLES & WORKFLOWS`), giving the headline, amber kicker, and executive execution model direct visual primacy.
+- **Synchronized Files**:
+  - `final_slides/slide_10_the_discovery_sprint.html`
+  - `final_slides/slide_10_the_discovery_sprint.LOCKED.html`
+  - `working_deck/pages/page_10.html`
+  - `LOCKED_SLIDES.md`
+  - `CHANGELOG.md`
+
+## [Slide 09 Declutter: Removed CSV Data Sync Bar & Bottom Strategic Takeaway Strip] - 2026-09-11
+### Stage 08 / Slide 09 (Workforce & Workflow Prioritization Map)
+- **Decluttered Interface & Reduced Visual Overload**:
+  - Removed the bottom Strategic Narrative strip (`STRATEGIC EXECUTIVE TAKEAWAY // PRIORITISED DEPLOYMENT - Strategic Agent Prioritisation Playbook...`), letting the 20×15 matrix and sticky HUD inspector serve as the primary focus.
+  - Removed the central developer CSV sync control bar (`DATA SOURCE ENGINE: data/enterprise_matrix_300.csv`, `🎯 Focus J8 Anchor`, `📂 Import Modified CSV`, `📥 Export Current CSV`), cleaning up the toolbar area above the filter chips.
+  - Removed secondary eyebrow tag (`OPERATIONAL SEAMS / TOUCHPOINTS ACROSS 20 DISCIPLINES`) from the header block for clean typographic focus.
+- **Synchronized Files**:
+  - `final_slides/slide_08_the_enterprise_chessboard.html`
+  - `final_slides/slide_08_the_enterprise_chessboard.LOCKED.html`
+  - `working_deck/pages/page_08.html`
+  - `LOCKED_SLIDES.md`
+  - `CHANGELOG.md`
+
+## [Slide 09 Refinement: Subtitle & Framing Polish] - 2026-09-11
+### Stage 08 / Slide 09 (Workforce & Workflow Prioritization Map)
+- **Subheading & Diagnostic Framing**:
+  - Maintained the official H1 narrative: `Agentic Transformation Across Workforce & Workflows.`
+  - Replaced ambiguous generic subtitle with sharp diagnostic purpose: `Mapping personas and workflows to identify and prioritize operational risks, friction, and vulnerabilities.`
+  - Purged remaining "seams" terminology: updated `OPERATIONAL SEAMS` to `OPERATIONAL TOUCHPOINTS`, `Workforce & Knowledge Seams` to `Workforce & Role Handoffs`, and `CRITICAL RISK SEAMS` to `CRITICAL PROCESS RISKS` (52 Vulnerabilities).
+  - Updated filter chips and legend to `All 300 Touchpoints`, `Critical Risk`, and `Friction Point`.
+- **Synchronized Files**:
+  - `final_slides/slide_08_the_enterprise_chessboard.html`
+  - `final_slides/slide_08_the_enterprise_chessboard.LOCKED.html`
+  - `working_deck/pages/page_08.html`
+  - `LOCKED_SLIDES.md`
+  - `CHANGELOG.md`
+
+## [Slide 10 Refinement: Terminology Polish from Lighthouse to Proven Agent] - 2026-09-11
+### Stage 09 / Slide 10 (The Agentic Value Topology)
+- **De-emphasized "Lighthouse" Terminology**:
+  - Replaced `★ LIGHTHOUSE PROVEN` badge with `★ PROVEN AGENT`.
+  - Updated interactive button to `★ Focus Proven Agent`.
+  - Updated 3D billboard tag to `★ PROVEN AGENT (₹45 Cr)`.
+  - Updated contour spectrum legends to `Proven Agent Level` and `★ Proven Agent (Kansas Well A-12 • Slide 06 Benchmark)`.
+  - Updated Horizon Phase 1 card to `PHASE 1: PROVEN AGENT`.
+- **Synchronized Files**:
+  - `final_slides/slide_09_the_agentic_value_topology.html`
+  - `final_slides/slide_09_the_agentic_value_topology.LOCKED.html`
+  - `working_deck/pages/page_09.html`
+  - `LOCKED_SLIDES.md`
+  - `CHANGELOG.md`
+
 ## [Slide 10 Refinement: Milestone Cards Narrative Polish] - 2026-09-11
 ### Stage 10 (Phase 2 & Phase 3 Milestone Refinements)
 - **Phase 2 ROI Alignment**:

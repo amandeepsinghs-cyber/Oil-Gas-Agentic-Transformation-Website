@@ -274,19 +274,17 @@
           <span style="font-family: var(--font-mono); font-size: 12px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 2px; text-transform: uppercase;">
             AGENTIC TRANSFORMATION // WORKFORCE &amp; WORKFLOWS
           </span>
-          <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise);"></span>
-          <span style="font-family: var(--font-mono); font-size: 11px; color: #94A3B8;">OPERATIONAL SEAMS ACROSS 20 DISCIPLINES</span>
         </div>
 
         <h1 style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 46px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: #FFFFFF; margin: 0 0 8px 0;">
           Agentic Transformation Across Workforce &amp; Workflows.
         </h1>
         <h2 style="font-family: var(--font-display); font-size: clamp(18px, 1.4vw, 24px); font-weight: 600; line-height: 1.35; color: var(--security-turquoise); letter-spacing: -0.3px; margin: 0 0 12px 0;">
-          AI agents creating value across the value chain of the organisation.
+          Mapping personas and workflows to identify and prioritize operational risks, friction, and vulnerabilities.
         </h2>
 
         <p style="font-size: clamp(14px, 1.05vw, 16px); line-height: 1.45; color: #94A3B8; max-width: 1080px; margin: 0;">
-          High-consequence operations rely on specialized domain experts executing complex, multi-stage workflows across disconnected systems. AI agents augment the workforce and fortify workflows—unlocking measurable value across discrete operational seams from upstream exploration to downstream refining.
+          High-consequence operations rely on specialized domain experts executing complex, multi-stage workflows across disconnected systems. AI agents augment the workforce and fortify workflows—unlocking measurable value across critical operational handoffs from upstream exploration to downstream refining.
         </p>
       </div>
 
@@ -294,7 +292,7 @@
       <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
         <div class="view-switcher-pill">
           <button class="view-btn active" id="btn-mode-workforce-stage" onclick="setBoardMode('workforce')">
-            Workforce &amp; Knowledge Seams (20 Personas)
+            Workforce &amp; Role Handoffs (20 Personas)
           </button>
           <button class="view-btn" id="btn-mode-physical-stage" onclick="setBoardMode('physical')">
             Physical Operations &amp; Assets (20 Units)
@@ -322,8 +320,8 @@
       </div>
 
       <div style="background: rgba(13, 19, 32, 0.65); border: 1px solid rgba(239, 68, 68, 0.3); border-left: 3px solid var(--nebula-crimson); padding: 12px 18px; border-radius: 6px;">
-        <div style="font-family: var(--font-mono); font-size: 10.5px; color: #FCA5A5; letter-spacing: 1px;">🔴 CRITICAL RISK SEAMS</div>
-        <div style="font-size: 26px; font-weight: 800; color: var(--nebula-crimson); font-family: var(--font-display);"><span id="kpi-critical-count-stage">52</span> <span style="font-size: 13px; font-weight: 500; color: #64748B;">Seams</span></div>
+        <div style="font-family: var(--font-mono); font-size: 10.5px; color: #FCA5A5; letter-spacing: 1px;">🔴 CRITICAL PROCESS RISKS</div>
+        <div style="font-size: 26px; font-weight: 800; color: var(--nebula-crimson); font-family: var(--font-display);"><span id="kpi-critical-count-stage">52</span> <span style="font-size: 13px; font-weight: 500; color: #64748B;">Vulnerabilities</span></div>
         <div style="font-family: var(--font-mono); font-size: 10px; color: #FCA5A5;">Catastrophic Blowout / ₹50Cr+ Bleed</div>
       </div>
 
@@ -341,35 +339,13 @@
 
     </div>
 
-    <!-- Data Source & Agent Registry CSV Sync Control Bar -->
-    <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(13, 19, 32, 0.75); border: 1px solid rgba(0, 210, 180, 0.25); border-radius: 6px; padding: 10px 18px; margin-bottom: 16px; flex-wrap: wrap; gap: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.3);">
-      <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-        <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--security-turquoise); animation: pulse-turquoise 1.5s infinite alternate;"></span>
-        <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #FFF; letter-spacing: 1px;">DATA SOURCE ENGINE:</span>
-        <span style="font-family: var(--font-mono); font-size: 11px; color: var(--security-turquoise); background: rgba(0,210,180,0.12); padding: 3px 8px; border-radius: 4px; border: 1px solid rgba(0,210,180,0.3);" id="data-source-indicator-stage">
-          data/enterprise_matrix_300.csv
-        </span>
-        <span style="font-size: 12px; color: #94A3B8;">Modify in Google Sheets/Excel, mark new plugged agents &amp; registry tags, then import below:</span>
-      </div>
-      <div style="display: flex; align-items: center; gap: 8px;">
-        <button onclick="focusCenterHero()" style="padding: 7px 12px; border-radius: 4px; background: rgba(0, 210, 180, 0.12); border: 1px solid rgba(0, 210, 180, 0.35); color: var(--security-turquoise); font-family: var(--font-mono); font-size: 11px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s;">
-          🎯 Focus J8 Anchor
-        </button>
-        <input type="file" id="csv-file-input-stage" accept=".csv" style="display: none;" onchange="handleCSVUploadStage(event)">
-        <button onclick="document.getElementById('csv-file-input-stage').click()" style="padding: 7px 14px; border-radius: 4px; background: rgba(0, 163, 255, 0.15); border: 1px solid rgba(0, 163, 255, 0.4); color: #7DD3FC; font-family: var(--font-mono); font-size: 11px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s;">
-          📂 Import Modified CSV
-        </button>
-        <button onclick="exportCurrentCSVStage()" style="padding: 7px 14px; border-radius: 4px; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.15); color: #CBD5E1; font-family: var(--font-mono); font-size: 11px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 6px; transition: all 0.2s;">
-          📥 Export Current CSV
-        </button>
-      </div>
-    </div>
+
 
     <!-- Filter Controls Bar -->
     <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;">
       <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
         <span style="font-family: var(--font-mono); font-size: 11px; color: #64748B; margin-right: 4px;">FILTER BY STATUS:</span>
-        <button class="filter-chip active" id="chip-all-stage" onclick="filterByStatus('all')">All 300 Seams</button>
+        <button class="filter-chip active" id="chip-all-stage" onclick="filterByStatus('all')">All 300 Touchpoints</button>
         <button class="filter-chip" id="chip-plugged-stage" onclick="filterByStatus('plugged')" style="border-color: rgba(0, 210, 180, 0.4); color: var(--security-turquoise);">
           ★ Plugged Only (1)
         </button>
@@ -392,11 +368,11 @@
         </div>
         <div style="display: flex; align-items: center; gap: 6px;">
           <div style="width: 14px; height: 14px; background: repeating-linear-gradient(45deg, rgba(239, 68, 68, 0.5) 0, rgba(239, 68, 68, 0.5) 2px, transparent 2px, transparent 4px); border: 1px solid #EF4444; border-radius: 2px;"></div>
-          <span>Critical Seam</span>
+          <span>Critical Risk</span>
         </div>
         <div style="display: flex; align-items: center; gap: 6px;">
           <div style="width: 14px; height: 14px; background: repeating-linear-gradient(-45deg, rgba(245, 158, 11, 0.5) 0, rgba(245, 158, 11, 0.5) 2px, transparent 2px, transparent 4px); border: 1px solid #F59E0B; border-radius: 2px;"></div>
-          <span>Friction Gap</span>
+          <span>Friction Point</span>
         </div>
         <div style="display: flex; align-items: center; gap: 6px;">
           <div style="width: 14px; height: 14px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); border-radius: 2px;"></div>
@@ -526,18 +502,7 @@
 
     </div>
 
-    <!-- Strategic Narrative Bottom Strip -->
-    <div style="margin-top: 32px; padding: 22px 32px; background: rgba(13, 19, 32, 0.5); border: 1px solid var(--slate-border); border-radius: 8px; width: 100%; box-sizing: border-box;">
-      <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 1.5px; margin-bottom: 6px;">
-        STRATEGIC EXECUTIVE TAKEAWAY // PRIORITISED DEPLOYMENT
-      </div>
-      <h4 style="font-size: 20px; font-weight: 800; color: #FFF; margin: 0 0 8px 0;">
-        Strategic Agent Prioritisation Playbook
-      </h4>
-      <p style="font-size: 14px; line-height: 1.65; color: #94A3B8; margin: 0; max-width: 100%;">
-        Across enterprise operations, there are numerous operational seams where human latency, dark data, or siloed calculations threaten the balance sheet. Rather than deploying agents to every single action, the enterprise strategically prioritises high-exposure seams by financial criticality—deploying autonomous AI agents where they unlock the greatest measurable value, eliminate systemic bottlenecks, and fortify enterprise workflows.
-      </p>
-    </div>
+
 
   </div>
 

@@ -2,7 +2,6 @@
 <!-- SLIDE: STAGE 08 // THE ENTERPRISE VULNERABILITY CHESSBOARD               -->
 <!-- 20 PERSONAS × 15 ACTIONS (300 MECE TOUCHPOINTS)                           -->
 <!-- DUAL-LAYER: WORKFORCE & KNOWLEDGE SEAMS VS PHYSICAL ASSET INFRASTRUCTURE  -->
-<!-- LOCKED GOLDEN MASTER FILE                                                 -->
 <!-- ========================================================================= -->
 <style>
   #stage-08 {
@@ -275,19 +274,17 @@
           <span style="font-family: var(--font-mono); font-size: 12px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 2px; text-transform: uppercase;">
             AGENTIC TRANSFORMATION // WORKFORCE &amp; WORKFLOWS
           </span>
-          <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise);"></span>
-          <span style="font-family: var(--font-mono); font-size: 11px; color: #94A3B8;">OPERATIONAL SEAMS ACROSS 20 DISCIPLINES</span>
         </div>
 
         <h1 style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 46px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: #FFFFFF; margin: 0 0 8px 0;">
           Agentic Transformation Across Workforce &amp; Workflows.
         </h1>
         <h2 style="font-family: var(--font-display); font-size: clamp(18px, 1.4vw, 24px); font-weight: 600; line-height: 1.35; color: var(--security-turquoise); letter-spacing: -0.3px; margin: 0 0 12px 0;">
-          AI agents creating value across the value chain of the organisation.
+          Mapping personas and workflows to identify and prioritize operational risks, friction, and vulnerabilities.
         </h2>
 
         <p style="font-size: clamp(14px, 1.05vw, 16px); line-height: 1.45; color: #94A3B8; max-width: 1080px; margin: 0;">
-          High-consequence operations rely on specialized domain experts executing complex, multi-stage workflows across disconnected systems. AI agents augment the workforce and fortify workflows—unlocking measurable value across discrete operational seams from upstream exploration to downstream refining.
+          High-consequence operations rely on specialized domain experts executing complex, multi-stage workflows across disconnected systems. AI agents augment the workforce and fortify workflows—unlocking measurable value across critical operational handoffs from upstream exploration to downstream refining.
         </p>
       </div>
 
@@ -295,7 +292,7 @@
       <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
         <div class="view-switcher-pill">
           <button class="view-btn active" id="btn-mode-workforce-stage" onclick="setBoardMode('workforce')">
-            Workforce &amp; Knowledge Seams (20 Personas)
+            Workforce &amp; Role Handoffs (20 Personas)
           </button>
           <button class="view-btn" id="btn-mode-physical-stage" onclick="setBoardMode('physical')">
             Physical Operations &amp; Assets (20 Units)
@@ -312,41 +309,43 @@
       
       <div style="background: rgba(13, 19, 32, 0.65); border: 1px solid var(--slate-border); border-left: 3px solid var(--security-turquoise); padding: 12px 18px; border-radius: 6px;">
         <div style="font-family: var(--font-mono); font-size: 10.5px; color: #94A3B8; letter-spacing: 1px;">TOTAL OPERATIONAL NODES</div>
-        <div style="font-size: 26px; font-weight: 800; color: #FFF; font-family: var(--font-display);">300 <span style="font-size: 13px; font-weight: 500; color: #64748B;">Touchpoints</span></div>
+        <div style="font-size: 26px; font-weight: 800; color: #FFF; font-family: var(--font-display);"><span id="kpi-total-count-stage">300</span> <span style="font-size: 13px; font-weight: 500; color: #64748B;">Touchpoints</span></div>
         <div style="font-family: var(--font-mono); font-size: 10px; color: var(--security-turquoise);">Zero Task Overlap // 20 Disciplines</div>
       </div>
 
       <div style="background: rgba(13, 19, 32, 0.65); border: 1px solid rgba(0, 210, 180, 0.3); border-left: 3px solid var(--security-turquoise); padding: 12px 18px; border-radius: 6px; box-shadow: inset 0 0 20px rgba(0, 210, 180, 0.05);">
-        <div style="font-family: var(--font-mono); font-size: 10.5px; color: var(--security-turquoise); letter-spacing: 1px; font-weight: 700;">★ LIGHTHOUSE VALIDATED</div>
-        <div style="font-size: 26px; font-weight: 800; color: var(--security-turquoise); font-family: var(--font-display);">1 / 300 <span style="font-size: 13px; font-weight: 500; color: #94A3B8;">(0.33%)</span></div>
-        <div style="font-family: var(--font-mono); font-size: 10px; color: #FFF;">Lead Petrophysicist Benchmark (Slide 06)</div>
+        <div style="font-family: var(--font-mono); font-size: 10.5px; color: var(--security-turquoise); letter-spacing: 1px; font-weight: 700;">★ PLUGGED AUTONOMOUS AGENTS</div>
+        <div style="font-size: 26px; font-weight: 800; color: var(--security-turquoise); font-family: var(--font-display);" id="kpi-plugged-count-stage">1 / 300 <span style="font-size: 13px; font-weight: 500; color: #94A3B8;">(0.33%)</span></div>
+        <div style="font-family: var(--font-mono); font-size: 10px; color: #FFF;" id="kpi-plugged-sub-stage">Lead Petrophysicist Benchmark (J8)</div>
       </div>
 
       <div style="background: rgba(13, 19, 32, 0.65); border: 1px solid rgba(239, 68, 68, 0.3); border-left: 3px solid var(--nebula-crimson); padding: 12px 18px; border-radius: 6px;">
-        <div style="font-family: var(--font-mono); font-size: 10.5px; color: #FCA5A5; letter-spacing: 1px;">🔴 CRITICAL RISK SEAMS</div>
-        <div style="font-size: 26px; font-weight: 800; color: var(--nebula-crimson); font-family: var(--font-display);">52 <span style="font-size: 13px; font-weight: 500; color: #64748B;">Seams</span></div>
+        <div style="font-family: var(--font-mono); font-size: 10.5px; color: #FCA5A5; letter-spacing: 1px;">🔴 CRITICAL PROCESS RISKS</div>
+        <div style="font-size: 26px; font-weight: 800; color: var(--nebula-crimson); font-family: var(--font-display);"><span id="kpi-critical-count-stage">52</span> <span style="font-size: 13px; font-weight: 500; color: #64748B;">Vulnerabilities</span></div>
         <div style="font-family: var(--font-mono); font-size: 10px; color: #FCA5A5;">Catastrophic Blowout / ₹50Cr+ Bleed</div>
       </div>
 
       <div style="background: rgba(13, 19, 32, 0.65); border: 1px solid rgba(245, 158, 11, 0.3); border-left: 3px solid var(--hazard-amber); padding: 12px 18px; border-radius: 6px;">
         <div style="font-family: var(--font-mono); font-size: 10.5px; color: #FDE68A; letter-spacing: 1px;">🟡 MANUAL FRICTION GAPS</div>
-        <div style="font-size: 26px; font-weight: 800; color: var(--hazard-amber); font-family: var(--font-display);">84 <span style="font-size: 13px; font-weight: 500; color: #64748B;">Bottlenecks</span></div>
+        <div style="font-size: 26px; font-weight: 800; color: var(--hazard-amber); font-family: var(--font-display);"><span id="kpi-friction-count-stage">84</span> <span style="font-size: 13px; font-weight: 500; color: #64748B;">Bottlenecks</span></div>
         <div style="font-family: var(--font-mono); font-size: 10px; color: #FDE68A;">1–4 Hr Engineering Decision Lag</div>
       </div>
 
       <div style="background: rgba(13, 19, 32, 0.65); border: 1px solid var(--slate-border); border-left: 3px solid #64748B; padding: 12px 18px; border-radius: 6px;">
         <div style="font-family: var(--font-mono); font-size: 10.5px; color: #94A3B8; letter-spacing: 1px;">⚪ BASELINE MONOLITHS</div>
-        <div style="font-size: 26px; font-weight: 800; color: #CBD5E1; font-family: var(--font-display);">164 <span style="font-size: 13px; font-weight: 500; color: #64748B;">Monolith Silos</span></div>
+        <div style="font-size: 26px; font-weight: 800; color: #CBD5E1; font-family: var(--font-display);"><span id="kpi-baseline-count-stage">164</span> <span style="font-size: 13px; font-weight: 500; color: #64748B;">Monolith Silos</span></div>
         <div style="font-family: var(--font-mono); font-size: 10px; color: #64748B;">Legacy Desktop Software Locks</div>
       </div>
 
     </div>
 
+
+
     <!-- Filter Controls Bar -->
     <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 16px; flex-wrap: wrap;">
       <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
         <span style="font-family: var(--font-mono); font-size: 11px; color: #64748B; margin-right: 4px;">FILTER BY STATUS:</span>
-        <button class="filter-chip active" id="chip-all-stage" onclick="filterByStatus('all')">All 300 Seams</button>
+        <button class="filter-chip active" id="chip-all-stage" onclick="filterByStatus('all')">All 300 Touchpoints</button>
         <button class="filter-chip" id="chip-plugged-stage" onclick="filterByStatus('plugged')" style="border-color: rgba(0, 210, 180, 0.4); color: var(--security-turquoise);">
           ★ Plugged Only (1)
         </button>
@@ -369,11 +368,11 @@
         </div>
         <div style="display: flex; align-items: center; gap: 6px;">
           <div style="width: 14px; height: 14px; background: repeating-linear-gradient(45deg, rgba(239, 68, 68, 0.5) 0, rgba(239, 68, 68, 0.5) 2px, transparent 2px, transparent 4px); border: 1px solid #EF4444; border-radius: 2px;"></div>
-          <span>Critical Seam</span>
+          <span>Critical Risk</span>
         </div>
         <div style="display: flex; align-items: center; gap: 6px;">
           <div style="width: 14px; height: 14px; background: repeating-linear-gradient(-45deg, rgba(245, 158, 11, 0.5) 0, rgba(245, 158, 11, 0.5) 2px, transparent 2px, transparent 4px); border: 1px solid #F59E0B; border-radius: 2px;"></div>
-          <span>Friction Gap</span>
+          <span>Friction Point</span>
         </div>
         <div style="display: flex; align-items: center; gap: 6px;">
           <div style="width: 14px; height: 14px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); border-radius: 2px;"></div>
@@ -439,7 +438,7 @@
         <!-- The Latent Seam (Vulnerability / Bleed) -->
         <div style="background: rgba(239, 68, 68, 0.08); border-left: 3px solid var(--nebula-crimson); border-radius: 4px; padding: 14px; margin-bottom: 16px;">
           <div style="display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #FCA5A5; margin-bottom: 6px; letter-spacing: 1px;">
-            <span>🔴 THE LATENT VULNERABILITY (VALUE BLEED)</span>
+            <span id="hud-vuln-heading-stage">🔴 THE LATENT VULNERABILITY (VALUE BLEED)</span>
           </div>
           <p style="font-size: 13.5px; line-height: 1.55; color: #CBD5E1; margin: 0;" id="hud-vuln-desc-stage">
             1–2 hr manual curve shifting; cable stretch error (+1.48m shift) risks placing casing shoe into high-pressure gas sand, triggering unexpected well kicks and blowout alarms.
@@ -447,13 +446,37 @@
         </div>
 
         <!-- The Sovereign AI Agent (Opportunity) -->
-        <div style="background: rgba(0, 210, 180, 0.08); border-left: 3px solid var(--security-turquoise); border-radius: 4px; padding: 14px; margin-bottom: 18px;">
+        <div style="background: rgba(0, 210, 180, 0.08); border-left: 3px solid var(--security-turquoise); border-radius: 4px; padding: 14px; margin-bottom: 16px;">
           <div style="display: flex; align-items: center; gap: 6px; font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-turquoise); margin-bottom: 6px; letter-spacing: 1px;">
-            <span>⚡ AI AGENT (THE OPPORTUNITY)</span>
+            <span id="hud-plug-heading-stage">⚡ AI AGENT (THE OPPORTUNITY)</span>
           </div>
           <p style="font-size: 13.5px; line-height: 1.55; color: #E2E8F0; margin: 0;" id="hud-plug-desc-stage">
             <strong>SciPy Curve Splicing Agent (Slide 06)</strong>: 3.2-second autonomous execution, 2.9cm depth error, Pearson $r=0.9899$, automated sanity verification and immutable BigQuery audit ledger.
           </p>
+        </div>
+
+        <!-- Vertex AI Agent Registry Identity Card -->
+        <div id="hud-agent-registry-box-stage" style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(0, 210, 180, 0.35); border-radius: 6px; padding: 12px 14px; margin-bottom: 18px; box-shadow: 0 4px 14px rgba(0,0,0,0.4);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 1px; display: flex; align-items: center; gap: 6px;">
+              <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise);" id="hud-registry-dot-stage"></span>
+              VERTEX AI AGENT REGISTRY IDENTITY
+            </span>
+            <span id="hud-agent-deployment-pill-stage" style="font-family: var(--font-mono); font-size: 9px; font-weight: 700; padding: 2px 8px; border-radius: 10px; background: rgba(0, 210, 180, 0.15); color: var(--security-turquoise); border: 1px solid rgba(0, 210, 180, 0.3);">
+              Production (Slide 06)
+            </span>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 12.5px; font-weight: 700; color: #FFF; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+            <span style="color: #94A3B8; font-size: 11px;">agent_id:</span>
+            <span id="hud-agent-id-stage" style="color: var(--security-turquoise); font-family: var(--font-mono);">depth_match_splice_agent</span>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 9.5px; color: #64748B; word-break: break-all; margin-bottom: 6px;">
+            <span style="color: #475569;">resource:</span> <span id="hud-agent-uri-stage">projects/og-enterprise-prod/locations/us-central1/agents/depth_match_splice_agent</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 9.5px; color: #94A3B8; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 6px;">
+            <div><span style="color: #475569;">iam:</span> <span id="hud-agent-iam-stage">splice-agent@og-enterprise-prod.iam.gserviceaccount.com</span></div>
+            <div><span style="color: #475569;">stack:</span> <span id="hud-agent-stack-stage" style="color: #CBD5E1;">Google ADK + SciPy</span></div>
+          </div>
         </div>
 
         <!-- Quantified Exposure / ROI Metric Strip -->
@@ -472,33 +495,613 @@
           </div>
         </div>
 
-        <!-- Deep Action CTA -->
-        <div style="display: flex; gap: 10px;">
-          <button onclick="focusCenterHero()" style="flex: 1; padding: 10px 14px; border-radius: 6px; background: linear-gradient(135deg, rgba(0, 210, 180, 0.25), rgba(0, 163, 255, 0.25)); border: 1px solid var(--security-turquoise); color: #FFF; font-family: var(--font-mono); font-size: 11px; font-weight: 700; cursor: pointer; transition: all 0.2s;">
-            ★ Re-Center On Proven Splicing Plug (J8)
-          </button>
-          <a href="working_deck/pages/page_06.html" style="padding: 10px 14px; border-radius: 6px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #CBD5E1; text-decoration: none; font-family: var(--font-mono); font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center;">
-            View Slide 06 Proof ↗
-          </a>
-        </div>
+        <!-- Dynamic Contextual Action Area (No repetitive static buttons) -->
+        <div id="hud-action-container-stage"></div>
 
       </div>
 
     </div>
 
-    <!-- Strategic Narrative Bottom Strip -->
-    <div style="margin-top: 32px; padding: 22px 32px; background: rgba(13, 19, 32, 0.5); border: 1px solid var(--slate-border); border-radius: 8px; width: 100%; box-sizing: border-box;">
-      <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 1.5px; margin-bottom: 6px;">
-        STRATEGIC EXECUTIVE TAKEAWAY // PRIORITISED DEPLOYMENT
-      </div>
-      <h4 style="font-size: 20px; font-weight: 800; color: #FFF; margin: 0 0 8px 0;">
-        Strategic Agent Prioritisation Playbook
-      </h4>
-      <p style="font-size: 14px; line-height: 1.65; color: #94A3B8; margin: 0; max-width: 100%;">
-        Across enterprise operations, there are numerous operational seams where human latency, dark data, or siloed calculations threaten the balance sheet. Rather than deploying agents to every single action, the enterprise strategically prioritises high-exposure seams by financial criticality—deploying autonomous AI agents where they unlock the greatest measurable value, eliminate systemic bottlenecks, and fortify enterprise workflows.
-      </p>
-    </div>
+
 
   </div>
 
 </section>
+
+  <!-- Master Data & Runtime Engine for Stage 08 -->
+  <script src="data/enterprise_matrix_300.js"></script>
+  <script>
+    (function() {
+      const ROW_LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T"];
+      let PERSONAS_DATA = (window.ENTERPRISE_MATRIX_DATA && window.ENTERPRISE_MATRIX_DATA.length > 0) ? window.ENTERPRISE_MATRIX_DATA : [];
+      let PHYSICAL_ASSETS_DATA = (window.PHYSICAL_ASSETS_DATA && window.PHYSICAL_ASSETS_DATA.length > 0) ? window.PHYSICAL_ASSETS_DATA : [];
+      let currentStatusFilter = "all";
+      let currentMode = "workforce";
+      let activeSelectedCell = null;
+
+      window.setBoardMode = function(mode) {
+        currentMode = mode;
+        const btnWorkforce = document.getElementById("btn-mode-workforce-stage");
+        const btnPhysical = document.getElementById("btn-mode-physical-stage");
+        const modeCaption = document.getElementById("mode-caption-stage");
+
+        if (mode === "workforce") {
+          if (btnWorkforce) btnWorkforce.classList.add("active");
+          if (btnPhysical) btnPhysical.classList.remove("active");
+          if (modeCaption) modeCaption.innerText = "Workforce: Workflows overlap directly with human domain experts.";
+        } else {
+          if (btnPhysical) btnPhysical.classList.add("active");
+          if (btnWorkforce) btnWorkforce.classList.remove("active");
+          if (modeCaption) modeCaption.innerText = "Physical Operations: 20 continuous industrial assets operating 24/7/365 via DCS/SCADA.";
+        }
+        renderChessboardStage();
+      };
+
+      window.filterByStatus = function(status) {
+        currentStatusFilter = status;
+        document.querySelectorAll("#stage-08 .filter-chip").forEach(c => c.classList.remove("active"));
+        const chipEl = document.getElementById(`chip-${status}-stage`);
+        if (chipEl) chipEl.classList.add("active");
+
+        document.querySelectorAll("#stage-08 .board-cell").forEach(cell => {
+          const cellStatus = cell.getAttribute("data-status");
+          if (status === "all" || cellStatus === status) {
+            cell.style.opacity = "1";
+            cell.style.pointerEvents = "auto";
+          } else {
+            cell.style.opacity = "0.15";
+          }
+        });
+      };
+
+      function updateFilterCounts() {
+        let plugged = 0, critical = 0, friction = 0, baseline = 0, total = 0;
+        PERSONAS_DATA.forEach(p => {
+          p.actions.forEach(a => {
+            total++;
+            if (a.status === "plugged") plugged++;
+            else if (a.status === "critical") critical++;
+            else if (a.status === "friction") friction++;
+            else baseline++;
+          });
+        });
+
+        const kpiTotal = document.getElementById("kpi-total-count-stage");
+        const kpiPlugged = document.getElementById("kpi-plugged-count-stage");
+        const kpiPluggedSub = document.getElementById("kpi-plugged-sub-stage");
+        const kpiCritical = document.getElementById("kpi-critical-count-stage");
+        const kpiFriction = document.getElementById("kpi-friction-count-stage");
+        const kpiBaseline = document.getElementById("kpi-baseline-count-stage");
+
+        if (kpiTotal) kpiTotal.innerText = total;
+        if (kpiPlugged) {
+          const pct = ((plugged / total) * 100).toFixed(1);
+          kpiPlugged.innerHTML = `${plugged} / ${total} <span style="font-size: 13px; font-weight: 500; color: #94A3B8;">(${pct}%)</span>`;
+        }
+        if (kpiPluggedSub) {
+          kpiPluggedSub.innerText = plugged > 1 ? `${plugged} Autonomous Agents Deployed` : "Lead Petrophysicist Benchmark (J8)";
+        }
+        if (kpiCritical) kpiCritical.innerText = critical;
+        if (kpiFriction) kpiFriction.innerText = friction;
+        if (kpiBaseline) kpiBaseline.innerText = baseline;
+
+        const chipAll = document.getElementById("chip-all-stage");
+        const chipPlugged = document.getElementById("chip-plugged-stage");
+        const chipCritical = document.getElementById("chip-critical-stage");
+        const chipFriction = document.getElementById("chip-friction-stage");
+        const chipBaseline = document.getElementById("chip-baseline-stage");
+
+        if (chipAll) chipAll.innerText = `All ${total} Seams`;
+        if (chipPlugged) chipPlugged.innerText = `★ Plugged (${plugged})`;
+        if (chipCritical) chipCritical.innerText = `🔴 Critical Red (${critical})`;
+        if (chipFriction) chipFriction.innerText = `🟡 Friction Amber (${friction})`;
+        if (chipBaseline) chipBaseline.innerText = `⚪ Baseline (${baseline})`;
+      }
+
+      function renderChessboardStage() {
+        const colHeadersAnchor = document.getElementById("col-headers-anchor-stage");
+        const gridRowsAnchor = document.getElementById("grid-rows-anchor-stage");
+        if (!colHeadersAnchor || !gridRowsAnchor || PERSONAS_DATA.length === 0) return;
+
+        let colHeadersHTML = "";
+        for (let c = 1; c <= 15; c++) {
+          const isCenterCol = (c === 8);
+          colHeadersHTML += `
+            <div class="action-col-header ${isCenterCol ? 'highlight-col' : ''}" id="col-head-stage-${c}">
+              <div style="font-size: 9px; opacity: 0.6;">STEP</div>
+              <div>${c}</div>
+            </div>
+          `;
+        }
+        colHeadersAnchor.innerHTML = colHeadersHTML;
+
+        let rowsHTML = "";
+        PERSONAS_DATA.forEach((persona, rIdx) => {
+          const isCenterRow = (persona.id === "p10");
+          const rowNum = rIdx + 1;
+          const rowLetter = ROW_LETTERS[rIdx] || String.fromCharCode(65 + rIdx);
+          const displayName = (currentMode === "workforce") ? persona.name : (PHYSICAL_ASSETS_DATA[rIdx] ? PHYSICAL_ASSETS_DATA[rIdx].name : persona.name);
+
+          rowsHTML += `
+            <div class="persona-row-label ${isCenterRow ? 'highlight-row' : ''}" id="row-label-stage-${rowNum}" onclick="window.onCellClickStage('${persona.id}', 8)">
+              <div style="display: flex; flex-direction: column; overflow: hidden; text-overflow: ellipsis;">
+                <span style="font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: ${isCenterRow ? 'var(--security-turquoise)' : '#E2E8F0'}; font-weight: ${isCenterRow ? '800' : '600'};">
+                  ${displayName}
+                </span>
+                <span style="font-size: 8.5px; opacity: 0.7; font-family: var(--font-mono);">${persona.sector}</span>
+              </div>
+              <span class="badge-sector ${persona.sectorClass}" style="font-size: 8.5px; font-weight: 700; padding: 1px 5px;">${rowLetter}</span>
+            </div>
+          `;
+
+          persona.actions.forEach((act, cIdx) => {
+            const colNum = cIdx + 1;
+            const cellId = `cell-stage-${persona.id}-${colNum}`;
+            const coord = `${rowLetter}${colNum}`;
+            let cellClass = "cell-baseline";
+            if (act.status === "plugged") cellClass = "cell-plugged";
+            else if (act.status === "critical") cellClass = "cell-critical";
+            else if (act.status === "friction") cellClass = "cell-friction";
+
+            rowsHTML += `
+              <div class="board-cell ${cellClass}" 
+                   id="${cellId}" 
+                   data-persona="${persona.id}" 
+                   data-action="${colNum}"
+                   data-coord="${coord}"
+                   data-status="${act.status}"
+                   onmouseenter="window.onCellHoverStage('${persona.id}', ${colNum})"
+                   onclick="window.onCellClickStage('${persona.id}', ${colNum})"
+                   title="[${coord}] ${persona.name} • Step ${colNum}: ${act.name}">
+                ${coord}
+              </div>
+            `;
+          });
+        });
+
+        gridRowsAnchor.innerHTML = rowsHTML;
+        setTimeout(() => { window.onCellClickStage("p10", 8); }, 100);
+      }
+
+      window.onCellHoverStage = function(personaId, colNum) {
+        updateHUDStage(personaId, colNum);
+        highlightCrosshairsStage(personaId, colNum);
+      };
+
+      window.onCellClickStage = function(personaId, colNum) {
+        if (activeSelectedCell) activeSelectedCell.classList.remove("active-selected");
+        const cellEl = document.getElementById(`cell-stage-${personaId}-${colNum}`);
+        if (cellEl) {
+          cellEl.classList.add("active-selected");
+          activeSelectedCell = cellEl;
+        }
+        updateHUDStage(personaId, colNum);
+        highlightCrosshairsStage(personaId, colNum);
+      };
+
+      function highlightCrosshairsStage(personaId, colNum) {
+        document.querySelectorAll("#stage-08 .highlight-row").forEach(el => el.classList.remove("highlight-row"));
+        document.querySelectorAll("#stage-08 .highlight-col").forEach(el => el.classList.remove("highlight-col"));
+
+        const pObj = PERSONAS_DATA.find(p => p.id === personaId);
+        if (!pObj) return;
+
+        const pIdx = PERSONAS_DATA.indexOf(pObj) + 1;
+        const rowLabel = document.getElementById(`row-label-stage-${pIdx}`);
+        if (rowLabel) rowLabel.classList.add("highlight-row");
+
+        const colHead = document.getElementById(`col-head-stage-${colNum}`);
+        if (colHead) colHead.classList.add("highlight-col");
+      }
+
+      function updateHUDStage(personaId, colNum) {
+        const pObj = PERSONAS_DATA.find(p => p.id === personaId);
+        if (!pObj) return;
+        const actObj = pObj.actions[colNum - 1];
+        if (!actObj) return;
+
+        const pIdx = PERSONAS_DATA.indexOf(pObj);
+        const rowLetter = ROW_LETTERS[pIdx] || String.fromCharCode(65 + pIdx);
+
+        const hudPulse = document.getElementById("hud-pulse-stage");
+        const hudKicker = document.getElementById("hud-kicker-stage");
+        const hudStatusBadge = document.getElementById("hud-status-badge-stage");
+        const hudSectorBadge = document.getElementById("hud-sector-badge-stage");
+        const hudMonolith = document.getElementById("hud-monolith-stage");
+        const hudPersonaTitle = document.getElementById("hud-persona-title-stage");
+        const hudActionTitle = document.getElementById("hud-action-title-stage");
+        const hudVulnDesc = document.getElementById("hud-vuln-desc-stage");
+        const hudPlugDesc = document.getElementById("hud-plug-desc-stage");
+        const hudImpactStat = document.getElementById("hud-impact-stat-stage");
+        const hudSpeedStat = document.getElementById("hud-speed-stat-stage");
+
+        if (hudSectorBadge) {
+          hudSectorBadge.innerText = pObj.sector;
+          hudSectorBadge.className = `badge-sector ${pObj.sectorClass}`;
+        }
+        if (hudMonolith) hudMonolith.innerText = `Platform: ${pObj.monolith}`;
+        if (hudPersonaTitle) hudPersonaTitle.innerText = pObj.name;
+        if (hudActionTitle) hudActionTitle.innerText = actObj.actionTitle || actObj.action_full_title || `${rowLetter}${colNum} • Step ${colNum}: ${actObj.name}`;
+        if (hudVulnDesc) hudVulnDesc.innerText = actObj.vuln;
+        if (hudPlugDesc) hudPlugDesc.innerHTML = actObj.plug;
+        if (hudImpactStat) hudImpactStat.innerText = actObj.impact;
+        if (hudSpeedStat) hudSpeedStat.innerText = actObj.speed;
+
+        // Update Section Headings (from CSV or defaults)
+        const hudVulnHeading = document.getElementById("hud-vuln-heading-stage");
+        if (hudVulnHeading) hudVulnHeading.innerText = actObj.vulnLabel || actObj.vuln_label || "🔴 THE LATENT VULNERABILITY (VALUE BLEED)";
+        const hudPlugHeading = document.getElementById("hud-plug-heading-stage");
+        if (hudPlugHeading) hudPlugHeading.innerText = actObj.plugLabel || actObj.plug_label || "⚡ AI AGENT (THE OPPORTUNITY)";
+
+        // Agent Registry
+        const regBox = document.getElementById("hud-agent-registry-box-stage");
+        const regDot = document.getElementById("hud-registry-dot-stage");
+        const regPill = document.getElementById("hud-agent-deployment-pill-stage");
+        const regId = document.getElementById("hud-agent-id-stage");
+        const regUri = document.getElementById("hud-agent-uri-stage");
+        const regIam = document.getElementById("hud-agent-iam-stage");
+        const regStack = document.getElementById("hud-agent-stack-stage");
+
+        const agentId = actObj.agentRegistryId || actObj.agent_registry_id || (actObj.status === "plugged" ? "depth_match_splice_agent" : "");
+        const deploymentStatus = actObj.agentDeploymentStatus || actObj.agent_deployment_status || (actObj.status === "plugged" ? "Production (Slide 06 Proven)" : (actObj.status === "critical" ? "Planned Wave 1" : "Backlog / Opportunity"));
+        const agentUri = actObj.agentRegistryUri || actObj.agent_registry_uri || (agentId ? `projects/og-enterprise-prod/locations/us-central1/agents/${agentId}` : `projects/og-enterprise-prod/locations/us-central1/agents/candidate_seam_${rowLetter.toLowerCase()}${colNum}_agent`);
+        const agentIam = actObj.agentIamIdentity || actObj.agent_iam_identity || (agentId ? `${agentId.replace(/_/g, '-')}@og-enterprise-prod.iam.gserviceaccount.com` : "pending-provisioning@og-enterprise-prod.iam.gserviceaccount.com");
+        const agentStack = actObj.agentFramework || actObj.agent_framework || (agentId ? "Google ADK + Python" : "Google ADK (Target)");
+
+        if (regBox && regId && regUri && regIam && regStack && regPill) {
+          regBox.style.display = "block";
+          regId.innerText = agentId || `candidate_seam_${rowLetter.toLowerCase()}${colNum}_agent`;
+          regUri.innerText = agentUri;
+          regIam.innerText = agentIam;
+          regStack.innerText = agentStack;
+          regPill.innerText = deploymentStatus;
+
+          if (actObj.status === "plugged" || deploymentStatus.toLowerCase().includes("production")) {
+            regBox.style.borderColor = "rgba(0, 210, 180, 0.5)";
+            regBox.style.background = "rgba(0, 210, 180, 0.05)";
+            regDot.style.background = "var(--security-turquoise)";
+            regPill.style.background = "rgba(0, 210, 180, 0.2)";
+            regPill.style.color = "var(--security-turquoise)";
+            regPill.style.borderColor = "rgba(0, 210, 180, 0.4)";
+          } else if (deploymentStatus.toLowerCase().includes("wave 1") || actObj.status === "critical") {
+            regBox.style.borderColor = "rgba(245, 158, 11, 0.4)";
+            regBox.style.background = "rgba(245, 158, 11, 0.04)";
+            regDot.style.background = "var(--hazard-amber)";
+            regPill.style.background = "rgba(245, 158, 11, 0.15)";
+            regPill.style.color = "var(--hazard-amber)";
+            regPill.style.borderColor = "rgba(245, 158, 11, 0.35)";
+          } else {
+            regBox.style.borderColor = "rgba(255, 255, 255, 0.1)";
+            regBox.style.background = "rgba(15, 23, 42, 0.6)";
+            regDot.style.background = "#64748B";
+            regPill.style.background = "rgba(255, 255, 255, 0.06)";
+            regPill.style.color = "#94A3B8";
+            regPill.style.borderColor = "rgba(255, 255, 255, 0.15)";
+          }
+        }
+
+        // Status-specific styling with custom kicker and badge support
+        const customKicker = actObj.kicker || actObj.hud_kicker;
+        const customBadge = actObj.statusBadge || actObj.hud_status_badge;
+
+        if (hudPulse && hudKicker && hudStatusBadge) {
+          if (actObj.status === "plugged") {
+            hudPulse.style.background = "var(--security-turquoise)";
+            hudKicker.innerText = customKicker || "★ DEPLOYED PROOF // KANSAS WELL A-12";
+            hudKicker.style.color = "var(--security-turquoise)";
+            hudStatusBadge.innerText = customBadge || "★ PLUGGED (SLIDE 06 PROVEN)";
+            hudStatusBadge.style.background = "rgba(0, 210, 180, 0.25)";
+            hudStatusBadge.style.borderColor = "var(--security-turquoise)";
+            hudStatusBadge.style.color = "#FFF";
+          } else if (actObj.status === "critical") {
+            hudPulse.style.background = "var(--nebula-crimson)";
+            hudKicker.innerText = customKicker || "🔴 CRITICAL CAPITAL BLEED // CATASTROPHIC RISK";
+            hudKicker.style.color = "var(--nebula-crimson)";
+            hudStatusBadge.innerText = customBadge || "🔴 CRITICAL SEAM";
+            hudStatusBadge.style.background = "rgba(239, 68, 68, 0.25)";
+            hudStatusBadge.style.borderColor = "var(--nebula-crimson)";
+            hudStatusBadge.style.color = "#FCA5A5";
+          } else if (actObj.status === "friction") {
+            hudPulse.style.background = "var(--hazard-amber)";
+            hudKicker.innerText = customKicker || "🟡 HUMAN BOTTLENECK // 1–4 HR DECISION LATENCY";
+            hudKicker.style.color = "var(--hazard-amber)";
+            hudStatusBadge.innerText = customBadge || "🟡 FRICTION GAP";
+            hudStatusBadge.style.background = "rgba(245, 158, 11, 0.25)";
+            hudStatusBadge.style.borderColor = "var(--hazard-amber)";
+            hudStatusBadge.style.color = "#FDE68A";
+          } else {
+            hudPulse.style.background = "#94A3B8";
+            hudKicker.innerText = customKicker || "⚪ BASELINE SILO // COMMERCIAL MONOLITH LOCK";
+            hudKicker.style.color = "#94A3B8";
+            hudStatusBadge.innerText = customBadge || "⚪ BASELINE MONOLITH";
+            hudStatusBadge.style.background = "rgba(255, 255, 255, 0.08)";
+            hudStatusBadge.style.borderColor = "rgba(255, 255, 255, 0.2)";
+            hudStatusBadge.style.color = "#CBD5E1";
+          }
+        }
+
+        // Dynamic Context-Aware Action Button(s) in HUD
+        const actionContainer = document.getElementById("hud-action-container-stage");
+        if (actionContainer) {
+          if (rowLetter === "J" && colNum === 8) {
+            actionContainer.innerHTML = `
+              <a href="working_deck/pages/page_06.html" style="display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 11px 16px; border-radius: 6px; background: linear-gradient(135deg, rgba(0, 210, 180, 0.3), rgba(0, 163, 255, 0.3)); border: 1.5px solid var(--security-turquoise); color: #FFF; text-decoration: none; font-family: var(--font-mono); font-size: 11px; font-weight: 800; transition: all 0.2s; box-shadow: 0 0 20px rgba(0, 210, 180, 0.25); text-align: center; box-sizing: border-box;">
+                ★ View Slide 06 Production Benchmark (Kansas Well A-12) ↗
+              </a>
+            `;
+          } else if (actObj.status === "plugged") {
+            actionContainer.innerHTML = `
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 6px; background: rgba(0, 210, 180, 0.12); border: 1px solid var(--security-turquoise); font-family: var(--font-mono); font-size: 11px; box-sizing: border-box;">
+                <span style="color: var(--security-turquoise); font-weight: 800;">⚡ PRODUCTION AUTONOMOUS AGENT</span>
+                <span style="color: #FFF; font-weight: 700;">ACTIVE IN REGISTRY</span>
+              </div>
+            `;
+          } else if (deploymentStatus.toLowerCase().includes("wave 1") || actObj.status === "critical") {
+            actionContainer.innerHTML = `
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 6px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.4); font-family: var(--font-mono); font-size: 11px; box-sizing: border-box;">
+                <span style="color: #FCA5A5; font-weight: 800;">🔴 PROPOSED WAVE 1 AGENT</span>
+                <span style="color: #FFF; font-weight: 700;">CAPITAL BLEED: ${actObj.impact}</span>
+              </div>
+            `;
+          } else if (actObj.status === "friction") {
+            actionContainer.innerHTML = `
+              <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; border-radius: 6px; background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); font-family: var(--font-mono); font-size: 11px; box-sizing: border-box;">
+                <span style="color: #FDE68A; font-weight: 800;">🟡 WAVE 2 CANDIDATE</span>
+                <span style="color: #94A3B8;">LATENCY BOTTLENECK</span>
+              </div>
+            `;
+          } else {
+            actionContainer.innerHTML = ``;
+          }
+        }
+      }
+
+      window.focusCenterHero = function() {
+        window.onCellClickStage("p10", 8);
+        const cellEl = document.getElementById("cell-stage-p10-8");
+        if (cellEl) cellEl.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+      };
+
+      function parseCSV(text) {
+        const lines = [];
+        let row = [""];
+        let inQuotes = false;
+        for (let i = 0; i < text.length; i++) {
+          const char = text[i];
+          const nextChar = text[i + 1];
+          if (char === '"') {
+            if (inQuotes && nextChar === '"') {
+              row[row.length - 1] += '"';
+              i++;
+            } else {
+              inQuotes = !inQuotes;
+            }
+          } else if (char === ',' && !inQuotes) {
+            row.push('');
+          } else if ((char === '\r' || char === '\n') && !inQuotes) {
+            if (char === '\r' && nextChar === '\n') i++;
+            if (row.length > 1 || row[0] !== '') lines.push(row);
+            row = [''];
+          } else {
+            row[row.length - 1] += char;
+          }
+        }
+        if (row.length > 1 || row[0] !== '') lines.push(row);
+        return lines;
+      }
+
+      window.handleCSVUploadStage = function(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          updateDataFromCSVStage(e.target.result, file.name);
+        };
+        reader.readAsText(file);
+      };
+
+      function updateDataFromCSVStage(csvText, fileName) {
+        try {
+          const rows = parseCSV(csvText);
+          if (rows.length < 2) return;
+          const headers = rows[0].map(h => h.trim().toLowerCase());
+          const getIdx = (name) => headers.indexOf(name);
+
+          const colCoord = getIdx("coord");
+          const colPersonaId = getIdx("persona_id");
+          const colPersonaName = getIdx("persona_name");
+          const colSector = getIdx("sector");
+          const colMonolith = getIdx("monolith_platform");
+          const colStep = getIdx("step_number");
+          const colActionName = getIdx("action_name");
+          const colActionTitle = getIdx("action_full_title");
+          const colStatus = getIdx("status");
+          const colStatusBadge = getIdx("hud_status_badge");
+          const colKicker = getIdx("hud_kicker");
+          const colImpact = getIdx("impact_display");
+          const colSpeed = getIdx("speed_display");
+          const colCapitalCr = getIdx("capital_at_risk_cr");
+          const colVulnLabel = getIdx("vuln_label");
+          const colVuln = getIdx("vulnerability");
+          const colPlugLabel = getIdx("plug_label");
+          const colPlug = getIdx("agentic_plug");
+          const colAgentId = getIdx("agent_registry_id");
+          const colAgentUri = getIdx("agent_registry_uri");
+          const colDeployStatus = getIdx("agent_deployment_status");
+          const colAgentIam = getIdx("agent_iam_identity");
+          const colFramework = getIdx("agent_framework");
+
+          let updatedCount = 0;
+          for (let i = 1; i < rows.length; i++) {
+            const row = rows[i];
+            if (row.length < 4) continue;
+            const pId = colPersonaId !== -1 ? row[colPersonaId].trim() : "";
+            const stepNum = colStep !== -1 ? parseInt(row[colStep].trim(), 10) : 0;
+            const coord = colCoord !== -1 ? row[colCoord].trim().toUpperCase() : "";
+
+            let persona = PERSONAS_DATA.find(p => p.id === pId);
+            if (!persona && coord) {
+              const rIdx = ROW_LETTERS.indexOf(coord.charAt(0));
+              if (rIdx !== -1 && PERSONAS_DATA[rIdx]) persona = PERSONAS_DATA[rIdx];
+            }
+            if (!persona) continue;
+
+            if (colPersonaName !== -1 && row[colPersonaName]) persona.name = row[colPersonaName].trim();
+            if (colSector !== -1 && row[colSector]) persona.sector = row[colSector].trim();
+            if (colMonolith !== -1 && row[colMonolith]) persona.monolith = row[colMonolith].trim();
+
+            let stepIdx = stepNum ? stepNum - 1 : -1;
+            if (stepIdx < 0 && coord) {
+              const colInt = parseInt(coord.slice(1), 10);
+              if (!isNaN(colInt)) stepIdx = colInt - 1;
+            }
+
+            if (stepIdx >= 0 && stepIdx < persona.actions.length) {
+              const act = persona.actions[stepIdx];
+              if (colActionName !== -1 && row[colActionName]) act.name = row[colActionName].trim();
+              if (colActionTitle !== -1 && row[colActionTitle]) act.actionTitle = row[colActionTitle].trim();
+              if (colStatus !== -1 && row[colStatus]) act.status = row[colStatus].trim().toLowerCase();
+              if (colStatusBadge !== -1 && row[colStatusBadge]) act.statusBadge = row[colStatusBadge].trim();
+              if (colKicker !== -1 && row[colKicker]) act.kicker = row[colKicker].trim();
+              if (colImpact !== -1 && row[colImpact]) act.impact = row[colImpact].trim();
+              if (colSpeed !== -1 && row[colSpeed]) act.speed = row[colSpeed].trim();
+              if (colCapitalCr !== -1 && row[colCapitalCr]) act.capitalCr = parseFloat(row[colCapitalCr].trim()) || act.capitalCr;
+              if (colVulnLabel !== -1 && row[colVulnLabel]) act.vulnLabel = row[colVulnLabel].trim();
+              if (colVuln !== -1 && row[colVuln]) act.vuln = row[colVuln].trim();
+              if (colPlugLabel !== -1 && row[colPlugLabel]) act.plugLabel = row[colPlugLabel].trim();
+              if (colPlug !== -1 && row[colPlug]) act.plug = row[colPlug].trim();
+              if (colAgentId !== -1) act.agentRegistryId = row[colAgentId].trim();
+              if (colAgentUri !== -1) act.agentRegistryUri = row[colAgentUri].trim();
+              if (colDeployStatus !== -1) act.agentDeploymentStatus = row[colDeployStatus].trim();
+              if (colAgentIam !== -1) act.agentIamIdentity = row[colAgentIam].trim();
+              if (colFramework !== -1) act.agentFramework = row[colFramework].trim();
+              updatedCount++;
+            }
+          }
+
+          const sourceIndicator = document.getElementById("data-source-indicator-stage");
+          if (sourceIndicator) {
+            sourceIndicator.innerText = `${fileName || 'Modified CSV'} (${updatedCount} nodes synced)`;
+            sourceIndicator.style.background = "rgba(0, 210, 180, 0.25)";
+            sourceIndicator.style.borderColor = "var(--security-turquoise)";
+          }
+
+          renderChessboardStage();
+          updateFilterCounts();
+          filterByStatus(currentStatusFilter);
+        } catch (err) {
+          console.error("CSV sync error:", err);
+        }
+      }
+
+      window.exportCurrentCSVStage = function() {
+        const headers = [
+          "coord",
+          "row_letter",
+          "step_number",
+          "persona_id",
+          "persona_name",
+          "sector",
+          "monolith_platform",
+          "physical_asset",
+          "action_name",
+          "action_full_title",
+          "status",
+          "hud_status_badge",
+          "hud_kicker",
+          "capital_at_risk_cr",
+          "impact_display",
+          "speed_display",
+          "vuln_label",
+          "vulnerability",
+          "plug_label",
+          "agentic_plug",
+          "agent_registry_id",
+          "agent_registry_uri",
+          "agent_deployment_status",
+          "agent_iam_identity",
+          "agent_framework"
+        ];
+        const escapeCSV = (val) => {
+          if (val === null || val === undefined) return '""';
+          const str = String(val);
+          if (str.includes('"') || str.includes(',') || str.includes('\n') || str.includes('\r')) return `"${str.replace(/"/g, '""')}"`;
+          return `"${str}"`;
+        };
+        const rows = [headers.join(",")];
+        PERSONAS_DATA.forEach((persona, rIdx) => {
+          const rowLetter = ROW_LETTERS[rIdx] || String.fromCharCode(65 + rIdx);
+          const physicalAsset = PHYSICAL_ASSETS_DATA[rIdx] ? PHYSICAL_ASSETS_DATA[rIdx].name : "";
+          persona.actions.forEach((act, cIdx) => {
+            const stepNum = cIdx + 1;
+            const coord = `${rowLetter}${stepNum}`;
+            const actionFullTitle = act.actionTitle || `${coord} • Step ${stepNum}: ${act.name}`;
+            const vulnLabel = act.vulnLabel || "🔴 THE LATENT VULNERABILITY (VALUE BLEED)";
+            const plugLabel = act.plugLabel || "⚡ AI AGENT (THE OPPORTUNITY)";
+
+            let hudKicker = act.kicker || "";
+            let hudStatusBadge = act.statusBadge || "";
+            if (!hudKicker) {
+              if (act.status === "plugged") hudKicker = "★ DEPLOYED PROOF // KANSAS WELL A-12";
+              else if (act.status === "critical") hudKicker = "🔴 CRITICAL CAPITAL BLEED // CATASTROPHIC RISK";
+              else if (act.status === "friction") hudKicker = "🟡 HUMAN BOTTLENECK // 1–4 HR DECISION LATENCY";
+              else hudKicker = "⚪ BASELINE SILO // COMMERCIAL MONOLITH LOCK";
+            }
+            if (!hudStatusBadge) {
+              if (act.status === "plugged") hudStatusBadge = "★ PLUGGED (SLIDE 06 PROVEN)";
+              else if (act.status === "critical") hudStatusBadge = "🔴 CRITICAL SEAM";
+              else if (act.status === "friction") hudStatusBadge = "🟡 FRICTION GAP";
+              else hudStatusBadge = "⚪ BASELINE MONOLITH";
+            }
+
+            const line = [
+              escapeCSV(coord),
+              escapeCSV(rowLetter),
+              escapeCSV(stepNum),
+              escapeCSV(persona.id),
+              escapeCSV(persona.name),
+              escapeCSV(persona.sector),
+              escapeCSV(persona.monolith),
+              escapeCSV(physicalAsset),
+              escapeCSV(act.name),
+              escapeCSV(actionFullTitle),
+              escapeCSV(act.status),
+              escapeCSV(hudStatusBadge),
+              escapeCSV(hudKicker),
+              escapeCSV(act.capitalCr || 0),
+              escapeCSV(act.impact),
+              escapeCSV(act.speed),
+              escapeCSV(vulnLabel),
+              escapeCSV(act.vuln),
+              escapeCSV(plugLabel),
+              escapeCSV(act.plug),
+              escapeCSV(act.agentRegistryId || ""),
+              escapeCSV(act.agentRegistryUri || ""),
+              escapeCSV(act.agentDeploymentStatus || (act.status === "plugged" ? "Production (Slide 06 Proven)" : (act.status === "critical" ? "Planned Wave 1" : "Backlog / Opportunity"))),
+              escapeCSV(act.agentIamIdentity || ""),
+              escapeCSV(act.agentFramework || "")
+            ];
+            rows.push(line.join(","));
+          });
+        });
+        const blob = new Blob([rows.join("\r\n")], { type: "text/csv;charset=utf-8;" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.setAttribute("href", url);
+        link.setAttribute("download", "enterprise_matrix_300_exported.csv");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
+
+      if (document.readyState === "loading") {
+        window.addEventListener("DOMContentLoaded", () => {
+          renderChessboardStage();
+          updateFilterCounts();
+        });
+      } else {
+        renderChessboardStage();
+        updateFilterCounts();
+      }
+    })();
+  </script>
