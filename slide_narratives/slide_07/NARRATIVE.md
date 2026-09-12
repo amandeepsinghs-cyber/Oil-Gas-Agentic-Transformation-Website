@@ -80,7 +80,7 @@ The visual core of Slide 07 is an official Google Cloud Reference Architecture d
 | Attribute | Slide 03/04 Requisite | Technical Implementation in Slide 07 Reference Architecture |
 | :--- | :--- | :--- |
 | **01 Surgical** | Targets the exact seam without touching surrounding monoliths. | Intervenes strictly at the log splicing seam: scans LAS header depth bounds, identifies casing shoe overlap windows, calculates curve shift, and outputs clean LAS without modifying geological models. |
-| **02 Autonomous** | Event-triggered 24/7 execution without manual human handoffs. | Executes end-to-end in 3.2 seconds upon arrival of wireline files or API webhook. Handles multi-run wells autonomously with zero idle rig wait time. |
+| **02 Autonomous** | Event-triggered 24/7 execution without manual human handoffs. | Executes end-to-end in seconds upon arrival of wireline files or API webhook. Handles multi-run wells autonomously with zero idle rig wait time. |
 | **03 Intelligent** | Understands unstructured domain context and siloed metadata. | Leverages Gemini 2.5 to parse messy vendor headers, harmonize disparate naming conventions (e.g., `GR_EDTC` vs `CGR`), and discover wells via natural language queries. |
 | **04 Governed** | Centrally cataloged, permission-bounded, and completely audited. | Cataloged in **Gemini Enterprise Agent Registry**; bounded by dedicated IAM Service Identity (`splice-agent@og-agentic-ecosystem`); mathematical shifts and sign-offs logged to **BigQuery**. |
 | **05 Deterministic** | Zero generative hallucination; exact mathematical solvers. | Decoupled architecture: Gemini orchestrates; compiled SciPy algorithms compute cross-correlation ($r(\delta)$) and amplitude gain matching. Physical laws remain inviolable. |

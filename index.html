@@ -265,16 +265,6 @@
           </div>
         </div>
 
-        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding: 20px 24px; flex-wrap: wrap; gap: 24px; background: rgba(13, 17, 23, 0.4); border-radius: 8px;">
-          <div style="max-width: 820px;">
-            <span style="font-family: var(--font-display); font-size: 18.5px; font-weight: 700; color: #FFFFFF;">Where does this money actually disappear?</span>
-            <p style="font-size: 14.5px; color: #CBD5E1; line-height: 1.55; margin: 4px 0 0 0;">It doesn't vanish in catastrophes. It leaks quietly through routine operational friction: unmonitored human handovers.</p>
-          </div>
-          <a href="#stage-02" style="font-family: var(--font-display); font-size: 15.5px; font-weight: 700; color: var(--security-turquoise); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 20px; background: rgba(0, 210, 180, 0.08); border: 1px solid rgba(0, 210, 180, 0.3);">
-            <span>The Swiss Cheese Model</span>
-            <span style="font-size: 18px;">→</span>
-          </a>
-        </div>
 
       </div>
     </section>
@@ -339,118 +329,91 @@
           </div>
 
           <!-- The Dual-State Cinematic Render Canvas (Uncluttered) -->
-          <div style="position: relative; width: 100%; max-height: 380px; aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.12); background: #06090E; box-shadow: 0 16px 40px rgba(0,0,0,0.6);">
-            <!-- Baseline State: Plain red ray piercing layers (Clean Dark Studio) -->
-            <img id="s2-img-baseline" src="assets/media/photos/swiss_cheese_clean_baseline.jpg" alt="Swiss Cheese Latent Failure Vector" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; transition: opacity 0.5s ease; opacity: 1;">
+          <div class="cheese-canvas" style="position: relative; width: 100%; max-height: 380px; aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.12); background: #06090E; box-shadow: 0 16px 40px rgba(0,0,0,0.6);">
+            <!-- Baseline State: Plain red ray piercing layers (Dark) -->
+            <img id="s2-img-baseline" class="cheese-img-dark" src="assets/media/photos/swiss_cheese_clean_baseline.jpg" alt="Swiss Cheese Latent Failure Vector" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; transition: opacity 0.5s ease; opacity: 1;">
+            <!-- Baseline State: Plain red ray piercing layers (Light) -->
+            <img id="s2-img-baseline-light" class="cheese-img-light" src="assets/media/photos/swiss_cheese_clean_baseline_light.jpg" alt="Swiss Cheese Latent Failure Vector" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; transition: opacity 0.5s ease; opacity: 1;">
             
-            <!-- Fortified State: Surgical turquoise plugs terminating vector (Clean Dark Studio) -->
-            <img id="s2-img-fortified" src="assets/media/photos/swiss_cheese_clean_fortified.jpg" alt="Fortified Autonomous Agents Sealing Vulnerabilities" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; transition: opacity 0.5s ease; opacity: 0; pointer-events: none;">
+            <!-- Fortified State: Surgical turquoise plugs terminating vector (Dark) -->
+            <img id="s2-img-fortified" class="cheese-img-dark" src="assets/media/photos/swiss_cheese_clean_fortified.jpg" alt="Fortified Autonomous Agents Sealing Vulnerabilities" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; transition: opacity 0.5s ease; opacity: 0; pointer-events: none;">
+            <!-- Fortified State: Surgical turquoise plugs terminating vector (Light) -->
+            <img id="s2-img-fortified-light" class="cheese-img-light" src="assets/media/photos/swiss_cheese_clean_fortified_light.jpg" alt="Fortified Autonomous Agents Sealing Vulnerabilities" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: center; transition: opacity 0.5s ease; opacity: 0; pointer-events: none;">
           </div>
         </div>
 
-        <!-- 5. Four Barrier Seam Cards (Aligned directly to the 4 Cheese Slices) -->
-        <div style="margin-bottom: 24px;">
-          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+        <!-- 5. Four Barrier Seam Chips (Aligned directly to the 4 Cheese Slices) -->
+        <div style="margin-bottom: 0;">
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;">
             
             <!-- Barrier 01: Subsurface Archive -->
-            <div id="s2-tier-1" style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between; min-height: 155px; transition: all 0.3s ease;">
-              <div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                  <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: #94A3B8; letter-spacing: 1.2px;">LAYER 01 // ARCHIVE</span>
-                  <span id="s2-tier-1-badge" style="padding: 2px 7px; border-radius: 4px; font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #94A3B8;">Vulnerability 1</span>
-                </div>
-                <div id="s2-tier-1-title" style="font-family: var(--font-display); font-size: 14.5px; font-weight: 700; color: #FFF; line-height: 1.3; margin-bottom: 4px;">
-                  Legacy Mudlog in PDF Archive
-                </div>
-                <div id="s2-tier-1-metric" style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: #F59E0B; margin-bottom: 6px;">
-                  2004 Offset Well · Unindexed Scan
-                </div>
-                <div id="s2-tier-1-desc" style="font-size: 12px; color: #94A3B8; line-height: 1.45;">
-                  A critical gas kick from a 2004 offset well remained buried in an unindexed PDF scan, unread during well planning.
-                </div>
+            <div id="s2-tier-1" style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 12px 14px; transition: all 0.3s ease;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 9.5px; font-weight: 800; color: #94A3B8; letter-spacing: 1.2px;">LAYER 01 // ARCHIVE</span>
+                <span id="s2-tier-1-badge" style="padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 9px; font-weight: 700; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #94A3B8;">Vulnerability 1</span>
               </div>
+              <div id="s2-tier-1-title" style="font-family: var(--font-display); font-size: 14px; font-weight: 700; color: #FFF; line-height: 1.25; margin-bottom: 3px;">
+                Buried 2004 PDF Mudlog
+              </div>
+              <div id="s2-tier-1-metric" style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: #F59E0B;">
+                Unindexed Scan · Overlooked Kick
+              </div>
+              <div id="s2-tier-1-desc" style="display: none;"></div>
             </div>
 
             <!-- Barrier 02: Petrophysics -->
-            <div id="s2-tier-2" style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between; min-height: 155px; transition: all 0.3s ease;">
-              <div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                  <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: #94A3B8; letter-spacing: 1.2px;">LAYER 02 // PETROPHYSICS</span>
-                  <span id="s2-tier-2-badge" style="padding: 2px 7px; border-radius: 4px; font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #94A3B8;">Vulnerability 2</span>
-                </div>
-                <div id="s2-tier-2-title" style="font-family: var(--font-display); font-size: 14.5px; font-weight: 700; color: #FFF; line-height: 1.3; margin-bottom: 4px;">
-                  Wireline Cable Stretch
-                </div>
-                <div id="s2-tier-2-metric" style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: #F59E0B; margin-bottom: 6px;">
-                  1.48m Uncalibrated Discrepancy
-                </div>
-                <div id="s2-tier-2-desc" style="font-size: 12px; color: #94A3B8; line-height: 1.45;">
-                  Mechanical cable stretch shifted logging depth by 1.48m. Approximated manually, placing the caprock 1.5m deeper than reality.
-                </div>
+            <div id="s2-tier-2" style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 12px 14px; transition: all 0.3s ease;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 9.5px; font-weight: 800; color: #94A3B8; letter-spacing: 1.2px;">LAYER 02 // PETROPHYSICS</span>
+                <span id="s2-tier-2-badge" style="padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 9px; font-weight: 700; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #94A3B8;">Vulnerability 2</span>
               </div>
+              <div id="s2-tier-2-title" style="font-family: var(--font-display); font-size: 14px; font-weight: 700; color: #FFF; line-height: 1.25; margin-bottom: 3px;">
+                1.5m Cable Stretch
+              </div>
+              <div id="s2-tier-2-metric" style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: #F59E0B;">
+                Mechanical Drift · Uncalibrated
+              </div>
+              <div id="s2-tier-2-desc" style="display: none;"></div>
             </div>
 
             <!-- Barrier 03: Shift Handover -->
-            <div id="s2-tier-3" style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between; min-height: 155px; transition: all 0.3s ease;">
-              <div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                  <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: #94A3B8; letter-spacing: 1.2px;">LAYER 03 // RIG HANDOVER</span>
-                  <span id="s2-tier-3-badge" style="padding: 2px 7px; border-radius: 4px; font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #94A3B8;">Vulnerability 3</span>
-                </div>
-                <div id="s2-tier-3-title" style="font-family: var(--font-display); font-size: 14.5px; font-weight: 700; color: #FFF; line-height: 1.3; margin-bottom: 4px;">
-                  Rig Crew Changeover
-                </div>
-                <div id="s2-tier-3-metric" style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: #F59E0B; margin-bottom: 6px;">
-                  4-Hour Communication Lag
-                </div>
-                <div id="s2-tier-3-desc" style="font-size: 12px; color: #94A3B8; line-height: 1.45;">
-                  Updated depth warnings were lost in an email handover at 3:00 AM. The rig crew continued drilling ahead unaware of the danger window.
-                </div>
+            <div id="s2-tier-3" style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 12px 14px; transition: all 0.3s ease;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 9.5px; font-weight: 800; color: #94A3B8; letter-spacing: 1.2px;">LAYER 03 // RIG HANDOVER</span>
+                <span id="s2-tier-3-badge" style="padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 9px; font-weight: 700; background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #94A3B8;">Vulnerability 3</span>
               </div>
+              <div id="s2-tier-3-title" style="font-family: var(--font-display); font-size: 14px; font-weight: 700; color: #FFF; line-height: 1.25; margin-bottom: 3px;">
+                4-Hour Handover Lag
+              </div>
+              <div id="s2-tier-3-metric" style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: #F59E0B;">
+                3:00 AM Shift Change · Warning Lost
+              </div>
+              <div id="s2-tier-3-desc" style="display: none;"></div>
             </div>
 
             <!-- Barrier 04: Drilling Target -->
-            <div id="s2-tier-4" style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 16px; display: flex; flex-direction: column; justify-content: space-between; min-height: 155px; transition: all 0.3s ease;">
-              <div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                  <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: #94A3B8; letter-spacing: 1.2px;">LAYER 04 // DRILLING TARGET</span>
-                  <span id="s2-tier-4-badge" style="padding: 2px 7px; border-radius: 4px; font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.35); color: #F59E0B;">CRITICAL HAZARD</span>
-                </div>
-                <div id="s2-tier-4-title" style="font-family: var(--font-display); font-size: 14.5px; font-weight: 700; color: #FFF; line-height: 1.3; margin-bottom: 4px;">
-                  Casing Shoe Misplacement
-                </div>
-                <div id="s2-tier-4-metric" style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: #F59E0B; margin-bottom: 6px;">
-                  Cumulative 2m Error · Gas Sand Landed
-                </div>
-                <div id="s2-tier-4-desc" style="font-size: 12px; color: #94A3B8; line-height: 1.45;">
-                  The casing shoe seated directly into the fractured gas sand rather than solid rock, causing an uncontrollable kick and stuck drillstring.
-                </div>
+            <div id="s2-tier-4" style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; padding: 12px 14px; transition: all 0.3s ease;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 9.5px; font-weight: 800; color: #94A3B8; letter-spacing: 1.2px;">LAYER 04 // DRILLING TARGET</span>
+                <span id="s2-tier-4-badge" style="padding: 2px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 9px; font-weight: 700; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.35); color: #EF4444;">CRITICAL HAZARD</span>
               </div>
+              <div id="s2-tier-4-title" style="font-family: var(--font-display); font-size: 14px; font-weight: 700; color: #FFF; line-height: 1.25; margin-bottom: 3px;">
+                ₹45 Cr Rig NPT
+              </div>
+              <div id="s2-tier-4-metric" style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: #EF4444;">
+                Casing in Gas Sand · Uncontrolled Kick
+              </div>
+              <div id="s2-tier-4-desc" style="display: none;"></div>
             </div>
 
           </div>
-        </div>
-
-        <!-- 6. Editorial Transition to Stage 03 -->
-        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding: 14px 20px; flex-wrap: wrap; gap: 16px; background: rgba(13, 17, 23, 0.4); border-radius: 8px;">
-          <div style="max-width: 820px;">
-            <span style="font-family: var(--font-display); font-size: 15.5px; font-weight: 700; color: #FFFFFF;">
-              We need a defensive system that permanently and surgically seals these gaps.
-            </span>
-            <p style="font-size: 13px; color: #CBD5E1; line-height: 1.5; margin: 2px 0 0 0;">
-              Before selecting a technology, energy operations demand five non-negotiable engineering criteria for autonomous agents.
-            </p>
-          </div>
-          <a href="#stage-03" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-turquoise); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 20px; background: rgba(0, 210, 180, 0.08); border: 1px solid rgba(0, 210, 180, 0.3); transition: all 0.2s;">
-            <span>The 5 Non-Negotiable Criteria of the Agent →</span>
-          </a>
         </div>
 
       </div>
     </section>
 
     <!-- ========================================================================= -->
-    <!-- STAGE 02B: THE MASSIVE CREW CHANGE — INSTITUTIONAL MEMORY LOSS            -->
+    <!-- STAGE 02B: THE GREAT CREW CHANGE — INSTITUTIONAL MEMORY LOSS               -->
     <!-- Inserted between the Swiss Cheese mechanism and the 5 Criteria. The       -->
     <!-- argument depends on Stage 02 already being on screen: it claims the gaps  -->
     <!-- shown there are closed today by a person, and that person is retiring.    -->
@@ -465,44 +428,28 @@
 
           <div class="editorial-container" style="max-width: 1440px; margin: 0 auto; width: 100%; position: relative; z-index: 2;">
 
-            <!-- 1. Header: Eyebrow Kicker & Interactive State Switcher -->
+            <!-- 1. Header: Eyebrow Kicker -->
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 14px;">
               <div class="title-kicker" style="display: flex; align-items: center; gap: 10px;">
                 <span class="kicker-bar" style="width: 24px; height: 3px; background: var(--grad-security); border-radius: 2px;"></span>
-                <span style="color: var(--security-turquoise); font-family: var(--font-display); font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">THE MASSIVE CREW CHANGE</span>
+                <span style="color: var(--security-turquoise); font-family: var(--font-display); font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">UPSTREAM WORKFORCE DEMOGRAPHICS</span>
                 <span style="color: var(--border-hairline);">//</span>
                 <span style="color: var(--text-dim); font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.5px;">INSTITUTIONAL MEMORY LOSS</span>
-              </div>
-
-              <!-- Tactile Executive State Selector (mirrors Stage 02 convention) -->
-              <div style="display: inline-flex; background: rgba(13, 17, 23, 0.95); padding: 4px; border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.12); box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
-                <button id="s2b-btn-today" onclick="setCrewState('today')" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; padding: 6px 16px; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #FFF; border-radius: 20px; cursor: pointer; transition: all 0.25s;">
-                  ● The Workforce That Holds It
-                </button>
-                <button id="s2b-btn-exposure" onclick="setCrewState('exposure')" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; padding: 6px 16px; background: transparent; border: 1px solid transparent; color: var(--text-dim); border-radius: 20px; cursor: pointer; transition: all 0.25s;">
-                  ⚠ What Happens When They Go
-                </button>
               </div>
             </div>
 
             <!-- 2. Monumental Billboard Display Headline -->
-            <h2 style="font-family: var(--font-display); font-size: clamp(30px, 3.4vw, 46px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: #FFFFFF; max-width: 1400px; margin: 0 0 8px 0;">
-              <span id="s2b-headline-main">In oil and gas, the last barrier is a person.</span>
+            <h2 style="font-family: var(--font-display); font-size: clamp(32px, 3.8vw, 50px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: #FFFFFF; max-width: 1400px; margin: 0 0 10px 0;">
+              <span id="s2b-headline-main">The Great Crew Change</span>
             </h2>
 
-            <!-- Subheading -->
-            <p id="s2b-headline-accent" style="font-family: var(--font-display); font-size: clamp(17px, 1.3vw, 22px); font-weight: 600; line-height: 1.4; color: #94A3B8; margin: 0 0 10px 0; max-width: 1200px; transition: color 0.3s ease;">Four in ten have already gone. The rest retire inside a decade.</p>
-
-            <!-- 3. Secondary Voice / Narrative Lead -->
-            <p id="s2b-narrative-lead" style="font-size: clamp(14.5px, 1.05vw, 16.5px); line-height: 1.6; color: #94A3B8; max-width: 1180px; margin: 0 0 22px 0; font-weight: 400; transition: color 0.3s ease;">
-              On the last slide, three latent gaps aligned into one stuck drillstring. Each of them had a defence, and in every case that defence was somebody's memory — of a 2004 well, of how that tool behaves, of why you telephone at three in the morning rather than send an email. <strong style="color: #FFF;">None of it is written down. None of it appears on a barrier diagram.</strong> And it is walking out of the building.
+            <!-- Subheading: Global and India PSU Demographics -->
+            <p id="s2b-headline-accent" style="font-family: var(--font-display); font-size: clamp(16px, 1.2vw, 20.5px); font-weight: 600; line-height: 1.45; color: #CBD5E1; margin: 0 0 24px 0; max-width: 1250px;">
+              Rising operational risk due to departing experienced personnel. Up to 50% of the global energy workforce is nearing retirement, while across Indian PSUs, 42% of regular employees have retired over the past decade alone—with 27% of the remainder exiting by FY30.
             </p>
 
-            <!-- 4. Chart + Findings -->
-            <div style="display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 28px; align-items: start; margin-bottom: 22px;">
-
-              <!-- Chart column -->
-              <div>
+            <!-- 4. Hero Chart -->
+            <div style="margin-bottom: 24px;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 10px;">
                   <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFF; letter-spacing: 1.5px; text-transform: uppercase; display: flex; align-items: center; gap: 8px;">
                     <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #FFF;"></span>
@@ -559,21 +506,8 @@
                     <path d="M478.6,141.8 L664.3,159.9 L850,178"
                           fill="none" stroke="#00D2B4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7,6"/>
 
-                    <!-- Risk / exposure curve — DIRECTION ONLY, deliberately unscaled (state 2) -->
-                    <path id="s2b-risk-curve"
-                          d="M70,255 C150,250 220,246 292.9,243 C360,238 410,234 478.6,228 C540,215 600,180 664.3,140 C720,105 790,75 850,55"
-                          fill="none" stroke="url(#s2bRiskLine)" stroke-width="3.5" stroke-linecap="round"
-                          opacity="0" style="transition: opacity 0.55s ease;"/>
-
-                    <!-- Crossing marker (state 2) -->
-                    <g id="s2b-crossing" opacity="0" style="transition: opacity 0.55s ease;">
-                      <circle cx="629" cy="156.5" r="7" fill="none" stroke="#EF4444" stroke-width="2.5"/>
-                      <circle cx="629" cy="156.5" r="2.5" fill="#EF4444"/>
-                    </g>
-
                     <!-- TODAY marker -->
                     <line x1="478.6" y1="34" x2="478.6" y2="270" stroke="#00D2B4" stroke-width="2"/>
-                    <circle cx="478.6" cy="141.8" r="6" fill="#06090E" stroke="#00D2B4" stroke-width="3"/>
 
                     <!-- Annotations -->
                     <text x="300" y="86" font-family="Google Sans, sans-serif" font-size="21" font-weight="800" fill="currentColor" fill-opacity="0.78">5.7 lakh</text>
@@ -581,10 +515,6 @@
 
                     <text x="497" y="203" font-family="Google Sans, sans-serif" font-size="23" font-weight="800" fill="#00D2B4">7.8 lakh</text>
                     <text x="497" y="221" font-family="Google Sans, sans-serif" font-size="12.5" fill="#00D2B4" fill-opacity="0.80">still here — the window for action</text>
-
-                    <text id="s2b-risk-label-1" x="700" y="96" font-family="Google Sans, sans-serif" font-size="13.5" font-weight="800" fill="#EF4444" opacity="0" style="transition: opacity 0.55s ease;">RISK CARRIED BY</text>
-                    <text id="s2b-risk-label-2" x="700" y="113" font-family="Google Sans, sans-serif" font-size="13.5" font-weight="800" fill="#EF4444" opacity="0" style="transition: opacity 0.55s ease;">UNDOCUMENTED JUDGEMENT</text>
-                    <text id="s2b-risk-label-3" x="700" y="130" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#EF4444" fill-opacity="0.7" opacity="0" style="transition: opacity 0.55s ease;">direction only — no scale</text>
 
                     <!-- X axis labels -->
                     <text x="70" y="292" text-anchor="start" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="600" fill="currentColor" fill-opacity="0.45">FY14</text>
@@ -601,75 +531,15 @@
                   <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--text-dim); letter-spacing: 0.4px;">Public Enterprises Survey (DPE): 13.49 lakh FY14 · 9.2 FY20 · 8.14 FY24 · 7.8 FY25 &nbsp;·&nbsp; FY26–FY35 projected at trend</span>
                   <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--text-dim); letter-spacing: 0.4px;">Source: pib.gov.in</span>
                 </div>
-              </div>
-
-              <!-- Findings column -->
-              <div style="display: flex; flex-direction: column; gap: 14px;">
-
-                <div style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-left: 3px solid var(--security-azure); border-radius: 8px; padding: 15px 17px;">
-                  <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--security-azure); letter-spacing: 1.2px; margin-bottom: 7px;">01 · THE INVISIBLE LOSS</div>
-                  <p style="margin: 0; font-size: 14px; line-height: 1.55; color: #CBD5E1;"><strong style="color: #FFF;">The art is not in the reports.</strong> Critical judgement was never captured in institutional records or IT systems. It lives in the minds of the stalwarts, and nowhere else.</p>
-                </div>
-
-                <div style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-left: 3px solid var(--nebula-amber); border-radius: 8px; padding: 15px 17px;">
-                  <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--nebula-amber); letter-spacing: 1.2px; margin-bottom: 7px;">02 · THE DEMOGRAPHIC CLIFF</div>
-                  <p style="margin: 0; font-size: 14px; line-height: 1.55; color: #CBD5E1;"><strong style="color: #FFF;">A massive crew change is under way.</strong> Lifetimes of compounded experience walk out permanently, every year — and the departure rate is accelerating, not easing.</p>
-                </div>
-
-                <div style="background: rgba(15, 23, 42, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); border-left: 3px solid var(--nebula-crimson); border-radius: 8px; padding: 15px 17px;">
-                  <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--nebula-crimson); letter-spacing: 1.2px; margin-bottom: 7px;">03 · THE SYSTEMIC FAILURE</div>
-                  <p style="margin: 0; font-size: 14px; line-height: 1.55; color: #CBD5E1;"><strong style="color: #FFF;">Systems store explicit data, not tacit experience.</strong> No mechanism captures the judgement before it is gone. The next generation will inherit the systems. They will not inherit the judgement.</p>
-                </div>
-
-              </div>
             </div>
 
-            <!-- 5. Vulnerability callback — the three gaps from Stage 02, each answered by a human barrier -->
-            <div style="margin-bottom: 22px;">
-              <div style="font-family: var(--font-mono); font-size: 10.5px; font-weight: 700; color: var(--text-dim); letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 10px;">WHO CLOSED THOSE THREE GAPS YESTERDAY // STAGE 02 RECALL</div>
-              <div style="display: grid; grid-template-columns: repeat(3, 1fr) auto; gap: 14px; align-items: stretch;">
-
-                <div style="background: rgba(15, 23, 42, 0.32); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 8px; padding: 13px 15px;">
-                  <div style="font-family: var(--font-mono); font-size: 9.5px; font-weight: 800; color: var(--text-dim); letter-spacing: 1.1px; margin-bottom: 6px;">VULNERABILITY 01</div>
-                  <div style="font-size: 13px; line-height: 1.5; color: #CBD5E1;">A 2004 gas kick buried in an unindexed PDF — <strong style="color: #FFF;">someone remembered that well.</strong></div>
-                </div>
-
-                <div style="background: rgba(15, 23, 42, 0.32); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 8px; padding: 13px 15px;">
-                  <div style="font-family: var(--font-mono); font-size: 9.5px; font-weight: 800; color: var(--text-dim); letter-spacing: 1.1px; margin-bottom: 6px;">VULNERABILITY 02</div>
-                  <div style="font-size: 13px; line-height: 1.5; color: #CBD5E1;">1.48 m of uncalibrated cable stretch — <strong style="color: #FFF;">someone knew that tool's behaviour.</strong></div>
-                </div>
-
-                <div style="background: rgba(15, 23, 42, 0.32); border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 8px; padding: 13px 15px;">
-                  <div style="font-family: var(--font-mono); font-size: 9.5px; font-weight: 800; color: var(--text-dim); letter-spacing: 1.1px; margin-bottom: 6px;">VULNERABILITY 03</div>
-                  <div style="font-size: 13px; line-height: 1.5; color: #CBD5E1;">A 3 a.m. handover lost in an email — <strong style="color: #FFF;">someone would have picked up the phone.</strong></div>
-                </div>
-
-                <div style="background: rgba(239, 68, 68, 0.07); border: 1px solid rgba(239, 68, 68, 0.28); border-radius: 8px; padding: 13px 20px; display: flex; align-items: center; min-width: 210px;">
-                  <div style="font-size: 14.5px; font-weight: 800; line-height: 1.4; color: #FFF;">In all three, the barrier was a person.<br><span style="color: var(--nebula-crimson);">Not a system.</span></div>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- 6. Closing band + bridge to Stage 03 -->
-            <div style="background: linear-gradient(90deg, rgba(0, 210, 180, 0.08) 0%, rgba(15, 23, 42, 0.5) 55%, rgba(15, 23, 42, 0.3) 100%); border: 1px solid rgba(255, 255, 255, 0.10); border-left: 3px solid var(--security-turquoise); border-radius: 10px; padding: 20px 24px; margin-bottom: 18px;">
-              <p style="margin: 0 0 8px 0; font-family: var(--font-display); font-size: clamp(17px, 1.45vw, 24px); font-weight: 700; line-height: 1.35; color: #FFFFFF;">
-                Oil &amp; gas is <span style="color: var(--security-turquoise);">half science, half art</span> — and the art leaves with the person doing it.
-              </p>
-              <p style="margin: 0; font-size: clamp(14px, 1.05vw, 16.5px); line-height: 1.6; color: #94A3B8;">
-                <strong style="color: #FFF;">What you know can now outlast your tenure. That has never been true before.</strong> The window is not the years until the last expert retires — it is the years while they are still here to teach the system what they know.
+            <!-- Editorial Risk Statement -->
+            <div style="background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255, 255, 255, 0.08); border-left: 3px solid var(--security-turquoise); border-radius: 8px; padding: 18px 24px; margin-top: 16px; margin-bottom: 20px;">
+              <p style="margin: 0; font-family: var(--font-display); font-size: clamp(15px, 1.1vw, 17.5px); font-weight: 500; line-height: 1.6; color: #E2E8F0;">
+                As experienced staff leaves, latent vulnerabilities align more often—creating systemic operational risk across the organisation that will continue to compound unless we intervene.
               </p>
             </div>
 
-            <!-- Bridge (inherited from Stage 02 outro) -->
-            <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;">
-              <p style="margin: 0; font-size: clamp(14px, 1.05vw, 16px); line-height: 1.55; color: #94A3B8; max-width: 900px;">
-                The defence therefore cannot be a person. Before selecting a technology, energy operations demand five non-negotiable engineering criteria for autonomous agents.
-              </p>
-              <a href="page_03.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #06090E; background: var(--security-turquoise); padding: 10px 20px; border-radius: 22px; text-decoration: none; white-space: nowrap;">
-                The 5 Non-Negotiable Criteria of the Agent →
-              </a>
-            </div>
 
           </div>
         </section>
@@ -693,23 +563,14 @@
             <span style="color: rgba(255, 255, 255, 0.25);">//</span>
             <span style="color: #CBD5E1; font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; letter-spacing: 0.5px;">THE DEFENSIVE PLUG</span>
           </div>
-
-          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; background: rgba(0, 210, 180, 0.08); border: 1px solid rgba(0, 210, 180, 0.28); border-radius: 20px;">
-            <span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--security-turquoise); box-shadow: 0 0 8px var(--security-turquoise);"></span>
-            <span style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.8px;">100% MEITY IN-COUNTRY SOVEREIGNTY</span>
-          </div>
         </div>
 
         <h2 style="font-family: var(--font-display); font-size: clamp(34px, 3.8vw, 54px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: #FFFFFF; max-width: 1240px; margin: 0 0 10px 0;">
           To seal micro-vulnerabilities, you need targeted solutions.
         </h2>
 
-        <p style="font-family: var(--font-display); font-size: clamp(17px, 1.3vw, 22px); font-weight: 700; line-height: 1.35; margin: 0 0 16px 0; background: linear-gradient(135deg, #00D2B4 0%, #00A3FF 50%, #38BDF8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+        <p style="font-family: var(--font-display); font-size: clamp(17px, 1.3vw, 22px); font-weight: 700; line-height: 1.35; margin: 0 0 32px 0; background: linear-gradient(135deg, #00D2B4 0%, #00A3FF 50%, #38BDF8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
           The five non-negotiable solution criteria for mission-critical operations.
-        </p>
-
-        <p style="font-size: clamp(15.5px, 1.15vw, 18.5px); line-height: 1.6; color: #CBD5E1; max-width: 1120px; margin: 0 0 32px 0; font-weight: 400;">
-          Before selecting a technology, energy operations must define the architectural requisites of defense—permanently eliminating friction and latent risk across siloed disciplines without endangering high-consequence physical assets:
         </p>
 
         <!-- 5 Pillars -->
@@ -773,25 +634,11 @@
             <span style="display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--security-turquoise); box-shadow: 0 0 8px var(--security-turquoise);"></span>
             <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 1.5px; text-transform: uppercase;">THE ARCHITECTURAL DEFINITION // CORE CHARACTERISTICS</span>
           </div>
-          <div style="font-family: var(--font-display); font-size: clamp(20px, 2vw, 29px); font-weight: 800; color: #FFFFFF; line-height: 1.35; margin-bottom: 8px;">
+          <div style="font-family: var(--font-display); font-size: clamp(20px, 2vw, 29px); font-weight: 800; color: #FFFFFF; line-height: 1.35; margin-bottom: 0;">
             A system that is Surgical, Automated, Intelligent, Governed, and Robust embodies the core characteristics of an <span style="background: linear-gradient(135deg, #00D2B4 0%, #00A3FF 50%, #38BDF8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Enterprise AI Agent.</span>
           </div>
-          <p style="font-size: 14.5px; color: #CBD5E1; line-height: 1.55; margin: 0;">
-            These five non-negotiable characteristics separate mission-critical enterprise infrastructure from consumer chatbots—providing deterministic physical calculations, strict human oversight, and zero operational hallucination.
-          </p>
         </div>
 
-        <!-- Editorial Transition & Presentation Navigation -->
-        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding: 20px 24px; flex-wrap: wrap; gap: 24px; background: rgba(13, 17, 23, 0.4); border-radius: 8px;">
-          <div style="max-width: 820px;">
-            <span style="font-family: var(--font-display); font-size: 18.5px; font-weight: 700; color: #FFFFFF;">What is an Enterprise AI Agent?</span>
-            <p style="font-size: 14.5px; color: #CBD5E1; line-height: 1.55; margin: 4px 0 0 0;">An intelligent microservice that coexists with your monoliths to create an agentic organization.</p>
-          </div>
-          <a href="#stage-04" style="font-family: var(--font-display); font-size: 14.5px; font-weight: 700; color: #FFFFFF; background: rgba(0, 163, 255, 0.2); border: 1px solid var(--security-azure); padding: 8px 18px; border-radius: 20px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
-            <span>Next: 04 The Intelligent Microservice</span>
-            <span style="font-size: 16px;">↓</span>
-          </a>
-        </div>
 
       </div>
     </section>
@@ -819,13 +666,6 @@
             <span style="color: rgba(255, 255, 255, 0.25);">//</span>
             <span style="color: #CBD5E1; font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; letter-spacing: 0.5px;">
               THE COEXISTENCE PARADIGM
-            </span>
-          </div>
-
-          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px; background: rgba(0, 210, 180, 0.08); border: 1px solid rgba(0, 210, 180, 0.3); border-radius: 20px;">
-            <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise); box-shadow: 0 0 6px var(--security-turquoise);"></span>
-            <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.8px;">
-              NOT EITHER/OR. IT IS BOTH.
             </span>
           </div>
         </div>
@@ -994,21 +834,6 @@
           </div>
         </div>
 
-        <!-- Clean Next Page Transition -->
-        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding: 16px 20px; flex-wrap: wrap; gap: 18px; background: rgba(13, 17, 23, 0.4); border-radius: 8px;">
-          <div style="max-width: 820px;">
-            <span style="font-family: var(--font-display); font-size: 16.5px; font-weight: 700; color: #FFFFFF; display: block; margin-bottom: 4px;">
-              How does this change the physical resilience of your business?
-            </span>
-            <span style="font-size: 13.5px; color: #94A3B8; display: block; line-height: 1.5;">
-              From a fragile tower of human friction to an interconnected matrix.
-            </span>
-          </div>
-          <a href="#stage-05" style="font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--security-turquoise); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 20px; background: rgba(0, 210, 180, 0.08); border: 1px solid rgba(0, 210, 180, 0.3); transition: all 0.2s;">
-            <span>The Jenga Metaphor: Fragile vs. Fortified</span>
-            <span style="font-size: 16px;">→</span>
-          </a>
-        </div>
 
       </div>
     </section>
@@ -1031,18 +856,11 @@
           <div class="title-kicker" style="display: flex; align-items: center; gap: 10px;">
             <span class="kicker-bar" style="width: 24px; height: 3px; background: var(--grad-friction); border-radius: 2px;"></span>
             <span style="color: var(--nebula-amber); font-family: var(--font-display); font-size: 13.5px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">
-              THE VISCERAL REALITY
+              OPERATIONAL RESILIENCE
             </span>
             <span style="color: rgba(255, 255, 255, 0.25);">//</span>
             <span style="color: #CBD5E1; font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; letter-spacing: 0.5px;">
-              STRUCTURAL RESILIENCE METAPHOR
-            </span>
-          </div>
-
-          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px; background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.3); border-radius: 20px;">
-            <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--nebula-cyan-bright); box-shadow: 0 0 6px var(--nebula-cyan-bright);"></span>
-            <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.8px;">
-              SYSTEMIC RESILIENCE
+              SYSTEMIC DEFENSE IN DEPTH
             </span>
           </div>
         </div>
@@ -1053,7 +871,7 @@
         </h1>
 
         <p style="font-family: var(--font-display); font-size: clamp(16px, 1.2vw, 20px); line-height: 1.45; color: #CBD5E1; margin: 0 0 24px 0; max-width: 1200px;">
-          Operational vulnerabilities exist across both <strong style="color: #FFF;">workflows and workforce</strong>. AI Agents eliminate these operational gaps to build a structurally resilient organization.
+          Operational vulnerabilities exist across both <strong style="color: var(--nebula-cyan-bright);">workflows</strong> and <strong style="color: var(--nebula-cyan-bright);">workforce</strong>. AI Agents eliminate these operational gaps to build a structurally resilient organization.
         </p>
 
         <!-- ========================================================================= -->
@@ -1067,10 +885,6 @@
             <div class="jenga-img-box" style="border: 1px solid rgba(245, 158, 11, 0.4);">
               <img class="jenga-img-dark" src="assets/media/wip/image74_left.jpg" alt="An Enterprise Without Agents - The Fragile Jenga Tower">
               <img class="jenga-img-light" src="assets/media/wip/image74_left_light.jpg" alt="An Enterprise Without Agents - The Fragile Jenga Tower">
-              <div style="position: absolute; top: 12px; left: 16px; background: rgba(13, 17, 23, 0.92); border: 1px solid rgba(245, 158, 11, 0.5); backdrop-filter: blur(8px); padding: 5px 12px; border-radius: 20px; display: flex; align-items: center; gap: 6px;">
-                <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--nebula-amber); box-shadow: 0 0 6px var(--nebula-amber);"></span>
-                <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #FFF; letter-spacing: 0.8px;">WITHOUT AGENTS // EXPOSED GAPS</span>
-              </div>
             </div>
 
             <!-- Content -->
@@ -1098,10 +912,6 @@
             <div class="jenga-img-box" style="border: 1px solid rgba(0, 229, 255, 0.45);">
               <img class="jenga-img-dark" src="assets/media/wip/image74_right.jpg" alt="An Enterprise Fortified by Agents - The Fortified Jenga Tower">
               <img class="jenga-img-light" src="assets/media/wip/image74_right_light.jpg" alt="An Enterprise Fortified by Agents - The Fortified Jenga Tower">
-              <div style="position: absolute; top: 12px; right: 16px; background: rgba(13, 17, 23, 0.92); border: 1px solid rgba(0, 229, 255, 0.5); backdrop-filter: blur(8px); padding: 5px 12px; border-radius: 20px; display: flex; align-items: center; gap: 6px;">
-                <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--nebula-cyan-bright); box-shadow: 0 0 6px var(--nebula-cyan-bright);"></span>
-                <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #FFF; letter-spacing: 0.8px;">WITH AGENTS // FORTIFIED WORKFLOWS</span>
-              </div>
             </div>
 
             <!-- Content -->
@@ -1125,21 +935,6 @@
 
         </div>
 
-        <!-- Clean Next Page Transition -->
-        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding: 14px 18px; flex-wrap: wrap; gap: 16px; background: rgba(13, 17, 23, 0.4); border-radius: 8px;">
-          <div style="max-width: 820px;">
-            <span style="font-family: var(--font-display); font-size: 15.5px; font-weight: 700; color: #FFFFFF;">
-              Ready to see one of these plugs in real-world operation?
-            </span>
-            <span style="font-size: 13px; color: #94A3B8; margin-left: 10px;">
-              Examining the Petrophysical Wireline Splicing Sentinel.
-            </span>
-          </div>
-          <a href="working_deck/pages/page_06.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--nebula-cyan-bright); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 20px; background: rgba(0, 229, 255, 0.08); border: 1px solid rgba(0, 229, 255, 0.3); transition: all 0.2s;">
-            <span>Living Proof: Splicing Sentinel</span>
-            <span style="font-size: 15px;">→</span>
-          </a>
-        </div>
 
       </div>
     </section>
@@ -1193,7 +988,9 @@
       const btnLegacy = document.getElementById('s2-btn-legacy');
       const btnAgentic = document.getElementById('s2-btn-agentic');
       const imgBaseline = document.getElementById('s2-img-baseline');
+      const imgBaselineLight = document.getElementById('s2-img-baseline-light');
       const imgFortified = document.getElementById('s2-img-fortified');
+      const imgFortifiedLight = document.getElementById('s2-img-fortified-light');
       const headlineMain = document.getElementById('s2-headline-main');
       const headlineAccent = document.getElementById('s2-headline-accent');
       const narrativeLead = document.getElementById('s2-narrative-lead');
@@ -1222,7 +1019,9 @@
           btnLegacy.style.color = 'var(--text-dim)';
         }
         if (imgFortified) imgFortified.style.opacity = '1';
+        if (imgFortifiedLight) imgFortifiedLight.style.opacity = '1';
         if (imgBaseline) imgBaseline.style.opacity = '0.12';
+        if (imgBaselineLight) imgBaselineLight.style.opacity = '0.12';
         if (headlineMain) {
           headlineMain.innerText = 'Every latent vulnerability is intercepted before it aligns.';
         }
@@ -1254,12 +1053,15 @@
           tiers[0].badge.style.color = 'var(--security-turquoise)';
           tiers[0].badge.innerText = 'AGENT 01: ACTIVE';
         }
-        if (tiers[0].title) tiers[0].title.innerHTML = '<span style="color: #FFF;">PDF-to-LAS & BigQuery Agent</span>';
+        if (tiers[0].title) tiers[0].title.innerHTML = '<span style="color: #FFF;">PDF-to-LAS BigQuery Agent</span>';
         if (tiers[0].metric) {
           tiers[0].metric.style.color = '#FFF';
-          tiers[0].metric.innerText = '42ms Parse · GCS Bucket & BigQuery';
+          tiers[0].metric.innerText = '42ms Parse · GCS Indexed';
         }
-        if (tiers[0].desc) tiers[0].desc.innerText = 'Extracts legacy 2004 PDF mudlogs into clean LAS format stored in GCS and indexed in BigQuery—instantly alerting well planners of gas zones.';
+        if (tiers[0].desc) {
+          tiers[0].desc.innerText = '';
+          tiers[0].desc.style.display = 'none';
+        }
 
         // Tier 2: Deterministic Splice Agent
         if (tiers[1].card) {
@@ -1275,9 +1077,12 @@
         if (tiers[1].title) tiers[1].title.innerHTML = '<span style="color: #FFF;">Deterministic Splice Agent</span>';
         if (tiers[1].metric) {
           tiers[1].metric.style.color = '#FFF';
-          tiers[1].metric.innerText = 'Seconds Exec · SciPy Match (r = 0.9899)';
+          tiers[1].metric.innerText = 'SciPy Curve Match · 0m Error';
         }
-        if (tiers[1].desc) tiers[1].desc.innerText = 'Pre-built deterministic SciPy engine calculates cable stretch dynamics, removing the 1.48m error with cms-precision curve correlation.';
+        if (tiers[1].desc) {
+          tiers[1].desc.innerText = '';
+          tiers[1].desc.style.display = 'none';
+        }
 
         // Tier 3: Rig Handover Agent
         if (tiers[2].card) {
@@ -1290,12 +1095,15 @@
           tiers[2].badge.style.color = 'var(--security-turquoise)';
           tiers[2].badge.innerText = 'AGENT 03: ACTIVE';
         }
-        if (tiers[2].title) tiers[2].title.innerHTML = '<span style="color: #FFF;">Live Rig Agent</span>';
+        if (tiers[2].title) tiers[2].title.innerHTML = '<span style="color: #FFF;">Live Rig WITSML Agent</span>';
         if (tiers[2].metric) {
           tiers[2].metric.style.color = '#FFF';
-          tiers[2].metric.innerText = 'Real-Time WITSML Push · 0ms Lag';
+          tiers[2].metric.innerText = 'Real-Time Driller Console Push';
         }
-        if (tiers[2].desc) tiers[2].desc.innerText = 'Streams live depth corrections directly to driller consoles across 3:00 AM shift changeovers, eliminating communication lag entirely.';
+        if (tiers[2].desc) {
+          tiers[2].desc.innerText = '';
+          tiers[2].desc.style.display = 'none';
+        }
 
         // Tier 4: Zero-Defect Operational Barrier
         if (tiers[3].card) {
@@ -1308,14 +1116,14 @@
           tiers[3].badge.style.color = '#FFF';
           tiers[3].badge.innerText = '100% PROTECTED';
         }
-        if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: #FFF;">Governed Casing Barrier</span>';
+        if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: #FFF;">100% Protected Target</span>';
         if (tiers[3].metric) {
           tiers[3].metric.style.color = '#FFF';
-          tiers[3].metric.innerText = '0 NPT · Zero Blowout Risk';
+          tiers[3].metric.innerText = '0 NPT · Zero-Defect Shoe Seat';
         }
         if (tiers[3].desc) {
-          tiers[3].desc.style.color = '#CBD5E1';
-          tiers[3].desc.innerText = 'Failure ray intercepted at source. Casing shoe seats with cms precision in solid caprock—preventing kicks, stuck pipe, and saving ₹50+ Cr.';
+          tiers[3].desc.innerText = '';
+          tiers[3].desc.style.display = 'none';
         }
 
       } else {
@@ -1332,7 +1140,9 @@
           btnAgentic.style.color = 'var(--text-dim)';
         }
         if (imgFortified) imgFortified.style.opacity = '0';
+        if (imgFortifiedLight) imgFortifiedLight.style.opacity = '0';
         if (imgBaseline) imgBaseline.style.opacity = '1';
+        if (imgBaselineLight) imgBaselineLight.style.opacity = '1';
         if (headlineMain) {
           headlineMain.innerText = 'A major incident is never a single failure.';
         }
@@ -1365,12 +1175,15 @@
           tiers[0].badge.style.color = '#94A3B8';
           tiers[0].badge.innerText = 'Vulnerability 1';
         }
-        if (tiers[0].title) tiers[0].title.innerText = 'Legacy Mudlog in PDF Archive';
+        if (tiers[0].title) tiers[0].title.innerText = 'Buried 2004 PDF Mudlog';
         if (tiers[0].metric) {
           tiers[0].metric.style.color = '#F59E0B';
-          tiers[0].metric.innerText = '2004 Offset Well · Unindexed Scan';
+          tiers[0].metric.innerText = 'Unindexed Scan · Overlooked Kick';
         }
-        if (tiers[0].desc) tiers[0].desc.innerText = 'A critical gas kick from a 2004 offset well remained buried in an unindexed PDF scan, unread during well planning.';
+        if (tiers[0].desc) {
+          tiers[0].desc.innerText = '';
+          tiers[0].desc.style.display = 'none';
+        }
 
         // Tier 2 Reset
         if (tiers[1].card) {
@@ -1383,12 +1196,15 @@
           tiers[1].badge.style.color = '#94A3B8';
           tiers[1].badge.innerText = 'Vulnerability 2';
         }
-        if (tiers[1].title) tiers[1].title.innerText = 'Wireline Cable Stretch';
+        if (tiers[1].title) tiers[1].title.innerText = '1.5m Cable Stretch';
         if (tiers[1].metric) {
           tiers[1].metric.style.color = '#F59E0B';
-          tiers[1].metric.innerText = '1.48m Uncalibrated Discrepancy';
+          tiers[1].metric.innerText = 'Mechanical Drift · Uncalibrated';
         }
-        if (tiers[1].desc) tiers[1].desc.innerText = 'Mechanical cable stretch shifted logging depth by 1.48m. Approximated manually, placing the caprock 1.5m deeper than reality.';
+        if (tiers[1].desc) {
+          tiers[1].desc.innerText = '';
+          tiers[1].desc.style.display = 'none';
+        }
 
         // Tier 3 Reset
         if (tiers[2].card) {
@@ -1401,32 +1217,35 @@
           tiers[2].badge.style.color = '#94A3B8';
           tiers[2].badge.innerText = 'Vulnerability 3';
         }
-        if (tiers[2].title) tiers[2].title.innerText = 'Rig Crew Changeover';
+        if (tiers[2].title) tiers[2].title.innerText = '4-Hour Handover Lag';
         if (tiers[2].metric) {
           tiers[2].metric.style.color = '#F59E0B';
-          tiers[2].metric.innerText = '4-Hour Communication Lag';
+          tiers[2].metric.innerText = '3:00 AM Shift Change · Warning Lost';
         }
-        if (tiers[2].desc) tiers[2].desc.innerText = 'Updated depth warnings were lost in an email handover at 3:00 AM. The rig crew continued drilling ahead unaware of the danger window.';
+        if (tiers[2].desc) {
+          tiers[2].desc.innerText = '';
+          tiers[2].desc.style.display = 'none';
+        }
 
         // Tier 4 Reset
         if (tiers[3].card) {
-          tiers[3].card.style.borderColor = 'rgba(245, 158, 11, 0.3)';
+          tiers[3].card.style.borderColor = 'rgba(239, 68, 68, 0.35)';
           tiers[3].card.style.background = 'rgba(15, 23, 42, 0.45)';
         }
         if (tiers[3].badge) {
-          tiers[3].badge.style.background = 'rgba(245, 158, 11, 0.15)';
-          tiers[3].badge.style.borderColor = 'rgba(245, 158, 11, 0.35)';
-          tiers[3].badge.style.color = '#F59E0B';
+          tiers[3].badge.style.background = 'rgba(239, 68, 68, 0.15)';
+          tiers[3].badge.style.borderColor = 'rgba(239, 68, 68, 0.35)';
+          tiers[3].badge.style.color = '#EF4444';
           tiers[3].badge.innerText = 'CRITICAL HAZARD';
         }
-        if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: #FFF;">Casing Shoe Misplacement</span>';
+        if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: #FFF;">₹45 Cr Rig NPT</span>';
         if (tiers[3].metric) {
-          tiers[3].metric.style.color = '#F59E0B';
-          tiers[3].metric.innerText = 'Cumulative 2m Error · Gas Sand Landed';
+          tiers[3].metric.style.color = '#EF4444';
+          tiers[3].metric.innerText = 'Casing in Gas Sand · Uncontrolled Kick';
         }
         if (tiers[3].desc) {
-          tiers[3].desc.style.color = '#94A3B8';
-          tiers[3].desc.innerText = 'The casing shoe seated directly into the fractured gas sand rather than solid rock, causing an uncontrollable kick and stuck drillstring.';
+          tiers[3].desc.innerText = '';
+          tiers[3].desc.style.display = 'none';
         }
       }
     }
@@ -1444,35 +1263,15 @@
 
       const btnToday    = document.getElementById('s2b-btn-today');
       const btnExposure = document.getElementById('s2b-btn-exposure');
-      const activeCSS   = 'rgba(255, 255, 255, 0.1)';
-
-      btnToday.style.background    = isExposure ? 'transparent' : activeCSS;
-      btnToday.style.border        = isExposure ? '1px solid transparent' : '1px solid rgba(255, 255, 255, 0.2)';
-      btnToday.style.color         = isExposure ? 'var(--text-dim)' : '#FFF';
-      btnExposure.style.background = isExposure ? 'rgba(239, 68, 68, 0.16)' : 'transparent';
-      btnExposure.style.border     = isExposure ? '1px solid rgba(239, 68, 68, 0.45)' : '1px solid transparent';
-      btnExposure.style.color      = isExposure ? '#FFF' : 'var(--text-dim)';
-
-      ['s2b-risk-curve', 's2b-risk-wash', 's2b-crossing',
-       's2b-risk-label-1', 's2b-risk-label-2', 's2b-risk-label-3'].forEach(function(id) {
-        const el = document.getElementById(id);
-        if (el) el.setAttribute('opacity', isExposure ? '1' : '0');
-      });
-
-      document.getElementById('s2b-headline-main').textContent = isExposure
-        ? 'Every year, that barrier gets thinner.'
-        : 'In oil and gas, the last barrier is a person.';
-
-      document.getElementById('s2b-headline-accent').textContent = isExposure
-        ? 'The exposure does not retire with them. It stays, and it compounds.'
-        : 'Four in ten have already gone. The rest retire inside a decade.';
-
-      document.getElementById('s2b-status-dot').style.background =
-        isExposure ? 'var(--nebula-crimson)' : 'var(--security-turquoise)';
-
-      document.getElementById('s2b-status-text').innerHTML = isExposure
-        ? 'Exposure rises as judgement leaves — the only variable you control is whether it lands on a person or a system'
-        : '13.49 lakh in FY14 &nbsp;=&nbsp; 5.7 gone &nbsp;+&nbsp; 7.8 still here';
+      if (btnToday && btnExposure) {
+        const activeCSS   = 'rgba(255, 255, 255, 0.1)';
+        btnToday.style.background    = isExposure ? 'transparent' : activeCSS;
+        btnToday.style.border        = isExposure ? '1px solid transparent' : '1px solid rgba(255, 255, 255, 0.2)';
+        btnToday.style.color         = isExposure ? 'var(--text-dim)' : '#FFF';
+        btnExposure.style.background = isExposure ? 'rgba(239, 68, 68, 0.16)' : 'transparent';
+        btnExposure.style.border     = isExposure ? '1px solid rgba(239, 68, 68, 0.45)' : '1px solid transparent';
+        btnExposure.style.color      = isExposure ? '#FFF' : 'var(--text-dim)';
+      }
     }
   </script>
 </body>

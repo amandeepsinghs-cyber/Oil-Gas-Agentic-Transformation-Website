@@ -55,12 +55,12 @@ An "Agentic" website does not talk about AI in the abstract. It **embodies agenc
 ### A. Living Computational Substrate
 * The canvas feels active, intelligent, and aware.
 * Ambient telemetry indicators (`● STREAMING INGESTION ACTIVE`, `● MEITY SOVEREIGN PASS`) signal unbroken background execution.
-* Micro-latencies (`380ms`, `3.2s`, `42ms`) are explicitly celebrated to contrast with human operational delays (`3 hours`, `14 days`, `4 hours`).
+* Micro-latencies (`380ms`, `42ms`) are explicitly celebrated to contrast with human operational delays (`3 hours`, `14 days`, `4 hours`).
 
 ### B. Tactile Cognitive Proof (Dynamic State Controllers)
 Never tell when you can demonstrate. Every major conceptual barrier must feature an interactive state controller:
 * **Baseline State (⚠ Red / Amber):** Highlights the status quo of latent handover gaps, human fatigue at 3:00 AM, dark data trapped in PDFs, and cascading balance sheet loss.
-* **Fortified Agentic State (🛡 Mint / Turquoise):** Visually and tactilely shows autonomous sentinels activating, sealing seams, and stabilizing operations with deterministic mathematical convergence.
+* **Fortified Agentic State (🛡 Mint / Turquoise):** Visually and tactilely shows autonomous sentinels activating, sealing seams, and stabilizing operations with deterministic mathematical correlation.
 * Toggles, interactive query chips, and sliders must react instantly with silky GSAP / CSS transitions.
 
 ### C. The Dual-Engine Mental Model

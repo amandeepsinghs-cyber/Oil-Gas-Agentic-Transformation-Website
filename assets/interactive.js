@@ -827,7 +827,9 @@ function setCheeseState(state) {
   const btnLegacy = document.getElementById('s2-btn-legacy');
   const btnAgentic = document.getElementById('s2-btn-agentic');
   const imgBaseline = document.getElementById('s2-img-baseline');
+  const imgBaselineLight = document.getElementById('s2-img-baseline-light');
   const imgFortified = document.getElementById('s2-img-fortified');
+  const imgFortifiedLight = document.getElementById('s2-img-fortified-light');
   const headlineMain = document.getElementById('s2-headline-main');
   const headlineAccent = document.getElementById('s2-headline-accent');
   const narrativeLead = document.getElementById('s2-narrative-lead');
@@ -856,7 +858,9 @@ function setCheeseState(state) {
       btnLegacy.style.color = 'var(--text-dim)';
     }
     if (imgFortified) imgFortified.style.opacity = '1';
+    if (imgFortifiedLight) imgFortifiedLight.style.opacity = '1';
     if (imgBaseline) imgBaseline.style.opacity = '0.12';
+    if (imgBaselineLight) imgBaselineLight.style.opacity = '0.12';
     if (headlineMain) {
       headlineMain.innerText = 'Every latent vulnerability is intercepted before it aligns.';
     }
@@ -888,12 +892,15 @@ function setCheeseState(state) {
       tiers[0].badge.style.color = 'var(--security-turquoise)';
       tiers[0].badge.innerText = 'AGENT 01: ACTIVE';
     }
-    if (tiers[0].title) tiers[0].title.innerHTML = '<span style="color: #FFF;">PDF-to-LAS & BigQuery Agent</span>';
+    if (tiers[0].title) tiers[0].title.innerHTML = '<span style="color: #FFF;">PDF-to-LAS BigQuery Agent</span>';
     if (tiers[0].metric) {
       tiers[0].metric.style.color = '#FFF';
-      tiers[0].metric.innerText = '42ms Parse · GCS Bucket & BigQuery';
+      tiers[0].metric.innerText = '42ms Parse · GCS Indexed';
     }
-    if (tiers[0].desc) tiers[0].desc.innerText = 'Extracts legacy 2004 PDF mudlogs into clean LAS format stored in GCS and indexed in BigQuery—instantly alerting well planners of gas zones.';
+    if (tiers[0].desc) {
+      tiers[0].desc.innerText = '';
+      tiers[0].desc.style.display = 'none';
+    }
 
     // Tier 2: Deterministic Splice Agent
     if (tiers[1].card) {
@@ -909,9 +916,12 @@ function setCheeseState(state) {
     if (tiers[1].title) tiers[1].title.innerHTML = '<span style="color: #FFF;">Deterministic Splice Agent</span>';
     if (tiers[1].metric) {
       tiers[1].metric.style.color = '#FFF';
-      tiers[1].metric.innerText = 'Seconds Exec · SciPy Match (r = 0.9899)';
+      tiers[1].metric.innerText = 'SciPy Curve Match · 0m Error';
     }
-    if (tiers[1].desc) tiers[1].desc.innerText = 'Pre-built deterministic SciPy engine calculates cable stretch dynamics, removing the 1.48m error with cms-precision curve correlation.';
+    if (tiers[1].desc) {
+      tiers[1].desc.innerText = '';
+      tiers[1].desc.style.display = 'none';
+    }
 
     // Tier 3: Rig Handover Agent
     if (tiers[2].card) {
@@ -924,12 +934,15 @@ function setCheeseState(state) {
       tiers[2].badge.style.color = 'var(--security-turquoise)';
       tiers[2].badge.innerText = 'AGENT 03: ACTIVE';
     }
-    if (tiers[2].title) tiers[2].title.innerHTML = '<span style="color: #FFF;">Live Rig Agent</span>';
+    if (tiers[2].title) tiers[2].title.innerHTML = '<span style="color: #FFF;">Live Rig WITSML Agent</span>';
     if (tiers[2].metric) {
       tiers[2].metric.style.color = '#FFF';
-      tiers[2].metric.innerText = 'Real-Time WITSML Push · 0ms Lag';
+      tiers[2].metric.innerText = 'Real-Time Driller Console Push';
     }
-    if (tiers[2].desc) tiers[2].desc.innerText = 'Streams live depth corrections directly to driller consoles across 3:00 AM shift changeovers, eliminating communication lag entirely.';
+    if (tiers[2].desc) {
+      tiers[2].desc.innerText = '';
+      tiers[2].desc.style.display = 'none';
+    }
 
     // Tier 4: Zero-Defect Operational Barrier
     if (tiers[3].card) {
@@ -942,14 +955,14 @@ function setCheeseState(state) {
       tiers[3].badge.style.color = '#FFF';
       tiers[3].badge.innerText = '100% PROTECTED';
     }
-    if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: #FFF;">Governed Casing Barrier</span>';
+    if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: #FFF;">100% Protected Target</span>';
     if (tiers[3].metric) {
       tiers[3].metric.style.color = '#FFF';
-      tiers[3].metric.innerText = '0 NPT · Zero Blowout Risk';
+      tiers[3].metric.innerText = '0 NPT · Zero-Defect Shoe Seat';
     }
     if (tiers[3].desc) {
-      tiers[3].desc.style.color = '#CBD5E1';
-      tiers[3].desc.innerText = 'Failure ray intercepted at source. Casing shoe seats with cms precision in solid caprock—preventing kicks, stuck pipe, and saving ₹50+ Cr.';
+      tiers[3].desc.innerText = '';
+      tiers[3].desc.style.display = 'none';
     }
 
   } else {
@@ -966,7 +979,9 @@ function setCheeseState(state) {
       btnAgentic.style.color = 'var(--text-dim)';
     }
     if (imgFortified) imgFortified.style.opacity = '0';
+    if (imgFortifiedLight) imgFortifiedLight.style.opacity = '0';
     if (imgBaseline) imgBaseline.style.opacity = '1';
+    if (imgBaselineLight) imgBaselineLight.style.opacity = '1';
     if (headlineMain) {
       headlineMain.innerText = 'A major incident is never a single failure.';
     }
@@ -999,12 +1014,15 @@ function setCheeseState(state) {
       tiers[0].badge.style.color = '#94A3B8';
       tiers[0].badge.innerText = 'Vulnerability 1';
     }
-    if (tiers[0].title) tiers[0].title.innerText = 'Legacy Mudlog in PDF Archive';
+    if (tiers[0].title) tiers[0].title.innerText = 'Buried 2004 PDF Mudlog';
     if (tiers[0].metric) {
       tiers[0].metric.style.color = '#F59E0B';
-      tiers[0].metric.innerText = '2004 Offset Well · Unindexed Scan';
+      tiers[0].metric.innerText = 'Unindexed Scan · Overlooked Kick';
     }
-    if (tiers[0].desc) tiers[0].desc.innerText = 'A critical gas kick from a 2004 offset well remained buried in an unindexed PDF scan, unread during well planning.';
+    if (tiers[0].desc) {
+      tiers[0].desc.innerText = '';
+      tiers[0].desc.style.display = 'none';
+    }
 
     // Tier 2 Reset
     if (tiers[1].card) {
@@ -1017,12 +1035,15 @@ function setCheeseState(state) {
       tiers[1].badge.style.color = '#94A3B8';
       tiers[1].badge.innerText = 'Vulnerability 2';
     }
-    if (tiers[1].title) tiers[1].title.innerText = 'Wireline Cable Stretch';
+    if (tiers[1].title) tiers[1].title.innerText = '1.5m Cable Stretch';
     if (tiers[1].metric) {
       tiers[1].metric.style.color = '#F59E0B';
-      tiers[1].metric.innerText = '1.48m Uncalibrated Discrepancy';
+      tiers[1].metric.innerText = 'Mechanical Drift · Uncalibrated';
     }
-    if (tiers[1].desc) tiers[1].desc.innerText = 'Mechanical cable stretch shifted logging depth by 1.48m. Approximated manually, placing the caprock 1.5m deeper than reality.';
+    if (tiers[1].desc) {
+      tiers[1].desc.innerText = '';
+      tiers[1].desc.style.display = 'none';
+    }
 
     // Tier 3 Reset
     if (tiers[2].card) {
@@ -1035,32 +1056,35 @@ function setCheeseState(state) {
       tiers[2].badge.style.color = '#94A3B8';
       tiers[2].badge.innerText = 'Vulnerability 3';
     }
-    if (tiers[2].title) tiers[2].title.innerText = 'Rig Crew Changeover';
+    if (tiers[2].title) tiers[2].title.innerText = '4-Hour Handover Lag';
     if (tiers[2].metric) {
       tiers[2].metric.style.color = '#F59E0B';
-      tiers[2].metric.innerText = '4-Hour Communication Lag';
+      tiers[2].metric.innerText = '3:00 AM Shift Change · Warning Lost';
     }
-    if (tiers[2].desc) tiers[2].desc.innerText = 'Updated depth warnings were lost in an email handover at 3:00 AM. The rig crew continued drilling ahead unaware of the danger window.';
+    if (tiers[2].desc) {
+      tiers[2].desc.innerText = '';
+      tiers[2].desc.style.display = 'none';
+    }
 
     // Tier 4 Reset
     if (tiers[3].card) {
-      tiers[3].card.style.borderColor = 'rgba(245, 158, 11, 0.3)';
+      tiers[3].card.style.borderColor = 'rgba(239, 68, 68, 0.35)';
       tiers[3].card.style.background = 'rgba(15, 23, 42, 0.45)';
     }
     if (tiers[3].badge) {
-      tiers[3].badge.style.background = 'rgba(245, 158, 11, 0.15)';
-      tiers[3].badge.style.borderColor = 'rgba(245, 158, 11, 0.35)';
-      tiers[3].badge.style.color = '#F59E0B';
+      tiers[3].badge.style.background = 'rgba(239, 68, 68, 0.15)';
+      tiers[3].badge.style.borderColor = 'rgba(239, 68, 68, 0.35)';
+      tiers[3].badge.style.color = '#EF4444';
       tiers[3].badge.innerText = 'CRITICAL HAZARD';
     }
-    if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: #FFF;">Casing Shoe Misplacement</span>';
+    if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: #FFF;">₹45 Cr Rig NPT</span>';
     if (tiers[3].metric) {
-      tiers[3].metric.style.color = '#F59E0B';
-      tiers[3].metric.innerText = 'Cumulative 2m Error · Gas Sand Landed';
+      tiers[3].metric.style.color = '#EF4444';
+      tiers[3].metric.innerText = 'Casing in Gas Sand · Uncontrolled Kick';
     }
     if (tiers[3].desc) {
-      tiers[3].desc.style.color = '#94A3B8';
-      tiers[3].desc.innerText = 'The casing shoe seated directly into the fractured gas sand rather than solid rock, causing an uncontrollable kick and stuck drillstring.';
+      tiers[3].desc.innerText = '';
+      tiers[3].desc.style.display = 'none';
     }
   }
 }

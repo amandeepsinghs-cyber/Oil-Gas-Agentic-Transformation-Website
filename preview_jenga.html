@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide 05 // Daylight Studio Jenga Towers Interactive Preview</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    body {
+      font-family: var(--font-display, 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif);
+      margin: 0;
+      padding: 40px 24px;
+      background: #06090E;
+      color: #CBD5E1;
+      transition: background 0.3s ease, color 0.3s ease;
+      min-height: 100vh;
+    }
+    .preview-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .preview-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background: rgba(0, 229, 255, 0.1);
+      border: 1.5px solid rgba(0, 229, 255, 0.4);
+      color: #FFFFFF;
+      font-family: var(--font-mono, monospace);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .theme-toggle-btn:hover {
+      background: rgba(0, 229, 255, 0.2);
+      transform: translateY(-1px);
+    }
+    
+    /* Dual image switching */
+    .jenga-img-light {
+      display: none !important;
+    }
+    .jenga-img-dark {
+      display: block !important;
+    }
+    .theme-light .jenga-img-dark {
+      display: none !important;
+    }
+    .theme-light .jenga-img-light {
+      display: block !important;
+    }
+
+    /* Comparison grid */
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.15);
+    }
+    .comparison-card {
+      background: rgba(13, 17, 23, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .comparison-card img {
+      max-height: 380px;
+      width: auto;
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 12px auto;
+      display: block;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    /* Light mode adaptations for preview page */
+    .theme-light {
+      background: #F8FAFC !important;
+      color: #0F172A !important;
+    }
+    .theme-light .preview-header {
+      border-bottom-color: #E2E8F0 !important;
+    }
+    .theme-light .theme-toggle-btn {
+      background: #00897B !important;
+      border-color: #00897B !important;
+      color: #FFFFFF !important;
+    }
+    .theme-light .comparison-grid {
+      border-top-color: #CBD5E1 !important;
+    }
+    .theme-light .comparison-card {
+      background: #FFFFFF !important;
+      border-color: #E2E8F0 !important;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06) !important;
+    }
+    .theme-light .comparison-card h4 {
+      color: #0F172A !important;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="preview-container">
+    
+    <!-- Top Bar with Theme Toggle -->
+    <div class="preview-header">
+      <div>
+        <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #00E5FF; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 4px;">
+          ASSET INSPECTOR // SLIDE 05
+        </div>
+        <h2 style="margin: 0; font-size: 26px; font-weight: 800;">
+          Structural Resilience (Jenga Metaphor) // Live Theme Preview
+        </h2>
+      </div>
+
+      <button class="theme-toggle-btn" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-text">Switch to Dark Mode</span>
+      </button>
+    </div>
+
+    <!-- Live Slide 05 Simulation -->
+    <h3 style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; letter-spacing: 1px; margin-bottom: 16px; opacity: 0.8;">
+      1. LIVE SLIDE 05 SIMULATION (CLICK BUTTON ABOVE TO TEST TOGGLE)
+    </h3>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 30px;">
+      
+      <!-- Column 1: Without Agents (Left Jenga) -->
+      <div class="jenga-card jenga-card-fragile">
+        <div class="jenga-img-box" style="border: 1px solid rgba(245, 158, 11, 0.4);">
+          <!-- Dark Asset -->
+          <img class="jenga-img-dark" src="assets/media/wip/image74_left.jpg" alt="Without Agents - Dark Mode">
+          <!-- Light Asset -->
+          <img class="jenga-img-light" id="active-left-light" src="assets/media/wip/image74_left_cinematic_light.jpg" alt="Without Agents - Light Mode">
+        </div>
+
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--nebula-amber); letter-spacing: 1.2px; text-transform: uppercase;">
+              THE UNBRACED TOWER
+            </span>
+            <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--nebula-amber);">
+              HIGH SYSTEMIC FRAGILITY
+            </span>
+          </div>
+          <div style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: #FFFFFF; margin-bottom: 6px;">
+            Without AI Agents
+          </div>
+          <p style="font-size: 14px; color: #CBD5E1; line-height: 1.55; margin: 0;">
+            Gaps across disconnected workflows and a stretched workforce leave mission-critical processes unmonitored and vulnerable to friction.
+          </p>
+        </div>
+      </div>
+
+      <!-- Column 2: Fortified With Agents (Right Jenga) -->
+      <div class="jenga-card jenga-card-fortified">
+        <div class="jenga-img-box" style="border: 1px solid rgba(0, 229, 255, 0.45);">
+          <!-- Dark Asset -->
+          <img class="jenga-img-dark" src="assets/media/wip/image74_right.jpg" alt="With Agents - Dark Mode">
+          <!-- Light Asset (Active Version: Cinematic Light from Original Black Image) -->
+          <img class="jenga-img-light" id="active-right-light" src="assets/media/wip/image74_right_cinematic_light.jpg" alt="With Agents - Cinematic Light from Original Black Image">
+
+          <!-- Quick switcher between versions in live preview -->
+          <div style="position: absolute; bottom: 12px; right: 16px; background: rgba(13, 17, 23, 0.94); border: 1px solid rgba(0, 229, 255, 0.4); backdrop-filter: blur(8px); padding: 5px 8px; border-radius: 6px; display: flex; gap: 6px; z-index: 10;">
+            <button onclick="setRightVersion('cinematic')" id="btn-cinematic" style="background: #00E5FF; color: #06090E; border: none; border-radius: 4px; padding: 4px 8px; font-family: var(--font-mono); font-size: 10px; font-weight: 800; cursor: pointer;">✨ From Original Black Image (New)</button>
+            <button onclick="setRightVersion('v1')" id="btn-v1" style="background: transparent; color: #94A3B8; border: none; border-radius: 4px; padding: 4px 8px; font-family: var(--font-mono); font-size: 10px; font-weight: 800; cursor: pointer;">Daylight V1</button>
+            <button onclick="setRightVersion('optB')" id="btn-optB" style="background: transparent; color: #94A3B8; border: none; border-radius: 4px; padding: 4px 8px; font-family: var(--font-mono); font-size: 10px; font-weight: 800; cursor: pointer;">V1 + Enhanced B</button>
+          </div>
+        </div>
+
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--nebula-cyan-bright); letter-spacing: 1.2px; text-transform: uppercase;">
+              THE FORTIFIED MESH
+            </span>
+            <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--nebula-cyan-bright);">
+              STRUCTURAL RESILIENCE
+            </span>
+          </div>
+          <div style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: #FFFFFF; margin-bottom: 6px;">
+            With AI Agents
+          </div>
+          <p style="font-size: 14px; color: #CBD5E1; line-height: 1.55; margin: 0;">
+            AI Agents augment both workforce and workflows—bridging operational gaps with 24/7 autonomous monitoring and exact solvers.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Static Side-by-Side Comparison of Edge Resolution -->
+    <h3 style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; letter-spacing: 1px; margin-top: 50px; margin-bottom: 16px; opacity: 0.8;">
+      2. DIRECT COMPARISON: CALIBRATED EDGE DEFINITION ON DEPLOYED AGENT BOXES
+    </h3>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 30px;">
+      
+      <div class="comparison-card">
+        <h4 style="margin: 0 0 6px; font-size: 14px; color: #94A3B8;">Original V1 (Baseline)</h4>
+        <div style="font-size: 11px; opacity: 0.7; margin-bottom: 8px;">Baseline Light Mode</div>
+        <img src="assets/media/wip/image74_right_light.jpg" alt="Original V1">
+        <div style="font-size: 11px; color: #EF4444; margin-top: 8px;">⚠️ Edges on outer deployed agent boxes have white cores and wash out into white background</div>
+      </div>
+
+      <div class="comparison-card" style="border-color: rgba(0, 229, 255, 0.3);">
+        <h4 style="margin: 0 0 6px; font-size: 14px; color: #00E5FF;">Option A: Subtle Definition</h4>
+        <div style="font-size: 11px; opacity: 0.7; margin-bottom: 8px;">Soft Cyan Tone Enrichment</div>
+        <img src="assets/media/wip/image74_right_light_calibrated_optA.jpg" alt="Option A">
+        <div style="font-size: 11px; color: #00E5FF; margin-top: 8px;">Subtle cyan chroma boost on box wireframes; light and luminous</div>
+      </div>
+
+      <div class="comparison-card" style="border-color: rgba(0, 210, 180, 0.8); box-shadow: 0 0 20px rgba(0, 210, 180, 0.25);">
+        <h4 style="margin: 0 0 6px; font-size: 14px; color: #00897B; font-weight: 800;">★ Option B: Balanced (Recommended)</h4>
+        <div style="font-size: 11px; opacity: 0.7; margin-bottom: 8px;">Solid Structural Integrity</div>
+        <img src="assets/media/wip/image74_right_light_calibrated_optB.jpg" alt="Option B">
+        <div style="font-size: 11px; color: #00897B; font-weight: 700; margin-top: 8px;">Clear electric cyan edge definition on all agent boxes; looks load-bearing and solid without being loud</div>
+      </div>
+
+      <div class="comparison-card" style="border-color: rgba(0, 160, 200, 0.5);">
+        <h4 style="margin: 0 0 6px; font-size: 14px; color: #38BDF8;">Option C: High Definition</h4>
+        <div style="font-size: 11px; opacity: 0.7; margin-bottom: 8px;">Deep Electric Teal Frames</div>
+        <img src="assets/media/wip/image74_right_light_calibrated_optC.jpg" alt="Option C">
+        <div style="font-size: 11px; color: #38BDF8; margin-top: 8px;">Maximum wireframe edge contrast and density; strong architectural presence</div>
+      </div>
+
+    </div>
+
+    <!-- Section 3: The Black Image Background Swap (What You Asked For!) -->
+    <h3 style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; letter-spacing: 1px; margin-top: 50px; margin-bottom: 16px; opacity: 0.8; color: #00E5FF;">
+      3. NEW RESULT: TRANSFORMING THE ORIGINAL BLACK MASTER IMAGE DIRECTLY TO A LIGHT BACKGROUND
+    </h3>
+
+    <div style="background: rgba(13, 17, 23, 0.7); border: 1.5px solid rgba(0, 229, 255, 0.5); border-radius: 12px; padding: 24px; margin-bottom: 40px; box-shadow: 0 0 30px rgba(0, 229, 255, 0.15);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <h4 style="margin: 0 0 4px; font-size: 18px; color: #FFFFFF; font-weight: 800;">
+            Original Cinematic Dark Towers Transformed to Studio Light Background
+          </h4>
+          <p style="margin: 0; font-size: 13px; color: #94A3B8;">
+            Keeps the exact rich dark walnut wood and the blazing, solid, intense electric cyan agent frames from the original black image, but on a clean daylight studio floor and wall.
+          </p>
+        </div>
+        <button onclick="setMode('cinematic_light')" style="background: #00E5FF; color: #06090E; border: none; border-radius: 20px; padding: 8px 18px; font-family: var(--font-mono); font-size: 12px; font-weight: 800; cursor: pointer;">
+          Apply to Live Slide 05 Above ⬆
+        </button>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div style="text-align: center; background: rgba(0,0,0,0.3); border-radius: 8px; padding: 14px;">
+          <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--nebula-amber); margin-bottom: 8px;">
+            LEFT TOWER // UNBRACED (CINEMATIC LIGHT)
+          </div>
+          <img src="assets/media/wip/image74_left_cinematic_light.jpg" style="max-height: 380px; width: auto; max-width: 100%; border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.25);" alt="Left Tower Cinematic Light">
+        </div>
+        <div style="text-align: center; background: rgba(0,0,0,0.3); border-radius: 8px; padding: 14px;">
+          <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--nebula-cyan-bright); margin-bottom: 8px;">
+            RIGHT TOWER // AGENT FORTIFIED (CINEMATIC LIGHT)
+          </div>
+          <img src="assets/media/wip/image74_right_cinematic_light.jpg" style="max-height: 380px; width: auto; max-width: 100%; border-radius: 6px; box-shadow: 0 8px 24px rgba(0,0,0,0.25);" alt="Right Tower Cinematic Light">
+        </div>
+      </div>
+    </div>
+
+  <script>
+    function toggleTheme() {
+      const isLight = document.documentElement.classList.toggle('theme-light');
+      document.getElementById('theme-icon').innerText = isLight ? '🌙' : '☀️';
+      document.getElementById('theme-text').innerText = isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+    }
+
+    function setMode(mode) {
+      const leftImg = document.querySelector('.jenga-card-fragile .jenga-img-light');
+      const rightImg = document.getElementById('active-right-light');
+      
+      if (mode === 'cinematic_light') {
+        leftImg.src = 'assets/media/wip/image74_left_cinematic_light.jpg';
+        rightImg.src = 'assets/media/wip/image74_right_cinematic_light.jpg';
+      } else {
+        leftImg.src = 'assets/media/wip/image74_left_light.jpg';
+        rightImg.src = 'assets/media/wip/image74_right_light.jpg';
+      }
+    }
+
+    function setRightVersion(version) {
+      const img = document.getElementById('active-right-light');
+      const btnOptB = document.getElementById('btn-optB');
+      const btnOptA = document.getElementById('btn-optA');
+      const btnOptC = document.getElementById('btn-optC');
+      const btnV1 = document.getElementById('btn-v1');
+
+      // Reset all buttons
+      [btnOptB, btnOptA, btnOptC, btnV1].forEach(btn => {
+        btn.style.background = 'transparent';
+        btn.style.color = '#94A3B8';
+      });
+
+      if (version === 'cinematic') {
+        setMode('cinematic_light');
+      } else if (version === 'optB') {
+        img.src = 'assets/media/wip/image74_right_light_calibrated_optB.jpg';
+        btnOptB.style.background = '#00897B';
+        btnOptB.style.color = '#FFF';
+      } else if (version === 'optA') {
+        img.src = 'assets/media/wip/image74_right_light_calibrated_optA.jpg';
+        btnOptA.style.background = '#00897B';
+        btnOptA.style.color = '#FFF';
+      } else if (version === 'optC') {
+        img.src = 'assets/media/wip/image74_right_light_calibrated_optC.jpg';
+        btnOptC.style.background = '#00897B';
+        btnOptC.style.color = '#FFF';
+      } else {
+        img.src = 'assets/media/wip/image74_right_light.jpg';
+        btnV1.style.background = '#00897B';
+        btnV1.style.color = '#FFF';
+      }
+    }
+  </script>
+
+</body>
+</html>

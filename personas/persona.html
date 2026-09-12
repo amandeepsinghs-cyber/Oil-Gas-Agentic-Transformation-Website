@@ -122,18 +122,15 @@
       letter-spacing: 1.6px; text-transform: uppercase;
       color: var(--p-accent); margin-bottom: 10px;
     }
+    /* The title is a full sentence rather than a four-word headline. It is set
+       at the top of the page's scale (40px) because it is now the only heading,
+       but the tracking stays looser than the -1.2px the old short headline used
+       -- tight tracking on a long sentence costs legibility and buys nothing. */
     .topline-title {
       font-family: var(--font-display);
       font-size: clamp(28px, 3.4vw, 40px); font-weight: 800;
-      letter-spacing: -1.2px; line-height: 1.1;
-      color: var(--p-text-strong); margin: 0 0 10px;
-    }
-    /* Turquoise sub-headline, matching the Slide 08 header hierarchy. Carries
-       the plain-language claim; the h1 above carries the shape of the change. */
-    .topline-sub {
-      font-family: var(--font-display); font-size: 20px; font-weight: 600;
-      line-height: 1.35; letter-spacing: -0.3px;
-      color: var(--p-accent); margin: 0 0 12px;
+      letter-spacing: -0.8px; line-height: 1.18;
+      color: var(--p-text-strong); margin: 0 0 12px;
     }
     /* No measure cap. Prose runs the full width of the column, as everywhere
        else on this page -- a cap here left the lede stopping short of the
@@ -145,13 +142,29 @@
     @media (max-width: 720px) {
       .topline-lede { font-size: 14px; }
       .persona-topline { padding-bottom: 16px; }
+      /* The title already wraps at this width; forcing the break as well
+         leaves a short orphan line. */
+      .title-break { display: none; }
     }
 
     /* ---------- Persona identity header ---------- */
+    /* ONE row, two cells. Nothing is grid-placed by row.
+       History, because this has now bitten twice:
+       v1 put the photo, the name and the prose in three separate grid areas.
+       The photo (116px) set row 1's height while the name beside it was only
+       ~85px, stranding ~52px of dead space under the title, plus a ~39px rule
+       block — ~99px of nothing between a person's name and their paragraph.
+       v2 fixed that by spanning the portrait across both rows. But when the
+       value figure moved under the photo, that column grew to ~193px, and CSS
+       Grid distributes a spanning item's excess height across the rows it
+       spans — so a short paragraph pushed row 1 taller and the gap came back.
+       v3 (this) removes the mechanism entirely: the prose is a normal block
+       INSIDE .identity-head, so the name-to-prose distance is one margin and
+       nothing about the portrait's height can reach it. */
     .persona-id-card {
       display: grid;
-      grid-template-columns: minmax(0,1fr) auto;
-      gap: 28px;
+      grid-template-columns: auto minmax(0,1fr);
+      column-gap: 24px;
       align-items: start;
       background: var(--p-surface);
       border: 1px solid var(--p-border);
@@ -161,17 +174,26 @@
       margin-bottom: 18px;
       box-shadow: var(--p-shadow);
     }
+    .portrait-col  { grid-column: 1; }
+    .identity-head { grid-column: 2; min-width: 0; }
 
-    /* Profile row: spans the full card beneath the portrait and the headline
-       figure, so identity and accountability are read as one unit. */
-    .identity-mandate {
-      grid-column: 1 / -1;
-      margin-top: 20px; padding-top: 18px;
-      border-top: 1px solid var(--p-border);
-    }
+    /* The annual-value figure used to occupy a third grid column beside the
+       name, where three lines of type on the opposite edge of the card
+       competed with the person for first read. It is illustrative matrix
+       data, not the subject of the page. It now sits under the face, sharing
+       the portrait's left edge so the photo, the figure and the card's own
+       left border all line up on one axis. NOT grid-placed: it is a flex
+       child of .portrait-col, which is why there is no grid-column here. */
+    .identity-figure { text-align: left; margin-top: 10px; }
+
+    /* Profile prose. A plain block under the h1 — see the note above for why
+       it is NOT a grid child. The h1 carries margin:0, so this single value
+       is the entire title-to-prose gap. */
+    .identity-mandate { margin-top: 14px; }
     .mandate-body {
       margin: 0; font-size: 14px; line-height: 1.62; color: var(--p-text);
     }
+
 
     /* Today / with-the-agent, side by side. The contrast is the argument, so
        the two halves are placed against each other rather than in sequence. */
@@ -411,12 +433,13 @@
       font-family: var(--font-display); font-size: 28px; font-weight: 800;
       color: var(--p-text-dim); background: var(--p-surface-2);
     }
-    .portrait-col { display: flex; flex-direction: column; align-items: center; gap: 7px; }
-    .portrait-cap {
-      font-family: var(--font-mono); font-size: 10px; font-weight: 800;
-      letter-spacing: 1px; text-transform: uppercase; color: var(--p-text-dim);
-    }
-    .identity-main { display: flex; gap: 22px; align-items: flex-start; min-width: 0; }
+    /* flex-start, not center: the photo and the value figure beneath it share
+       the card's left text edge. Centring made the figure look accidentally
+       indented, because it is a few px wider than the 116px photo.
+       The "ROW A" caption that used to sit between them was removed — the row
+       letter is already carried by the rail, and the A13-style coordinates
+       further down the page are self-describing. */
+    .portrait-col { display: flex; flex-direction: column; align-items: flex-start; }
 
     /* ================================================================== */
     /* AGENT SQUAD                                                         */
@@ -502,13 +525,6 @@
       align-self: center; word-break: break-all;
     }
 
-
-    @media (max-width: 720px) {
-      .identity-main { flex-direction: column; gap: 14px; }
-      .persona-portrait { width: 88px; height: 88px; }
-      .rail-name { display: none; }
-    }
-
     /* ---------- Notices ---------- */
     .notice-pending {
       border: 1px dashed var(--p-amber);
@@ -535,6 +551,24 @@
     .drawer-body th { text-align: left; padding: 7px 9px; color: var(--p-text-muted); border-bottom: 1px solid var(--p-border); font-size: 10px; letter-spacing: 0.9px; text-transform: uppercase; }
     .drawer-body td { padding: 7px 9px; border-bottom: 1px solid var(--p-border); color: var(--p-text); word-break: break-all; }
 
+    /* The friction quotes reuse the drawer mechanism but not its register. The
+       technical drawer above holds registry IDs, so uppercase mono is right
+       there; this holds a person's own words, so it stays sentence case in the
+       display face. A chevron makes the affordance obvious -- the technical
+       drawer relies on the reader trying it, which is fine for an appendix and
+       not fine for content we want opened. */
+    details.pain-drawer > summary {
+      font-family: var(--font-display); font-size: 14px; font-weight: 700;
+      letter-spacing: -0.1px; text-transform: none; color: var(--p-text);
+      display: flex; align-items: center; gap: 9px;
+    }
+    details.pain-drawer > summary::before {
+      content: "\25B8"; color: var(--p-accent); font-size: 12.5px;
+      transition: transform 0.15s ease; flex-shrink: 0;
+    }
+    details.pain-drawer[open] > summary::before { transform: rotate(90deg); }
+    details.pain-drawer[open] > summary { color: var(--p-accent); }
+
     /* ---------- Persona switcher ---------- */
     .persona-switch-bar {
       display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
@@ -557,9 +591,26 @@
     }
     .nav-persona-btn:hover { color: var(--p-accent); border-color: var(--p-accent); }
 
+    /* Tablet: the identity card needs nothing. It is a single row of two
+       cells, so it narrows on its own — the prose cell just gets thinner.
+       The old overrides here (row-gap, releasing the portrait's row span,
+       re-placing the prose full width) all existed to manage a two-row grid
+       that no longer exists. */
     @media (max-width: 900px) {
-      .persona-id-card { grid-template-columns: 1fr; }
       .action-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Phone: the two cells stack. The portrait column already left-aligns at
+       every width, so the photo, the value figure, the name and the prose all
+       land on one left edge here.
+       NOTE: this block must stay AFTER the 900px query — both match below
+       720px, and equal specificity means source order decides. */
+    @media (max-width: 720px) {
+      .persona-id-card { grid-template-columns: 1fr; row-gap: 14px; }
+      .portrait-col    { grid-column: 1; }
+      .identity-head   { grid-column: 1; }
+      .persona-portrait { width: 88px; height: 88px; }
+      .rail-name { display: none; }
     }
   </style>
   <script>
@@ -629,8 +680,13 @@
          are the drill-down from that board and should read as its continuation. -->
     <div class="persona-wrap persona-topline">
       <div class="topline-eyebrow">Agentic Transformation &nbsp;//&nbsp; Workforce &amp; Workflows</div>
-      <h1 class="topline-title">From Reconstruction to Judgement.</h1>
-      <div class="topline-sub">An agentic taskforce transforming human workflows and operational processes.</div>
+      <!-- "From Reconstruction to Judgement." was removed: it described a shape
+           of change without naming what changes, so it asked the reader to
+           decode it before the page had earned that. The plain-language line
+           below now carries the claim on its own. Note the verbs: agents
+           AUGMENT people and TRANSFORM processes -- the reverse would be a
+           claim about replacing the very audience this page is written for. -->
+      <h1 class="topline-title">An agentic taskforce augmenting human workflows<br class="title-break">and transforming operational processes.</h1>
       <p class="topline-lede">
         Twenty enterprise roles, three hundred touchpoints, one workflow spine &mdash; upstream
         exploration through downstream refining. The engineer&rsquo;s signature still carries the
@@ -648,6 +704,10 @@
   <!-- ===================== Data ===================== -->
   <script src="../data/enterprise_matrix_300.js"></script>
   <script src="../data/persona_narratives.js"></script>
+  <!-- Invented names for the 20 personas, matched to their portraits. Kept out
+       of the matrix data because it is the only fabricated identity layer in
+       the deck; see the header of that file. -->
+  <script src="../data/persona_people.js"></script>
 
   <!-- ===================== Renderer ===================== -->
   <script>
@@ -864,13 +924,14 @@
       var ready  = readinessOf(persona);
       var live   = agents.filter(function(a) { return a.live; }).length;
 
+      /* Looked up defensively: if data/persona_people.js is absent or fails to
+         load, this stays empty and the role is used as the heading instead. */
+      var person = (window.PERSONA_PEOPLE || {})[persona.id] || {};
+
       var readyTag =
         ready === "live"
           ? '<span class="readiness-tag rt-live">\u25CF ' + live + ' agent live in production</span>'
-          : ready === "planned"
-            ? '<span class="readiness-tag rt-planned">\u25CB ' + agents.length + ' agent' +
-              (agents.length === 1 ? '' : 's') + ' planned \u2014 none live</span>'
-            : '';
+          : '';
 
       /* The profile belongs with the face, not four blocks further down. It is
          a single third-person paragraph: the governing question used to sit
@@ -884,41 +945,72 @@
           '</div>';
       }
 
+      /* The value figure is emitted INSIDE .portrait-col, under the face.
+         It previously sat in a third grid column beside the name, where three
+         lines of type on the opposite edge of the card competed with the
+         person for first read. It is illustrative matrix data and should sit
+         quietly with the portrait.
+         "Annual exposure" became "Annual value unlock": the same number read
+         as a loss to be defended rather than a prize to be taken, and the
+         deck already uses VALUE-UNLOCK as its opportunity vocabulary (12
+         occurrences, incl. slide 09) -- so this matches a convention rather
+         than inventing one. The figure stepped 40px -> 28px -> 20px: it is
+         illustrative and should not tie with, let alone outshout, the role it
+         belongs to. text-align lives on the class, not inline, so the phone
+         query can flip it to left when the portrait column left-aligns. */
+      var figure =
+        '<div class="identity-figure">' +
+          '<div style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.6px;color:var(--p-text-muted);">Annual value unlock</div>' +
+          '<div style="font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--p-accent);line-height:1.2;">₹' + sum.crTotal + ' Cr</div>' +
+          '<div style="font-family:var(--font-mono);font-size:10px;color:var(--p-text-dim);">Across ' + sum.total + ' touchpoints</div>' +
+        '</div>';
+
       return '' +
       '<div class="persona-id-card">' +
-        '<div class="identity-main">' +
-          '<div class="portrait-col">' +
-            '<div class="persona-portrait" style="background-image:url(\'' + esc(portraitPath(persona)) + '\');">' +
-              '<span class="portrait-fallback">' + esc(initialsOf(persona.name)) + '</span>' +
-            '</div>' +
-            '<span class="portrait-cap">Row ' + esc(rowLetter) + '</span>' +
+        '<div class="portrait-col">' +
+          '<div class="persona-portrait" style="background-image:url(\'' + esc(portraitPath(persona)) + '\');">' +
+            '<span class="portrait-fallback">' + esc(initialsOf(persona.name)) + '</span>' +
           '</div>' +
-          '<div style="min-width:0;">' +
-            '<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;">' +
-              /* The row letter used to sit here as a 34px filled turquoise
-                 badge -- the loudest element in the card, for what is only a
-                 lookup key into the Slide 08 board. It is still stated, quietly,
-                 as the portrait caption ("Row A"), which is what the A13-style
-                 coordinates further down the page refer back to. */
-              '<span class="sector-pill">' + esc(persona.sector) + '</span>' +
-              readyTag +
-            '</div>' +
-            '<h1 style="font-family:var(--font-display);font-size:clamp(26px,3vw,42px);font-weight:800;letter-spacing:-1px;line-height:1.12;color:var(--p-text-strong);margin:0 0 8px;">' +
-              esc(persona.name) +
-            '</h1>' +
-            /* The named incumbent stack ("Petrel / DecisionSpace / SeisSpace")
-               was removed. It varies by operator, by asset and by vintage, so
-               it is asserted without evidence in the room; being right earns
-               nothing and being wrong costs the credibility of the page. The
-               argument does not depend on it. */
-          '</div>' +
+          /* The "Row A" caption that used to sit here was removed. It was a
+             third small label competing with the two beneath it, and the row
+             letter is already carried by the rail and legible in the A13-style
+             coordinates further down the page. */
+          figure +
         '</div>' +
-        '<div style="text-align:right;">' +
-          '<div style="font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:0.6px;color:var(--p-text-muted);">Annual exposure</div>' +
-          '<div style="font-family:var(--font-display);font-size:40px;font-weight:800;color:var(--p-accent);line-height:1.05;">₹' + sum.crTotal + ' Cr</div>' +
-          '<div style="font-family:var(--font-mono);font-size:10px;color:var(--p-text-dim);">Across ' + sum.total + ' touchpoints</div>' +
+        '<div class="identity-head">' +
+          /* The sector ("SUBSURFACE GEOSCIENCES") used to sit here as a pill.
+             It was removed as clutter: the discipline is already legible from
+             the role title itself, and it is carried by the rail and by the
+             asset block further down.
+             The row is now rendered ONLY when there is a readiness tag to put
+             in it -- six of the twenty personas have no agents, and an empty
+             flex row was leaving a 30px gap above their name. */
+          (readyTag
+            ? '<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;">' +
+                readyTag +
+              '</div>'
+            : '') +
+          /* Mining's shape: "Dave Miller, Mine Dispatch & Fleet Superintendent"
+             on one line. Name and role read as a single introduction rather
+             than a title with a caption. If no person is mapped the role
+             stands alone, so removing data/persona_people.js degrades cleanly.
+             The "Mandate: ..." line that briefly sat beneath this was removed
+             on review -- it restated the role title in title case and added a
+             third competing line to a lockup that only needs two. */
+          '<h1 style="font-family:var(--font-display);font-size:clamp(20px,2.2vw,28px);font-weight:800;letter-spacing:-0.5px;line-height:1.15;color:var(--p-text-strong);margin:0;">' +
+            (person.name ? esc(person.name) + ', ' + esc(persona.name) : esc(persona.name)) +
+          '</h1>' +
+          /* The prose is nested HERE, inside the same cell as the name, rather
+             than being a grid child of its own. That is what guarantees the
+             14px gap: with the paragraph in a separate grid row, the portrait
+             column's height could push the name's row taller and reopen the
+             void. See the .persona-id-card comment for the full history.
+             The named incumbent stack ("Petrel / DecisionSpace / SeisSpace")
+             was removed. It varies by operator, by asset and by vintage, so
+             it is asserted without evidence in the room; being right earns
+             nothing and being wrong costs the credibility of the page. */
+          mandate +
         '</div>' +
-        mandate +
       '</div>';
     }
 
@@ -950,25 +1042,34 @@
 
     function blockPain(nar) {
       if (!nar || !nar.painPoints || !nar.painPoints.length) return "";
+      /* Collapsed by default. Open, this is six quote blocks -- roughly a full
+         screen -- sitting between the profile and the agent squad, which is
+         the thing the page is actually for. It reuses the page's existing
+         details.tech-drawer pattern rather than inventing a second disclosure
+         style. The count is stated in the summary so the content is still
+         advertised while shut. */
       return '' +
-      '<section class="pblock">' +
-        '<h2>Where the day actually goes</h2>' +
-        /* The draft caveat lives here rather than in a banner on every page.
-           These quotes are the only invented content on the page -- everything
-           else is drawn from the matrix -- so the qualifier belongs against
-           them, in one clause, not restated in a block twenty times. */
-        '<p style="margin:0 0 14px;color:var(--p-text-muted);font-size:14px;">' +
-          'Operator-voice friction, each traced to the specific touchpoint that produces it. ' +
-          'Composed from the recorded vulnerability at each coordinate and written to be ' +
-          'argued with \u2014 not yet the testimony of someone who does the job.' +
-        '</p>' +
-        nar.painPoints.map(function(p) {
-          return '<div class="pain-quote">' +
-                   '<div class="q">“' + esc(p.quote) + '”</div>' +
-                   '<div class="c">TRACES TO TOUCHPOINT ' + esc(p.coord) + '</div>' +
-                 '</div>';
-        }).join("") +
-      '</section>';
+      '<details class="tech-drawer pain-drawer">' +
+        '<summary>Where the day actually goes \u2014 ' + nar.painPoints.length +
+          ' friction points in this role\u2019s own voice</summary>' +
+        '<div class="drawer-body">' +
+          /* The draft caveat lives here rather than in a banner on every page.
+             These quotes are the only invented content on the page -- everything
+             else is drawn from the matrix -- so the qualifier belongs against
+             them, in one clause, not restated in a block twenty times. */
+          '<p style="margin:0 0 14px;color:var(--p-text-muted);font-size:14px;">' +
+            'Operator-voice friction, each traced to the specific touchpoint that produces it. ' +
+            'Composed from the recorded vulnerability at each coordinate and written to be ' +
+            'argued with \u2014 not yet the testimony of someone who does the job.' +
+          '</p>' +
+          nar.painPoints.map(function(p) {
+            return '<div class="pain-quote">' +
+                     '<div class="q">“' + esc(p.quote) + '”</div>' +
+                     '<div class="c">TRACES TO TOUCHPOINT ' + esc(p.coord) + '</div>' +
+                   '</div>';
+          }).join("") +
+        '</div>' +
+      '</details>';
     }
 
     function blockActions(persona, rowLetter) {
@@ -1125,9 +1226,8 @@
       var liveCount = agents.filter(function(a) { return a.live; }).length;
       var lede = liveCount
         ? liveCount + ' of ' + agents.length + ' agents for this role ' +
-          (liveCount === 1 ? 'is' : 'are') + ' running in production today. The remainder are scheduled, not deployed.'
-        : 'All ' + agents.length + ' agents named for this role are scheduled for Wave 1. ' +
-          'None are running in production today.';
+          (liveCount === 1 ? 'is' : 'are') + ' running in production today.'
+        : 'All ' + agents.length + ' agents named for this role are scheduled for Wave 1.';
 
       return '' +
       '<section class="pblock">' +
@@ -1315,9 +1415,13 @@
         blockRail(idx) +
         blockIdentity(persona, rowLetter, sum, nar) +
         blockAccountable(nar, persona) +
+        /* Friction quotes are a collapsed drawer, so what follows the profile
+           is the scenario and then the agents -- the two things the page is
+           for. Previously six quote blocks sat in between and the squad was
+           below the fold on every persona. */
         blockPain(nar) +
-        blockAgentSquad(persona, sum) +
         blockJourney(nar) +
+        blockAgentSquad(persona, sum) +
         blockActions(persona, rowLetter) +
         blockSignoffs(nar) +
         blockAsset(idx) +

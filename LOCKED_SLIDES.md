@@ -129,9 +129,8 @@
 
 ### Slide 05 Golden Specifications (Approved):
 - **Headline:** *Structural Resilience of an Agentic Organisation*
-- **Subheading:** *Operational vulnerabilities exist across both workflows and workforce. AI Agents eliminate these operational gaps to build a structurally resilient organization.*
-- **Kicker:** `THE VISCERAL REALITY // STRUCTURAL RESILIENCE METAPHOR`
-- **Badge:** `SYSTEMIC RESILIENCE`
+- **Subheading:** *Operational vulnerabilities exist across both **workflows** and **workforce** (highlighted in cyan). AI Agents eliminate these operational gaps to build a structurally resilient organization.*
+- **Kicker:** `OPERATIONAL RESILIENCE // SYSTEMIC DEFENSE IN DEPTH`
 - **Visual Assets:**
   - `assets/media/wip/image74_left.jpg`: High-resolution standalone unbraced wooden tower, missing blocks, tabletop base clearly visible (Dark Mode).
   - `assets/media/wip/image74_left_light.jpg`: Daylight studio unbraced wooden tower on clean white/slate background (Light Mode).
@@ -139,19 +138,16 @@
   - `assets/media/wip/image74_right_light.jpg`: Daylight studio cyan neon-fortified tower on clean white/slate background (Light Mode).
 - **Side-by-Side Dual Tower Architecture:**
   - **Left Tower (Without AI Agents):**
-    - Badge: `WITHOUT AGENTS // EXPOSED GAPS`
     - Kicker: `THE UNBRACED TOWER // HIGH SYSTEMIC FRAGILITY`
     - Copy: *Gaps across disconnected workflows and a stretched workforce leave mission-critical processes unmonitored and vulnerable to friction.*
   - **Right Tower (With AI Agents):**
-    - Badge: `WITH AGENTS // FORTIFIED WORKFLOWS`
     - Kicker: `THE FORTIFIED MESH // STRUCTURAL RESILIENCE`
     - Copy: *AI Agents augment both workforce and workflows—bridging operational gaps with 24/7 autonomous monitoring and exact solvers.*
 - **Workforce & Workflow Focus:** Zero human-blaming. Acknowledges that both workflows and workforce face systemic gaps in high-consequence operations.
 - **Color Harmonization (1:1 Match with Images):**
   - **Left Tower:** Box boundary, badge dot, border-top, and highlight callout aligned to **Warm Amber / Honey Wood** (`#F59E0B` / `rgba(245, 158, 11, 0.4)`), harmonizing directly with the warm oak wood blocks of the fragile tower.
   - **Right Tower:** Box boundary, badge dot, border-top, and highlight callout aligned to **Electric Neon Cyan** (`#00E5FF` / `rgba(0, 229, 255, 0.45)` / `#38BDF8`), harmonizing directly with the glowing neon cyber-plugs.
-- **Uncluttered Canvas:** Removed redundant lower callout boxes completely to eliminate buzzword repetition and give maximum vertical breathing room to the twin visual towers.
-- **Narrative Bridge:** Bottom transition to Stage 06 (*The Petrophysical AI Agent*).
+- **Uncluttered Canvas:** Removed redundant lower callout boxes completely to eliminate buzzword repetition and give maximum vertical breathing room to the twin visual towers. No teaser footers.
 
 ---
 

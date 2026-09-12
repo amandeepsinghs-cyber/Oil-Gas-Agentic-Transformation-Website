@@ -70,7 +70,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Exploration Geophysicist owns the conversion of a seismic wavefield into a drillable target. Everything the company spends before first oil rests on two outputs from this role: where the structure is in three dimensions, and how confident we are in that position. The role carries an asymmetry that no other subsurface discipline carries — a mistake is only ever discovered by spending a hundred crore to drill it. It also owns the top-hole hazard screen, which means the same person who justifies the well is the person answerable for whether the wellhead is set above shallow gas. The work comes down to two questions the role must answer before a rig is committed: whether there is a trap down there worth drilling, and whether the depth being quoted is the depth the bit will actually find it at.",
+      "Camila turns a seismic wavefield into a drillable target. Everything the company spends before first oil rests on two things she produces: where the structure is in three dimensions, and how confident she is in that position. Her work carries an asymmetry that no other subsurface discipline carries — she only ever finds out she was wrong by spending a hundred crore to drill it. She also runs the top-hole hazard screen, which means the person who justifies the well is the same person answerable for whether the wellhead is set above shallow gas. It comes down to two questions she has to answer before a rig is committed: whether there is a trap down there worth drilling, and whether the depth she is quoting is the depth the bit will actually find it at.",
 
     painPoints: [
       {
@@ -144,7 +144,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Structural and Basin Geologist owns the charge and containment story: whether the source rock reached the oil window, where the hydrocarbon went when it was expelled, and whether the fault and caprock system can hold a column. The role also owns the pre-drill pore pressure prediction, which is the single most consequential number handed to the drilling organisation before spud — it sets the mud weight programme and therefore sets whether the well kicks. This is a role where the geological reasoning is sophisticated and the tooling is not: the analysis is world-class and it is being executed in spreadsheets. Three questions sit behind everything the role produces: whether hydrocarbon was generated, whether it migrated into this trap, and whether the trap and its seal will still hold when a bit is put through it.",
+      "Rohan owns the charge and containment story: whether the source rock reached the oil window, where the hydrocarbon went when it was expelled, and whether the fault and caprock system can hold a column. He also produces the pre-drill pore pressure prediction, the single most consequential number handed to the drilling organisation before spud — it sets the mud weight programme and therefore sets whether the well kicks. His is work where the geological reasoning is sophisticated and the tooling is not: the analysis is world-class and he is doing it in spreadsheets. Three questions sit behind everything he produces: whether hydrocarbon was generated, whether it migrated into this trap, and whether the trap and its seal will still hold when a bit is put through it.",
 
     painPoints: [
       {
@@ -218,7 +218,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Development and Reservoir Geologist builds the three-dimensional static model that every dynamic forecast, every infill well and every recovery estimate is computed on. The role sits between petrophysics and simulation and inherits problems from both directions: log-derived properties that must be upscaled without destroying flow behaviour, and a grid that must be geologically honest and numerically valid at the same time. It also owns institutional memory of the field — the offset well history, the old mudlogs, the reasons a previous well went wrong — which today lives in scanned archives that no model can read. The question the role has to keep asking of its own output is whether the static model being handed to the simulator is a description of this reservoir, or a description of the assumptions made about it.",
+      "Mei builds the three-dimensional static model that every dynamic forecast, every infill well and every recovery estimate is computed on. She sits between petrophysics and simulation and inherits problems from both directions: log-derived properties that must be upscaled without destroying flow behaviour, and a grid that must be geologically honest and numerically valid at the same time. She also carries the institutional memory of the field — the offset well history, the old mudlogs, the reasons a previous well went wrong — which today lives in scanned archives that no model can read. The question she has to keep asking of her own output is whether the static model she hands to the simulator is a description of this reservoir, or a description of the assumptions she made about it.",
 
     painPoints: [
       {
@@ -293,7 +293,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Drilling Operations Engineer owns the safe envelope of a live well: the narrow corridor between pore pressure and fracture gradient, the separation from every offset wellbore, and the well control response if either is breached. This is the highest capital-exposure role on the board at ₹740 Cr per year across seven critical touchpoints, and the reason is structural — the role makes decisions in minutes that are irreversible for decades, on a rig burning lakhs an hour, with the primary safety barrier being a fluid column the role also controls. Every other subsurface discipline can be wrong and be corrected later. This one cannot. The role is judged on two questions asked continuously through every shift: whether the well is inside its pressure and collision envelope right now, and how many seconds remain if it leaves.",
+      "Marcus owns the safe envelope of a live well: the narrow corridor between pore pressure and fracture gradient, the separation from every offset wellbore, and the well control response if either is breached. His is the highest capital-exposure seat on the board at ₹740 Cr per year across seven critical touchpoints, and the reason is structural — he makes decisions in minutes that are irreversible for decades, on a rig burning lakhs an hour, and the primary safety barrier is a fluid column he also controls. Every other subsurface discipline can be wrong and be corrected later. He cannot. He is judged on two questions asked continuously through every shift: whether the well is inside its pressure and collision envelope right now, and how many seconds remain if it leaves.",
 
     painPoints: [
       {
@@ -373,7 +373,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Drilling Fluids and Mud Chemist owns the primary well control barrier. Before the blowout preventer, before the casing, there is a column of engineered fluid whose density holds the formation back, whose rheology carries cuttings to surface, and whose chemistry stops reactive shale from collapsing the hole. The role is unusual in that its control loop runs on laboratory measurements taken by hand on a shift cycle while the property being controlled changes continuously downhole at temperature and pressure. It also owns the sour gas scavenger inventory, which makes it directly answerable for whether H2S reaches the shaker deck where people work. Everything the role does resolves to a single question: whether the fluid column is still doing its three jobs — holding the pressure back, carrying the cuttings out, and keeping the hole open.",
+      "Priya owns the primary well control barrier. Before the blowout preventer, before the casing, there is a column of engineered fluid whose density holds the formation back, whose rheology carries cuttings to surface, and whose chemistry stops reactive shale from collapsing the hole. Her position is unusual in that her control loop runs on laboratory measurements taken by hand on a shift cycle, while the property she is controlling changes continuously downhole at temperature and pressure. She also owns the sour gas scavenger inventory, which makes her directly answerable for whether H2S reaches the shaker deck where people work. Everything she does resolves to a single question: whether the fluid column is still doing its three jobs — holding the pressure back, carrying the cuttings out, and keeping the hole open.",
 
     painPoints: [
       {
@@ -447,7 +447,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Directional Drilling and MWD Lead owns the position and the trajectory of the bit, and the telemetry link that is the only means of knowing either. The role operates under a permanent handicap: the survey sensor sits fifteen metres behind the cutting structure, the data arrives through pressure pulses in a noisy mud column, and the corrections must be applied to a four-kilometre steel string with its own torsional and lateral dynamics. Placement determines the productivity of the well for its entire life — a horizontal that exits the sweetspot does not get another attempt — and the same telemetry carries the vibration signature that determines whether the bottom-hole assembly survives the section. The role works against two questions it can never answer with certainty: where the bit is actually pointing right now, and whether it is still inside the pay.",
+      "Daniel owns the position and the trajectory of the bit, and the telemetry link that is his only means of knowing either. He works under a permanent handicap: the survey sensor sits fifteen metres behind the cutting structure, the data reaches him through pressure pulses in a noisy mud column, and his corrections must be applied to a four-kilometre steel string with its own torsional and lateral dynamics. Where he puts the well determines its productivity for the entire life of the field — a horizontal that exits the sweetspot does not get another attempt — and the same telemetry carries the vibration signature that determines whether the bottom-hole assembly survives the section. He works against two questions he can never answer with certainty: where the bit is actually pointing right now, and whether it is still inside the pay.",
 
     painPoints: [
       {
@@ -521,7 +521,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Well Integrity and Casing Design Engineer owns the steel and cement envelope that separates reservoir pressure from the environment for the entire life of the well and beyond its abandonment. The role's distinguishing feature is the timescale: a casing design decision is committed the day the cement sets and cannot be revised for thirty years, while the loads it must withstand — thermal cycling, annular pressure buildup, wear from a rotating string, corrosion — accumulate slowly and invisibly for that whole period. It is also the role that must produce evidence to DGMS and OISD that the barriers exist and are intact, which makes auditability part of the engineering rather than an afterthought. Two questions define the role: whether the barriers in this well will still hold for the next thirty years, and whether that can be proven to the regulator today.",
+      "Ananya owns the steel and cement envelope that separates reservoir pressure from the environment for the entire life of the well and beyond its abandonment. What distinguishes her work is the timescale: a casing design decision is committed the day the cement sets and cannot be revised for thirty years, while the loads it must withstand — thermal cycling, annular pressure buildup, wear from a rotating string, corrosion — accumulate slowly and invisibly for that whole period. She is also the person who must produce evidence to DGMS and OISD that the barriers exist and are intact, which makes auditability part of her engineering rather than an afterthought. Two questions define her work: whether the barriers in this well will still hold for the next thirty years, and whether she can prove it to the regulator today.",
 
     painPoints: [
       {
@@ -595,7 +595,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Reservoir Simulation Engineer produces the production forecast that the entire investment case rests on: how much comes out, how fast, and what happens if we drill here instead of there. The role's central difficulty is that history matching is an underdetermined inverse problem — many different parameter sets reproduce the observed data equally well, and only one of them resembles the reservoir. The work is therefore both computationally heavy and epistemically fragile, and it runs on a cycle measured in months while the asset team makes decisions on a cycle measured in weeks. The result is that forecasts are frequently delivered after the decision they were meant to inform. The question the role is ultimately answering is whether the model reproduces the past well enough that anyone should believe what it says about the future.",
+      "Kenji produces the production forecast that the entire investment case rests on: how much comes out, how fast, and what happens if we drill here instead of there. His central difficulty is that history matching is an underdetermined inverse problem — many different parameter sets reproduce the observed data equally well, and only one of them resembles the reservoir. His work is therefore both computationally heavy and epistemically fragile, and it runs on a cycle measured in months while the asset team makes decisions on a cycle measured in weeks. The result is that his forecasts frequently arrive after the decision they were meant to inform. The question he is ultimately answering is whether the model reproduces the past well enough that anyone should believe what it says about the future.",
 
     painPoints: [
       {
@@ -669,7 +669,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Production and Artificial Lift Technologist owns the daily production rate of the field and the survival of the equipment that delivers it. The role is a continuous constrained optimisation performed across hundreds of wells that interact through a shared gathering network: push a well harder and it may produce sand that erodes the manifold, gas-lock the pump that lifts it, or raise the backpressure that kills a marginal well two kilometres away. The constraints are physical and unforgiving, several of them destroy capital equipment in seconds, and the surveillance loop that is supposed to catch them runs on well tests performed monthly. The question runs across every well every day: whether each one is producing at the highest rate it can sustain without destroying itself or the equipment lifting it.",
+      "Amara owns the daily production rate of the field and the survival of the equipment that delivers it. Her work is a continuous constrained optimisation performed across hundreds of wells that interact through a shared gathering network: push a well harder and it may produce sand that erodes the manifold, gas-lock the pump that lifts it, or raise the backpressure that kills a marginal well two kilometres away. The constraints are physical and unforgiving, several of them destroy capital equipment in seconds, and the surveillance loop that is supposed to catch them runs on well tests performed monthly. Her question runs across every well every day: whether each one is producing at the highest rate it can sustain without destroying itself or the equipment lifting it.",
 
     painPoints: [
       {
@@ -751,7 +751,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Lead Petrophysicist converts raw wireline and logging-while-drilling measurements into the two numbers the entire asset is built on: porosity and water saturation. Every reserves booking, every casing-shoe depth, every completion interval and every economic model downstream inherits those numbers. The role sits at the seam between the logging contractor's raw acquisition and the reservoir team's static model — which means it also inherits every depth error, every tool calibration drift and every vendor-format inconsistency that occurs upstream of it. When this role is wrong, nobody finds out for months, and by then the casing is cemented. Three questions have to be answered before the rig moves: whether the hydrocarbon is actually there, how much of it is moveable, and whether that number can be defended to the drilling committee.",
+      "Rafael converts raw wireline and logging-while-drilling measurements into the two numbers the entire asset is built on: porosity and water saturation. Every reserves booking, every casing-shoe depth, every completion interval and every economic model downstream inherits his numbers. He sits at the seam between the logging contractor's raw acquisition and the reservoir team's static model — which means he also inherits every depth error, every tool calibration drift and every vendor-format inconsistency that occurs upstream of him. When he is wrong, nobody finds out for months, and by then the casing is cemented. Three questions have to be answered before the rig moves: whether the hydrocarbon is actually there, how much of it is moveable, and whether he can defend that number to the drilling committee.",
 
     painPoints: [
       {
@@ -820,7 +820,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Facilities and Separation Engineer owns the process plant between the wellhead and the export point: separation, dehydration, sweetening, compression, produced water treatment and flare. The role's characteristic problem is coupling — the plant is a single hydraulic and thermal system in which a change at the inlet separator propagates to the compressor, the glycol contactor and the flare within minutes, and the specifications it must hold are simultaneously commercial (sales gas dewpoint), environmental (29 ppm oil in water) and safety-critical (flare knockout, anti-surge). Several of these envelopes are defended on a timescale of milliseconds by machinery that costs tens of crores to replace. The role answers two questions at once: whether every stream leaving the facility is on specification, and whether every rotating and pressure-containing machine is still inside its safe operating envelope.",
+      "Liza owns the process plant between the wellhead and the export point: separation, dehydration, sweetening, compression, produced water treatment and flare. Her characteristic problem is coupling — the plant is a single hydraulic and thermal system in which a change at the inlet separator propagates to the compressor, the glycol contactor and the flare within minutes, and the specifications she must hold are simultaneously commercial (sales gas dewpoint), environmental (29 ppm oil in water) and safety-critical (flare knockout, anti-surge). Several of those envelopes are defended on a timescale of milliseconds by machinery that costs tens of crores to replace. She answers two questions at once: whether every stream leaving the facility is on specification, and whether every rotating and pressure-containing machine is still inside its safe operating envelope.",
 
     painPoints: [
       {
@@ -900,7 +900,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Flow Assurance and Hydrate Specialist keeps a multiphase mixture flowing through kilometres of steel on a cold seabed. The threats are all phase-change events — hydrates, wax, asphaltenes, slugging — and they share a common character: they are slow to develop, effectively irreversible once formed, and remediated at enormous cost. A hydrate plug in a deepwater flowline can shut in a field for weeks. The role therefore operates almost entirely in the predictive domain, defending margins against curves computed from fluid models, and it owns the single most time-critical piece of operational knowledge on a subsea system: the cooldown window after a shutdown. Two questions govern the work: whether what is inside the pipeline will still be flowing tomorrow morning, and how long there is before it plugs if the system shuts down tonight.",
+      "Claire keeps a multiphase mixture flowing through kilometres of steel on a cold seabed. The threats she manages are all phase-change events — hydrates, wax, asphaltenes, slugging — and they share a common character: they are slow to develop, effectively irreversible once formed, and remediated at enormous cost. A hydrate plug in a deepwater flowline can shut in a field for weeks. She therefore works almost entirely in the predictive domain, defending margins against curves computed from fluid models, and she owns the single most time-critical piece of operational knowledge on a subsea system: the cooldown window after a shutdown. Two questions govern her work: whether what is inside the pipeline will still be flowing tomorrow morning, and how long there is before it plugs if the system shuts down tonight.",
 
     painPoints: [
       {
@@ -974,7 +974,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Gas Pipeline Grid Dispatcher operates national transmission infrastructure as a single hydraulic system with enormous stored inventory and long time constants. The role balances three obligations that pull against each other: physical integrity of the pipe, contractual delivery to every offtake, and the cost of the compression fuel used to move the gas. It also carries a public safety responsibility that is unique on this board — the odorant that makes a leak detectable to a member of the public in a city is dosed by a pump under this role's control, and the consequence of an undetected transmission leak is measured in lives rather than in rupees. The role is held to two questions every day: whether the gas that entered the grid is still in the grid, and whether every city gate can be met tomorrow morning without breaching a pressure limit.",
+      "Samuel operates national transmission infrastructure as a single hydraulic system with enormous stored inventory and long time constants. He balances three obligations that pull against each other: physical integrity of the pipe, contractual delivery to every offtake, and the cost of the compression fuel used to move the gas. He also carries a public safety responsibility that is unique on this board — the odorant that makes a leak detectable to a member of the public in a city is dosed by a pump under his control, and the consequence of an undetected transmission leak is measured in lives rather than in rupees. He is held to two questions every day: whether the gas that entered the grid is still in the grid, and whether every city gate can be met tomorrow morning without breaching a pressure limit.",
 
     painPoints: [
       {
@@ -1054,7 +1054,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Marine Terminal and Offloading Superintendent owns the interface where custody, safety and commercial value converge on a single flange. Every parcel that crosses it is a legal transfer of ownership measured to a fraction of a percent, executed under time pressure created by demurrage that accrues by the hour. The role also owns the largest concentrated hydrocarbon inventory on the site — a tank farm whose failure modes, overfill and floating roof seal failure, are the direct mechanism of some of the worst industrial accidents in the sector, and which are defended by level instruments that can and do fail silently. Three questions attach to every parcel: whether the cargo is moving safely, whether the quantity being paid for is the quantity that actually crossed the flange, and whether the tank is going to hold it.",
+      "Karim owns the interface where custody, safety and commercial value converge on a single flange. Every parcel that crosses it is a legal transfer of ownership measured to a fraction of a percent, executed under time pressure created by demurrage that accrues by the hour. He also holds the largest concentrated hydrocarbon inventory on the site — a tank farm whose failure modes, overfill and floating roof seal failure, are the direct mechanism of some of the worst industrial accidents in the sector, and which are defended by level instruments that can and do fail silently. Three questions attach to every parcel he handles: whether the cargo is moving safely, whether the quantity being paid for is the quantity that actually crossed the flange, and whether the tank is going to hold it.",
 
     painPoints: [
       {
@@ -1134,7 +1134,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The CDU/VDU Distillation Lead runs the first and largest unit in the refinery: every barrel the refinery processes passes through this column, and the cut points set here determine the feed quality and quantity for every downstream unit. The role holds an unusual pairing of risks. On one side is a fired heater whose tube metal temperature is the most dangerous number in the refinery — a tube rupture is an inferno. On the other is a continuous economic optimisation, because crude assays vary cargo to cargo and product prices move daily, so the correct cut point is never the same two days running and the cost of running yesterday's cut point is invisible. The role holds two questions in tension: whether the furnace is safe, and whether the crude is being cut at the point that makes the most money today rather than the point set last month.",
+      "Arjun runs the first and largest unit in the refinery: every barrel the refinery processes passes through his column, and the cut points he sets determine the feed quality and quantity for every downstream unit. He holds an unusual pairing of risks. On one side is a fired heater whose tube metal temperature is the most dangerous number in the refinery — a tube rupture is an inferno. On the other is a continuous economic optimisation, because crude assays vary cargo to cargo and product prices move daily, so the correct cut point is never the same two days running and the cost of running yesterday's cut point is invisible. He holds two questions in tension: whether the furnace is safe, and whether the crude is being cut at the point that makes the most money today rather than the point set last month.",
 
     painPoints: [
       {
@@ -1208,7 +1208,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The FCCU Process Engineer runs the refinery's conversion engine and its most dynamically coupled unit: a reactor and a regenerator exchanging tonnes of hot catalyst per minute, thermally locked to each other so that any disturbance in one immediately propagates to the other. The unit is also the refinery's largest margin generator, which creates constant pressure to push it. Two of its failure modes are among the most severe on the board — catalyst circulation reversal admits air into a hydrocarbon riser, and regenerator afterburn melts cyclones — and both develop faster than a human operator can diagnose, let alone correct. The role watches two questions continuously: whether catalyst is still circulating in the right direction, and whether the regenerator is burning where it is supposed to burn.",
+      "Sofia runs the refinery's conversion engine and its most dynamically coupled unit: a reactor and a regenerator exchanging tonnes of hot catalyst per minute, thermally locked to each other so that any disturbance in one immediately propagates to the other. Her unit is also the refinery's largest margin generator, which creates constant pressure to push it. Two of its failure modes are among the most severe on the board — catalyst circulation reversal admits air into a hydrocarbon riser, and regenerator afterburn melts cyclones — and both develop faster than a human operator can diagnose them, let alone correct them. She watches two questions continuously: whether catalyst is still circulating in the right direction, and whether the regenerator is burning where it is supposed to burn.",
 
     painPoints: [
       {
@@ -1289,7 +1289,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Hydrocracker Specialist operates the most energetic and least forgiving unit in the refinery: a 150-bar hydrogen-rich reactor train running strongly exothermic reactions across fixed catalyst beds. The role owns conversion, product specification and — above all — the thermal stability of the beds. A hydrocracker does not degrade gracefully. The gap between normal operation and a runaway that breaches the reactor is measured in tens of seconds, and every mitigating action (quench gas, depressuring, feed cut) trades against the others. The role simultaneously owns the slow-moving economics: hydrogen purity, catalyst life, guard-bed poisoning and hydrogen accounting, each of which quietly erodes margin for months before it becomes visible. Two questions sit under every shift: whether the reactor bed is stable right now, and whether a runaway would be recognised in time to quench it.",
+      "Jun-ho operates the most energetic and least forgiving unit in the refinery: a 150-bar hydrogen-rich reactor train running strongly exothermic reactions across fixed catalyst beds. He owns conversion, product specification and — above all — the thermal stability of the beds. A hydrocracker does not degrade gracefully. The gap between normal operation and a runaway that breaches the reactor is measured in tens of seconds, and every mitigating action available to him (quench gas, depressuring, feed cut) trades against the others. He simultaneously owns the slow-moving economics: hydrogen purity, catalyst life, guard-bed poisoning and hydrogen accounting, each of which quietly erodes margin for months before it becomes visible. Two questions sit under every shift he works: whether the reactor bed is stable right now, and whether a runaway would be recognised in time to quench it.",
 
     painPoints: [
       {
@@ -1364,7 +1364,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Reforming and Aromatics Chemist owns the refinery's most chemically delicate asset: a precious metal catalyst whose activity depends on a chloride and moisture balance measured in parts per million, and which can be permanently destroyed by a contaminant that arrives from three units upstream. The role is also the refinery's principal hydrogen producer, which makes every other hydroprocessing unit dependent on it, and it holds the fuel-versus-chemical decision — whether reformate becomes gasoline blendstock or paraxylene — which is one of the largest recurring margin levers in the complex and is currently exercised on a monthly planning cycle against daily-moving prices. The role answers a technical question and a commercial one in the same breath: whether the platinum is still doing its job, and whether a given molecule should leave the unit as a fuel or as a chemical.",
+      "Hanna owns the refinery's most chemically delicate asset: a precious metal catalyst whose activity depends on a chloride and moisture balance measured in parts per million, and which can be permanently destroyed by a contaminant that arrives from three units upstream. She is also the refinery's principal hydrogen producer, which makes every other hydroprocessing unit dependent on her unit, and she holds the fuel-versus-chemical decision — whether reformate becomes gasoline blendstock or paraxylene — which is one of the largest recurring margin levers in the complex and is currently exercised on a monthly planning cycle against daily-moving prices. She answers a technical question and a commercial one in the same breath: whether the platinum is still doing its job, and whether a given molecule should leave the unit as a fuel or as a chemical.",
 
     painPoints: [
       {
@@ -1444,7 +1444,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Refinery Blending and Offsite Logistics Lead converts intermediate streams into the finished products the refinery actually sells, and owns the last quality gate before a product reaches a customer. The role's economics are counter-intuitive: the objective is to hit specification precisely, because every octane point or cetane number given away above the minimum is margin donated to the customer, at a scale of crores per month. Simultaneously it owns the one product on this board with a direct aviation safety consequence — Jet A-1 released with free water or particulate is a flight safety issue, which is why this touchpoint carries the single largest capital exposure of any cell in the matrix at ₹150 Cr. Two questions decide whether the role has done its job: whether every finished product is exactly on specification and not one point better, and whether the jet fuel is clean.",
+      "Yvonne converts intermediate streams into the finished products the refinery actually sells, and owns the last quality gate before a product reaches a customer. Her economics are counter-intuitive: the objective is to hit specification precisely, because every octane point or cetane number given away above the minimum is margin donated to the customer, at a scale of crores per month. She also owns the one product on this board with a direct aviation safety consequence — Jet A-1 released with free water or particulate is a flight safety issue, which is why this touchpoint carries the single largest capital exposure of any cell in the matrix at ₹150 Cr. Two questions decide whether she has done her job: whether every finished product is exactly on specification and not one point better, and whether the jet fuel is clean.",
 
     painPoints: [
       {
@@ -1526,7 +1526,7 @@ window.PERSONA_NARRATIVES = {
 
 
     accountableFor:
-      "The Process Safety and Technical Integrity Lead owns the health of every protective layer across the site — the instrumented trips, the relief devices, the gas detection, the permit system, the management of change process and the physical integrity of static equipment. The role is distinguished from every other row on this board by its subject: it does not operate a process, it operates the defences that stop other processes from causing harm. Its central difficulty is that major accidents are almost never caused by the failure of one barrier. They are caused by the simultaneous degradation of several, each individually tolerable, none of them visible to the same person on the same day. The question the role exists to answer is how many protective barriers are degraded right now, at the same time — and whether anybody knows.",
+      "Peter owns the health of every protective layer across the site — the instrumented trips, the relief devices, the gas detection, the permit system, the management of change process and the physical integrity of static equipment. What sets him apart from everyone else on this board is his subject: he does not operate a process, he operates the defences that stop other processes from causing harm. His central difficulty is that major accidents are almost never caused by the failure of one barrier. They are caused by the simultaneous degradation of several, each individually tolerable, and no one person ever sees all of them on the same day. The question he exists to answer is how many protective barriers are degraded right now, at the same time — and whether anybody knows.",
 
     painPoints: [
       {

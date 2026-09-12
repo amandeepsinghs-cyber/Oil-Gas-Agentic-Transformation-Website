@@ -279,7 +279,7 @@
   - The petrophysicist triggers the Splicing Sentinel.
   - The agent executes a normalized SciPy Pearson cross-correlation equation across a 40-meter sliding window:
     $$r = \frac{\sum (x - \bar{x})(y - \bar{y})}{\sqrt{\sum(x-\bar{x})^2 \sum(y-\bar{y})^2}} = 0.9899$$
-  - In **3.2 seconds**, it converges on the exact shift: **+1.48 meters**, with an alignment variance of only **2.9 centimeters**.
+  - In **seconds**, it returns the best-fit shift: **+1.48 meters**, with an alignment variance of only **2.9 centimeters**.
   - The curves snap into permanent geological alignment. Rig standby is eliminated. Zero neural hallucination.
 
 ---

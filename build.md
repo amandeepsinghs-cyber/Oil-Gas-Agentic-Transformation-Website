@@ -203,7 +203,7 @@ O&G_slidedeck_agentic_transformation/
 * **File:** `slides/slide_11_demo_part2_splicing.html`
 * **Visual Anchor:** `assets/media/retail_agentic/image11.png` + SPWLA 4-Track Vector Log Studio
 * **Design Pattern:** Authentic Subsurface Vector Canvas with Interactive Shift Controls.
-* **Key Content:** Kansas Well A-12, 3 runs across 1,200m. Run 2 cable stretch creates a 1.48m offset. 40m sliding Pearson cross-correlation window converges in 3.2s with a 2.9 cm variance ($r = 0.9899$).
+* **Key Content:** Kansas Well A-12, 3 runs across 1,200m. Run 2 cable stretch creates a 1.48m offset. 40m sliding Pearson cross-correlation window returns the best-fit shift in seconds, with a 2.9 cm variance at a peak of $r = 0.9899$.
 * **Component Contract:**
   * Tag: `.deck-page.theme-emerald`
   * Track 1 (GR / Caliper with sand fill), Track 2 (Depth MD), Track 3 (Dual Induction Resistivity), Track 4 (Sonic).

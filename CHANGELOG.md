@@ -7,6 +7,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - **Authoring**: Built and verified in isolated slide view (`working_deck/pages/page_XX.html`).
 - **Review**: Visual and narrative sign-off by executive review.
 
+## [Slide 05 Executive Polish & De-Cluttering] - 2026-09-12
+- **Updated Eyebrow Kicker**: Replaced `THE VISCERAL REALITY // STRUCTURAL RESILIENCE METAPHOR` with the engineering-grade architectural kicker `OPERATIONAL RESILIENCE // SYSTEMIC DEFENSE IN DEPTH`.
+- **Typographic Accent on Core Axes**: Elevated `workflows` and `workforce` to high-contrast electric cyan (`var(--nebula-cyan-bright)`) in the subhead, immediately anchoring the dual-axis vulnerability thesis.
+- **Removed Floating Image Overlay Badges**: Stripped `WITHOUT AGENTS // EXPOSED GAPS` and `WITH AGENTS // FORTIFIED WORKFLOWS` from above the 3D Jenga renders. This eliminates triple redundancy with the structured card headers below each image and lets the visual assets breathe.
+- **Removed Top-Right Pill Badge**: Removed `SYSTEMIC RESILIENCE` from the slide header flex container for full aesthetic consistency with Slides 03 and 04.
+- **Removed Bottom Transition Teaser**: Stripped the lower navigation teaser block across all decks and slide source files.
+- **Synchronized Files**: `index.html`, `working_deck/pages/page_05.html`, `working_deck/index.html`, `deck.html`, `final_slides/slide_05_the_jenga_metaphor.html`, `final_slides/slide_05_the_jenga_metaphor.LOCKED.html`, and `LOCKED_SLIDES.md`.
+
 ## [Sign-off Block Renamed to "Decision rights"] - 2026-09-11
 Reviewed for removal and **kept** — it is the only block that states what an
 agent may do without a human, which is the question that gates deployment in a

@@ -172,22 +172,6 @@
 
         </div>
 
-        <!-- 5. Editorial Pivot Question & Seamless Narrative Transition -->
-        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-hairline); padding: 20px 24px; flex-wrap: wrap; gap: 24px; background: rgba(13, 17, 23, 0.4); border-radius: 8px;">
-          <div style="max-width: 820px;">
-            <span style="font-family: var(--font-display); font-size: 18.5px; font-weight: 700; color: #FFFFFF;">
-              Where does this capital actually disappear?
-            </span>
-            <p style="font-size: 14.5px; color: #94A3B8; line-height: 1.55; margin: 4px 0 0 0;">
-              It rarely vanishes in headline-grabbing catastrophes. It leaks quietly through routine 2-hour handover lags between disciplines—until latent micro-gaps align.
-            </p>
-          </div>
-          <a href="page_02.html" style="font-family: var(--font-display); font-size: 15.5px; font-weight: 700; color: var(--security-turquoise); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 20px; background: rgba(0, 210, 180, 0.08); border: 1px solid rgba(0, 210, 180, 0.3); transition: all 0.2s;">
-            <span>The Swiss Cheese Model of Compounding Gaps</span>
-            <span style="font-size: 18px;">→</span>
-          </a>
-        </div>
-
       </div>
     </section>
   </main>
@@ -508,7 +492,9 @@
       const btnLegacy = document.getElementById('s2-btn-legacy');
       const btnAgentic = document.getElementById('s2-btn-agentic');
       const imgBaseline = document.getElementById('s2-img-baseline');
+      const imgBaselineLight = document.getElementById('s2-img-baseline-light');
       const imgFortified = document.getElementById('s2-img-fortified');
+      const imgFortifiedLight = document.getElementById('s2-img-fortified-light');
       const headlineMain = document.getElementById('s2-headline-main');
       const headlineAccent = document.getElementById('s2-headline-accent');
       const narrativeLead = document.getElementById('s2-narrative-lead');
@@ -535,7 +521,9 @@
           btnLegacy.style.color = 'var(--text-dim)';
         }
         if (imgFortified) imgFortified.style.opacity = '1';
+        if (imgFortifiedLight) imgFortifiedLight.style.opacity = '1';
         if (imgBaseline) imgBaseline.style.opacity = '0.12';
+        if (imgBaselineLight) imgBaselineLight.style.opacity = '0.12';
         if (headlineMain) {
           headlineMain.innerText = 'Every latent vulnerability is intercepted before it aligns.';
         }
@@ -643,7 +631,9 @@
           btnAgentic.style.color = 'var(--text-dim)';
         }
         if (imgFortified) imgFortified.style.opacity = '0';
+        if (imgFortifiedLight) imgFortifiedLight.style.opacity = '0';
         if (imgBaseline) imgBaseline.style.opacity = '1';
+        if (imgBaselineLight) imgBaselineLight.style.opacity = '1';
         if (headlineMain) {
           headlineMain.innerText = 'A major incident is never a single failure.';
         }

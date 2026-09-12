@@ -1361,6 +1361,25 @@ body {
   display: block !important;
 }
 
+.cheese-img-light {
+  display: none !important;
+}
+.cheese-img-dark {
+  display: block !important;
+}
+.theme-light .cheese-img-dark {
+  display: none !important;
+}
+.theme-light .cheese-img-light {
+  display: block !important;
+}
+
+.theme-light .cheese-canvas {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06) !important;
+}
+
 
 /* ==========================================================================
    1-Click Print / PDF Stylesheet (16:9 Landscape Perfection)
@@ -1817,7 +1836,15 @@ body.theme-light {
 .theme-light #stage-02 div[id^="s2-tier-"] div[id*="-title"] span {
   color: #0F172A !important;
 }
-.theme-light #stage-02 div[id^="s2-tier-"] div[id*="-metric"] {
+/* Stage 02 Baseline Vulnerability Colors */
+.theme-light #stage-02 div[id^="s2-tier-"]:not(#s2-tier-4) div[id*="-metric"] {
+  color: #D97706 !important;
+}
+.theme-light #stage-02 #s2-tier-4 div[id*="-metric"] {
+  color: #DC2626 !important;
+}
+/* Stage 02 Agentic Protected Colors */
+.theme-light #stage-02 div[id^="s2-tier-"][style*="rgba(0, 210, 180"] div[id*="-metric"] {
   color: #00897B !important;
 }
 .theme-light #stage-02 div[id^="s2-tier-"] div[id*="-desc"] {
@@ -1827,6 +1854,11 @@ body.theme-light {
   background: #F1F5F9 !important;
   border-color: #CBD5E1 !important;
   color: #475569 !important;
+}
+.theme-light #stage-02 #s2-tier-4 span[id*="-badge"] {
+  background: #FEF2F2 !important;
+  border-color: #FECACA !important;
+  color: #DC2626 !important;
 }
 .theme-light #stage-02 div[id^="s2-tier-"] span[id*="-badge"][style*="rgba(0, 210, 180"] {
   background: rgba(0, 137, 123, 0.12) !important;
@@ -1838,6 +1870,59 @@ body.theme-light {
 }
 .theme-light #stage-02 #s2-status-text[style*="var(--security-turquoise)"] {
   color: #00897B !important;
+}
+
+/* Stage 02B: The Great Crew Change */
+.theme-light #stage-02b {
+  background: #F8FAFC !important;
+}
+.theme-light #stage-02b h2,
+.theme-light #stage-02b #s2b-headline-main {
+  color: #0F172A !important;
+}
+.theme-light #stage-02b #s2b-headline-accent {
+  color: #475569 !important;
+}
+.theme-light #stage-02b #s2b-narrative-lead {
+  color: #334155 !important;
+}
+.theme-light #stage-02b #s2b-btn-today,
+.theme-light #stage-02b #s2b-btn-exposure {
+  background: #F1F5F9 !important;
+  border-color: #CBD5E1 !important;
+  color: #475569 !important;
+}
+.theme-light #stage-02b #s2b-btn-today.active,
+.theme-light #stage-02b #s2b-btn-exposure.active,
+.theme-light #stage-02b [id*="s2b-btn-"][style*="background: rgba(255, 255, 255, 0.1)"] {
+  background: #0F172A !important;
+  color: #FFFFFF !important;
+  border-color: #0F172A !important;
+}
+.theme-light #stage-02b div[style*="background: rgba(13, 17, 23, 0.95)"] {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+}
+.theme-light #stage-02b div[style*="background: rgba(15, 23, 42, 0.45)"] {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
+}
+.theme-light #stage-02b div[style*="background: rgba(15, 23, 42, 0.45)"] p,
+.theme-light #stage-02b div[style*="background: rgba(15, 23, 42, 0.45)"] strong {
+  color: #0F172A !important;
+}
+.theme-light #stage-02b div[style*="background: rgba(15, 23, 42, 0.32)"] {
+  background: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+.theme-light #stage-02b div[style*="background: rgba(15, 23, 42, 0.32)"] div {
+  color: #334155 !important;
+}
+.theme-light #stage-02b div[style*="background: rgba(15, 23, 42, 0.32)"] strong {
+  color: #0F172A !important;
 }
 
 /* Stage 03: The 5 Non-Negotiable Criteria */

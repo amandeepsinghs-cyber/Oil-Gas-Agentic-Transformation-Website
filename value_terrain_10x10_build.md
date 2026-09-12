@@ -445,7 +445,7 @@ When extruded into 3D, seven vertices emerge as the **Himalayan Ridge of Oil & G
         </div>
         <h3 class="hud-title" id="hud-title">Multi-Run Wireline Depth Splicing & Tool Recalibration</h3>
         <p class="hud-desc" id="hud-desc">
-          Automated cross-correlation alignment over casing overlaps recovers 1.5m cable stretch with 2.9cm physical accuracy in 3.2 seconds.
+          Automated cross-correlation alignment over casing overlaps recovers 1.5m cable stretch with 2.9cm physical accuracy in seconds.
         </p>
         <div class="hud-metric-strip">
           <div class="hud-metric-item">
