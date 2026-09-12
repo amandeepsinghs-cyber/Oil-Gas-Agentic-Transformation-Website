@@ -7,6 +7,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - **Authoring**: Built and verified in isolated slide view (`working_deck/pages/page_XX.html`).
 - **Review**: Visual and narrative sign-off by executive review.
 
+## [Slide 07 Executive Polish & De-Cluttering] - 2026-09-12
+- **Removed 5 Attribute Cards**: Stripped the redundant 5 emoji-topped attribute cards (`🎯 01 SURGICAL`, `⚡ 02 AUTONOMOUS`, `🧠 03 INTELLIGENT`, `🛡️ 04 GOVERNED`, `🔬 05 DETERMINISTIC`) to eliminate repetitive definition fatigue from Slides 03 and 04.
+- **Removed Bottom Provocation Horizon Bar**: Stripped `THE HIGHER PLANE // A REPEATABLE ENTERPRISE BLUEPRINT... Next: The 20×15 Enterprise Chessboard →` to allow the central architecture SVG to occupy the full stage cleanly.
+- **Cleaned Obsolete Styles & Scripts**: Removed leftover GSAP animation selectors and CSS rules for `.attr-card` and `.provocation-bar` in `working_deck/pages/page_07.html`.
+- **Synchronized Files**: `working_deck/pages/page_07.html`, `final_slides/slide_07_the_headless_petrophysical_agent.html`, `final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html`, and `LOCKED_SLIDES.md`.
+
+## [Slide 06 Executive Polish & De-Cluttering] - 2026-09-12
+- **Updated Eyebrow Kicker**: Replaced `STAGE 06 // LIVING PROOF // THE SUBSURFACE SENTINEL` with the technical, engineering-grade kicker `FIELD VALIDATION // DETERMINISTIC WIRELINE SPLICING`.
+- **Removed Top-Right Pill Badge**: Removed `KANSAS WELL A-12 BENCHMARK` from the slide header flex container.
+- **Removed Bottom Payoff & Navigation Strip**: Stripped the entire lower bar containing `⚡ THE ENTERPRISE PAYOFF:` (`Capital Protection`, `Operational Speed`, `Talent Elevation`, `Decision Accuracy`) and `Next: Agent Architecture Blueprint →`, providing full vertical breathing room to the wireline alignment plot and narrative cards.
+- **Synchronized Files**: `working_deck/pages/page_06.html`, `final_slides/slide_06_the_petrophysical_ai_agent.html`, `final_slides/slide_06_the_petrophysical_ai_agent.LOCKED.html`, and `LOCKED_SLIDES.md`.
+
 ## [Slide 05 Executive Polish & De-Cluttering] - 2026-09-12
 - **Updated Eyebrow Kicker**: Replaced `THE VISCERAL REALITY // STRUCTURAL RESILIENCE METAPHOR` with the engineering-grade architectural kicker `OPERATIONAL RESILIENCE // SYSTEMIC DEFENSE IN DEPTH`.
 - **Typographic Accent on Core Axes**: Elevated `workflows` and `workforce` to high-contrast electric cyan (`var(--nebula-cyan-bright)`) in the subhead, immediately anchoring the dual-axis vulnerability thesis.

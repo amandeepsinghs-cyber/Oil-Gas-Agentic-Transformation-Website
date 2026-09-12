@@ -154,8 +154,7 @@
 ### Slide 06 Golden Specifications (Approved):
 - **Headline:** *The Petrophysical AI Agent* (with futuristic Nebula multi-stop linear gradient: `#00E5FF` $\rightarrow$ `#38BDF8` $\rightarrow$ `#818CF8` $\rightarrow$ `#C084FC` $\rightarrow$ `#F472B6`).
 - **Subheading:** *Eliminating hours of manual curve alignment with an autonomous subsurface physics agent.*
-- **Kicker:** `STAGE 06 // LIVING PROOF // THE SUBSURFACE SENTINEL`
-- **Telemetry Badge:** `KANSAS WELL A-12 BENCHMARK`
+- **Kicker:** `FIELD VALIDATION // DETERMINISTIC WIRELINE SPLICING`
 - **Balanced 2-Wing Architecture (`0.98fr 1.02fr`, `align-items: stretch`):**
   - **Left Wing (The 3 Narrative Blocks with Vertical Breathing Room):**
     1. `01 THE CHALLENGE // MANUAL CURVE ALIGNMENT`: Raw Well Logs Arrive Mismatched & Disconnected. Separate wireline passes never line up due to cable stretch and sensor drift; senior petrophysicists spend 1–2 hours manually nudging curves at 3:00 AM risking multi-crore drilling depth errors.
@@ -173,11 +172,7 @@
        - Direct live deployment link to Gemini Enterprise (`ID: 7dab71a6...5c05`).
        - Gradient button `Launch Demo ↗` targeting `https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05?hl=en_US`.
 - **Baseline Alignment:** Left 3 boxes and right 2 visual elements mathematically locked to the exact same vertical depth.
-- **The Enterprise Payoff Horizon Bar:**
-  - Full-width bottom bar stretching to the right, formatted as an ultra-clean executive badge row:
-    - Kicker: `⚡ THE ENTERPRISE PAYOFF:`
-    - 4 Executive Pillar Badges: `[ Capital Protection ]` `[ Operational Speed ]` `[ Talent Elevation ]` `[ Decision Accuracy ]`
-- **Narrative Bridge:** Bottom transition to Stage 07 (*Next: Agent Architecture Blueprint*).
+- **Uncluttered Canvas:** Removed bottom payoff badges and transition link to maximize vertical breathing room.
 
 ---
 
@@ -206,16 +201,7 @@
     - BigQuery Immutable Audit Ledger (`og-agentic-ecosystem.petro.splice_audit`, 30-year reproducible trace).
   - **6 Numbered Directional Connectors:** Seamlessly linking surfaces $\rightarrow$ runtime $\rightarrow$ persistence and audit.
   - **Well-Architected Pillars:** Operational Excellence, Performance Efficiency, Security, Reliability, Cost.
-- **The 5 Core Attributes Pill-Grid:**
-  1. `01 SURGICAL`: Targets exact seam at edge of monolith (LAS parsing, casing tie-in).
-  2. `02 AUTONOMOUS`: 24/7 event-driven execution; discovers runs and splices in seconds.
-  3. `03 INTELLIGENT`: Natural language cross-DB triage & messy vendor log synthesis via Gemini.
-  4. `04 GOVERNED`: Managed in Agent Registry, bounded by dedicated IAM & BigQuery audit.
-  5. `05 DETERMINISTIC`: Pure SciPy signal physics & mathematical proof; zero generative guessing.
-- **Bottom Boardroom Provocation Horizon Bar:**
-  - *THE HIGHER PLANE // A REPEATABLE ENTERPRISE BLUEPRINT:*
-  - *"Where else do your engineers pull data from Database A, run standard calculation X, and write to System B? That is where your next autonomous agent belongs."*
-  - Interactive link: `Next: The 20×15 Enterprise Chessboard →` (`page_08.html`).
+- **Uncluttered Architecture Hero:** Removed the redundant 5 attribute cards and the bottom provocation horizon bar ("Next: The 20×15 Enterprise Chessboard →") so the comprehensive Google Cloud reference architecture SVG diagram commands full stage focus.
 
 ---
 
