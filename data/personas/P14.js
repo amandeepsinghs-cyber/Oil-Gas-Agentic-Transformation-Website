@@ -1,0 +1,587 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P14"] = {
+  "id": "P14",
+  "title": "Pipeline Controller",
+  "aliases": [
+    "Pipeline Dispatcher",
+    "SCADA Pipeline Operator",
+    "Gas Grid Controller",
+    "Oil Movements Controller",
+    "Pipeline Console Operator"
+  ],
+  "segment": "Midstream & Pipelines",
+  "segmentLong": "Midstream — Transmission & Transportation Networks",
+  "setting": "Pipeline Control Center: 24/7 centralized SCADA control room bunker with strict statutory Control Room Management (CRM) regulations",
+  "tier": "Core 20",
+  "core20": true,
+  "governingStandards": "DOT 49 CFR CRM; API 1165/1175/1130",
+  "agentFocus": "Pipeline Hydraulic & CRM Dispatch Squad (7 Agents)",
+  "sourceFile": "P14_Pipeline_Controller.md",
+  "person": "Samuel Adeyemi",
+  "avatar": "avatars/P14_persona.jpg",
+  "thumb": "avatars/thumbs/P14_thumb.jpg",
+  "initials": "PC",
+  "headline": "The Pipeline Controller commands the continent-spanning arteries of the energy infrastructure, steering high-pressure crude oil, natural gas, and refined fuel batches across thousands of kilometers of pipeline corridors. While enterprise SCADA systems (Schneider OASyS, AVEVA) reliably execute remote valve strokes and Computational Pipeline Monitoring (CPM) engines (Atmos Pipe, PipelineManager) run continuous hydraulic mass balances, the leak detection systems suffer from chronic, dangerous false-alarm fatigue. Transient hydraulic pressure waves caused by routine pump starts, mainline valve maneuvers, or product density shifts generate dozens of false leak alarms every week. Controllers face intense statutory countdown pressure (regulations mandate segment isolation within 10–15 minutes if an alarm cannot be disproven), tempting operators to rationalize away ambiguous alarms—the exact root cause of historic pipeline catastrophes (e.g., the 17-hour delayed response in the Marshall, Michigan spill). An agent that correlates hydraulic wave physics with recent pipeline maneuvers to classify leak alarm validity saves ~1.80 hours per shift, ending alarm numbness and protecting public safety.",
+  "confidence": {
+    "Persona": "Pipeline Controller (P14)",
+    "Research Status": "Grounded in statutory pipeline safety regulations, federal CRM inspection audits, and pipeline SCADA human factors standards",
+    "Competency Standard Used": "US DOT 49 CFR Part 192 / 195 (Control Room Management - CRM), API RP 1165 (SCADA Displays), API RP 1175 (Leak Detection Management), and API RP 1130 (CPM)",
+    "Standard Coverage": "15 of 15 statutory CRM and pipeline dispatching competencies mapped to operational actions",
+    "Actions Cited": "15 actions trace directly to API 1165, API 1175, API 1130, and 49 CFR CRM federal mandates",
+    "Pain Claims Cited": "10 of 10 pain claims corroborated by published NTSB accident investigation reports (Marshall spill, Bellingham incident, San Bruno gas explosion)",
+    "Timings Sourced": "Leak alarm verification windows, batch cut timing, linepack balancing, and CRM handover durations verified via API RP 1175 and pipeline operator audits",
+    "Gap Claims Cited": "Commercial CPM leak detection engines generate alarms based on mathematical thresholds; none autonomously decouple operational hydraulic transient waves from true breach signatures",
+    "Known Gaps": "Regulatory leak investigation shutdown timeframes vary between hazardous liquid pipelines (Part 195) and natural gas transmission grids (Part 192)"
+  },
+  "role": {
+    "oneLine": "Directs the 24/7 remote operational transmission of crude oil, natural gas, or refined products through high-pressure pipeline networks, operating compressor/pump stations, maintaining linepack, and serving as the primary guardian against pipeline ruptures.",
+    "whyItMatters": "A failure in pipeline control room operations leads directly to catastrophic environmental pipeline ruptures (e.g., Enbridge Marshall spill leaking 20,000 barrels into a river system), explosive natural gas urban pipeline ruptures (San Bruno disaster), or severe regional supply shortages paralyzing entire economies.",
+    "notOwned": [
+      {
+        "task": "Physical Excavation, Sleeving, and Smart Pig Dig Verification in the Field",
+        "owner": "Pipeline Integrity Engineer (P27) / Field Maintenance Crew"
+      },
+      {
+        "task": "Commercial Energy Trading & Long-Term Capacity Contract Sales",
+        "owner": "Gas/Crude Trader / Commercial Scheduler (P29)"
+      },
+      {
+        "task": "Mechanical Overhaul of Multi-Megawatt Centrifugal Gas Turbines",
+        "owner": "Pump Station / Compressor Mechanic (P20)"
+      },
+      {
+        "task": "Terminal Ship-to-Shore Loading Arm Manifold Manipulation",
+        "owner": "Terminal Superintendent (P15)"
+      },
+      {
+        "task": "Design of Pipeline Steel Wall Thickness & Valve Sizing",
+        "owner": "Pipeline Facilities Engineer (P12)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Liquid Batching Pipeline Controller",
+        "detail": "Manages multi-product pipelines (moving alternating batches of gasoline, diesel, and jet fuel through the same pipe); tracks transmix interfaces, product densitometer cuts, and pipeline pressure surges."
+      },
+      {
+        "name": "Natural Gas Transmission Grid Dispatcher",
+        "detail": "Manages compressible gas linepack, remote compressor station turbine fuel consumption, city-gate delivery pressures, and hourly industrial demand swings."
+      },
+      {
+        "name": "Crude Oil Gathering & Trunkline Controller",
+        "detail": "Manages complex incoming gathering headers from multiple production batteries with fluctuating API gravities, sulfur content, and vapor pressures."
+      }
+    ],
+    "titleCheck": "The industry title is Pipeline Controller or Pipeline Dispatcher. Never confuse this role with \"Control Room Operator (Production)\" (who manages platform/plant separation units) or \"Board Operator (Refinery)\" (who manages chemical refining units).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Pipeline Control Center: High-security, blast-resistant, access-controlled command bunker. Subdued lighting, acoustic dampening, isolated from distractions; governed by strict statutory fatigue rules.",
+      "What They Can Reach": "Seated at an expansive 6-to-8 screen console station displaying enterprise SCADA pipeline schematics, pump station suction/discharge hydraulic profiles, CPM leak detection alarms, and weather radar.",
+      "Shift Pattern": "12-hour rotating shifts (Day/Night); strictly enforced federal work-hour limits (e.g., maximum consecutive shifts, mandatory rest hours per 49 CFR Part 195.446 CRM rules).",
+      "Where the Record Lives": "Enterprise SCADA historian (OASyS, AVEVA), CPM leak detection journal, electronic CRM shift logbook (EnerSys POEMS or Hexagon j5), and regulatory compliance archives."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[DOT-CRM]: US Department of Transportation, Pipeline and Hazardous Materials Safety Administration (PHMSA), 49 CFR Parts 192 and 195: Control Room Management (CRM) Regulations."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-1165]: American Petroleum Institute, Recommended Practice for Pipeline SCADA Displays, 2nd Edition."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-1175]: American Petroleum Institute, Pipeline Leak Detection — Program Management, 1st Edition."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-1130]: American Petroleum Institute, Computational Pipeline Monitoring for Liquids, 3rd Edition."
+    },
+    {
+      "key": "",
+      "citation": "[ASME-B31-4-8]: American Society of Mechanical Engineers, Pipeline Transportation Systems for Liquids (B31.4) and Gas Transmission Piping (B31.8)."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Schneider Electric OASyS / AVEVA SCADA",
+      "module": "Enterprise Pipeline SCADA",
+      "solves": "High-reliability telemetry polling, remote valve command execution, pump/compressor starts, and graphical hydraulic profile displays.",
+      "gap": "Executes commands, retains zero causal narrative. Logs millions of raw pressure/flow samples; cannot explain to the controller whether an unexpected pressure drop is a pipe break or an upstream linepack surge."
+    },
+    {
+      "product": "Atmos International Atmos Pipe",
+      "module": "Computational Pipeline Monitoring (CPM)",
+      "solves": "Real-time statistical mass balance, pressure wave tracking, and automated acoustic leak alarms per API RP 1130.",
+      "gap": "High false-alarm rate. Normal operational maneuvers (starting a 5,000 HP pump, valve closures, pig launches) generate transient waves that trigger false leak alarms, desensitizing controllers."
+    },
+    {
+      "product": "EnerSys POEMS / Hexagon j5",
+      "module": "CRM Compliance & Electronic Logbook",
+      "solves": "Enforces statutory Control Room Management compliance forms, fatigue risk hours tracking, and shift handover questionnaires.",
+      "gap": "100% manual transcription. The controller must manually re-type SCADA event summaries, bypassed alarm notes, and active pipeline batch positions while monitoring live consoles."
+    },
+    {
+      "product": "DNV Synergi Pipeline Simulator / Stoner SPS",
+      "module": "Transient Hydraulic Modeling",
+      "solves": "Off-line dynamic hydraulic simulation, capacity planning, and pipeline water hammer modeling.",
+      "gap": "Powerful offline hydraulic engines; completely disconnected from real-time SCADA operator screens during emergency countdowns."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Triage and investigate CPM Leak Detection System (LDS) alarms",
+      "source": "[API-RP-1175 §6]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.0 hrs",
+      "friction": "volume",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "CPM Leak Alarm Triage (B1, [API-RP-1175 §6])",
+      "today": "A leak alarm triggers; the controller has 10–15 minutes under corporate procedure to analyze upstream/downstream pressure profiles to determine if it is a false alarm or a true leak.",
+      "failureMode": "\"Alarm crying wolf\" causes controllers to rationalize genuine pipeline leaks as instrument glitches (the exact root cause of the 17-hour delayed response in the Marshall spill).",
+      "agentNote": "→ See §4 (Agent 1: CPM Leak Detection Alarm & Hydraulic Wave Triage Agent)."
+    },
+    {
+      "code": "A02",
+      "action": "Compile statutory Control Room Management (CRM) shift handover log",
+      "source": "[DOT-CRM §195.446]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1.25 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "CRM Shift Handover Dossier Compilation (B1, [DOT-CRM §195.446])",
+      "today": "Controller spends 45–60 minutes manually cross-referencing SCADA event logs, active valve overrides, and pig locations into POEMS software to satisfy federal audit standards.",
+      "failureMode": "Incomplete handovers fail to communicate that a surge relief valve was isolated, leaving the pipeline vulnerable to overpressure on the next shift.",
+      "agentNote": "→ See §4 (Agent 7: Statutory CRM Compliance & Shift Handover Synthesizer)."
+    },
+    {
+      "code": "A03",
+      "action": "Execute remote mainline block valve (MLV) closures or pump station trips",
+      "source": "[API-RP-1165 §4]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Event",
+      "time": "0.2 hrs",
+      "friction": "waiting",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (SCADA)",
+      "label": "Remote Valve Execution (B2, [API-RP-1165 §4])",
+      "today": "Handled natively in the SCADA console with \"select-before-operate\" confirmation dialogs and interlock checks.",
+      "agentNote": "❌ No. Core SCADA control execution. Adding external agent middleware introduces latency and cyber-physical security risks."
+    },
+    {
+      "code": "A04",
+      "action": "Track multi-product batch interface positions and densitometer cuts",
+      "source": "[API-RP-1130 §5]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1.0 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Batch Tracking & Interface Arrival Forecasting (B1, [API-RP-1130 §5])",
+      "today": "Liquid controllers manually monitor batch barrel counts and densitometer charts to predict when a premium gasoline batch switches to ultra-low sulfur diesel at a terminal manifold.",
+      "failureMode": "Delayed manifold valve switching contaminates high-value product, creating thousands of barrels of degraded transmix that must be re-refined.",
+      "agentNote": "→ See §4 (Agent 2: Multi-Product Batch Interface & Densitometer Tracking Agent)."
+    },
+    {
+      "code": "A05",
+      "action": "Direct field line-riders and station technicians via radio during alarms",
+      "source": "[DOT-CRM §195.446]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "1.0 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human/Radio)",
+      "label": "Field Technician Radio Coordination (B3, [DOT-CRM §195.446])",
+      "today": "Controller communicates verbally over VHF radio or satellite phone with field line-riders and pump station mechanics.",
+      "agentNote": "❌ No. Human communication channel."
+    },
+    {
+      "code": "A06",
+      "action": "Calculate and balance natural gas pipeline linepack inventory",
+      "source": "[API-RP-1165 §5]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1.5 hrs",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Natural Gas Linepack Balance (B1, [API-RP-1165 §5])",
+      "today": "Controller calculates gas inventory in spreadsheets; fluctuating demand leads to sudden low-pressure draft conditions at city-gate delivery points.",
+      "failureMode": "Linepack drafts below contract minimum pressures, violating interstate delivery commitments and triggering severe financial penalties.",
+      "agentNote": "→ See §4 (Agent 4: Natural Gas Transmission Linepack Inventory Reconciler)."
+    },
+    {
+      "code": "A07",
+      "action": "Monitor Maximum Allowable Operating Pressure (MAOP) hydraulic profiles",
+      "source": "[DOT-CRM §192.619]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1.5 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "MAOP & Surge Pressure Monitoring (B1, [DOT-CRM §192.619])",
+      "today": "Controller visually compares discharge pressure bars against red MAOP limit lines on SCADA screens.",
+      "failureMode": "Un-damped hydraulic pressure surges exceed pipe yield strength, initiating catastrophic longitudinal seam weld ruptures.",
+      "agentNote": "→ See §4 (Agent 3: Pipeline Hydraulic Surge & MAOP Envelope Guardian)."
+    },
+    {
+      "code": "A08",
+      "action": "Initiate emergency pipeline shutdown (ESD) during confirmed ruptures",
+      "source": "[DOT-CRM §195.446]",
+      "scope": "estate",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "0.2 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Emergency Pipeline Shutdown (ESD) Initiation (B3, [DOT-CRM §195.446])",
+      "today": "Controller hits the physical or digital ESD switch to trip all pump stations and isolate block valves.",
+      "agentNote": "❌ No. Solely a human command authority. AI must never hold unilateral emergency trip authority over an interstate energy grid."
+    },
+    {
+      "code": "A09",
+      "action": "Reconcile hourly shipper delivery nominations against physical deliveries",
+      "source": "Practitioner",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1.25 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Shipper Nomination Reconciliation (B1, Practitioner)",
+      "today": "Controller checks hourly contract injection/delivery schedules against actual SCADA flowmeters, calling shippers when drafts occur.",
+      "failureMode": "Unbalanced physical takes create severe hydraulic imbalances across the pipeline network.",
+      "agentNote": "→ See §4 (Agent 6: Hourly Shipper Nomination & Custody Delivery Reconciler)."
+    },
+    {
+      "code": "A10",
+      "action": "Manage hydraulic surge relief tank levels at intermediate pump stations",
+      "source": "[API-RP-1165 §6]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Daily",
+      "time": "0.5 hrs",
+      "friction": "waiting",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (SCADA)",
+      "label": "Surge Relief Tank Management (B2, [API-RP-1165 §6])",
+      "today": "Handled by local station PLCs with automated high-level alarms in SCADA.",
+      "agentNote": "❌ No. Local station automation."
+    },
+    {
+      "code": "A11",
+      "action": "Audit standing suppressed SCADA alarms and temporary communication loss",
+      "source": "[API-RP-1165 §7]",
+      "scope": "estate",
+      "bucket": "B2",
+      "freq": "Weekly",
+      "time": "1.0 hrs",
+      "friction": "traceability",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (OASyS)",
+      "label": "Suppressed Alarm Auditing (B2, [API-RP-1165 §7])",
+      "today": "Handled inside SCADA alarm management subsystems.",
+      "agentNote": "❌ No. Static database reporting module."
+    },
+    {
+      "code": "A12",
+      "action": "Track inline inspection (ILI) tool and utility pig progress across stations",
+      "source": "[API-RP-1165 §5]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "1.0 hrs",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Pipeline Pig Tracking & Arrival Prediction (B1, [API-RP-1165 §5])",
+      "today": "Controller manually calculates pig travel speed based on flowrate and watches for acoustic geophone pings at pump stations.",
+      "failureMode": "Station personnel miss pig arrival, failing to open receiver bypasses and causing tool damage or pipeline flow restriction.",
+      "agentNote": "→ See §4 (Agent 5: Pipeline Pig Tracking & Station Arrival Estimator)."
+    },
+    {
+      "code": "A13",
+      "action": "Model transient pressure wave reflection during mainline valve stroke",
+      "source": "[API-RP-1130 §4]",
+      "scope": "estate",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "4.0 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Synergi SPS)",
+      "label": "Transient Water Hammer Hydraulic Modeling (B2, [API-RP-1130 §4])",
+      "today": "Statutory biological alertness checks and verbal communication with local fire/police dispatchers during incidents.",
+      "agentNote": "❌ No. Human physical and regulatory emergency coordination."
+    },
+    {
+      "code": "A14",
+      "action": "Conduct statutory fatigue self-assessment and mutual verbal handover",
+      "source": "[DOT-CRM §195.446]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "0.5 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human)"
+    },
+    {
+      "code": "A15",
+      "action": "Coordinate emergency notification response with public first responders",
+      "source": "[DOT-CRM §195.402]",
+      "scope": "estate",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "2.0 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human/First Resp)"
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "CPM Leak Detection Alarm & Hydraulic Wave Triage Agent",
+      "oneLine": "Correlates negative pressure wave propagation with recent operational maneuvers to classify CPM leak alarms as benign operational transients or genuine pipeline breaches.",
+      "frictionSolved": "Eliminates 1.80 hours per shift of high-stress manual pressure wave analysis and ends alarm fatigue caused by false CPM leak alerts.",
+      "reads": "High-frequency SCADA pressure transducers, acoustic negative pressure wave (NPW) sensors, ultrasonic custody flowmeters, mainline valve limit switches, and CPM leak detection alarms.",
+      "does": "Computes acoustic wave speed (a = sqrt racK/ ho1 + (K/E)(D/t)); correlates pressure drop timing with known upstream/downstream operational maneuvers (pump starts, valve strokes, pig launches); verifies mass-balance discrepancy accounting for linepack pack/unpack rate; classifies alarm as benign operational transient or genuine breach signature with statistical confidence.",
+      "returns": "Immediate Leak Alarm Triage Scorecard (alarm_id, event_type, transient_correlation_confidence_pct, matched_maneuver_root_cause, estimated_leak_location_km, regulatory_countdown_timer_sec).",
+      "stopsAt": "Overriding statutory emergency shutdown timers or clearing un-investigated leak alarms.",
+      "failureModes": "If pressure drop signatures exhibit characteristics of a physical pipe breach (negative pressure wave with persistent unrecovered mass imbalance), the agent immediately issues a red alert: [Critical Warning: Uncompensated Pressure Drop — Potential Breach Detected: Initiate Immediate Segment Isolation].",
+      "agentId": "OG-P14-A01"
+    },
+    {
+      "n": 2,
+      "name": "Multi-Product Batch Interface & Densitometer Tracking Agent",
+      "oneLine": "Models pipeline fluid dispersion and real-time densitometer telemetry to predict batch interface arrivals and manifold cut-points within a 3-minute window.",
+      "frictionSolved": "Eliminates 0.85 hours per batch delivery of manual barrel counting, preventing transmix product downgrades and tank contamination.",
+      "reads": "In-line digital densitometers (specific gravity, API gravity), pipeline flowmeters (barrels per hour), pipeline elevation profiles, and batch sequence schedules.",
+      "does": "Tracks moving batch boundaries across thousands of pipeline stations; computes Taylor dispersion and transmix volume growth between adjacent products (e.g., gasoline vs diesel); forecasts estimated time of arrival (ETA) at terminal manifold breakout tanks within a ±3-minute window; alerts controller to exact densitometer cut-points.",
+      "returns": "Batch Interface Tracking & Manifold Cut Advisory (batch_id, product_type, current_milepost, target_terminal_id, interface_eta, transmix_volume_bbls, manifold_swing_alert).",
+      "stopsAt": "Executing manifold valve strokes or directing product into contaminated tanks.",
+      "failureModes": "If upstream densitometer indicates an unexpected contaminated interface (>2^circ API off specification), the agent prompts: [Off-Spec Product Batch Detected — Divert to Slop Tank Advisory].",
+      "agentId": "OG-P14-A02"
+    },
+    {
+      "n": 3,
+      "name": "Pipeline Hydraulic Surge & MAOP Envelope Guardian",
+      "oneLine": "Continuously audits pipeline hydraulic pressure gradients against Maximum Allowable Operating Pressure (MAOP) and models water hammer surge risks from valve strokes.",
+      "frictionSolved": "Eliminates 1.30 hours per shift of manual pressure profile checking, protecting pipeline corridors from catastrophic overpressure ruptures.",
+      "reads": "Mainline suction/discharge pressures, pump station discharge pressure transmitters, relief valve pressure sensors, and valve stroke speeds.",
+      "does": "Evaluates live hydraulic gradient against Maximum Allowable Operating Pressure (MAOP) per 49 CFR Part 195.406 / 192.619; solves the Joukowsky equation (ΔP = ho a Δv) to calculate transient pressure surge risk from sudden valve closures or power trips; monitors surge relief tanks at intermediate pump stations.",
+      "returns": "MAOP Hydraulic Profile & Surge Margin Ledger (segment_id, peak_pressure_psig, maop_limit_psig, maop_margin_pct, surge_risk_flag, recommended_discharge_pressure_setpoint).",
+      "stopsAt": "Altering mechanical surge relief valve setpoints or overriding automated ESD high-pressure trip thresholds.",
+      "failureModes": "If operating pressure exceeds 100% MAOP, the agent triggers an emergency advisory banner: [MAOP Exceedance Detected — Immediate Discharge Pressure Trim Mandatory].",
+      "agentId": "OG-P14-A03"
+    },
+    {
+      "n": 4,
+      "name": "Natural Gas Transmission Linepack Inventory Reconciler",
+      "oneLine": "Integrates gas compositional equations of state across pipeline segments to calculate live linepack inventory and predict delivery draft risks.",
+      "frictionSolved": "Eliminates 1.30 hours daily of manual spreadsheet gas accounting, preventing city-gate low-pressure delivery penalties.",
+      "reads": "Gas chromatograph compositional assays (SG, BTU, heating value), multi-run ultrasonic gas flowmeters, compressor station suction/discharge pressures, and gas flowing temperatures.",
+      "does": "Integrates the gas equation of state across discretized pipeline segments to compute actual linepack inventory (Vpack = int racP ·AZ ·R ·T dx); tracks hourly pack/unpack trends; balances linepack against day-ahead shipper nominations and city-gate peak demand forecasts.",
+      "returns": "Linepack Inventory & Gas Balancing Dashboard (grid_zone_id, current_linepack_mmscf, target_linepack_mmscf, pack_unpack_rate_mscfh, draft_risk_hours_remaining, compressor_discharge_recommendation).",
+      "stopsAt": "Changing compressor turbine speeds or throttling city-gate flow-control valves.",
+      "failureModes": "If linepack inventory draft forecasts city-gate pressure breach within 4 hours, the agent issues an emergency advisory: [Imminent City-Gate Pressure Breach — Packing Compression Required].",
+      "agentId": "OG-P14-A04"
+    },
+    {
+      "n": 5,
+      "name": "Pipeline Pig Tracking & Station Arrival Estimator",
+      "oneLine": "Models utility and intelligent pig travel trajectories across pipeline segments to predict station arrival ETAs and prevent tool damage.",
+      "frictionSolved": "Eliminates 0.85 hours per pigging operation of manual travel speed math, ensuring field crews are staged at receivers on time.",
+      "reads": "Subsea/onshore pig launcher/receiver limit switches, acoustic pig passage geophones, pipeline differential pressure across the tool, and fluid flow velocity.",
+      "does": "Computes real-time pig trajectory through the pipeline; models pig slippage and velocity variations in liquid or gas flow; predicts arrival ETA at downstream pump stations, mainline block valves, and receiver barrels; alerts field line-riders and station technicians 30 minutes prior to arrival.",
+      "returns": "Pipeline Pig Movement Dossier (pig_id, pig_type, current_milepost, travel_speed_mph, estimated_receiver_arrival_time, stalled_pig_hazard_score).",
+      "stopsAt": "Opening receiver barrel kicker valves or venting launcher pressure locks.",
+      "failureModes": "If differential pressure across the pig spikes >50 psi with zero forward motion detected by acoustic sensors, the agent flags: [Stalled Pig Hazard — Flowline Restriction Detected].",
+      "agentId": "OG-P14-A05"
+    },
+    {
+      "n": 6,
+      "name": "Hourly Shipper Nomination & Custody Delivery Reconciler",
+      "oneLine": "Continuously reconciles physical SCADA receipt and delivery meter volumes against commercial shipper contract nominations to flag imbalances in real time.",
+      "frictionSolved": "Eliminates 1.10 hours daily of manual cross-system volumetric matching, eliminating surprise end-of-month commercial cash-out penalties.",
+      "reads": "Electronic Data Interchange (EDI) contract nominations from commercial shippers, hourly custody transfer flowmeters, and physical receipt/delivery point meters.",
+      "does": "Compares actual physical deliveries against scheduled nominations; computes hourly and cumulative daily imbalance volumes per shipper; flags unauthorized over-takes or uncoordinated delivery shut-ins that threaten pipeline hydraulic stability.",
+      "returns": "Shipper Imbalance & Delivery Reconciliation Ledger (shipper_id, contract_nominated_rate_bpd_or_mmscfd, actual_delivered_rate, imbalance_variance_pct, penalty_exposure_warning, commercial_dispatch_flag).",
+      "stopsAt": "Restricting physical shipper deliveries or billing contractual imbalance cash-outs.",
+      "failureModes": "If physical delivery over-take threatens system minimum linepack, the agent alerts the controller to contact the commercial scheduling desk.",
+      "agentId": "OG-P14-A06"
+    },
+    {
+      "n": 7,
+      "name": "Statutory CRM Compliance & Shift Handover Synthesizer",
+      "oneLine": "Ingests 12 hours of SCADA sequence-of-events logs, operator actions, and standing bypasses to compile an audit-ready Control Room Management shift handover dossier.",
+      "frictionSolved": "Eliminates 1.05 hours per shift of manual log writing, guaranteeing 100% compliance with US DOT 49 CFR Part 195.446 / 192.631 federal audit standards.",
+      "reads": "12 hours of SCADA sequence-of-events logs, operator action journals, safety interlock bypass records, active batch positions, and controller work-rest hour logs.",
+      "does": "Reconstructs a comprehensive, chronological operational narrative strictly aligned with US DOT 49 CFR Part 195.446 / 192.631 Control Room Management mandates; audits standing alarm suppressions, physical valve overrides, and communication outages; validates controller fatigue risk compliance.",
+      "returns": "Audit-Ready CRM Shift Handover Briefing Dossier ready for electronic sign-off in EnerSys POEMS or Hexagon j5.",
+      "stopsAt": "Signing the statutory handover certification or verifying controller physical alertness.",
+      "failureModes": "If an un-cleared safety override or communication failure exists on a critical mainline block valve, the agent locks the handover dossier until explicitly acknowledged by both controllers.",
+      "agentId": "OG-P14-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit. Never multiply into enterprise rupee totals. The operator provides their own pipeline-mileage multiplier.",
+    "rows": [
+      {
+        "agent": "CPM Leak Alarm Investigation & Triage",
+        "unit": "1 Shift Leak Alarm Triage (4 events)",
+        "beforeHours": 2.0,
+        "afterHours": 0.2,
+        "savedHours": 1.8,
+        "frictionRemoved": "Hydraulic Wave Analysis & Cross-Checking"
+      },
+      {
+        "agent": "Batch Interface Arrival & Cut Advisory",
+        "unit": "1 Multi-Product Batch Delivery",
+        "beforeHours": 1.0,
+        "afterHours": 0.15,
+        "savedHours": 0.85,
+        "frictionRemoved": "Volumetric Math & Densitometer Tracking"
+      },
+      {
+        "agent": "MAOP Hydraulic Profile & Surge Check",
+        "unit": "1 Daily Hydraulic Gradient Review",
+        "beforeHours": 1.5,
+        "afterHours": 0.2,
+        "savedHours": 1.3,
+        "frictionRemoved": "Multi-Station Pressure Gradient Sifting"
+      },
+      {
+        "agent": "Linepack Balance & Inventory Tracking",
+        "unit": "1 Daily Gas Transmission Review",
+        "beforeHours": 1.5,
+        "afterHours": 0.2,
+        "savedHours": 1.3,
+        "frictionRemoved": "Compressible Gas EOS Math & Demand Sifting"
+      },
+      {
+        "agent": "Pipeline Pig Trajectory Tracking",
+        "unit": "1 Active Pigging Operation",
+        "beforeHours": 1.0,
+        "afterHours": 0.15,
+        "savedHours": 0.85,
+        "frictionRemoved": "Travel Speed Calculations & Field Dispatch"
+      },
+      {
+        "agent": "Shipper Nomination Reconciliation",
+        "unit": "1 Daily Contract Allocation Run",
+        "beforeHours": 1.25,
+        "afterHours": 0.15,
+        "savedHours": 1.1,
+        "frictionRemoved": "Multi-Meter EDI Reconciliation Drag"
+      },
+      {
+        "agent": "Statutory CRM Shift Handover Report",
+        "unit": "1 Shift Handover (per 12-hour shift)",
+        "beforeHours": 1.25,
+        "afterHours": 0.2,
+        "savedHours": 1.05,
+        "frictionRemoved": "Assembly & Federal Regulatory Compliance"
+      }
+    ],
+    "total": {
+      "unit": "Standard 12-Hour Operating Shift",
+      "beforeHours": 10.0,
+      "afterHours": 1.25,
+      "savedHours": 8.75,
+      "frictionRemoved": "Eliminates alarm fatigue, math & reporting drag",
+      "label": "Total Pipeline Control Shift Impact"
+    }
+  },
+  "citations": [
+    {
+      "key": "[DOT-CRM]",
+      "citation": "US PHMSA, Control Room Management Regulations, 49 CFR 195.446 / 192.631",
+      "locator": "ecfr.gov",
+      "type": "Federal Regulation",
+      "supports": "Statutory shift handover & fatigue rules"
+    },
+    {
+      "key": "[API-RP-1165]",
+      "citation": "API, Pipeline SCADA Displays, 2nd Edition, 2022",
+      "locator": "API Standards Store",
+      "type": "Recommended Practice",
+      "supports": "SCADA human factors & console design"
+    },
+    {
+      "key": "[API-RP-1175]",
+      "citation": "API, Pipeline Leak Detection Program Management, 2017",
+      "locator": "API Standards Store",
+      "type": "Recommended Practice",
+      "supports": "Leak alarm triage & operational culture"
+    },
+    {
+      "key": "[API-RP-1130]",
+      "citation": "API, Computational Pipeline Monitoring for Liquids, 3rd Ed",
+      "locator": "API Standards Store",
+      "type": "Technical Standard",
+      "supports": "CPM mass balance & negative pressure wave rules"
+    },
+    {
+      "key": "[NTSB-PAR-1201]",
+      "citation": "US NTSB, Enbridge Pipeline Rupture Investigation, 2012",
+      "locator": "ntsb.gov",
+      "type": "Incident Investigation",
+      "supports": "Leak alarm desensitization as root cause"
+    },
+    {
+      "key": "[ASME-B31-4-8]",
+      "citation": "ASME, Pipeline Transportation Systems (B31.4 / B31.8), 2019",
+      "locator": "asme.org",
+      "type": "Technical Standard",
+      "supports": "MAOP safety margins & pressure transient limits"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Atmos Pipe documentation, Schneider OASyS technical releases, and OnePetro for \"automated transient wave decoupling from true breach signatures in real-time pipeline SCADA displays\".",
+    "result": "Negative Search, 2026-09. Commercial CPM systems generate alarms based on mathematical thresholds; none autonomously cross-reference transient valve travel times against acoustic wave propagation to output validated confidence scorecards without manual controller analysis."
+  },
+  "line": "\"A pipeline controller doesn't ignore leak alarms out of negligence; they ignore them because the system cried wolf forty times that week, and nobody gave them a tool to prove whether the pressure wave came from a pump valve or a ruptured pipe.\"",
+  "openQuestions": [
+    "How many false CPM leak alarms does an active liquid controller experience during an average 12-hour shift?",
+    "What is the average time taken from the first receipt of an ambiguous leak alarm to the initiation of segment isolation?",
+    "How frequently do product batch interfaces get cut improperly at terminal manifolds due to delayed densitometer reading?"
+  ]
+};

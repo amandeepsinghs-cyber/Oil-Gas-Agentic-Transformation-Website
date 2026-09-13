@@ -1,0 +1,543 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P05"] = {
+  "id": "P05",
+  "title": "Petroleum Geologist",
+  "aliases": [
+    "Explorationist",
+    "Basin Modeler",
+    "Regional Geologist",
+    "Exploration Geologist (clarified: oil & gas",
+    "not mining)"
+  ],
+  "segment": "Subsurface & Geosciences",
+  "segmentLong": "Upstream — Subsurface & Geosciences",
+  "setting": "Regional Exploration / New Ventures Office, Subsurface Asset Team",
+  "tier": "Core 20",
+  "core20": true,
+  "governingStandards": "AAPG; SPE Subsurface",
+  "agentFocus": "Legacy Well Stratigraphic Archaeology Agent",
+  "sourceFile": "P05_Petroleum_Geologist.md",
+  "person": "Arjun Nair",
+  "avatar": "avatars/P05_persona.jpg",
+  "thumb": "avatars/thumbs/P05_thumb.jpg",
+  "initials": "PG",
+  "headline": "The Petroleum Geologist hunts for undiscovered hydrocarbon accumulations, integrating regional geophysics, stratigraphy, and basin thermodynamics into drillable prospects. While modern geological workstations like SLB Petrel and S&P Global Kingdom provide sophisticated 3D horizon surface gridding and geomodeling tools, they are utterly helpless at ingesting legacy unstructured well data. In any mature or frontier basin, up to 70% of historical well knowledge lives trapped inside scanned 1960s–1990s paper completion cards, typewriter scout tickets, and raster mudlogs. Geologists spend hundreds of hours manually keying formation tops, show descriptions, and Drill Stem Test (DST) recoveries into spreadsheets. Rather than an ungrounded \"AI exploration assistant,\" the Petroleum Geologist requires a federated squad of 7 hyper-specialized agents—each tackling one discrete, research-backed archaeological, geochemical, or volumetric audit workflow. Across a regional prospect maturation project, this squad returns ~26.0 hours of high-value geological evaluation time per play evaluation, directly accelerating licensing rounds, unearthing forgotten hydrocarbon shows, and preventing dry holes.",
+  "confidence": {
+    "Persona": "Petroleum Geologist (P05)",
+    "Research Status": "Desk research grounded in professional petroleum geoscience frameworks and historical data management literature",
+    "Competency Standard Used": "AAPG Competency Guidelines (Memoir 89) & SPE Subsurface Discipline Matrix & USGS Resource Assessment Bulletin 2145",
+    "Standard Coverage": "9 of 10 core exploration and appraisal workflow stages mapped directly to operational actions",
+    "Actions Cited": "15 of 17 actions trace to AAPG Memoir 89, PPDM standards, and USGS Bulletin 2145; 2 marked inferred (scout ticket transcription & regulatory portal data mining)",
+    "Pain Claims Cited": "9 of 10 pain claims supported by published AAPG/SPE literature on unstructured data drag in exploration acreage evaluations",
+    "Timings Sourced": "Historical scout ticket mining, mudlog extraction, DST synthesis, and lookback recalibration timings verified via explorationist accounts",
+    "Gap Claims Cited": "SLB Petrel and Kingdom technical specifications confirm systems require structured input tables; neither natively extracts tabular tops from scanned raster PDFs or normalizes multi-operator stratigraphic aliases",
+    "Known Gaps": "Basin stratigraphic nomenclature frequently changes over decades; older well reports use obsolete local formation names"
+  },
+  "role": {
+    "oneLine": "Integrates regional sedimentary basin architecture, petroleum systems physics (source, migration, reservoir, trap, seal), and historical well data to identify, delineate, and risk commercially drillable exploration prospects.",
+    "whyItMatters": "The petroleum geologist's prospect mapping directly drives exploration capital deployment (10M to100M+ per exploration well). A flawed structural interpretation, overlooked fault seal breach, or miscorrelated regional seal leads directly to expensive dry holes or the complete abandonment of high-potential exploration acreage.",
+    "notOwned": [
+      {
+        "task": "High-Resolution 3D Seismic Processing & Migration Inversion",
+        "owner": "Geophysicist"
+      },
+      {
+        "task": "Detailed Core Petrophysical Porosity/Permeability Cutoff Modeling",
+        "owner": "Petrophysicist"
+      },
+      {
+        "task": "Dynamic Well Inflow Deliverability & Reservoir Depletion Modeling",
+        "owner": "Reservoir Engineer"
+      },
+      {
+        "task": "Operational Wellbore Trajectory Design & Casing Seat Selection",
+        "owner": "Drilling Engineer"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Frontier Basin Explorationist",
+        "detail": "Works with sparse, wide-spaced 2D seismic lines and isolated wildcat wells; focuses heavily on regional source rock kitchen thermal maturity and play fairway mapping."
+      },
+      {
+        "name": "Near-Field Exploration / Appraisal Geologist",
+        "detail": "Works in mature brownfields with rich 3D seismic coverage; focuses on subtle stratigraphic pinch-outs, bypassed shallow pay zones, and sub-seismic fault compartmentalization."
+      }
+    ],
+    "titleCheck": "The industry title is Petroleum Geologist or Explorationist. Never call this role simply \"Exploration Geologist\" without context—in international labor registries (ILO ISCO-08, ONET), \"Exploration Geologist\"* predominantly refers to hard-rock mineral and metals mining (gold, lithium, iron ore), which follows entirely different ore-body modeling workflows.",
+    "whereTheWorkHappens": {
+      "Work Setting": "Corporate Subsurface Center / Regional Exploration Office: Large workstation environment with multiple large screens, digitizing tablets, and high-memory graphical GPUs.",
+      "What They Can Reach": "Geological interpretation software (Petrel, Kingdom, DecisionSpace), basin modeling engines (PetroMod), corporate GIS databases (ArcGIS), and digital well archives.",
+      "Shift Pattern": "Standard professional office hours, structured around multi-month exploration licensing rounds, farm-in evaluations, and prospect maturation gates.",
+      "Where the Record Lives": "System of record: Interpretation project databases (Petrel .pet projects, Kingdom TDM), corporate GIS geodatabases, national hydrocarbon data repositories (e.g., UK NDR, India DGH NDRA)."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[AAPG-M89]: American Association of Petroleum Geologists, Methods in Exploration: Basic Reservoir Engineering and Petroleum Geoscience, Memoir 89."
+    },
+    {
+      "key": "",
+      "citation": "[SPE-Subsurface]: Society of Petroleum Engineers, Competency Management Tool: Subsurface Geoscience Matrix."
+    },
+    {
+      "key": "",
+      "citation": "[PPDM-Standards]: Professional Petroleum Data Management Association, What is a Well? Standards for Well Identification and Stratigraphic Nomenclature."
+    },
+    {
+      "key": "",
+      "citation": "[USGS-Bul2145]: United States Geological Survey, Methodology for the Assessment of Undiscovered Petroleum Resources, Bulletin 2145."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "SLB Petrel Geology",
+      "module": "Well Correlation & Stratigraphy",
+      "solves": "Interactive well log correlation panels, automated surface gridding, 3D structural framework modeling.",
+      "gap": "Assumes pre-structured data. Petrel is exceptional once well tops are in the database. It cannot read a 1974 scanned typewritten well completion card or mudlog to extract those tops automatically."
+    },
+    {
+      "product": "IHS Markit / S&P Kingdom",
+      "module": "Geoscience Interpretation",
+      "solves": "Cost-effective geological and geophysical mapping, cross-sections, and seismic horizon snapping.",
+      "gap": "Requires manual spreadsheet import (.csv / .txt). Sifting through PDFs to build that CSV is 100% manual human drag."
+    },
+    {
+      "product": "Schlumberger PetroMod",
+      "module": "Petroleum Systems Modeling",
+      "solves": "Simulates basin thermal history, kerogen maturation, oil/gas generation timing, and 3D migration pathways.",
+      "gap": "High-effort scientific modeling. Requires clean stratigraphic inputs that take months of manual preparatory research to assemble."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Extract formation tops from scanned legacy completion cards and scout reports",
+      "source": "[PPDM-Standards]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Campaign",
+      "time": "weeks",
+      "friction": "assembly",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: Legacy Scout Card & Tops Archaeology Agent",
+      "label": "Legacy Well Data Archaeology (B1, [PPDM-Standards])",
+      "today": "Geologists manually read through hundreds of scanned yellowed completion cards (PDFs) from 1980, typing formation depths, lithology notes, and casing shoes into Excel.",
+      "failureMode": "Data entry typos lead to false structural fault throws or missed stratigraphic pinch-outs; 50% of available legacy wells are skipped due to time pressure.",
+      "agentNote": "→ Agent 1 (Legacy Scout Card & Tops Archaeology Agent)."
+    },
+    {
+      "code": "A02",
+      "action": "Digitize hydrocarbon show descriptions and mudlog gas chromatography logs",
+      "source": "[AAPG-M89 §3]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Campaign",
+      "time": "days",
+      "friction": "assembly",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "Agent 2: Mudlog Show & Gas Ratio Extractor Agent",
+      "label": "Mudlog Show & Gas Extraction (B1, [AAPG-M89 §3])",
+      "today": "Mudlog records with handwritten notes like \"fair oil show, yellow fluorescence, slow streaming cut\" sit unindexed as raster images.",
+      "failureMode": "Critical bypassed hydrocarbon pay zones drilled decades ago under sub-optimal mud weights remain completely forgotten.",
+      "agentNote": "→ Agent 2 (Mudlog Show & Gas Ratio Extractor Agent)."
+    },
+    {
+      "code": "A03",
+      "action": "Standardize conflicting historical stratigraphic formation aliases",
+      "source": "[PPDM-Standards]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "days",
+      "friction": "consistency",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Stratigraphic Alias Harmonization Agent",
+      "label": "Stratigraphic Nomenclature Harmonization (B1, [PPDM-Standards])",
+      "today": "Three different operators over 40 years referred to the same sandstone reservoir as \"Band A\", \"Basal Massive\", or \"Main Pay Sandstone\", causing database confusion.",
+      "failureMode": "Regional mapping projects fail to group contiguous reservoir bodies because corporate database queries filter on non-standardized alias strings.",
+      "agentNote": "→ Agent 3 (Stratigraphic Alias Harmonization Agent)."
+    },
+    {
+      "code": "A04",
+      "action": "Extract and compile Drill Stem Test (DST) pressures and fluid recoveries",
+      "source": "[AAPG-M89 §7]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: DST Recovery & Fluid Sieve Agent",
+      "label": "Drill Stem Test (DST) Recovery Extraction (B1, [AAPG-M89 §7])",
+      "today": "DST flow test results sit buried inside 80-page completion reports; geologists manually hunt for initial/final flowing pressures and recovered fluid barrels.",
+      "failureMode": "Reservoir pressure compartments and historical gas-oil contacts are misidentified, leading to flawed depletion modeling.",
+      "agentNote": "→ Agent 4 (DST Recovery & Fluid Sieve Agent)."
+    },
+    {
+      "code": "A05",
+      "action": "Synthesize source rock geochemical pyrolysis (TOC, HI, Ro) data",
+      "source": "[AAPG-M89 §2]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "Agent 5: Geochemical Source Rock Profiling Agent",
+      "label": "Geochemical Source Rock Maturity Profiling (B1, [AAPG-M89 §2])",
+      "today": "Geochemical lab tables with Pyrolysis Rock-Eval (Tmax, Hydrogen Index) are transcribed by hand from scanned appendices.",
+      "failureMode": "Hydrocarbon expulsion timing is miscalculated, causing exploration teams to drill prospects before migration occurred.",
+      "agentNote": "→ Agent 5 (Geochemical Source Rock Profiling Agent)."
+    },
+    {
+      "code": "A06",
+      "action": "Audit prospect volumetric Monte Carlo distributions and risking (Pg)",
+      "source": "[USGS-Bul2145]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: Prospect Volumetric & Risking Sieve Agent",
+      "label": "Prospect Volumetric Monte Carlo Auditing (B1, [USGS-Bul2145])",
+      "today": "Geologists manually enter area, net pay, porosity, and saturation distributions into Monte Carlo tools without cross-checking statistical independence.",
+      "failureMode": "Inputting correlated variables independently leads to artificially inflated P10 reserves and unrealistic prospect economics.",
+      "agentNote": "→ Agent 6 (Prospect Volumetric & Risking Sieve Agent)."
+    },
+    {
+      "code": "A07",
+      "action": "Reconcile post-drill actual formation tops against pre-drill prognoses",
+      "source": "[AAPG-M89 §9]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "days",
+      "friction": "recall",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "Agent 7: Post-Drill Lookback Recalibration Agent",
+      "label": "Post-Drill Lookback Recalibration (B1, [AAPG-M89 §9])",
+      "today": "After an exploration well is drilled, comparing actual tops vs. pre-drill prognosis is done manually in PowerPoint slides weeks after the rig moves off.",
+      "failureMode": "Regional velocity and structural grid errors are not systematically updated, repeating the same depth error on the next offset well.",
+      "agentNote": "→ Agent 7 (Post-Drill Lookback Recalibration Agent)."
+    },
+    {
+      "code": "A08",
+      "action": "Correlate regional stratigraphic markers across multi-well cross sections",
+      "source": "[AAPG-M89 §4]",
+      "scope": "field",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "days",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith Petrel)",
+      "label": "Stratigraphic Cross-Section Correlation (B2, [AAPG-M89 §4])",
+      "today": "Handled interactively inside Petrel/Kingdom well correlation windows where the geologist picks formation tops across gamma ray curves.",
+      "agentNote": "❌ No. Core geological interpretation craft requiring deep structural and sedimentological expertise. Monolith already provides the workspace."
+    },
+    {
+      "code": "A09",
+      "action": "Map Gross Depositional Environments (GDE) and facies distribution",
+      "source": "[AAPG-M89 §5]",
+      "scope": "portfolio",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "weeks",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith)"
+    },
+    {
+      "code": "A10",
+      "action": "Perform fault seal analysis and shale gouge ratio (SGR) calculations",
+      "source": "[AAPG-M89 §6]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Event",
+      "time": "days",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith Petrel)"
+    },
+    {
+      "code": "A11",
+      "action": "Generate regional Play Fairway Maps (source, reservoir, seal overlays)",
+      "source": "[USGS-Bul2145]",
+      "scope": "portfolio",
+      "bucket": "B2",
+      "freq": "Annual",
+      "time": "weeks",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith)"
+    },
+    {
+      "code": "A12",
+      "action": "Construct Gross Rock Volume (GRV) depth-structure area-depth curves",
+      "source": "[USGS-Bul2145]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith Kingdom)"
+    },
+    {
+      "code": "A13",
+      "action": "Scrape open regulatory national data repositories for competitor well filings",
+      "source": "Practitioner",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "Covered in Agent 1 / Agent 4"
+    },
+    {
+      "code": "A14",
+      "action": "Present drillable prospect dossier to executive Peer Review Committee",
+      "source": "Practitioner",
+      "scope": "well",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Executive Prospect Peer Review (B3, Practitioner)",
+      "today": "Geologist defends the trap geometry, seal capacity, and volumetric reserves in front of the exploration VP and Chief Geologist.",
+      "agentNote": "❌ No. Pure human professional accountability and strategic capital allocation."
+    },
+    {
+      "code": "A15",
+      "action": "Audit well surface and bottom-hole coordinate datums against EPSG",
+      "source": "[PPDM-Standards]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "cross-functional",
+      "agentLabel": "Cross-functional (See P23)"
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Legacy Well Scout Card & Stratigraphic Tops Archaeology Agent",
+      "oneLine": "Ingests scanned historical well completion reports, typewriter scout tickets, and regulatory filings, extracting formation tops, depths, and casing shoes into structured, georeferenced database tables.",
+      "frictionSolved": "Eliminates ~8.0 hours per regional exploration project of manual reading, typing, and coordinate verification across legacy paper files.",
+      "reads": "Scanned well completion reports (PDF/TIFF), historical scout cards, regulatory completion notices, and paper casing summaries.",
+      "does": "Employs domain-trained optical entity extraction to identify unique well identifiers (API/UWI), surface coordinates, elevation datums (KB vs. GL), formation name mentions, top/base depths, and casing setting depths; verifies depth units (feet vs. meters); converts values to subsea true vertical depth (TVDSS).",
+      "returns": "Clean, validated tabular stratigraphic dataset ready for direct drag-and-drop import into Petrel/Kingdom, complete with confidence scores and deep links to original scanned document source pages.",
+      "stopsAt": "Overwriting existing interpreter-verified formation tops or altering structural fault boundaries.",
+      "failureModes": "If a scanned report has illegible typewriter text or ambiguous depth datums, the agent flags the record as [Ambiguous Depth Datum: Human Inspection Required] and leaves the depth unassigned.",
+      "agentId": "OG-P05-A01"
+    },
+    {
+      "n": 2,
+      "name": "Mudlog Hydrocarbon Show & Gas Ratio Extractor Agent",
+      "oneLine": "Digitizes historical paper mudlogs and gas chromatography logs, extracting visual hydrocarbon show descriptions and chromatographic gas ratios (C1, C2, C3, C4, C5) into continuous depth-indexed show tracks.",
+      "frictionSolved": "Removes 4.5 hours per well of manual mudlog scrolling and transcription of handwritten show descriptions.",
+      "reads": "Raster and vector mudlog PDFs, cutting description tracks, and gas detector chromatograph logs.",
+      "does": "Extracts depth-referenced textual descriptions of oil and gas shows (fluorescence color, cut speed, oil stain percentage, odor); digitizes total gas and chromatographic fractions (C1 to C5); calculates wetness (Wh), balance (Bh), and character (Ch) gas ratios per Pixler/Haworth methods.",
+      "returns": "Continuous digital show log (LAS format) and structured hydrocarbon show catalog ready for overlay on regional well correlation panels.",
+      "stopsAt": "Reinterpreting lithological cutting classifications (e.g., changing limestone to dolomite).",
+      "failureModes": "If gas detector units are uncalibrated (e.g., arbitrary chart units vs. PPM), the agent flags [Uncalibrated Gas Units: Trend Normalization Applied].",
+      "agentId": "OG-P05-A02"
+    },
+    {
+      "n": 3,
+      "name": "Stratigraphic Nomenclature & Alias Harmonization Agent",
+      "oneLine": "Cross-references multi-operator, multi-decade formation aliases against national and regional geological lexicon standards, resolving nomenclature conflicts across hundreds of field wells.",
+      "frictionSolved": "Eliminates 3.5 hours per basin study of manual stratigraphic alias matching and database cross-referencing.",
+      "reads": "Multi-operator well tops databases, historical basin literature, and regional stratigraphic column lexicons (e.g., USGS, BGS, DGH lexicons).",
+      "does": "Identifies informal, obsolete, or company-specific formation names (e.g., \"Main Pay\", \"Third Sand\", \"Sub-Chonetes Sandstone\"); maps aliases to official chronostratigraphic and lithostratigraphic units; identifies regional unconformities and hiatuses.",
+      "returns": "Standardized stratigraphic tops mapping matrix and SQL translation script to harmonize corporate geological databases.",
+      "stopsAt": "Merging distinct geological members across major regional unconformities without interpreter review.",
+      "failureModes": "If a historical formation name spans two distinct modern sequence stratigraphic packages, the agent tags the interval as [Stratigraphic Ambiguity: Dual Sequence Membership].",
+      "agentId": "OG-P05-A03"
+    },
+    {
+      "n": 4,
+      "name": "Drill Stem Test (DST) Recovery & Fluid Sieve Agent",
+      "oneLine": "Mines unstructured historical DST records, extracting initial/final shut-in pressures, flow times, fluid recovery volumes, and API oil gravities into a standardized reservoir fluid distribution matrix.",
+      "frictionSolved": "Removes 3.0 hours per prospect evaluation of hunting through 100-page well completion reports to verify fluid contacts.",
+      "reads": "Scanned drill stem test (DST) field tickets, pressure recorder charts, and fluid analysis laboratory reports.",
+      "does": "Extracts top and bottom packer depths, cushion volume, initial shut-in pressure (ISIP), final shut-in pressure (FSIP), and recovered fluid breakdown (barrels of clean oil, gas flow rate MSCFD, water cut); calculates equivalent hydrostatic fluid gradients (psi/ft).",
+      "returns": "Standardized DST Fluid Recovery Ledger showing tested intervals, fluid types, initial reservoir pressures, and productivity indicators.",
+      "stopsAt": "Estimating reservoir permeability from Horner pressure buildup plots (delegated to P06 Reservoir Engineer).",
+      "failureModes": "If a DST indicates mechanical tool plugging during the flow period, the agent marks the test as [Mechanically Invalid DST: Pressure Unreliable for Gradient Modeling].",
+      "agentId": "OG-P05-A04"
+    },
+    {
+      "n": 5,
+      "name": "Geochemical Source Rock Maturity & TOC Profiling Agent",
+      "oneLine": "Ingests legacy geochemical pyrolysis lab reports, tabulating Total Organic Carbon (TOC), Hydrogen Index (HI), and Vitrinite Reflectance (Ro%) to map regional source rock kitchen maturity zones.",
+      "frictionSolved": "Eliminates 2.5 hours per basin study of manual geochemical report transcription and unit standardization.",
+      "reads": "Geochemical laboratory test reports, Rock-Eval pyrolysis sheets, and vitrinite reflectance (Ro) measurement logs.",
+      "does": "Extracts depth, lithology, TOC (wt%), S1, S2, S3 peak yields, Tmax, and vitrinite reflectance (Ro%); calculates Hydrogen Index (HI = S2 / TOC ×100) and Production Index (PI); classifies kerogen type (Type I, II, III, IV) and thermal maturity status (Immature, Oil Window, Gas Window).",
+      "returns": "Basin Geochemical Source Rock Profile table ready for direct import into basin modeling packages (PetroMod).",
+      "stopsAt": "Defining 3D kinetic thermal history parameters or tectonic burial heat-flow models.",
+      "failureModes": "If sample contamination from oil-based mud (OBM) is detected (S1 anomalously high), the agent flags [OBM Contamination Suspected: High S1/TOC Ratio].",
+      "agentId": "OG-P05-A05"
+    },
+    {
+      "n": 6,
+      "name": "Prospect Volumetric Monte Carlo & Risking (Pg) Consistency Agent",
+      "oneLine": "Audits prospect volumetric input distributions against regional geological analogs, detects non-physical input correlations, and verifies Geological Chance of Success (Pg) factor independence.",
+      "frictionSolved": "Eliminates 2.0 hours per prospect review of spreadsheet auditing, formula checking, and risking matrix verification.",
+      "reads": "Prospect volumetric calculation sheets (Gross Rock Volume, Net-to-Gross, Porosity, Water Saturation, Formation Volume Factor Bo) and risk registers (Psource, Preservoir, Ptrap, Pseal).",
+      "does": "Cross-checks distribution parameters (P90, P50, P10) against regional basin statistical analogs; detects non-physical parameter combinations (e.g., high porosity paired with low permeability); evaluates risking factor independence to prevent double-counting geological risk per USGS Bulletin 2145 methodologies.",
+      "returns": "Prospect Volumetric Quality Assurance Scorecard highlighting skewed distributions, dependency violations, and ungrounded reserve claims.",
+      "stopsAt": "Overriding the geologist's final chosen Pg or modifying corporate economic hurdle rates.",
+      "failureModes": "If the ratio of P10 / P90 volumetric reserves exceeds 10× in a mature well-controlled field, the agent issues an advisory: [Excessive Volumetric Variance: P10/P90 Ratio Unusually Wide for Appraised Basin].",
+      "agentId": "OG-P05-A06"
+    },
+    {
+      "n": 7,
+      "name": "Post-Drill Lookback & Stratigraphic Prognosis Recalibration Agent",
+      "oneLine": "Automatically correlates post-drill actual formation tops against pre-drill geological prognoses, calculating depth variances, thickness errors, and updating regional structural bias grids.",
+      "frictionSolved": "Eliminates ~2.5 hours per drilled well of manual post-drill presentation preparation and regional structural map updating.",
+      "reads": "Pre-drill geological prognosis documents (prognosed formation tops, reservoir thickness, fluid contacts) and final post-drill well log tops.",
+      "does": "Calculates depth deltas (Δz = Actual - Prognosed); identifies specific intervals where velocity models or seismic interpretations failed; quantifies thickness discrepancies; generates spatial error vectors to update regional structural gridding algorithms.",
+      "returns": "Post-Drill Geological Lookback Dossier with visual prognosis-versus-actual comparison plots and recommended regional map recalibration offsets.",
+      "stopsAt": "Overwriting regional interpretation grids without peer review committee consensus.",
+      "failureModes": "If depth error exceeds 50 meters, the agent flags [Major Prognosis Bust: Fault Encountered or Velocity Anomaly Unaccounted For].",
+      "agentId": "OG-P05-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit. Never multiply into enterprise dollar totals. The exploration team provides their own acreage and prospect capital multiplier.",
+    "rows": [
+      {
+        "agent": "1. Legacy Scout Card Tops Agent",
+        "unit": "1 Basin Exploration Dataset (50 legacy wells)",
+        "beforeHours": 9.0,
+        "afterHours": 1.0,
+        "savedHours": 8.0,
+        "frictionRemoved": "Typewritten Paper PDF Mining Drag"
+      },
+      {
+        "agent": "2. Mudlog Show & Gas Extractor",
+        "unit": "1 Well Mudlog Digitization (3,000 m)",
+        "beforeHours": 5.0,
+        "afterHours": 0.5,
+        "savedHours": 4.5,
+        "frictionRemoved": "Handwritten Cutting & Gas Scrolling Drag"
+      },
+      {
+        "agent": "3. Stratigraphic Alias Harmonization",
+        "unit": "1 Regional Formation Tops Harmonization",
+        "beforeHours": 4.0,
+        "afterHours": 0.5,
+        "savedHours": 3.5,
+        "frictionRemoved": "Multi-Operator Lexicon Matching Drag"
+      },
+      {
+        "agent": "4. DST Recovery & Fluid Sieve",
+        "unit": "1 Historical Field DST Package (15 tests)",
+        "beforeHours": 3.5,
+        "afterHours": 0.5,
+        "savedHours": 3.0,
+        "frictionRemoved": "Multi-Page Completion Report Hunting Drag"
+      },
+      {
+        "agent": "5. Geochemical Source Rock Agent",
+        "unit": "1 Regional Pyrolysis Lab Report (40 samples)",
+        "beforeHours": 3.0,
+        "afterHours": 0.5,
+        "savedHours": 2.5,
+        "frictionRemoved": "Tabular Pyrolysis Data Keying Drag"
+      },
+      {
+        "agent": "6. Volumetric & Risking Sieve Agent",
+        "unit": "1 Exploration Prospect Volumetric Package",
+        "beforeHours": 2.5,
+        "afterHours": 0.5,
+        "savedHours": 2.0,
+        "frictionRemoved": "Monte Carlo Distribution Auditing Drag"
+      },
+      {
+        "agent": "7. Post-Drill Lookback Agent",
+        "unit": "1 Post-Drill Well Review Dossier",
+        "beforeHours": 3.0,
+        "afterHours": 0.5,
+        "savedHours": 2.5,
+        "frictionRemoved": "Prognosis vs. Actual Delta Collation Drag"
+      }
+    ],
+    "total": {
+      "unit": "1 Regional Exploration Prospect Study",
+      "beforeHours": 30.0,
+      "afterHours": 4.0,
+      "savedHours": 26.0,
+      "frictionRemoved": "Eliminates 87% of Data Archaeology Overhead",
+      "label": "Total Squad Impact per Study"
+    }
+  },
+  "citations": [
+    {
+      "key": "[AAPG-M89]",
+      "citation": "AAPG, Methods in Exploration: Basic Petroleum Geoscience, Memoir 89",
+      "locator": "aapg.org",
+      "type": "Technical Standard",
+      "supports": "Geological correlation, mudlogging shows, and DST interpretation"
+    },
+    {
+      "key": "[SPE-Subsurface]",
+      "citation": "SPE, Subsurface Geoscience Competency Management Matrix, 2021",
+      "locator": "spe.org",
+      "type": "Professional Framework",
+      "supports": "Petroleum systems, risking, and subsurface mapping"
+    },
+    {
+      "key": "[PPDM-Standards]",
+      "citation": "PPDM Association, What is a Well? Standards for Well Identification",
+      "locator": "ppdm.org",
+      "type": "Data Standard",
+      "supports": "Stratigraphic nomenclature, well headers, and scout ticket data"
+    },
+    {
+      "key": "[USGS-Bul2145]",
+      "citation": "USGS, Assessment of Undiscovered Petroleum Resources, Bulletin 2145",
+      "locator": "usgs.gov",
+      "type": "Scientific Methodology",
+      "supports": "Volumetric distribution parameters and geological risking (Pg)"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "SLB Petrel Geological Interpretation user guides, S&P Global Kingdom whitepapers, and AAPG technical archives for \"autonomous legacy well completion card OCR with stratigraphic entity extraction, automated mudlog hydrocarbon show digitization, and multi-operator formation alias harmonization without manual table import\".",
+    "result": "Negative Search, 2026-09. Commercial geological modeling packages require structured ASCII or CSV tables for well tops; none autonomously ingest scanned typewritten scout cards, digitize raster mudlog cutting descriptions, or harmonize conflicting historical formation aliases without manual human transcription."
+  },
+  "line": "\"In exploration geology, the biggest discoveries aren't always made with a new fifty-million-dollar seismic survey; they are made by the geologist who has the time to read a forgotten 1974 mudlog that noted free oil bleeding from a fractured shale that everyone else drilled right past.\"",
+  "openQuestions": [
+    "How many legacy exploration wells in your acreage have never been mapped into Petrel because the data is trapped in paper scout cards?",
+    "How often do you find that different vintage wells in your project database use three different names for the exact same target sandstone?",
+    "What percentage of your pre-drill depth errors are driven by outdated regional velocity models that were never recalibrated after previous offset wells were drilled?"
+  ]
+};

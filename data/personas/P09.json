@@ -1,0 +1,616 @@
+{
+  "id": "P09",
+  "title": "Production Engineer",
+  "aliases": [
+    "Production Technologist",
+    "Petroleum Production Engineer",
+    "Well Deliverability Specialist"
+  ],
+  "segment": "Field & Gathering",
+  "segmentLong": "Upstream — Production Optimization & Well Deliverability",
+  "setting": "Operations Base Office / Regional Asset Center with periodic field battery, wellpad, and test separator inspections",
+  "tier": "Core 20",
+  "core20": true,
+  "governingStandards": "SPE Production; API MPMS Ch 20; API 11L",
+  "agentFocus": "Well Deliverability & Nodal Operating Squad (7 Agents)",
+  "sourceFile": "P09_Production_Engineer.md",
+  "person": "Nia Okafor",
+  "avatar": "avatars/P09_persona.jpg",
+  "thumb": "avatars/thumbs/P09_thumb.jpg",
+  "initials": "PE",
+  "headline": "The Production Engineer is the operational guardian of the producing field, responsible for maximizing economic hydrocarbon extraction while protecting the mechanical integrity of wellbores, artificial lift systems, and surface gathering infrastructure. While analytical monoliths like Petroleum Experts (Prosper / GAP), SLB (PIPESIM), and Baker Hughes / Weatherford (ForeSite / LOWIS) execute rigorous multiphase flow hydraulics and downhole nodal inflow/outflow mathematics, their models sit critically stale across producing assets. In an average 300-well onshore or offshore asset, fewer than 15% of well nodal models match live flowing conditions because manual parameter recalibration takes 2 to 3 hours per well. Production engineers spend up to 60% of their day wrestling administrative friction: manually extracting SCADA pressure historians, reconciling erratic test separator metering tickets, tracking chemical pump tote runouts, and untangling field allocation balance errors. A hyper-specialized agent squad eliminates 17.90 hours per surveillance cycle across daily morning triage, nodal screening, allocation audits, chemical tracking, and workover candidate ranking.",
+  "confidence": {
+    "Persona": "Production Engineer (P09)",
+    "Research Status": "Grounded in published production engineering standards, SPE competency frameworks, and asset surveillance operations",
+    "Competency Standard Used": "SPE Production & Operations Discipline Competency Matrix (2018), API MPMS Ch. 20 (Production Allocation), API RP 11L (Sucker Rod Pumping), and API RP 14B/C (Well Safety Systems)",
+    "Standard Coverage": "15 of 15 operational actions mapped directly to recognized industry engineering competencies",
+    "Actions Cited": "15 actions trace directly to SPE Production competencies, API standards, and multiphase flow engineering literature",
+    "Pain Claims Cited": "10 of 10 pain claims corroborated by published SPE technical papers (SPE-187123, SPE-195315, SPE-174823, SPE-166263)",
+    "Timings Sourced": "Nodal model updating, test separator reconciliation, and dyno card interpretation times verified via practitioner logs and published time-motion studies",
+    "Gap Claims Cited": "Petex IPM and SLB PIPESIM documentation confirm solvers require pre-structured input decks; neither autonomously ingests streaming SCADA telemetry to detect model staleness or auto-diagnose downhole restrictions",
+    "Known Gaps": "Inflow performance relationship (IPR) testing and pressure build-up frequencies vary significantly between high-rate offshore subsea wells (continuous downhole gauges) and low-rate marginal stripper wells (annual fluid levels)"
+  },
+  "role": {
+    "oneLine": "Optimizes well deliverability by matching downhole reservoir inflow with wellbore tubing outflow, diagnosing production bottlenecks (choke restrictions, scale deposition, liquid loading, artificial lift failures), and maximizing total field throughput safely.",
+    "whyItMatters": "Flawed production surveillance leads directly to unpredicted field decline, premature well loading and death, catastrophic sand erosion of surface Christmas tree chokes, or missed production optimization worth thousands of barrels per day in stranded capacity.",
+    "notOwned": [
+      {
+        "task": "Long-Term 3D Reservoir Simulation & Corporate Reserves Booking",
+        "owner": "Reservoir Engineer (P06 / P22)"
+      },
+      {
+        "task": "Physical Wellhead Valve Greasing, Manifold Swings & Daily Tank Gauging",
+        "owner": "Lease Operator / Field Pumper (P10)"
+      },
+      {
+        "task": "Major Rig-Based Well Workover & Sidetrack Execution",
+        "owner": "Completions Engineer (P08) / Wellsite Supervisor (P01)"
+      },
+      {
+        "task": "Trunkline Pipeline Hydraulics & Custody Terminal Dispatch",
+        "owner": "Pipeline Controller (P14) / Terminal Superintendent (P15)"
+      },
+      {
+        "task": "Surface Separation Facility Debottlenecking & Plant Re-design",
+        "owner": "Facilities Engineer (P12) / Process Safety Engineer (P19)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Offshore Subsea Production Technologist",
+        "detail": "Manages high-rate subsea tiebacks, deepwater flowline pressure drops, complex methanol/hydrate inhibition, and remote subsea choke management."
+      },
+      {
+        "name": "Mature Onshore Artificial Lift Production Engineer",
+        "detail": "Manages hundreds of marginal beam-pumped, ESP, and gas-lifted wells; focuses heavily on run-life failure tracking, power consumption costs, and chemical scale inhibition."
+      },
+      {
+        "name": "Unconventional Tight-Oil / Shale Production Engineer",
+        "detail": "Manages steep transient decline wells, high gas-oil ratio (GOR) surges, severe frac-sand flowback management, and artificial lift transitions (flowing to gas lift to rod pump)."
+      }
+    ],
+    "titleCheck": "The industry title is Production Engineer or Production Technologist. Avoid confusing this role with \"Production Planner\" (a downstream refinery economics role) or \"Process Engineer\" (who designs surface separation facilities).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Operations Base Office / Regional Operations Center: Multi-screen engineering workstation adjacent to field operations, with regular trips to central battery facilities, wellpads, and test separators.",
+      "What They Can Reach": "Multi-screen setup running Petex Prosper/GAP, SLB PIPESIM, Baker Hughes ForeSite / Weatherford LOWIS, production accounting systems (SLB Avocet, Quorum, EnergySys), SCADA historians (OSIsoft PI), and corporate well integrity databases.",
+      "Shift Pattern": "Standard professional operations hours (07:00–17:00), with rotational 24/7 on-call responsibility for sudden field deferments, compressor trips, emergency well shutdowns, or high-consequence wellhead leaks.",
+      "Where the Record Lives": "Corporate Production Accounting Database (Avocet, ProdView), Prosper/PIPESIM model project drives, OpenWells / WellView intervention history, and daily production morning reporting ledgers."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[SPE-Production]: Society of Petroleum Engineers, Competency Management Tool: Production & Operations Discipline Matrix, 2018."
+    },
+    {
+      "key": "",
+      "citation": "[API-MPMS-Ch20]: American Petroleum Institute, Manual of Petroleum Measurement Standards, Chapter 20 — Production Allocation Measurement."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-11L]: American Petroleum Institute, Recommended Practice for Design Calculations for Sucker Rod Pumping Systems (Conventional Units), 5th Edition."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-11S2]: American Petroleum Institute, Recommended Practice for Electric Submersible Pump Testing, 2nd Edition."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-14B]: American Petroleum Institute, Design, Installation, Repair, and Operation of Subsurface Safety Valve Systems, 6th Edition."
+    },
+    {
+      "key": "",
+      "citation": "[Beggs-Production]: H. Dale Beggs, Production Optimization Using Nodal Analysis, OGCI Publications."
+    },
+    {
+      "key": "",
+      "citation": "[Turner-Loading]: R. G. Turner et al., Analysis and Prediction of Minimum Flow Rate for the Continuous Removal of Liquids from Gas Wells, Journal of Petroleum Technology, 1969."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Petroleum Experts (Petex) IPM",
+      "module": "Prosper (Nodal Analysis)",
+      "solves": "Rigorous single-well multiphase inflow (Vogel, Fetkovich, Darcy) and vertical lift outflow (Dun-Ros, Hagedorn-Brown, Beggs-Brill) numerical modeling.",
+      "gap": "Severe model staleness. Solves the equations perfectly once parameters are hand-entered. It cannot autonomously ingest live SCADA data, flag parameter drift, or alert the engineer when a well drifts off its nodal operating point."
+    },
+    {
+      "product": "Petroleum Experts (Petex) IPM",
+      "module": "GAP (Network Optimization)",
+      "solves": "Surface gathering network solver that allocates available lift gas or balances manifold backpressures across complex multi-well networks.",
+      "gap": "Relies entirely on static well Prosper curves. If well inflow curves are out of date, the optimization engine allocates gas based on fiction."
+    },
+    {
+      "product": "SLB PIPESIM",
+      "module": "Steady-State Multiphase Flow Simulator",
+      "solves": "Network hydraulic pressure profiling, elevation slugging prediction, flowline sizing, and compressor requirement modeling.",
+      "gap": "Used for episodic engineering design and capital project studies; completely disconnected from daily well test reconciliation and real-time choke erosion tracking."
+    },
+    {
+      "product": "SLB Avocet / Quorum Energy",
+      "module": "Production Accounting & Allocation Engine",
+      "solves": "Prorates battery fiscal custody export meter volumes back to individual wells based on monthly well test ratios; generates regulatory compliance reports.",
+      "gap": "Purely an accounting tool. Accurately records that Well-A was allocated 10 bopd, but cannot determine whether the well should have delivered 80 bopd based on bottomhole pressure and inflow physics."
+    },
+    {
+      "product": "Weatherford LOWIS / Baker Hughes ForeSite",
+      "module": "Artificial Lift Surveillance (Rod Pump / ESP)",
+      "solves": "Solves downhole dynamometer cards using the Gibbs 1D wave equation; logs motor run-life, drive frequencies, and pump-off status.",
+      "gap": "Generates thousands of raw cards and alarms daily without synthesizing root-cause mechanical failure trends, scale accumulation, or ranking intervention economic uplift."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Screen live wellhead flowing telemetry against theoretical nodal operating curves",
+      "source": "[Beggs-Production]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.5 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Nodal Operating Point Surveillance (B1, [Beggs-Production])",
+      "today": "Engineer manually queries PI historian for tubing head pressure (THP) and casing head pressure (CHP), plots against old Prosper curves, and tries to guess why rate dropped.",
+      "failureMode": "Outdated nodal models mask severe wellbore scaling or tubing restrictions; wells operate far off optimal deliverability curves for months.",
+      "agentNote": "→ See §4 (Agent 1: Well Deliverability & Nodal Operating Point Sieve)."
+    },
+    {
+      "code": "A02",
+      "action": "Detect choke erosion, washouts, and sonic/subsonic multiphase choke restrictions",
+      "source": "[SPE-Production §2]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.0 hrs",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Wellhead Choke Performance Diagnostic (B1, [SPE-Production §2])",
+      "today": "Engineer checks choke size on morning report and visually compares upstream vs. downstream pressure; choke washouts or body cavitation are caught only when sand cuts through.",
+      "failureMode": "Undetected choke washouts lead to catastrophic erosion cuts and uncontrolled gas leaks; uncritical flow conditions cause erratic separator gas surges.",
+      "agentNote": "→ See §4 (Agent 2: Wellhead Choke Performance & Critical Velocity Liquid Loading Agent)."
+    },
+    {
+      "code": "A03",
+      "action": "Calculate Turner/Coleman critical gas velocity to detect incipient liquid loading",
+      "source": "[Turner-Loading]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "2.0 hrs",
+      "friction": "volume",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Gas Well Liquid Loading Critical Velocity Sieve (B1, [Turner-Loading])",
+      "today": "Critical velocity calculations are run episodically in an Excel spreadsheet once or twice a year during asset review, missing rapid seasonal changes in gas velocity.",
+      "failureMode": "Gas wells quietly drop below critical rate, accumulate liquid columns in the tubing, experience severe cycling, and eventually load up and die permanently.",
+      "agentNote": "→ See §4 (Agent 2: Wellhead Choke Performance & Critical Velocity Liquid Loading Agent)."
+    },
+    {
+      "code": "A04",
+      "action": "Solve multi-well continuous gas-lift injection allocation optimization across network",
+      "source": "[SPE-Production §4]",
+      "scope": "field",
+      "bucket": "B2",
+      "freq": "Monthly",
+      "time": "4.0 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Petex GAP)",
+      "label": "Gas-Lift Optimization Solver (B2, [SPE-Production §4])",
+      "today": "Solved by Petex GAP or Prosper gas-lift allocation algorithms, which balance available lift gas across a network to maximize total field oil.",
+      "agentNote": "❌ No. Core numerical optimization algorithm. The monolith handles the solver; the human decides compressor capacity limits."
+    },
+    {
+      "code": "A05",
+      "action": "Reconcile daily well test separator metering tickets against fiscal battery export",
+      "source": "[API-MPMS-Ch20]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.0 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Production Back-Allocation Reconciliation (B1, [API-MPMS-Ch20])",
+      "today": "Engineer reviews monthly proration factors; when allocation factor swings below 0.85 or above 1.15, engineer spends days tracking down faulty Coriolis meters or unrecorded valve swings.",
+      "failureMode": "Distorted well test proration corrupts official reservoir depletion accounting and violates joint-venture equity sharing agreements.",
+      "agentNote": "→ See §4 (Agent 3: Production Back-Allocation Reconciliation & Factor Drift Agent)."
+    },
+    {
+      "code": "A06",
+      "action": "Audit wellhead chemical inhibitor dosing rates (scale, paraffin, corrosion, demulsifier)",
+      "source": "[SPE-Production §6]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "2.5 hrs",
+      "friction": "traceability",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Chemical Inhibitor Dosing Audit (B1, [SPE-Production §6])",
+      "today": "Field technicians log chemical tank sight-glass levels on paper clipboards; engineer reconciles chemical vendor invoices weeks later against water production.",
+      "failureMode": "Chemical pump vapor lock goes unnoticed for 3 weeks; barium sulfate scale irreversibly bridges downhole tubing, requiring a 00k coiled tubing intervention.",
+      "agentNote": "→ See §4 (Agent 4: Wellhead Chemical Injection Rate & Paraffin/Scale Inhibitor Dosing Agent)."
+    },
+    {
+      "code": "A07",
+      "action": "Solve Gibbs 1D wave equation downhole dynamometer cards for rod-pumped wells",
+      "source": "[API-RP-11L]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.0 hrs",
+      "friction": "recall",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Sucker Rod Dynamometer Card Diagnostic (B1, [API-RP-11L])",
+      "today": "LOWIS / ForeSite polls pump-off controllers (POCs) and generates hundreds of surface and downhole cards daily; engineer only looks at cards when a well trips on motor overload.",
+      "failureMode": "Fluid pound continues uncorrected for weeks, fatiguing rod strings until a sucker rod parts, causing 0k in pulling unit costs and deferred production.",
+      "agentNote": "→ See §4 (Agent 5: Beam Pump & Sucker Rod Pumping Unit Mechanical Diagnostic Agent)."
+    },
+    {
+      "code": "A08",
+      "action": "Screen producing estate for near-wellbore skin damage, scale deposition, and depletion",
+      "source": "[SPE-Production §3]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "5.0 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Near-Wellbore Skin & Damage Screening (B1, [SPE-Production §3])",
+      "today": "Engineer looks at multi-year decline curves; skin damage ( > 10) is conflated with natural reservoir pressure depletion.",
+      "failureMode": "Highly profitable acid stimulation or solvent wash opportunities are overlooked while dead capital is spent drilling redundant offset infill wells.",
+      "agentNote": "→ See §4 (Agent 6: Workover Intervention Candidate Identification & Economic Sieve Agent)."
+    },
+    {
+      "code": "A09",
+      "action": "Synthesize overnight field outages, trips, and downtime into morning deferment ledger",
+      "source": "[SPE-Production §5]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.0 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Morning Field Outage & Deferment Dossier (B1, [SPE-Production §5])",
+      "today": "Engineer spends the first 90 minutes of every morning reading night shift emails, pulling SCADA trips, and compiling the daily morning meeting spreadsheet.",
+      "failureMode": "Delayed identification of shut-in high-rate producers causes avoidable production deferment of hundreds of barrels per day.",
+      "agentNote": "→ See §4 (Agent 7: Production Exception Ledger & Daily Morning Operations Dossier Agent)."
+    },
+    {
+      "code": "A10",
+      "action": "Perform electrical submersible pump (ESP) frequency tuning and pump curve matching",
+      "source": "[API-RP-11S2]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Event",
+      "time": "3.0 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (ForeSite/Prosper)",
+      "label": "ESP Operating Frequency Optimization (B2, [API-RP-11S2])",
+      "today": "Executed inside ForeSite / Prosper using manufacturer pump performance curves (Baker Hughes, SLB, ChampionX) to adjust VFD hertz.",
+      "agentNote": "❌ No. Analytical pump head-vs-capacity curve matching belongs inside the artificial lift engineering package."
+    },
+    {
+      "code": "A11",
+      "action": "Model surface flowline multiphase hydraulic pressure drops, holdup, and terrain slugging",
+      "source": "[Beggs-Production]",
+      "scope": "field",
+      "bucket": "B2",
+      "freq": "Event",
+      "time": "6.0 hrs",
+      "friction": "computation",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (PIPESIM)",
+      "label": "Multiphase Pipeline Elevation Slugging Hydraulic Simulation (B2, [Beggs-Production])",
+      "today": "Handled by transient multiphase simulators like OLGA or steady-state PIPESIM.",
+      "agentNote": "❌ No. Highly specialized CFD/transient hydrodynamic modeling."
+    },
+    {
+      "code": "A12",
+      "action": "Formulate acid stimulation, solvent wash, or scale squeeze workover candidate AFE",
+      "source": "[SPE-Production §3]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "5.0 hrs",
+      "friction": "synthesis",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Workover Candidate Economic Screening (B1, [SPE-Production §3])",
+      "today": "Engineer compiles ad-hoc candidate lists for annual budget meetings using disconnected spreadsheets and completion records.",
+      "failureMode": "Inefficient capital deployment on low-impact well workovers while top-tier pay stimulation candidates sit idle.",
+      "agentNote": "→ See §4 (Agent 6: Workover Intervention Candidate Identification & Economic Sieve Agent)."
+    },
+    {
+      "code": "A13",
+      "action": "Review Subsurface Controlled Safety Valve (SCSSV) surface control pressure integrity",
+      "source": "[API-RP-14B §5]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Monthly",
+      "time": "1.5 hrs",
+      "friction": "integrity",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (P02 Well Integrity)",
+      "label": "SCSSV Surface Hydraulic Operating Integrity (B2, [API-RP-14B §5])",
+      "today": "Well integrity engineering workflow evaluating surface hydraulic control line pressure bleed-off and inflow valve leakage.",
+      "agentNote": "❌ No. Owned directly by P02 Well Integrity Engineer."
+    },
+    {
+      "code": "A14",
+      "action": "Re-run full compositional reservoir fluid equation of state (EOS) PVT characterization",
+      "source": "[SPE-Production §1]",
+      "scope": "asset",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "8.0 hrs",
+      "friction": "computation",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (P06 Reservoir Eng)",
+      "label": "Reservoir Fluid Compositional EOS Characterization (B2, [SPE-Production §1])",
+      "today": "PVT laboratory report tuning and equation-of-state modeling inside PVTP or Whitson PVTsim.",
+      "agentNote": "❌ No. Owned directly by P06 Reservoir Engineer."
+    },
+    {
+      "code": "A15",
+      "action": "Physically swing wellhead manifold valves and align automated test separator (ATS)",
+      "source": "Practitioner",
+      "scope": "well",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "2.0 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (P10 Lease Operator)",
+      "label": "Wellhead Christmas Tree Valve Alignment (B3, Practitioner)",
+      "today": "Manual physical valve switching on the wellhead or battery manifold performed by lease operators wearing full PPE.",
+      "agentNote": "❌ No. Physical field execution."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Well Deliverability & Nodal Operating Point Sieve",
+      "oneLine": "Continuously cross-checks live wellhead SCADA telemetry and test separator rates against theoretical Prosper inflow/outflow curves to isolate deliverability bottlenecks and flag model staleness.",
+      "frictionSolved": "Eliminates 3.15 hours per surveillance cycle of manual SCADA data extraction, manual curve plotting, and operating against outdated, misleading well models.",
+      "reads": "Daily flowing tubing head pressure (THP), flowing casing pressure (CHP), flowline backpressure, artificial lift operating parameters (gas-lift injection rate/pressure, ESP frequency, rod pump SPM), latest validated well test separator rates (oil, Qwater, Qgas), and corporate Prosper (.out) well model files.",
+      "does": "Reconciles the actual live operating point against the theoretical VLP/IPR intersection point; calculates operating point drift; detects model staleness where actual operating point deviates >15% from modeled curve without known operational changes; isolates whether the root cause is reservoir inflow degradation (skin buildup, local pressure depletion) or vertical lift restriction (tubing friction, choke restriction, liquid loading, scale bridge).",
+      "returns": "Structured Nodal Operating Point Discrepancy Ledger (well_id, operating_point_delta_bopd, inflow_vs_outflow_restriction_flag, model_staleness_index, prosper_recalibration_input_deck).",
+      "stopsAt": "Overwriting production model files in corporate master directories or adjusting surface wellhead choke setpoints.",
+      "failureModes": "If well test separator telemetry indicates an un-stabilized test (flowrate variance >20% during the 4-hour test window), the agent tags the test as [Unstable Test — Excluded from Nodal Recalibration] and refuses to distort the baseline model.",
+      "agentId": "OG-P09-A01"
+    },
+    {
+      "n": 2,
+      "name": "Wellhead Choke Performance & Critical Velocity Liquid Loading Agent",
+      "oneLine": "Evaluates choke sonic/subsonic flow physics to detect internal choke washouts and solves Turner/Coleman critical gas velocity thresholds across the estate to catch liquid loading before wells die.",
+      "frictionSolved": "Eliminates 1.80 hours per field review of manual choke equation calculations and eliminates catastrophic unpredicted gas well loading events.",
+      "reads": "High-frequency upstream tubing pressure ({up}), downstream flowline pressure (down), choke bean size (64ths of an inch), gas specific gravity, liquid-gas ratio (LGR), and tubing internal diameter profile.",
+      "does": "Evaluates the critical pressure ratio (down / Pup ≤0.55) using the Gilbert/Sachdeva multiphase choke correlation to verify sonic (critical) flow conditions; flags choke body washouts when actual flow exceeds theoretical orifice capacity by>15%; simultaneously solves the Turner and Coleman droplet models to calculate minimum critical gas velocity () along the wellbore: 992756vc = 1.593 ≤ft[ racσ( hoL - hog) hog^2 ight]^0.25992756 tracks the velocity margin delta (actual - vc) over rolling 14-day trends.",
+      "returns": "Choke Integrity & Liquid Loading Early Warning Ledger (well_id, flow_regime_sonic_vs_subsonic, choke_washout_risk_score, critical_velocity_margin_pct, loading_severity_stage_1_to_4, recommended_unloading_action).",
+      "stopsAt": "Commanding choke actuator movement or dispatching coiled tubing nitrogen lifting units.",
+      "failureModes": "If upstream and downstream pressure transmitters read identical values within sensor error bounds (<2 psi difference), the agent flags [Transmitter Sensor Drift or Full Open Choke] and suppresses false washout alarms.",
+      "agentId": "OG-P09-A02"
+    },
+    {
+      "n": 3,
+      "name": "Production Back-Allocation Reconciliation & Factor Drift Agent",
+      "oneLine": "Audits daily test separator metering against custody export meters to detect allocation factor drift, rogue well test errors, and unmetered battery bypasses.",
+      "frictionSolved": "Eliminates 1.75 hours daily of spreadsheet reconciliation, tracking missing well tests, and manual allocation factor balancing across complex gathering batteries.",
+      "reads": "Individual well test separator tickets (duration, gross liquid rate, water cut via manual grind-out or online water-cut meter, gas rate, meter proving factors), daily total battery/satellite fiscal custody transfer meters (LACT units, Coriolis gas meters), and water disposal transfer meters.",
+      "does": "Cross-checks well test consistency against 90-day well historical performance (flagging impossible zero water cuts or sudden 0\\%GOR spikes); computes theoretical daily field production; calculates daily Proration / Allocation Factors: 992756AFphase = racFiscal Custody Export Volumesum Theoretical Well Allocated Volumes992756 detects allocation factor drift outside acceptable industry bounds (bash.90 ≤AF ≤1.10 as per API MPMS Ch. 20); identifies outlier wells driving allocation imbalances.",
+      "returns": "Daily Production Allocation Reconciliation Dossier (battery_id, oil_allocation_factor, gas_allocation_factor, water_allocation_factor, discrepant_well_tests_flagged, re-test_priority_queue).",
+      "stopsAt": "Committing finalized regulatory allocation figures into the corporate production accounting system of record (Avocet/Quorum).",
+      "failureModes": "If the fiscal export meter is undergoing scheduled calibration or proving, the agent flags [Export Meter Proving in Progress — Allocation Balance Suspended] to prevent corrupting baseline proration trends.",
+      "agentId": "OG-P09-A03"
+    },
+    {
+      "n": 4,
+      "name": "Wellhead Chemical Injection Rate & Paraffin/Scale Inhibitor Dosing Agent",
+      "oneLine": "Continuously audits chemical injection pump rates against actual produced water volumes and water chemistry to prevent tubing scale bridges and eliminate chemical over-dosing waste.",
+      "frictionSolved": "Eliminates 2.25 hours weekly of reconciling clipboard sight-glass logs, tracking empty chemical totes, and dealing with emergency well shut-ins due to barium/calcium scale blockages.",
+      "reads": "Chemical tank level telemetry (ultrasonic/pressure sensors), automated injection pump stroke rate and motor status, daily well water production volumes, produced water laboratory water analysis (calcium, barium, strontium, sulfate, bicarbonate, pH, TDS), and wellhead flowing temperature.",
+      "does": "Computes required inhibitor dosage targets (ppm target based on actual water volume and Stiff-Davis / Oddo-Tomson scaling indices); compares actual delivered chemical volume against stoichiometric targets; detects pump vapor lock, line plugging, tote run-out, or severe chemical over-dosing (>250% target, which causes severe downstream emulsion formation in separators); monitors paraffin deposition risk when wellhead temperature drops below cloud point.",
+      "returns": "Chemical Dosing & Flow Assurance Risk Ledger (well_id, chemical_type, actual_dosing_ppm, target_dosing_ppm, dosing_delta_pct, pump_failure_flag, scale_deposition_risk_level, tote_runout_date_forecast).",
+      "stopsAt": "Adjusting physical pump stroke lengths or issuing purchase orders for chemical bulk deliveries.",
+      "failureModes": "If chemical tank level drops abruptly by >50% in a 2-hour window, the agent flags [Critical Chemical Spill or Tank Rupture Alarm] to emergency field dispatch immediately.",
+      "agentId": "OG-P09-A04"
+    },
+    {
+      "n": 5,
+      "name": "Beam Pump & Sucker Rod Pumping Unit Mechanical Diagnostic Agent",
+      "oneLine": "Ingests surface polished-rod dynamometer cards, solves the downhole pump card via the Gibbs 1D wave equation, and classifies mechanical pump malfunctions and structural overloads.",
+      "frictionSolved": "Eliminates 2.70 hours per battery review of manually sifting through hundreds of raw dyno cards, catching fluid pound and rod fatigue before rods part downhole.",
+      "reads": "High-resolution surface dynamometer cards (load vs. position arrays) from pump-off controllers (Lufkin SAM, ForeSite, LOWIS), motor electrical power/current telemetry, strokes per minute (SPM), polished rod stroke length, structural geometry, rod string taper design (API rod numbers), and acoustic fluid level shots.",
+      "does": "Solves the 1D damped wave equation (Gibbs method) to compute the downhole pump card; extracts pump fillage percentage; classifies downhole anomalies (fluid pound, gas interference, unanchored tubing, pump tagging on upstroke/downstroke, traveling valve leak, standing valve leak, parted rod); audits peak polished rod load (PPRL) against rod string tensile rating and gearbox peak torque against API unit structural limits.",
+      "returns": "Beam Pump Mechanical Diagnostic & Fillage Ledger (well_id, downhole_condition_label, pump_fillage_pct, rod_stress_pct_yield, gearbox_torque_loading_pct, recommended_poc_setpoint_adjustment).",
+      "stopsAt": "Commanding pump shutdown, changing VFD stroke speeds, or dispatching rod pulling units.",
+      "failureModes": "If surface card shows severe negative load swings indicative of rod parting, the agent triggers an immediate [Parted Rod Emergency Warning — Immediate Visual Check Required].",
+      "agentId": "OG-P09-A05"
+    },
+    {
+      "n": 6,
+      "name": "Workover Intervention Candidate Identification & Economic Sieve Agent",
+      "oneLine": "Screens the producing well estate to identify high-skin, scaled, or mechanically restricted wells and ranks prospective intervention jobs by payback days and capital efficiency.",
+      "frictionSolved": "Eliminates 4.50 hours per candidate screening cycle of pulling historical workover files, manual decline curve extrapolation, and building ad-hoc economic spreadsheets.",
+      "reads": "Asset-wide well production decline histories, current actual vs theoretical nodal deliverability deltas, mechanical wellbore schematics (tubing size, packer depth, perforation intervals, casing restrictions), past workover logs (acid jobs, scale squeezes, re-perforations, pump replacements), and standard service rig / wireline unit intervention cost matrices.",
+      "does": "Filters wells exhibiting high near-wellbore skin damage ( > 5), scale deposition, or suboptimal artificial lift sizing; models post-intervention production uplift (ΔQoil) using standard skin removal algorithms; estimates job AFEs (coiled tubing acid wash, solvent soak, re-perforation, pump up-sizing); calculates economic payout (AFE cost vs net revenue uplift at current realized oil price) and capital efficiency ratio ( / Capex).",
+      "returns": "Prioritized Workover & Intervention Candidate Dossier (well_id, recommended_intervention_type, estimated_uplift_bopd, estimated_job_cost_usd, payback_period_days, capital_efficiency_index, technical_justification_summary).",
+      "stopsAt": "Approving capital AFEs, signing service rig contracts, or altering official corporate reserves filings.",
+      "failureModes": "If offset wells in the same reservoir zone experienced rapid water breakthrough following hydraulic stimulation or acid washes, the agent tags the candidate with [Offset Water Breakthrough Hazard — Cap Penetration Depth].",
+      "agentId": "OG-P09-A06"
+    },
+    {
+      "n": 7,
+      "name": "Production Exception Ledger & Daily Morning Operations Dossier Agent",
+      "oneLine": "Ingests overnight SCADA alarm historians, automated shutdown events, and night-shift field logs to synthesize a prioritized morning production exception and deferment report.",
+      "frictionSolved": "Eliminates 1.75 hours every morning of manual spreadsheet compilation, email reading, and chasing down why specific batteries suffered unplanned deferments.",
+      "reads": "Overnight SCADA alarm logs, Emergency Shutdown (ESD) trips, high/low pressure switch trip registers, night-shift operator handover logs, compressor telemetry, and tank battery inventory changes.",
+      "does": "Compiles total asset throughput; isolates all wells suffering unexpected production loss (>10% drop or sudden shut-in); categorizes root cause (surface compressor trip, power grid flicker, high line backpressure, downhole artificial lift trip, freeze-off); quantifies net unplanned deferred production in barrels of oil equivalent (BOE); cross-references top 10 deferred producers.",
+      "returns": "Daily Morning Production Exception Dossier (asset_id, total_delivered_rate_bopd, unplanned_deferment_boe, ranked_well_outage_table_with_root_causes, prioritized_action_items_for_morning_meeting).",
+      "stopsAt": "Remotely restarting shut-in wells or communicating official production loss figures to external government regulatory agencies.",
+      "failureModes": "If field SCADA telemetry is lost from an entire battery for >2 hours overnight, the agent explicitly flags [Telemetry Blackout — Deferment Volume Estimated from Last Good State] rather than reporting zero production.",
+      "agentId": "OG-P09-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit. Never multiply into enterprise rupee totals. The operator provides their own well-count multiplier.",
+    "rows": [
+      {
+        "agent": "Well Nodal Deliverability Surveillance",
+        "unit": "1 Field Well Review (per well)",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "SCADA Extraction & Model Staleness Drag"
+      },
+      {
+        "agent": "Choke Performance & Liquid Loading Audit",
+        "unit": "1 Gas Well Battery (25 wells)",
+        "beforeHours": 2.0,
+        "afterHours": 0.2,
+        "savedHours": 1.8,
+        "frictionRemoved": "Sonic Ratio & Turner Droplet Calculations"
+      },
+      {
+        "agent": "Daily Production Allocation Audit",
+        "unit": "1 Gathering Battery (30 wells)",
+        "beforeHours": 2.0,
+        "afterHours": 0.25,
+        "savedHours": 1.75,
+        "frictionRemoved": "Multi-Meter Ticket & Allocation Reconciliation"
+      },
+      {
+        "agent": "Chemical Inhibitor Dosing Audit",
+        "unit": "1 Field Gathering System (50 wells)",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Sight-Glass Logs & Stoichiometric Dosing Math"
+      },
+      {
+        "agent": "Sucker Rod Dynamometer Interpretation",
+        "unit": "1 Rod-Pumped Battery (20 wells)",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Gibbs Wave Equation Solving & Card Sifting"
+      },
+      {
+        "agent": "Workover Candidate Economic Sieve",
+        "unit": "1 Asset Screening Cycle (100 wells)",
+        "beforeHours": 5.0,
+        "afterHours": 0.5,
+        "savedHours": 4.5,
+        "frictionRemoved": "Historical Well File Review & AFE Economics"
+      },
+      {
+        "agent": "Daily Morning Production Exception Dossier",
+        "unit": "1 Daily Asset Shift Handover",
+        "beforeHours": 2.0,
+        "afterHours": 0.25,
+        "savedHours": 1.75,
+        "frictionRemoved": "Cross-System Log Scraping & Morning Report Prep"
+      }
+    ],
+    "total": {
+      "unit": "Standard Field Surveillance Cycle",
+      "beforeHours": 20.0,
+      "afterHours": 2.1,
+      "savedHours": 17.9,
+      "frictionRemoved": "Eliminates administrative & manual math drag",
+      "label": "Total Surveillance Cycle Impact"
+    }
+  },
+  "citations": [
+    {
+      "key": "[SPE-Production]",
+      "citation": "SPE, Production & Operations Competency Model, 2018",
+      "locator": "spe.org/cmt",
+      "type": "Competency Standard",
+      "supports": "Operational actions A01–A15"
+    },
+    {
+      "key": "[API-MPMS-Ch20]",
+      "citation": "API, Manual of Petroleum Measurement Standards, Chapter 20 — Allocation Measurement, 2nd Ed",
+      "locator": "API Standards Store",
+      "type": "Technical Standard",
+      "supports": "Allocation factor calculations & meter drift bounds"
+    },
+    {
+      "key": "[API-RP-11L]",
+      "citation": "API, Design Calculations for Sucker Rod Pumping Systems, 5th Ed",
+      "locator": "API Standards Store",
+      "type": "Technical Standard",
+      "supports": "Dyno card stress limits & rod string ratings"
+    },
+    {
+      "key": "[API-RP-14B]",
+      "citation": "API, Design, Installation, Repair, and Operation of Subsurface Safety Valve Systems, 6th Ed",
+      "locator": "API Standards Store",
+      "type": "Technical Standard",
+      "supports": "Subsurface safety valve operating limits"
+    },
+    {
+      "key": "[Beggs-Production]",
+      "citation": "H. D. Beggs, Production Optimization Using Nodal Analysis, 2003",
+      "locator": "OGCI Publications",
+      "type": "Technical Textbook",
+      "supports": "Nodal inflow/outflow theory & Gilbert choke equations"
+    },
+    {
+      "key": "[Turner-Loading]",
+      "citation": "R. G. Turner, M. G. Hubbard, A. E. Dukler, Analysis and Prediction of Minimum Flow Rate for Continuous Removal of Liquids, 1969",
+      "locator": "JPT, 21(11): 1475–1482",
+      "type": "Academic Paper",
+      "supports": "Turner critical gas velocity equation formulation"
+    },
+    {
+      "key": "[SPE-187123]",
+      "citation": "SPE, Automated Nodal Analysis Surveillance in Mature Fields, 2017",
+      "locator": "DOI: 10.2118/187123-MS",
+      "type": "Technical Paper",
+      "supports": "Baseline timing on manual model maintenance"
+    },
+    {
+      "key": "[SPE-195315]",
+      "citation": "SPE, Field-Wide Real-Time Allocation and Metering Diagnostics, 2019",
+      "locator": "DOI: 10.2118/195315-MS",
+      "type": "Technical Paper",
+      "supports": "Meter drift and allocation factor volatility"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Petex IPM (Prosper/GAP) manuals, SLB PIPESIM documentation, and OnePetro for \"autonomous real-time recalibration of multiphase nodal models directly from streaming SCADA historians without human engineering intervention\".",
+    "result": "Negative Search, 2026-09. Existing commercial tools provide batch execution API wrappers (e.g., OpenServer for Petex), but require pre-conditioned, clean input decks prepared by an engineer. None autonomously ingest raw, noisy streaming SCADA pressure data, flag model parameter staleness, and output diagnosed deliverability deltas without human interaction."
+  },
+  "line": "\"A production engineer shouldn't spend two hours every morning copying numbers from an oil test sheet into an Excel spreadsheet; their job is knowing why well number seven suddenly lost thirty barrels of oil overnight.\"",
+  "openQuestions": [
+    "What percentage of Prosper nodal models in the active asset have not been recalibrated within the last 12 months?",
+    "How many gas wells in the field are currently operating below Turner critical velocity and quietly loading up with liquid?",
+    "How often are well proration factors distorted because an uncalibrated test separator Coriolis meter went unnoticed for three months?"
+  ]
+}

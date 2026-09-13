@@ -1,207 +1,325 @@
-# Deck Audit — Working Checklist
+# Code Audit — O&G Agentic Transformation Deck
 
 **Repo:** `O&G_slidedeck_agentic_transformation`
-**Baseline commit:** `80bd9e4`
-**Scan date:** 2026-09-11
-**Scope:** 28 files — `final_slides/*.html` (non-LOCKED), `working_deck/pages/*.html`, `index.html`, `deck.html`, `working_deck/index.html`, `personas/persona.html`
-
-## How to use this file
-
-Work **top to bottom**. Each item is sized to be finished in one pass. After completing an item, change `- [ ]` to `- [x]` and add the commit short-SHA in the trailing `→` slot.
-
-Re-run the scanner after each fix to confirm the number moved:
-
-```
-node /usr/local/google/home/amandeepsinghs/.gemini/jetski/brain/178c9df6-5a9a-43db-a66b-bc52349e7a41/scratch/audit_scan.js
-```
-
-**Severity key:** 🔴 credibility risk in the room · 🟠 visible defect · 🟡 hygiene / debt
-
-**Progress:** 1 / 64 complete
-
----
-
-# Phase 1 — Theme & Visuals
+**Commit audited:** `53f1076` ("further simplifies v1")
+**Date:** 2026-09-12
+**Method:** 4 parallel audits (architecture, data layer, content drift, frontend runtime). Every claim below is machine-verified with a `file:line` citation.
 
 > [!NOTE]
-> Goal of this phase: the deck should survive a light/dark flip without breaking, and should use one type scale instead of thirty-one. `personas/persona.html` (4 hardcoded colours vs 35 `var()`) is already the standard — everything else is measured against it.
-
-## 1.1 Broken and non-portable asset references
-
-- [ ] 🔴 **`page_06.html` hero proof image points at a laptop-local path.** `working_deck/pages/page_06.html` references `file:///usr/local/google/home/amandeepsinghs/Downloads/Petrophysicist-…`. This renders as a broken image on **any machine but this one** — including the presenting laptop if the file moves. Copy the asset into `assets/media/` and switch to a relative path. *~10 min* →
-- [ ] 🔴 **`index.html` → `page_03.html` 404 from root.** The `stage-02b` section spliced into `index.html` (~L452) carries `href="page_03.html"`, which is relative to `working_deck/pages/`, not the repo root. Clicking the crew-change slide's forward CTA in the compiled shell dead-ends. Fix the href to the in-page anchor (`#stage-03`) or the correct relative path. *Introduced by the stage-02b splice.* *~5 min* →
-- [ ] 🟠 **`slide_08` cannot load its own data file.** `final_slides/slide_08_the_enterprise_chessboard.html` references `data/enterprise_matrix_300.js`, which does not resolve from `final_slides/`. The chessboard is data-driven — this means the standalone slide file is non-functional in isolation. *~10 min* →
-- [ ] 🟠 **`slide_08` references `working_deck/pages/page_06.html`** on a path that does not resolve from `final_slides/`. *~5 min* →
-- [ ] 🟠 **`slide_10` missing image:** `assets/media/retail_agentic/image7.png` does not exist. Either restore the asset or remove the reference. *~5 min* →
-
-## 1.2 Light-theme readiness (hardcoded colours in inline `style` attributes)
+> This file replaces the previous **content / theme / story checklist** (63 open items, baseline `80bd9e4`, scanned 2026-09-11). That checklist covered different ground — number contradictions, light-theme debt, type scale, the missing ask — none of which is re-stated here.
+> Recover it at any time with:
+> ```
+> git show 727ed9e:audit.md > audit_content_2026-09-11.md
+> ```
+> Two of its items were verified fixed before this overwrite: the `index.html → page_03.html` 404 (now absent) and `slide_10`'s missing `image7.png` (file present, 4.57 MB).
 
 > [!IMPORTANT]
-> These are `#FFF`, dark-background hexes and `rgba(255,255,255,…)` written directly into `style=""` attributes. They **do not respond to `html.theme-light`**, so every one of them is a patch of dark-theme colour stranded on a light background. `assets/styles.css` already defines the light overrides at L61–77 — the tokens exist, they're just being bypassed.
-
-Counts are `hardcoded / var()`. Fix in this order (worst first, and the two compiled shells are what an executive actually opens):
-
-- [ ] 🔴 **`index.html` — 125 hardcoded / 281 var().** The primary entry point. Biggest single light-theme blocker. *~60 min* →
-- [ ] 🔴 **`deck.html` — 98 / 240.** *~45 min* →
-- [ ] 🔴 **`working_deck/index.html` — 98 / 240.** Likely near-identical to `deck.html`; fix together. *~15 min if done alongside* →
-- [ ] 🟠 **`working_deck/pages/page_02.html` — 49 / 70.** Worst ratio in the deck (41% hardcoded). *~30 min* →
-- [ ] 🟠 **`working_deck/pages/alternate_story.html` — 33 / 49.** The new crew-change slide. Built on the `page_02` boilerplate, so it inherited the problem. Fix it now while it is fresh. *~25 min* →
-- [ ] 🟠 **`working_deck/pages/page_01.html` — 32 / 76.** *~25 min* →
-- [ ] 🟠 **`working_deck/pages/page_09.html` — 32 / 81.** *~25 min* →
-- [ ] 🟡 **`final_slides/slide_09_…` — 27 / 57.** *~20 min* →
-- [ ] 🟡 **`final_slides/slide_02_swiss_cheese` — 26 / 33.** Worst ratio in `final_slides/` (44% hardcoded). *~20 min* →
-- [ ] 🟡 **`working_deck/pages/page_08.html` — 26 / 87.** *~20 min* →
-- [ ] 🟡 **`working_deck/pages/page_03.html` — 25 / 58.** *~20 min* →
-- [ ] 🟡 **`working_deck/pages/page_04.html` — 24 / 72.** *~20 min* →
-- [ ] 🟡 **Remaining files, batched** — `slide_08` (22/80), `page_06` (22/44), `page_05` (19/42), `page_00` (18/37), `page_10` (17/38), `slide_03` (16/45), `slide_04` (15/59), `slide_06` (13/32), `slide_05` (10/29), `slide_00_overview` (9/25), `slide_01` (9/39), `slide_10` (8/25), `page_07` (8/10), `preview_cheese` (8/8), `slide_07` (4/3). *~90 min total* →
-- [ ] 🟡 **Add a regression guard.** Extend `check_polish.js` (or `audit_scan.js`) to **fail** when a file's hardcoded-colour count rises above its recorded baseline. Prevents backsliding. *~20 min* →
-
-## 1.3 Type scale
-
-> [!NOTE]
-> The deck uses **31 distinct pixel sizes**. `personas/persona.html` enforces exactly **8** (`10 / 11.5 / 12.5 / 14 / 16 / 20 / 28 / 40`). That is the target.
->
-> Full census: `8.5(4) 9(10) 9.5(32) 10(84) 10.5(26) 11(227) 11.5(100) 12(80) 12.5(47) 13(203) 13.5(148) 14(81) 14.5(82) 15(32) 15.5(19) 16(43) 16.5(5) 17(2) 17.5(6) 18(17) 18.5(10) 19(25) 20(21) 22(35) 24(15) 26(10) 28(1) 32(10) 36(1) 40(1) 64(15)`
-
-- [ ] 🟠 **Kill the singletons — they are accidents, not decisions.** `28px ×1`, `36px ×1`, `40px ×1`, `17px ×2`, `16.5px ×5`, `17.5px ×6`. Six edits, no visual risk. Start here. *~15 min* →
-- [ ] 🟠 **Collapse the low-count sizes into their nearest neighbour:** `8.5(4)`, `9(10)`, `10.5(26)`, `15.5(19)`, `18.5(10)`, `26(10)`. *~30 min* →
-- [ ] 🟡 **Collapse the mid-tier near-duplicates.** `13 / 13.5 / 14 / 14.5` is 464 declarations spread across four sizes a human cannot tell apart. Same for `11 / 11.5 / 12 / 12.5` (454 declarations). Pick one per band. **This is the single biggest visual-consistency win in the deck.** *~90 min* →
-- [ ] 🟡 **Publish the final scale as CSS custom properties** in `assets/styles.css` (e.g. `--fs-100` … `--fs-800`) and add a scanner check that flags any raw `font-size:` px literal outside the scale. *~30 min* →
-
-## 1.4 Fonts — clean, no action
-
-- [x] ✅ **Font families are already consistent.** Only `var(--font-display)` and `var(--font-mono)` appear across all 28 files. → *verified in scan §4*
-
-> [!WARNING]
-> Correction to earlier project notes: `assets/styles.css` defines `--font-display: "Google Sans"` and `--font-mono: "JetBrains Mono"`. **Not Cabinet Grotesk.** Any doc claiming Cabinet Grotesk for the slide deck is wrong and should be corrected when touched.
-
-- [ ] 🟡 **Correct the Cabinet Grotesk claim** wherever it appears in the repo markdown (`AGENTIC_PITCH_BIBLE.md`, `build.md`, `LOCKED_SLIDES.md` — grep first). *~10 min* →
-
-## 1.5 Theme toggle
-
-- [ ] 🟠 **Verify the dark/light toggle actually works end-to-end** on every page once §1.2 is done. Light theme is the current presenting mode; dark must not be broken by the fixes. Needs a per-page behaviour test (the render harness's `querySelectorAll` returns `[]`, so toggle wiring is never exercised by existing tests — this is why `test_filter.js` exists). *~40 min* →
+> **Currency check, 2026-09-12 (later the same day).**
+> Every **finding** below still stands — none of P0-1…P0-5 or P1-1…P1-7 has been fixed.
+> The **architecture picture** in §1 is now out of date: a research-native persona stack was built after this audit ran. See **§10** for what changed, and re-read §1 with that section beside it.
+> Colour, typography and brand alignment are **deliberately not covered here** — they are in the companion *Style & Formatting Audit*.
 
 ---
 
-# Phase 2 — Content
+## Verdict
 
-## 2.1 Authenticity
+> [!IMPORTANT]
+> **The content is in better shape than the plumbing.** Your recent de-clutter work (slides 05–07) propagated correctly to 100% of live copies, and the 300-touchpoint dataset is *exactly* right — every headline number the deck asserts is correct. The problems are all structural: the deck exists in five partially-overlapping copies, two build scripts will destroy hand-edited work if run, the second half of the deck has no continuous view, and the single most important proof image points at your `~/Downloads` folder.
+
+**Scale of duplication:** every slide 00–05 exists in **5 places**; slides 06–10 in **2 places**; the 300-row dataset in **4 places**; `toggleTheme()` in **17 places**.
+
+---
+
+## 1. Architecture — what is real and what is dead
+
+```mermaid
+flowchart TD
+    subgraph LIVE["LIVE — hand-edited, current"]
+        P["working_deck/pages/page_00..10.html<br/>11 standalone pages<br/>THE ONLY COMPLETE DECK"]
+        IDX["index.html<br/>continuous deck<br/>stages 00-05 + 02b ONLY"]
+        DATA["data/enterprise_matrix_300.js<br/>20x15=300 — VERIFIED CORRECT"]
+        PER["personas/persona.html<br/>LEGACY — deck-row identities<br/>dies in Phase 2"]
+    end
+
+    subgraph NEW["NEW — research-native persona stack (added after this audit)"]
+        PROF["personas/profile.html<br/>33 personas, 232 agents<br/>ONLY AURORA-COMPLIANT FILE"]
+        SPLIT["data/personas/<br/>index.js + P01..P33<br/>68 files, loaded on demand"]
+        EXT["scripts/extract_persona_research.py<br/>generator — single edit point"]
+        PAL["personas/_palette.html<br/>self-grading brand proof sheet"]
+        RES["persona_research/persona_research_output/<br/>33 dossiers — THE SOURCE"]
+    end
+
+
+    subgraph STALE["STALE — looks live, is not"]
+        FS["final_slides/*.html + *.LOCKED.html<br/>23 files — stages 01-04 STALE<br/>README calls this source of truth"]
+        DECK["deck.html<br/>clone of index.html, missing 02b"]
+        WIDX["working_deck/index.html<br/>near-current, missing 02b"]
+        CSV["data/enterprise_matrix_300.csv<br/>32 MALFORMED ROWS"]
+    end
+
+    subgraph DEAD["DEAD — zero references"]
+        SL["slides/ 23 files<br/>working_deck/slides/ 17 files<br/>old 16-slide narrative"]
+        JS["assets/interactive.js 51KB<br/>assets/presenter.js 5KB<br/>loaded by NOTHING"]
+    end
+
+    subgraph GUNS["LOADED GUNS"]
+        B1["build_deck.py<br/>overwrites deck.html"]
+        B2["working_deck/build.py --pages<br/>overwrites ALL 11 pages"]
+        B3["scripts/sync_matrix_data.py<br/>crashes, then corrupts J8"]
+    end
+
+    B1 -->|reads| SL
+    B1 -->|DESTROYS| DECK
+    B2 -->|reads| SL
+    B2 -->|DESTROYS| P
+    B2 -->|DESTROYS| WIDX
+    B3 -->|reads| CSV
+    B3 -->|DESTROYS| DATA
+    P -.->|loads| DATA
+    PER -.->|loads| DATA
+```
+
+### Stage-by-stage sync matrix
+
+| Stage | `index.html` | `deck.html` | `wd/index.html` | `final_slides/` | `wd/pages/` | Status |
+|---|---|---|---|---|---|---|
+| 00 | ✅ | ✅ | ✅ | ✅ | ✅ | in sync |
+| 01 | ✅ | ✅ | ✅ | 🟠 **stale** | ✅ | fragment stale |
+| 02 | ✅ | ✅ | ✅ | 🟠 **stale** | ✅ | fragment stale |
+| **02b** | ✅ only here | ⛔ | ⛔ | ⛔ | 🟡 `alternate_story.html` | **orphan** |
+| 03 | ✅ | 🟠 **stale** | ✅ | 🟠 **stale** | ✅ | 2 stale |
+| 04 | ✅ | 🟠 **stale** | ✅ | 🟠 **stale** | ✅ | 2 stale |
+| 05 | ✅ | ✅ | ✅ | ✅ | ✅ | in sync |
+| 06 | ⛔ | ⛔ | ⛔ | ✅ | ✅ | only 2 copies |
+| 07 | ⛔ | ⛔ | ⛔ | ✅ | ✅ | only 2 copies |
+| 08 | ⛔ | ⛔ | ⛔ | 🟠 broken | ✅ | **2 implementations** |
+| 09 | ⛔ | ⛔ | ⛔ | 🟡 | ✅ | container differs |
+| 10 | ⛔ | ⛔ | ⛔ | ✅ | ✅ | only 2 copies |
+
+---
+
+## 2. P0 — Critical
+
+### P0-1 · The hero proof image loads from `~/Downloads`
+`working_deck/pages/page_06.html:292`, `final_slides/slide_06_the_petrophysical_ai_agent.html:239`, and its `.LOCKED` twin:
+
+```html
+<img src="file:///usr/local/google/home/amandeepsinghs/Downloads/Petrophysicist-.../3_overlap_detail.png"
+     onerror="this.src='../../../../Downloads/Petrophysicist-.../3_overlap_detail.png';">
+```
+
+This is the **Well A-12 correlation plot** — the single visual that proves the whole thesis. The file is not in the repo. It breaks on every other machine, and browsers block `file://` subresources from an `http://` origin, so it breaks here too the moment you serve the deck. The `onerror` fallback escapes four levels above the repo root and is equally fragile.
+
+**Fix:** the source exists at `~/Downloads/.../outputs/3_overlap_detail.png` (102 KB). Copy to `assets/media/proof/` and use a relative path. ~5 min.
+
+### P0-2 · `working_deck/build.py --pages` destroys the entire deck
+`working_deck/build.py:55` globs `working_deck/slides/slide_*.html` — **17 stale files from the abandoned 16-slide narrative**. Then:
+- `:65-68` overwrites `working_deck/index.html` — **this fires even without `--pages`**
+- `:83-187` overwrites `page_00.html` … `page_10.html` and creates `page_11`…`page_16`
+
+**Blast radius:** all 11 hand-edited pages, including your last three commits of de-clutter work and the 173 KB `page_08.html` chessboard. Worse, alphabetical globbing puts `slide_03_mece_traps` before `slide_03_the_need_criteria`, so **every page from 04 up would show the wrong stage**. It also injects stale JS from `working_deck/footer_template.html:436,547` (old Swiss-cheese strings).
+
+### P0-3 · `build_deck.py` overwrites `deck.html` with the old narrative
+`build_deck.py:111-128` lists 16 legacy files in `slides/`; all 16 exist, so the guard at `:139` passes and it runs. `:155` overwrites `deck.html` with `id="slide-NN"` sections while the generated dock links `#slide-01`…`#slide-16` — **broken nav out of the box**. It also re-injects the removed MEITY badge and "Next:" teasers. (`--legacy` at `:133` imports a non-existent module → `ModuleNotFoundError`.)
+
+### P0-4 · `data/enterprise_matrix_300.csv` is not valid CSV — and the sync script will corrupt J8
+Machine-verified field-count distribution: `{20: 269, 21: 22, 22: 7, 23: 2, 24: 1}` — **32 of 300 rows malformed** by unquoted embedded commas.
+
+- **CSV line 273 (S2):** `action_name` = `Diesel Cetane, Flashpoint & Sulfur Compliance` unquoted → every later column shifts → `capital_at_risk_cr` receives the string `"critical"` → `float()` at `sync_matrix_data.py:70` raises `ValueError`. The sync silently does nothing.
+- **CSV line 144 (J8):** fix S2 and *this* row corrupts next — three unescaped commas shift `agent_registry_id`, and `agentDeploymentStatus` becomes `""`, **destroying `Production (Slide 06 Proven)` on your one real agent.**
+- 30 further rows take the same agent-column corruption.
 
 > [!CAUTION]
-> **Item 2.1.1 is the deck's single largest credibility liability.** If one person in the room hovers a cell and then asks how the number was derived, the answer is "a sine wave." Everything else on this list is smaller than that.
+> **Do not run `python3 scripts/sync_matrix_data.py`.** The script's docstring advertises "edit in Excel → instantly recompile" as the official workflow. That workflow is broken.
 
-- [ ] 🔴 **Slide 09's ₹ figures are generated by a sine function.** `final_slides/slide_09_the_agentic_value_topology.html`:
-  - L524 comment: `// Undulating wave patterns inspired by the natural fluid billowing folds of image78.png`
-  - L533: `let val = 15 + Math.sin(r * 0.42 + c * 0.25) * 8 + Math.cos(c * 0.65 - r * 0.2) * 6;`
-  - L536 / L538: band bumps for the downstream and drilling ridges
-  - L541–553: ~13 hand-set peaks (`if (r === 9 && c === 7) val = 75; // Kansas Petrophysicist Center`, `r===16&&c===0 → 130 // Hydrocracker runaway`)
-  - L601: `title="Row ${r+1}, Col ${c+1}: ₹${val.toFixed(0)} Cr / yr"`
+### P0-5 · Stages 06–10 exist in no continuous deck
+`index.html` has exactly 7 sections and `</main>` at `:942`. Its nav (`:47-52`) lists only 00→05. `deck.html` and `working_deck/index.html` are the same.
 
-  **287 of 300 rupee figures are sine output rendered as financial exposure.** `LOCKED_SLIDES.md:323` files this under a heading reading **"Rigorous Mathematical Grounding."**
+**Consequence:** the "Continuous Deck View ↗" button is a **dead anchor on 5 of 11 pages**. And the two page families disagree on which deck is continuous:
 
-  **Two acceptable fixes:** (a) strip the ₹ from the tooltips and relabel the surface explicitly as an illustrative value *topology*, not a value *estimate* — *~15 min*; or (b) drive the surface from the real `impact` values in `enterprise_matrix_300.js` so every cell is traceable — *~90 min*. Do (a) today regardless; (b) is the better end state. →
-- [ ] 🔴 **Fix the `LOCKED_SLIDES.md:323` "Rigorous Mathematical Grounding" heading.** Whatever is decided above, that heading currently documents fabricated data as rigorous. It is the thing that would be quoted back. *~5 min* →
-- [ ] 🔴 **Replace the Gemini Enterprise placeholder URL.** `https://geminienterprise.google.com/` appears in exactly 3 files: `personas/persona.html` (const `GEMINI_ENTERPRISE_URL`, ~L666–670, carries the comment *"CHANGE THIS to the real workspace address before the deck is shown"*), `final_slides/slide_08_the_enterprise_chessboard.html` (+ its `.LOCKED` copy), `working_deck/pages/page_08.html`. **Blocked: needs the real workspace address from you.** Every "✦ Open in Gemini Enterprise" chip on the persona page is currently a dead end. *~10 min once the URL is known* →
-- [ ] 🔴 **Verify the 27% aged 55+ figure against pib.gov.in.** This is the load-bearing number on the new crew-change slide (`working_deck/pages/alternate_story.html`). Everything else on that slide is sourced; this one is not. If it cannot be sourced, the slide needs a different anchor stat. *~20 min* →
-- [ ] 🟠 **Disclose that 1 of 36 named agents is live.** `plugged` appears exactly once across all 300 rows (`enterprise_matrix_300.js:271`, cell J8). The other 35 are "Planned Wave 1". The deck currently presents 36 named agents without a visible status distinction on the headline surfaces. State it plainly on-slide — an honest "1 live, 35 in Wave 1" is *stronger* than an unqualified 36 that unravels under a question. *~30 min* →
-- [ ] 🟠 **All 20 persona packs are `draft`.** Decide the framing and apply it consistently. Recommendation on record: frame them **permanently as hypotheses**, not as things awaiting "validation" — your own point stands that two domain experts will disagree on tier friction, and it changes company to company and geography to geography, so "validated" is a state that will never honestly arrive. *Decision needed, then ~20 min* →
-- [ ] 🟠 **122 touchpoints have no agent; 6 of 20 disciplines are entirely unassigned; no friction touchpoint has any agent named (71 open).** The chessboard reads as fuller than it is. Either surface the coverage ratio honestly on-slide or narrow the claim. *~30 min* →
-- [ ] 🟡 **Audit remaining unsourced numbers.** Every quantified claim should be traceable to a named source or explicitly labelled as an estimate. The alternate PDF's slide 1 (six leaks, each with a named source — ONGC Annual Report FY25–26, IOCL + Solomon Associates, SPE, BCG, IEA Methane Tracker, CAG Report) is the standard to hit. *~60 min* →
-
-## 2.2 Consistency
-
-> [!IMPORTANT]
-> Each of these is a number the audience hears **once** as a single story but which the deck states **two different ways**. Any one of them, spotted, costs more credibility than it saves effort.
-
-- [ ] 🔴 **`84 Value-Unlock Agents` (slide 09) vs `71 friction bottlenecks` (slide 08).** The CHANGELOG shows 84 was the *old, wrong* friction count; it was corrected to 71 on slide 08 and **slide 09 was never updated**. Straight stale-value bug. *~10 min* →
-- [ ] 🔴 **`r = 0.99` conflates two different quantities.** Appears on s06, s07, `page_06`, `page_07`. The shift-search peak is **0.953**; **0.9899** is the ground-truth QC correlation. Presenting the QC number as the search result overstates the result. Pick the right number for each context and label what it measures. *~20 min* →
-- [ ] 🔴 **`1.48m` vs `1.829m` cable stretch/shift.** `1.48m` on s02, s08, `alternate_story`; `1.829m` on s00, s06, s07. Slide 08's HUD renders `+1.48m`. Three numbers, one story, in the same sitting. Determine which is correct and propagate. *~25 min* →
-- [ ] 🟠 **Kansas peak is `₹45 Cr` on the slide 09 card and `75` in the slide 09 terrain.** Same slide, two values. `LOCKED_SLIDES.md:323` already acknowledges the split. Resolves partly with item 2.1.1. *~10 min* →
-- [ ] 🟠 **Two project IDs.** `og-agentic-ecosystem` (s07, `page_07`) vs `og-enterprise-prod` (s08, `page_08`). Reads as two different deployments. *~10 min* →
-- [ ] 🔴 **MeitY "100% in-country sovereignty" vs a `us-central1` badge.** Sovereignty claim on s03, `page_03`, `index.html`, `deck.html`, `working_deck/index.html`; `us-central1` badge on s07, s08, `page_07`, `page_08`. **For an Indian NOC audience this is the most damaging contradiction in the deck** — it directly negates the compliance claim. Change the badges to an India region or drop the sovereignty claim. *~20 min* →
-- [ ] 🟠 **`final_slides/slide_02` has drifted from `working_deck/pages/page_02.html`.** `page_02` now bridges to the crew change; `slide_02_swiss_cheese.html` and its `.LOCKED` copy still bridge to the 5 Criteria. *Deferred by design* — the right moment to resolve is during the stage renumber (item 2.3.6). *~15 min* →
-- [ ] 🟡 **Sweep for further contradictions after the above land.** Re-run scan §7. *~20 min* →
-
-## 2.3 Simplicity
-
-> [!NOTE]
-> Dead code is not cosmetic here. `page_01.html` and `page_02.html` carry a large orphaned JS blob from the retired 15-slide storyboard. It runs on every page load, references elements that do not exist, and makes every future edit to those files harder to reason about.
-
-- [ ] 🟠 **`page_01.html` — 41 dead `getElementById` targets.** Orphaned JS referencing s5/s11/s13/s14/s2 elements from the retired 15-slide storyboard. **Biggest single cleanup win in the deck.** *~30 min* →
-- [ ] 🟠 **`page_02.html` — 32 dead ids.** Same orphaned blob, below ~L540, sitting underneath the live `setCheeseState()`. Careful: keep `setCheeseState`. *~30 min* →
-- [ ] 🟠 **Retired hero-cockpit JS payload left behind in 5 files.** `hero-cockpit-drawer`, `hero-drawer-body`, `hero-drawer-status`, `hero-drawer-timestamp` in `slide_00_overview.html`, `page_00.html`, `index.html`, `deck.html`, `working_deck/index.html`. Documented as retired at `LOCKED_SLIDES.md:33`. **Note:** the block contains four unrendered demo results with hard rupee figures — read them before deleting in case any number is needed elsewhere. *~25 min* →
-- [ ] 🟡 **Slide 09 dead ids:** `mini-matrix-radar`, `btn-auto-rotate`, `palette-switch-thumb`, `palette-switch-track`, `btn-palette-toggle`, `topology-legend-items`. Plus 4 `-stage`-suffixed palette/legend ids in `page_09.html`. *~20 min* →
-- [ ] 🟡 **Slide 08 dead ids:** `cell-stage-p10-8`, `data-source-indicator-stage`; and in `page_08.html`: `cell-p10-8`, `data-source-indicator`. *~15 min* →
-- [ ] 🟠 **Compiled shells are missing stages 06–10.** `deck.html` and `index.html` contain only stages 00–05 (plus the new `stage-02b` in `index.html` — 7 sections). **Half the deck does not exist in the compiled entry point.** Decide: either compile the full deck, or make it explicit that the standalone pages are the presentation surface and the shells are a partial preview. *~60 min to compile, ~10 min to document* →
-- [ ] 🟡 **Resolve the stage renumber: `stage-02b` → `stage-03`, shifting 03→10 into 04→11.** Touches ~20 files plus LOCKED copies plus nav counters (`3B / 11` is currently a visible fudge). *Deferred until content stops moving — do this last in Phase 2.* *~90 min* →
-- [ ] 🟡 **Decide the fate of `preview_jenga.html`** (20 KB, untracked, looks like a scratch preview) and `working_deck/pages/preview_cheese.html`. Keep-and-track or delete. *~5 min* →
-- [ ] 🟡 **Reconcile `alternate_story.md` with your own draft** if it ever surfaces. The committed version is a reconstruction assembled from your messages, not the draft you wrote — your editor buffer never flushed. Your words go on top, the reconstruction below. *~10 min* →
+| Pages | Link target | Resolves to | Anchor exists? |
+|---|---|---|---|
+| 00–06 | `../../index.html#stage-NN` | root `index.html` | ✅ 00–05 · ❌ **06** |
+| 07–10 | `../index.html#stage-NN` | `working_deck/index.html` | ❌ **all four** |
+| `personas/persona.html:662` | `../working_deck/index.html#stage-08` | — | ❌ |
 
 ---
 
-# Phase 3 — Story
+## 3. P1 — High
 
-> [!IMPORTANT]
-> The narrative is the strongest thing in this repo — it is a chain of arguments that makes the audience specify the solution before you name it. These items are about the two places it stops short: it never states its own headline number, and it never asks for anything.
+### P1-1 · `final_slides/` is stale for stages 01–04 — and the docs say to trust it
+`final_slides/README.md:6-8` declares this directory *"Single Source of Truth for Approved Content"* and says `deck.html` *"must strictly mirror these frozen snippets."* **Following that instruction today would re-inject clutter you deliberately removed:**
 
-## 3.1 The ask
-
-- [ ] 🔴 **The deck has no explicit ask.** `build.md:239–246` specifies a **Slide 15 "Strategic Mandate, Field Nomination & Q&A"** with three asks: nominate a strategic asset, designate a technical liaison, schedule a Discovery Workshop. `LOCKED_SLIDES.md:369–371` marks it **RETIRED**, claiming consolidation into Stage 10 — but **only "Nominate initial domain leads and critical workflows" survived**, as a phase bullet. The liaison and the workshop are gone entirely. Restore all three as a closing slide. **An executive deck that ends on "100 Days to Proof of Value" without asking for anything ends on a description, not a decision.** *~60 min* →
-- [ ] 🟠 **Decide what the single decision is.** Three asks is two too many if they are not ranked. Recommendation: lead with **nominate one strategic asset**, since the other two follow from it automatically. *Decision needed* →
-
-## 3.2 The headline number
-
-- [ ] 🔴 **The ₹11,159 Cr board total appears on no slide.** It exists only at `LOCKED_SLIDES.md:272`. The deck's own aggregate exposure figure is invisible to the audience. Either put it on screen (with its derivation) or stop maintaining it. *~30 min* →
-- [ ] 🟠 **There is no root metric.** Mining's deck roots every claim on **AISC per tonne** with six MECE branches (`docs/personas-and-value-tree.md`), which is why its numbers feel like one system rather than a list. This deck has no equivalent spine. Candidates: **opex per barrel**, **refinery GM per operating day**, **NPT as % of rig days**. Pick one, then show each agent laddering up to it. **This is the highest-leverage narrative change available.** *~half a day* →
-
-## 3.3 Slide 01 — port the stronger opener
-
-- [ ] 🟠 **The alternate pitch's slide 1 is better than the deck's current slide 1.** `alternate_pitch_Oil_&_Gas_Slides_WIP.pdf` p2: **"The ₹30,000 Crore Tip of the Iceberg"** — six leaks, each with a named source (ONGC Annual Report FY25–26; IOCL + Solomon Associates; SPE; BCG "The AI-First Refiner"; IEA Methane Tracker; CAG Report) plus a methodology footnote. Port the structure and the sourcing discipline. *~2 hrs* →
-- [ ] 🟠 **Adopt the framing "India's Energy _Security_"** rather than "Energy Giants." Security is a national-interest frame an NOC board is accountable for; "giants" is a compliment. *~10 min* →
+| Removed from live pages | Still in `final_slides/` (+`.LOCKED`) |
+|---|---|
+| `100% MEITY IN-COUNTRY SOVEREIGNTY` pill | `slide_03_the_need_criteria.html:27` |
+| `NOT EITHER/OR. IT IS BOTH.` badge | `slide_04_the_intelligent_microservice.html:32` |
+| `Next: 04 The Intelligent Microservice` | `slide_03…:153` |
+| `Casing Shoe Misplacement` (amber card) | `slide_02_swiss_cheese.html:145` |
+| Stage 01 outro strip | `slide_01_capital_reality.html:124,131` |
 
 > [!WARNING]
-> That PDF is marked **Proprietary & Confidential on 11 pages** and is Google Cloud branded. The remote is a **personal** GitHub repo. It is deliberately untracked. Port the *ideas and public sources*; do not commit the file, and do not lift Google Cloud branded stat pages.
+> **Authority conflict.** `LOCKED_SLIDES.md:113` still documents `NOT EITHER/OR. IT IS BOTH.` as approved golden spec, and `final_slides/` still has it — but `index.html` and `page_04.html` removed it. **Two documents and one directory say the opposite of the live deck.** You cannot tell from the repo which is correct.
 
-## 3.4 The crew-change slide (new `stage-02b`)
+### P1-2 · `.LOCKED.html` files provide zero protection
+All 11 pairs are byte-identical except a header comment (slide_00 and slide_07 differ only in a timestamp line). They're kept in lockstep by hand — `CHANGELOG.md:14,20,28` lists both under "Synchronized Files". So the "immutable golden master" is edited every time the mutable copy is, **which is exactly what we did to slides 06 and 07 two commits ago.** It doubles the edit surface and detects nothing.
 
-- [ ] 🟠 **Verify the 27% figure** — duplicate of item 2.1.4, listed here because it is a story dependency, not just a data one. →
-- [ ] 🟡 **Confirm the risk-curve rule holds through all future edits:** the experience curve carries numbers; **the risk curve never does.** It is an argument, not a measurement, and the moment it carries a number it becomes challengeable. The rule is documented in `alternate_story.md` §5 and in the `setCrewState()` comment. *~5 min to re-verify after any edit* →
-- [ ] 🟡 **Hold the Jenga callback.** *"You don't notice a block leaving until the tower wobbles"* is deliberately withheld from `stage-02b` so it can land on slide 05. Do not let it leak forward. *~0 min, just don't break it* →
+### P1-3 · Stage 08 has two divergent implementations
+| | `final_slides/slide_08…html` | `working_deck/pages/page_08.html` |
+|---|---|---|
+| Render fn | `renderChessboardStage()` `:657` | `renderChessboard()` `:1202` |
+| IDs | `-stage` suffixed | unsuffixed |
+| Data path | `data/…js` `:562` — **404 from `final_slides/`** | `../../data/…js` `:658` ✅ |
+| Fallback | `= []` `:572` → **silent blank board** | `DEFAULT_PERSONAS_DATA` ✅ |
 
-## 3.5 Pacing
+The `final_slides` variant **cannot load its data and renders an empty 300-cell grid with no error.**
 
-- [ ] 🟡 **Three problem beats before the reveal is one too many.** Slide 01 (capital reality) → 02 (Swiss cheese) → 02b (crew change) all establish problem before the argument turns. It works, but it spends time you need at the end for the ask. Buy time back at **slides 04 and 05**, which overlap conceptually (intelligent microservice / Jenga are two metaphors for one idea). *~60 min* →
-- [ ] 🟡 **Slide 03's five criteria arrive better motivated now.** With the crew change in front of it, criterion 02 ("without human delay") is the direct answer to the question `stage-02b` leaves open. Consider rewriting criterion 02's copy to make that connection explicit rather than incidental. *~20 min* →
+### P1-4 · Every file in `final_slides/` has broken asset paths
+There is no `assets/` or `data/` inside `final_slides/`, yet all 23 files use root-relative paths (`slide_00:9`, `slide_02:65,67,70,72`, `slide_05:47,48,74,75`, `slide_06:261`, `slide_07:44`, `slide_10:10`). They are also fragments with no `<!DOCTYPE>`/`<html>`, so they can only work when inlined into a root-level host.
 
-## 3.6 Documentation sync
+### P1-5 · Space bar breaks the presentation on pages 01 and 02
+`working_deck/pages/page_02.html:219-225` + `:276-282` (same in `page_01.html:198,254`):
 
-- [ ] 🟡 **`AGENTIC_PITCH_BIBLE.md` has a "LIVING PITCH BIBLE PROTOCOL"** mandating a sync on every slide change. It has not been synced for the crew-change slide. Either sync it or retire the protocol — an unfollowed protocol is worse than none. *~30 min* →
-- [ ] 🟡 **`THE_GOLDEN_PITCH.md`'s 4-step causal chain** does not include the crew change. Update to a 5-step chain or fold the crew change into an existing step. *~20 min* →
+```js
+const stages = Array.from(document.querySelectorAll('.narrative-stage')); // length 1
+function navigateStage(dir){ currentIdx = Math.max(0, Math.min(stages.length-1, currentIdx+dir));
+                             stages[currentIdx].scrollIntoView({behavior:'smooth'}); }
+// keydown: ArrowDown / Space / PageDown -> e.preventDefault(); navigateStage(1);
+```
+
+One section per page → index clamps to 0 → **pressing Space scrolls you back to the top of the slide and suppresses normal scrolling.** Inherited from `footer_template.html:19-84`. Pages 03–10 were migrated to plain `<a href>` docks and are fine.
+
+### P1-6 · `assets/interactive.js` (51 KB) + `assets/presenter.js` (5 KB) are dead — and dangerous
+**No HTML file in the repo loads either.** Only `build_deck.py:101-102` references them. But `interactive.js` defines `setCheeseState` `:826`, `toggleTheme` `:1117`, `toggleHeroCockpitDemo` `:10`, `setHeroQuery` `:16` — **exact name collisions with the inline definitions in `index.html:16,947,953,987`**. Re-adding the script tag would silently replace your working handlers with versions written for an older DOM.
+
+### P1-7 · `page_01.html` carries 31 KB of stale, dead JavaScript
+`page_01.html` is "Capital Reality" — it has no Swiss-cheese markup, yet it ships the entire cheese engine including `setCheeseState()` at `:491`, plus stale strings `Governed Casing Barrier` `:612` and `Casing Shoe Misplacement` `:723` (current copy says `100% Protected Target` / `₹45 Cr Rig NPT`).
+
+| Page | Inline script | Verdict |
+|---|---|---|
+| `page_01` | **31,466 B** | ❌ dead + stale |
+| `page_02` | 30,806 B | ✅ legitimate |
+| `page_03`–`page_07` | 1,184–1,457 B | ✅ clean |
 
 ---
 
-# Recommended order of attack
+## 4. P2 — Medium
 
-The list above is ordered by phase, as requested. If you would rather work by impact-per-minute, this is the sequence:
-
-| # | Item | Phase | Time | Why first |
-|---|---|---|---|---|
-| 1 | Slide 09 sine-generated ₹ figures | 2.1.1 | 15 min | Largest credibility liability; cheapest fix |
-| 2 | MeitY vs `us-central1` | 2.2.6 | 20 min | Directly negates the sovereignty claim to an Indian NOC |
-| 3 | `84` vs `71` | 2.2.1 | 10 min | Known-stale value, trivially fixed |
-| 4 | `page_06.html` `file://` path | 1.1.1 | 10 min | Breaks on the presenting laptop |
-| 5 | `index.html` → `page_03.html` 404 | 1.1.2 | 5 min | Regression we introduced |
-| 6 | Type-scale singletons | 1.3.1 | 15 min | Zero risk, immediately visible |
-| 7 | Restore the ask | 3.1.1 | 60 min | The deck currently does not close |
-| 8 | `index.html` hardcoded colours | 1.2.1 | 60 min | Unblocks light theme on the main entry point |
+- **`stage-02b` is orphaned.** "The Great Crew Change" exists only in `index.html:421` and `working_deck/pages/alternate_story.html`. It is **not in the nav dock**, has no `final_slides` fragment, no `page_02b.html`, and **no entry in `LOCKED_SLIDES.md`**. Its toggle JS (`index.html:1261 setCrewState`) is never called and targets `#s2b-btn-today`/`#s2b-btn-exposure`, **which don't exist** — so `<rect id="s2b-risk-wash">:499` is permanently invisible dead DOM.
+- **`deck.html` is a stale look-alike with an identical `<title>`.** Trivially opened or shipped by mistake.
+- **The 300-row dataset is duplicated inline.** `page_08.html:662-1188` embeds a full copy (~102 KB of the file's 173 KB). *Verified 0 diffs against canonical today* — but `sync_matrix_data.py` doesn't touch it, so it will drift.
+- **"Zero task overlap" is overstated.** `LOCKED_SLIDES.md:217` claims strict MECE. No exact duplicates exist, but ~10 real functional overlaps do — strongest: anti-surge control (**K7 / P7 / M10**, ₹171 Cr booked across three personas) and the Leverett J-function (**H4 / J7**). Suggest softening to *"no duplicated task ownership — where two disciplines touch the same physics, the accountable decision differs."*
+- **51 of 86 critical cells have no named agent**, while 35 carry production-shaped GCP resource URIs and IAM identities for agents that don't exist. Only J8 is real.
+- **J8 states its own baseline three ways:** `1–2 hr` (vuln) / `2.5 Hrs` (speed) / `Two hours` (persona quote). This is on the proof slide.
+- **Five cells contradict their own impact figure:** M3 says "₹25 Cr **monthly**" (=₹300 Cr/yr) but books ₹35 Cr/yr. Also S1, N1, S14, O7. G11 prices a one-off ₹40 Cr drillout as an annual run-rate.
+- **Three competing numbering schemes:** pages show `N+1 / 11`, `alternate_story.html:50` shows `3B / 11` (so there are really 12 surfaces), `page_00.html` has two counters in different formats (`:51` `1 / 11`, `:201` `01 / 11`), and `build.py` would emit a third (`01/17`).
+- **Light-theme debt is unchanged** from the prior audit: `index.html` 129 hardcoded hex vs 234 `var()`; `deck.html` 131/229; `page_09` 61/93; `page_08` 59/120. Reference implementation: **`personas/persona.html` — 3 hardcoded vs 233 `var()`.** *(Metric: colours written into inline `style=""` attributes. A whole-file scan that also counts `<style>` blocks and `rgba()` gives much larger numbers — e.g. `index.html` 328 — so do not compare the two.)*
+- **`persona_people.js` is not as isolated as it claims.** `persona_people.js:17-23` says deleting it "degrades cleanly," but `persona_narratives.js:73,754` hardcodes the invented first names ("Camila", "Rafael") inside `accountableFor` prose.
 
 ---
 
-# Open decisions needing your input
+## 5. P3 — Low
 
-1. **The real Gemini Enterprise workspace URL** — blocking 3 files and every persona CTA chip. *(asked repeatedly; still outstanding)*
-2. **Persona packs: permanent hypotheses, or a path to "validated"?** — affects framing in ~20 files.
-3. **The root metric** — opex/bbl, refinery GM/operating day, or NPT % of rig days?
-4. **Compiled shells** — compile stages 06–10 in, or declare the standalone pages the presentation surface?
-5. **The confidential PDF** — stays untracked? *(current default: yes)*
-6. **The ask** — one decision or three?
+- **Dead code:** 40 legacy HTML files in `slides/` (23) + `working_deck/slides/` (17) — the *only* inputs the two build scripts read. `page_08.html` ships ~200 lines of never-called CSV I/O (`handleCSVUpload:1671`, `updateDataFromCSV:1684`, `exportCurrentCSV:1796`, `focusCenterHero:1629`). Orphan CSS for deleted components at `assets/styles.css:2044-2077` (`.attr-card`, `.provocation-bar`) and `:914-968` (`.chapter-nav-item`, `.dock-item` — from the retired presenter shell).
+- **`preview_jenga.html:302-313` — every button throws.** `setRightVersion()` does `getElementById('btn-optA')` and `'btn-optC'`; only `btn-cinematic`, `btn-v1`, `btn-optB` exist (`:183-185`). `forEach` hits `null.style` → `TypeError` on first click, 100% failure. (Scratch preview file, not in the deck.)
+- **Performance:** `index.html` first paint ≈ **4.9 MB**, of which `image78.png` is **2.7 MB**. Both light/dark image pairs are always fetched, so ~50% is guaranteed waste. `retail_agentic/image7.png` (4.57 MB) and `image8.png` (4.99 MB) are used **only** as backdrops at `opacity: 0.14` behind `blur(24px)` — a 40 KB downscale would be pixel-identical.
+- **Offline risk:** 15 files load GSAP from cdnjs but use it for **one fade-in** (`page_07.html:617`). `styles.css` has no `@font-face`, so offline the whole deck falls back to system fonts — except `page_07`, the one page that fetches webfonts, which will look different. Degrades gracefully, but a boardroom without Wi-Fi is a real scenario.
+- **46 MB of unreferenced GIFs** (`image75.gif` 29 MB, `image73.gif` 17.6 MB) sit in `assets/media/wip/` — **correctly gitignored**, so local disk only, not repo bloat.
+- **Accessibility:** all 300 chessboard cells are mouse-only (`page_08.html:1268-1269`, `onmouseenter`/`onclick` on bare `<div>`s, no `role`/`tabindex`). Good news: **every `<img>` has `alt`** and every full document has `lang="en"`.
+
+---
+
+## 6. What the data audit *cleared*
+
+Worth stating plainly, because it's the part you'd most want to be true:
+
+✅ **20 personas × 15 actions = 300.** No gaps, no duplicate coordinates.
+✅ **86 critical / 71 friction / 142 baseline / 1 plugged = 300.** Every hardcoded pre-paint value in the HTML matches.
+✅ **₹11,159 Cr** sums exactly; `impact` string matches `capitalCr` on **300/300** rows.
+✅ **J8 intact** — `p10` / row J / Lead Petrophysicist / "Multi-Pass Wireline Curve Splicing" / the only `plugged` cell.
+✅ **All 20 persona narrative packs authored**, all 6 required blocks present, all cited coordinates resolve. Honestly self-labelled `draft`.
+✅ **No placeholder text, no mojibake, no stray LaTeX**, no reused vuln/plug strings, no duplicate DOM ids anywhere, no broken `onclick` handlers in any shipping page.
+✅ **Your last three commits propagated to 100% of live HTML copies.** All 15 removed strings are gone.
+
+---
+
+## 7. Three decisions I need from you
+
+Everything else is mechanical. These are not.
+
+> [!IMPORTANT]
+> **Decision 1 — What is the deliverable?**
+> **(a)** `working_deck/pages/` is the deck; demote `index.html` to a landing page and delete `deck.html` + `working_deck/index.html`. *Cheapest, matches reality.*
+> **(b)** `index.html` is the deck; append stages 06–10 into it. ⚠️ This is what will finally create the ID and function collisions (`setBoardMode`, `filterByStatus`, `hud-*`, `chessboard-table`, a second `toggleTheme`) — they don't exist today only because the concatenation stopped at 05.
+
+> [!IMPORTANT]
+> **Decision 2 — Is `final_slides/` source of truth or an artifact?**
+> Its README says truth; practice says artifact (it's 4 stages stale and its paths don't resolve). Either re-sync it from the live pages and fix paths, or demote it and delete the `.LOCKED` twins. **Right now `LOCKED_SLIDES.md` documents a badge the live deck no longer shows.**
+
+> [!IMPORTANT]
+> **Decision 3 — CSV or JS as the data source of truth?**
+> The `.js` is correct and hand-maintained; its own header comment (`:3` *"Auto-generated & synced"*) is **false**. The `.csv` is corrupt in 32 rows. Either (a) regenerate the CSV *from* the JS with `csv.writer` and invert the script, or (b) delete the CSV + `sync_matrix_data.py` and declare the JS canonical.
+
+---
+
+## 8. Carried forward from the replaced content audit
+
+Two items the previous checklist raised that this audit does not otherwise cover, kept because they are cheap and load-bearing:
+
+- **Slide 09's ₹ figures are sine output.** `final_slides/slide_09_the_agentic_value_topology.html:533` — `let val = 15 + Math.sin(...) * 8 + Math.cos(...) * 6;` with ~13 hand-set peaks, rendered into tooltips as `₹${val} Cr / yr`. **Resolved by decision (2026-09-12):** the value topology is an *art-of-the-possible* surface. The numbers need only be believable, not sourced. No code change required.
+- 🔴 **But `LOCKED_SLIDES.md:323` files that surface under a heading reading "Rigorous Mathematical Grounding."** The slide is now honest about what it is; the documentation is not. That heading is the thing that would be quoted back. *~5 min*
+
+---
+
+## 9. Recommended sequence
+
+| # | Action | Effort | Risk if skipped |
+|---|---|---|---|
+| 1 | Copy `3_overlap_detail.png` into `assets/media/proof/`, fix 3 refs | 5 min | **Proof slide is blank on any other laptop** |
+| 2 | Add a guard or `.DANGER` rename to `build_deck.py` + `working_deck/build.py` | 10 min | One command erases the deck |
+| 3 | Add a `README` warning + guard to `sync_matrix_data.py`; fix the 32 CSV rows or delete the CSV | 30 min | Silent corruption of J8 |
+| 4 | Fix the 5 dead `#stage-NN` anchors; unify on one continuous-deck target | 15 min | Broken nav in front of the client |
+| 5 | Strip the `footer_template` script block from `page_01` (31 KB dead + stale) | 15 min | Space bar breaks the demo |
+| 6 | Delete `slides/`, `working_deck/slides/`, `assets/interactive.js`, `assets/presenter.js`, orphan CSS | 20 min | Build scripts stay armed; collision risk |
+| 7 | Fix the `LOCKED_SLIDES.md:323` "Rigorous Mathematical Grounding" heading | 5 min | Documents a sine wave as rigorous |
+| 8 | **Decision 1**, then execute | 1–4 h | — |
+| 9 | **Decision 2**, then re-sync or demote `final_slides/` | 1–2 h | Docs contradict the deck |
+| 10 | Downscale `image78.png`, `image7.png`, `image8.png`; vendor GSAP locally | 30 min | 4.9 MB first paint; offline risk |
+
+> [!TIP]
+> **Reference implementation for the refactor: `personas/profile.html`** (superseded `persona.html` on 2026-09-12).
+> It is the only file in the repo that is fully tokenised (**zero literal `font-size` values**, 3 shadow tokens, no loose `rgba`), on the correct brand palette (7/7 Aurora core colours exact — see `personas/_palette.html`), disciplined about gradients (2 uses, 1 approved recipe), and honest about failure (`|| []` guards on every data read, a visible "dataset unavailable" notice, a monogram fallback when a portrait 404s).
+> `persona.html` keeps two good ideas — the narrative arc and the mono micro-label idiom — but declares an unloaded commercial typeface (`Cabinet Grotesk`) and is pinned to the dead deck-row identity model. Do not copy from it.
+
+---
+
+## 10. Changed since this audit ran (2026-09-12, later)
+
+A research-native persona stack was built after the four audits above completed. None of it existed when §1 was written. **It touches nothing in the existing deck** — no shared files, no shared data, no shared CSS — so every finding above is unaffected.
+
+### New
+
+| Path | What it is |
+|---|---|
+| `personas/profile.html` | 33 personas · 232 agents · 495 operational actions, generated from the research corpus. Light + dark. **The new reference implementation** (see the tip in §9). |
+| `data/personas/` | 68 files — `index.js` (41 KB) + `P01…P33.{js,json}`. Per-persona split; first paint went 1.33 MB → ~74 KB. |
+| `scripts/extract_persona_research.py` | Generator. Single edit point for names, avatars, agent IDs. Handles 6 corpus format variants and repairs 2 source defects on read. |
+| `personas/_palette.html` | Self-grading brand proof sheet. Reads live token values out of `profile.html` through a same-origin iframe and grades them against the official Aurora hexes. |
+| `personas/avatars/P01…P33` | 33 portraits + 33 thumbs, renumbered from deck rows to research IDs. `p34`/`p35` parked in `avatars/reserved/`. |
+
+### Changed
+
+- `personas/persona.html` — **now LEGACY.** Gained a `DECK_TO_RESEARCH` map (`:808–833`) so its avatar paths survive the renumbering. Dies in Phase 2 along with `data/persona_narratives.js` and `data/persona_people.js`.
+- `audit.md` — this file: header currency note, §1 diagram, §9 tip, this section.
+
+### Why `data/personas/*.js` and not `.json`
+
+This codebase contains **zero `fetch()` calls** — every data file is loaded with `<script src>`. That is what keeps the deck working from `file://` (`page_06.html` even hardcodes `file:///` image paths). `fetch` is CORS-blocked on `file://`; an injected `<script>` tag is not. The `.json` twins are emitted alongside purely so the data can be read and diffed.
+
+### Not covered here
+
+Colour, typography and brand alignment are in the companion **Style & Formatting Audit**, which found that Aurora colours appear 14 times in the whole repo and all 14 are inside `personas/profile.html`. That document carries its own 26-item checklist.
+
+### Still true, still unfixed
+
+Everything in §2 (P0) and §3 (P1). In particular **P0-1** — the Slide 06 hero proof image still loads from a `file:///…/Downloads/…` path and will be blank on any other machine.

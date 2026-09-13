@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Palette proof — is this actually Aurora?</title>
+
+<!--
+  PALETTE PROOF SHEET  (development tool, not part of the deck)
+
+  Answers one question: "how do I see that the Aurora colours are actually
+  implemented?"
+
+  It does NOT re-declare the palette and mark its own homework. It loads the
+  real page in a hidden same-origin iframe and reads the LIVE computed value
+  of every colour token off it, then grades each one against the official
+  value published at
+    https://sites.google.com/google.com/overview/brand-identity/color
+    https://sites.google.com/google.com/overview/brand-identity/gradients
+
+  Because it reads through an iframe it needs a same-origin context:
+      python3 -m http.server 8899
+      http://127.0.0.1:8899/personas/_palette.html
+  Opening it from file:// will be blocked by the browser and the page will
+  say so rather than silently showing wrong results.
+-->
+
+<style>
+  :root {
+    --blue:   #3186FF;
+    --green:  #00AF57;
+    --red:    #FC413D;
+    --grey10: #F8F9FC;
+    --g1200:  #121317;
+    --line:   #E1E5EE;
+    --muted:  #5A6275;
+    --dim:    #8A92A6;
+    --font: "Google Sans", "Google Sans Text", -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: "Roboto Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 40px 48px 90px;
+    max-width: 1180px;
+    background: var(--grey10);
+    color: #1F2430;
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1 { margin: 0 0 6px; font-size: 34px; font-weight: 600; letter-spacing: -0.02em; }
+  h2 { margin: 44px 0 4px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+  .sub { margin: 0 0 22px; color: var(--muted); max-width: 74ch; }
+  .note { margin: 6px 0 16px; color: var(--dim); font-size: 13px; max-width: 82ch; }
+
+  table { width: 100%; border-collapse: collapse; background: #fff;
+          border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  th { text-align: left; font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+       text-transform: uppercase; color: var(--dim); padding: 11px 14px;
+       border-bottom: 1px solid var(--line); background: #FBFCFE; }
+  td { padding: 11px 14px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  tr:last-child td { border-bottom: 0; }
+
+  .sw { width: 40px; height: 26px; border-radius: 6px; display: inline-block;
+        border: 1px solid rgba(18,19,23,.14); vertical-align: middle; }
+  .hex { font-family: var(--mono); font-size: 12.5px; }
+  .tok { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+
+  .badge { display: inline-block; padding: 2px 9px; border-radius: 999px;
+           font-size: 11px; font-weight: 600; letter-spacing: .04em; }
+  .ok   { background: rgba(0,175,87,.13);  color: #007B3D; }
+  .bad  { background: rgba(252,65,61,.12); color: #C21F1B; }
+  .warn { background: rgba(254,199,0,.20); color: #7A5E00; }
+
+  .gate { padding: 16px 18px; border-radius: 12px; background: rgba(252,65,61,.08);
+          border: 1px solid rgba(252,65,61,.3); color: #8A211E; display: none; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 0; }
+  .chip { display: flex; align-items: center; gap: 8px; padding: 8px 12px;
+          background: #fff; border: 1px solid var(--line); border-radius: 999px; font-size: 13px; }
+  .dot { width: 11px; height: 11px; border-radius: 50%; flex: none; }
+
+  .bar { display: inline-block; width: 132px; height: 12px; border-radius: 999px;
+         vertical-align: middle; margin-right: 10px;
+         border: 1px solid rgba(18,19,23,.12); }
+  .scorebox { display: flex; gap: 28px; flex-wrap: wrap; margin: 20px 0 0;
+              background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px; }
+  .score { min-width: 130px; }
+  .score b { display: block; font-size: 30px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; }
+  .score span { font-size: 12px; color: var(--dim); }
+
+  footer { margin-top: 52px; padding-top: 18px; border-top: 1px solid var(--line);
+           color: var(--dim); font-size: 12px; }
+  code { font-family: var(--mono); font-size: 12.5px; background: #fff;
+         border: 1px solid var(--line); border-radius: 5px; padding: 1px 5px; }
+</style>
+</head>
+<body>
+
+<h1>Palette proof</h1>
+<p class="sub">
+  Every value below is read live, at page load, out of
+  <code>personas/profile.html</code> through a same-origin iframe — not
+  re-typed here. If the page drifts off-brand, this sheet turns red.
+</p>
+
+<div class="gate" id="gate">
+  <b>Blocked.</b> This sheet reads the real page through an iframe, which the
+  browser will not allow over <code>file://</code>. Serve the repo and reload:
+  <br><code>python3 -m http.server 8899</code> →
+  <code>http://127.0.0.1:8899/personas/_palette.html</code>
+</div>
+
+<div id="report" hidden>
+
+  <div class="scorebox" id="scorebox"></div>
+
+  <h2>1 · Core colours</h2>
+  <p class="note">
+    Official values from the Google Cloud brand site. <b>Live</b> is what the
+    browser actually computes for that token on the profile page right now.
+  </p>
+  <table id="core"></table>
+
+  <h2>2 · What each colour is allowed to mean</h2>
+  <p class="note">
+    Colour on this page is load-bearing, not decorative. These are the only
+    jobs a hue is permitted to do — if a colour appears anywhere else, that is
+    a defect.
+  </p>
+  <div class="legend" id="legend"></div>
+
+  <h2>3 · Text contrast</h2>
+  <p class="note">
+    WCAG 2.1 contrast ratio for every text-on-surface pair the page actually
+    uses. AA needs 4.5:1 for body text and 3:1 for large text (≥24px).
+  </p>
+  <table id="contrast"></table>
+
+  <h2>4 · Gradient discipline</h2>
+  <p class="note">
+    The brand permits four primary gradients: Red-Yellow, Yellow-Green,
+    Green-Blue, Blue-Purple. It explicitly forbids gradients as backgrounds,
+    gradients on text, and tints or shades of gradient colours.
+  </p>
+  <table id="grads"></table>
+
+</div>
+
+<footer>
+  Reference ·
+  <a href="https://sites.google.com/google.com/overview/brand-identity/color">Color</a> ·
+  <a href="https://sites.google.com/google.com/overview/brand-identity/gradients">Gradients</a>
+  · Google Cloud brand identity.
+</footer>
+
+<iframe id="probe" src="profile.html?p=P04" style="position:fixed;width:1200px;height:800px;left:-9999px;top:0;border:0" aria-hidden="true" tabindex="-1"></iframe>
+
+<script>
+(function () {
+  "use strict";
+
+  /* Official Aurora values. The single source of truth this sheet grades
+     against. Do not "helpfully" sync these to whatever the page happens to
+     say -- that would make the test always pass. */
+  var OFFICIAL = [
+    { token: "--g-blue",      name: "Google Blue 500",  hex: "#3186FF" },
+    { token: "--g-purple",    name: "Purple",           hex: "#4B31E3" },
+    { token: "--g-green",     name: "Google Green 500", hex: "#00AF57" },
+    { token: "--g-yellow",    name: "Google Yellow 500",hex: "#FEC700" },
+    { token: "--g-red",       name: "Google Red 500",   hex: "#FC413D" },
+    { token: "--g-grey-10",   name: "Google Grey 10",   hex: "#F8F9FC" },
+    { token: "--g-grey-1200", name: "Google Grey 1200", hex: "#121317" }
+  ];
+
+  var MEANING = [
+    { token: "--g-green",  label: "Ours — automatable work, hours saved" },
+    { token: "--border-strong", label: "Monolith — locked in a system of record" },
+    { token: "--g-yellow", label: "Live Operations — stays human" },
+    { token: "--g-red",    label: "Safety envelope — the hard stop" },
+    { token: "--g-blue",   label: "Interactive — selection, links, agent index" },
+    { token: "--g-purple", label: "Identity — monogram fallback only" }
+  ];
+
+  var PAIRS = [
+    ["--text",       "--surface",      "body text on a card",      false],
+    ["--text-muted", "--surface",      "secondary text on a card", false],
+    ["--text-dim",   "--surface",      "labels and captions",      false],
+    ["--text",       "--canvas",       "body text on the canvas",  false],
+    ["--text-muted", "--canvas",       "rail items",               false],
+    ["--text-dim",   "--surface-sunk", "tag chips",                false],
+    ["--accent",     "--surface",      "links and agent refs",     false],
+    ["--g-green",    "--surface",      "hours-saved figure (28px)", true]
+  ];
+
+  function hexOf(v) {
+    v = (v || "").trim();
+    if (v.charAt(0) === "#") {
+      if (v.length === 4) v = "#" + v[1]+v[1] + v[2]+v[2] + v[3]+v[3];
+      return v.toUpperCase();
+    }
+    var m = v.match(/rgba?\(([^)]+)\)/);
+    if (!m) return null;
+    var p = m[1].split(/[\s,\/]+/).filter(Boolean).map(Number);
+    return "#" + p.slice(0, 3).map(function (n) {
+      return ("0" + Math.round(n).toString(16)).slice(-2);
+    }).join("").toUpperCase();
+  }
+
+  function lum(hex) {
+    var c = [1, 3, 5].map(function (i) {
+      var v = parseInt(hex.substr(i, 2), 16) / 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
+  }
+
+  function ratio(a, b) {
+    var x = lum(a), y = lum(b);
+    return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05);
+  }
+
+  function row(cells) { return "<tr>" + cells.map(function (c) { return "<td>" + c + "</td>"; }).join("") + "</tr>"; }
+  function head(cells) { return "<tr>" + cells.map(function (c) { return "<th>" + c + "</th>"; }).join("") + "</tr>"; }
+  function sw(hex) { return '<span class="sw" style="background:' + hex + '"></span>'; }
+
+  function run(doc) {
+    var cs = doc.defaultView.getComputedStyle(doc.documentElement);
+    function tok(name) { return hexOf(cs.getPropertyValue(name)); }
+
+    /* ── 1. core ─────────────────────────────────────────────── */
+    var pass = 0;
+    var html = head(["", "Token", "Official", "Live", "Brand name", ""]);
+    OFFICIAL.forEach(function (o) {
+      var live = tok(o.token);
+      var good = live === o.hex.toUpperCase();
+      if (good) pass++;
+      html += row([
+        sw(live || "#CCC"),
+        '<span class="tok">' + o.token + "</span>",
+        '<span class="hex">' + o.hex + "</span>",
+        '<span class="hex">' + (live || "— not defined —") + "</span>",
+        o.name,
+        good ? '<span class="badge ok">exact</span>'
+             : '<span class="badge bad">drifted</span>'
+      ]);
+    });
+    document.getElementById("core").innerHTML = html;
+
+    /* ── 2. meaning ──────────────────────────────────────────── */
+    document.getElementById("legend").innerHTML = MEANING.map(function (m) {
+      return '<span class="chip"><span class="dot" style="background:' +
+             (tok(m.token) || "#CCC") + '"></span>' + m.label + "</span>";
+    }).join("");
+
+    /* ── 3. contrast ─────────────────────────────────────────── */
+    var cpass = 0;
+    var ch = head(["Pair", "Used for", "Ratio", "Needs", ""]);
+    PAIRS.forEach(function (p) {
+      var fg = tok(p[0]), bg = tok(p[1]);
+      if (!fg || !bg) return;
+      var r = ratio(fg, bg);
+      var need = p[3] ? 3 : 4.5;
+      var good = r >= need;
+      if (good) cpass++;
+      ch += row([
+        sw(fg) + " " + sw(bg) + ' <span class="tok">' + p[0] + " / " + p[1] + "</span>",
+        p[2],
+        '<span class="hex">' + r.toFixed(2) + ":1</span>",
+        need + ":1",
+        good ? '<span class="badge ok">AA</span>'
+             : '<span class="badge ' + (r >= 3 ? "warn" : "bad") + '">below AA</span>'
+      ]);
+    });
+    document.getElementById("contrast").innerHTML = ch;
+
+    /* ── 4. gradients ────────────────────────────────────────── */
+
+    /* A gradient contains var(...) calls, so it has nested parentheses and
+       cannot be matched with /gradient\([^)]*\)/ -- that stops at the first
+       var() and silently reports a one-colour gradient. Scan for the balance
+       point instead. */
+    function findGradients(text) {
+      var out = [], re = /(linear|radial|conic)-gradient\(/g, m;
+      while ((m = re.exec(text))) {
+        var i = re.lastIndex, depth = 1;
+        while (i < text.length && depth > 0) {
+          if (text[i] === "(") depth++;
+          else if (text[i] === ")") depth--;
+          i++;
+        }
+        out.push(text.slice(m.index, i));
+      }
+      return out;
+    }
+
+    var used = [];
+    Array.prototype.forEach.call(doc.styleSheets, function (sheet) {
+      var rules;
+      try { rules = sheet.cssRules; } catch (e) { return; }
+      Array.prototype.forEach.call(rules || [], function (r) {
+        findGradients(r.cssText || "").forEach(function (g) {
+          used.push({ sel: r.selectorText || "?", g: g });
+        });
+      });
+    });
+    var APPROVED = [["#3186FF", "#4B31E3"], ["#00AF57", "#3186FF"],
+                    ["#FEC700", "#00AF57"], ["#FC413D", "#FEC700"],
+                    ["#FC413D", "#4B31E3"]];
+    var gh = head(["Selector", "Gradient", ""]);
+    if (!used.length) {
+      gh += row(["—", "none declared", '<span class="badge ok">clean</span>']);
+    }
+    var gpass = 0;
+    used.forEach(function (u) {
+      /* resolve var() refs to the real hexes before judging */
+      var hexes = (u.g.match(/var\((--[a-z0-9-]+)\)/g) || []).map(function (v) {
+        return tok(v.slice(4, -1));
+      }).concat(u.g.match(/#[0-9A-Fa-f]{6}/g) || []).filter(Boolean)
+        .map(function (h) { return h.toUpperCase(); });
+      var good = APPROVED.some(function (a) {
+        return hexes.length === 2 &&
+          ((hexes[0] === a[0] && hexes[1] === a[1]) || (hexes[0] === a[1] && hexes[1] === a[0]));
+      });
+      if (good) gpass++;
+      gh += row([
+        '<span class="tok">' + u.sel + "</span>",
+        '<span class="bar" style="background:' + u.g + '"></span> ' +
+          '<span class="hex">' + hexes.join(" → ") + "</span>",
+        good ? '<span class="badge ok">approved pair</span>'
+             : '<span class="badge warn">not an approved pair</span>'
+      ]);
+    });
+    document.getElementById("grads").innerHTML = gh;
+
+    /* ── score ───────────────────────────────────────────────── */
+    document.getElementById("scorebox").innerHTML =
+      '<div class="score"><b>' + pass + "/" + OFFICIAL.length +
+        "</b><span>core colours exact</span></div>" +
+      '<div class="score"><b>' + cpass + "/" + PAIRS.length +
+        "</b><span>text pairs at WCAG AA</span></div>" +
+      '<div class="score"><b>' + gpass + "/" + (used.length || 0) +
+        "</b><span>gradients on an approved pair</span></div>" +
+      '<div class="score"><b>' + used.length +
+        "</b><span>gradients declared in total</span></div>";
+
+    document.getElementById("report").hidden = false;
+  }
+
+  var frame = document.getElementById("probe");
+  frame.addEventListener("load", function () {
+    var doc;
+    try { doc = frame.contentDocument; } catch (e) { doc = null; }
+    if (!doc) { document.getElementById("gate").style.display = "block"; return; }
+    run(doc);
+  });
+})();
+</script>
+
+</body>
+</html>

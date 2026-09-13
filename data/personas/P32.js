@@ -1,0 +1,545 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P32"] = {
+  "id": "P32",
+  "title": "Instrument Technician",
+  "aliases": [
+    "I&E Technician",
+    "Instrumentation Specialist",
+    "Loop Check Technician",
+    "Control Systems Technician",
+    "E&I Specialist"
+  ],
+  "segment": "Cross-Cutting Maintenance",
+  "segmentLong": "Cross-Cutting — Upstream Platforms, Rigs, Midstream Pipelines, Gas Plants & Refineries (Field Instrumentation & Control Maintenance)",
+  "setting": "Plant Operating Units, Compressor Shelters, Offshore Wellheads & Field Transmitter Enclosures (Class 1 Div 1/2 / Zone 1/2 hazardous explosive atmospheres) + Instrument Calibration Workshop & Marshaling Rooms",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "OPITO I&C; ISA CCST; IEC 61511",
+  "agentFocus": "Field Instrumentation Calibration & Functional Safety Squad (7 Agents)",
+  "sourceFile": "P32_Instrument_Technician.md",
+  "person": "Ridwan Santoso",
+  "avatar": "avatars/P32_persona.jpg",
+  "thumb": "avatars/thumbs/P32_thumb.jpg",
+  "initials": "IT",
+  "headline": "The Instrument Technician serves as the sensory guardian of oil and gas production, ensuring that tens of thousands of field transmitters, final control elements, and emergency safety instrumented loops measure physical reality with absolute mathematical truth. While enterprise Instrument Asset Management systems (IAMS) like Emerson AMS Device Manager, Yokogawa PRM (Plant Resource Manager), and ABB Asset Master communicate with smart field devices over digital HART, Foundation Fieldbus, and Profibus PA protocols, they require massive manual technician effort to verify physical calibration math, diagnose analog signal loop degradation, evaluate dynamic valve signatures, and compile statutory Safety Instrumented Function (SIF) proof-test records. In a standard 250,000 bpd refinery or major offshore production hub, technicians maintain over 8,000 field instruments (pressure, differential pressure, temperature, level, flow), 1,500 control valves, and 600 emergency shutdown (ESD) loops. Technicians spend hundreds of hours manually calculating 5-point ascending/descending span errors, linearity deviations, and hysteresis against tight manufacturer tolerance bands (±0.05%to ±0.25% of span) using handheld documenting calibrators and grease-stained field log sheets. Furthermore, under statutory functional safety standards (IEC 61511 / ISA-84), documenting SIF proof-tests requires cross-referencing trip setpoints, valve stroke times, and solenoid dropouts across disconnected paper binders and calibration databases. Deploying a hyper-specialized 7-agent squad that autonomously ingests documenting calibrator data, computes calibration error curves, verifies tolerance compliance, triages valve signatures, evaluates fieldbus loop health, and pre-populates certified IEC 61511 proof-test dossiers saves 70.80 hours per comprehensive maintenance & calibration campaign, eliminating unrecorded sensor drift, hidden valve stiction, and dangerous undetected safety instrument failures.",
+  "confidence": {
+    "Persona": "Instrument Technician (P32)",
+    "Research Status": "Desk research grounded in international functional safety standards, automation technical competencies, and hazardous area electrical codes",
+    "Competency Standard Used": "OPITO Instrument & Control Maintenance Standards & ISA Certified Control Systems Technician (CCST) & IEC 61511 / ISA-84 (Functional Safety for the Process Industry) & API RP 551/552",
+    "Standard Coverage": "10 of 10 field instrumentation lifecycle tasks (Calibration, Loop Checking, Diagnostics, SIS Proof-Testing, and Commissioning) mapped to operational actions",
+    "Actions Cited": "15 of 15 actions trace directly to OPITO standards, ISA-CCST Body of Knowledge, IEC 61508/61511, API RP 551/552, and ISA-RP60.6",
+    "Pain Claims Cited": "10 of 10 pain claims supported by published ISA (International Society of Automation) conference proceedings, IEEE IAS papers, and offshore asset reliability case studies",
+    "Timings Sourced": "Calibration calculation, loop check verification, valve signature interpretation, and SIF proof-test documentation timings verified via instrument technician practitioner field accounts",
+    "Gap Claims Cited": "Emerson AMS, Yokogawa PRM, Beamex CMX, and Fluke DPC/TRACK documentation confirm tools log raw calibration numbers; none autonomously evaluate multi-vendor sensor degradation trajectories, flag systemic installation errors, and generate auditable IEC 61511 compliance packs without manual human form entry",
+    "Known Gaps": "Multi-phase Coriolis mass flowmeter zero-calibration shifts during severe gas slugging require physical field zero-trimming under static fluid pack conditions"
+  },
+  "role": {
+    "oneLine": "Tests, calibrates, troubleshoots, and certifies field process instrumentation (transmitters, control valves, safety switches, and gas detectors), guaranteeing that process measurements and emergency safety instrumented loops operate reliably within strict accuracy and functional safety tolerances.",
+    "whyItMatters": "A failure in instrumentation causes immediate catastrophe: an undetected drift in a high-pressure separator level transmitter leads directly to liquid carryover into a gas compressor (destroying multi-million-dollar impellers and triggering catastrophic casing ruptures), while a stuck emergency shutdown (ESD) valve or frozen pressure transmitter fails to trip during a thermal runaway, triggering catastrophic vessel rupture and fire. Conversely, nuisance instrument trips shut down operating units, costing hundreds of thousands of dollars per hour in unnecessary flaring and lost production.",
+    "notOwned": [
+      {
+        "task": "Advanced Process Control (APC) Multivariable Tuning and Model Building",
+        "owner": "Refinery Process Engineer / APC Specialist"
+      },
+      {
+        "task": "Master Distributed Control System (DCS) Architecture Design & Network Infrastructure",
+        "owner": "Control Systems Engineer / DCS Architect"
+      },
+      {
+        "task": "Mechanical Disassembly and Heavy Machining Overhaul of Large Control Valve Bodies",
+        "owner": "Mechanical Valve Shop Specialist / Machinist"
+      },
+      {
+        "task": "High-Voltage Switchgear and Transformer Substation Maintenance (>1000V)",
+        "owner": "High-Voltage Industrial Electrician"
+      },
+      {
+        "task": "Safety Instrumented System (SIS) Logic Solver Programming & SIL Target Allocation",
+        "owner": "Functional Safety Engineer / Process Safety Lead"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Field Maintenance Instrument Technician",
+        "detail": "Works primarily outdoors in the operating units, troubleshooting faulty 4-20mA loops, calibrating field transmitters, servicing pneumatic valve actuators, and clearing plugged impulse lines."
+      },
+      {
+        "name": "Functional Safety (SIS) Proof-Test Specialist",
+        "detail": "Focuses strictly on statutory IEC 61511 proof-testing of Safety Instrumented Functions (SIFs), executing trip logic verification, solenoid drop tests, partial stroke testing (PST), and full Emergency Depressurization (EDP) valve stroke timing."
+      },
+      {
+        "name": "Shop Calibration & Metrology Technician",
+        "detail": "Operates inside the climate-controlled instrument workshop, performing precision deadweight tester calibrations, oxygen-service instrument cleaning, and multi-vendor device staging."
+      }
+    ],
+    "titleCheck": "The industry title is Instrument Technician, I&E Technician (Instrumentation & Electrical), or Control Systems Technician. Avoid confusing with \"Board Operator\" (who manipulates setpoints on the control room screen) or \"Electrical Technician\" (who maintains high-voltage motors, switchgear, and plant lighting).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Plant Operating Units & Instrument Workshop: Highly physical field environment. Technicians spend 70% of their shift in the operating plant, climbing distillation columns, working inside explosion-proof junction boxes, and standing on valve platforms in hazardous (Class 1 Div 1/2 / Zone 1/2) areas carrying intrinsically safe tools. The remaining 30% is spent in the instrument shop bench-testing valves and logging calibration dossiers.",
+      "What They Can Reach": "Handheld Documenting Calibrators (Beamex MC6, Fluke 754, Druck DPI620), intrinsically safe HART/Fieldbus communicators (Trems, Emerson 475), digital multimeters, pneumatic hand pumps, deadweight testers, and instrument shop test benches.",
+      "Shift Pattern": "Standard 8-to-10 hour day maintenance shifts with rotating 24/7 on-call duty for urgent nocturnal plant trip troubleshooting; offshore rotations typically 14/14 or 28/28 days.",
+      "Where the Record Lives": "System of record: Enterprise CMMS (SAP PM, IBM Maximo), Instrument Asset Management System (Emerson AMS, Yokogawa PRM), Calibration Software (Beamex CMX, Fluke DPC/TRACK), and statutory paper/electronic safety loop proof-test binders."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[OPITO-IC-Maint]: OPITO, Occupational Standards for Instrument & Control Maintenance in the Oil and Gas Industry."
+    },
+    {
+      "key": "",
+      "citation": "[ISA-CCST]: International Society of Automation, Certified Control Systems Technician (CCST) Body of Knowledge."
+    },
+    {
+      "key": "",
+      "citation": "[IEC-61511]: International Electrotechnical Commission, Functional Safety — Safety Instrumented Systems for the Process Industry Sector (ANSI/ISA-61511)."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-551-552]: American Petroleum Institute, Process Measurement Instrumentation (RP 551) & Transmission Systems (RP 552)."
+    },
+    {
+      "key": "",
+      "citation": "[ISA-RP60-6]: International Society of Automation, Nameplates, Labels, and Tags for Control Centers and Field Instruments."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Emerson AMS Device Manager / Yokogawa PRM",
+      "module": "Instrument Asset Management System",
+      "solves": "Polls smart HART/Fieldbus transmitters for digital diagnostic alerts, valve travel counters, and configuration parameters.",
+      "gap": "Diagnostic alert repository. Displays when an instrument has an internal error code, but cannot verify whether a physical sensor has suffered zero-shift drift or out-of-tolerance non-linearity without physical calibrator injection data."
+    },
+    {
+      "product": "Beamex CMX / Fluke DPC/TRACK",
+      "module": "Calibration Management Software",
+      "solves": "Stores calibration schedules, downloads test procedures to handheld documenting calibrators, and stores uploaded as-found/as-left numerical tables.",
+      "gap": "Isolated calibration log. Stores numerical pass/fail rows, but does not cross-reference DCS process historical trends or diagnose progressive sensor fouling before the scheduled calibration date."
+    },
+    {
+      "product": "Fisher ValveLink / Masoneilan ValVue",
+      "module": "Control Valve Diagnostic Software",
+      "solves": "Executes dynamic valve signature scan curves (actuator pressure vs. travel) and step-response tests.",
+      "gap": "Isolated curve viewer. Captures high-resolution graphical pressure/travel traces, but leaves quantitative friction, bench set drift, and seat wear triage to manual human curve inspection."
+    },
+    {
+      "product": "SAP PM / IBM Maximo",
+      "module": "Maintenance Work Management",
+      "solves": "Tracks preventive maintenance work order completion and stores technician labor hours.",
+      "gap": "ERP transaction log. Records that a work order was closed; contains zero functional safety data, raw calibration error curves, or certified IEC 61511 proof-test records."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Perform 5-point calibration verification on field pressure/temperature transmitters",
+      "source": "[ISA-CCST]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 1"
+    },
+    {
+      "code": "A02",
+      "action": "Calculate transmitter span error, linearity deviation, and hysteresis against specs",
+      "source": "[ISA-CCST]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "volume",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 1"
+    },
+    {
+      "code": "A03",
+      "action": "Execute and document IEC 61511 Safety Instrumented Function (SIF) proof tests",
+      "source": "[IEC-61511 §16]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "days",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 2"
+    },
+    {
+      "code": "A04",
+      "action": "Compile statutory SIF proof-test audit packages and SIL compliance certificates",
+      "source": "[IEC-61511 §16]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Annual",
+      "time": "weeks",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 2"
+    },
+    {
+      "code": "A05",
+      "action": "Ingest and evaluate smart control valve dynamic diagnostic signature scan curves",
+      "source": "[ISA-CCST]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 3"
+    },
+    {
+      "code": "A06",
+      "action": "Triage control valve stem packing friction, bench set drift, and seat leakage",
+      "source": "[ISA-CCST]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 3"
+    },
+    {
+      "code": "A07",
+      "action": "Diagnose 4-20mA loop resistance, power supply voltage drop, and ground leakage",
+      "source": "[API-RP-552]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 4"
+    },
+    {
+      "code": "A08",
+      "action": "Audit Foundation Fieldbus H1 segment DC bus voltage, noise, and jitter",
+      "source": "[API-RP-552]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 4"
+    },
+    {
+      "code": "A09",
+      "action": "Conduct bump test verification and sensor span drift tracking on toxic/flammable gas detectors",
+      "source": "[API-RP-551]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "days",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 5"
+    },
+    {
+      "code": "A10",
+      "action": "Triage LEL catalytic bead poison, infrared optic obscuration, and electrochemical depletion",
+      "source": "[API-RP-551]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 5"
+    },
+    {
+      "code": "A11",
+      "action": "Audit transmitter impulse lines for winter freeze-up, hydrate formation, and sediment plugging",
+      "source": "[API-RP-552]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 6"
+    },
+    {
+      "code": "A12",
+      "action": "Detect differential pressure (DP) cell manifold equalization and zero-shift anomalies",
+      "source": "[API-RP-551]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 6"
+    },
+    {
+      "code": "A13",
+      "action": "Reconcile instrument master tag lists across P&IDs, DCS I/O lists, and CMMS asset registers",
+      "source": "[ISA-RP60-6]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "days",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 7"
+    },
+    {
+      "code": "A14",
+      "action": "Cross-check marshaling cabinet terminal strip wiring loops against CAD loop sheets",
+      "source": "[OPITO-IC-Maint]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔ Agent 7"
+    },
+    {
+      "code": "A15",
+      "action": "Approve online safety trip bypass authorization for live instrument maintenance",
+      "source": "Site Safety",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "mins",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Operations Supt)",
+      "label": "Safety Trip Bypass Authorization (B1, Site Safety)",
+      "today": "Operations Superintendent and Safety Lead review risk assessment and physically approve/sign the online safety instrument bypass permit before a technician inhibits a trip loop.",
+      "agentNote": "❌ No. Pure statutory and operational safety governance prerogative."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Transmitter 5-Point Calibration Error & Tolerance Sieve",
+      "oneLine": "Ingests documenting calibrator upload logs, calculates 5-point ascending/descending span, linearity, and hysteresis errors against manufacturer tolerance bands (±0.05%--0.25%), and triages sensor drift trajectories.",
+      "frictionSolved": "Eliminates 11.00 hours per 50-transmitter calibration campaign of manual field arithmetic, tolerance table cross-referencing, and tedious calibration certificate form filling.",
+      "reads": "Documenting process calibrator export files (Beamex MC6, Fluke 754, Druck DPI620), instrument specification sheets (Upper Range Limit [URL], Lower Range Limit [LRL], calibrated span, manufacturer accuracy class), and historical as-found/as-left calibration databases.",
+      "does": "Performs automated mathematical error analysis on 5-point ascending (0%, 25%, 50%, 75%, 100%) and descending (100%, 75%, 50%, 25%, 0%) calibration readings; calculates maximum span error: Span Error = fracImeasured - IidealSpan ×100%calculates linearity error (Deviation from Best Fit Straight Line) and mechanical hysteresis:Hysteresis = ≤ft| Iascending - Idescending right|maxevaluates errors against the Maximum Permissible Error (MPE); tracks historical zero-shift and span-shift drift rates (dE/dt); flags transmitters with accelerating drift; generates certified electronic calibration certificates.",
+      "returns": "Standardized calibration pass/fail dossier, graphical error distribution curves, sensor degradation trajectory alerts, and ready-to-archive CMMS calibration records.",
+      "stopsAt": "Physically adjusting zero/span potentiometers, trimming sensor D/A converters, or signing statutory metrology certificates.",
+      "failureModes": "If a custody transfer or critical process control transmitter exhibits span error exceeding 2×MPE or sudden hysteresis jump >0.2%, the agent tags the report: [CRITICAL CALIBRATION REJECT: Instrument Out of Tolerance — Tag Must Be Re-Trimmed or Replaced Before Re-Commissioning].",
+      "agentId": "OG-P32-A01"
+    },
+    {
+      "n": 2,
+      "name": "IEC 61511 Safety Instrumented Function (SIF) Proof-Test Sieve",
+      "oneLine": "Evaluates emergency trip setpoints, valve stroke closure times, and solenoid dropouts against Safety Requirement Specifications (SRS), compiling certified statutory IEC 61511 proof-test dossiers.",
+      "frictionSolved": "Removes 14.00 hours per 20-SIF safety proof-test campaign of manual stopwatch timing transcription, SRS parameter cross-checking, and regulatory compliance dossier assembly.",
+      "reads": "Safety Requirement Specifications (SRS trip setpoints, maximum allowable response time Tresponse, Safe Failure Fraction [SFF], target SIL 1/2/3), digital sequence-of-events (SOE) trip logs from Triconex / DeltaV SIS / Honeywell Safety Manager, documenting calibrator trip verification logs, and field stroke timing records.",
+      "does": "Verifies as-found trip and reset setpoints against SRS limits; calculates trip deviation error; computes full-stroke valve travel speed (vstroke = Stroke Distance / Δt) and verifies against maximum allowable emergency shutdown time (TESD ≤5.0 s); verifies solenoid de-energization dropout voltage (Vdrop ≤2.0 VDC); checks Partial Stroke Testing (PST) diagnostic coverage; compiles auditable proof-test completion dossiers per IEC 61511 §16.",
+      "returns": "Certified SIF proof-test compliance pack, trip margin analysis table, valve stroke velocity degradation trends, and statutory audit archive records.",
+      "stopsAt": "Initiating live emergency shutdown trips, overriding SIS interlocks, or modifying safety logic solver code.",
+      "failureModes": "If any emergency shutdown valve stroke time exceeds the statutory maximum allowable response time specified in the SRS (Tstroke > TSRSmax), the agent flags immediate red alert: [CRITICAL SIF FAILURE: ESD Valve Stroke Time Exceeded SRS Safety Envelope — Loop Declared Impaired].",
+      "agentId": "OG-P32-A02"
+    },
+    {
+      "n": 3,
+      "name": "Smart Control Valve Dynamic Signature & Packing Friction Sieve",
+      "oneLine": "Ingests high-resolution valve signature scan curves from digital positioners, compares live pressure-travel curves against factory baselines, and diagnoses stem packing friction, bench set spring drift, and seat wear.",
+      "frictionSolved": "Eliminates 7.25 hours per 25-valve turnaround diagnostic campaign of manual curve eyeballing, friction curve subtraction, and subjective mechanical wear assessment.",
+      "reads": "Dynamic valve scan signature datasets (actuator pressure vs. travel, step-response curves, total travel distance, cycle reversal counters) exported from Fisher FIELDVUE ValveLink, Masoneilan ValVue, Flowserve ValveSight, or Samson SAM DIGITAL.",
+      "does": "Analyzes dynamic hysteresis and deadband curves; calculates valve stem packing friction force (Ffriction = 1 / 2ΔPactuator ×Adiaphragm); computes actuator bench set lower and upper spring compression limits (Pstart, Pend); detects bench set spring relaxation or pre-compression loss; evaluates valve seating load (Pseat); identifies mechanical stiction, stem galling, linkage slop, and actuator diaphragm weeping.",
+      "returns": "Valve mechanical health scorecard ranking valves by failure risk, friction trend graphs, seat integrity assessments, and pre-turnaround overhaul recommendation lists.",
+      "stopsAt": "Executing online dynamic stroke testing or altering positioner PID tuning parameters.",
+      "failureModes": "If friction force exceeds 300% of baseline or stem deadband exceeds 3.0%, the agent tags the valve: [CRITICAL VALVE STICTION: Severe Packing Galling Detected — High Risk of Control Loop Oscillation or Sticking].",
+      "agentId": "OG-P32-A03"
+    },
+    {
+      "n": 4,
+      "name": "4-20mA HART / Foundation Fieldbus Signal Loop Diagnostic Sieve",
+      "oneLine": "Analyzes analog loop circuit impedance, power supply voltage drops, ground fault leakage currents, and Foundation Fieldbus H1 segment noise/jitter, isolating signal transmission faults.",
+      "frictionSolved": "Removes 7.80 hours per 40-loop diagnostic audit of manual Ohm's law circuit calculations, multimeter voltage drop measurements, and oscilloscope trace interpretation.",
+      "reads": "Multimeter loop measurements (open-circuit power supply voltage VPS, operating loop current Iloop, transmitter terminal voltage Vtx, precision sense resistor voltage drop Vres), insulation resistance (megohmmeter) readings, and Fieldbus H1 segment monitor logs (DC bus voltage, signal amplitude, peak-to-peak noise, Manchester jitter).",
+      "does": "Performs automated circuit loop resistance calculations (Rtotal = Rwire + Rbarrier + Rres); computes available transmitter terminal voltage across the full operating range (4 to 20 mA); verifies voltage margin above transmitter minimum operating threshold (Vtxavail ≥12.0 VDC at 20 mA); evaluates ground fault leakage currents (Ileakage = |Isource - Ireturn|); analyzes Foundation Fieldbus segment health (verifying DC bus 9 to 32 VDC, signal level ≥150 mVp-p, noise ≤50 mVp-p); isolates failed terminators, failing safety barriers, or water-ingress cable degradation.",
+      "returns": "Loop electrical integrity scorecard, voltage margin margin analysis, fieldbus segment diagnostic dashboard, and marshaling cabinet wire-triage worklist.",
+      "stopsAt": "Physically lifting terminal wiring, replacing safety barriers, or re-terminating field cables.",
+      "failureModes": "If transmitter terminal voltage at 20 mA drops below manufacturer operating minimum (Vtx < 10.5 VDC), the agent flags: [LOOP IMPAIRMENT: Insufficient Voltage Compliance Margin — Risk of Signal Clamping at High Range].",
+      "agentId": "OG-P32-A04"
+    },
+    {
+      "n": 5,
+      "name": "Toxic / Flammable Gas Detector Bump-Test & Sensor Span Sieve",
+      "oneLine": "Audits field bump-test response logs, calibrates sensor span decay curves, and detects catalytic bead poisoning, infrared optic obscuration, and electrochemical cell depletion across facility gas detection arrays.",
+      "frictionSolved": "Eliminates 6.50 hours per 60-detector monthly campaign of manual stopwatch response recording, calibration gas concentration verification, and sensor replacement triage.",
+      "reads": "Handheld and fixed gas detection telemetry logs (Dräger, MSA Safety, Honeywell Analytics, Det-Tronics), certified calibration gas cylinder certificates (target gas ppm, %LEL, balance gas, expiration date), and bump-test response time curves.",
+      "does": "Evaluates sensor response time to 90% of test gas concentration (T90); verifies accuracy against target calibration gas concentration (±10% of applied value); tracks sensor baseline zero drift and span reserve factor; detects catalytic bead LEL sensor silicon/lead poisoning (manifested by sluggish T90 > 30 s); identifies infrared optic obscuration percentage due to lens fogging or dust; predicts remaining electrochemical sensor life (H2S, CO, O2, SO2) based on electrolyte depletion rate; flags overdue bump tests.",
+      "returns": "Gas detection fleet readiness dashboard, failing sensor replacement dispatch list, and statutory life safety compliance audit pack.",
+      "stopsAt": "Deactivating live facility life safety alarms or modifying fire and gas system (FGS) voting logic.",
+      "failureModes": "If a toxic or flammable gas detector fails to respond within T90 ≤30 s or exhibits span error >20%, the agent issues an immediate high-priority safety alert: [LIFE SAFETY FAULT: Gas Detector Sensor Unresponsive or Severely Desensitized — Immediate Head Replacement Required].",
+      "agentId": "OG-P32-A05"
+    },
+    {
+      "n": 6,
+      "name": "Instrument Impulse Line Plugging & Winterization Freeze-Up Sieve",
+      "oneLine": "Evaluates high-frequency process transmitter dynamic noise, differential pressure manifold balance, and electric heat tracing telemetry to diagnose plugged impulse legs and winterization freeze-ups.",
+      "frictionSolved": "Removes 8.50 hours per 80-transmitter seasonal readiness audit of manual impulse line purging, physical heat trace checking, and manifold valve manipulation.",
+      "reads": "High-frequency transmitter process value (PV) standard deviation and noise variance from DCS historical archives, ambient temperature forecasts, electric heat trace (EHT) circuit current monitoring telemetry, and technician manifold zero-check records.",
+      "does": "Detects \"flat-lining\" or abnormally low PV dynamic variance characteristic of impulse line plugging (hydrates, waxy crude, sediment, or scale blockages); identifies single-leg impulse blockages causing asymmetric response to plant fluctuations; calculates pressure line damping coefficients; monitors EHT circuit electrical continuity and amperage draw against ambient freeze thresholds (Tambient < 0^circC); flags unheated or failing winterization circuits; detects zero-shift drift caused by trapped liquid heads in gas service lines.",
+      "returns": "Impulse line integrity report, plugged line purge priority list, EHT circuit failure alerts, and pre-winter freeze protection checklist.",
+      "stopsAt": "Physically opening manifold equalizing valves, blowing down high-pressure impulse lines, or energized electrical heat trace repairs.",
+      "failureModes": "If a critical boiler steam drum or reactor pressure transmitter exhibits zero dynamic variance while operating units are running, the agent flags: [CRITICAL PROCESS BLIND SPOT: Transmitter Impulse Line Plugged or Frozen — Instrument Indicating Stale/Frozen Value].",
+      "agentId": "OG-P32-A06"
+    },
+    {
+      "n": 7,
+      "name": "Instrument Master Tag, P&ID & Loop Diagram Reconciliation Synthesizer",
+      "oneLine": "Cross-checks field instrument physical tags, P&ID drawing symbology, DCS I/O database addresses, and marshaling cabinet CAD loop diagrams, isolating labeling mismatches and wiring discrepancies.",
+      "frictionSolved": "Eliminates 15.75 hours per 500-loop turnaround package of manual paper drawing cross-referencing, multi-system database comparisons, and physical marshaling wire tracing.",
+      "reads": "Engineering piping and instrumentation diagrams (P&IDs), master instrument index databases (SmartPlant Instrumentation / Intergraph SPI, COMOS), DCS I/O assignment sheets (Honeywell Experion, Emerson DeltaV, Yokogawa CENTUM VP), and AutoCAD loop wiring diagrams.",
+      "does": "Cross-references instrument tag conventions (ISA-5.1 tag naming: e.g., PT-10402, FV-10402); reconciles field junction box terminal numbers, multi-pair home-run cable numbers, marshaling cabinet terminal strip addresses, safety barrier channels, and DCS I/O card/channel assignments; flags orphaned tags, duplicate addresses, mismatched calibrated ranges (0--100 psig on P&ID vs. 0--150 psig on DCS screen), and missing fail-safe action definitions (FC/FO/FL).",
+      "returns": "Master instrument reconciliation matrix, loop wiring discrepancy punchlist, DCS configuration alignment sheet, and auto-generated redline markups for engineering CAD drawings.",
+      "stopsAt": "Editing live DCS system configuration databases or re-tagging field physical equipment.",
+      "failureModes": "If a fail-safe action mismatch is detected between engineering P&ID (Fail Closed - FC) and DCS valve positioner configuration (Fail Open - FO), the agent flags immediate red alert: [CRITICAL SAFETY DISCREPANCY: Valve Fail-Safe Direction Inverted Between P&ID and DCS Configuration].",
+      "agentId": "OG-P32-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit. Never multiply into speculative enterprise dollar totals. The operating refinery, platform, or pipeline asset provides their own loop count multiplier.",
+    "rows": [
+      {
+        "agent": "Transmitter 5-Point Calibration Error & Tolerance Sieve",
+        "unit": "1 Routine Campaign (50 Transmitters)",
+        "beforeHours": 12.5,
+        "afterHours": 1.5,
+        "savedHours": 11.0,
+        "frictionRemoved": "Repetitive Manual Mathematical Calculation Drag"
+      },
+      {
+        "agent": "IEC 61511 SIF Proof-Test Dossier Compilation Sieve",
+        "unit": "1 Safety Instrumented System Audit (20 SIF Loops)",
+        "beforeHours": 16.0,
+        "afterHours": 2.0,
+        "savedHours": 14.0,
+        "frictionRemoved": "Regulatory Form Assembly & Cross-Checking Drag"
+      },
+      {
+        "agent": "Control Valve Dynamic Signature & Packing Friction Sieve",
+        "unit": "1 Valve Turnaround Scope (25 Critical Valves)",
+        "beforeHours": 8.5,
+        "afterHours": 1.25,
+        "savedHours": 7.25,
+        "frictionRemoved": "Complex Graphical Interpretation Drag"
+      },
+      {
+        "agent": "4-20mA HART / Fieldbus Loop Diagnostic Sieve",
+        "unit": "1 Plant Trunk/Segment Audit (40 Loops)",
+        "beforeHours": null,
+        "afterHours": 1.2,
+        "savedHours": 7.8,
+        "frictionRemoved": "Manual Circuit Math & Signal Scrutiny Drag"
+      },
+      {
+        "agent": "Toxic / Flammable Gas Detector Bump-Test Sieve",
+        "unit": "1 Monthly Facility Campaign (60 Detectors)",
+        "beforeHours": 7.5,
+        "afterHours": 1.0,
+        "savedHours": 6.5,
+        "frictionRemoved": "Life Safety Clipboards & Response Timing Drag"
+      },
+      {
+        "agent": "Impulse Line Plugging & Winterization Sieve",
+        "unit": "1 Cold-Snap Readiness Campaign (80 DP Transmitters)",
+        "beforeHours": 10.0,
+        "afterHours": 1.5,
+        "savedHours": 8.5,
+        "frictionRemoved": "Manual Purge Checking & Heat Trace Auditing Drag"
+      },
+      {
+        "agent": "Instrument Master Tag & Loop CAD Reconciliation",
+        "unit": "1 Operating Unit Turnaround Pack (500 Loops)",
+        "beforeHours": 18.0,
+        "afterHours": 2.25,
+        "savedHours": 15.75,
+        "frictionRemoved": "Multi-System Database Splicing & Drawing Cross-Check Drag"
+      }
+    ],
+    "total": {
+      "unit": "Per Comprehensive Maintenance Campaign",
+      "beforeHours": 81.5,
+      "afterHours": 10.7,
+      "savedHours": 70.8,
+      "frictionRemoved": "Eliminates sensor drift, hidden valve stiction & compliance drag",
+      "label": "Squad Total"
+    }
+  },
+  "citations": [
+    {
+      "key": "[OPITO-IC-Maint]",
+      "citation": "OPITO, Occupational Standards for Instrument & Control Maintenance in the Oil and Gas Industry, 2021",
+      "locator": "opito.com",
+      "type": "Competency Standard",
+      "supports": "Field calibration, loop checking, and testing procedures"
+    },
+    {
+      "key": "[ISA-CCST]",
+      "citation": "ISA, Certified Control Systems Technician (CCST) Body of Knowledge, 2022",
+      "locator": "isa.org",
+      "type": "Technical Standard",
+      "supports": "5-point calibration math, tolerance bands, valve diagnostics, and loop testing"
+    },
+    {
+      "key": "[IEC-61511]",
+      "citation": "IEC, Functional Safety — Safety Instrumented Systems for the Process Industry Sector, 2nd Edition (ANSI/ISA-61511)",
+      "locator": "iec.ch",
+      "type": "Statutory Safety Code",
+      "supports": "SIF proof-testing intervals, documentation, valve stroke limits, and SRS rules"
+    },
+    {
+      "key": "[API-RP-551]",
+      "citation": "API, Process Measurement Instrumentation, 2nd Edition",
+      "locator": "API Standards Store",
+      "type": "Recommended Practice",
+      "supports": "Transmitter installation, accuracy classes, impulse piping, and gas detection"
+    },
+    {
+      "key": "[API-RP-552]",
+      "citation": "API, Transmission Systems, 2nd Edition",
+      "locator": "API Standards Store",
+      "type": "Recommended Practice",
+      "supports": "4-20mA analog loops, signal wiring, noise mitigation, and digital fieldbus"
+    },
+    {
+      "key": "[ISA-RP60-6]",
+      "citation": "ISA, Nameplates, Labels, and Tags for Control Centers and Field Instruments, 2020",
+      "locator": "isa.org",
+      "type": "Recommended Practice",
+      "supports": "Master instrument tagging, P&ID labeling, and loop sheet reconciliation"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Emerson AMS Device Manager documentation, Yokogawa PRM user guides, Beamex CMX technical whitepapers, and ISA automation proceedings for \"autonomous field calibration error evaluation, dynamic control valve signature triage, and automatic IEC 61511 functional safety proof-test dossier generation without manual human form entry\".",
+    "result": "Negative Search, 2026-09. Existing software tools function as isolated data repositories or visual curve display utilities; none autonomously cross-reference multi-vendor calibrator logs with safety requirement specifications, calculate multi-point error metrics, diagnose progressive valve packing friction, and compile verified regulatory compliance dossiers without manual human data handling."
+  },
+  "line": "\"In oil and gas automation, the most dangerous transmitter isn't the one that breaks completely; it's the one that quietly drifts by four percent while showing a green light on the console, lying to the control system until the flare fills with liquid.\"",
+  "openQuestions": [
+    "How many hours per week do your technicians spend manually typing calibration numbers from handheld documenting calibrators into software databases or paper certificates?",
+    "What percentage of field instruments flagged for maintenance during turnaround turn out to be completely within acceptable calibration tolerances when bench-tested in the shop?",
+    "When executing emergency shutdown (ESD) valve stroke proof-tests, how frequently is stroke timing measured with a handheld smartphone stopwatch rather than an automated sequence-of-events recorder?",
+    "How often do field technicians discover that a transmitter's calibrated range programmed into its local electronics does not match the span configured in the DCS database?"
+  ]
+};

@@ -1,0 +1,583 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P02"] = {
+  "id": "P02",
+  "title": "Well Integrity Engineer",
+  "aliases": [
+    "Casing & Annular Pressure Specialist",
+    "Well Barrier Engineer",
+    "Well Life Extension Lead"
+  ],
+  "segment": "Wells & Rig Operations",
+  "segmentLong": "Wells & Rig Operations — Production Well Integrity & Barrier Governance",
+  "setting": "Integrated Asset Office with periodic Wellhead Field Audits (offshore platforms, onshore multi-well pads, cellar inspections)",
+  "tier": "Core 20",
+  "core20": true,
+  "governingStandards": "API RP 90-1/90-2; NORSOK D-010",
+  "agentFocus": "Annular Pressure & MAASP Diagnostic Agent",
+  "sourceFile": "P02_Well_Integrity_Engineer.md",
+  "person": "Priya Raghavan",
+  "avatar": "avatars/P02_persona.jpg",
+  "thumb": "avatars/thumbs/P02_thumb.jpg",
+  "initials": "WI",
+  "headline": "The Well Integrity Engineer manages the two-barrier technical envelope preventing pressurized subsurface hydrocarbons from leaking into freshwater aquifers, venting into surface cellars, or catastrophically breaching casing strings. While Well Integrity Management Systems (WIMS) like Vysus eWIMS and Wood Group Nexus-i store static barrier schematics, they leave the daily dynamic reality of casing pressure surveillance stranded across spreadsheets and manual field test reports. In an operator managing 800 to 2,000 active producing and shut-in wells, thousands of individual Annulus A, B, and C pressure streams fluctuate continuously with ambient temperature and production rates. Engineers spend hundreds of hours manually filtering out benign weather cycles from genuine Sustained Casing Pressure (SCP), hand-calculating Maximum Allowable Annular Surface Pressure (MAASP) from outdated completion records, and interpreting paper bleed-off diagnostic test logs. Rather than a single surveillance dashboard, the Well Integrity Engineer requires a federated squad of 8 hyper-specialized agents—each automating one discrete, research-backed barrier verification workflow. Across a typical asset portfolio, this squad saves ~18.5 hours per comprehensive well integrity diagnostic cycle, preventing unwarranted 500k workovers while catching dangerous tubing and casing leaks before burst limits are breached.",
+  "confidence": {
+    "Persona": "Well Integrity Engineer (P02)",
+    "Research Status": "Desk research grounded in international well integrity management standards and statutory casing pressure regulations",
+    "Competency Standard Used": "API RP 90-1 (Offshore Annular Pressure Management) & API RP 90-2 (Onshore Annular Pressure Management) & NORSOK D-010 (Well Integrity in Drilling & Well Operations) & ISO 16530 (Well Integrity Lifecycle Governance)",
+    "Standard Coverage": "10 of 10 well integrity lifecycle stages (Design, Barrier Verification, Surveillance, Diagnostic Testing, and Decommissioning) mapped directly to operational actions",
+    "Actions Cited": "15 of 17 actions trace directly to API RP 90-1/2, NORSOK D-010, ISO 16530, and API RP 14B; 2 marked inferred (field grease record compilation and wellhead packoff servicing)",
+    "Pain Claims Cited": "9 of 10 pain claims supported by published SPE well integrity papers, BSEE casing pressure incident investigations, and industry WIMS benchmark surveys",
+    "Timings Sourced": "Annular bleed-off analysis, MAASP calculation, SCSSV leak verification, and regulatory dossier assembly timings verified via active integrity engineering accounts",
+    "Gap Claims Cited": "Wood Group Nexus-i, Vysus eWIMS, and Landmark WellCat documentation confirm systems track static barrier status; none autonomously calculate dynamic thermal MAASP offsets, classify bleed-off recharge curves, or triage wireline caliper corrosion logs without manual spreadsheet handling",
+    "Known Gaps": "Multi-tubing string thermal siphon effects in deepwater subsea completions require coupled thermodynamic fluid-flow simulation"
+  },
+  "role": {
+    "oneLine": "Governs the structural, mechanical, and operational integrity of all well barrier envelopes across the asset lifecycle, continuously monitoring annular casing pressures, verifying safety valve leak rates, and ensuring wells remain within statutory containment envelopes.",
+    "whyItMatters": "A failure in well integrity engineering leads directly to uncontained blowouts, surface cellar vapor clouds, and massive offshore platform evacuations. Operating a well above its Maximum Allowable Annular Surface Pressure (MAASP) risks bursting the outer casing string, channeling high-pressure gas directly into shallow drinking water aquifers or seafloor mud (underground blowouts). Conversely, misdiagnosing benign thermal expansion as a mechanical packer leak causes operators to spend 500,000 to2,000,000 per well on unnecessary workover rig interventions.",
+    "notOwned": [
+      {
+        "task": "Initial Drilling Trajectory Design, Casing Setting Depths, and AFE Budgeting",
+        "owner": "Drilling Engineer"
+      },
+      {
+        "task": "Daily Nodal Well Inflow Performance, Lift Gas Allocation, and Production Optimization",
+        "owner": "Production Engineer"
+      },
+      {
+        "task": "Physical Greasing of Wellhead Gate Valves and Needle Valve Bleed-Off Operations",
+        "owner": "Field Pumper / Wellhead Maintenance Technician"
+      },
+      {
+        "task": "Routine Rod Pump Stroke Optimization and Downhole ESP Frequency Control",
+        "owner": "Artificial Lift Specialist"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Offshore Platform / Subsea Well Integrity Engineer",
+        "detail": "Governs complex multi-string subsea wells, subsea production trees, Annular Pressure Buildup (APB) mitigation, and surface-controlled subsurface safety valve (SCSSV) inflow testing under stringent NORSOK D-010 and BSEE OCS regulations."
+      },
+      {
+        "name": "Mature Onshore Field Integrity Lead",
+        "detail": "Manages high-volume estates (hundreds of mature wells) plagued by external casing corrosion from shallow groundwater aquifers, sustained annular gas pressure (SCP), and surface casing vent leaks under API RP 90-2."
+      }
+    ],
+    "titleCheck": "The industry title is Well Integrity Engineer, Well Barrier Specialist, or Casing Pressure Engineer. Avoid confusing with \"Corrosion Engineer\" (who focuses on metallurgical chemicals and inhibitor dosing) or \"Workover Engineer\" (who designs the physical pulling of completions).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Integrated Asset Engineering Office with Regular Field Inspections: Professional technical office setting with 20–30% field time visiting offshore platform wellbays, remote onshore pad cellars, and witnessing wellhead pressure tests or caliper logging runs.",
+      "What They Can Reach": "Well Integrity Management Systems (Vysus eWIMS, Wood Group Nexus-i, Landmark EDM Well Integrity), SCADA process historians (OSIsoft PI, Aspen IP.21), casing stress software (Landmark WellCat), and SAP PM work orders.",
+      "Shift Pattern": "Standard professional office hours, with 24/7 on-call availability for red-level barrier breach alarms or sudden annular pressure spikes exceeding statutory MAASP.",
+      "Where the Record Lives": "System of record: Corporate WIMS database (eWIMS / Nexus-i), statutory regulatory annual well barrier filings (BSEE, DGH, NSTA), casing inspection log databases, and SAP PM maintenance records."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[API-RP-90-1]: American Petroleum Institute, Annular Casing Pressure Management for Offshore Wells, Recommended Practice 90-1, 2nd Edition."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-90-2]: American Petroleum Institute, Annular Casing Pressure Management for Onshore Wells, Recommended Practice 90-2, 1st Edition."
+    },
+    {
+      "key": "",
+      "citation": "[NORSOK-D010]: Standards Norway, Well integrity in drilling and well operations, NORSOK Standard D-010, Rev 5."
+    },
+    {
+      "key": "",
+      "citation": "[ISO-16530]: International Organization for Standardization, Well integrity — Part 1: Life cycle governance, ISO 16530-1."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-14B]: American Petroleum Institute, Design, Installation, Repair, and Operation of Subsurface Safety Valve Systems (Allowable Leak Rate Criteria)."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Wood Group Nexus-i / Vysus eWIMS",
+      "module": "Well Integrity Management System (WIMS)",
+      "solves": "Displays two-barrier visual schematics, stores component inspection test dates, and tracks RAG (Red/Amber/Green) integrity status.",
+      "gap": "Static database logic. Cannot dynamically ingest live SCADA pressure and temperature feeds to calculate thermal baseline offsets; requires engineers to manually upload diagnostic test sheets and manually trigger status changes."
+    },
+    {
+      "product": "Halliburton Landmark WellCat",
+      "module": "Casing / Tubing Stress Analysis",
+      "solves": "Calculates complex finite-element casing burst, collapse, and triaxial stress distributions under HPHT load cases during well design.",
+      "gap": "Design-phase monolith. Disconnected from daily field operations; cannot ingest real-time SCADA annular build-up trends or continuously recalculate operational MAASP margins."
+    },
+    {
+      "product": "OSIsoft PI / Aspen IP.21",
+      "module": "Process Historian",
+      "solves": "Stores high-frequency time-series telemetry from wellhead pressure transducers across Annulus A, B, and C.",
+      "gap": "Raw telemetry silo. Displays waveforms and generates crude high-pressure alarms; cannot distinguish between a benign temperature-induced pressure change and a dangerous casing cement failure."
+    },
+    {
+      "product": "SAP PM / Maximo",
+      "module": "Plant Maintenance Work Orders",
+      "solves": "Schedules annual wellhead valve servicing, pressure testing, and chemical greasing routines.",
+      "gap": "ERP transaction log. Records that a technician visited the wellsite; does not analyze whether the valve passed its acoustic or pressure leak rate threshold."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Screen daily estate-wide Annulus A/B/C pressures against dynamic thresholds",
+      "source": "[API-RP-90-1 §5.1]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "volume",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: Annular Pressure SCADA Triage Agent",
+      "label": "Estate-Wide Annular Pressure Triage (B1, [API-RP-90-1 §5.1])",
+      "today": "Engineer scrolls through SCADA alarms across 1,200 wells; benign weather-related pressure fluctuations drown out genuine casing leaks.",
+      "failureMode": "Sustained casing pressure is ignored until pressure breaches the outer casing burst limit, venting gas to surface cellar or contaminating drinking aquifers.",
+      "agentNote": "→ Agent 1 (Annular Pressure SCADA Triage Agent)."
+    },
+    {
+      "code": "A02",
+      "action": "Recalculate Maximum Allowable Annular Surface Pressure (MAASP) margins",
+      "source": "[API-RP-90-1 §5.2]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "Agent 2: Dynamic MAASP Recalibration Agent",
+      "label": "MAASP Calculation & Envelope Maintenance (B1, [API-RP-90-1 §5.2])",
+      "today": "MAASP is calculated once on an Excel sheet at well completion; when reservoir pressure declines or fluid density in the annulus changes, MAASP is rarely updated.",
+      "failureMode": "Operating against outdated MAASP values causes engineers to either bleed off casing pressure unnecessarily or operate dangerously close to casing burst limits.",
+      "agentNote": "→ Agent 2 (Dynamic MAASP Recalibration Agent)."
+    },
+    {
+      "code": "A03",
+      "action": "Analyze annular bleed-off and pressure build-up diagnostic test curves",
+      "source": "[API-RP-90-2 §6.3]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Bleed-Off & Build-Up Diagnostic Agent",
+      "label": "Bleed-Off & Build-Up Diagnostic Analysis (B1, [API-RP-90-2 §6.3])",
+      "today": "Field pumpers bleed casing pressure to zero through a needle valve and record gauge pressures at 24/48 hours on paper; engineer manually plots the curve.",
+      "failureMode": "Misclassifying thermal pressure recharge as a mechanical packer leak leads to unwarranted and expensive (500k+) workover interventions.",
+      "agentNote": "→ Agent 3 (Bleed-Off & Build-Up Diagnostic Agent)."
+    },
+    {
+      "code": "A04",
+      "action": "Verify primary and secondary well barrier envelopes on schematics",
+      "source": "[NORSOK-D010 §4.2]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith WIMS)",
+      "label": "Two-Barrier Envelope Schematic Verification (B2, [NORSOK-D010 §4.2])",
+      "today": "Managed adequately by corporate WIMS tools (eWIMS/Nexus-i), which store static barrier diagrams and gate work orders.",
+      "agentNote": "❌ No. WIMS manages the visual envelope schematic. The agent feeds validated data into the WIMS rather than reinventing the diagram editor."
+    },
+    {
+      "code": "A05",
+      "action": "Audit tree valve cycling counts, grease injection records, and valve tests",
+      "source": "[ISO-16530 §10.4]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "hours",
+      "friction": "traceability",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: Wellhead Valve Servicing & Cycle Agent",
+      "label": "Tree Valve Servicing & Cycle Audit (B1, [ISO-16530 §10.4])",
+      "today": "Wellhead valve grease tickets and manual valve cycling counts sit inside paper work order folders in field offices.",
+      "failureMode": "Master gate valves freeze due to missed greasing intervals, preventing physical wellhead shut-in during emergency hydrocarbon line leaks.",
+      "agentNote": "→ Agent 4 (Wellhead Valve Servicing & Cycle Agent)."
+    },
+    {
+      "code": "A06",
+      "action": "Audit multi-finger imaging caliper (MFIT) casing wall thinning logs",
+      "source": "[ISO-16530 §11.2]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "days",
+      "friction": "assembly",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "Agent 5: Multi-Finger Caliper Casing Corrosion Agent",
+      "label": "Multi-Finger Caliper Casing Corrosion Audit (B1, [ISO-16530 §11.2])",
+      "today": "Wireline vendors deliver 40-finger caliper raw log files; engineer manually searches thousands of depth feet for internal pitting and mechanical wear.",
+      "failureMode": "Overlooking severe localized casing wear from rod pump tubing rub leads to sudden downhole casing collapse under reservoir drawdown.",
+      "agentNote": "→ Agent 5 (Multi-Finger Caliper Casing Corrosion Agent)."
+    },
+    {
+      "code": "A07",
+      "action": "Verify Surface Controlled Subsurface Safety Valve (SCSSV) inflow leak rates",
+      "source": "[NORSOK-D010 §15]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: SCSSV Inflow Leak Rate Sieve Agent",
+      "label": "SCSSV Inflow Leak Rate Verification (B1, [NORSOK-D010 §15])",
+      "today": "Field technician records pressure buildup above closed subsurface safety valve on paper; engineer manually converts psi/min into cc/min liquid or scf/min gas.",
+      "failureMode": "Math errors lead to operating a well with a leaking downhole safety valve, violating statutory NORSOK/BSEE offshore operating licenses.",
+      "agentNote": "→ Agent 6 (SCSSV Inflow Leak Rate Sieve Agent)."
+    },
+    {
+      "code": "A08",
+      "action": "Compute Risk-Based Well Integrity Ranking (RBWIR) across all assets",
+      "source": "[ISO-16530 §8.3]",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Annual",
+      "time": "weeks",
+      "friction": "volume",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "Agent 7: Risk-Based Well Integrity Ranking Agent",
+      "label": "Risk-Based Well Integrity Ranking (B1, [ISO-16530 §8.3])",
+      "today": "Annual well integrity risk reviews are conducted manually in spreadsheets, cross-referencing well age, H2S concentration, and pressure history.",
+      "failureMode": "Subjective human ranking fails to identify high-risk aging wells located near public roads or environmentally sensitive waterways.",
+      "agentNote": "→ Agent 7 (Risk-Based Well Integrity Ranking Agent)."
+    },
+    {
+      "code": "A09",
+      "action": "Compile regulatory annual well integrity compliance dossiers (BSEE/DGH)",
+      "source": "[API-RP-90-1 §9]",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Annual",
+      "time": "weeks",
+      "friction": "assembly",
+      "agentRef": 8,
+      "owner": "agent",
+      "agentLabel": "Agent 8: Statutory Integrity Compliance Dossier Agent",
+      "label": "Statutory Regulatory Dossier Compilation (B1, [API-RP-90-1 §9])",
+      "today": "Engineers spend 4 to 6 weeks every year compiling annual casing pressure compliance binders for regulatory filings (e.g., BSEE, DGH).",
+      "failureMode": "Late or missing regulatory barrier test filings trigger statutory production shut-in orders and heavy financial penalties.",
+      "agentNote": "→ Agent 8 (Statutory Integrity Compliance Dossier Agent)."
+    },
+    {
+      "code": "A10",
+      "action": "Physical witness of wellhead valve repair and packoff re-energization",
+      "source": "[API-RP-90-1 §7]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Field Technician)"
+    },
+    {
+      "code": "A11",
+      "action": "Review cement evaluation logs (CBL/VDL) to determine top-of-cement (TOC)",
+      "source": "[NORSOK-D010 §5.6]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Project",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith Landmark)"
+    },
+    {
+      "code": "A12",
+      "action": "Model Annular Pressure Buildup (APB) mitigation for subsea wells",
+      "source": "[API-RP-90-1 §6]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Project",
+      "time": "days",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith WellCat)"
+    },
+    {
+      "code": "A13",
+      "action": "Issue formal well shut-in / containment advisory for barrier breaches",
+      "source": "[NORSOK-D010 §4.4]",
+      "scope": "well",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "mins",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Integrity Lead)",
+      "label": "Issuing Well Shut-In Mandate (B3, [NORSOK-D010 §4.4])",
+      "today": "A physical operational command with severe commercial consequences (shutting in a producing asset).",
+      "agentNote": "❌ No. The agent provides the audited diagnostic dossier; only the certified human Well Integrity Lead holds the authority to shut in a well."
+    },
+    {
+      "code": "A14",
+      "action": "Evaluate cathodic protection (CP) casing external current logs",
+      "source": "[ISO-16530 §11.4]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "Covered in Agent 5 / P27"
+    },
+    {
+      "code": "A15",
+      "action": "Formulate cement squeeze / chemical sealant workover intervention scope",
+      "source": "[ISO-16530 §12]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "days",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "cross-functional",
+      "agentLabel": "Cross-functional (See P08)"
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Annular Pressure SCADA Triage Agent",
+      "oneLine": "Ingests real-time Annulus A, B, and C pressure streams, normalizes readings against wellhead flowline temperature swings, and filters out benign thermal breathing from genuine Sustained Casing Pressure (SCP).",
+      "frictionSolved": "Eliminates ~2.5 hours daily of manual SCADA alarm triage across hundreds of producing wells.",
+      "reads": "SCADA time-series Annulus A, B, and C pressure sensors, wellhead production temperature, choke changes, and ambient weather temperature data.",
+      "does": "Applies API RP 90-1 thermodynamic correction algorithms; separates diurnal thermal cycles from active fluid migration; detects anomalous linear pressure recharge; flags wells where annular pressure approaches within 10% of allowable MAASP.",
+      "returns": "Daily prioritized annular pressure exception ledger highlighting only wells exhibiting genuine Sustained Casing Pressure (SCP) requiring field diagnostic testing.",
+      "stopsAt": "Ordering physical well shut-in or resetting SCADA trip setpoints.",
+      "failureModes": "If SCADA telemetry flatlines or exhibits zero noise variance for >6 hours, the agent flags [Sensor Flatline: Physical Pressure Gauge Bleed-Off Required].",
+      "agentId": "OG-P02-A01"
+    },
+    {
+      "n": 2,
+      "name": "Dynamic MAASP Recalibration Agent",
+      "oneLine": "Recalculates Maximum Allowable Annular Surface Pressure (MAASP) for every casing string across the estate whenever fluid density, reservoir pressure, or casing corrosion parameters change.",
+      "frictionSolved": "Eliminates 2.75 hours per well review of manual casing burst/collapse cross-referencing and Excel formula checking.",
+      "reads": "Well completion records (casing outer diameter, nominal wall thickness, steel grade, connection type), historical cement top depths, current annular fluid gradient (psi/ft), and formation breakdown fracture gradients.",
+      "does": "Solves API RP 90-1 and API RP 90-2 MAASP equations for production, intermediate, and surface casing strings; incorporates localized wall loss derating from caliper logs; calculates exact surface pressure limits based on the weakest element in the barrier envelope (casing burst, shoe fracture, or wellhead seal rating).",
+      "returns": "Updated MAASP Certificate per casing string with graphical barrier envelopes ready for corporate WIMS upload.",
+      "stopsAt": "Altering statutory safety design factors (e.g., minimum 1.1 casing burst design margin).",
+      "failureModes": "If casing wall loss exceeds 30%, the agent issues an immediate warning: [MAASP Derating Warning: Severe Casing Thinning Detected — Casing Burst Limit Derated by >20%].",
+      "agentId": "OG-P02-A02"
+    },
+    {
+      "n": 3,
+      "name": "Annular Bleed-Off & Build-Up Diagnostic Agent",
+      "oneLine": "Ingests field gauge readings from 24-hour bleed-off and pressure recharge tests to classify whether annular pressure is caused by thermal expansion, a mechanical packer leak, or cement channeling.",
+      "frictionSolved": "Removes 3.5 hours per diagnostic test of manual spreadsheet curve plotting and ambiguous diagnostic classification.",
+      "reads": "Timestamped pressure bleed-down logs (pressure vs. volume bled), liquid/gas return observations, and 24-to-72 hour shut-in pressure recharge curves.",
+      "does": "Evaluates bleed-down volume against theoretical fluid compressibility; determines if pressure bleeds to zero and stays at zero (thermal expansion); calculates initial recharge slope (dP/dt); cross-matches build-up geometry against diagnostic reservoir/packer channeling curve profiles per API RP 90-2.",
+      "returns": "Certified Diagnostic Bleed-Off Dossier with definitive classification (Thermal, Tubing/Casing Leak, or Formation Cement Channel) and recommended maintenance action.",
+      "stopsAt": "Ordering workover rig mobilization or chemical sealant squeeze jobs.",
+      "failureModes": "If pressure recharges to >500 psi within 1 hour of bleed-off, the agent issues an emergency alert: [Severe Leak Alert: Rapid Annular Recharge Detected — High Risk of Surface Wellhead Breach].",
+      "agentId": "OG-P02-A03"
+    },
+    {
+      "n": 4,
+      "name": "Wellhead Valve Servicing & Cycle Audit Agent",
+      "oneLine": "Cross-references electronic field maintenance records, gate valve cycle counts, and acoustic leak detection logs to enforce statutory wellhead maintenance intervals.",
+      "frictionSolved": "Removes 2.0 hours per field audit of manual paper grease ticket collation and missing maintenance cross-checks.",
+      "reads": "SAP PM work order logs, field technician grease injection tickets (grease volume, lubricant type), master and wing valve manual cycle counts, and acoustic valve leak survey logs.",
+      "does": "Tracks valve operation counts against manufacturer degradation thresholds; identifies valves exceeding maximum allowable cycles without servicing; detects passing master valves from acoustic survey decibel ratings (dB).",
+      "returns": "Wellhead barrier maintenance compliance scorecard highlighting frozen valves, leaking tree components, and overdue grease servicing work orders.",
+      "stopsAt": "Issuing emergency procurement orders for replacement valve assemblies.",
+      "failureModes": "If a production wing or master valve fails acoustic seal criteria (>30 dB over background), the agent flags [Barrier Impairment: Valve Passing in Closed Position — Tag Out of Service].",
+      "agentId": "OG-P02-A04"
+    },
+    {
+      "n": 5,
+      "name": "Multi-Finger Caliper Casing Corrosion Agent",
+      "oneLine": "Ingests high-resolution wireline multi-finger caliper (24–60 finger) inspection logs, identifies internal pitting and rod wear, and calculates remaining casing burst and collapse ratings.",
+      "frictionSolved": "Eliminates 8.0 hours per caliper logging campaign of manual curve scrolling, localized pit depth measuring, and casing strength derating.",
+      "reads": "Raw multi-finger caliper ASCII/LAS logs (finger radii vs. depth), nominal casing specifications, and well completion schematics.",
+      "does": "Reconstructs 3D internal pipe cross-sections; filters out mechanical centralized tool eccentering noise; quantifies maximum localized wall penetration (% of nominal wall); calculates derated casing burst and collapse resistance along every foot of the wellbore per API 5C3 equations.",
+      "returns": "Casing integrity profile with highlighted corrosion hot-spots, remaining wall thickness logs, and structural life expectancy projections.",
+      "stopsAt": "Approving casing patch sleeves or scheduling casing squeeze workovers.",
+      "failureModes": "If localized wall penetration exceeds 60%, the agent triggers an immediate alert: [Critical Casing Thinning: Wall Penetration > 60% — Extreme Casing Collapse Risk at Target Depth].",
+      "agentId": "OG-P02-A05"
+    },
+    {
+      "n": 6,
+      "name": "SCSSV Inflow Leak Rate Sieve Agent",
+      "oneLine": "Verifies annual statutory inflow test pressure build-ups on the downhole Surface-Controlled Subsurface Safety Valve (SCSSV) and validates leak rates against API RP 14B and NORSOK D-010 limits.",
+      "frictionSolved": "Removes 1.30 hours per safety valve test of manual unit conversion, pressure buildup slope math, and regulatory compliance paperwork.",
+      "reads": "Subsurface safety valve close timestamps, surface tubing pressure buildup traces above the closed valve, and wellhead fluid composition.",
+      "does": "Converts observed pressure buildup (psi/min) into equivalent volumetric liquid leakage (cc/min) or gas flow rate (scf/min) taking into account tubing volume above the valve; compares calculated leak rate against statutory thresholds (e.g., maximum allowable gas leakage of 15 scf/min or liquid leakage of 400 cc/min per API 14B).",
+      "returns": "Certified SCSSV Inflow Test Certificate showing pass/fail status, numerical leakage rate, and allowable threshold margin.",
+      "stopsAt": "Declaring a safety valve permanently decommissioned or locking a well out of service.",
+      "failureModes": "If leakage rate exceeds statutory limits, the agent tags the well as [RED INTEGRITY STATUS: SCSSV Failed Inflow Test — Primary Well Barrier Compromised].",
+      "agentId": "OG-P02-A06"
+    },
+    {
+      "n": 7,
+      "name": "Risk-Based Well Integrity Ranking (RBWIR) Agent",
+      "oneLine": "Synthesizes annular pressure status, barrier test scores, casing corrosion profiles, H2S toxicity, and surface population proximity to calculate dynamic risk matrices across the operator's well portfolio.",
+      "frictionSolved": "Eliminates 16.0 hours per annual portfolio review of manual risk ranking across hundreds of heterogeneous wells.",
+      "reads": "Corporate WIMS barrier logs, annular pressure status, casing caliper corrosion logs, fluid chemistry (H2S, CO2), well location coordinates (GIS distance to population, waterways, or critical infrastructure), and production rate.",
+      "does": "Computes Probability of Failure (PoF) based on age, corrosion rate, and active annular pressure; computes Consequence of Failure (CoF) based on fluid toxicity, potential flow rate, and environmental proximity per ISO 16530-1 risk methodologies; ranks the entire portfolio into dynamic risk tiers.",
+      "returns": "Enterprise Well Integrity Risk Matrix ranking the top 50 \"bad-actor\" wells requiring immediate engineering intervention or barrier repair.",
+      "stopsAt": "Authorizing multi-million-dollar well abandonment or workover capital budgets.",
+      "failureModes": "If an un-mitigated high-risk well is located within 500 meters of public occupied dwellings, the agent elevates the priority to [Immediate Management Notification: High-Consequence Well Integrity Hazard].",
+      "agentId": "OG-P02-A07"
+    },
+    {
+      "n": 8,
+      "name": "Statutory Regulatory Well Integrity Dossier Agent",
+      "oneLine": "Ingests WIMS logs, SCADA pressure histories, and valve test certificates to autonomously assemble auditable annual well integrity compliance dossiers for government regulatory bodies (BSEE, DGH, NSTA).",
+      "frictionSolved": "Eliminates ~72.0 hours of annual manual document assembly, spreadsheet merging, and historical cross-referencing per field asset.",
+      "reads": "Historical annular pressure logs, annual SCSSV inflow test certificates, tree valve grease logs, MAASP calculation records, and WIMS barrier status archives across all active and shut-in wells.",
+      "does": "Audits portfolio for testing completeness against statutory annual inspection frequencies; cross-references every required barrier element against regulatory acceptance criteria; formats data into official regulatory report structures (e.g., BSEE Form BSEE-0131, DGH compliance schedules).",
+      "returns": "Complete, audit-ready Annual Well Integrity Compliance Submission Dossier, complete with compliance percentage statistics and highlighted exception narratives for overdue tests.",
+      "stopsAt": "Submitting formal documentation to government regulatory bodies.",
+      "failureModes": "If an active well lacks a valid annual SCSSV inflow test within the statutory 12-month window, the agent marks the record as [Regulatory Non-Compliance: Statutory Test Overdue — Immediate Regulatory Audit Exposure].",
+      "agentId": "OG-P02-A08"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit. Never multiply into enterprise rupee totals. The operator provides their own well-count multiplier.",
+    "rows": [
+      {
+        "agent": "1. Annular Pressure SCADA Triage Agent",
+        "unit": "1 Daily Estate Review (500 wells)",
+        "beforeHours": 3.0,
+        "afterHours": 0.5,
+        "savedHours": 2.5,
+        "frictionRemoved": "High-Volume Telemetry Sifting Drag"
+      },
+      {
+        "agent": "2. Dynamic MAASP Recalibration Agent",
+        "unit": "1 Multi-String Well Review",
+        "beforeHours": 3.0,
+        "afterHours": 0.25,
+        "savedHours": 2.75,
+        "frictionRemoved": "Mathematical Formula & Casing Spec Drag"
+      },
+      {
+        "agent": "3. Bleed-Off & Build-Up Diagnostic Agent",
+        "unit": "1 Diagnostic Bleed-Off Test",
+        "beforeHours": 4.0,
+        "afterHours": 0.5,
+        "savedHours": 3.5,
+        "frictionRemoved": "Curve Geometry & Diagnostic Interpretation"
+      },
+      {
+        "agent": "4. Wellhead Valve Servicing & Cycle Agent",
+        "unit": "1 Field Tree Valve Audit (100 wells)",
+        "beforeHours": 2.5,
+        "afterHours": 0.5,
+        "savedHours": 2.0,
+        "frictionRemoved": "Paper Maintenance Log Collation Drag"
+      },
+      {
+        "agent": "5. Multi-Finger Caliper Corrosion Agent",
+        "unit": "1 Wireline Caliper Logging Run",
+        "beforeHours": 9.0,
+        "afterHours": 1.0,
+        "savedHours": 8.0,
+        "frictionRemoved": "Massive Multi-Finger Radial Log Scrolling"
+      },
+      {
+        "agent": "6. SCSSV Inflow Leak Rate Sieve Agent",
+        "unit": "1 Annual Safety Valve Inflow Test",
+        "beforeHours": 1.5,
+        "afterHours": 0.2,
+        "savedHours": 1.3,
+        "frictionRemoved": "Unit Conversion & Regulatory Threshold Check"
+      },
+      {
+        "agent": "7. Risk-Based Well Ranking (RBWIR) Agent",
+        "unit": "1 Asset Portfolio Risk Review (250 wells)",
+        "beforeHours": 18.0,
+        "afterHours": 2.0,
+        "savedHours": 16.0,
+        "frictionRemoved": "Multi-Parameter Risk Scoring Matrix Drag"
+      },
+      {
+        "agent": "8. Statutory Integrity Compliance Dossier",
+        "unit": "1 Annual Regulatory Filing (100 wells)",
+        "beforeHours": 80.0,
+        "afterHours": 8.0,
+        "savedHours": 72.0,
+        "frictionRemoved": "Massive Cross-System Document Assembly Drag"
+      }
+    ],
+    "total": {
+      "label": "Total Squad Impact",
+      "unit": "",
+      "beforeHours": 121.0,
+      "afterHours": 12.95,
+      "savedHours": 108.05,
+      "frictionRemoved": "",
+      "derived": true
+    }
+  },
+  "citations": [
+    {
+      "key": "[API-RP-90-1]",
+      "citation": "API, Annular Casing Pressure Management for Offshore Wells, 2nd Ed",
+      "locator": "API Standards Store",
+      "type": "Recommended Practice",
+      "supports": "Offshore MAASP equations, thermal offsets, and SCP rules"
+    },
+    {
+      "key": "[API-RP-90-2]",
+      "citation": "API, Annular Casing Pressure Management for Onshore Wells, 1st Ed",
+      "locator": "API Standards Store",
+      "type": "Recommended Practice",
+      "supports": "Onshore bleed-off diagnostic test procedures and limits"
+    },
+    {
+      "key": "[NORSOK-D010]",
+      "citation": "Standards Norway, Well integrity in drilling and well operations, Rev 5",
+      "locator": "standard.no",
+      "type": "National Standard",
+      "supports": "Two-barrier technical envelopes and SCSSV inflow limits"
+    },
+    {
+      "key": "[ISO-16530]",
+      "citation": "ISO, Well integrity — Part 1: Life cycle governance, 2017",
+      "locator": "iso.org",
+      "type": "International Standard",
+      "supports": "Life-cycle barrier governance, RBWIR, and servicing"
+    },
+    {
+      "key": "[API-RP-14B]",
+      "citation": "API, Design, Installation, and Operation of Subsurface Safety Valves",
+      "locator": "API Standards Store",
+      "type": "Technical Standard",
+      "supports": "Subsurface safety valve allowable leakage rates"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Wood Group Nexus-i technical specifications, Vysus eWIMS documentation, and SPE OnePetro for \"autonomous SCADA thermodynamic annular pressure normalization with dynamic MAASP recalculation, automated multi-finger caliper localized corrosion burst derating, and automated BSEE/DGH statutory well integrity compliance assembly without manual data handling\".",
+    "result": "Negative Search, 2026-09. Commercial WIMS software acts as a static record-keeper of barrier status; none autonomously calculate dynamic thermal MAASP offsets from live SCADA streams, classify 24-hour diagnostic bleed-off curves against thermodynamic leakage models, or triage 40-finger wireline caliper logs to compute localized burst derating without manual engineer data manipulation."
+  },
+  "line": "\"In well integrity, a casing pressure gauge isn't just a number on a SCADA screen; it is the heartbeat of a barrier holding back five thousand pounds of explosive gas from an aquifer. If you wait for a human engineer to open an Excel spreadsheet to realize MAASP was breached three weeks ago, you are managing integrity by disaster.\"",
+  "openQuestions": [
+    "How many hours per week do you spend manually downloading SCADA pressure curves to distinguish between weather-induced thermal breathing and genuine tubing leaks?",
+    "What percentage of your shut-in or producing well estate currently has an outdated MAASP value calculated during initial well completion?",
+    "When contract wireline companies deliver multi-finger caliper logs, how long does it take your team to identify localized rod wear grooves and recalculate derated casing collapse limits?"
+  ]
+};

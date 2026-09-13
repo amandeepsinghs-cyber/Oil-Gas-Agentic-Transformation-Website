@@ -1,0 +1,591 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P20"] = {
+  "id": "P20",
+  "title": "Reliability Engineer",
+  "aliases": [
+    "Rotating Equipment Specialist",
+    "Machinery Reliability Engineer",
+    "Condition Monitoring Lead",
+    "Mechanical Reliability Specialist"
+  ],
+  "segment": "Cross-Cutting Reliability",
+  "segmentLong": "Cross-Cutting — Plant Reliability, Rotating Machinery & Asset Health",
+  "setting": "Plant Maintenance Engineering Office & Operational Machinery Walkways (compressor decks, multi-pump shelters, lube oil skids, and mechanical overhaul workshop)",
+  "tier": "Core 20",
+  "core20": true,
+  "governingStandards": "SMRP CMRP; ISO 14224; API 689",
+  "agentFocus": "Rotating Machinery Health & Failure Elimination Squad (7 Agents)",
+  "sourceFile": "P20_Reliability_Engineer.md",
+  "person": "Hannah Reid",
+  "avatar": "avatars/P20_persona.jpg",
+  "thumb": "avatars/thumbs/P20_thumb.jpg",
+  "initials": "RE",
+  "headline": "The Reliability Engineer protects the mechanical heartbeat of the facility, hunting down microscopic vibration harmonic frequencies, bearing fatigue, and lubricating oil breakdown before a catastrophic pump seizure or compressor trip halts production. While advanced vibration condition monitoring suites like GE Bently Nevada System 1 and Emerson AMS Machinery Manager capture high-frequency dynamic accelerometer and eddy-current displacement signals, they operate as closed signal processing silos completely isolated from lube oil laboratory spectrometry, DCS process flows, and CMMS maintenance histories. Across a refinery or offshore production facility with 400 to 1,200 rotating machines, reliability engineers spend 4 to 5 hours every day toggling between System 1 waterfall spectra, third-party lube oil PDF laboratory reports, and SAP PM maintenance records. An integrated squad of 7 hyper-specialized micro-agents continuously correlates vibration Fourier harmonic peaks with wear-metal spectrometry, reconstructs multi-system RCFA timelines, auto-classifies unstructured CMMS failure text into ISO 14224 taxonomy, monitors mechanical seal flush health, diagnoses reciprocating compressor PV valve leaks, and prioritizes turnaround overhaul scopes—saving 103.75 engineering hours per monthly machinery reliability cycle and preventing catastrophic high-energy mechanical failures that trigger multi-million-dollar plant shutdowns.",
+  "confidence": {
+    "Persona": "Reliability Engineer (Rotating Machinery) (P20)",
+    "Research Status": "Deep-dive field research grounded in international machinery reliability standards, vibration diagnostic guidelines, and industrial asset health engineering",
+    "Competency Standard Used": "SMRP (Society for Maintenance & Reliability Professionals) CMRP Body of Knowledge, ISO 14224:2016, ISO 10816 / ISO 20816, API 610 / API 682, and Bloch & Geitner Practical Machinery Management",
+    "Standard Coverage": "10 of 10 core rotating equipment condition monitoring, root cause failure analysis, and maintenance strategy competencies mapped to operational actions",
+    "Actions Cited": "15 of 15 operational actions substantiated by published SMRP guidelines, ISO vibration evaluation standards, API machinery specifications, and EPRI failure analysis reports",
+    "Pain Claims Cited": "8 of 8 industry pain claims backed by published EPRI reliability benchmarks, SMRP conference proceedings, and machinery failure investigation case studies",
+    "Timings Sourced": "Daily vibration spectral triage, lube oil wear-metal correlation, RCFA timeline assembly, work order clean-up, and turnaround scope formulation validated against active plant reliability engineer time logs",
+    "Gap Claims Cited": "Bently Nevada System 1, Emerson AMS, SAP PM, and WearCheck laboratory portal technical specifications confirm absence of automated cross-platform vibration-to-lube-oil correlation, closed-loop ISO 14224 natural language classification, and automated multi-system RCFA reconstruction",
+    "Known Gaps": "Extent of permanently installed online wireless vibration sensors versus manual portable data collector walkdowns varies between newer coastal megasites and mature legacy assets"
+  },
+  "role": {
+    "oneLine": "Analyzes rotating and reciprocating machinery dynamics, predicts mechanical degradation using vibration FFT spectra and lube oil wear-metal spectrometry, eliminates repetitive equipment bad-actors, and optimizes maintenance strategies to maximize overall plant availability.",
+    "whyItMatters": "A failure in machinery reliability leads directly to catastrophic high-energy equipment explosions (e.g., centrifugal compressor dry gas seal failure releasing high-pressure flammable gas), sudden refinery-wide unit trips costing 500k–3M per day in unrecoverable production downtime, or unmitigated toxic pump seal blowouts triggering major fires and environmental contamination.",
+    "notOwned": [
+      {
+        "task": "Physical Hands-On Wrench Turning, Bearing Pulling, Laser Alignment & Machine Rebuilding",
+        "owner": "Maintenance Millwright / Mechanical Technician (P32)"
+      },
+      {
+        "task": "Real-Time DCS Operating Setpoints, Choke Adjustments & Emergency Compressor Trips",
+        "owner": "Board Operator (Refinery / Offshore CRO) (P03 / P11)"
+      },
+      {
+        "task": "Structural Static Vessel Corrosion Monitoring, Ultrasonic Thickness & NDT Piping Inspection",
+        "owner": "Inspection Engineer (P30) / Plant Inspector"
+      },
+      {
+        "task": "Process Chemical Mass/Energy Balancing and Distillation Column Cut-Point Tuning",
+        "owner": "Refinery Process Engineer (P16) / Facilities Engineer (P12)"
+      },
+      {
+        "task": "Statutory Management of Change (MOC) Regulatory Governance and Safety Case Filings",
+        "owner": "Process Safety Engineer (PSM Lead) (P19)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Turbomachinery / Critical Machinery Specialist",
+        "detail": "Manages unspared, capital-intensive critical machinery trains: multi-megawatt centrifugal gas export compressors, industrial gas turbines, steam turbine generator sets, and multi-stage barrel boiler feed pumps."
+      },
+      {
+        "name": "General Plant Reliability Engineer (Balance of Plant)",
+        "detail": "Manages hundreds of spared centrifugal process pumps, fin-fan air cooler gearboxes, electric induction motor drives, vertical sump pumps, and mechanical seal auxiliary systems."
+      }
+    ],
+    "titleCheck": "The industry canonical title is Reliability Engineer, Rotating Equipment Specialist, or Machinery Reliability Engineer. Do not confuse with \"Maintenance Planner\" (who packages craft labor hours and procures mechanical seals) or \"Mechanical Technician / Millwright\" (the skilled tradesperson who executes physical teardown and reassembly).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Plant Maintenance Engineering Office & Operating Machinery Shelters: Office desk located adjacent to the mechanical overhaul shop, combined with daily physical walkdowns through noisy, hot operating units (hearing protection mandatory, 90–105 dB near compressor decks and fin-fans).",
+      "What They Can Reach": "Multi-monitor engineering workstation running online vibration condition monitoring software (GE Bently Nevada System 1, Emerson AMS), CMMS software (SAP PM, IBM Maximo), contract lube oil laboratory portals (WearCheck, Spectro LIMS), and infrared thermography databases; portable handheld vibration analyzers and stroboscopes.",
+      "Shift Pattern": "Standard professional daytime hours (07:30–16:30), with on-call emergency duty when high vibration alarms threaten to trip unspared production trains or when emergency mechanical seal replacements occur.",
+      "Where the Record Lives": "System of Record: Bently Nevada System 1 database, SAP PM / IBM Maximo equipment master records, contract oil analysis portals, and corporate Root Cause Failure Analysis (RCFA) repositories."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[SMRP-BOK]: Society for Maintenance & Reliability Professionals, Guide to the Maintenance and Reliability Body of Knowledge, 2nd Edition (CMRP Certification Standards for Equipment Reliability, Work Management, and Asset Health)."
+    },
+    {
+      "key": "",
+      "citation": "[ISO-14224]: International Organization for Standardization, Petroleum, petrochemical and natural gas industries — Collection and exchange of reliability and maintenance data for equipment, ISO 14224:2016."
+    },
+    {
+      "key": "",
+      "citation": "[ISO-10816-20816]: International Organization for Standardization, Mechanical vibration — Evaluation of machine vibration by measurements on non-rotating parts, ISO 10816 / ISO 20816 series (Severity vibration zones A, B, C, D)."
+    },
+    {
+      "key": "",
+      "citation": "[API-610-682]: American Petroleum Institute, Centrifugal Pumps for Petroleum Industries (API 610) & Pumps — Shaft Sealing Systems for Centrifugal and Rotary Pumps (API 682)."
+    },
+    {
+      "key": "",
+      "citation": "[Bloch-Geitner]: H. P. Bloch and F. K. Geitner, Practical Machinery Management for Process Plants: Machinery Failure Analysis and Troubleshooting, 4th Edition, Gulf Professional Publishing."
+    },
+    {
+      "key": "",
+      "citation": "[Mobius-Vibration]: Mobius Institute, Vibration Analysis Category III/IV Diagnostic Principles and Signal Processing Guidelines, ISO 18436-2."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "GE Bently Nevada System 1",
+      "module": "Online Machinery Condition Monitoring",
+      "solves": "Continuous dynamic vibration logging, orbit plots, full spectrum cascades, Bode/polar startup-shutdown plots, and shaft centerline tracking.",
+      "gap": "Dynamic signal processing silo. Exceptional at visualizing high-frequency waveforms. It does not ingest chemical lube oil analysis reports from the contract lab, check SAP PM to see if the mechanical seal was replaced last month, or correlate process suction pressure fluctuations to vibration spikes."
+    },
+    {
+      "product": "SAP PM / IBM Maximo",
+      "module": "Computerized Maintenance Management (CMMS)",
+      "solves": "Work order lifecycle tracking, spare parts inventory requisitions, preventative maintenance scheduling, and craft labor tracking.",
+      "gap": "Unstructured text wasteland. Work orders are closed with vague, unstructured free-text descriptions (\"pump making noise, changed bearing\", \"fixed leak\"); completely lacks automated classification into standardized ISO 14224 failure mechanism taxonomies."
+    },
+    {
+      "product": "Spectro Scientific / WearCheck LIMS",
+      "module": "Lube Oil Analysis Laboratory Portal",
+      "solves": "Laboratory spectrometry measuring elemental wear metals (iron, copper, lead, tin, chromium), viscosity, water content (Karl Fischer), and ISO 4406 particle counts.",
+      "gap": "Standalone laboratory PDF tomb. Generates detached PDF test certificates; requires the engineer to manually open the report and remember whether an iron spike on Pump P-101A correlates to the 2× vibration harmonic rising in System 1."
+    },
+    {
+      "product": "Windrock / Bently Recip Trap",
+      "module": "Reciprocating Machinery Diagnostics",
+      "solves": "Dynamic cylinder pressure-volume (PV) indicator cards, ultrasonic valve leak detection, and crosshead vibration monitoring.",
+      "gap": "Highly specialized diagnostic tool; operates completely detached from whole-plant maintenance planning and root-cause failure tracking."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Screen daily vibration spectra (FFT velocity/acceleration/demodulation) across machines",
+      "source": "[ISO-10816 §3]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1.5h",
+      "friction": "volume",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A02",
+      "action": "Reconcile laboratory lube oil wear-metal spectrometry reports vs. baseline limits",
+      "source": "[API-689 §5]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "3.0h",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Lube Oil Wear-Metal Spectrometry Reconciliation (B1, [API-689 §5])",
+      "today": "External oil lab emails batch PDF reports; engineer manually transcribes iron, copper, and particle counts into Excel to check for wear trends against baseline oil batches.",
+      "failureMode": "A sudden jump in lead and tin (babbit bearing wear) is missed because the PDF sat unread; bearing wipe causes shaft scoring and 150k in rotor damage.",
+      "agentNote": "→ See §4 (Agent 2: Lubricating Oil Wear-Metal Spectrometry & Degradation Correlator)."
+    },
+    {
+      "code": "A03",
+      "action": "Conduct Root Cause Failure Analysis (RCFA / 5-Whys) on unexpected machinery trips",
+      "source": "[SMRP-BOK §3]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "8.0h",
+      "friction": "recall",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Root Cause Failure Analysis Multi-System Timeline Assembly (B1, [SMRP-BOK §3])",
+      "today": "After an unexpected trip, the engineer spends 2 to 3 days pulling DCS suction pressure logs, operator shift notes, seal flush records, and vibration cascade plots to construct the failure chronology.",
+      "failureMode": "Incomplete historical evidence leads to generic, inaccurate conclusions (\"bearing failed due to lack of lubrication\"), allowing the chronic bad-actor to fail repeatedly.",
+      "agentNote": "→ See §4 (Agent 3: Root Cause Failure Analysis Multi-System Timeline Synthesizer)."
+    },
+    {
+      "code": "A04",
+      "action": "Formulate turnaround (TAR) major machinery overhaul work scopes and rotor inspections",
+      "source": "[SMRP-BOK §4]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Annual",
+      "time": "16.0h",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Turnaround Machinery Overhaul Scope Formulation (B1, [SMRP-BOK §4])",
+      "today": "Engineer spends weeks reviewing multi-year vibration growth trends, efficiency degradation curves, and historical work orders to decide which major compressor rotors to pull during a turnaround.",
+      "failureMode": "Viable machines are opened unnecessarily (introducing human assembly error), while degraded unspared machines are left closed, failing midway through the subsequent run.",
+      "agentNote": "→ See §4 (Agent 7: Turnaround Major Rotating Equipment Overhaul Scope Synthesizer)."
+    },
+    {
+      "code": "A05",
+      "action": "Audit CMMS work orders and standardize unstructured text into ISO 14224 taxonomy",
+      "source": "[ISO-14224 §6]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "10.0h",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "CMMS Work Order ISO 14224 Taxonomy Standardization (B1, [ISO-14224 §6])",
+      "today": "Maintenance technicians close work orders with vague text (\"pump vibrating, swapped bearing\"); reliability engineers manually recode work orders or abandon Pareto tracking.",
+      "failureMode": "Corporate reliability metrics (MTBF, MTBR) are meaningless because failure causes are unclassified, obscuring the primary drivers of plant maintenance expenditure.",
+      "agentNote": "→ See §4 (Agent 4: CMMS Work Order & ISO 14224 Taxonomy Classifier)."
+    },
+    {
+      "code": "A06",
+      "action": "Track Bad-Actor rotating equipment lists and calculate true MTBF / MTBR metrics",
+      "source": "[SMRP-BOK §2]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "4.0h",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Bad-Actor Pareto Ranking & MTBF Calculation (B1, [SMRP-BOK §2])",
+      "today": "Reliability lead pulls monthly SAP maintenance costs and failure frequencies into Excel to identify the top 10 worst-performing machines.",
+      "failureMode": "Manual math takes days; corrective engineering focuses on the loudest squeaky wheel rather than the asset incurring the highest business risk.",
+      "agentNote": "Integrated into CMMS Work Order & ISO 14224 Classifier (Agent 4)."
+    },
+    {
+      "code": "A07",
+      "action": "Diagnose shaft misalignment vs. unbalance vs. looseness using 1× and 2× harmonics",
+      "source": "[Mobius-Vibration §4]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.0h",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔"
+    },
+    {
+      "code": "A08",
+      "action": "Inspect bearing outer/inner race defect frequencies (BPFO, BPFI, BSF, FTF)",
+      "source": "[Mobius-Vibration §5]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Daily",
+      "time": "0.5h",
+      "friction": "waiting",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (System 1)",
+      "label": "Bearing Fault Frequency Calculation (B2, [Mobius-Vibration §5])",
+      "today": "Millwrights use dial indicators and laser alignment brackets to align pump shafts within 0.002 inches and inspect disassembled impellers on the maintenance workshop bench.",
+      "failureMode": "Hands-on precision craft tradesmanship and physical visual inspection.",
+      "agentNote": "❌ No. Physical millwright tradecraft."
+    },
+    {
+      "code": "A09",
+      "action": "Witness physical machinery teardown and failed component forensics in the workshop",
+      "source": "[API-610 §8]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "4.0h",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Eng)"
+    },
+    {
+      "code": "A10",
+      "action": "Perform laser shaft alignment and dynamic rotor balancing on rebuilt machinery",
+      "source": "[ISO-10816 §2]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "6.0h",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Millwright)"
+    },
+    {
+      "code": "A11",
+      "action": "Audit mechanical seal flush plans (API Plan 11/23/52/53A/54) and barrier fluid health",
+      "source": "[API-682 §6]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "2.0h",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Mechanical Seal Flush Plan & Barrier Fluid Audit (B1, [API-682 §6])",
+      "today": "Engineer manually checks seal pot pressure gauges and barrier fluid consumption logs across dual-pressurized mechanical seals (Plan 53A/B/C).",
+      "failureMode": "Barrier fluid pressure drops below seal chamber pressure, causing process fluid to cross the inner seal faces, leading to catastrophic seal blowouts and vapor release.",
+      "agentNote": "→ See §4 (Agent 5: Mechanical Seal Flush Plan & Barrier Fluid Reliability Sieve)."
+    },
+    {
+      "code": "A12",
+      "action": "Ingest and evaluate reciprocating compressor PV indicator cards for valve leakage",
+      "source": "[Bloch-Geitner §7]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "2.5h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Reciprocating Compressor PV Indicator & Valve Diagnostics (B1, [Bloch-Geitner §7])",
+      "today": "Engineer manually reviews dynamic pressure-volume indicator curves and valve cap temperature profiles to spot leaking suction/discharge valves.",
+      "failureMode": "Leaking compressor valves re-compress hot gas, driving cylinder temperatures into thermal trip limits and fracturing valve plates.",
+      "agentNote": "→ See §4 (Agent 6: Reciprocating Compressor PV Indicator & Valve Leakage Sieve)."
+    },
+    {
+      "code": "A13",
+      "action": "Model critical machinery spare parts interchangeability and stocking optimization",
+      "source": "[SMRP-BOK §4]",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Annual",
+      "time": "12.0h",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Spare Parts Stocking & Interchangeability Modeling (B1, [SMRP-BOK §4])",
+      "today": "Annual review checking whether spare mechanical seals, impellers, and bearings in the warehouse match active machinery installed base.",
+      "failureMode": "Warehouse stocks obsolete spares while critical unspared pump bearings have zero safety stock, extending emergency outages.",
+      "agentNote": "Supported via CMMS Work Order Classifier (Agent 4)."
+    },
+    {
+      "code": "A14",
+      "action": "Compile monthly rotating equipment reliability stewardship KPI dashboard",
+      "source": "Practitioner",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "6.0h",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Monthly Rotating Equipment Reliability Stewardship Dashboard (B1, Practitioner)",
+      "today": "Engineer compiles monthly MTBF charts, vibration exception lists, and oil analysis compliance numbers into management slide decks.",
+      "failureMode": "Administrative reporting drag diverting time from on-site machinery troubleshooting.",
+      "agentNote": "Synthesized directly via CMMS Work Order Classifier (Agent 4)."
+    },
+    {
+      "code": "A15",
+      "action": "Emergency operational decision to pull an unspared critical compressor offline",
+      "source": "[SMRP-BOK §1]",
+      "scope": "field",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "0.5h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Emergency Decision to Pull Unspared Compressor Offline (B3, [SMRP-BOK §1])",
+      "today": "Senior machinery specialist and plant manager make the high-stakes call to shut down a critical unspared gas export compressor when bearing temperatures and vibration spike.",
+      "failureMode": "High-liability operational decision balancing multi-million-dollar production loss against catastrophic machine destruction.",
+      "agentNote": "❌ No. Certified human technical leadership."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Dynamic Vibration Harmonic & Phase Triage Sieve",
+      "oneLine": "Ingests high-frequency vibration spectral features (overall RMS, 1×/2× harmonic amplitudes, phase vectors, and demodulated peak values) to isolate acute mechanical degradation from process-induced noise.",
+      "frictionSolved": "Eliminates 1.35 hours daily of manual spectral scrolling across hundreds of vibration transmitters, prioritizing machines requiring immediate field investigation.",
+      "reads": "Online vibration telemetry from GE Bently Nevada System 1 / Emerson AMS (overall velocity mm/s, acceleration g's, peak demodulation/PeakVue, 1× and 2× running speed amplitude and phase angle), bearing metal thermocouples, and motor running amperage.",
+      "does": "Implements ISO 10816 / ISO 20816 vibration severity boundaries (Zones A, B, C, D); executes harmonic peak ratio analysis (1× dominance indicating unbalance, 2× dominance with 180^circ phase split indicating shaft misalignment, sub-synchronous peaks indicating oil whirl or cage wear); differentiates true mechanical damage from transient process phenomena (e.g., pump cavitation caused by low suction head vs. internal bearing spalling); ranks the entire facility rotating machinery fleet by degradation severity.",
+      "returns": "Daily Rotating Machinery Dynamic Exception List with ranked severity scores, diagnosed failure mechanisms (misalignment, unbalance, looseness, bearing defect), and prioritized work order recommendations.",
+      "stopsAt": "Altering machinery protection system (MPS) trip setpoints or executing emergency machine shutdowns.",
+      "failureModes": "If vibration levels accelerate into ISO 10816 Zone D (unacceptable risk of immediate mechanical failure, e.g., >11.2 mm/s RMS on rigid foundations), the agent immediately escalates a critical [Acute Machinery Distress: ISO Zone D Trip Risk] alarm to the lead reliability engineer and console board operator.",
+      "agentId": "OG-P20-A01"
+    },
+    {
+      "n": 2,
+      "name": "Lubricating Oil Wear-Metal Spectrometry & Degradation Correlator",
+      "oneLine": "Ingests contract laboratory lube oil test certificates, extracts elemental wear metals and physical properties, and correlates chemical degradation trends with machine mechanical metallurgy.",
+      "frictionSolved": "Eliminates 2.5 hours per week of manual PDF data extraction, unit baseline comparison, and multi-system cross-referencing.",
+      "reads": "Laboratory Information Management System (LIMS) and contract oil analysis PDF certificates (elemental spectrometry: Fe, Cu, Pb, Sn, Cr, Al, Si, Na in PPM; kinematic viscosity at 40^circC and 100^circC; water content via Karl Fischer; Total Acid Number [TAN]; ISO 4406 cleanliness particle counts).",
+      "does": "Normalizes wear-metal concentrations against operating hours since last oil change; compares elemental profiles against specific component metallurgy (e.g., Cu/Pb spikes indicating sleeve bearing / bushing wear; Fe/Cr spikes indicating rolling element bearing fatigue; Si/Al spikes indicating abrasive dust ingress); checks for oil oxidation and lubricant breakdown (viscosity shift >±10% or TAN doubling); cross-references flagged oil samples against active vibration trends from Agent 1.",
+      "returns": "Lube Oil Health & Wear Correlation Dossier displaying multi-sample wear metal trend graphs, lubricant remaining useful life (RUL), and targeted maintenance actions (e.g., immediate oil filter change, kidney-loop filtration, or scheduled bearing replacement).",
+      "stopsAt": "Ordering bulk oil deliveries or altering lubrication schedule intervals without lubrication specialist approval.",
+      "failureModes": "If water content in a critical turbine or compressor lube oil reservoir exceeds 500 PPM (severe emulsion risk causing hydrodynamic oil film collapse), the agent triggers an immediate [Lube Oil Water Ingress Emergency: Hydrodynamic Film Collapse Risk] warning.",
+      "agentId": "OG-P20-A02"
+    },
+    {
+      "n": 3,
+      "name": "Root Cause Failure Analysis Multi-System Timeline Synthesizer",
+      "oneLine": "Autonomously correlates DCS process telemetry, vibration step-changes, seal flush alarms, and CMMS repair logs to reconstruct the forensic timeline of unexpected machinery trips.",
+      "frictionSolved": "Eliminates 7.0 hours per incident investigation of manual historical data archaeology, multi-platform sifting, and chronological alignment.",
+      "reads": "High-resolution DCS process trends (suction/discharge pressures, flows, differential temperatures, motor current), Bently Nevada System 1 alarm and spectral logs, mechanical seal barrier pressure history, CMMS (SAP PM) historical work orders, and operator shift electronic logbooks.",
+      "does": "Synchronizes multi-system event timestamps across a 72-hour pre-trip window; maps the sequence of physical anomalies (e.g., \"Suction strainer DP spiked ightarrow pump entered cavitation ightarrow axial vibration increased ightarrow mechanical seal barrier pressure dropped ightarrow motor tripped on overcurrent\"); constructs standardized 5-Whys and Fishbone causal diagrams; identifies the root physical, human, and latent organizational failure causes.",
+      "returns": "Comprehensive Root Cause Failure Analysis (RCFA) Investigation Dossier ready for formal incident peer review, complete with synchronized multi-parameter trend overlays, failure causal trees, and corrective action recommendations.",
+      "stopsAt": "Formally approving regulatory incident investigation sign-offs or authorizing equipment return-to-service.",
+      "failureModes": "If key instrumentation data (such as suction pressure transmitters) were out-of-calibration or frozen prior to the failure, the agent explicitly marks the timeline as [Chronology Data Gap: Uncalibrated Sensor Flagged] and prevents speculative conclusions.",
+      "agentId": "OG-P20-A03"
+    },
+    {
+      "n": 4,
+      "name": "CMMS Work Order & ISO 14224 Taxonomy Classifier",
+      "oneLine": "Parses unstructured free-text maintenance work order descriptions in SAP PM / Maximo using domain NLP to classify failure mechanisms into ISO 14224 taxonomy and calculate true MTBF and MTBR.",
+      "frictionSolved": "Eliminates 9.0 hours per month of manual work order clean-up and spreadsheet data wrangling, restoring integrity to plant reliability metrics.",
+      "reads": "Historical and daily completed CMMS corrective and preventative maintenance work orders, technician closeout text comments, billed spare parts lists (BOM items), and equipment tag hierarchies.",
+      "does": "Applies natural language processing trained on oil and gas rotating machinery terminology to extract failure mechanisms (e.g., abrasive wear, mechanical seal leakage, fatigue, cavitation, thermal degradation), failed sub-assemblies (impeller, shaft, sleeve bearing, mechanical seal, coupling), and failure causes; maps every work order to ISO 14224 standardized tables; recalculates accurate Mean Time Between Failures (MTBF) and Mean Time Between Repairs (MTBR); generates Pareto rankings of plant bad-actors by failure count and maintenance cost.",
+      "returns": "ISO 14224 Standardized Bad-Actor & Asset Reliability Dashboard with automated Pareto rankings, bad-actor drill-down profiles, and MTBF trend curves.",
+      "stopsAt": "Overwriting official audited financial maintenance accounting ledgers in SAP ERP.",
+      "failureModes": "If technician work order notes are completely uninformative (e.g., \"fixed\" or \"done\" with no parts billed), the agent flags the record as [Unclassifiable Work Order: Field Maintenance Clarification Required] and logs the responsible maintenance crew for quality tracking.",
+      "agentId": "OG-P20-A04"
+    },
+    {
+      "n": 5,
+      "name": "Mechanical Seal Flush Plan & Barrier Fluid Reliability Sieve",
+      "oneLine": "Monitors dual-pressurized and unpressurized mechanical seal auxiliary systems (API Plans 11, 23, 52, 53A/B/C, 54) to detect barrier fluid pressure decay, seal face degradation, and flush line vapor-locking.",
+      "frictionSolved": "Eliminates 7.0 hours per week of manual seal pot inspections and spreadsheet barrier fluid tracking across high-consequence process pumps.",
+      "reads": "Seal pot level transmitters, barrier fluid accumulator pressures, seal chamber pressures, flush supply/return temperatures, and cooling water flow switches.",
+      "does": "Computes differential pressure across mechanical seal faces (ΔP = Pbarrier - Pprocess); monitors barrier fluid consumption rates to detect gradual inner seal face wear; flags loss of positive barrier pressure margin (<1.4 bar over seal chamber pressure per API 682); evaluates thermal siphon circulation in Plan 52/53 systems; alerts on cooling coil fouling indicated by rising seal flush return temperatures.",
+      "returns": "Mechanical Seal Auxiliary Health Scorecard displaying barrier pressure margins, fluid leakage rate estimates (ml/hr), seal pot top-up schedules, and impending seal failure warnings.",
+      "stopsAt": "Manipulating nitrogen charging regulators or opening manual seal pot drain valves.",
+      "failureModes": "If barrier fluid pressure drops below seal chamber pressure on a pump handling toxic or flammable hydrocarbons (loss of positive seal barrier), the agent immediately issues an [Inner Seal Barrier Compromised: Process Fluid Ingress Risk] priority safety alert.",
+      "agentId": "OG-P20-A05"
+    },
+    {
+      "n": 6,
+      "name": "Reciprocating Compressor PV Indicator & Valve Leakage Sieve",
+      "oneLine": "Ingests dynamic in-cylinder pressure-volume (PV) indicator traces, cylinder cap temperatures, and rod drop telemetry to diagnose suction/discharge valve leakage and rider band wear.",
+      "frictionSolved": "Removes 8.75 hours per month of specialized thermodynamic curve fitting and manual cylinder valve diagnostic sifting.",
+      "reads": "In-cylinder dynamic pressure transducers, crank angle encoder signals, cylinder head and valve cap temperatures, crosshead accelerometer signals, and frame rod-drop eddy-current displacement probes.",
+      "does": "Constructs dynamic Pressure-Volume (PV) indicator cards; calculates actual compression and expansion polytropic exponents (n); compares observed cylinder compression curves against theoretical adiabatic curves; identifies suction valve leakage (delayed compression and high suction temperature) and discharge valve leakage (distorted expansion line and elevated discharge temperature, ΔTvalve > 15^circC); tracks rod drop displacement to measure rider band wear against maximum allowable clearance limits.",
+      "returns": "Reciprocating Compressor Cylinder Diagnostic Report with valve leakage severity scores, calculated compressor volumetric efficiency loss, and rider band remaining life projections.",
+      "stopsAt": "Adjusting compressor capacity pocket unloaders or altering safety relief valve settings.",
+      "failureModes": "If calculated discharge valve temperature exceeds the auto-ignition or lube oil carbonization limit (>165^circC per API 618), the agent triggers a critical [Compressor Valve Overheating: Severe Leakage & Carbonization Risk] warning.",
+      "agentId": "OG-P20-A06"
+    },
+    {
+      "n": 7,
+      "name": "Turnaround Major Rotating Equipment Overhaul Scope Synthesizer",
+      "oneLine": "Synthesizes multi-year vibration degradation curves, thermal efficiency decay, lube oil wear histories, and spare rotor availability into the authoritative plant turnaround major machinery overhaul scope.",
+      "frictionSolved": "Eliminates 14.0 hours of complex multi-year record splicing, condition history assembly, and engineering scope justification per major turnaround.",
+      "reads": "Multi-year vibration growth trends from System 1, thermodynamic polytropic efficiency logs, lube oil wear-metal histories, CMMS maintenance corrective histories, OEM recommended overhaul intervals, and warehouse spare rotor inspection certificates.",
+      "does": "Evaluates cumulative mechanical fatigue and operational degradation across unspared critical turbomachinery; identifies machines requiring full casing lift, rotor de-stacking, and labyrinth seal replacement versus those needing only coupling inspection and lube flush; cross-references warehouse spare rotor availability to ensure replacement components are balanced and ready; compiles technical overhaul justifications for capital budgeting.",
+      "returns": "Turnaround Major Rotating Equipment Overhaul Scope Dossier featuring asset health rankings, detailed work scopes per machine, spare parts replacement bills-of-materials, and contractor technical execution requirements.",
+      "stopsAt": "Authorizing multi-million-dollar turnaround maintenance procurement orders or signing contractor work authorizations.",
+      "failureModes": "If an unspared critical compressor exhibits chronic high vibration but the warehouse replacement rotor lacks a certified dynamic balance test certificate, the agent explicitly flags [Turnaround Scope Risk: Replacement Rotor Lacks Balance Certification].",
+      "agentId": "OG-P20-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never fabricate enterprise rupee/dollar multipliers. The operating plant client supplies their own equipment fleet size, downtime cost per hour, and maintenance labor rates.",
+    "rows": [
+      {
+        "agent": "Daily Dynamic Vibration Harmonic & Phase Triage",
+        "unit": "",
+        "beforeHours": 45.0,
+        "afterHours": 4.5,
+        "savedHours": 40.5,
+        "frictionRemoved": "Manual spectral scrolling, FFT math & alarm flood triage"
+      },
+      {
+        "agent": "Lube Oil Wear-Metal Spectrometry & Degradation Correlation",
+        "unit": "",
+        "beforeHours": 12.0,
+        "afterHours": 1.5,
+        "savedHours": 10.5,
+        "frictionRemoved": "PDF lab data extraction, wear math & metallurgy matching"
+      },
+      {
+        "agent": "RCFA Multi-System Failure Timeline Synthesis (2 major trips/mo)",
+        "unit": "",
+        "beforeHours": 16.0,
+        "afterHours": 2.0,
+        "savedHours": 14.0,
+        "frictionRemoved": "Multi-system data archaeology, chronological alignment & causal trees"
+      },
+      {
+        "agent": "CMMS Work Order ISO 14224 Taxonomy & MTBF Sieve",
+        "unit": "",
+        "beforeHours": 10.0,
+        "afterHours": 1.0,
+        "savedHours": 9.0,
+        "frictionRemoved": "Free-text unstructured notes cleaning & Pareto bad-actor math"
+      },
+      {
+        "agent": "Mechanical Seal Flush Plan & Barrier Fluid Sieve",
+        "unit": "",
+        "beforeHours": 8.0,
+        "afterHours": 1.0,
+        "savedHours": 7.0,
+        "frictionRemoved": "Manual seal pot pressure tracking & barrier consumption math"
+      },
+      {
+        "agent": "Reciprocating Compressor PV Indicator & Valve Sieve",
+        "unit": "",
+        "beforeHours": 10.0,
+        "afterHours": 1.25,
+        "savedHours": 8.75,
+        "frictionRemoved": "Thermodynamic PV curve fitting, valve leak math & rod drop checks"
+      },
+      {
+        "agent": "Turnaround Machinery Overhaul Scope Synthesizer",
+        "unit": "",
+        "beforeHours": 16.0,
+        "afterHours": 2.0,
+        "savedHours": 14.0,
+        "frictionRemoved": "Multi-year record splicing, condition history assembly & scope drafting"
+      }
+    ],
+    "total": {
+      "unit": "",
+      "beforeHours": 117.0,
+      "afterHours": 13.25,
+      "savedHours": 103.75,
+      "frictionRemoved": "88.7% reduction in manual data assembly and diagnostic drag",
+      "label": "TOTAL PER MONTHLY MACHINERY RELIABILITY CYCLE"
+    }
+  },
+  "citations": [
+    {
+      "key": "[SMRP-BOK]",
+      "citation": "SMRP, Guide to the Maintenance and Reliability Body of Knowledge, 2019",
+      "locator": "smrp.org/bok",
+      "type": "Industry Standard",
+      "supports": "Core reliability pillars, work management, and actions A01–A15"
+    },
+    {
+      "key": "[ISO-14224]",
+      "citation": "ISO, Collection and exchange of reliability and maintenance data, 2016",
+      "locator": "iso.org/standard/64076",
+      "type": "International Standard",
+      "supports": "Failure mechanism taxonomy, MTBF calculations, equipment breakdown"
+    },
+    {
+      "key": "[ISO-10816-20816]",
+      "citation": "ISO, Mechanical vibration — Evaluation of machine vibration, ISO 10816/20816",
+      "locator": "iso.org/standards",
+      "type": "Technical Standard",
+      "supports": "Severity zones A–D, velocity limits, harmonic vibration criteria"
+    },
+    {
+      "key": "[API-610-682]",
+      "citation": "API, Centrifugal Pumps (API 610) & Shaft Sealing Systems (API 682)",
+      "locator": "API Standards Store",
+      "type": "Technical Standard",
+      "supports": "Mechanical seal flush plans, barrier fluid limits, pump reliability"
+    },
+    {
+      "key": "[Bloch-Geitner]",
+      "citation": "Bloch & Geitner, Practical Machinery Management for Process Plants, 4th Ed",
+      "locator": "Gulf Professional Publishing",
+      "type": "Technical Textbook",
+      "supports": "RCFA failure forensics, reciprocating PV diagnostics, overhaul scopes"
+    },
+    {
+      "key": "[Mobius-Vibration]",
+      "citation": "Mobius Institute, Vibration Analysis Category III/IV Training Guide, 2020",
+      "locator": "mobiusinstitute.com",
+      "type": "Technical Training",
+      "supports": "FFT harmonic analysis, demodulation, unbalance vs. misalignment"
+    },
+    {
+      "key": "[EPRI-Reliability]",
+      "citation": "EPRI, Nuclear & Fossil Power Plant Machinery Reliability Benchmarks, 2018",
+      "locator": "epri.com/research",
+      "type": "Industry Benchmark",
+      "supports": "Baseline drag timings for vibration triage, lube oil tracking, and RCFA"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "GE Bently Nevada System 1 user guides, Emerson AMS Machinery Manager whitepapers, SAP PM integration manuals, and SMRP conference archives for \"autonomous closed-loop cross-referencing of laboratory lube oil wear-metal spectrometry against live vibration FFT harmonic peaks without manual data export\".",
+    "result": "Negative Search, 2026-09. Commercial vibration monitoring platforms operate as standalone signal processing suites; none autonomously ingest external lube oil lab test PDFs, correlate chemical wear-metal ppm against vibration harmonic frequencies, or auto-classify unstructured CMMS work orders into ISO 14224 failure mechanisms without human engineering compilation."
+  },
+  "line": "\"A reliability engineer shouldn't spend half their working day playing detective between a vibration waveform on one screen and an oil sample PDF on the other; their true intellectual value is knowing that a twenty-part-per-million rise in lead and copper means a hydrodynamic sleeve bearing is failing before a forty-thousand-horsepower compressor wrecks its rotor.\"",
+  "openQuestions": [
+    "The Vibration-to-Lube Oil Gap: In your facility, how many rotating machinery failures over the past three years were preceded by early warning signs that existed simultaneously in separate vibration databases and lube oil sample reports—yet nobody connected them in time to prevent catastrophic mechanical failure?",
+    "The CMMS Bad-Actor Illusion: What percentage of corrective maintenance work orders closed by technicians in your plant CMMS currently contain vague descriptions like \"fixed vibration\" or \"replaced pump\", completely corrupting your asset Pareto bad-actor rankings and MTBF statistics?",
+    "Turnaround Scope Over-Maintenance: During your last major turnaround, how many critical rotating equipment trains were opened for inspection simply because of calendar time, only to introduce assembly defects, while degraded unspared balance-of-plant machinery was skipped and failed months later?"
+  ]
+};

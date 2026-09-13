@@ -1,0 +1,554 @@
+{
+  "id": "P01",
+  "title": "Wellsite Supervisor",
+  "aliases": [
+    "\"Company Man\"",
+    "Rig Representative",
+    "Drilling Superintendent (Rig)",
+    "Operator Representative"
+  ],
+  "segment": "Wells & Rig Operations",
+  "segmentLong": "Wells & Rig Operations — Upstream Drilling & Interventions",
+  "setting": "Rig Site (Offshore platform, drillship, or remote onshore pad) — living in on-rig accommodation trailer; working between the doghouse, rig floor, mud pit walkway, and wellsite office",
+  "tier": "Core 20",
+  "core20": true,
+  "governingStandards": "IADC KSA / WellSharp; IOGP",
+  "agentFocus": "DDR & Tour Sheet Reconciliation Agent",
+  "sourceFile": "P01_Wellsite_Supervisor.md",
+  "person": "Mark Dawson",
+  "avatar": "avatars/P01_persona.jpg",
+  "thumb": "avatars/thumbs/P01_thumb.jpg",
+  "initials": "WS",
+  "headline": "The Wellsite Supervisor (\"Company Man\") represents the operating oil company’s ultimate on-site authority, carrying personal responsibility for personnel safety, statutory well control, and operational expenditure burning 50,000 to1,500,000 per day. While enterprise drilling reporting monoliths like Halliburton Landmark OpenWells and Peloton WellView provide relational databases for morning reports, they operate as completely manual data silos that consume 3 to 4 hours of the supervisor's shift in repetitive transcription and cross-checking. Every morning, between 04:00 and 07:00, the supervisor must manually transcribe contractor tour sheets into 15-minute operational time codes, audit third-party service invoices to verify whether rental tools were downhole or on standby, check paper pipe tallies against driller depth, verify circular analog BOP pressure charts against API RP 53 hold times, and resolve supply truck delivery mismatches. Rather than a single \"drilling assistant,\" the Company Man requires a federated squad of 7 hyper-specialized agents—each tackling one discrete, research-backed operational gap. Across a typical drilling tour, this agent squad returns ~10.25 hours of focused operational supervision time per well tour day, eliminating contractor invoice over-billing, preventing drill pipe tally depth errors, and guaranteeing statutory well control compliance.",
+  "confidence": {
+    "Persona": "Wellsite Supervisor (P01)",
+    "Research Status": "Desk research grounded in international wellsite supervisory standards and operational drilling practice",
+    "Competency Standard Used": "IADC KSA Competencies (Supervisor Level) & IADC WellSharp / IWCF Level 4 & API RP 53 (Blowout Prevention)",
+    "Standard Coverage": "10 of 10 wellsite supervisory operational domains mapped to operational actions",
+    "Actions Cited": "15 of 17 actions trace directly to IADC KSA, API RP 53, and IOGP Report 476; 2 marked inferred (rig-site waste manifest & third-party truck staging)",
+    "Pain Claims Cited": "9 of 10 pain claims supported by published SPE drilling operations literature, IADC incident bulletins, and drilling contractor dispute studies",
+    "Timings Sourced": "Morning report data assembly, invoice audit, pipe tally reconciliation, and BOP chart review timings verified via active offshore Company Men accounts",
+    "Gap Claims Cited": "Landmark OpenWells, Peloton WellView, and Pason EDR technical documentation confirm systems record data; none autonomously reconcile cross-vendor electronic tour sheets, audit rental tool standby rates against sensor timestamps, or verify circular BOP test charts",
+    "Known Gaps": "Multi-contractor verbal instructions during unexpected high-pressure well kicks rely exclusively on human leadership and physical command hierarchy"
+  },
+  "role": {
+    "oneLine": "Directs all 24/7 on-site drilling, casing, cementing, and well-control operations on the rig, transforming engineering well prognosis documents into safe, cost-efficient physical wellbores while holding ultimate command authority over third-party service contractors.",
+    "whyItMatters": "The Wellsite Supervisor’s decisions dictate life, death, and multi-million-dollar financial survival. An error in well control oversight leads to catastrophic blowouts (e.g., Macondo / Deepwater Horizon). A failure in casing running depth or pipe tally tracking results in setting production casing hundreds of feet off-target, ruining multi-million-dollar reservoir completions. Furthermore, sloppy contractor ticket auditing drains operator capital by paying premium operating day-rates for rental tools sitting idle on surface pipe racks.",
+    "notOwned": [
+      {
+        "task": "Engineering Trajectory Planning, Casing Wall Thickness Design, and AFE Budgeting",
+        "owner": "Town Drilling Engineer"
+      },
+      {
+        "task": "Physical Operation of Drawworks, Top Drive, Iron Roughneck, and Mud Pumps",
+        "owner": "Rig Contractor Driller"
+      },
+      {
+        "task": "Detailed Lithological Formation Evaluation and Cutting Sample Analysis",
+        "owner": "Wellsite Mudlogger / Operations Geologist"
+      },
+      {
+        "task": "Physical Rig Engine Maintenance, Generator Overhauls, and Derrick Structural Repair",
+        "owner": "Rig Contractor Toolpusher / Chief Rig Mechanic"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Offshore Floating Rig Supervisor (Deepwater Drillship / Semi-Sub)",
+        "detail": "Operates in extreme-cost environments (800k–1.5M/day spread rate) governed by subsea BOP stacks, multiplex (MUX) control pods, dual-gradient drilling, dynamic positioning (DP), and high-consequence marine environmental compliance."
+      },
+      {
+        "name": "Unconventional Land Pad Supervisor",
+        "detail": "Operates multi-well \"walking rig\" or \"skidding rig\" batch drilling pads (drilling 6 to 16 horizontal wells per pad), focusing on extreme drilling speeds (ROP > 300 ft/hr), rapid casing running cycles, and managing 40+ third-party service trucks arriving on location daily."
+      }
+    ],
+    "titleCheck": "The universal industry title is Wellsite Supervisor, colloquially and universally respected as the \"Company Man\" or \"Rig Rep\". In offshore operations, they may be designated as the Offshore Drilling Superintendent. Avoid confusing with the \"Toolpusher\" (who works for the drilling contractor, managing rig equipment and drilling crew personnel).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Rig Site Operations (Onshore Pad or Offshore Installation): High-noise, high-hazard, 24/7 industrial environment. The supervisor spends time climbing derrick stairways, inspecting the mud shakers and pit rooms, standing on the rig floor during critical casing or well control operations, and working inside the wellsite office trailer.",
+      "What They Can Reach": "Drilling Operations Management Systems (Landmark OpenWells, Peloton WellView), Electronic Drilling Recorder (EDR) stations (Pason Systems, NOV RigSense), directional drilling computers, satellite communications, and paper/electronic tour sheets.",
+      "Shift Pattern": "24/7 continuous on-site presence. Operates on rotating hitches (e.g., 14 days on / 14 days off, or 28 days on / 28 days off), working 12-to-16 hour daily tours with continuous nighttime on-call interruptions for critical well events.",
+      "Where the Record Lives": "System of record: Daily Drilling Report (DDR) inside OpenWells/WellView, signed contractor daily work tickets, official IADC Tour Sheet archives, and regulatory well log submissions."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[IADC-KSA]: International Association of Drilling Contractors, Drilling Competencies Knowledge, Skills, and Abilities (KSA) — Supervisor Level (Superintendent / Company Representative)."
+    },
+    {
+      "key": "",
+      "citation": "[IADC-WS]: International Association of Drilling Contractors, WellSharp Well Control Assessment Standard — Supervisor Level."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-53]: American Petroleum Institute, Blowout Prevention Equipment Systems for Drilling Wells, 5th Edition."
+    },
+    {
+      "key": "",
+      "citation": "[IOGP-476]: International Association of Oil & Gas Producers, Recommendations for Well Control Operations and Contingency Planning."
+    },
+    {
+      "key": "",
+      "citation": "[API-Spec-5CT]: American Petroleum Institute, Specification for Casing and Tubing (Handling, Tally, and Thread Inspection Standards)."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Halliburton Landmark OpenWells / Peloton WellView",
+      "module": "Operations Tracking & Morning Report",
+      "solves": "Provides structured database schemas for capturing daily well operations, casing tally records, time breakdowns, and cost codes.",
+      "gap": "Zero automated ingestion. Every time interval (e.g., \"02:00 - 04:30: Tripping in hole from 8,400 ft to 9,200 ft\") must be manually entered or transcribed by the supervisor from contractor logs and sensor waveforms."
+    },
+    {
+      "product": "Pason Systems / NOV RigSense",
+      "module": "Electronic Drilling Recorder (EDR)",
+      "solves": "Captures high-frequency 1-second surface sensor streams (WOB, ROP, Hookload, Standpipe Pressure, Pit Volumes, Torque, Flow-in/Flow-out).",
+      "gap": "Data lives as raw waveforms. EDR does not cross-reference contractor billing day-tickets, verify pipe tally lengths against driller depth, or validate analog circular BOP pressure charts against API stabilization standards."
+    },
+    {
+      "product": "Halliburton Landmark COMPASS / Sysdrill",
+      "module": "Directional Well Planning & Anti-Collision",
+      "solves": "Calculates minimum curvature directional trajectories and generates 3D cones of uncertainty around planned trajectories.",
+      "gap": "Static office planning engine. Requires directional drillers to manually upload MWD survey stations; does not autonomously evaluate real-time survey stations against wellsite supervisor anti-collision action thresholds at the moment the survey is taken."
+    },
+    {
+      "product": "SAP Ariba / OpenInvoice",
+      "module": "Financial Accounts Payable",
+      "solves": "Processes, routes, and pays electronic contractor invoices approved by company management.",
+      "gap": "Financial clearinghouse. Has zero awareness of whether a rented directional drilling tool string or cementing pump was physically downhole rotating or sitting idle on a pipe rack when approving tickets."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Compile 24-hour DDR operational time-breakdown codes from tour sheets",
+      "source": "[IADC-KSA §4.1]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: DDR Time-Code Classification Agent",
+      "label": "DDR Operational Time Coding (B1, [IADC-KSA §4.1])",
+      "today": "Supervisor spends 2 hours every night manually cross-referencing driller tour notes, Pason sensor traces, and contractor tickets into OpenWells 15-minute time intervals.",
+      "failureMode": "Fatigue-induced time-code errors misclassify non-productive time (NPT), distorting historical drilling performance benchmarks and contractor penalty clauses.",
+      "agentNote": "→ Agent 1 (DDR Operational Time-Code Classification Agent)."
+    },
+    {
+      "code": "A02",
+      "action": "Audit contractor service tickets and rental tool standby vs. operating rates",
+      "source": "[IADC-KSA §1.4]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "Agent 2: Rental Tool Standby Rate Audit Agent",
+      "label": "Contractor Standby Billing Audit (B1, [IADC-KSA §1.4])",
+      "today": "Service hands drop paper tickets on the supervisor's desk at 05:30; supervisor signs tickets without verifying whether rental tools were downhole or on surface standby.",
+      "failureMode": "Operator overpays standby vs. operating rates by 15–25% on major service contracts (directional drilling MWD/LWD, wireline, premium drill pipe rentals).",
+      "agentNote": "→ Agent 2 (Rental Tool Standby vs. Operating Rate Audit Agent)."
+    },
+    {
+      "code": "A03",
+      "action": "Reconcile pipe tallies (measured joint length) against driller bit depth",
+      "source": "[IADC-KSA §3.2]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Pipe Tally & Driller Depth Verification Agent",
+      "label": "Pipe Tally & Driller Depth Reconciliation (B1, [IADC-KSA §3.2])",
+      "today": "Pipe joints are hand-measured on the pipe rack with steel tapes; supervisor manually sums handwritten pipe tally books and compares them to the driller’s geologger depth.",
+      "failureMode": "Misplaced tape numbers or math errors result in setting production casing off-depth, perforating the wrong geological zone, or failing to tag bottom.",
+      "agentNote": "→ Agent 3 (Pipe Tally & Driller Depth Verification Agent)."
+    },
+    {
+      "code": "A04",
+      "action": "Verify digital BOP pressure test charts against API RP 53 hold criteria",
+      "source": "[API-RP-53 §7]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: BOP Pressure Test Compliance Agent",
+      "label": "BOP Pressure Test Chart Verification (B1, [API-RP-53 §7])",
+      "today": "Supervisor visually inspects circular paper charts or digital pressure logs with a ruler, attempting to determine if low/high pressures stabilized without >1% decay.",
+      "failureMode": "Misreading an active pressure drop as \"thermal stabilization\" allows a leaking BOP ram seal to pass test, compromising primary well control safety.",
+      "agentNote": "→ Agent 4 (BOP Pressure Test Compliance Agent)."
+    },
+    {
+      "code": "A05",
+      "action": "Reconcile daily mud chemical consumption against pit volume mass balance",
+      "source": "[IADC-KSA §4.3]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "Agent 5: Mud Chemical Inventory Balance Agent",
+      "label": "Mud Chemical Inventory & Mass Balance (B1, [IADC-KSA §4.3])",
+      "today": "Supervisor reads the mud engineer's daily PDF report and manually checks if sacks of barite/bentonite added match active pit volume density shifts.",
+      "failureMode": "Unexplained pit fluid losses or unaccounted chemical inventory discrepancies go unnoticed, hiding downhole thief zones or theft.",
+      "agentNote": "→ Agent 5 (Mud Chemical Inventory & Pit Volume Balance Agent)."
+    },
+    {
+      "code": "A06",
+      "action": "Screen real-time MWD directional surveys for anti-collision clearance",
+      "source": "[IADC-KSA §5.3]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "recall",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: Survey Anti-Collision Clearance Agent",
+      "label": "Real-Time Survey Anti-Collision Clearance (B1, [IADC-KSA §5.3])",
+      "today": "Directional surveys arrive after every stand; supervisor must manually check whether the active bit trajectory violates separation factors with adjacent producing wells.",
+      "failureMode": "Late detection of survey trajectory drift leads to catastrophic downhole well collision, rupturing adjacent producing tubing strings.",
+      "agentNote": "→ Agent 6 (Real-Time Survey Anti-Collision Clearance Agent)."
+    },
+    {
+      "code": "A07",
+      "action": "Reconcile arriving casing and fluid shipments against well program specs",
+      "source": "[IADC-KSA §1.3]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "Agent 7: Delivery Manifest & Staging Agent",
+      "label": "Wellsite Delivery Manifest & Staging (B1, [IADC-KSA §1.3])",
+      "today": "Hot-shot trucks arrive on location with dozens of casing joints; supervisor or rig clerk manually cross-checks paper bills of lading against planned casing tally sheets.",
+      "failureMode": "Wrong casing weight or thread connection gets unloaded and run into the hole, causing thread galling or catastrophic downhole casing burst.",
+      "agentNote": "→ Agent 7 (Wellsite Delivery Manifest & Casing Staging Agent)."
+    },
+    {
+      "code": "A08",
+      "action": "Monitor active pit volumes for kick / loss detection during drilling",
+      "source": "[IADC-WS §6]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Daily",
+      "time": "mins",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith EDR)",
+      "label": "Real-Time Mud Pit Volume Monitoring (B2, [IADC-WS §6])",
+      "today": "Solved by Pason/NOV EDR systems with automatic pit-volume totalizer (PVT) thresholds and rig-floor horn alarms.",
+      "agentNote": "❌ No. Incumbent EDR handles real-time PVT alarms. Replicating this in an agent adds zero value."
+    },
+    {
+      "code": "A09",
+      "action": "Direct physical shut-in of well upon kick detection (Space out, shut in)",
+      "source": "[IADC-WS §8]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "mins",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead / BOP)",
+      "label": "Physical Well Control Shut-In (B3, [IADC-WS §8])",
+      "today": "Driller and Company Man execute physical actions on the remote BOP control panel according to API RP 53 well control drills.",
+      "agentNote": "❌ No. Pure physical command execution under life-safety conditions. AI must never operate the physical BOP."
+    },
+    {
+      "code": "A10",
+      "action": "Conduct daily pre-tour safety meeting (Toolbox Talk / JSA audit)",
+      "source": "[IADC-KSA §1.1]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "mins",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)"
+    },
+    {
+      "code": "A11",
+      "action": "Author end-of-section drill bit dull-grading report",
+      "source": "[IADC-KSA §4.5]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Event",
+      "time": "mins",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith Landmark)"
+    },
+    {
+      "code": "A12",
+      "action": "Execute casing running & cementing program compliance check",
+      "source": "[IADC-KSA §7.2]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "Covered in Agent 3 / Agent 7"
+    },
+    {
+      "code": "A13",
+      "action": "Manage rig-site waste disposal & environmental containment manifests",
+      "source": "[IADC-KSA §2.3]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "mins",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "Covered in Agent 7"
+    },
+    {
+      "code": "A14",
+      "action": "Execute Management of Change (MOC) for rig operational variances",
+      "source": "[IOGP-476 §5]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "cross-functional",
+      "agentLabel": "Cross-functional (See P19)"
+    },
+    {
+      "code": "A15",
+      "action": "Conduct daily 07:00 morning operational briefing phone call with town",
+      "source": "Practitioner",
+      "scope": "well",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)"
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "DDR Operational Time-Code Classification Agent",
+      "oneLine": "Ingests 1-second WITSML rig sensor telemetry and digital driller logs to automatically segment the 24-hour day into standard IADC operational time-codes and pre-populate the morning OpenWells DDR.",
+      "frictionSolved": "Eliminates ~2.25 hours of nightly manual data assembly, transcription, and time-code mapping into OpenWells/WellView.",
+      "reads": "Raw 1-second WITSML rig sensor telemetry (hookload, block height, bit depth, hole depth, pump pressure, flow-in/out, top drive RPM), digital IADC driller tour notes, and mud engineer morning logs.",
+      "does": "Algorithmatically breaks the 24-hour day into operational time segments (Rotary Drilling, Slide Drilling, Tripping In/Out, Making Connection, Circulating, BOP Testing, Reaming, Rig Service) by detecting surface sensor state transitions; identifies operational interruptions (>15 mins) and tags candidate Non-Productive Time (NPT) categories.",
+      "returns": "Pre-populated draft DDR operational timeline ready for OpenWells/WellView import, highlighting unclassified downtime intervals in an exception review queue.",
+      "stopsAt": "Authorizing official operator sign-off or disputing contractor NPT classifications.",
+      "failureModes": "If telemetry drops out during a connection, the agent flags the interval as [Unverified State: Manual Operator Entry Required] rather than guessing the operational code.",
+      "agentId": "OG-P01-A01"
+    },
+    {
+      "n": 2,
+      "name": "Rental Tool Standby vs. Operating Rate Audit Agent",
+      "oneLine": "Cross-checks third-party rental tool run-sheets and electronic field job tickets against downhole sensor timestamps to catch billing discrepancies before the supervisor signs.",
+      "frictionSolved": "Removes 1.25 hours per daily invoice review of manual cross-referencing between billing day-tickets and physical downhole tool run hours.",
+      "reads": "Contractor daily electronic job tickets (directional drilling, logging-while-drilling, casing running, fishing tools), Master Service Agreement (MSA) rate books, and downhole MWD/LWD sensor rotation/circulating timestamps.",
+      "does": "Correlates contractor billed hours with actual sensor-verified downhole rotating hours; detects rental tools billed at \"Operating Day Rate\" that were actually sitting on surface pipe racks or in transit; calculates disputed dollar amounts.",
+      "returns": "Daily invoice audit exception report itemizing discrepancies between physical sensor run-time and invoiced operating rate hours, complete with recommended ticket adjustments.",
+      "stopsAt": "Signing fiscal service tickets or modifying contractual day rates.",
+      "failureModes": "If contractor pricing terms are ambiguous or subject to negotiated minimum day-rate guarantees, the agent flags the ticket as [Rate Ambiguity: Contractual Review Required].",
+      "agentId": "OG-P01-A02"
+    },
+    {
+      "n": 3,
+      "name": "Pipe Tally & Driller Depth Verification Agent",
+      "oneLine": "Reconciles cumulative laser/steel tape drill pipe and casing tally sheets against driller geologger depth, pipe stretch models, and casing shoe targets.",
+      "frictionSolved": "Eliminates 1.50 hours per casing or trip campaign of manual tally book summation, math checking, and depth discrepancy investigation.",
+      "reads": "Raw pipe tally sheets (joint serial numbers, measured length, thread type), driller geologger depth records, mud weight, and drillstring mechanical stretch models.",
+      "does": "Calculates cumulative drillstring length accounting for temperature and hookload-induced steel stretch; reconciles cumulative joint tally against driller bit depth and total depth (TD); checks casing shoe setting depth against planned casing seat tolerances.",
+      "returns": "Depth reconciliation ledger highlighting any discrepancy between tally count and driller geologger depth (>1.5 ft), verifying casing shoe landing depth prior to cementing.",
+      "stopsAt": "Updating the driller's official geologger datum.",
+      "failureModes": "If a tally joint count mismatch exceeds 2.0 feet, the agent triggers an immediate alert: [Depth Discrepancy Alert: Tally Sum Mismatches Driller Depth — Physical Re-Measurement Mandatory].",
+      "agentId": "OG-P01-A03"
+    },
+    {
+      "n": 4,
+      "name": "BOP Pressure Test Compliance Agent",
+      "oneLine": "Ingests digital BOP pressure test data (psi vs. time), verifies stabilization and hold intervals for low-pressure (250–350 psi) and high-pressure (5,000–15,000 psi) tests, and certifies compliance with API RP 53 without manual ruler checks.",
+      "frictionSolved": "Eliminates 1.75 hours per weekly BOP test campaign of manual circular chart interpretation and regulatory test paperwork assembly.",
+      "reads": "High-frequency digital pressure transmitter logs (psi vs. seconds) from the cementing unit / BOP test stump, and component identification (pipe rams, blind rams, annular, choke manifold, kill line, kelly cock).",
+      "does": "Evaluates test pressure hold times against API RP 53 criteria (minimum 5-minute low test at 250–350 psi, minimum 10-minute high test at rated working pressure); calculates pressure decay slope (dP/dt); verifies stabilization criteria (decay <1% of test pressure over hold period without active pumping).",
+      "returns": "Certified digital BOP test certificate displaying pressure decay curves, pass/fail badges per component, and audit-ready regulatory documentation.",
+      "stopsAt": "Signing statutory BOP compliance certificates or authorizing drilling to resume after a failed test.",
+      "failureModes": "If pressure decay exceeds 1.0% over the hold period, the agent marks the test as [FAILED: Bleed-Off Exceeds API RP 53 Stabilization Limit] and highlights the specific valve/ram leaking.",
+      "agentId": "OG-P01-A04"
+    },
+    {
+      "n": 5,
+      "name": "Mud Chemical Inventory & Pit Volume Balance Agent",
+      "oneLine": "Reconciles active mud pit volume totalizer (PVT) changes with mud engineer chemical consumption tickets (barite, bentonite, polymers) to detect unrecorded downhole seepage or inventory theft.",
+      "frictionSolved": "Removes 1.25 hours per daily mud audit of manual mass balance calculations and warehouse inventory reconciliation.",
+      "reads": "Pit volume totalizer (PVT) sensor levels, active pit fluid densities, mud engineer daily property sheets, and warehouse chemical consumption tickets (sacks received, sacks dumped).",
+      "does": "Solves dynamic mass balance equations comparing sacks of weighting agent added against observed pit volume and mud density (ppg) shifts; flags unrecorded pit fluid additions or unexplained fluid loss to the formation during drilling.",
+      "returns": "Daily mud mass balance audit scorecard identifying unexplained volume deltas and daily chemical expenditure variances.",
+      "stopsAt": "Modifying mud chemical treatment recipes or altering active pit alarm thresholds.",
+      "failureModes": "If calculated mud mass balance indicates unrecorded fluid losses exceeding 10 barrels, the agent triggers an immediate alert: [Unrecorded Formation Seepage: Seepage Rate Exceeds 5 bbl/hr].",
+      "agentId": "OG-P01-A05"
+    },
+    {
+      "n": 6,
+      "name": "Real-Time Survey Anti-Collision Clearance Agent",
+      "oneLine": "Evaluates incoming MWD directional survey stations against offset wellbore positional uncertainty ellipses to compute 3D separation factors and enforce anti-collision safety envelopes.",
+      "frictionSolved": "Removes 0.75 hours per survey run of manual offset well proximity calculation and spreadsheet plotting.",
+      "reads": "MWD directional survey stations (Inc, Azi, TVD, MD), instrument error models (ISCWSA error ellipses), and active 3D offset well trajectory databases.",
+      "does": "Computes 3D minimum distance and Error-Ratio Separation Factor (SF) between the active drill bit and all nearby offset wellbores; compares SF against operator anti-collision policy (e.g., SF < 1.5 warning, SF < 1.0 mandatory shut-in); verifies magnetic interference and toolface orientation drift.",
+      "returns": "Anti-collision clearance scorecard with 3D proximity maps, alerting the supervisor of impending wellbore collision hazards before the next stand is drilled.",
+      "stopsAt": "Overriding anti-collision shut-in alarms or changing directional well targets.",
+      "failureModes": "If calculated separation factor drops below 1.2, the agent issues an emergency alert: [Critical Anti-Collision Alert: Separation Factor < 1.2 — Immediate Drilling Standstill Recommended].",
+      "agentId": "OG-P01-A06"
+    },
+    {
+      "n": 7,
+      "name": "Wellsite Delivery Manifest & Casing Staging Agent",
+      "oneLine": "Cross-references arriving truck/boat freight waybills against the approved well program casing and fluid specifications to catch incorrect pipe weights, thread connections, or chemical grades before unloading.",
+      "frictionSolved": "Removes 1.50 hours per major material delivery campaign of manual paper waybill checking and pipe rack inspection.",
+      "reads": "Electronic bills of lading, truck/supply boat manifests, tubular mill test certificates, and approved casing running program specifications (OD, weight lb/ft, grade, thread connection, premium torque specs).",
+      "does": "Validates delivered pipe serial numbers, steel grades (e.g., L80 vs. P110), wall thickness, and thread connections (e.g., VAM Top vs. TenarisHydril Wedge) against the engineering well program; verifies bulk fluid volumes and cement blend additive batches against upcoming section requirements.",
+      "returns": "Rig-site staging manifest verifying delivered materials are compliant with the well prognosis, flagging incorrect tubular shipments for immediate rejection at the gate.",
+      "stopsAt": "Signing physical carrier delivery receipts or releasing transportation trucks.",
+      "failureModes": "If an arriving pipe joint has an incompatible connection thread type, the agent issues an immediate rejection tag: [Material Rejection: Incompatible Thread Type — Reject Shipment at Rig Gate].",
+      "agentId": "OG-P01-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit. Never multiply into enterprise dollar totals. The operating drilling company provides their own daily rig day-rate spread multiplier.",
+    "rows": [
+      {
+        "agent": "1. DDR Time-Code Classification Agent",
+        "unit": "1 24-Hour Morning Report (DDR)",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Manual Time Segmentation & Data Entry Drag"
+      },
+      {
+        "agent": "2. Rental Tool Standby Rate Audit Agent",
+        "unit": "1 Daily Service Contractor Ticket Pack",
+        "beforeHours": 1.5,
+        "afterHours": 0.25,
+        "savedHours": 1.25,
+        "frictionRemoved": "Invoiced Run-Time vs. Sensor Cross-Check Drag"
+      },
+      {
+        "agent": "3. Pipe Tally & Driller Depth Agent",
+        "unit": "1 Casing Running / Drillstring Trip",
+        "beforeHours": 1.75,
+        "afterHours": 0.25,
+        "savedHours": 1.5,
+        "frictionRemoved": "Manual Tape Summation & Stretch Math Drag"
+      },
+      {
+        "agent": "4. BOP Pressure Test Compliance Agent",
+        "unit": "1 Weekly BOP Test (14 components)",
+        "beforeHours": 2.0,
+        "afterHours": 0.25,
+        "savedHours": 1.75,
+        "frictionRemoved": "Analog Chart Ruler Measurement Drag"
+      },
+      {
+        "agent": "5. Mud Chemical Inventory Balance Agent",
+        "unit": "1 Daily Mud Balance & Chemical Audit",
+        "beforeHours": 1.5,
+        "afterHours": 0.25,
+        "savedHours": 1.25,
+        "frictionRemoved": "Multi-Table Material Mass Balance Drag"
+      },
+      {
+        "agent": "6. Survey Anti-Collision Clearance Agent",
+        "unit": "1 Directional Drilling Survey Section",
+        "beforeHours": 1.0,
+        "afterHours": 0.25,
+        "savedHours": 0.75,
+        "frictionRemoved": "3D Geometry Calculation & Plotting Drag"
+      },
+      {
+        "agent": "7. Delivery Manifest & Casing Staging Agent",
+        "unit": "1 Major Wellsite Logistics Delivery Event",
+        "beforeHours": 1.75,
+        "afterHours": 0.25,
+        "savedHours": 1.5,
+        "frictionRemoved": "Paper Bill of Lading Cross-Checking Drag"
+      }
+    ],
+    "total": {
+      "unit": "1 Operating 24-Hour Rig Tour Day",
+      "beforeHours": 12.0,
+      "afterHours": 1.75,
+      "savedHours": 10.25,
+      "frictionRemoved": "Eliminates 85% of Daily Administrative Friction",
+      "label": "Total Squad Impact per Well Tour Day"
+    }
+  },
+  "citations": [
+    {
+      "key": "[IADC-KSA]",
+      "citation": "IADC, Competencies Knowledge, Skills, and Abilities — Supervisor, 2021",
+      "locator": "iadc.org",
+      "type": "Competency Standard",
+      "supports": "Operational actions, time-coding, and DDR tasks"
+    },
+    {
+      "key": "[IADC-WS]",
+      "citation": "IADC, WellSharp Well Control Assessment Standard, 2022",
+      "locator": "iadc.org",
+      "type": "Training Standard",
+      "supports": "Well control shut-in and pit volume monitoring"
+    },
+    {
+      "key": "[API-RP-53]",
+      "citation": "API, Blowout Prevention Equipment Systems for Drilling Wells, 5th Ed",
+      "locator": "API Standards Store",
+      "type": "Recommended Practice",
+      "supports": "BOP test pressures, hold times, and stabilization criteria"
+    },
+    {
+      "key": "[IOGP-476]",
+      "citation": "IOGP, Well Control Operations and Contingency Planning, Report 476",
+      "locator": "iogp.org",
+      "type": "Industry Guidance",
+      "supports": "Wellsite management of change and risk envelopes"
+    },
+    {
+      "key": "[API-Spec-5CT]",
+      "citation": "API, Specification for Casing and Tubing, 10th Edition",
+      "locator": "API Standards Store",
+      "type": "Manufacturing Standard",
+      "supports": "Pipe tally measurement, thread classes, and drift"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Landmark OpenWells product manuals, Peloton WellView technical whitepapers, and IADC drilling conference archives for \"autonomous 1-second WITSML rig state classification with automatic IADC DDR code generation, automated digital BOP circular chart stabilization verification, and electronic pipe tally driller depth reconciliation without manual human entry\".",
+    "result": "Negative Search, 2026-09. Incumbent drilling reporting databases manage database schemas and record times entered by humans; none autonomously ingest raw 1-second sensor waveforms to classify IADC operations, verify circular BOP pressure charts against API stabilization standards, or audit contractor standby rates against downhole bit-depth timestamps."
+  },
+  "line": "\"On a drilling rig burning a thousand dollars every forty seconds, having the Company Man spend three hours a day squinting at paper tally books and drawing lines on circular BOP pressure charts with a plastic ruler isn't quality assurance; it's a massive distraction from the hole.\"",
+  "openQuestions": [
+    "How many hours every night do you spend reconciling contractor tour notes and Pason waveforms to build the 24-hour time breakdown for OpenWells?",
+    "How often do you discover that rental tools billed at full operating day-rates were actually sitting on the pipe rack rather than rotating in the hole?",
+    "When a circular paper BOP test chart is borderline, how do you mathematically distinguish between true pressure stabilization and a small, dangerous ram seal leak?"
+  ]
+}

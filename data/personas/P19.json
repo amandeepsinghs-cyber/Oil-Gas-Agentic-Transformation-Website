@@ -1,0 +1,592 @@
+{
+  "id": "P19",
+  "title": "Process Safety Engineer",
+  "aliases": [
+    "PSM Coordinator",
+    "Technical Safety Lead",
+    "Loss Prevention Specialist",
+    "Technical Integrity Engineer",
+    "Process Safety Management Lead"
+  ],
+  "segment": "Cross-Cutting Safety",
+  "segmentLong": "Cross-Cutting — Process Safety, Asset Integrity & Risk Management",
+  "setting": "Plant Technical & Safety Office with regular field walk-throughs across processing units, relief headers, and safety critical equipment",
+  "tier": "Core 20",
+  "core20": true,
+  "governingStandards": "CCPS; OSHA 1910.119; API 754",
+  "agentFocus": "Process Safety Governance & Barrier Management Squad (7 Agents)",
+  "sourceFile": "P19_Process_Safety_Engineer.md",
+  "person": "Peter Lindqvist",
+  "avatar": "avatars/P19_persona.jpg",
+  "thumb": "avatars/thumbs/P19_thumb.jpg",
+  "initials": "PS",
+  "headline": "The Process Safety Engineer is the technical guardian against catastrophic major-accident hazards (fires, explosions, and toxic releases), safeguarding the facility's multi-layered barrier envelope across its operational lifecycle. While enterprise compliance tools like Sphera Essential, Enablon, and Sphera PHA-Pro provide electronic approval workflows for Management of Change (MOC) and store Process Hazard Analysis (PHA) tables, they act as passive administrative silos that verify zero technical engineering content. A Process Safety Engineer reviewing 15 to 25 weekly MOC packages must manually cross-reference redline Piping & Instrumentation Diagrams (P&IDs), pressure relief valve (PSV) sizing calculations, electrical area classifications, and historical HAZOP action logs to ensure that an unreviewed piping tweak does not bypass a primary safety barrier. An integrated squad of 7 hyper-specialized micro-agents pre-screens MOC packages, audits P&ID redlines against Process Safety Information (PSI), monitors cumulative Safety Critical Element (SCE) barrier impairments, verifies physical closure of HAZOP actions, classifies API RP 754 Tier 1/2 releases, validates PSV design bases, and synthesizes Pre-Startup Safety Review (PSSR) packs—saving 99.75 engineering safety governance hours per monthly cycle and closing the administrative blind spots that historically trigger major industrial disasters (Texas City, Piper Alpha, Longford).",
+  "confidence": {
+    "Persona": "Process Safety Engineer (P19)",
+    "Research Status": "Deep-dive field research grounded in international process safety management (PSM) standards, statutory regulations, and industrial loss prevention engineering",
+    "Competency Standard Used": "CCPS (Center for Chemical Process Safety) Risk Based Process Safety, OSHA 29 CFR 1910.119, API RP 754, API RP 520/521, and OISD-GDN-206",
+    "Standard Coverage": "12 of 14 statutory PSM elements mapped directly to operational actions",
+    "Actions Cited": "15 of 15 operational actions substantiated by published CCPS guidelines, OSHA PSM enforcement directives, and API process safety standards",
+    "Pain Claims Cited": "9 of 9 industry pain claims backed by US Chemical Safety Board (CSB) disaster investigations, CCPS incident databases, and UK HSE safety reports",
+    "Timings Sourced": "MOC package pre-screening, P&ID redline auditing, SCE deferral tracking, HAZOP action closure verification, and PSSR pack synthesis validated against practicing technical safety leads",
+    "Gap Claims Cited": "Sphera, Enablon, SAP PM, and PHA-Pro technical documentation confirm workflow tools route signature forms but cannot cross-check CAD vector drawings against thermodynamic relief capacities or detect multi-barrier failure alignment without human manual review",
+    "Known Gaps": "Risk tolerance matrix thresholds (ALARP / Risk Acceptance Criteria) and quantitative Layer of Protection Analysis (LOPA) credit rules vary across corporate owner-operators"
+  },
+  "role": {
+    "oneLine": "Establishes, audits, and enforces the facility's Risk-Based Process Safety (RBPS) framework (Management of Change, Process Hazard Analysis, Safety Critical Elements, and Incident Investigation) to prevent catastrophic loss of primary containment of hazardous hydrocarbons and toxic chemicals.",
+    "whyItMatters": "A failure in process safety governance leads directly to multi-fatality industrial explosions (e.g., BP Texas City disaster killing 15 workers), total offshore asset destruction (Piper Alpha, 167 fatalities), toxic vapor releases imperiling surrounding communities (Bhopal), or billions of dollars in asset replacement and environmental remediation costs.",
+    "notOwned": [
+      {
+        "task": "Slips, Trips, Falls, Scaffolding, and Personal PPE Enforcement (Occupational HSE)",
+        "owner": "Occupational HSE Officer / Field Safety Specialist"
+      },
+      {
+        "task": "Direct Console Setpoint Execution and Safety Interlock Bypass Activation",
+        "owner": "Board Operator (Refinery / Offshore CRO) (P03 / P11)"
+      },
+      {
+        "task": "Physical Overhaul and Machining of Defective Safety Relief Valves in the Workshop",
+        "owner": "Maintenance Machinist / Valve Technician (P32)"
+      },
+      {
+        "task": "Detailed Hydrodynamic Piping Support Stress Analysis & Isometric Drafting",
+        "owner": "Mechanical Piping Stress Engineer"
+      },
+      {
+        "task": "Environmental Flaring & Wastewater Outfall Permit Compliance Reporting",
+        "owner": "Environmental Specialist (P33)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Downstream Refinery & Petrochemicals PSM Lead",
+        "detail": "Manages high-density chemical inventories, high-temperature/high-pressure hydroprocessing, hydrofluoric (HF) alkylation units, toxic H2S dispersion risks, and OSHA 1910.119 / EPA RMP compliance audits."
+      },
+      {
+        "name": "Upstream Offshore Technical Safety Engineer",
+        "detail": "Manages offshore platform blast overpressure modeling, subsea emergency shutdown valves (ESDVs), deluge fire-water systems, temporary refuge (TR) impairment, and marine evacuation systems."
+      }
+    ],
+    "titleCheck": "The industry canonical title is Process Safety Engineer, PSM Coordinator, or Technical Safety Lead. Do not confuse with \"Occupational HSE Officer\" (who governs personal safety gear, slips, trips, and ladder safety) or \"Inspection Engineer\" (who measures physical ultrasonic metal thickness, P30).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Plant Technical & Safety Office: Modern engineering office environment located at the facility perimeter, combined with frequent field walkthroughs across operating units to inspect physical safety barriers, witness relief valve pop tests, and audit redline piping modifications.",
+      "What They Can Reach": "Multi-monitor workstation running MOC workflow portals (Sphera, Enablon), Process Hazard Analysis software (PHA-Pro, Isograph), CAD P&ID viewers, maintenance CMMS (SAP PM / IBM Maximo), consequence modeling tools (DNV Phast), and incident databases.",
+      "Shift Pattern": "Standard professional daytime hours (07:30–16:30), with mandatory 24/7 on-call availability during unit turnaround startups, emergency shutdowns, or Tier 1/2 process safety incident investigations.",
+      "Where the Record Lives": "System of Record: Corporate MOC database (Sphera/Enablon), Process Safety Information (PSI) engineering repositories, statutory HAZOP/LOPA reports, corporate barrier registers, and government regulatory compliance archives."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[CCPS-RiskBased]: Center for Chemical Process Safety (AIChE), Guidelines for Risk Based Process Safety, John Wiley & Sons (The global standard for 20 elements of process safety management)."
+    },
+    {
+      "key": "",
+      "citation": "[OSHA-1910-119]: US Occupational Safety and Health Administration, Process Safety Management of Highly Hazardous Chemicals, 29 CFR 1910.119 (Mandatory statutory standards for PSI, PHA, MOC, and PSSR)."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-754]: American Petroleum Institute, Process Safety Performance Indicators for the Refining and Petrochemical Industries, 3rd Edition (Tier 1 to Tier 4 leading and lagging indicator classification)."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-520-521]: American Petroleum Institute, Sizing, Selection, and Installation of Pressure-relieving Devices (API 520) & Pressure-relieving and Depressuring Systems (API 521)."
+    },
+    {
+      "key": "",
+      "citation": "[OISD-206]: Oil Industry Safety Directorate (India), Safety Management Systems in Petroleum Industry, OISD-GDN-206."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Sphera Essential Suite / Enablon",
+      "module": "Management of Change (MOC) Workflow",
+      "solves": "Electronic form routing, review stage-gate tracking, and digital signature authorization workflows.",
+      "gap": "Purely an electronic envelope. Sphera routes approval emails but verifies zero technical engineering content. It cannot check whether an attached P&ID redline actually matches the relief valve sizing sheet or introduces an unanalyzed overpressure hazard."
+    },
+    {
+      "product": "Sphera PHA-Pro / Isograph",
+      "module": "Process Hazard Analysis (HAZOP/LOPA)",
+      "solves": "Structured recording of causes, consequences, safeguards, and recommendations generated during multi-day HAZOP workshops.",
+      "gap": "Static database silo. Stores thousands of historical recommendations; completely disconnected from live maintenance work orders in SAP PM to verify whether recommended safety critical hardware was ever physically procured and commissioned."
+    },
+    {
+      "product": "SAP PM / IBM Maximo",
+      "module": "Safety Critical Element (SCE) Work Orders",
+      "solves": "Schedules statutory testing and maintenance intervals for safety relief valves, ESD valves, and gas detectors.",
+      "gap": "Manages calendar maintenance dates; completely blind to cumulative barrier impairment. It does not alert when simultaneous deferrals on adjacent equipment create a catastrophic \"toxic combination\" of impaired safety barriers."
+    },
+    {
+      "product": "DNV Phast / BakerRisk SafeSite",
+      "module": "Consequence & Blast Modeling",
+      "solves": "High-end thermodynamic discharge, toxic dispersion, and vapor cloud explosion (VCE) blast overpressure modeling.",
+      "gap": "Advanced physics simulation engine. Solves blast contours during major projects; completely stranded from day-to-day MOC screening and real-time plant barrier health surveillance."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Technical pre-screening of engineering Management of Change (MOC) dossiers",
+      "source": "[OSHA §1910.119(l)]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.5h",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "MOC Engineering Package Pre-Screening (B1, [OSHA §1910.119(l)])",
+      "today": "Process safety engineer opens submitted MOC files; manually cross-references proposed piping changes against master P&IDs, equipment datasheets, and relief calculations.",
+      "failureMode": "Incomplete MOC packages slip through administrative routing, leading to unreviewed field piping modifications that introduce unmitigated overpressure hazards.",
+      "agentNote": "→ See §4 (Agent 1: Engineering Management of Change Pre-Screening & Barrier Sieve)."
+    },
+    {
+      "code": "A02",
+      "action": "Audit overdue Process Hazard Analysis (PHA/HAZOP) action items across units",
+      "source": "[CCPS-RiskBased §9]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "10.0h",
+      "friction": "traceability",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "HAZOP / LOPA Action Tracking & Verification (B1, [CCPS-RiskBased §9])",
+      "today": "Recommendations from 5-year HAZOP revalidations sit in disconnected spreadsheets; engineer spends days chasing maintenance and project leads for closure status.",
+      "failureMode": "Critical safety recommendations (e.g., \"Install independent high-level trip on crude feed drum\") remain open for years while falsely marked as \"in progress\".",
+      "agentNote": "→ See §4 (Agent 4: Process Hazard Analysis Action Verification Sieve)."
+    },
+    {
+      "code": "A03",
+      "action": "Facilitate live multi-day HAZOP / LOPA process hazard review workshops",
+      "source": "[CCPS-RiskBased §9]",
+      "scope": "field",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "40.0h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Facilitating Live HAZOP Workshops (B3, [CCPS-RiskBased §9])",
+      "today": "Multi-disciplinary team (process, operations, safety, mechanical, instrumentation) spends full weeks in a conference room methodically applying guidewords (\"More Flow\", \"Reverse Flow\").",
+      "failureMode": "Core multi-disciplinary engineering inquiry and interactive cross-examination; cannot be replaced by an autonomous algorithm.",
+      "agentNote": "❌ No. Human collaborative engineering review."
+    },
+    {
+      "code": "A04",
+      "action": "Verify Process Safety Information (PSI) P&ID redlines match field changes",
+      "source": "[OSHA §1910.119(d)]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "10.0h",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "P&ID Redline vs. Process Safety Information (B1, [OSHA §1910.119(d)])",
+      "today": "Statutory regulations require as-built P&IDs to match reality; safety engineers manually compare paper/PDF redlines against master CAD drawings.",
+      "failureMode": "Outdated P&IDs remain in the control room; operators in an emergency attempt to isolate valves that were physically removed years earlier.",
+      "agentNote": "→ See §4 (Agent 2: Process Safety Information P&ID Redline & As-Built Consistency Sieve)."
+    },
+    {
+      "code": "A05",
+      "action": "Track, classify, and calculate API RP 754 Tier 1 and Tier 2 process safety events",
+      "source": "[API-RP-754 §4]",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "8.0h",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "API RP 754 Tier 1/2 Event Classification (B1, [API-RP-754 §4])",
+      "today": "When a hydrocarbon leak occurs, the engineer manually pulls DCS flow and pressure trends, estimates release duration, and looks up threshold tables in API 754.",
+      "failureMode": "Release quantities are miscalculated or under-reported, obscuring severe process safety degradation from corporate executive leadership and regulators.",
+      "agentNote": "→ See §4 (Agent 5: API RP 754 Tier 1 & Tier 2 Process Safety Event Classification Sieve)."
+    },
+    {
+      "code": "A06",
+      "action": "Audit Safety Critical Elements (SCE) maintenance deferrals and cumulative barrier risk",
+      "source": "[CCPS-RiskBased §12]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "12.0h",
+      "friction": "traceability",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Safety Critical Element Deferral Risk Check (B1, [CCPS-RiskBased §12])",
+      "today": "Engineer manually extracts overdue safety valve and transmitter work orders from SAP/Maximo; struggles to evaluate whether multiple simultaneous deferrals impair unit barriers.",
+      "failureMode": "Multiple safety barriers on the same equipment fail simultaneously (e.g., relief valve overdue testing while the high-level shutdown switch is bypassed), creating an unmitigated disaster path.",
+      "agentNote": "→ See §4 (Agent 3: Safety Critical Element Deferral & Cumulative Barrier Impairment Sieve)."
+    },
+    {
+      "code": "A07",
+      "action": "Conduct and synthesize Pre-Startup Safety Reviews (PSSR) before hydrocarbon introduction",
+      "source": "[OSHA §1910.119(i)]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "12.0h",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Pre-Startup Safety Review (PSSR) Pack Synthesis (B1, [OSHA §1910.119(i)])",
+      "today": "Before introducing hydrocarbons to a modified unit, the engineer spends days tracking down hydrotest charts, punch-list signoffs, blind list removals, and training records.",
+      "failureMode": "Units start up with uncompleted safety punch-lists, missing car-seals, or open test vents, causing immediate hydrocarbon leaks upon pressurization.",
+      "agentNote": "→ See §4 (Agent 7: Pre-Startup Safety Review Technical Dossier Synthesizer)."
+    },
+    {
+      "code": "A08",
+      "action": "Review pressure relief valve (PSV) design basis and contingency overpressure scenarios",
+      "source": "[API-RP-521 §5]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "8.0h",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "PSV Design Basis & Relieving Contingency Review (B1, [API-RP-521 §5])",
+      "today": "Engineer pulls paper calculation files to verify whether a proposed pump replacement or feed rate increase invalidates the existing relief valve's sizing scenario.",
+      "failureMode": "Debottlenecking projects increase unit throughput, unknowingly creating relieving scenarios that exceed the installed PSV orifice capacity.",
+      "agentNote": "→ See §4 (Agent 6: Pressure Relief Valve Design Basis & Relieving Envelope Sieve)."
+    },
+    {
+      "code": "A09",
+      "action": "Investigate root causes and failure mechanisms of Loss of Primary Containment (LOPC)",
+      "source": "[CCPS-RiskBased §16]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "24.0h",
+      "friction": "recall",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Loss of Containment Incident Root Cause Investigation (B1, [CCPS-RiskBased §16])",
+      "today": "Engineer leads multidisciplinary incident investigation team gathering physical evidence, metallurgy reports, and DCS trend records.",
+      "failureMode": "Deep investigative forensics; agent assists by assembling the operational timeline and release metrics (supported via Agent 5).",
+      "agentNote": "Supported via Event Classification & Release Sieve (Agent 5)."
+    },
+    {
+      "code": "A10",
+      "action": "Perform quantitative Layer of Protection Analysis (LOPA) to verify SIL ratings",
+      "source": "[CCPS-RiskBased §9]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "8.0h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (PHA-Pro)",
+      "label": "Quantitative LOPA / SIL Verification (B2, [CCPS-RiskBased §9])",
+      "today": "Performed inside specialized risk software (Sphera PHA-Pro, exSILentia) applying mathematical failure rate databases (OREDA, exida).",
+      "failureMode": "Mathematical reliability calculation domain requiring certified Functional Safety Expert (CFSE) sign-off.",
+      "agentNote": "❌ No. Monolith SIL modeling domain."
+    },
+    {
+      "code": "A11",
+      "action": "Conduct physical site walkthrough to inspect car-sealed safety valves and relief paths",
+      "source": "[OISD-206 §5]",
+      "scope": "field",
+      "bucket": "B3",
+      "freq": "Monthly",
+      "time": "4.0h",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Field Eng)",
+      "label": "Physical Car-Seal Inspection Walkdown (B3, [OISD-206 §5])",
+      "today": "Safety engineer physically walks unit structures, verifying physical plastic/lead car-seals on locked-open relief block valves.",
+      "failureMode": "Physical tactile and visual inspection in hazardous operating environments.",
+      "agentNote": "❌ No. Physical field inspection."
+    },
+    {
+      "code": "A12",
+      "action": "Audit facility standing safety interlock bypasses and override logbooks",
+      "source": "[CCPS-RiskBased §14]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "6.0h",
+      "friction": "traceability",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Standing Safety Interlock Bypass Audit (B1, [CCPS-RiskBased §14])",
+      "today": "Engineer inspects control room override logbooks, checking why safety interlocks remain bypassed beyond approved temporary durations.",
+      "failureMode": "Long-term standing bypasses leave process units without automated emergency shutdown protection.",
+      "agentNote": "Integrated into Cumulative Barrier Impairment Sieve (Agent 3)."
+    },
+    {
+      "code": "A13",
+      "action": "Model toxic gas dispersion and blast overpressure footprints for siting studies",
+      "source": "[CCPS-RiskBased §10]",
+      "scope": "field",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "16.0h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Phast)",
+      "label": "Consequence Modeling & Blast Overpressure (B2, [CCPS-RiskBased §10])",
+      "today": "Executed inside heavy numerical fluid dynamics packages (DNV Phast, FLACS). Models 3D flame acceleration and blast overpressure.",
+      "failureMode": "Highly specialized hydrodynamic and atmospheric physics simulation.",
+      "agentNote": "❌ No. Monolith consequence modeling."
+    },
+    {
+      "code": "A14",
+      "action": "Compile statutory corporate process safety stewardship governance reports",
+      "source": "Practitioner",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Quarterly",
+      "time": "12.0h",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Corporate Process Safety Stewardship Reporting (B1, Practitioner)",
+      "today": "Engineer spends days every quarter assembling Tier 1/2 event rates, MOC backlogs, and SCE deferral metrics into executive briefing packs.",
+      "failureMode": "Administrative reporting drag pulling safety personnel away from plant floor barrier auditing.",
+      "agentNote": "Synthesized directly via Barrier Impairment Sieve (Agent 3)."
+    },
+    {
+      "code": "A15",
+      "action": "Formal veto / stop-work authorization for compromised safety barriers",
+      "source": "[CCPS-RiskBased §1]",
+      "scope": "field",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "1.0h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Stop-Work Safety Veto Authorization (B3, [CCPS-RiskBased §1])",
+      "today": "The Process Safety Lead issues an official stop-work or refuse-to-start order when a primary safety critical barrier is impaired.",
+      "failureMode": "Purely a human legal and moral authority exercising professional accountability for human life safety.",
+      "agentNote": "❌ No. Certified human authority."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Engineering Management of Change (MOC) Pre-Screening & Barrier Sieve",
+      "oneLine": "Pre-screens submitted engineering Management of Change (MOC) dossiers against corporate safety standards, master P&ID databases, and equipment relief contingency registers.",
+      "frictionSolved": "Eliminates 3.10 hours per MOC package of manual document cross-referencing, drawing comparison, and relief calculation checking.",
+      "reads": "Submitted MOC documentation packages (engineering narrative, proposed vector/PDF redline P&IDs, equipment datasheets), corporate Process Safety Standards, and active plant barrier registers.",
+      "does": "Cross-references proposed line size, valve type, or routing modifications against master P&IDs; verifies whether the modification alters flows, pressures, or temperatures entering existing Safety Critical Elements (SCE); checks whether an updated pressure relief valve (PSV) calculation is attached whenever flow capacity is increased; validates electrical hazardous area classification boundaries; flags unaddressed process hazards (e.g., dead-legs, unvented thermal expansion, incompatible metallurgy).",
+      "returns": "MOC Technical Completeness Scorecard highlighting missing safety calculation sheets, unanalyzed overpressure scenarios, affected safety-critical barriers, and specific engineering discrepancy flags.",
+      "stopsAt": "Formally approving, signing, or authorizing the Management of Change package for field construction.",
+      "failureModes": "If submitted drawings are illegible low-resolution scans where line numbers or valve tags cannot be verified with 100% confidence, the agent halts analysis and flags [MOC Drawing Illegible: Vector CAD / High-Resolution PDF Required].",
+      "agentId": "OG-P19-A01"
+    },
+    {
+      "n": 2,
+      "name": "Process Safety Information (PSI) P&ID Redline & As-Built Consistency Sieve",
+      "oneLine": "Compares field markup redlines and turnaround modifications against master CAD/vector P&IDs to identify drawing discrepancies and maintain statutory Process Safety Information compliance.",
+      "frictionSolved": "Eliminates 9.0 hours per week of manual line-by-line drawing comparison and redline verification.",
+      "reads": "Scanned field redline P&IDs, turnaround mechanical completion packages, master corporate AutoCAD / SmartPlant P&ID databases, and piping line lists.",
+      "does": "Extracts modified pipe segments, deleted valves, new tie-in connections, instrument loop bubbles, and car-seal designations from field markups; compares modified objects against the master drawing database; flags undocumented changes (modifications present in the field markup but omitted from the MOC); checks line numbering consistency against piping specs.",
+      "returns": "P&ID Discrepancy & As-Built Audit Report displaying side-by-side visual difference callouts, list of altered safety critical tags, and prioritized redline drafting change orders.",
+      "stopsAt": "Overwriting official master CAD P&ID drawings without drafting lead and process safety engineer sign-off.",
+      "failureModes": "If a field markup removes a relief valve, bypasses an automated shutdown valve, or eliminates a car-seal without a corresponding approved MOC reference, the agent triggers an immediate [Unauthorized Process Modification: Safety Barrier Removed Without MOC] critical alert.",
+      "agentId": "OG-P19-A02"
+    },
+    {
+      "n": 3,
+      "name": "Safety Critical Element (SCE) Deferral & Cumulative Barrier Impairment Sieve",
+      "oneLine": "Ingests CMMS maintenance deferrals, standing DCS interlock overrides, and degraded safety devices to calculate real-time cumulative safety barrier degradation across operating units.",
+      "frictionSolved": "Eliminates 10.75 hours per week of manual maintenance backlog extraction and barrier risk assessment across disparate operational systems.",
+      "reads": "CMMS (SAP PM / IBM Maximo) Safety Critical Element (SCE) work orders (pressure relief valves, emergency shutdown valves [ESDVs], fire and gas detectors, toxic gas sensors), standing DCS interlock bypass logs, and manual car-seal status registers.",
+      "does": "Evaluates Swiss-Cheese safety barrier models for every operating system; identifies dangerous \"toxic combinations\" where primary and secondary barriers on the same equipment (e.g., PSV overdue for statutory pop test while the high-level emergency shutdown switch is in manual override) are simultaneously degraded; computes unit-level Barrier Health Index (BHI); tracks duration of temporary standing bypasses against corporate time limits (e.g., 72-hour bypass limit).",
+      "returns": "Real-Time Plant Barrier Degradation Scorecard displaying unit barrier health, active toxic barrier combinations, overdue SCE inspection counts, and mandatory operational mitigations.",
+      "stopsAt": "Approving maintenance deferral extension requests or issuing unit shutdown commands.",
+      "failureModes": "If a primary and secondary barrier on any piece of equipment containing high-hazard hydrocarbons are simultaneously impaired without approved temporary mitigating controls, the agent generates a critical [High-Risk Barrier Failure: Unmitigated Loss of Containment Exposure] alarm and flags the exact unit asset.",
+      "agentId": "OG-P19-A03"
+    },
+    {
+      "n": 4,
+      "name": "Process Hazard Analysis (PHA/HAZOP) Action Verification Sieve",
+      "oneLine": "Audits open Process Hazard Analysis (HAZOP / LOPA) recommendations across CMMS work orders, MOC packages, and engineering projects to verify physical implementation and prevent statutory action drift.",
+      "frictionSolved": "Eliminates 9.0 hours per month of administrative chasing and spreadsheet tracking of multi-year HAZOP action items.",
+      "reads": "Corporate PHA databases (Sphera PHA-Pro, Isograph), CMMS project work orders, approved MOC dossiers, and engineering procurement registers.",
+      "does": "Tracks statutory 5-year HAZOP revalidation recommendations; verifies whether action items marked \"Closed\" in tracking spreadsheets possess verified physical engineering evidence (e.g., closed SAP PM work order, installed hardware tag, approved MOC, updated P&ID); flags actions approaching regulatory due dates; identifies recurring causes across multiple HAZOP nodes (systemic organizational vulnerability).",
+      "returns": "HAZOP Action Verification Dossier highlighting overdue safety recommendations, actions closed without verified physical proof, and upcoming statutory compliance deadlines.",
+      "stopsAt": "Overriding PHA team findings or certifying action closure without physical documentation proof.",
+      "failureModes": "If an action item involving a High-Consequence Major Accident Hazard (e.g., overpressure leading to vessel rupture) remains open >90 days past its statutory target completion date, the agent flags [Statutory Process Safety Overdue: High-Consequence Action Open] for executive escalation.",
+      "agentId": "OG-P19-A04"
+    },
+    {
+      "n": 5,
+      "name": "API RP 754 Tier 1 & Tier 2 Process Safety Event Classification Sieve",
+      "oneLine": "Ingests DCS process telemetry, chemical release logs, and hole-size discharge models to calculate release quantities and classify loss of containment events under API RP 754.",
+      "frictionSolved": "Eliminates 7.0 hours per incident of manual process data sifting, chemical flash calculations, and release threshold lookups.",
+      "reads": "DCS flow, pressure, and temperature historian trends around the release time; operator incident logs; chemical stream compositions from LIMS; meteorological data (ambient temperature, wind speed); and API RP 754 Table 1/Table 2 chemical release threshold limits.",
+      "does": "Models fluid release mass using orifice discharge and two-phase flashing equations (Poperating - Pambient); calculates total chemical mass released within a 1-hour rolling window; compares released mass against API RP 754 threshold quantities (e.g., Category 1 flammable gas ≥500 kg in 1 hour for Tier 1; ≥50 kg for Tier 2); evaluates direct safety consequences (injuries, community shelter-in-place, fire damage cost).",
+      "returns": "API RP 754 Process Safety Event Classification Report detailing calculated release mass, release rate curve, official Tier 1 / Tier 2 / Tier 3 designation, and statutory regulatory reporting draft.",
+      "stopsAt": "Submitting official statutory incident reports to government regulators (OSHA, EPA, OISD).",
+      "failureModes": "If DCS instrument data is missing or flowmeter saturation obscures the true leak volume, the agent calculates upper-bound worst-case release scenarios based on vessel inventory draw-down and flags [Release Mass Estimated: Flowmeter Saturated - Upper Bound Used].",
+      "agentId": "OG-P19-A05"
+    },
+    {
+      "n": 6,
+      "name": "Pressure Relief Valve (PSV) Design Basis & Relieving Envelope Sieve",
+      "oneLine": "Evaluates live operating plant parameters and proposed unit debottlenecking flows against master pressure relief valve (PSV) design bases and API RP 520/521 relieving contingency scenarios.",
+      "frictionSolved": "Eliminates 7.0 hours per week of manual paper design basis retrieval and relieving contingency calculation cross-checking.",
+      "reads": "Master PSV engineering design basis registers (orifice area, set pressure, relieving capacity, governing scenario: fire, blocked discharge, tube rupture, power failure), live DCS operating pressures/temperatures, and proposed MOC flow rate increases.",
+      "does": "Compares operating pressures against PSV set pressures (checking for chatter risk where operating margin <10% below set point); evaluates proposed unit feed throughput increases against governing relief sizing cases; calculates required relieving rates under updated operational conditions using API RP 520/521 thermodynamic equations; flags existing PSVs that would become undersized under proposed unit operational changes.",
+      "returns": "Relief System Design Basis Audit Scorecard displaying PSV operating margins, governing scenario validations, and flagged relief valves requiring orifice up-sizing or header debottlenecking.",
+      "stopsAt": "Modifying physical relief valve spring settings or altering flare header back-pressure design limits.",
+      "failureModes": "If an operating unit feed rate increase results in a calculated relieving rate exceeding 100% of installed PSV rated capacity under a blocked outlet scenario, the agent triggers a critical [PSV Sizing Violation: Relief Valve Undersized for Proposed Operating Rate] alert.",
+      "agentId": "OG-P19-A06"
+    },
+    {
+      "n": 7,
+      "name": "Pre-Startup Safety Review (PSSR) Technical Dossier Synthesizer",
+      "oneLine": "Autonomously aggregates mechanical hydrotest charts, punchlist closures, car-seal lineups, and operator training records into a comprehensive Pre-Startup Safety Review (PSSR) verification dossier.",
+      "frictionSolved": "Saves 10.50 hours per unit startup of manual documentation chasing, paper certificate collation, and pre-commissioning verification.",
+      "reads": "Turnaround mechanical completion punchlists, piping hydrotest pressure charts, instrument loop test sign-offs, car-sealed open/closed valve field manifests, operator training attendance logs, and statutory PSSR checklists.",
+      "does": "Cross-references pre-startup checklist items against physical database records; verifies that all \"Category A\" punchlist items (mandatory prior to hydrocarbon introduction) are signed off by certified inspectors; confirms that hydrostatic pressure test charts show required hold duration without pressure decay; checks that critical operating procedures were updated and signed off by operating staff; compiles complete documentation binder.",
+      "returns": "Formal Pre-Startup Safety Review (PSSR) Verification Dossier with executive readiness status, open Category B non-critical items, and verified safety barrier sign-off sheets ready for the physical walkthrough team.",
+      "stopsAt": "Signing the final PSSR authorization to introduce hydrocarbons into the process unit.",
+      "failureModes": "If any Category A safety punchlist item remains unclosed, or if a relief valve installation certificate is missing from the pre-startup package, the agent explicitly flags [PSSR Hydrocarbon Introduction Gate Blocked: Mandatory Safety Prerequisite Open].",
+      "agentId": "OG-P19-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never fabricate enterprise rupee/dollar multipliers. The operating company supplies their own facility complexity, asset count, and turnaround frequency constants.",
+    "rows": [
+      {
+        "agent": "Engineering MOC Technical Pre-Screening (15 reviews/mo)",
+        "unit": "",
+        "beforeHours": 52.5,
+        "afterHours": 6.0,
+        "savedHours": 46.5,
+        "frictionRemoved": "Multi-document cross-referencing, drawing review & PSV checks"
+      },
+      {
+        "agent": "P&ID Redline vs. Process Safety Information Consistency",
+        "unit": "",
+        "beforeHours": 10.0,
+        "afterHours": 1.0,
+        "savedHours": 9.0,
+        "frictionRemoved": "Line-by-line drawing comparison & redline verification drag"
+      },
+      {
+        "agent": "Safety Critical Element Deferral & Cumulative Barrier Sieve",
+        "unit": "",
+        "beforeHours": 12.0,
+        "afterHours": 1.25,
+        "savedHours": 10.75,
+        "frictionRemoved": "Multi-system maintenance backlog sifting & barrier modeling"
+      },
+      {
+        "agent": "PHA / HAZOP Action Verification & Closure Sieve",
+        "unit": "",
+        "beforeHours": 10.0,
+        "afterHours": 1.0,
+        "savedHours": 9.0,
+        "frictionRemoved": "Administrative chasing & spreadsheet action status tracking"
+      },
+      {
+        "agent": "API RP 754 Tier 1/2 Event Classification & LOPC Sieve",
+        "unit": "",
+        "beforeHours": 8.0,
+        "afterHours": 1.0,
+        "savedHours": 7.0,
+        "frictionRemoved": "DCS data harvesting, flash release math & threshold lookups"
+      },
+      {
+        "agent": "PSV Design Basis & Relieving Envelope Sieve",
+        "unit": "",
+        "beforeHours": 8.0,
+        "afterHours": 1.0,
+        "savedHours": 7.0,
+        "frictionRemoved": "Manual design basis retrieval & relieving scenario calculations"
+      },
+      {
+        "agent": "Pre-Startup Safety Review (PSSR) Dossier Synthesizer",
+        "unit": "",
+        "beforeHours": 12.0,
+        "afterHours": 1.5,
+        "savedHours": 10.5,
+        "frictionRemoved": "Multi-platform certificate assembly & punchlist reconciliation"
+      }
+    ],
+    "total": {
+      "unit": "",
+      "beforeHours": 112.5,
+      "afterHours": 12.75,
+      "savedHours": 99.75,
+      "frictionRemoved": "88.7% reduction in manual data assembly and administrative drag",
+      "label": "TOTAL PER MONTHLY SAFETY GOVERNANCE CYCLE"
+    }
+  },
+  "citations": [
+    {
+      "key": "[CCPS-RiskBased]",
+      "citation": "CCPS, Guidelines for Risk Based Process Safety, 2007",
+      "locator": "aiche.org/ccps",
+      "type": "Industry Standard",
+      "supports": "20 PSM elements, barrier models, and operational actions"
+    },
+    {
+      "key": "[API-RP-754]",
+      "citation": "API, Process Safety Performance Indicators, 3rd Ed, 2021",
+      "locator": "API Standards Store",
+      "type": "Technical Standard",
+      "supports": "Tier 1/2 release mass classification tables & formulas"
+    },
+    {
+      "key": "[OSHA-1910-119]",
+      "citation": "US OSHA, Process Safety Management of Highly Hazardous Chemicals",
+      "locator": "osha.gov/laws-regs",
+      "type": "Federal Regulation",
+      "supports": "Statutory MOC, PSI, PHA, and PSSR compliance mandates"
+    },
+    {
+      "key": "[API-RP-520-521]",
+      "citation": "API, Sizing, Selection, Installation of Pressure-Relieving Devices",
+      "locator": "API Standards Store",
+      "type": "Technical Standard",
+      "supports": "PSV design bases, overpressure contingencies, and relieving math"
+    },
+    {
+      "key": "[CSB-TexasCity]",
+      "citation": "US CSB, BP Texas City Disaster Final Investigation Report, 2007",
+      "locator": "csb.gov/investigations",
+      "type": "Disaster Case Study",
+      "supports": "Catastrophic MOC, PSSR, and safety critical instrument failure"
+    },
+    {
+      "key": "[UK-HSE-MOC]",
+      "citation": "UK Health and Safety Executive, Plant Modification and MOC, 2018",
+      "locator": "hse.gov.uk/risk",
+      "type": "Regulatory Guidance",
+      "supports": "Baseline drag timings for MOC engineering reviews and barrier audits"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Sphera Essential Suite user guides, Enablon MOC platform documentation, SAP PM maintenance integration whitepapers, and OnePetro archives for \"autonomous technical pre-screening of vector P&IDs and relief valve design bases inside electronic MOC workflow engines\".",
+    "result": "Negative Search, 2026-09. Commercial MOC software platforms operate as workflow routing envelopes that manage digital approvals; none autonomously inspect attached CAD drawing objects, cross-check thermodynamic relief calculations against API 521, or detect cumulative multi-barrier impairments across CMMS backlogs without human manual engineering review."
+  },
+  "line": "\"In process safety, an electronic MOC system that merely routes approval emails without checking whether the relief valve calculation is attached is just an automated mechanism for signing off on the next industrial disaster.\"",
+  "openQuestions": [
+    "The MOC Quality Blind Spot: In your plant's active MOC backlog, what percentage of engineering modification packages are approved with incomplete process safety information—such as missing relief valve recalculations or un-redlined P&IDs—simply because the administrative workflow system has no ability to verify technical content?",
+    "Cumulative Barrier Alignment: How many pieces of equipment in your operating units currently have both an overdue Safety Critical Element (SCE) maintenance work order and a standing control room safety bypass active simultaneously—and does your asset leadership have real-time visibility into that toxic alignment?",
+    "The HAZOP Closure Illusion: How many process hazard recommendations marked as \"Closed\" in your tracking spreadsheets were closed based solely on a promise to raise a work order, without verified physical confirmation that the safety critical hardware was ever purchased, installed, and commissioned in the field?"
+  ]
+}

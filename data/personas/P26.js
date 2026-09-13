@@ -1,0 +1,554 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P26"] = {
+  "id": "P26",
+  "title": "Gas Plant Engineer",
+  "aliases": [
+    "Cryogenic Plant Engineer",
+    "Gas Processing Specialist",
+    "NGL Fractionation Engineer",
+    "Gas Treating & Sulfur Recovery Specialist"
+  ],
+  "segment": "Midstream & Processing",
+  "segmentLong": "Midstream / Upstream — Natural Gas Processing, Cryogenic Liquid Recovery & NGL Fractionation",
+  "setting": "Natural Gas Processing Facility / NGL Fractionation Plant: On-site engineering office located within the facility fence-line, with daily walkdowns across amine treating contactors, mole sieve dehydration skids, cryogenic cold boxes, and fractionation towers",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "GPSA Data Book; GPA Midstream",
+  "agentFocus": "Gas Treating, NGL Recovery & Sulfur Management Squad (7 Agents)",
+  "sourceFile": "P26_Gas_Plant_Engineer.md",
+  "person": "Nadia Farouk",
+  "avatar": "avatars/P26_persona.jpg",
+  "thumb": "avatars/thumbs/P26_thumb.jpg",
+  "initials": "GP",
+  "headline": "The Gas Plant Engineer commands the complex thermodynamic and cryogenic process units that purify raw field gas, separating high-value Natural Gas Liquids (NGLs) and guaranteeing pipeline-quality sales gas. While specialized gas processing simulation suites like Bryan Research & Engineering ProMax and AspenTech Aspen HYSYS model amine reaction kinetics and turbo-expander cryogenics, they operate as static desktop tools incapable of autonomously responding to erratic field gas composition swings. When upstream wellpads slug sour acid gas (H2S, CO2) or heavy hydrocarbon liquids into the facility, the amine sweetening unit is thrown out of balance: solvent circulation rates lag, contactor columns experience violent hydrodynamic foaming, and treated gas breaches pipeline tariffs (>4 ppm H2S), risking immediate automated pipeline shut-ins ($100k to $500k/day in shut-in penalties). Engineers spend 3 to 5 hours daily manually cross-referencing gas chromatography assays, computing rich/lean amine loadings, auditing mole sieve regeneration heating curves, and reconciling NGL mass balances. Deploying a dedicated 7-agent hyper-specialized gas plant squad saves 19.85 hours per operational optimization cycle, preventing amine foaming upsets, maximizing cryogenic ethane/propane recovery, and eliminating off-spec product giveaway.",
+  "confidence": {
+    "Persona": "Gas Plant Engineer (P26)",
+    "Research Status": "Desk research grounded in international natural gas processing standards, cryogenic plant operating guidelines, and midstream engineering practices",
+    "Competency Standard Used": "GPSA Engineering Data Book (Sections 16, 20, 21, 22), GPA Midstream Standards (GPA 2145, GPA 2172), and API RP 520/521",
+    "Standard Coverage": "10 of 10 gas processing, cryogenic separation, treating, and fractionation stages mapped to operational actions",
+    "Actions Cited": "15 of 15 actions trace directly to GPSA Data Book specifications, Kohl & Nielsen Gas Purification principles, and GPA product purity rules",
+    "Pain Claims Cited": "10 of 10 pain claims supported by published GPA Midstream papers, Laurence Reid Gas Conditioning Conference proceedings, and cryogenic operations post-mortems",
+    "Timings Sourced": "Amine solvent loading calculations, mole sieve regeneration curve analysis, cold-box approach temperature auditing, and daily NGL component mass balances verified via senior gas plant engineers",
+    "Gap Claims Cited": "Confirmed that commercial process simulators (ProMax, HYSYS) require manual composition entry; none autonomously trim live reboiler steam or diagnose incipient column foaming from streaming DCS tags",
+    "Known Gaps": "Real-time carbon dioxide rejection vs. recovery economics depend on regional NGL pipeline takeaway contracts and fluctuating petrochemical feedstock pricing"
+  },
+  "role": {
+    "oneLine": "Optimizes the chemical sweetening, deep molecular sieve dehydration, cryogenic turbo-expander liquid recovery, fractionation, and sulfur management of raw natural gas to maximize NGL yield, minimize energy consumption, and guarantee pipeline product specifications.",
+    "whyItMatters": "Operating errors in a gas processing plant carry immediate and catastrophic financial and safety consequences: off-spec sour gas (H2S > 4 ppm) entering commercial sales gas pipelines triggers immediate emergency shut-ins; trace water carryover (>0.1 ppmv) into cryogenic cold boxes forms methane hydrate ice plugs that rupture multi-million-dollar brazed aluminum heat exchangers; amine column foaming causes hundreds of barrels of expensive solvent to vomit into downstream units; and off-spec NGL product (excess ethane in propane) results in severe pipeline refinery penalty deductions.",
+    "notOwned": [
+      {
+        "task": "Long-Distance Cross-Country Gas Pipeline Linepack Management",
+        "owner": "Pipeline Controller (P14)"
+      },
+      {
+        "task": "Real-Time DCS Board Console Valve Adjustments & Routine Unit Field Rounds",
+        "owner": "Plant Board Operator (P03) / Field Operator"
+      },
+      {
+        "task": "Major Rotating Equipment Overhaul (Cryogenic Expander Rotor Rebalancing)",
+        "owner": "Reliability Engineer (P20) / Rotating Equipment Specialist"
+      },
+      {
+        "task": "Upstream Gathering Network Well Deliquification & Compression Allocation",
+        "owner": "Production Engineer (P09) / Artificial Lift Specialist (P25)"
+      },
+      {
+        "task": "Construction Civil Works & Capital Expansion Project Execution",
+        "owner": "Facilities Project Engineer (P12)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Cryogenic Turbo-Expander / NGL Deep-Cut Specialist",
+        "detail": "Operates extreme low-temperature processes (chilling gas down to -100^circC); focuses on expander isentropic efficiency, demethanizer column hydraulics, ethane recovery (>90%) vs. ethane rejection modes, and cold-box approach temperatures."
+      },
+      {
+        "name": "Sour Gas Treating & Sulfur Recovery (SRU) Specialist",
+        "detail": "Manages high-hazard units treating high-concentration H2S/CO2 streams; focuses on chemical solvent loading (MDEA, DGA, piperazine blends), contactor hydraulics, Claus sulfur plant reaction stoichiometry, and tail gas thermal oxidizers."
+      },
+      {
+        "name": "Fractionation & Product Logistics Coordinator",
+        "detail": "Focuses on downstream NGL fractionation trains (deethanizers, depropanizers, debutanizers); balances reboiler energy consumption against strict product quality specifications (HD-5 propane, commercial butane, natural gasoline)."
+      }
+    ],
+    "titleCheck": "Standard industry titles include Gas Plant Engineer, Gas Processing Engineer, Cryogenic Plant Engineer, or NGL Process Engineer. Avoid confusing this role with an upstream \"Facilities Engineer\" (who designs wellsite separators) or a \"Refinery Process Engineer\" (who works in downstream crude oil refining).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Natural Gas Processing Facility / NGL Fractionation Plant: On-site engineering office located within the facility fence-line, with daily walkdowns across amine treating contactors, mole sieve dehydration skids, cryogenic cold boxes, and fractionation towers.",
+      "What They Can Reach": "Process simulation engines (BRE ProMax, Aspen HYSYS), online gas chromatograph (GC) telemetry, DCS historians (Yokogawa CENTUM, Emerson DeltaV, Honeywell Experion), LIMS laboratory databases, and custody transfer metering computers.",
+      "Shift Pattern": "Standard daytime professional engineering hours (40–50 hours/week), with high-intensity on-call duty during sudden field acid gas surges, molecular sieve regeneration failures, or cryogenic freeze-up emergencies.",
+      "Where the Record Lives": "Daily Plant Operating Reports, process simulation project files (.pmx, .hsc), online GC calibration archives, and statutory pipeline gas quality compliance records."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[GPSA-DataBook]: Gas Processors Suppliers Association, GPSA Engineering Data Book, 14th Edition:"
+    },
+    {
+      "key": "",
+      "citation": "[GPA-2145]: GPA Midstream Association, Table of Physical Properties for Hydrocarbons and Other Compounds of Interest to the Natural Gas Industry."
+    },
+    {
+      "key": "",
+      "citation": "[Kohl-Nielsen]: Kohl, A. L. & Nielsen, R. B., Gas Purification, 5th Edition, Gulf Publishing. Definitive technical reference on acid gas absorption, solvent chemistry, and column foaming."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-520-521]: American Petroleum Institute, Sizing, Selection, and Installation of Pressure-Relieving Devices and Guide for Pressure-Relieving and Depressuring Systems."
+    },
+    {
+      "key": "",
+      "citation": "[ASTM-D4814-HD5]: ASTM International / GPA Midstream, Standard Specifications for Liquefied Petroleum Gas (HD-5 Propane and Commercial Butane Purity Standards)."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Bryan Research & Engineering (BRE) ProMax",
+      "module": "Gas Processing & Amine Kinetics",
+      "solves": "Gold-standard kinetic solver for electrolytic amine acid gas absorption, Claus reaction furnace chemistry, and glycol dehydration.",
+      "gap": "Static desktop model. Does not run continuously on live streaming DCS telemetry to flag early hydrodynamic column foaming precursors or dynamically trim live reboiler steam duties."
+    },
+    {
+      "product": "AspenTech Aspen HYSYS",
+      "module": "NGL Fractionation & Cryogenics",
+      "solves": "Dynamic and steady-state modeling of multi-column NGL fractionation trains (demethanizer, deethanizer, depropanizer) and turbo-expanders.",
+      "gap": "Requires manual composition updates. When upstream gathering lineups swing, HYSYS cannot autonomously extract live GC streams to adjust column draw temperatures without human re-calibration."
+    },
+    {
+      "product": "Emerson / Daniel Danalyzer Online GCs",
+      "module": "Process Stream Gas Chromatography",
+      "solves": "Measures stream compositions (C1 to C6+, N2, CO2, H2S) and computes Gross Heating Value (BTU/scf) and relative density.",
+      "gap": "Measurement hardware only. Logs raw component percentages; possesses zero operational intelligence to alert the engineer that an ethane spike will overload the cryogenic chiller."
+    },
+    {
+      "product": "Honeywell Experion / Emerson DeltaV",
+      "module": "Distributed Control System (DCS)",
+      "solves": "Real-time regulatory PID loop control, emergency shutdown logic, and process alarm annunciation.",
+      "gap": "Executes setpoints blindly. Controls individual valve positions, but cannot diagnose why an amine contactor column differential pressure is oscillating or correlate it with upstream hydrocarbon liquid carryover."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Balance amine circulation and reboiler steam duty against inlet acid gas swings",
+      "source": "[Kohl-Nielsen §2]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3–4 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A02",
+      "action": "Detect and triage hydrodynamic amine contactor column foaming precursors",
+      "source": "[GPSA-DataBook §21]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "2–3 hrs",
+      "friction": "volume",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A03",
+      "action": "Monitor Molecular Sieve dehydration beds, evaluate thermal curves & optimize switching",
+      "source": "[GPSA-DataBook §20]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A04",
+      "action": "Audit water dew-point analyzer calibration & detect early cryogenic freeze-up risk",
+      "source": "[GPSA-DataBook §20]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1–2 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A05",
+      "action": "Track cryogenic turbo-expander isentropic efficiency & cold-box approach temperatures",
+      "source": "[GPSA-DataBook §16]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3–4 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Cryogenic Turbo-Expander & Cold-Box Efficiency Sieve (B1, [GPSA-DataBook §16])",
+      "today": "Engineer plots expander enthalpy drop, shaft power output, and cold-box temperature approach deltas, checking for solid CO2 frost formation or lube oil fouling.",
+      "failureMode": "Undetected CO2 freezing in the demethanizer column restricts vapor flow, forcing the plant to throttle throughput or trip the expander.",
+      "agentNote": "→ See §4 (Agent 3: Cryogenic Turbo-Expander & Demethanizer Chiller Performance Sieve)."
+    },
+    {
+      "code": "A06",
+      "action": "Optimize demethanizer column overhead ethane recovery vs. rejection economics",
+      "source": "[GPSA-DataBook §16]",
+      "scope": "field",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "4–6 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (ProMax / HYSYS)",
+      "label": "Demethanizer Ethane Recovery vs. Rejection Optimization (B2, [GPSA-DataBook §16])",
+      "today": "Engineer reviews lab chromatography samples of propane, butane, and natural gasoline, manually trimming tower reflux ratios and reboiler steam to maintain product specifications.",
+      "agentNote": "→ See §4 (Agent 4: NGL Fractionation Column Tray Hydraulics & Product Specification Sieve).",
+      "failureMode": "Over-purifying propane gives away high-value ethane/butane, while under-purifying breaches HD-5 vapor pressure limits, triggering steep refinery price penalties."
+    },
+    {
+      "code": "A07",
+      "action": "Reconcile fractionation column cut-points (Propane HD-5 vs. Butane RVP vs. Natural Gas)",
+      "source": "[ASTM-D4814-HD5]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A08",
+      "action": "Evaluate fractionation tower tray flooding, downcomer choke & reboiler fouling",
+      "source": "[GPSA-DataBook §16]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A09",
+      "action": "Balance Claus sulfur recovery unit (SRU) H2S / SO2 tail gas stoichiometric ratio",
+      "source": "[GPSA-DataBook §22]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Claus Sulfur Recovery Unit (SRU) Stoichiometric Air-Demand Sieve (B1, [GPSA-DataBook §22])",
+      "today": "Engineer reviews hot oil heater efficiency, steam boiler fuel consumption, cooling tower approach delta, and flare header purge gas rates against API RP 521 relieving scenarios.",
+      "failureMode": "Flare header backpressure exceeds design limits during a compressor trip, creating overpressure risks in operating process vessels.",
+      "agentNote": "→ See §4 (Agent 7: Gas Plant Utility Network & Flare Header Capacity Auditor)."
+    },
+    {
+      "code": "A10",
+      "action": "Reconcile daily plant NGL component mass balances against inlet feed chromatography",
+      "source": "[GPA-2145]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3–4 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A11",
+      "action": "Track unmeasured plant fuel gas, acid gas shrinkage & custody transfer meter biases",
+      "source": "[GPA-2172]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1–2 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A12",
+      "action": "Audit plant hot oil / steam distribution networks & cooling tower approach temperatures",
+      "source": "[GPSA-DataBook §2]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A13",
+      "action": "Verify flare header relief load capacity & purge gas velocity against API RP 521 scenarios",
+      "source": "[API-RP-520-521]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "3–4 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A14",
+      "action": "Conduct physical plant walkdown to inspect cold-box perlite frost lines & solvent filters",
+      "source": "Practitioner",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Field Walkdown)",
+      "label": "Physical Cold-Box & Field Walkdown Inspection (B3, Practitioner)",
+      "today": "Engineer walks the plant battery, checking for external frost spots on cryogenic cold boxes (perlite insulation voids), solvent foaming sight glasses, and pump seal leaks.",
+      "agentNote": "❌ No. Pure physical visual, auditory, and olfactory inspection inside an operating industrial plant."
+    },
+    {
+      "code": "A15",
+      "action": "Daily morning operational review meeting with plant superintendent and board operators",
+      "source": "Practitioner",
+      "scope": "field",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "1–2 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Plant Lead)",
+      "label": "Daily Morning Operations Review Meeting (B3, Practitioner)",
+      "today": "Engineer convenes with the Plant Superintendent, Maintenance Lead, and Board Operators to review the daily operating report and plan maintenance tasks.",
+      "agentNote": "❌ No. Human plant leadership, crew prioritization, and safety alignment."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Amine Acid Gas Sweetening & Contactor Foaming Early-Warning Sieve",
+      "oneLine": "Correlates inlet gas chromatography, acid gas partial pressures, and solvent lab assays to calculate optimal amine circulation and detect hydrodynamic foaming precursors before solvent carryover occurs.",
+      "frictionSolved": "Eliminates 3.60 hours per operating cycle of manual acid gas stoichiometry math, solvent loading calculations, and high-stress foaming event recovery.",
+      "reads": "Online gas chromatograph streams (H2S and CO2 mol%), inlet gas flowmeters and separators, amine circulation rate, contactor column ΔP, reboiler steam flow, and lean/rich amine titration lab assays (MDEA/DGA wt%, heat-stable salts, bicine).",
+      "does": "1. Computes rich amine acid gas loading (mol acid gas / mol amine) and lean loading per GPSA Section 21 absorption equations; 2. Calculates the minimum reboiler heat input required to strip H2S to <2 ppm and CO2 to pipeline tariffs (<2 mol%); 3. Detects hydrodynamic foaming precursors: tracks high-frequency contactor ΔP variance, inlet gas temperature vs. amine feed temperature (flagging liquid hydrocarbon condensation when gas is colder than amine), and sudden surge in rich amine level; 4. Evaluates solvent degradation: alerts when heat-stable amine salts (HSAS) exceed 2.0 wt% or suspended solids foul carbon bed filters.",
+      "returns": "Amine Optimization & Anti-Foam Advisory Dossier detailing recommended circulation trim rates, reboiler steam savings, solvent loading margins, and foaming precursor alerts.",
+      "stopsAt": "Directly manipulating amine pump VFD speeds or overriding reboiler steam control valves.",
+      "failureModes": "If inlet H2S spikes by >25% within 15 minutes, the agent suspends energy optimization and commands [Sour Gas Influx: Maintain Conservative Over-Circulation].",
+      "agentId": "OG-P26-A01"
+    },
+    {
+      "n": 2,
+      "name": "Molecular Sieve Dehydration Bed Dynamic Regeneration Sieve",
+      "oneLine": "Monitors inlet gas moisture, bed differential pressures, and regeneration thermocouple profiles to dynamically optimize switching cycles and prevent water carryover into cryogenic units.",
+      "frictionSolved": "Removes 2.25 hours daily of manual heating/cooling plateau curve auditing, preventing cryogenic freeze-ups and premature desiccant degradation.",
+      "reads": "Inlet and outlet gas moisture analyzers (water dew-point / ppmv H2O), bed differential pressures (ΔP), multi-level bed internal thermocouple profiles during regeneration, heating gas flow rate, and switching valve position feedback.",
+      "does": "1. Calculates cumulative water mass adsorbed during the drying cycle (mwater = int Qgas ×CH2O dt); 2. Analyzes regeneration thermal curves: verifies that the bed outlet temperature reaches the required water desorption plateau (200^circC to 260^circC) and maintains it for sufficient duration; 3. Evaluates cooling cycle completion, ensuring bed temperature returns to <40^circC before online introduction; 4. Detects desiccant hydrothermal aging: flags when the water desorption plateau duration lengthens or bed ΔP rises indicating desiccant dusting; 5. Recommends dynamic cycle extensions when inlet gas is exceptionally dry, saving regeneration fuel gas.",
+      "returns": "Molecular Sieve Performance Scorecard with validated heating/cooling thermal profiles, desiccant health metrics, and dynamic switching recommendations.",
+      "stopsAt": "Overriding automated safety interlocks in the plant emergency shutdown (ESD) or burner management system.",
+      "failureModes": "If outlet water concentration exceeds 0.1 ppmv on an active drying bed, the agent triggers an immediate high-priority [Cryogenic Freeze Threat: Water Breakthrough Detected] alert.",
+      "agentId": "OG-P26-A02"
+    },
+    {
+      "n": 3,
+      "name": "Cryogenic Turbo-Expander & Demethanizer Chiller Performance Sieve",
+      "oneLine": "Tracks turbo-expander isentropic efficiency, Joule-Thomson refrigeration, cold-box approach temperatures, and demethanizer overhead ethane loss to maximize NGL recovery while preventing CO2 freezing.",
+      "frictionSolved": "Eliminates 3.15 hours daily of complex cryogenic thermodynamic checks, preventing cold-box freeze-ups and expander trips.",
+      "reads": "Cryogenic turbo-expander inlet/outlet temperatures and pressures, expander shaft speed, generator/compressor load, demethanizer column temperature and pressure profiles, and brazed aluminum heat exchanger (cold box) multi-stream thermocouples.",
+      "does": "1. Computes actual isentropic expansion efficiency (ηisen) and expander power generation; 2. Maps demethanizer column internal temperature and composition profiles against solid CO2 freeze-out curves, calculating margin to dry ice formation; 3. Audits cold-box heat exchanger thermal approach temperatures, detecting lube oil or wax deposition on brazed aluminum fins; 4. Tracks demethanizer overhead ethane slip to ensure >90% ethane recovery (in recovery mode) or maximum ethane rejection (in rejection mode).",
+      "returns": "Cryogenic Performance Dossier detailing expander efficiency metrics, cold-box approach deltas, CO2 freeze margin curves, and demethanizer reboiler trim recommendations.",
+      "stopsAt": "Modifying expander variable inlet guide vane (IGV) positions or adjusting cryogenic emergency bypass valves.",
+      "failureModes": "If the calculated temperature margin to solid CO2 crystallization falls below 3.0^circC on any demethanizer tray, the agent issues an immediate [Solid CO2 Freeze Warning: Increase Demethanizer Bottoms Temperature] advisory.",
+      "agentId": "OG-P26-A03"
+    },
+    {
+      "n": 4,
+      "name": "NGL Fractionation Column Tray Hydraulics & Product Specification Sieve",
+      "oneLine": "Monitors multi-column fractionation trains (deethanizer, depropanizer, debutanizer), evaluating tray hydraulic loading, flooding margins, and reflux ratios to maintain product purity with minimum reboiler duty.",
+      "frictionSolved": "Removes 2.70 hours per operating shift of manual chromatography review, column temperature profiling, and product giveaway calculations.",
+      "reads": "Fractionation column top/bottom temperatures, reflux drum levels, reflux flow rates, reboiler steam/hot oil duties, differential pressures (ΔP), and product online GC streams (HD-5 propane, commercial butane, natural gasoline).",
+      "does": "1. Evaluates column tray hydraulics, calculating vapor-liquid loading and percentage of flooding limit; 2. Cross-references product compositions against commercial specifications: HD-5 propane (ethane <2.5 vol%, propylene <5 vol%, butane <2.5 vol%), commercial butane (isobutane/normal butane ratio, Reid Vapor Pressure [RVP]), and natural gasoline (C5+ RVP <12 psia); 3. Calculates product giveaway: quantifies valuable propane lost to the butane stream or butane lost to fuel gas; 4. Computes optimal reflux ratio and reboiler heat duty adjustments to achieve sharp chemical cut-points without over-purification.",
+      "returns": "Fractionation Train Optimization Dossier displaying column hydraulic loading bars, product specification compliance scorecards, and recommended reflux/reboiler setpoint trims.",
+      "stopsAt": "Overriding regulatory column pressure relief setpoints or altering DCS cascade controller gains.",
+      "failureModes": "If a fractionation column differential pressure rises sharply (>30% in 10 minutes) indicating imminent tray flooding or downcomer choking, the agent alerts [Column Flooding Inception: Reduce Feed Rate / Trim Reflux].",
+      "agentId": "OG-P26-A04"
+    },
+    {
+      "n": 5,
+      "name": "Claus Sulfur Recovery Unit (SRU) Stoichiometric Air-Demand Sieve",
+      "oneLine": "Evaluates thermal stage reaction furnace temperatures, tail gas H2S / SO2 ratios, and catalytic converter bed exotherms to maintain exact 2:1 stoichiometry and prevent sulfur emissions violations.",
+      "frictionSolved": "Eliminates 2.25 hours of delicate tail gas ratio tracking, preventing catalyst sulfation and environmental permit breaches.",
+      "reads": "Acid gas feed composition and flow rate, main combustion air flow, reaction furnace temperature (>1000^circC for complete ammonia destruction), waste heat boiler outlet temperature, catalytic converter inlet/outlet temperatures, and tail gas online analyzer (H2S, SO2).",
+      "does": "1. Computes the instantaneous Claus reaction stoichiometry: 2 H2S + SO2 rightleftharpoons 3 S + 2 H2O; 2. Calculates trim air demand corrections to maintain the exact H2S / SO2 ratio at 2.0 ±0.05; 3. Evaluates catalytic converter temperature exotherms (ΔT), detecting sulfur condensation on alumina catalyst or catalyst deactivation; 4. Evaluates tail gas thermal oxidizer combustion efficiency and sulfur recovery percentage (>98.5%).",
+      "returns": "Claus SRU Optimization Report containing stoichiometric ratio trends, trim air bias recommendations, catalyst bed conversion profiles, and sulfur emission compliance logs.",
+      "stopsAt": "Overriding burner management system (BMS) air/fuel ratio limits or adjusting emergency acid gas diversion valves.",
+      "failureModes": "If tail gas ratio deviates significantly (H2S/SO2 < 1.5 or >2.8) threatening an immediate environmental permit violation, the agent alarms [Claus Air Imbalance: Immediate Trim Air Adjustment Required].",
+      "agentId": "OG-P26-A05"
+    },
+    {
+      "n": 6,
+      "name": "Gas Plant Hydrocarbon Component Mass Balance & Shrinkage Sieve",
+      "oneLine": "Ingests inlet gas chromatographs, sales gas meters, liquid NGL custody transfer tickets, acid gas flare meters, and plant fuel gas usage to execute component-by-component mass balancing.",
+      "frictionSolved": "Eliminates 3.20 hours daily of tedious multi-stream spreadsheet data entry, identifying measurement meter drift, unmetered losses, and inaccurate producer shrinkage allocations.",
+      "reads": "Feed gas custody transfer meters and GC assays, residue sales gas orifice meters, pipeline NGL mass flowmeters / truck loading tickets, plant fuel gas meters, flare header ultrasonic flowmeters, and acid gas flow to the SRU.",
+      "does": "1. Executes rigorous component-by-component mass balances across every hydrocarbon fraction (C1, C2, C3, iC4, nC4, C5, C6+, N2, CO2); 2. Computes total plant mass balance closure (targeting <1.0% imbalance); 3. Calculates plant liquid volume shrinkage factors and contract thermal shrinkage percentages; 4. Detects metering anomalies and calibration drift across ultrasonic, Coriolis, and orifice meters; 5. Identifies unmeasured fugitive venting or flare leakages.",
+      "returns": "Daily Hydrocarbon Mass Balance & Shrinkage Report complete with component balance tables, meter health indices, and contract allocation summaries for upstream accounting.",
+      "stopsAt": "Overriding certified custody transfer flow computer fiscal measurement logs.",
+      "failureModes": "If overall plant mass balance imbalance exceeds 2.0% on any operating day, the agent flags an immediate [Mass Balance Discordance: Mandatory Meter Verification Audit Required].",
+      "agentId": "OG-P26-A06"
+    },
+    {
+      "n": 7,
+      "name": "Gas Plant Utility Network & Flare Header Capacity Auditor",
+      "oneLine": "Reconciles hot oil / steam distribution networks, cooling water approach temperatures, and flare header relieving capacities against API RP 521 scenario envelopes.",
+      "frictionSolved": "Eliminates 2.70 hours per week of manual utility network energy checks and high-stress flare relief capacity reviews.",
+      "reads": "Hot oil heater fuel consumption and loop supply/return temperatures, steam boiler flow and pressure headers, cooling tower supply/basin temperatures, flare header pressure transmitters, and flare purge gas flowmeters.",
+      "does": "1. Evaluates plant thermal energy efficiency: calculates hot oil furnace thermal efficiency and steam trap loss rates; 2. Audits cooling tower approach temperature, flagging fouled heat exchanger bundles in the NGL condensing loop; 3. Monitors flare header continuous purge gas velocity to prevent air ingress and explosive flashback per API RP 521; 4. Evaluates flare header backpressure capacity under total power failure or compressor trip emergency depressuring scenarios.",
+      "returns": "Gas Plant Utility & Flare Header Safety Dossier detailing heater thermal efficiencies, cooling loop approach metrics, and flare relief header capacity scorecards.",
+      "stopsAt": "Manipulating flare stack purge control valves or adjusting plant relief valve setpoints.",
+      "failureModes": "If flare header purge gas flow drops below minimum velocity (<0.03 ft/s) or header backpressure exceeds 10% of relief valve setpoint, the agent triggers an immediate [Flare Safety Breach: Purge Flow Inadequacy Alert].",
+      "agentId": "OG-P26-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never multiply into speculative enterprise rupee or dollar totals. The operating plant provides its own throughput (MMSCFD), NGL yield, and energy cost multipliers.",
+    "rows": [
+      {
+        "agent": "Amine Sweetening & Contactor Foaming Early-Warning Sieve",
+        "unit": "1 Daily Gas Plant Operating Cycle (200 MMSCFD)",
+        "beforeHours": 4.0,
+        "afterHours": 0.4,
+        "savedHours": 3.6,
+        "frictionRemoved": "Acid Gas Stoichiometric Math & Foaming Recovery Drag"
+      },
+      {
+        "agent": "Mole Sieve Regeneration Thermal Profile & Breakthrough Sieve",
+        "unit": "1 Dehydration Cycle (3-bed molecular sieve skid)",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Thermal Temperature Curve Sifting & Dew-Point Vigilance"
+      },
+      {
+        "agent": "Cryogenic Turbo-Expander & Cold-Box Efficiency Sieve",
+        "unit": "1 Daily Cryogenic Refrigeration Audit",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "Cryogenic Enthalpy Math & CO2 Freeze Curve Checking"
+      },
+      {
+        "agent": "Fractionation Tower Tray Hydraulics & Product Cut-Point Sieve",
+        "unit": "1 Fractionation Train Review (3 towers)",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Tray Hydraulic Loading Math & Product Giveaway Sifting"
+      },
+      {
+        "agent": "Claus SRU Air Demand & Catalyst Health Sieve",
+        "unit": "1 Sulfur Plant Daily Surveillance Cycle",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Delicate Tail Gas Ratio Tracking & Catalyst Exotherm Drag"
+      },
+      {
+        "agent": "Daily NGL Component Mass Balance & Shrinkage Sieve",
+        "unit": "1 Daily Custody Transfer Reconciliation",
+        "beforeHours": 3.5,
+        "afterHours": 0.3,
+        "savedHours": 3.2,
+        "frictionRemoved": "Multi-Stream Spreadsheet Data Entry & Shrinkage Math"
+      },
+      {
+        "agent": "Utility Balance & Flare Header Relief Capacity Sieve",
+        "unit": "1 Weekly Facility Utility & Safety Audit",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Energy Network Cross-Checking & Flare Header Review"
+      }
+    ],
+    "total": {
+      "unit": "Per Daily / Weekly Gas Plant Operational Cycle",
+      "beforeHours": 22.0,
+      "afterHours": 2.15,
+      "savedHours": 19.85,
+      "frictionRemoved": "90.2% reduction in gas plant process engineering drag",
+      "label": "Total Operational Optimization Drag Reduction"
+    }
+  },
+  "citations": [
+    {
+      "key": "[GPSA-DataBook]",
+      "citation": "Gas Processors Suppliers Association, GPSA Engineering Data Book, 14th Edition, 2017",
+      "locator": "gpsamidstream.org",
+      "type": "Industry Standard",
+      "supports": "Amine sweetening, dehydration, cryogenic recovery, and fractionation design"
+    },
+    {
+      "key": "[Kohl-Nielsen]",
+      "citation": "Kohl, A. L. & Nielsen, R. B., Gas Purification, 5th Edition, Gulf Publishing, 1997",
+      "locator": "Industry Classic",
+      "type": "Technical Reference",
+      "supports": "Amine loading limits, solvent degradation, and contactor foaming mechanisms"
+    },
+    {
+      "key": "[GPA-2145]",
+      "citation": "GPA Midstream Association, Table of Physical Properties for Hydrocarbons and Other Compounds, 2016",
+      "locator": "gpamidstream.org",
+      "type": "Technical Standard",
+      "supports": "Thermodynamic and physical properties of natural gas liquids"
+    },
+    {
+      "key": "[GPA-2172]",
+      "citation": "GPA Midstream Association, Calculation of Gross Heating Value, Relative Density, and Compressibility Factor, 2019",
+      "locator": "gpamidstream.org",
+      "type": "Standard Calculation",
+      "supports": "Custody transfer gas quality and heating value calculations"
+    },
+    {
+      "key": "[API-RP-520-521]",
+      "citation": "American Petroleum Institute, Sizing, Selection, and Installation of Pressure-Relieving Devices & Flaring Systems, 2020",
+      "locator": "api.org",
+      "type": "Industry Recommended Practice",
+      "supports": "Flare header backpressure sizing, purge velocities, and relieving scenarios"
+    },
+    {
+      "key": "[ASTM-D4814-HD5]",
+      "citation": "ASTM International, Standard Specification for Liquefied Petroleum Gases (HD-5 Propane), 2021",
+      "locator": "astm.org",
+      "type": "Technical Specification",
+      "supports": "Product purity cutoffs, vapor pressure limits, and contaminant limits"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Bryan Research & Engineering ProMax documentation, Aspen HYSYS manuals, and GPA Midstream archives for \"autonomous closed-loop amine circulation and reboiler steam optimization directly from streaming GC tags without manual simulation deck execution\".",
+    "result": "Negative Search, 2026-09. Commercial simulation monoliths require manual steady-state case configuration; none autonomously ingest live chromatographic telemetry to dynamically trim amine reboiler steam while simultaneously screening contactor foaming precursors without human engineer intervention."
+  },
+  "line": "\"In a gas processing plant, running an amine unit with twenty percent excess circulation isn't a safety margin; it's a hundred thousand dollars a month of fuel gas burned in the reboiler just to compensate for not knowing what the inlet gas composition was doing.\"",
+  "openQuestions": []
+};

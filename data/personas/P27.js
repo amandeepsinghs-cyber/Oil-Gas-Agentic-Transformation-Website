@@ -1,0 +1,582 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P27"] = {
+  "id": "P27",
+  "title": "Pipeline Integrity Engineer",
+  "aliases": [
+    "Corrosion & Pigging Engineer",
+    "Pipeline Asset Integrity Specialist",
+    "Pipeline Integrity Management Program (PIMP) Lead",
+    "In-Line Inspection (ILI) Data Analyst"
+  ],
+  "segment": "Midstream & Pipelines",
+  "segmentLong": "Midstream — Cross-Country Transmission Pipelines & Gathering Networks",
+  "setting": "Engineering Office & Pipeline Right-of-Way (ROW): Dual environment combining high-performance GIS desktop workstations with field visits to pig launcher/receiver traps, pipeline trench excavations, and cathodic protection test stations",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "ASME B31.8S; API 1160; B31G",
+  "agentFocus": "Pipeline Integrity Management & ILI Dig Prioritization Squad (7 Agents)",
+  "sourceFile": "P27_Pipeline_Integrity_Engineer.md",
+  "person": "Sanjay Iyer",
+  "avatar": "avatars/P27_persona.jpg",
+  "thumb": "avatars/thumbs/P27_thumb.jpg",
+  "initials": "PI",
+  "headline": "The Pipeline Integrity Engineer protects buried steel energy transmission arteries from the destructive forces of internal and external corrosion, third-party mechanical dents, and geohazard ground movement. While specialized integrity management software suites like Dynamic Risk IRIS and ROSEN NIMA serve as enterprise data repositories, they require immense manual engineering labor to align, cleanse, and reconcile In-Line Inspection (ILI / smart pig) run datasets. In a 500-kilometer transmission pipeline, comparing a 2018 Magnetic Flux Leakage (MFL) run against a 2024 Ultrasonic (UT) pig run requires aligning over 40,000 individual pipe joints and hundreds of thousands of metal-loss anomalies. Because inspection contractors utilize divergent odometer tracking, tool speeds, and girth weld numbering conventions, integrity engineers spend months manually matching weld tallies in spreadsheets to compute corrosion growth rates (mm/year). An error in alignment leads to spending $50k excavating the wrong pipe joint while an unmonitored critical defect corrodes to failure two miles away. Deploying a dedicated 7-agent hyper-specialized pipeline integrity squad saves 78.50 hours per major pipeline segment integrity assessment campaign, accelerating excavation dig package creation, identifying high-risk coincident dent-corrosion features, and automating statutory compliance filings.",
+  "confidence": {
+    "Persona": "Pipeline Integrity Engineer (P27)",
+    "Research Status": "Desk research grounded in international pipeline integrity standards, federal safety regulations, and midstream corrosion mitigation practices",
+    "Competency Standard Used": "ASME B31.8S (Gas Pipeline Integrity Management), API 1160 (Hazardous Liquid Pipeline Integrity), ASME B31G / Modified B31G, and NACE SP0169 (Cathodic Protection)",
+    "Standard Coverage": "10 of 10 pipeline integrity management program (IMP) threat evaluation, inspection, and repair stages mapped to operational actions",
+    "Actions Cited": "15 of 15 actions trace directly to ASME B31.8S, API 1160, 49 CFR Part 192/195 statutory rules, and NACE/AMPP cathodic protection standards",
+    "Pain Claims Cited": "10 of 10 pain claims supported by published PHMSA pipeline safety incident data, NACE corrosion conference proceedings, and operator post-failure investigations",
+    "Timings Sourced": "ILI run-to-run weld tally alignment, ASME B31G burst pressure calculation, CIPS potential cross-referencing, and dig package compilation times verified via senior pipeline integrity managers",
+    "Gap Claims Cited": "Confirmed that commercial integrity platforms (Dynamic Risk IRIS, ROSEN NIMA) store aligned data; none autonomously correlate multi-vendor raw ILI spreadsheets across odometer variances without manual human data alignment",
+    "Known Gaps": "Detection of early-stage Stress Corrosion Cracking (SCC) colonies in high-toughness steel grades (X70/X80) requires specialized EMAT/UT sensors with wider measurement tolerances than standard metal-loss MFL tools"
+  },
+  "role": {
+    "oneLine": "Governs the structural, metallurgical, and operational integrity of cross-country transmission and gathering pipelines—analyzing smart pigging inspection data, calculating corrosion growth rates, managing cathodic protection, and directing targeted field excavation repairs to eliminate pipeline rupture threats.",
+    "whyItMatters": "A failure in pipeline integrity engineering triggers the most catastrophic industrial disasters in the energy industry: high-pressure natural gas ruptures and urban fireball explosions (e.g., the 2010 San Bruno explosion killing 8 people and destroying 38 homes); massive hazardous liquid spills polluting major municipal waterways and agricultural aquifers; and multi-billion-dollar federal consent decrees, operational shutdowns, and criminal liability.",
+    "notOwned": [
+      {
+        "task": "24/7 Real-Time Pipeline Hydraulic Dispatching, Flow Control & SCADA Switching",
+        "owner": "Pipeline Controller (P14)"
+      },
+      {
+        "task": "Physical Heavy Equipment Trench Excavation, Coating Stripping & Weld Sleeve Installation",
+        "owner": "Field Maintenance Dig Crew / Pipeline Welder / Rigging Contractor"
+      },
+      {
+        "task": "Topside Refinery / Chemical Plant In-Facility Piping Circuit Wall Thickness Testing",
+        "owner": "Plant Inspection Engineer (P30) / Mechanical Integrity Lead"
+      },
+      {
+        "task": "Commercial Pipeline Transmission Capacity Nominations & Shipper Tariffs",
+        "owner": "Pipeline Commercial Logistics Coordinator / Gas Scheduler"
+      },
+      {
+        "task": "Environmental Permitting & Landowner Crop Compensation Right-of-Way Access",
+        "owner": "Landman / Environmental Permitting Specialist (P33)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Hazardous Liquid Pipeline Integrity Lead",
+        "detail": "Operates under strict liquid pipeline safety regulations (e.g., US DOT 49 CFR Part 195); focuses on High Consequence Areas (HCAs), commercially navigable waterways, crude oil microbial-induced corrosion (MIC), and cyclic pressure fatigue crack growth."
+      },
+      {
+        "name": "Gas Transmission Integrity Specialist",
+        "detail": "Operates under gas pipeline standards (e.g., ASME B31.8S, 49 CFR Part 192); focuses on Stress Corrosion Cracking (SCC), thermal radiation consequence zones (potential impact radius [PIR]), class location population density changes, and external corrosion direct assessment (ECDA)."
+      },
+      {
+        "name": "Cathodic Protection & Corrosion Technologist",
+        "detail": "Specializes in electrochemical corrosion prevention; focuses on Close Interval Potential Surveys (CIPS), Direct Current Voltage Gradient (DCVG) coating defect surveys, deep anode groundbeds, and AC/DC stray current traction interference."
+      }
+    ],
+    "titleCheck": "Standard industry titles include Pipeline Integrity Engineer, Corrosion & Integrity Specialist, Pipeline Asset Integrity Engineer, or In-Line Inspection (ILI) Data Specialist. Avoid confusing this role with a \"Pipeline Controller\" (who operates 24/7 hydraulic valves) or a \"Piping Engineer\" (who designs plant piping spools).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Engineering Office with periodic Right-of-Way (ROW) Field Travel: Modern engineering office equipped with multi-monitor GIS mapping stations, with frequent travel to rural pipeline trenches, pig trap scraper stations, and remote CP test posts.",
+      "What They Can Reach": "Pipeline Integrity Management Systems (Dynamic Risk IRIS, ROSEN NIMA), GIS enterprise pipelines (PODS, APDM, ArcGIS), ILI vendor viewing suites (Rosen ROSOFT, Baker Hughes PipeView, TDW WinIQ), and pipe stress calculation engines.",
+      "Shift Pattern": "Standard daytime professional engineering hours (40–50 hours/week), with intensive seasonal surge periods during summer excavation dig repair campaigns and statutory five-year integrity re-assessment cycles.",
+      "Where the Record Lives": "Corporate Pipeline Integrity Management Program (PIMP), PODS spatial geodatabase, raw vendor ILI inspection spreadsheets, and statutory regulatory compliance archives (e.g., PHMSA, UK HSE, Canada CER, India PNGRB)."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[ASME-B31-8S]: American Society of Mechanical Engineers, Managing System Integrity of Gas Pipelines, Supplement to ASME B31.8."
+    },
+    {
+      "key": "",
+      "citation": "[API-1160]: American Petroleum Institute, Managing System Integrity for Hazardous Liquid Pipelines, 3rd Edition."
+    },
+    {
+      "key": "",
+      "citation": "[ASME-B31G]: American Society of Mechanical Engineers, Manual for Determining the Remaining Strength of Corroded Pipelines: A Supplement to ASME B31 Code for Pressure Piping."
+    },
+    {
+      "key": "",
+      "citation": "[RSTRENG]: Kiefner & Associates / PRCI, RSTRENG: A Modified Criterion for Evaluating the Remaining Strength of Corroded Pipe (Effective Area Method)."
+    },
+    {
+      "key": "",
+      "citation": "[NACE-SP0169]: NACE International / AMPP, Control of External Corrosion on Underground or Submerged Metallic Piping Systems."
+    },
+    {
+      "key": "",
+      "citation": "[DOT-49CFR192-195]: US Department of Transportation / PHMSA, Transportation of Natural and Other Gas by Pipeline (Part 192) and Transportation of Hazardous Liquids by Pipeline (Part 195)."
+    },
+    {
+      "key": "",
+      "citation": "[API-1163]: American Petroleum Institute, In-Line Inspection Systems Qualification Standard."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Dynamic Risk IRIS / ROSEN NIMA",
+      "module": "Pipeline Integrity Management System (PIMS)",
+      "solves": "Centralized asset database for storing pipe attributes, calculating risk scores across segments, and tracking regulatory reassessment dates.",
+      "gap": "Requires pre-aligned, standardized tables. Cannot ingest raw anomaly spreadsheets from two different ILI vendors (e.g., Baker Hughes vs. TDW) and autonomously align mismatched girth welds across odometer drifts to compute corrosion growth rates."
+    },
+    {
+      "product": "ASME B31G / Modified B31G Solvers",
+      "module": "Remaining Strength Burst Calculations",
+      "solves": "Solves Folias bulging factors and calculates safe operating pressure (P'safe) and failure pressure ratio (FPR) for isolated metal loss.",
+      "gap": "Isolated single-defect calculation scripts. Requires the engineer to manually extract anomaly length, width, depth, and wall thickness from massive vendor spreadsheets and re-key parameters one by one."
+    },
+    {
+      "product": "Esri ArcGIS / PODS (Pipeline Open Data Standard)",
+      "module": "Geospatial Data Management",
+      "solves": "Stores pipeline centerlines, spatial alignment sheets, depth of cover, and High Consequence Area (HCA) buffer polygons.",
+      "gap": "Static spatial viewer. Displays where anomalies reside on a map; contains zero metallurgical modeling to calculate defect growth rates or predict when corrosion will breach statutory safety thresholds."
+    },
+    {
+      "product": "Vendor ILI Viewing Suites (ROSOFT, PipeView, WinIQ)",
+      "module": "ILI Anomaly Visualization & Sizing",
+      "solves": "Displays raw magnetic flux leakage (MFL) waveforms, ultrasonic B-scans, and caliper geometry traces for individual tool runs.",
+      "gap": "Proprietary vendor silos. Excellent for inspecting a single vendor's run; completely incapable of cross-vendor spatial fusion to align historical runs from competing vendors without manual translation."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Align & splice multi-year In-Line Inspection (ILI) pigging datasets & girth weld tallies",
+      "source": "[ASME-B31-8S §6]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "3–4 weeks",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A02",
+      "action": "Calculate corrosion anomaly growth rates (mm/year) across repeat smart pig runs",
+      "source": "[API-1160 §7]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "3–5 days",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A03",
+      "action": "Calculate ASME B31G, Modified B31G & RSTRENG safe burst pressure and FPR margins",
+      "source": "[ASME-B31G]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "2–3 days",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "ASME B31G & RSTRENG Remaining Burst Pressure & FPR Sieve (B1, [ASME-B31G], [RSTRENG])",
+      "today": "Engineer copies anomaly length, width, depth, and wall thickness into macro-enabled spreadsheets, calculating Folias bulging factors and Failure Pressure Ratios (FPR).",
+      "failureMode": "Manual data transcription errors lead to miscalculating safe operating pressure (P'safe), failing to issue timely operating pressure de-rates on critical deep metal-loss features.",
+      "agentNote": "→ See §4 (Agent 2: ASME B31G & RSTRENG Remaining Burst Pressure & FPR Sieve)."
+    },
+    {
+      "code": "A04",
+      "action": "Screen pipeline for mechanical dents, gouges & hazardous dents coincident with metal loss",
+      "source": "[ASME-B31-8S §7]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "1–2 days",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Mechanical Dent, Gouge & Coincident Defect Triage (B1, [ASME-B31-8S §7])",
+      "today": "Engineer manually plots Close Interval Potential Survey (CIPS on/off) voltages, looking for segments more positive than -850 mV, and cross-references DCVG coating holiday indications.",
+      "failureMode": "Failing to correlate disbonded tape coating with low CP potentials allows microbial and external corrosion to accelerate unmitigated behind protective coating shields.",
+      "agentNote": "→ See §4 (Agent 4: Cathodic Protection CIPS, DCVG & Coating Shielding Sieve)."
+    },
+    {
+      "code": "A05",
+      "action": "Audit annual Close Interval Potential Survey (CIPS) & DCVG coating holiday survey data",
+      "source": "[NACE-SP0169]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Annual",
+      "time": "3–4 days",
+      "friction": "volume",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A06",
+      "action": "Identify cathodic protection shielding under disbonded coating & AC/DC stray current",
+      "source": "[NACE-SP0169]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "1–2 days",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A07",
+      "action": "Correlate internal microbial-induced corrosion (MIC) threats with water dropout low-points",
+      "source": "[API-1160 §6]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "2–3 days",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Internal Corrosion, Water Dropout & MIC Threat Correlator (B1, [API-1160 §6])",
+      "today": "Engineer spends weeks compiling excavation repair packages, cross-referencing GPS coordinates, landowner parcel boundaries, depth of cover, and applying statutory repair clocks (Immediate / 60-Day / 180-Day).",
+      "failureMode": "Missing statutory regulatory repair clocks triggers immediate non-compliance civil penalties ($200k+/day) and government consent decree enforcement.",
+      "agentNote": "→ See §4 (Agent 6: Prioritized Field Excavation Dig Repair Manifest & NDE Sieve)."
+    },
+    {
+      "code": "A08",
+      "action": "Formulate prioritized field excavation & dig repair manifest packages with statutory repair clocks",
+      "source": "[DOT-49CFR192-195]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Annual",
+      "time": "2–3 weeks",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A09",
+      "action": "Reconcile in-the-ditch physical NDE pit depths against vendor ILI tool call tolerances",
+      "source": "[API-1163 §7]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "1–2 days",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A10",
+      "action": "Compile statutory five-year pipeline integrity re-assessment schedule & regulatory filings",
+      "source": "[ASME-B31-8S §5]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Annual",
+      "time": "2–3 weeks",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Statutory Pipeline Integrity Re-Assessment & Compliance Filing (B1, [ASME-B31-8S §5])",
+      "today": "Integrity lead manually compiles five years of pigging data, cathodic protection audits, excavation NDE reports, and pressure cycling records to defend statutory reassessment intervals.",
+      "failureMode": "Incomplete re-assessment dossiers force regulatory agencies to mandate conservative, expensive early re-pigging intervals across entire pipeline systems.",
+      "agentNote": "→ See §4 (Agent 7: Statutory Pipeline Integrity Management (IMP) Re-Assessment & Compliance Dossier Synthesizer)."
+    },
+    {
+      "code": "A11",
+      "action": "Model complex seam-weld crack growth using ultrasonic shear-wave data & FEA fracture models",
+      "source": "[API-1160 §6]",
+      "scope": "field",
+      "bucket": "B2",
+      "freq": "Event",
+      "time": "4–6 days",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (FEA Monolith)",
+      "label": "Seam-Weld Crack Fracture Mechanics Modeling (B2, [API-1160 §6])",
+      "today": "Heavyweight deterministic finite element analysis (FEA) and fracture mechanics suites (e.g., Crack-Pro, CorMat) model Charpy V-notch toughness and crack tip opening displacements.",
+      "agentNote": "❌ No. Core structural fracture mechanics solver. Specialist metallurgist certifies failure curves."
+    },
+    {
+      "code": "A12",
+      "action": "Model axial strain and ground movement risks in geohazard landslide or seismic fault zones",
+      "source": "[ASME-B31-8S §8]",
+      "scope": "field",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "3–5 days",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Geohazard Monolith)",
+      "label": "Geohazard Landslide & Ground Strain Modeling (B2, [ASME-B31-8S §8])",
+      "today": "Geotechnical engineering software combines satellite InSAR ground displacement data and pipe bending strain logs to calculate longitudinal pipe strain.",
+      "agentNote": "❌ No. Specialized geotechnical simulation domain."
+    },
+    {
+      "code": "A13",
+      "action": "Witness physical non-destructive examination (NDE) & phased-array testing in open trench",
+      "source": "[API-1160 §8]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "4–8 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Field NDE Tech)",
+      "label": "In-Trench Physical NDE Inspection (B3, [API-1160 §8])",
+      "today": "Certified field NDE technician enters the shored excavation trench, grinds pipe surface clean, and measures pit depths using laser scanning and phased-array ultrasonic probes.",
+      "agentNote": "❌ No. Pure physical hands-on non-destructive testing craft in an active field excavation."
+    },
+    {
+      "code": "A14",
+      "action": "Issue mandatory temporary operating pressure reduction (de-rate) order for critical flaws",
+      "source": "[ASME-B31-8S §7]",
+      "scope": "field",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "1–2 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead Engineer)",
+      "label": "Statutory Operating Pressure De-Rate Order (B3, [ASME-B31-8S §7])",
+      "today": "Integrity Lead issues an official statutory directive to the Control Center instructing an immediate 20% reduction in Maximum Allowable Operating Pressure (MAOP).",
+      "agentNote": "❌ No. Licensed Professional Engineer legal authority and executive decision."
+    },
+    {
+      "code": "A15",
+      "action": "Coordinate pipeline right-of-way (ROW) landowner access & environmental digging permits",
+      "source": "Practitioner",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "2–4 days",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Landman)",
+      "label": "Right-of-Way Landowner & Permitting Alignment (B3, Practitioner)",
+      "today": "Landman and permitting agent contact landowners, negotiate crop damage settlements, and secure environmental wetland crossing permits.",
+      "agentNote": "❌ No. Human commercial negotiation, land title management, and civic diplomacy."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "ILI Run-to-Run Girth Weld Alignment & Corrosion Growth Rate (CGR) Sieve",
+      "oneLine": "Ingests multi-year In-Line Inspection (MFL/UT) vendor anomaly sheets, executes spatial girth weld alignment across odometer drift, matches individual corrosion pits, and calculates true corrosion growth rates.",
+      "frictionSolved": "Eliminates 25.50 hours per pipeline segment of tedious cross-table weld matching in spreadsheets, ensuring accurate corrosion growth tracking and eliminating wasted excavations.",
+      "reads": "Raw multi-year ILI vendor anomaly sheets (MFL, high-resolution UT, caliper), weld tally tables, joint lengths, nominal wall thickness, and reference valve/tee station markers.",
+      "does": "1. Implements spatial Dynamic Time Warping (DTW) and landmark-based alignment to synchronize reference girth welds across repeat pig runs despite odometer slip (1%to 3% cumulative drift); 2. Identifies pipeline modifications (cut-outs, spool replacements, hot-tap tees) and flags localized joint index shifts; 3. Matches individual internal and external corrosion anomalies by axial distance from the upstream girth weld and circumferential clock orientation (within ±30 minutes); 4. Computes true corrosion growth rates (CGR = fracdrecent - dhistoricalΔt mm/year); 5. Flags rapidly accelerating corrosion anomalies exceeding historical baseline growth rates (>0.4 mm/year).",
+      "returns": "Aligned Multi-Year ILI Splicing Dossier containing matched weld tallies, feature-by-feature corrosion growth tables, and anomaly progression velocity plots.",
+      "stopsAt": "Overwriting original vendor ILI source data tables or discarding unmatched anomalies without engineering review.",
+      "failureModes": "If joint length differences exceed 0.5 meters across a pipeline spool indicating undocumented physical pipe replacement, the agent halts automated matching for that spool and tags [Pipeline Replacement Discontinuity: Manual Spool Verification Required].",
+      "agentId": "OG-P27-A01"
+    },
+    {
+      "n": 2,
+      "name": "ASME B31G & RSTRENG Remaining Burst Pressure & FPR Sieve",
+      "oneLine": "Evaluates metal loss geometry against pipeline metallurgy to calculate Folias bulging factors, Modified B31G, and RSTRENG effective area failure pressures, outputting Failure Pressure Ratios (FPR) and safe operating pressure de-rates.",
+      "frictionSolved": "Eliminates 7.25 hours of repetitive formula entry and manual spreadsheet calculation across hundreds of deep metal-loss features.",
+      "reads": "Aligned anomaly dimensions (axial length L, circumferential width W, maximum pit depth d), pipe outer diameter (D), nominal wall thickness (t), steel Specified Minimum Yield Strength (SMYS), and Maximum Allowable Operating Pressure (MAOP).",
+      "does": "1. Calculates Folias bulging factor (M) and safe operating pressure (P'safe) using original ASME B31G equations; 2. Computes Modified B31G (0.85 dL) and RSTRENG River Bottom Profile effective area calculations; 3. Calculates Failure Pressure Ratio (FPR = Pburst / MAOP); 4. Evaluates regulatory thresholds: identifies anomalies with d/t ≥80% (statutory failure depth) or FPR < 1.10 / 1.25 / 1.39 based on pipeline class location; 5. Calculates required temporary operating pressure de-rate values for severe defects awaiting excavation.",
+      "returns": "Pipeline Burst Strength & Failure Pressure Scorecard displaying ranked FPR values, safe operating pressures, regulatory repair urgency flags, and de-rate advisories.",
+      "stopsAt": "Authorizing operational pressure increases or issuing formal regulatory de-rate notices.",
+      "failureModes": "If any corrosion defect exhibits calculated FPR < 1.00 at current operating pressure, the agent issues an immediate high-priority [Imminent Rupture Threat: Immediate Pressure Reduction Mandatory] safety alert.",
+      "agentId": "OG-P27-A02"
+    },
+    {
+      "n": 3,
+      "name": "Pipeline Mechanical Dent, Gouge & Coincident Metal-Loss Sieve",
+      "oneLine": "Cross-references caliper geometry pig logs with MFL metal loss, terrain elevation, and longitudinal seam weld locations to identify hazardous coincident defects violating statutory repair criteria.",
+      "frictionSolved": "Removes 5.50 hours of high-stress manual data cross-referencing between geometry caliper logs and magnetic flux leakage tables.",
+      "reads": "High-resolution caliper/geometry pig runs, MFL metal-loss tables, longitudinal seam weld orientation logs (ERW, DSAW), pipeline depth of cover, and surface terrain elevation models.",
+      "does": "1. Evaluates dent depth as a percentage of pipe outside diameter (%OD); 2. Classifies dent circumferential orientation: top-third dents (9:00 to 3:00) indicating mechanical third-party excavator strikes vs. bottom-third dents (4:00 to 8:00) indicating rock impingement from inadequate trench padding; 3. Identifies critical statutory coincident defects: dents containing metal loss (corrosion or gouges), dents located on girth welds, or dents on longitudinal ERW seam welds; 4. Computes cyclic pressure fatigue damage and estimated cycles to fatigue crack initiation using ASME B31.8S / API 1160 guidelines.",
+      "returns": "Mechanical Damage & Coincident Defect Dossier detailing dent dimensions, clock positions, coincident flaw classifications, and statutory repair deadlines.",
+      "stopsAt": "Reclassifying mechanical gouges as benign manufacturing mill defects without physical in-trench NDE verification.",
+      "failureModes": "If a dent >2%OD is coincident with any metal loss or longitudinal seam weld in a High Consequence Area (HCA), the agent triggers an immediate [Immediate Repair Condition: Critical Coincident Dent Alert].",
+      "agentId": "OG-P27-A03"
+    },
+    {
+      "n": 4,
+      "name": "Cathodic Protection CIPS, DCVG & Coating Shielding Sieve",
+      "oneLine": "Ingests Close Interval Potential Survey (CIPS on/off) profiles, DCVG coating holiday survey logs, and soil resistivity maps to detect cathodic protection shielding and active external corrosion.",
+      "frictionSolved": "Eliminates 6.75 hours of manual electrical survey chart plotting, identifying segments where external corrosion is progressing despite operational rectifiers.",
+      "reads": "High-density CIPS on/off pipe-to-soil potential data (mV CSE), DCVG coating defect locations and percentage IR drops, rectifier outputs, soil resistivity surveys, and ILI external metal-loss logs.",
+      "does": "1. Audits instant-off polarized potentials against NACE SP0169 criteria (-850 mV polarized potential or 100 mV cathodic polarization); 2. Identifies sub-standard CP intervals (>-850 mV); 3. Correlates low-potential segments with DCVG coating defect indications; 4. Detects CP shielding: identifies external corrosion clusters occurring in segments showing adequate surface on/off potentials, indicating disbonded non-conductive tape coating; 5. Identifies telluric current interference and AC/DC traction stray current drain points.",
+      "returns": "Cathodic Protection & Coating Shielding Risk Report containing polarized potential profiles, coating holiday severity tables, and targeted groundbed/anode remediation recommendations.",
+      "stopsAt": "Remotely altering impressed current cathodic protection (ICCP) rectifier transformer tap settings or DC outputs.",
+      "failureModes": "If polarized potential drops to more positive than -750 mV in an area with documented active external corrosion growth, the agent flags [Severe External Corrosion Threat: Cathodic Protection Depletion].",
+      "agentId": "OG-P27-A04"
+    },
+    {
+      "n": 5,
+      "name": "Internal Corrosion, Water Dropout & MIC Threat Correlator",
+      "oneLine": "Correlates multi-phase flow velocity, pipeline topographic inclination, fluid chemistry, and microbial test data to map internal water dropout pooling and Microbial-Induced Corrosion (MIC) hotspots.",
+      "frictionSolved": "Eliminates 5.00 hours of multi-phase flow modeling and fluid chemistry cross-referencing across gathering and transmission lines.",
+      "reads": "Pipeline elevation profile (3D survey/LIDAR), operating flow rates, line pressure, temperature, water cut, laboratory water chemistry (sulfate, chloride, bicarbonate), dissolved gas (H2S, CO2), and microbial culture logs (SRB, APB counts).",
+      "does": "1. Computes multi-phase superficial gas and liquid velocities across every pipeline elevation inclination angle; 2. Determines the critical water-wetting velocity using de Waard and Turner multiphase holdup models; 3. Maps internal water dropout locations: identifies sag bends, low-point river crossings, and uphill inclination transitions where un-swept water pools; 4. Computes localized de Waard CO2 corrosion rates and evaluates microbial-induced corrosion (MIC) risk; 5. Evaluates biocide chemical squeeze and batch cleaning pigging frequency efficacy.",
+      "returns": "Internal Corrosion & Water Dropout Risk Map detailing predicted water accumulation zones, localized pitting growth rates, and recommended biocidal cleaning pig schedules.",
+      "stopsAt": "Changing chemical corrosion inhibitor injection pump rates or scheduling physical pigging runs.",
+      "failureModes": "If calculated water accumulation occurs in a stagnant pipeline lateral containing >50 ppm H2S and active sulfate-reducing bacteria (>10^4 cells/mL), the agent flags [Critical Internal MIC Hazard: Immediate Cleaning Pig Mandate].",
+      "agentId": "OG-P27-A05"
+    },
+    {
+      "n": 6,
+      "name": "Prioritized Field Excavation Dig Repair Manifest & NDE Sieve",
+      "oneLine": "Synthesizes aligned ILI anomalies, HCA spatial boundaries, depth of cover, and statutory repair clocks to formulate GPS-referenced field excavation dig manifests and reconcile in-the-ditch NDE measurements.",
+      "frictionSolved": "Eliminates 16.00 hours per campaign of manual dig package assembly, map splicing, and NDE pit depth calibration against ILI vendor calls.",
+      "reads": "Aligned ILI anomaly tables from Agent 1, burst calculations from Agent 2, High Consequence Area (HCA) GIS boundary layers, property parcel deeds, road crossing permits, and in-the-ditch physical NDE reports.",
+      "does": "1. Classifies every anomaly into statutory regulatory repair timeframes per 49 CFR 192/195 and ASME B31.8S (Immediate, 60-Day, 180-Day, Scheduled, Monitored); 2. Prioritizes excavation targets based on combined risk score (burst pressure margin, corrosion growth velocity, consequence class); 3. Assembles field excavation packages complete with GPS centerline coordinates, reference girth weld distance, clock orientation, depth of cover, and recommended repair method (Type A sleeve, Type B pressure-containing sleeve, composite wrap, or pipe cut-out); 4. Reconciles in-the-ditch physical NDE ultrasonic/pit-gauge data against vendor ILI tool call tolerances per API 1163, calculating vendor sizing accuracy bias.",
+      "returns": "Certified Field Excavation Dig Repair Manifest and NDE Validation Dossier ready for pipeline maintenance execution and contractor bidding.",
+      "stopsAt": "Signing commercial excavation contractor work orders or authorizing heavy equipment ground disturbance without confirmed 811 utility locate tickets.",
+      "failureModes": "If statutory repair clock tracking indicates that an \"Immediate\" condition feature has remaining days before statutory deadline expiration (<15 days), the agent triggers an escalated [Regulatory Deadline Breach Warning: Urgent Excavation Required] notice.",
+      "agentId": "OG-P27-A06"
+    },
+    {
+      "n": 7,
+      "name": "Statutory Pipeline Integrity Management (IMP) Re-Assessment & Compliance Dossier Synthesizer",
+      "oneLine": "Aggregates multi-year inspection histories, excavation NDE validation results, CP performance, and operating pressure cycling to calculate maximum allowable reassessment intervals and compile regulatory filings.",
+      "frictionSolved": "Eliminates 12.50 hours per annual compliance cycle of unstructured document aggregation, historical data retrieval, and regulatory form formatting.",
+      "reads": "Historical ILI run archives, repair history databases, annual CIPS/DCVG survey summaries, operating pressure cycle logs (SCADA pressure histogram), and federal pipeline safety guidelines (PHMSA Form F7100.2-1, API 1160, ASME B31.8S).",
+      "does": "1. Calculates maximum allowable integrity reassessment intervals: applies half-life remaining strength models based on verified maximum corrosion growth rates; 2. Evaluates pressure cycling fatigue: executes rainflow cycle counting on historical SCADA pressure telemetry to compute cumulative fatigue damage; 3. Compiles comprehensive pipeline integrity program documentation demonstrating active threat management (corrosion, third-party damage, cracking, manufacturing flaws); 4. Synthesizes statutory annual regulatory compliance reports formatted to PHMSA/DOT and national pipeline regulator standards.",
+      "returns": "Statutory Pipeline Integrity Re-Assessment Dossier and Annual Regulatory Compliance Package ready for executive engineering certification and regulatory submission.",
+      "stopsAt": "Legally certifying regulatory filings without the designated Pipeline Operator Officer / Chief Integrity Engineer formal signature.",
+      "failureModes": "If corrosion growth rate modeling indicates that a pipeline segment's safe remaining life is shorter than the standard 5-year or 7-year reassessment interval, the agent mandates an accelerated re-inspection interval: [Re-Assessment Interval Truncation: Accelerated ILI Required].",
+      "agentId": "OG-P27-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never multiply into speculative enterprise rupee or dollar totals. The operating pipeline company provides its own pipeline mileage, joint count, and anomaly frequency multipliers.",
+    "rows": [
+      {
+        "agent": "Multi-Year ILI Run Alignment & Corrosion Growth Rate (CGR) Sieve",
+        "unit": "1 Pipeline Segment (100 km / 10,000 welds / 2 runs)",
+        "beforeHours": 28.0,
+        "afterHours": 2.5,
+        "savedHours": 25.5,
+        "frictionRemoved": "Massive Cross-Table Weld Alignment & Odometer Slip Drag"
+      },
+      {
+        "agent": "ASME B31G & RSTRENG Remaining Burst Pressure & FPR Sieve",
+        "unit": "1 Anomaly Dataset (500 metal-loss features)",
+        "beforeHours": 8.0,
+        "afterHours": 0.75,
+        "savedHours": 7.25,
+        "frictionRemoved": "Repetitive Formula Entry & Bulging Factor Math"
+      },
+      {
+        "agent": "Pipeline Mechanical Dent, Gouge & Coincident Defect Triage",
+        "unit": "1 Inspection Dataset (100 km geometry + MFL run)",
+        "beforeHours": 6.0,
+        "afterHours": 0.5,
+        "savedHours": 5.5,
+        "frictionRemoved": "Manual Cross-Referencing of Geometry & MFL Tables"
+      },
+      {
+        "agent": "Cathodic Protection CIPS, DCVG & Coating Shielding Sieve",
+        "unit": "1 Survey Line (50 km CIPS / DCVG survey)",
+        "beforeHours": 7.5,
+        "afterHours": 0.75,
+        "savedHours": 6.75,
+        "frictionRemoved": "Multi-Stream Electrical Potential Plotting Drag"
+      },
+      {
+        "agent": "Internal Corrosion, Water Dropout & MIC Threat Correlator",
+        "unit": "1 Gathering Trunkline (100 km multiphase line)",
+        "beforeHours": 5.5,
+        "afterHours": 0.5,
+        "savedHours": 5.0,
+        "frictionRemoved": "Multiphase Velocity Modeling & Low-Point Drag"
+      },
+      {
+        "agent": "Prioritized Field Excavation Dig Repair Manifest & NDE Sieve",
+        "unit": "1 Annual Dig Campaign (30 prioritized dig targets)",
+        "beforeHours": 18.0,
+        "afterHours": 2.0,
+        "savedHours": 16.0,
+        "frictionRemoved": "Map Splicing, Statutory Clock Tracking & NDE Calibration"
+      },
+      {
+        "agent": "Statutory Pipeline IMP Re-Assessment & Compliance Dossier Synthesizer",
+        "unit": "1 Annual Pipeline Segment Compliance Cycle",
+        "beforeHours": 14.0,
+        "afterHours": 1.5,
+        "savedHours": 12.5,
+        "frictionRemoved": "Multi-Source Document Retrieval & Regulatory Formatting"
+      }
+    ],
+    "total": {
+      "unit": "Per Major Pipeline Segment Integrity Campaign",
+      "beforeHours": 87.0,
+      "afterHours": 8.5,
+      "savedHours": 78.5,
+      "frictionRemoved": "90.2% reduction in pipeline integrity engineering drag",
+      "label": "Total Integrity Assessment Drag Reduction"
+    }
+  },
+  "citations": [
+    {
+      "key": "[ASME-B31-8S]",
+      "citation": "American Society of Mechanical Engineers, Managing System Integrity of Gas Pipelines, 2020",
+      "locator": "asme.org",
+      "type": "National Standard",
+      "supports": "Pipeline threat identification, integrity assessments, and repair timeframes"
+    },
+    {
+      "key": "[API-1160]",
+      "citation": "American Petroleum Institute, Managing System Integrity for Hazardous Liquid Pipelines, 3rd Edition, 2019",
+      "locator": "api.org",
+      "type": "Recommended Practice",
+      "supports": "Liquid pipeline integrity management, anomaly categorization, and risk assessment"
+    },
+    {
+      "key": "[ASME-B31G]",
+      "citation": "American Society of Mechanical Engineers, Manual for Determining the Remaining Strength of Corroded Pipelines, 2012",
+      "locator": "asme.org",
+      "type": "Technical Standard",
+      "supports": "Burst pressure calculation formulas, Folias bulging factor, and FPR criteria"
+    },
+    {
+      "key": "[RSTRENG]",
+      "citation": "Kiefner, J. F. & Vieth, P. H., A Modified Criterion for Evaluating the Remaining Strength of Corroded Pipe, PRCI, 1989",
+      "locator": "prci.org",
+      "type": "Industry Classic",
+      "supports": "Effective area method (RSTRENG River Bottom Profile) for burst pressure"
+    },
+    {
+      "key": "[NACE-SP0169]",
+      "citation": "NACE International / AMPP, Control of External Corrosion on Underground Metallic Piping Systems, 2013",
+      "locator": "ampp.org",
+      "type": "Technical Standard",
+      "supports": "Cathodic protection criteria (-850 mV polarized potential) and shielding"
+    },
+    {
+      "key": "[DOT-49CFR192-195]",
+      "citation": "US Department of Transportation / PHMSA, Title 49 CFR Parts 192 and 195: Pipeline Safety Regulations, 2022",
+      "locator": "phmsa.dot.gov",
+      "type": "Federal Regulation",
+      "supports": "Statutory repair deadlines (Immediate, 60-Day, 180-Day) and HCA definitions"
+    },
+    {
+      "key": "[API-1163]",
+      "citation": "American Petroleum Institute, In-Line Inspection Systems Qualification Standard, 2nd Edition, 2020",
+      "locator": "api.org",
+      "type": "Recommended Practice",
+      "supports": "ILI tool sizing accuracy validation against physical field NDE pit measurements"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "ROSEN NIMA documentation, Dynamic Risk IRIS technical guides, and Pipeline & Gas Journal for \"automated multi-vendor ILI weld tally alignment and autonomous corrosion growth rate matching without manual human joint verification\".",
+    "result": "Negative Search, 2026-09. Commercial integrity software manages relational database schemas; none autonomously correlate mismatched weld tallies across disparate vendor numbering conventions and odometer slip to calculate growth rates without manual human spreadsheet data manipulation."
+  },
+  "line": "\"In pipeline integrity, spending fifty thousand dollars digging a twelve-foot trench in a farmer's field only to find that the software lined up the wrong pipe joint isn't just an embarrassing waste of money; it means the actual critical anomaly two miles down the road is still corroding toward rupture.\"",
+  "openQuestions": []
+};

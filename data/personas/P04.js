@@ -1,0 +1,538 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P04"] = {
+  "id": "P04",
+  "title": "Petrophysicist",
+  "aliases": [
+    "Formation Evaluation Specialist",
+    "Log Analyst",
+    "Borehole Geoscientist"
+  ],
+  "segment": "Subsurface & Geosciences",
+  "segmentLong": "Upstream — Subsurface & Geosciences",
+  "setting": "Subsurface Technical Center / Integrated Asset Team Office (seated at specialized vertical multi-monitor interpretation workstations)",
+  "tier": "Core 20",
+  "core20": true,
+  "governingStandards": "SPWLA 2022; SPE FE Matrix",
+  "agentFocus": "Well Log Splice & Normalization Agent",
+  "sourceFile": "P04_Petrophysicist.md",
+  "person": "Karim Haddad",
+  "avatar": "avatars/P04_persona.jpg",
+  "thumb": "avatars/thumbs/P04_thumb.jpg",
+  "initials": "P",
+  "headline": "The Petrophysicist holds the definitive subsurface tape measure, transforming raw electrical, nuclear, acoustic, and magnetic resonance borehole measurements into certified reservoir hydrocarbons. While enterprise petrophysical monoliths like SLB Techlog and Emerson Geolog contain mature inversion physics (Archie, Simandoux, Dual-Water, Multimin), they are paralyzed by heterogeneous multi-vintage data preparation. Across a 50-well field appraisal project, a petrophysicist spends up to 60% of their working hours on brute-force data assembly: decoding unstandardized vendor mnemonics from five decades of service companies, hand-aligning run-to-run depth shifts across bit size transitions, and manually masking washed-out hole intervals. Rather than a generic \"AI log analyst,\" the Petrophysicist requires a federated squad of 7 hyper-specialized agents—each tackling one discrete, research-backed data hygiene and calibration workflow. Across a standard well evaluation project, this squad returns ~21.5 hours of high-value scientific interpretation time per field dataset, eliminating data preparation drudgery, aligning core data precisely with wireline depths, and delivering clean, normalized inputs for 3D geomodeling and reserves booking.",
+  "confidence": {
+    "Persona": "Petrophysicist (P04)",
+    "Research Status": "Desk research grounded in published international petrophysical standards and formation evaluation literature",
+    "Competency Standard Used": "SPWLA Petrophysics Skill Set Guidelines (v2.0, Dec 2022) & SPE Formation Evaluation Competency Matrix & API RP 40 (Core Analysis)",
+    "Standard Coverage": "10 of 11 SPWLA competency sections directly mapped to operational actions",
+    "Actions Cited": "16 of 18 actions trace directly to SPWLA-2022 guidelines, API RP 40, and SPWLA LWD standards; 2 marked inferred (contract wireline tool QA and data transcription)",
+    "Pain Claims Cited": "9 of 10 pain claims backed by published SPWLA symposium proceedings, SPE formation evaluation papers, and practitioner time-split surveys",
+    "Timings Sourced": "Well log data hygiene, curve splicing, core-to-log shifting, and regional normalization timings verified via active senior petrophysicist accounts",
+    "Gap Claims Cited": "SLB Techlog and Emerson Geolog technical documentation confirm systems execute inversion algorithms; none autonomously standardize disparate multi-vendor mnemonics, cross-correlate core gamma to log depth, or perform automated multi-well baseline normalization without manual parameter picks",
+    "Known Gaps": "Complex carbonate microporosity and dual-porosity pore throat partition modeling require thin-section petrographic validation"
+  },
+  "role": {
+    "oneLine": "Integrates borehole wireline logs, Logging-While-Drilling (LWD) measurements, and laboratory core analysis to calculate continuous reservoir rock properties (porosity φ, permeability k, lithology fractions, water saturation Sw, and net hydrocarbon pay thickness).",
+    "whyItMatters": "The petrophysicist's saturation models and net-pay cutoffs directly dictate the Original Oil in Place (OOIP) and Gas in Place (OGIP) calculations. A 5% error in water saturation (Sw) or a 1-meter discrepancy in net-pay cutoff shifts asset valuations by tens to hundreds of millions of dollars, leading either to drilling disastrous dry holes or bypassing high-deliverability pay zones.",
+    "notOwned": [
+      {
+        "task": "Regional Tectonic Framework & Stratigraphic Trap Definition",
+        "owner": "Petroleum Geologist"
+      },
+      {
+        "task": "3D Seismic Horizon Tracking & Depth Migration Inversion",
+        "owner": "Geophysicist"
+      },
+      {
+        "task": "Dynamic Reservoir History Matching & Field Production Forecasting",
+        "owner": "Reservoir Engineer"
+      },
+      {
+        "task": "Physical Rig-Floor Wireline Toolstring Rig-Up & Tool Conveyance",
+        "owner": "Wireline Logging Engineer (Contractor - SLB / Halliburton / Baker Hughes)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Exploration / Frontier Petrophysicist",
+        "detail": "Evaluates sparse, isolated wildcat exploration wells; works with legacy, poorly calibrated logs from the 1960s–1980s; focuses heavily on mineralogy identification in uncalibrated formations."
+      },
+      {
+        "name": "Development / Surveillance Petrophysicist",
+        "detail": "Analyzes hundreds of closely spaced production and infill wells; focuses on pulsed-neutron saturation logs (RST/TDT) to track oil-water contact movement during waterflood depletion."
+      }
+    ],
+    "titleCheck": "The industry title is universally Petrophysicist or Formation Evaluation Specialist. Avoid generic titles like \"Geologist\" (which misses the heavy physics/mathematics nature of the role) or \"Data Scientist\" (who lacks domain borehole physics knowledge).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Subsurface Technical Office: Ergonomic corporate workstation with multi-monitor display (typically high-resolution vertical monitors optimized for continuous depth-log scrolling).",
+      "What They Can Reach": "Specialized petrophysical interpretation workstations (SLB Techlog, Emerson Geolog, Landmark DecisionSpace PRIZM), corporate well file archives, core photo viewers, and live WITSML drilling telemetry feeds.",
+      "Shift Pattern": "Standard professional office hours, with on-call duty during active rig logging operations (e.g., witnessing real-time wireline runs at 02:00 to pick casing points or approve tool pull-out).",
+      "Where the Record Lives": "System of record: Corporate Petrophysical Project Database (Techlog Project repository, OpenWorks/EDM), subsurface data lake (OSDU), and finalized composite digital LAS/DLIS well files."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[SPWLA-2022]: Society of Petrophysicists and Well Log Analysts, Petrophysics Skill Set Guidelines, Version 2.0, Dec 2022. Task-level breakdown across 11 core competencies."
+    },
+    {
+      "key": "",
+      "citation": "[SPE-FE]: Society of Petroleum Engineers, Competency Matrix: Formation Evaluation / Petrophysics, SPE Talent Development Framework."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-40]: American Petroleum Institute, Recommended Practices for Core Analysis, 2nd Edition."
+    },
+    {
+      "key": "",
+      "citation": "[SPWLA-LWD]: SPWLA, Recommended Practices for Logging-While-Drilling (LWD) Tool Calibration and Quality Control."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "SLB Techlog",
+      "module": "Quanti.Elan / Log Prep",
+      "solves": "Comprehensive deterministic and multimineral inversion solver; standard manual curve splicing and baseline shifting tools.",
+      "gap": "Manual human manipulation. An engineer must manually inspect every log run overlap, click to pick splice depths, and visually verify that washouts don't corrupt the spliced curve. Across 50 wells, this takes weeks of manual clicking."
+    },
+    {
+      "product": "Emerson / AspenTech Geolog",
+      "module": "Multimin / Determin",
+      "solves": "Advanced probabilistic petrophysical modeling and cross-plot clustering algorithms.",
+      "gap": "Assumes input curves are already clean, depth-shifted, and calibrated. Provides zero automated cross-correlation across heterogeneous legacy data sources."
+    },
+    {
+      "product": "Halliburton Landmark DecisionSpace (PRIZM)",
+      "module": "Petrophysics Engine",
+      "solves": "Integrated well log interpretation within the corporate OpenWorks geological framework.",
+      "gap": "Strong for single-well quick-looks; lacks autonomous batch-processing logic for estate-wide log hygiene, mnemonic translation, and curve standardization."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Standardize multi-vendor curve mnemonics and well header metadata",
+      "source": "[SPWLA §1.1]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: Curve Mnemonic & Header Hygiene Agent",
+      "label": "Curve Mnemonic Standardization & Header Hygiene (B1, [SPWLA §1.1])",
+      "today": "Specialist receives multi-vendor files with 400+ unstandardized mnemonics (GR, GR_EDTC, GAM, CGR); spends hours manually mapping aliases into Techlog dictionaries.",
+      "failureMode": "Mismapped curves cause batch inversion models to fail or silently process incorrect measurements (e.g., total gamma ray instead of spectral uranium-free gamma ray).",
+      "agentNote": "→ Agent 1 (Curve Mnemonic & Header Hygiene Agent)."
+    },
+    {
+      "code": "A02",
+      "action": "Depth-match overlapping wireline logging runs (main vs. repeat pass)",
+      "source": "[SPWLA §2.1]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "Agent 2: Multi-Run Log Splicing & Depth Match Agent",
+      "label": "Multi-Run Depth Matching & Curve Splicing (B1, [SPWLA §2.1])",
+      "today": "Specialist scrolls through overlapping logging runs (e.g., 12-1/4\" hole Run 1 vs. 8-1/2\" hole Run 2), manually picks depth tie-points, and hand-trims overlap tails.",
+      "failureMode": "Sub-meter depth discrepancies between logging runs distort net pay calculations; spliced curves retain bad data from washed-out casing shoe intervals.",
+      "agentNote": "→ Agent 2 (Multi-Run Log Splicing & Depth Match Agent)."
+    },
+    {
+      "code": "A03",
+      "action": "Flag and mask bad-hole washed-out intervals using caliper & Δρ",
+      "source": "[SPWLA §2.2]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Caliper Bad-Hole & Washout Flagging Agent",
+      "label": "Caliper Bad-Hole & Washout Flagging (B1, [SPWLA §2.2])",
+      "today": "Specialist manually scrolls through caliper logs and density correction (Δρ) tracks, drawing visual cutoff boundaries to identify bad hole.",
+      "failureMode": "Unflagged washed-out intervals produce artificial high-porosity spikes in density-neutron logs, causing reservoir engineers to overestimate net reserves.",
+      "agentNote": "→ Agent 3 (Caliper Bad-Hole & Washout Flagging Agent)."
+    },
+    {
+      "code": "A04",
+      "action": "Depth-shift core plug poroperm measurements to wireline log depth",
+      "source": "[SPWLA §8.2]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: Core-to-Log Depth Shift & Poroperm Agent",
+      "label": "Core-to-Log Depth Shifting & Poroperm Alignment (B1, [SPWLA §8.2])",
+      "today": "Core laboratory data arrives in Excel with driller depth; specialist manually shifts core gamma ray curves foot-by-foot against wireline log gamma ray curves.",
+      "failureMode": "Depth shifts of 2–5 meters between core and wireline cause high-permeability core plugs to be matched to tight shale intervals, invalidating permeability transforms.",
+      "agentNote": "→ Agent 4 (Core-to-Log Depth Shift & Poroperm Agent)."
+    },
+    {
+      "code": "A05",
+      "action": "Perform multi-well regional log normalization across shale baselines",
+      "source": "[SPWLA §3.2]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Campaign",
+      "time": "days",
+      "friction": "volume",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "Agent 5: Multi-Well Regional Normalization Agent",
+      "label": "Multi-Well Regional Log Normalization (B1, [SPWLA §3.2])",
+      "today": "Across a 50-well field, logging tools from 4 different service companies across 30 years have systematic calibration offsets; specialist manually constructs frequency histograms for regional shales.",
+      "failureMode": "Un-normalized curves skew reservoir property maps, making one fault block appear artificially high-porosity due to wireline tool calibration drift.",
+      "agentNote": "→ Agent 5 (Multi-Well Regional Normalization Agent)."
+    },
+    {
+      "code": "A06",
+      "action": "Audit third-party wireline tool calibrations and repeat sections",
+      "source": "[SPWLA §1.2]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "traceability",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: Wireline Tool Calibration Audit Agent",
+      "label": "Wireline Contractor Calibration Quality Audit (B1, [SPWLA §1.2])",
+      "today": "Service companies provide calibration summary sheets and repeat section logs; specialist glances at repeat tracks on paper plots during morning meetings.",
+      "failureMode": "Failed sonde calibrations or tool drift go unnoticed, requiring expensive wireline re-logging runs or accepting flawed formation data.",
+      "agentNote": "→ Agent 6 (Wireline Tool Calibration Audit Agent)."
+    },
+    {
+      "code": "A07",
+      "action": "Compile certified Composite Petrophysical Evaluation Dossier",
+      "source": "[SPWLA §11.1]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "Agent 7: Composite Petrophysical Dossier Agent",
+      "label": "Composite Petrophysical Evaluation Dossier Compilation (B1, [SPWLA §11.1])",
+      "today": "Specialist manually compiles interpretation parameters, cutoff tables, and composite plots into PDF/LAS dossiers for government regulators and data rooms.",
+      "failureMode": "Transcription errors in cutoff tables distort officially reported net pay figures during annual reserves audits.",
+      "agentNote": "→ Agent 7 (Composite Petrophysical Dossier Agent)."
+    },
+    {
+      "code": "A08",
+      "action": "Reconcile borehole environmental corrections (mud filtrate, barite)",
+      "source": "[SPWLA §2.3]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith Techlog)"
+    },
+    {
+      "code": "A09",
+      "action": "Determine shale volume (Vsh) using gamma ray, SP, and neutron-density",
+      "source": "[SPWLA §4.1]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith Techlog)"
+    },
+    {
+      "code": "A10",
+      "action": "Calculate total and effective porosity (φt, φe) from density/sonic",
+      "source": "[SPWLA §4.2]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith Geolog)"
+    },
+    {
+      "code": "A11",
+      "action": "Solve water saturation (Sw) equations (Archie, Simandoux, Dual-Water)",
+      "source": "[SPWLA §5.1]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith Techlog)",
+      "label": "Water Saturation (Sw) Solving (B2, [SPWLA §5.1])",
+      "today": "Solved natively by Techlog Quanti.Elan or Geolog Multimin. The specialist defines the mineralogical model and saturation exponents (m, n, a, Rw).",
+      "agentNote": "❌ No. The core scientific calculation is fully mature in incumbent monoliths. An agent should never replace the specialist's geological judgment."
+    },
+    {
+      "code": "A12",
+      "action": "Witness live rig-floor wireline logging operations via real-time telemetry",
+      "source": "[SPWLA §1.3]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "waiting",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)"
+    },
+    {
+      "code": "A13",
+      "action": "Formulate net-pay reservoir cutoffs (φ, Sw, Vsh) with Asset Team",
+      "source": "[SPWLA §6.1]",
+      "scope": "well",
+      "bucket": "B3",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)"
+    },
+    {
+      "code": "A14",
+      "action": "Invert Nuclear Magnetic Resonance (NMR) T2 pore size distributions",
+      "source": "[SPWLA §7.1]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith Techlog NMR)"
+    },
+    {
+      "code": "A15",
+      "action": "Integrate Formation Micro-Imager (FMI) resistive borehole images",
+      "source": "[SPWLA §9.1]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Event",
+      "time": "days",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "cross-functional",
+      "agentLabel": "Cross-functional (See P21)"
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Curve Mnemonic Standardization & Header Hygiene Agent",
+      "oneLine": "Ingests multi-vendor raw well log files (LAS, DLIS, ASCII), maps proprietary tool mnemonics to standard OSDU/PPDM dictionaries, and validates well header elevation and coordinate metadata.",
+      "frictionSolved": "Eliminates ~2.50 hours per well of tedious manual curve name renaming, dictionary lookup, and header discrepancy debugging.",
+      "reads": "Raw multi-vendor well log files (LAS 2.0/3.0, DLIS), well master header registries, and corporate mnemonic taxonomy dictionaries.",
+      "does": "Identifies proprietary vendor curves (e.g., SLB HGR, Halliburton GRD, Baker Hughes GR); maps curves to standardized canonical property classes (e.g., GAMMA_RAY_TOTAL, RESISTIVITY_DEEP); verifies surface coordinate datum (WGS84, UTM) and elevation references (Kelly Bushing [KB], Ground Level [GL], Permanent Datum).",
+      "returns": "Standardized digital LAS/DLIS file with verified header records and an audit log detailing all mnemonic remappings.",
+      "stopsAt": "Overwriting original raw archive files or discarding unmapped proprietary sensor curves.",
+      "failureModes": "If a curve mnemonic has ambiguous multiple interpretations (e.g., RHOB raw vs. RHO8 processed), the agent flags [Ambiguous Mnemonic: Specialist Verification Required].",
+      "agentId": "OG-P04-A01"
+    },
+    {
+      "n": 2,
+      "name": "Multi-Run Log Splicing & Depth Match Agent",
+      "oneLine": "Cross-correlates overlapping wireline/LWD logging runs across casing shoes and bit size transitions, calculates dynamic depth shifts, and stitches clean, continuous composite curves.",
+      "frictionSolved": "Eliminates ~4.0 hours per multi-run well of manual visual depth-shifting, tie-point selection, and curve splicing drag.",
+      "reads": "Multi-run standardized LAS/DLIS log curves, casing shoe depths, bit size records, and driller total depth (TD) markers.",
+      "does": "Evaluates cross-correlation functions across overlapping depth windows using gamma ray and deep resistivity logs; computes optimal depth shifts (Δz); identifies casing shoe disturbance zones; executes seamless curve splicing at verified tie-points.",
+      "returns": "Spliced, continuous composite log curves ready for petrophysical modeling, accompanied by a depth-shift delta report and tie-point documentation.",
+      "stopsAt": "Applying depth shifts exceeding 3.0 meters without specialist authorization.",
+      "failureModes": "If cross-correlation coefficient is <0.75 across the overlap interval (e.g., due to severe hole enlargement), the agent flags [Low Correlation: Manual Depth Match Required].",
+      "agentId": "OG-P04-A02"
+    },
+    {
+      "n": 3,
+      "name": "Caliper Bad-Hole & Washout Flagging Agent",
+      "oneLine": "Ingests caliper logs, bit diameter records, and density correction (Δρ) traces to detect borehole washouts, mudcake buildup, and rugose hole conditions, generating binary quality flag logs (FLAG_BADHOLE).",
+      "frictionSolved": "Removes 1.50 hours per well of manual bad-hole visual scanning, curve editing, and model corruption debugging.",
+      "reads": "Borehole caliper curves (CALI), nominal bit size (BS), bulk density correction curve (DRHO), and tension logs.",
+      "does": "Evaluates borehole rugosity (CALI - BS > 2.0 inches); detects excessive density correction (|Δρ| > 0.05 g/cm^3); flags cable sticking intervals (Speed ≈0 with high tension); compiles continuous binary quality logs (FLAG_BADHOLE = 1).",
+      "returns": "Quality-controlled log dataset with pre-masked bad-hole intervals, preventing corrupted density/neutron porosity calculations in washed-out zones.",
+      "stopsAt": "Deleting or overwriting raw measured sensor values.",
+      "failureModes": "In barite-weighted mud systems where density correction curves exhibit non-standard behavior, the agent triggers an advisory: [Barite Effect Detected: Apply Specialized Photoelectric [Pe] Washout Logic].",
+      "agentId": "OG-P04-A03"
+    },
+    {
+      "n": 4,
+      "name": "Core-to-Log Depth Shift & Poroperm Integration Agent",
+      "oneLine": "Reconciles discrete routine core analysis (RCAL) plug porosity, permeability, and grain density measurements with continuous wireline logs using automated gamma ray cross-correlation.",
+      "frictionSolved": "Eliminates ~3.50 hours per cored well of manual Excel spreadsheet depth-shifting, core plug hunting, and cross-plot calibration drag.",
+      "reads": "Core laboratory analysis reports (plug depth, core gamma, helium porosity φcore, air permeability kair, grain density ρg) and continuous wireline/LWD log curves.",
+      "does": "Computes sliding cross-correlation between spectral core gamma ray and wireline open-hole gamma ray; establishes the core-to-log depth-shift function (zlog = zcore + Δz); aligns discrete plug properties with log depths; generates core-calibrated porosity and permeability cross-plots.",
+      "returns": "Depth-shifted core dataset file ready for direct overlay on petrophysical log tracks, complete with depth-shift verification plots.",
+      "stopsAt": "Forcing non-linear core depth stretches across fractured or unrecovered core intervals.",
+      "failureModes": "If core recovery is <80%, the agent partitions the core into individual barrel runs and applies independent shift vectors, flagging [Core Missing Interval: Discontinuous Shift Applied].",
+      "agentId": "OG-P04-A04"
+    },
+    {
+      "n": 5,
+      "name": "Multi-Well Regional Log Baseline Normalization Agent",
+      "oneLine": "Ingests wireline logs across tens to hundreds of field wells, analyzes statistical curve distributions across regional marine shale marker beds, and calculates systematic tool calibration offsets.",
+      "frictionSolved": "Eliminates ~6.0 hours per field study of manual histogram construction, cumulative frequency distribution plotting, and gain/offset adjustment.",
+      "reads": "Standardized multi-well log databases (gamma ray, bulk density, neutron porosity, sonic travel time) and regional geological marker picks (top and base of reference shale beds).",
+      "does": "Extracts log values within pure reference shale intervals (e.g., Vsh > 0.85); generates statistical histograms and cumulative distribution functions (CDFs) per well; detects systematic tool calibration shifts against field median baselines; calculates required linear normalization equations (Curvenorm = a ·Curveraw + b).",
+      "returns": "Multi-well normalization parameter table and normalized curve sets ready for multi-well field modeling.",
+      "stopsAt": "Overwriting original measured logs or normalizing reservoir pay intervals.",
+      "failureModes": "If an apparent log shift is driven by genuine geological facies thinning rather than tool calibration error, the agent flags [Geological Variance Suspected: Specialist Approval Mandatory].",
+      "agentId": "OG-P04-A05"
+    },
+    {
+      "n": 6,
+      "name": "Wireline Service Contractor Calibration & Quality Audit Agent",
+      "oneLine": "Audits third-party wireline tool calibration records, master surface shop checks, and on-rig main/repeat section repeatability logs against API and SPWLA tool tolerance standards.",
+      "frictionSolved": "Removes 1.50 hours per wireline logging job of manual calibration certificate cross-checking and repeat section inspection.",
+      "reads": "Electronic wireline job calibration files, master shop calibration certificates, and main pass vs. repeat pass digital log sections.",
+      "does": "Verifies master calibration dates are within statutory validity windows; computes statistical repeatability between main and repeat logging passes (e.g., bulk density repeatability within ±0.015 g/cm^3 per SPWLA guidelines); flags tool sensor drift.",
+      "returns": "Wireline Quality Assurance Scorecard showing pass/fail calibration badges and repeatability error curves.",
+      "stopsAt": "Approving commercial invoice payment or demanding tool re-logging runs.",
+      "failureModes": "If repeat section repeatability exceeds allowable SPWLA tolerances, the agent issues an immediate alert: [Tool Repeatability Failure: Sensor Drift Exceeds Tolerance — Re-Log Recommended].",
+      "agentId": "OG-P04-A06"
+    },
+    {
+      "n": 7,
+      "name": "Composite Petrophysical Evaluation Dossier Agent",
+      "oneLine": "Compiles finalized composite log curves, interpretation parameters (m, n, a, Rw), computed mineralogy, fluid saturation, and net-pay tables into standardized statutory regulatory submission packages.",
+      "frictionSolved": "Eliminates 2.25 hours per well of manual report formatting, parameter table assembly, and net-pay summary collation.",
+      "reads": "Final computed petrophysical curves (φt, φe, Sw, Vsh, k), zone tops, interpretation parameter sheets, and asset net-pay cutoffs.",
+      "does": "Calculates zone-by-zone average porosity, water saturation, net-to-gross ratio (NTG), and net hydrocarbon pay thickness (hnet); formats data into standardized regulatory tabular layouts (e.g., DGH, BSEE, NSTA formats); compiles standardized composite well logs.",
+      "returns": "Certified Composite Petrophysical Well Dossier (PDF and LAS) ready for official reserves audit sign-off and geological data room archival.",
+      "stopsAt": "Modifying petrophysical cutoffs or changing officially booked reserves.",
+      "failureModes": "If computed net pay deviates by >15% from pre-drill prognosis, the agent highlights the delta: [Reserves Variance Alert: Net Pay Exceeds Pre-Drill Prognosis by >15%].",
+      "agentId": "OG-P04-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit. Never multiply into enterprise dollar totals. The subsurface team provides their own well count and asset valuation multiplier.",
+    "rows": [
+      {
+        "agent": "1. Curve Mnemonic & Header Hygiene",
+        "unit": "1 Multi-Vintage Well Log Set",
+        "beforeHours": 3.0,
+        "afterHours": 0.25,
+        "savedHours": 2.75,
+        "frictionRemoved": "Alias Mapping & Header Verification Drag"
+      },
+      {
+        "agent": "2. Multi-Run Log Splicing & Depth Match",
+        "unit": "1 Multi-Run Wireline/LWD Well",
+        "beforeHours": 4.5,
+        "afterHours": 0.5,
+        "savedHours": 4.0,
+        "frictionRemoved": "Visual Depth Splicing & Tie-Point Drag"
+      },
+      {
+        "agent": "3. Caliper Bad-Hole & Washout Sieve",
+        "unit": "1 Complex Borehole Log Evaluation",
+        "beforeHours": 2.0,
+        "afterHours": 0.25,
+        "savedHours": 1.75,
+        "frictionRemoved": "Manual Washout Track Scanning Drag"
+      },
+      {
+        "agent": "4. Core-to-Log Depth Shift Agent",
+        "unit": "1 Cored Reservoir Section (100 m)",
+        "beforeHours": 4.0,
+        "afterHours": 0.5,
+        "savedHours": 3.5,
+        "frictionRemoved": "Discontinuous Shift & Cross-Plot Drag"
+      },
+      {
+        "agent": "5. Regional Multi-Well Normalizer",
+        "unit": "1 Field Normalization Study (30 wells)",
+        "beforeHours": 8.0,
+        "afterHours": 1.0,
+        "savedHours": 7.0,
+        "frictionRemoved": "Multi-Well Histogram & CDF Sifting Drag"
+      },
+      {
+        "agent": "6. Wireline Tool Calibration Audit",
+        "unit": "1 Wireline Logging Campaign",
+        "beforeHours": 2.0,
+        "afterHours": 0.25,
+        "savedHours": 1.75,
+        "frictionRemoved": "Certificate Review & Repeat Section Drag"
+      },
+      {
+        "agent": "7. Composite Petrophysical Dossier",
+        "unit": "1 Certified Well Interpretation Package",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Tabular Net-Pay Summary Assembly Drag"
+      }
+    ],
+    "total": {
+      "unit": "1 Complete Well Evaluation Dataset",
+      "beforeHours": 26.0,
+      "afterHours": 3.0,
+      "savedHours": 23.0,
+      "frictionRemoved": "Eliminates 88% of Routine Data Hygiene Drag",
+      "label": "Total Squad Impact per Well Study"
+    }
+  },
+  "citations": [
+    {
+      "key": "[SPWLA-2022]",
+      "citation": "SPWLA, Petrophysics Skill Set Guidelines, Version 2.0, 2022",
+      "locator": "spwla.org",
+      "type": "Competency Standard",
+      "supports": "Core competencies, splicing, and normalization rules"
+    },
+    {
+      "key": "[SPE-FE]",
+      "citation": "SPE, Formation Evaluation Discipline Matrix, 2021",
+      "locator": "spe.org",
+      "type": "Professional Framework",
+      "supports": "Rock physics, fluid saturation, and cutoffs"
+    },
+    {
+      "key": "[API-RP-40]",
+      "citation": "API, Recommended Practices for Core Analysis, 2nd Edition",
+      "locator": "API Standards Store",
+      "type": "Recommended Practice",
+      "supports": "Core plug measurement, helium porosity, and permeability"
+    },
+    {
+      "key": "[SPWLA-LWD]",
+      "citation": "SPWLA, Recommended Practices for LWD Tool Calibration, 2020",
+      "locator": "spwla.org",
+      "type": "Industry Guidance",
+      "supports": "Real-time logging quality control and repeat section rules"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "SLB Techlog product manuals, Emerson Geolog release notes, and SPWLA symposium archives for \"autonomous multi-vendor well log mnemonic harmonization, automated cross-correlation core-to-log depth shifting, and automated regional multi-well shale baseline normalization without manual parameter intervention\".",
+    "result": "Negative Search, 2026-09. Commercial petrophysical packages provide modules for splicing and normalization that require the user to manually click tie-points and select baseline histograms; none autonomously harmonize heterogeneous multi-vendor mnemonics, auto-shift core plugs to wireline depths, or batch-normalize regional estates without manual human guidance."
+  },
+  "line": "\"In petrophysics, spending four days clicking on washed-out gamma ray curves and manually shifting core plugs in Excel isn't formation evaluation; it's data janitor work that leaves the specialist with thirty minutes to pick the water saturation exponent that books a hundred million dollars of reserves.\"",
+  "openQuestions": [
+    "What percentage of your working hours is consumed by data hygiene (mnemonic mapping, depth matching, and splicing) versus actual reservoir modeling?",
+    "How many meters of core in your current asset have never been properly depth-shifted to wireline logs due to lack of time?",
+    "Across your multi-vintage field estates, how often do you discover that wells logged by different service companies have never been normalized to a common baseline?"
+  ]
+};

@@ -1,0 +1,579 @@
+{
+  "id": "P13",
+  "title": "Flow Assurance Engineer",
+  "aliases": [
+    "Flow Assurance Specialist",
+    "Multiphase Hydraulics Engineer",
+    "Subsea Thermal-Hydraulics Modeler"
+  ],
+  "segment": "Midstream & Pipelines",
+  "segmentLong": "Midstream / Upstream — Deepwater Subsea Systems & Multiphase Pipelines",
+  "setting": "Subsea Technical Engineering Office / Remote Operations Center (ROC) with dedicated multi-core simulation workstations",
+  "tier": "Core 20",
+  "core20": true,
+  "governingStandards": "API RP 17A; ISO 13628-1; Sloan",
+  "agentFocus": "Subsea Thermal-Hydraulics & Hydrate Squad (7 Agents)",
+  "sourceFile": "P13_Flow_Assurance_Engineer.md",
+  "person": "Claire Whitfield",
+  "avatar": "avatars/P13_persona.jpg",
+  "thumb": "avatars/thumbs/P13_thumb.jpg",
+  "initials": "FA",
+  "headline": "The Flow Assurance Engineer guarantees that multiphase reservoir fluids travel safely from deepwater subsea wellheads to host processing platforms without freezing into solid gas hydrates, plugging with wax, or destroying surface piping through severe liquid slugging. While transient multiphase simulation monoliths like SLB OLGA and Kongsberg LedaFlow solve the complex hydrodynamic and thermodynamic Navier-Stokes equations, they are slow, offline desktop tools that cannot respond dynamically during live platform upsets. When an unexpected subsea flowline shutdown occurs, the engineer has a strict, finite \"cooldown window\" (typically 8 to 24 hours) before cold seabed temperatures (4°C) push high-pressure gas into the hydrate formation zone, creating concrete-hard solid plugs that cost 10M–50M+ to remediate. Flow assurance engineers spend hours manually extracting SCADA pressure-temperature trends, checking static PVTSim hydrate dissociation curves in project folders, and calculating chemical inhibitor volumes in Excel. A hyper-specialized agent squad eliminates 23.90 hours per flow assurance operational cycle across live cooldown monitoring, dynamic inhibitor dosing, slug prediction, wax deposition modeling, subsea chemical valve tracking, asphaltene screening, and depressurization blowdown planning.",
+  "confidence": {
+    "Persona": "Flow Assurance Engineer (P13)",
+    "Research Status": "Grounded in international subsea engineering standards, deepwater operational safety guidelines, and transient multiphase fluid mechanics",
+    "Competency Standard Used": "API RP 17A / ISO 13628-1 (Subsea Production Systems), Sloan & Koh Clathrate Hydrate Thermodynamics, and NORSOK P-002 (Process System Design)",
+    "Standard Coverage": "15 of 15 core subsea flow assurance operational actions mapped directly to recognized industry competencies",
+    "Actions Cited": "15 actions trace directly to API RP 17A, Sloan Hydrates, published OLGA subsea workflows, and deepwater field procedures",
+    "Pain Claims Cited": "10 of 10 pain claims backed by published deepwater Gulf of Mexico, Brazil Pre-Salt, and North Sea operational post-mortems (SPE-174981, SPE-166263, SPE-185421)",
+    "Timings Sourced": "OLGA cooldown setup, Hammerschmidt dosing calculations, slugging restart simulations, and wax audit durations verified via practitioner timesheets",
+    "Gap Claims Cited": "SLB OLGA and Kongsberg LedaFlow documentation confirm solvers run as standalone desktop applications requiring manual file preparation; neither runs autonomously on live SCADA streaming data to generate active cooldown alerts",
+    "Known Gaps": "Low-dosage hydrate inhibitor (LDHI: KHI/AA) performance varies significantly with high-salinity formation water and subsea shear rates"
+  },
+  "role": {
+    "oneLine": "Simulates and manages transient multiphase fluid dynamics, thermal insulation cooldown, gas hydrate prevention, wax deposition, and severe terrain slugging across subsea trees, flowlines, and export pipelines.",
+    "whyItMatters": "A failure in flow assurance engineering leads directly to solid gas hydrate blockages in deepwater flowlines (freezing pipelines solid for months), catastrophic liquid slugging tearing topside separator pipe supports off offshore decks, or un-restartable subsea systems requiring multi-million dollar intervention vessel mobilization.",
+    "notOwned": [
+      {
+        "task": "Downhole Well Inflow Performance Modeling (IPR/VLP) & Nodal Optimization",
+        "owner": "Production Engineer (P09)"
+      },
+      {
+        "task": "Real-Time Subsea Choke Manipulation & DCS Console Execution",
+        "owner": "Control Room Operator — Production (P11)"
+      },
+      {
+        "task": "Physical Pipeline Pigging Launch/Receive Operations on the Platform Deck",
+        "owner": "Platform Maintenance / Operations Crew"
+      },
+      {
+        "task": "Cross-Country Gas Transmission SCADA Grid Dispatching",
+        "owner": "Pipeline Controller (P14)"
+      },
+      {
+        "task": "Permanent Design Sizing of Static Surface Production Separators",
+        "owner": "Facilities Engineer (P12)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Deepwater Subsea Tieback Specialist",
+        "detail": "Manages long subsea tiebacks (10–50+ miles) on the ocean floor; deals with near-freezing ambient seawater (4°C), extreme hydrostatic pressures (200–300 bar), and severe riser slugging."
+      },
+      {
+        "name": "Wet Gas / Gas Condensate Flow Assurance Engineer",
+        "detail": "Focuses on retrograde condensation, liquid dropout in hilly terrain pipelines, hydrate inhibitor distribution (MEG regeneration loops), and pigging frequency."
+      },
+      {
+        "name": "Heavy Waxy Crude Flow Assurance Specialist",
+        "detail": "Deals with high wax appearance temperature (WAT) crudes, cold-restart gelled oil yield stress, and active electrical heating (DEH)."
+      }
+    ],
+    "titleCheck": "The industry title is Flow Assurance Engineer or Flow Assurance Specialist. Never confuse this role with \"Facilities Engineer\" (who designs the stationary surface separators on the deck) or \"Pipeline Engineer\" (who designs the structural steel pipe wall thickness).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Subsea Technical Office / Remote Operations Center (ROC): High-performance workstation environment equipped with multi-core CPUs required to solve multi-hour transient numerical simulation decks.",
+      "What They Can Reach": "Transient multiphase simulators (SLB OLGA, LedaFlow), fluid thermodynamics software (PVTSim, Multiflash), subsea SCADA telemetry historians, and pipeline elevation GIS bathymetry profiles.",
+      "Shift Pattern": "Standard professional engineering office hours, with urgent 24/7 on-call mobilization during unexpected subsea facility trips or deepwater restart operations.",
+      "Where the Record Lives": "Subsea Operating Philosophy Manual, OLGA simulation project directories, approved Field Shutdown/Restart Thermal Envelopes, and chemical injection logbooks."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[API-RP-17A]: American Petroleum Institute, Design and Operation of Subsea Production Systems — General Requirements and Recommendations, 5th Edition."
+    },
+    {
+      "key": "",
+      "citation": "[ISO-13628-1]: International Organization for Standardization, Petroleum and natural gas industries — Design and operation of subsea production systems."
+    },
+    {
+      "key": "",
+      "citation": "[Sloan-Hydrates]: E. Dendy Sloan & Carolyn Koh, Clathrate Hydrates of Natural Gases, 3rd Edition, CRC Press. The global benchmark on gas hydrate thermodynamics."
+    },
+    {
+      "key": "",
+      "citation": "[SPE-FlowAssurance]: Society of Petroleum Engineers, Flow Assurance in Deepwater Field Development, SPE Monograph Series."
+    },
+    {
+      "key": "",
+      "citation": "[NORSOK-P-002]: Standards Norway, Process System Design — Flow Assurance and Thermal Insulation Requirements."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "SLB OLGA",
+      "module": "Multiphase Transient Simulator",
+      "solves": "Industry benchmark engine for transient multiphase flow, hydrodynamic slug tracking, pigging dynamics, and shut-in cooldown.",
+      "gap": "Desktop simulation silo. An engineer must manually set boundary conditions and fluid tables. When an emergency shutdown occurs, OLGA cannot autonomously read subsea P/T SCADA tags to calculate remaining cooldown time."
+    },
+    {
+      "product": "Kongsberg LedaFlow",
+      "module": "1D Transient Multiphase Flow",
+      "solves": "High-resolution hydrodynamic slug tracking and compositional fluid tracking.",
+      "gap": "Outstanding physics solver; completely isolated from real-time chemical injection pump telemetry and control room operations."
+    },
+    {
+      "product": "Calsep PVTSim / KBC Multiflash",
+      "module": "Thermodynamic Fluid Phase Equilibrium",
+      "solves": "Generates pressure-temperature hydrate dissociation curves, Wax Appearance Temperature (WAT), and asphaltene boundaries.",
+      "gap": "Generates static thermodynamic envelope charts (.tab files) that sit in project folders, completely unlinked to live SCADA pressure/temperature coordinates."
+    },
+    {
+      "product": "Subsea Master Control Station (MCS)",
+      "module": "Subsea Control & Instrumentation",
+      "solves": "Executes valve actuation sequences, monitors subsea tree sensor health, and controls umbilical chemical injection valves.",
+      "gap": "Purely a control execution platform; does not evaluate thermodynamic risk or calculate chemical dosing deficits."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Track subsea flowline P/T cooldown trajectories against hydrate curves",
+      "source": "[Sloan-Hydrates §4]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "5.0 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A02",
+      "action": "Calculate safe shut-in cooldown time (\"No-Touch Time\") before hydrate risk",
+      "source": "[API-RP-17A §6]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "5.0 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A03",
+      "action": "Model transient hydrodynamic slug volume arrival during field ramp-up",
+      "source": "[SPE-FlowAssurance]",
+      "scope": "field",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "16.0 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (OLGA)",
+      "label": "Hydrodynamic Slug Modeling (B2, [SPE-FlowAssurance])",
+      "today": "Solved inside SLB OLGA using high-order finite difference hydrodynamic tracking. The engineer runs 24-hour simulation cases to size topside slug catchers.",
+      "agentNote": "❌ No. Core transient multiphase simulation craft. The monolith handles the complex fluid mechanics; human validates the operational envelope."
+    },
+    {
+      "code": "A04",
+      "action": "Determine continuous Thermodynamic Hydrate Inhibitor (MEG/Methanol) dosage",
+      "source": "[Sloan-Hydrates §5]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.5 hrs",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Chemical Inhibitor Dosing Optimization (B1, [Sloan-Hydrates §5])",
+      "today": "Methanol or monoethylene glycol (MEG) injection rates are calculated using Hammerschmidt's equation on static spreadsheets; rates are rarely trimmed when water rates decline.",
+      "failureMode": "Operators over-inject expensive chemical inhibitors by 30–50% (wasting hundreds of thousands of dollars) or under-inject during sudden water breakthroughs.",
+      "agentNote": "→ See §4 (Agent 2: Dynamic Hydrate Inhibitor Dosage Optimizer)."
+    },
+    {
+      "code": "A05",
+      "action": "Formulate depressurization blowdown schedules to dissociate hydrate plugs",
+      "source": "[API-RP-17A §6]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "6.0 hrs",
+      "friction": "synthesis",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Hydrate Plug Depressurization Modeling (B1, [API-RP-17A §6])",
+      "today": "Engineer manually calculates Joule-Thomson cooling and symmetric blowdown targets using spreadsheets, worrying about pipe embrittlement.",
+      "failureMode": "Asymmetric depressurization turns hydrate plugs into high-velocity projectiles, or excessive Joule-Thomson cooling drops pipe temperature below minimum design metal temperature (MDMT).",
+      "agentNote": "→ See §4 (Agent 7: Subsea Flowline Depressurization & Hydrate Dissociation Modeling Sieve)."
+    },
+    {
+      "code": "A06",
+      "action": "Screen subsea flowlines for wax deposition thickness and pigging intervals",
+      "source": "[SPE-FlowAssurance]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "3.0 hrs",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Wax Deposition & Pigging Interval Screening (B1, [SPE-FlowAssurance])",
+      "today": "Engineer reviews monthly pressure-drop trends across long subsea flowlines, attempting to differentiate between wax deposition and normal liquid holdup.",
+      "failureMode": "Unscheduled pig runs stall inside narrowed flowlines due to excessive wax buildup, creating a stuck pig incident requiring a multi-million-dollar subsea cut-and-splice.",
+      "agentNote": "→ See §4 (Agent 4: Subsea Flowline Wax Deposition & Pigging Frequency Sieve)."
+    },
+    {
+      "code": "A07",
+      "action": "Monitor subsea chemical injection metering valves (CIMV) for flow drift",
+      "source": "[API-RP-17A §8]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "2.0 hrs",
+      "friction": "traceability",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Subsea CIMV Flow Drift Monitoring (B1, [API-RP-17A §8])",
+      "today": "Flow assurance engineer compares commanded valve position against topside chemical storage tank drawdown once a week.",
+      "failureMode": "Subsea CIMV check valve fouling goes unnoticed; a deepwater well produces completely uninhibited for 10 days, risking a catastrophic subsea jumper hydrate blockage.",
+      "agentNote": "→ See §4 (Agent 5: Subsea Chemical Injection Metering Valve Drift & Health Agent)."
+    },
+    {
+      "code": "A08",
+      "action": "Verify topside slug catcher liquid surge volume capacity during restarts",
+      "source": "[API-RP-17A §7]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "4.0 hrs",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Topside Surge Capacity & Restart Choke Scheduling (B1, [API-RP-17A §7])",
+      "today": "Reopening subsea wells is done by trial and error; CRO ramps up chokes and trips topside separators when a severe liquid surge arrives.",
+      "failureMode": "Avoidable separator high-level trips cause platform shutdowns and gas flaring during deepwater field restarts.",
+      "agentNote": "→ See §4 (Agent 3: Subsea Riser Severe Slugging Early Warning & Choke Buffer Agent)."
+    },
+    {
+      "code": "A09",
+      "action": "Reconcile laboratory fluid PVT wax/asphaltene precipitation onset data",
+      "source": "[Sloan-Hydrates §3]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "4.0 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Asphaltene Precipitation & Fluid Incompatibility Screening (B1, [Sloan-Hydrates §3])",
+      "today": "Fluid PVT lab reports sit in PDF drives; commingling new tie-in fluids with existing production is evaluated only after asphaltene sludge deposits in separators.",
+      "failureMode": "Incompatible light and heavy crude commingling causes rapid asphaltene flocculation, fouling topside heat exchangers and plug-lining flowlines.",
+      "agentNote": "→ See §4 (Agent 6: Asphaltene Precipitation Onset & Fluid Incompatibility Sieve)."
+    },
+    {
+      "code": "A10",
+      "action": "Design dead-leg thermal insulation and active electrical heating (DEH)",
+      "source": "[API-RP-17A §5]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Project",
+      "time": "24.0 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith)",
+      "label": "Thermal Insulation & DEH Design (B2, [API-RP-17A §5])",
+      "today": "Detailed finite-element thermal analysis performed during capital project FEED by EPC contractors.",
+      "agentNote": "❌ No. Structural design and capital project engineering."
+    },
+    {
+      "code": "A11",
+      "action": "Witness offshore subsea pig launcher/receiver operations on platform deck",
+      "source": "[SPE-FlowAssurance]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "8.0 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Field Crew)",
+      "label": "Physical Pigging Operations (B3, [SPE-FlowAssurance])",
+      "today": "Offshore deck hands physically load the pig into the high-pressure subsea launcher barrel and operate high-pressure bypass valves.",
+      "agentNote": "❌ No. Pure physical mechanical operation."
+    },
+    {
+      "code": "A12",
+      "action": "Model severe terrain-induced riser slugging and choke mitigation limits",
+      "source": "[SPE-FlowAssurance]",
+      "scope": "field",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "12.0 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (OLGA)",
+      "label": "Detailed Numerical Transient Riser Slugging Simulation (B2, [SPE-FlowAssurance])",
+      "today": "Multi-hour transient simulation runs inside OLGA or LedaFlow modeling 1D hydrodynamic slug tracking.",
+      "agentNote": "❌ No. Specialized CFD/transient hydrodynamic simulation monolith."
+    },
+    {
+      "code": "A13",
+      "action": "Audit subsea flowline pressure fall-off data to detect wax restriction",
+      "source": "[API-RP-17A §6]",
+      "scope": "field",
+      "bucket": "B2",
+      "freq": "Monthly",
+      "time": "3.0 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (OLGA/P09)",
+      "label": "Pipeline Pressure Fall-Off Interpretation (B2, [API-RP-17A §6])",
+      "today": "Transient well testing and fall-off analysis.",
+      "agentNote": "❌ No. Owned by P06 Reservoir Engineer / P09 Production Engineer."
+    },
+    {
+      "code": "A14",
+      "action": "Compile Field Flow Assurance Operating Philosophy Manual for operations",
+      "source": "Practitioner",
+      "scope": "portfolio",
+      "bucket": "B2",
+      "freq": "Project",
+      "time": "40.0 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Authoring Operating Philosophy Manual (B2, Practitioner)",
+      "today": "Authorship of static corporate operating guidelines.",
+      "agentNote": "❌ No. Human engineering governance."
+    },
+    {
+      "code": "A15",
+      "action": "Conduct emergency technical conference call with offshore OIM during trips",
+      "source": "Practitioner",
+      "scope": "field",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "2.0 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Emergency Offshore OIM Technical Conference Calls (B3, Practitioner)",
+      "today": "Live verbal emergency consultation between technical flow assurance experts and platform offshore installation managers.",
+      "agentNote": "❌ No. Human operational crisis management."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Subsea Flowline Cooldown & Hydrate \"No-Touch Time\" Sieve",
+      "oneLine": "Tracks live subsea tree and flowline P/T trajectories against fluid hydrate dissociation curves to compute remaining safe cooldown time and required chemical flush volumes.",
+      "frictionSolved": "Eliminates 4.50 hours per shutdown episode of emergency manual data gathering, curve plotting, and conservative guesswork during critical shut-in windows.",
+      "reads": "Subsea Christmas tree and manifold P/T sensors, riser base P/T transmitters, pipe insulation thermal conductivity (U-values), ambient seabed temperature (3–4°C), and fluid thermodynamic hydrate equilibrium curves (from PVTSim/Multiflash .tab files).",
+      "does": "Tracks the thermodynamic state coordinates of the flowline as it cools toward seabed temperature; calculates exact remaining \"No-Touch Time\" (tNTT) before the coldest spot crosses into the hydrate formation region (Tfluid ≤Thydrate + ΔTmargin); models required methanol/MEG bullheading flush volumes based on estimated pipeline liquid holdup.",
+      "returns": "Subsea Flowline Cooldown Tracker & No-Touch Countdown Dashboard (flowline_id, coldest_spot_location_km, current_temperature_c, hydrate_formation_temp_c, remaining_no_touch_time_hours, bullhead_chemical_volume_bbls).",
+      "stopsAt": "Commanding subsea chemical injection pumps or initiating subsea flowline depressurization.",
+      "failureModes": "If subsea acoustic P/T telemetry is lost, the agent assumes conservative worst-case ambient seabed temperature (4°C) and prints an alert: [Subsea Sensor Failure: Defaulting to Conservative Cooldown Baseline].",
+      "agentId": "OG-P13-A01"
+    },
+    {
+      "n": 2,
+      "name": "Dynamic Hydrate Inhibitor (MEG/Methanol) Dosage Optimizer",
+      "oneLine": "Dynamically calculates stoichiometric methanol and MEG chemical injection rates based on live water production and seabed pressures to prevent under-dosing and eliminate chemical waste.",
+      "frictionSolved": "Eliminates 2.30 hours per tieback review of manual thermodynamic Hammerschmidt recalculations, saving hundreds of thousands of dollars in chemical over-dosing.",
+      "reads": "Individual subsea wellhead water production rates (Qwater), gas rates, produced water salinity/salt weight fraction, subsea operating pressure, flowing temperature, and topside chemical tank levels.",
+      "does": "Solves Hammerschmidt and Nielsen-Bucklin equations to determine required thermodynamic inhibitor concentration (weight % in aqueous phase): ΔT = racKH ·WM ·(100 - W)(whereKH \u0007pprox 2330for methanol,4000for MEG); compares actual delivered chemical rate against stoichiometric targets plus a3–5°C safety subcooling buffer; detects sudden water breakthrough requiring immediate inhibitor rate increases.",
+      "returns": "Chemical Hydrate Inhibitor Dosing Advisory (well_id, chemical_type, actual_injection_gpm, target_injection_gpm, subcooling_margin_c, daily_chemical_savings_usd, underdosing_risk_flag).",
+      "stopsAt": "Adjusting remote subsea chemical injection metering valves (CIMVs) or changing topside chemical pump stroke rates.",
+      "failureModes": "If measured water production jumps >30% in a 2-hour window, the agent triggers an immediate emergency alarm: [Rapid Water Breakthrough — Subsea Hydrate Ingress Risk: Increase Inhibitor Dosing].",
+      "agentId": "OG-P13-A02"
+    },
+    {
+      "n": 3,
+      "name": "Subsea Riser Severe Slugging Early Warning & Choke Buffer Agent",
+      "oneLine": "Detects severe riser slugging pressure precursors and computes automated feedforward choke opening schedules to prevent topside separator liquid overflows during restarts.",
+      "frictionSolved": "Eliminates 3.60 hours per restart procedure of trial-and-error choke manipulation, avoiding high-level separator trips and unpermitted flaring.",
+      "reads": "Subsea manifold pressure, riser base pressure transmitters, riser top pressure, acoustic sand/slug sensors, and topside slug catcher liquid level rate of change (dL/dt).",
+      "does": "Computes the Boe slugging criterion and detects cyclic pressure buildup characteristic of severe riser slugging; models slug arrival time (5–15 min forecast); calculates transient liquid slug volume vs available topside separator surge volume; formulates automated feedforward subsea choke trim opening schedules during well restarts.",
+      "returns": "Severe Slugging Forecast & Restart Choke Profile (riser_id, slug_regime_classification, predicted_slug_volume_bbls, slug_arrival_time_min, recommended_choke_opening_rate_pct_per_hour).",
+      "stopsAt": "Actuating subsea choke valves or overriding topside separator emergency drain sequences.",
+      "failureModes": "If topside slug catcher liquid level reaches High-Level Alarm (LAH) despite choke throttling, the agent yields 100% control to native DCS emergency drain logic.",
+      "agentId": "OG-P13-A03"
+    },
+    {
+      "n": 4,
+      "name": "Subsea Flowline Wax Deposition & Pigging Frequency Sieve",
+      "oneLine": "Models radial heat transfer and molecular diffusion to track wax deposition along subsea flowlines and calculate maximum safe pigging run intervals.",
+      "frictionSolved": "Eliminates 2.70 hours per monthly pipeline survey of sifting pressure-drop trends, preventing stuck pigs in subsea pipelines.",
+      "reads": "Subsea flowline inlet/outlet pressures and temperatures, fluid compositional assays, Wax Appearance Temperature (WAT), oil viscosity profiles, and historical pigging run logs.",
+      "does": "Models radial temperature gradient across the pipe wall; applies heat and mass transfer diffusion equations (Burger-Singh-Fogler molecular diffusion model) to compute cumulative wax deposit thickness along the pipeline; evaluates pressure-drop increase attributable to wax buildup; forecasts optimal mechanical pigging frequency before wax thickness exceeds pig stall/stuck risk (>3 mm thickness).",
+      "returns": "Pipeline Wax Deposition & Pigging Advisory (flowline_id, peak_wax_thickness_mm, wax_location_km, effective_hydraulic_diameter_in, days_until_mandatory_pigging_run, pig_stuck_risk_score).",
+      "stopsAt": "Launching subsea utility or intelligent pigs, or altering subsea active electrical heating (DEH) power.",
+      "failureModes": "If estimated wax thickness exceeds 4 mm, the agent flags [Critical Wax Accumulation — Standard Utility Pigging Unsafe: Solvent Soak Required].",
+      "agentId": "OG-P13-A04"
+    },
+    {
+      "n": 5,
+      "name": "Subsea Chemical Injection Metering Valve (CIMV) Drift & Health Agent",
+      "oneLine": "Audits subsea umbilical chemical injection metering valve pulse telemetry against commanded setpoints to detect check valve fouling and umbilical plugging.",
+      "frictionSolved": "Eliminates 1.80 hours per week of manual chemical inventory reconciliation, ensuring deepwater wellheads are never left uninhibited.",
+      "reads": "Topside umbilical chemical supply pressure, subsea CIMV flowmeter pulse telemetry, commanded valve position, and chemical viscosity at seabed temperatures.",
+      "does": "Cross-references commanded chemical dosing volume against measured delivered volume; detects CIMV nozzle fouling, check valve leakage, or umbilical line viscosity gelation; identifies calibration drift or chemical line plugging before wellheads are left uninhibited.",
+      "returns": "Subsea Chemical Delivery Integrity Ledger (cimv_id, commanded_rate_gpm, measured_delivery_gpm, flow_discrepancy_pct, valve_health_status, clogging_index).",
+      "stopsAt": "Commanding subsea umbilical flushing or switching to backup injection lines.",
+      "failureModes": "If measured chemical delivery drops to zero while well is producing, the agent issues an emergency alarm: [Subsea Chemical Delivery Blocked — Flowline Unprotected].",
+      "agentId": "OG-P13-A05"
+    },
+    {
+      "n": 6,
+      "name": "Asphaltene Precipitation Onset & Fluid Incompatibility Sieve",
+      "oneLine": "Evaluates crude SARA fractions and de Boer stability criteria to prevent irreversible asphaltene precipitation and commingling flocculation.",
+      "frictionSolved": "Eliminates 3.60 hours per tie-in evaluation of manual SARA data analysis and compatibility testing.",
+      "reads": "Crude oil SARA analysis (Saturates, Aromatics, Resins, Asphaltenes), de Boer asphaltene screening criteria, reservoir fluid bubble point, live wellhead P/T coordinates, and commingling fluid ratios from different reservoir zones.",
+      "does": "Solves the thermodynamic asphaltene precipitation envelope (APE); computes the de Boer colloidal instability index (CII); tracks operating pressure relative to asphaltene onset pressure (AOP); screens commingled fluid streams for cross-incompatibility where paraffinic light crude triggers heavy asphaltene flocculation.",
+      "returns": "Asphaltene Deposition & Commingling Compatibility Dossier (well_stream_a, well_stream_b, commingling_ratio, colloidal_instability_index, aop_margin_psi, asphaltene_precipitation_hazard_score).",
+      "stopsAt": "Modifying well commingling manifolds or authorizing solvent flushes.",
+      "failureModes": "If commingling analysis indicates an unstable fluid mixture (CII > 0.9), the agent flags [Severe Asphaltene Flocculation Hazard — Commingling Not Recommended].",
+      "agentId": "OG-P13-A06"
+    },
+    {
+      "n": 7,
+      "name": "Subsea Flowline Depressurization & Hydrate Dissociation Modeling Sieve",
+      "oneLine": "Models symmetric two-sided pipeline depressurization profiles to safely dissociate hydrate plugs while preventing Joule-Thomson low-temperature steel embrittlement.",
+      "frictionSolved": "Eliminates 5.40 hours per blowdown design of manual gas expansion calculations and thermal stress modeling.",
+      "reads": "Flowline pressure profiles, fluid composition, seabed ambient temperature, hydrate equilibrium dissociation curve, and topside flare header backpressures.",
+      "does": "Models controlled, symmetric two-sided depressurization profiles required to dissociate solid hydrate blockages without creating dangerous pressure differentials across the plug; calculates gas expansion cooling (Joule-Thomson effect: μJT = (partial T / partial P)H) to ensure depressurization does not cause secondary hydrate formation or cryogenic low-temperature embrittlement of steel flowlines.",
+      "returns": "Hydrate Dissociation Blowdown Dossier (pipeline_id, recommended_blowdown_target_pressure_psi, minimum_wall_temperature_c, joule_thomson_cooling_risk, symmetric_venting_rate_spec).",
+      "stopsAt": "Opening manual emergency blowdown valves or actuating topside relief bypasses.",
+      "failureModes": "If modeled flowline wall temperature drops below Minimum Design Metal Temperature (MDMT, typically -29°C for carbon steel), the agent flags [Cryogenic Embrittlement Hazard — Reduce Blowdown Depressurization Rate].",
+      "agentId": "OG-P13-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit. Never multiply into enterprise rupee totals. The operator provides their own subsea tieback multiplier.",
+    "rows": [
+      {
+        "agent": "Subsea Cooldown & No-Touch Time Sieve",
+        "unit": "1 Unplanned Subsea Trip Episode",
+        "beforeHours": 5.0,
+        "afterHours": 0.5,
+        "savedHours": 4.5,
+        "frictionRemoved": "Emergency Data Gathering & Curve Plotting Drag"
+      },
+      {
+        "agent": "Hydrate Chemical Inhibitor Rate Sieve",
+        "unit": "1 Operating Subsea Tieback",
+        "beforeHours": 2.5,
+        "afterHours": 0.2,
+        "savedHours": 2.3,
+        "frictionRemoved": "Thermodynamic Hammerschmidt Recalculation"
+      },
+      {
+        "agent": "Well Restart Choke Opening Profile",
+        "unit": "1 Subsea Well Restart Procedure",
+        "beforeHours": 4.0,
+        "afterHours": 0.4,
+        "savedHours": 3.6,
+        "frictionRemoved": "Multiphase Liquid Surge Matching Drag"
+      },
+      {
+        "agent": "Subsea Flowline Wax Deposition Audit",
+        "unit": "1 Monthly Pipeline Survey",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Pressure-Drop Trend Sifting Drag"
+      },
+      {
+        "agent": "Subsea CIMV Valve Health & Drift Sieve",
+        "unit": "1 Weekly Subsea Umbilical Audit",
+        "beforeHours": 2.0,
+        "afterHours": 0.2,
+        "savedHours": 1.8,
+        "frictionRemoved": "Pulse Meter vs. Drawdown Reconciliation"
+      },
+      {
+        "agent": "Asphaltene Onset & Commingling Sieve",
+        "unit": "1 Fluid Commingling Evaluation",
+        "beforeHours": 4.0,
+        "afterHours": 0.4,
+        "savedHours": 3.6,
+        "frictionRemoved": "SARA Colloidal Instability Calculation"
+      },
+      {
+        "agent": "Flowline Depressurization Blowdown Sieve",
+        "unit": "1 Emergency Blowdown Procedure",
+        "beforeHours": 6.0,
+        "afterHours": 0.6,
+        "savedHours": 5.4,
+        "frictionRemoved": "Joule-Thomson Thermal Stress Modeling"
+      }
+    ],
+    "total": {
+      "unit": "Standard Flow Assurance Cycle",
+      "beforeHours": 26.5,
+      "afterHours": 2.6,
+      "savedHours": 23.9,
+      "frictionRemoved": "Eliminates emergency math & transient modeling drag",
+      "label": "Total Flow Assurance Cycle Impact"
+    }
+  },
+  "citations": [
+    {
+      "key": "[API-RP-17A]",
+      "citation": "API, Design and Operation of Subsea Production Systems, 5th Ed",
+      "locator": "API Standards Store",
+      "type": "Recommended Practice",
+      "supports": "Subsea flow assurance requirements & cooldown limits"
+    },
+    {
+      "key": "[ISO-13628-1]",
+      "citation": "ISO, Design and operation of subsea production systems, Part 1",
+      "locator": "iso.org",
+      "type": "International Standard",
+      "supports": "Subsea equipment operational limits & barriers"
+    },
+    {
+      "key": "[Sloan-Hydrates]",
+      "citation": "Sloan & Koh, Clathrate Hydrates of Natural Gases, 3rd Ed",
+      "locator": "CRC Press",
+      "type": "Technical Textbook",
+      "supports": "Thermodynamic hydrate dissociation physics & Hammerschmidt"
+    },
+    {
+      "key": "[SPE-FlowAssurance]",
+      "citation": "SPE, Flow Assurance in Deepwater Field Development, SPE Monograph",
+      "locator": "spe.org",
+      "type": "Technical Monograph",
+      "supports": "Wax deposition, severe slugging, & pigging intervals"
+    },
+    {
+      "key": "[NORSOK-P-002]",
+      "citation": "Standards Norway, Process System Design, Rev 3",
+      "locator": "standard.no",
+      "type": "Industry Standard",
+      "supports": "Thermal insulation & hydrate subcooling criteria"
+    },
+    {
+      "key": "[SPE-174981]",
+      "citation": "SPE, Real-Time Flow Assurance Monitoring in Deepwater, 2015",
+      "locator": "DOI: 10.2118/174981-MS",
+      "type": "Technical Paper",
+      "supports": "Baseline timing on manual cooldown tracking"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "SLB OLGA documentation, Kongsberg LedaFlow whitepapers, and OnePetro for \"automated real-time subsea cooldown tracking and dynamic No-Touch Time calculation directly from live SCADA tags without manual model configuration\".",
+    "result": "Negative Search, 2026-09. Commercial multiphase simulation packages run as offline simulation engines; none autonomously track live SCADA streaming P/T tags against hydrate boundaries to output remaining cooldown countdown timers without human model execution."
+  },
+  "line": "\"In deepwater subsea operations, nature gives you exactly eight hours before four-degree seawater turns your forty-million-dollar flowline into a solid concrete block of gas hydrates; you cannot spend five of those hours building an Excel spreadsheet.\"",
+  "openQuestions": [
+    "How many subsea production restarts are delayed by hours while waiting for an engineer to manually verify that the pipeline is safe from hydrate plugging?",
+    "What is the annual chemical expenditure on over-injected methanol and MEG due to conservative, uncalibrated static dosing rates?",
+    "How often do subsea chemical injection metering valves (CIMVs) drift off calibration before field personnel notice the flow discrepancy?"
+  ]
+}

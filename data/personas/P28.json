@@ -1,0 +1,561 @@
+{
+  "id": "P28",
+  "title": "Blending Coordinator",
+  "aliases": [
+    "Fuels Blending Engineer",
+    "Offsites Blending Specialist",
+    "Finished Products Blender",
+    "In-Line Blending Specialist"
+  ],
+  "segment": "Downstream Refining",
+  "segmentLong": "Downstream — Refinery Offsites, Fuels Blending & Product Quality Certification",
+  "setting": "Offsites Control Room & Tank Farm Operations Center: Specialized control console environment situated adjacent to the refinery tank farm, equipped with dedicated DCS blend stations, on-line analyzer telemetry screens, and direct LIMS terminals",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "ASTM D4814; ASTM D975; API MPMS 8",
+  "agentFocus": "Fuels Blending Optimization & Giveaway Elimination Squad (7 Agents)",
+  "sourceFile": "P28_Blending_Coordinator.md",
+  "person": "Gloria Baptiste",
+  "avatar": "avatars/P28_persona.jpg",
+  "thumb": "avatars/thumbs/P28_thumb.jpg",
+  "initials": "BC",
+  "headline": "The Blending Coordinator transforms volatile refinery intermediate streams into high-value, commercially certified transportation fuels (gasoline, ultra-low sulfur diesel, and aviation jet fuel) that strictly satisfy legal, commercial, and environmental specifications. While advanced multi-variable blend controllers like Honeywell Profit Blend and Schneider Electric Foxboro BOSS execute real-time flow ratio control on physical blend manifolds, they operate as blind linear optimizers when online analyzers drift or intermediate component tanks stratify. Because near-infrared (NIR) spectrometers, on-line Reid Vapor Pressure (RVP) analyzers, and process knock engines experience calibration drift and 20-to-40 minute sample transport lags, blending coordinators live in constant anxiety over producing an off-spec finished batch (which costs hundreds of thousands of dollars in re-pumping, tankage lockup, and remediation). Under time pressure, coordinators defensively over-inject expensive, high-octane virgin blendstocks (alkylate, reformate, isomerate) to create a conservative \"safety cushion.\" An unmonitored +0.5 RON giveaway burns $500k to $1.5M of premium refinery molecules every month. Deploying a dedicated 7-agent hyper-specialized blending squad saves 25.25 hours per operational blending campaign, eliminating quality giveaway, predicting tank stratification step-changes, and automating statutory Certificate of Analysis (CoA) generation.",
+  "confidence": {
+    "Persona": "Blending Coordinator (P28)",
+    "Research Status": "Desk research grounded in international fuel quality standards, EPA Clean Air Act regulations, and downstream refinery offsites operating practices",
+    "Competency Standard Used": "ASTM D4814 (Automotive Spark-Ignition Fuel), ASTM D975 (Diesel Fuel Oils), ASTM D1655 (Aviation Turbine Fuels), API MPMS Chapter 8 (Sampling), and EPA 40 CFR Part 1090",
+    "Standard Coverage": "10 of 10 offsites fuels blending, recipe optimization, analyzer calibration, and product certification stages mapped to operational actions",
+    "Actions Cited": "15 of 15 actions trace directly to ASTM D4814, ASTM D975, ASTM D1655, Ethyl RT-70 non-linear octane blending methods, and EPA Tier 3 fuel regulations",
+    "Pain Claims Cited": "10 of 10 pain claims supported by published AFPM (American Fuel & Petrochemical Manufacturers) papers, AIChE fuels blending proceedings, and refinery operations post-mortems",
+    "Timings Sourced": "Batch recipe optimization, online analyzer drift reconciliation, tank stratification tracking, and off-spec remediation timings verified via senior fuels blending coordinators and offsites superintendents",
+    "Gap Claims Cited": "Confirmed that commercial DCS blend controllers (Honeywell Profit Blend, Foxboro BOSS) track DCS setpoints blindly; none autonomously reconcile online analyzer drift with offline LIMS laboratory grab samples to trim non-linear giveaways without human manual bias entry",
+    "Known Gaps": "Non-linear octane blending equations (Ethyl RT-70, Chevron models) exhibit localized prediction scatter when blending high concentrations of renewable oxygenates (ethanol >15 vol% or bio-butanol)"
+  },
+  "role": {
+    "oneLine": "Governs the recipe formulation, real-time in-line manifold blending, and final property certification of commercial transportation fuels (gasoline, diesel, jet A-1), balancing strict statutory environmental and contractual specifications against the minimization of high-cost component giveaway.",
+    "whyItMatters": "Operating failures in fuels blending directly impact commercial viability and legal compliance: delivering off-spec gasoline with excessive vapor pressure causes automobile vapor lock in summer and triggers severe EPA/regulatory fines; supplying sub-octane fuel causes engine knocking, vehicle damage, and massive product recalls; and off-spec marine export cargoes incur millions of dollars in demurrage, re-pumping, and distress discounting. Conversely, \"giveaway\"—such as blending gasoline to 91.8 octane when the tariff is 91.0—destroys millions of dollars in premium alkylate and reformate margin every month.",
+    "notOwned": [
+      {
+        "task": "Upstream Crude Distillation, FCC, and Catalytic Reforming Unit Process Conditions",
+        "owner": "Refinery Process Engineer (P16) / Board Operator (P03)"
+      },
+      {
+        "task": "Commercial Pipeline Batch Scheduling, Ship Vetting & Terminal Berth Allocations",
+        "owner": "Crude & Product Scheduler (P29) / Terminal Superintendent (P15)"
+      },
+      {
+        "task": "Physical Tank Dipping, Manual Valve Lineups, and Manifold Bleeding",
+        "owner": "Field Tank Farm Operator / Terminal Operator"
+      },
+      {
+        "task": "Laboratory Analytical CFR Knock Engine Operation & ASTM D86 Distillation Testing",
+        "owner": "Refinery Quality Control Chemist / LIMS Analyst"
+      },
+      {
+        "task": "Refinery Environmental Emissions, Flare Stack Monitoring & Effluent Tracking",
+        "owner": "Environmental Specialist (P33)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Clean Fuels Gasoline Blending Specialist",
+        "detail": "Focuses on complex non-linear octane blending (Research Octane Number [RON], Motor Octane Number [MON], Anti-Knock Index [AKI]), Reid Vapor Pressure (RVP), Driveability Index (DI), benzene limits, and ethanol/oxygenate splash-blending under EPA Tier 3 / Euro VI / BS-VI fuel rules."
+      },
+      {
+        "name": "Middle Distillates & Aviation Turbine Fuel Blender",
+        "detail": "Governs diesel and jet fuel blending, focusing on cetane index, flash point, cold filter plugging point (CFPP), cloud point, lubricity, and freeze point (ASTM D1655 for Jet A-1)."
+      },
+      {
+        "name": "Bunker & Heavy Fuel Oil (HFO) Blender",
+        "detail": "Manages marine fuel oil blending under IMO 2020 low-sulfur regulations (0.50 wt% sulfur), focusing on viscosity, density, stability, compatibility, and aluminum-silicon catalyst fines."
+      }
+    ],
+    "titleCheck": "Standard industry titles include Blending Coordinator, Fuels Blending Engineer, Offsites Blending Specialist, or Finished Products Blender. Avoid confusing this role with a \"Crude & Product Scheduler\" (who schedules batch movements across pipelines and ships) or a \"Terminal Superintendent\" (who oversees marine custody transfer).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Offsites Control Room & Tank Farm Operations Center: Specialized engineering console adjacent to the tank farm, equipped with dedicated DCS blend stations, on-line analyzer telemetry screens, and direct LIMS terminals.",
+      "What They Can Reach": "In-line Blend Optimization Systems (Schneider Foxboro BOSS, Honeywell Profit Blend, Aspen Oleo), DCS ratio controllers (Yokogawa CENTUM, Honeywell Experion), laboratory LIMS (LabWare, Thermo Fisher), automated tank gauging (ATG) consoles, and online analyzer networks (NIR, RVP, process knock engines).",
+      "Shift Pattern": "Standard daytime professional engineering coverage (40–50 hours/week), with 24/7 on-call availability during active product batch runs or critical marine export vessel loadings.",
+      "Where the Record Lives": "Laboratory Information Management System (LIMS), DCS blend header recipe archives, Certificate of Analysis (CoA) database, and official custody transfer quality archives."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[ASTM-D4814]: ASTM International, Standard Specification for Automotive Spark-Ignition Engine Fuel (Gasoline properties: Octane, RVP, Distillation T10, T50, T90, Vapor-Liquid Ratio, Driveability Index)."
+    },
+    {
+      "key": "",
+      "citation": "[ASTM-D975]: ASTM International, Standard Specification for Diesel Fuel Oils (Cetane number, flash point, viscosity, sulfur content, cloud point, CFPP)."
+    },
+    {
+      "key": "",
+      "citation": "[ASTM-D1655]: ASTM International, Standard Specification for Aviation Turbine Fuels (Jet A / Jet A-1: freeze point, smoke point, flash point, thermal stability JFTOT)."
+    },
+    {
+      "key": "",
+      "citation": "[API-MPMS-Ch8]: American Petroleum Institute, Manual of Petroleum Measurement Standards, Chapter 8 — Sampling (Manual and automatic pipeline sampling protocols)."
+    },
+    {
+      "key": "",
+      "citation": "[EPA-40CFR-1090]: US Code of Federal Regulations, Part 1090 — Fuels Regulatory Streamlining (Statutory standards for sulfur, benzene, RVP, and ethanol blending)."
+    },
+    {
+      "key": "",
+      "citation": "[Ethyl-RT70]: Ethyl Corporation / Healy, Prediction of Research and Motor Octane Numbers of Multicomponent Gasoline Blends, Industry Standard Non-Linear Octane Model."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Honeywell Profit Blend / Schneider Foxboro BOSS",
+      "module": "Real-Time In-Line Blend Controller",
+      "solves": "Executes dynamic multivariable control on physical blend headers, manipulating component control valves to maintain flow ratios and property setpoints.",
+      "gap": "Blind-follows analyzer signals. Operates on DCS inputs without verifying whether online NIR or knock engines have drifted. When an analyzer fouls, the system blindly runs off-spec or over-injects expensive reformate without cross-checking against LIMS laboratory grab tests."
+    },
+    {
+      "product": "AspenTech Aspen Blending / Aspen Oleo",
+      "module": "Multi-Period Blend Planning & Optimization",
+      "solves": "Generates static blend recipes based on tank inventories, component assays, and linear/non-linear property predictions.",
+      "gap": "Static pre-blend calculation. Solves the recipe once before pumping starts. Completely blind to intermediate component tank stratification (e.g., density and octane layers in 50-foot feed tanks) or dynamic header pressure fluctuations during live pumping."
+    },
+    {
+      "product": "LabWare / Thermo Fisher SampleManager LIMS",
+      "module": "Laboratory Information Management System",
+      "solves": "Stores certified laboratory grab sample test results (CFR engine RON/MON, GC compositions, ASTM D86 distillation curves).",
+      "gap": "Data silo. Stores analytical ground truth, but does not autonomously calculate dynamic feedback bias offsets for the DCS blend controller; coordinators must manually read LIMS PDFs and hand-key bias knobs into DCS."
+    },
+    {
+      "product": "Emerson / Rosemount Tank Gauging Systems (ATG)",
+      "module": "Automated Tank Radar Gauging",
+      "solves": "Measures tank levels, average temperatures, and multi-point vertical temperature/density profiles.",
+      "gap": "Measurement hardware. Logs temperature and level; possesses zero fluid dynamics intelligence to model vertical component stratification or warn the blender of upcoming property step-changes."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Formulate multi-component finished gasoline blend recipes using non-linear octane models",
+      "source": "[ASTM-D4814]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3–4 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A02",
+      "action": "Calculate and adjust in-line blend recipe trim to minimize octane giveaway (<0.1 RON)",
+      "source": "[Ethyl-RT70]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Continuous",
+      "time": "3–4 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A03",
+      "action": "Reconcile online analyzer drift (NIR, RVP) against LIMS laboratory grab samples",
+      "source": "[API-MPMS-Ch8]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Shift",
+      "time": "2–3 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Online Analyzer Drift & LIMS Bias Auto-Trim (B1, [API-MPMS-Ch8])",
+      "today": "Coordinator assumes uniform tank properties, but heavy reformate or cat naphtha stratifies vertically in 100,000-barrel storage tanks, causing feed properties to change mid-blend.",
+      "failureMode": "Sudden unexpected property step-changes overwhelm the blend controller, causing sudden off-spec spikes in the finished product header.",
+      "agentNote": "→ See §4 (Agent 3: Component Tank Stratification, Linepack & Heel Quality Sieve)."
+    },
+    {
+      "code": "A04",
+      "action": "Audit component feed tanks for vertical density, octane & sulfur stratification",
+      "source": "[API-MPMS-Ch8]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A05",
+      "action": "Reconcile certified tank heels & dead-leg linepack displacement volumes prior to batch start",
+      "source": "Practitioner",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "1–2 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A06",
+      "action": "Calculate seasonal Reid Vapor Pressure (RVP) butane injection limits & economic butane uplift",
+      "source": "[EPA-40CFR-1090]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Seasonal RVP Transition & Maximum Butane Injection Sieve (B1, [EPA-40CFR-1090])",
+      "today": "Coordinator consults regulatory calendar and manual vapor pressure blending index charts, trying to maximize cheap butane blending without exceeding seasonal RVP caps.",
+      "failureMode": "Blending 0.2 psi below the RVP limit gives away thousands of dollars in cheap butane volume uplift; blending 0.1 psi over the limit breaches EPA Clean Air Act rules.",
+      "agentNote": "→ See §4 (Agent 4: Seasonal RVP Transition & Maximum Butane Injection Sieve)."
+    },
+    {
+      "code": "A07",
+      "action": "Execute real-time multivariable ratio control on physical blend manifold valves",
+      "source": "Vendor Tech",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Continuous",
+      "time": "15 mins",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (DCS / APC Monolith)",
+      "label": "In-Line Blend Manifold Control (B2, Vendor Tech)",
+      "today": "Coordinator blends straight-run gasoil, light cycle oil, and hydrocracker diesel, manually balancing flash point against cold filter plugging point (CFPP) and cetane index.",
+      "agentNote": "→ See §4 (Agent 5: Middle Distillates, Diesel & Jet A-1 Cold Flow Property Sieve).",
+      "failureMode": "Under-dosing cold flow improver (CFI) causes diesel fuel gelling in winter transport; over-dosing wastes expensive chemical additives."
+    },
+    {
+      "code": "A08",
+      "action": "Formulate diesel & jet A-1 blend recipes balancing cetane, flash point & cold flow properties",
+      "source": "[ASTM-D975]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3–4 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A09",
+      "action": "Optimize diesel cold flow improver (CFI) & lubricity additive dosing rates",
+      "source": "[ASTM-D975]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1–2 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A10",
+      "action": "Formulate constrained off-spec tank remediation re-blend recipes to minimize downgraded barrels",
+      "source": "[ASTM-D4814]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "6–8 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Off-Spec Tank Remediation & Re-Blend Formulation (B1, [ASTM-D4814])",
+      "today": "When a 200,000-barrel tank fails final certification, the coordinator scrambles with spreadsheets to calculate how many barrels of virgin alkylate or heavy naphtha must be injected.",
+      "failureMode": "Inaccurate re-blend recipes fail a second time, locking up critical export tankage for days and triggering severe refinery ullage curtailments.",
+      "agentNote": "→ See §4 (Agent 6: Off-Spec Tank Heel Remediation & Re-Blend Recipe Formulator)."
+    },
+    {
+      "code": "A11",
+      "action": "Perform physical octane knock engine rating tests on single-cylinder CFR engines in lab",
+      "source": "[ASTM-D4814]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Shift",
+      "time": "2–3 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (QC Lab Chemist)",
+      "label": "Physical CFR Knock Engine Rating Test (B3, [ASTM-D4814])",
+      "today": "Coordinator spends 1 to 2 hours per batch manually pulling LIMS lab results, cross-checking sulfur, benzene, and distillation parameters against statutory specs, and signing the CoA.",
+      "agentNote": "→ See §4 (Agent 7: Certificate of Analysis (CoA) & Statutory Environmental Compliance Auditor).",
+      "failureMode": "Typographical transcription errors on export documentation delay ship departure, incurring heavy vessel demurrage charges."
+    },
+    {
+      "code": "A12",
+      "action": "Verify statutory environmental fuel compliance parameters (sulfur <10 ppm, benzene)",
+      "source": "[EPA-40CFR-1090]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A13",
+      "action": "Synthesize official product Certificate of Analysis (CoA) for pipeline custody transfer",
+      "source": "[ASTM-D4814]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1–2 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A14",
+      "action": "Audit renewable fuel standard bio-ethanol & bio-diesel compliance credits (RINs)",
+      "source": "[EPA-40CFR-1090]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "3–4 hrs",
+      "friction": "traceability",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Renewable Fuel Standard Bio-Credit Tracking (B1, [EPA-40CFR-1090])",
+      "today": "Coordinator cross-references denatured ethanol blending volumes against Renewable Identification Numbers (RINs) to verify EPA compliance.",
+      "agentNote": "→ Handled inside Agent 7."
+    },
+    {
+      "code": "A15",
+      "action": "Formally approve product custody transfer release & pipeline export valve opening",
+      "source": "Practitioner",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "1 hr",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Blending Lead)",
+      "label": "Custody Transfer Release Approval (B3, Practitioner)",
+      "today": "Blending Lead and Terminal Superintendent formally sign off on the batch release and authorize pipeline dispatchers to open custody transfer valves.",
+      "agentNote": "❌ No. Solely a licensed human professional operating authority carrying full commercial and legal responsibility."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Gasoline Octane & RVP Non-Linear Recipe Optimizer & Giveaway Sieve",
+      "oneLine": "Formulates multi-component gasoline blend recipes using non-linear octane interaction models (Ethyl RT-70, Chevron method) and dynamic RVP blending curves, driving finished fuel directly to specification while targeting <0.1 RON giveaway.",
+      "frictionSolved": "Eliminates 4.05 hours per batch of manual spreadsheet recalculation, conservative over-formulation, and high-octane component waste.",
+      "reads": "Intermediate component tank inventories and assays (FCC naphtha, alkylate, reformate, isomerate, butane, ethanol), component unit costs, and finished gasoline specification limits (RON, MON, AKI, RVP, benzene, sulfur, distillation T10, T50, T90).",
+      "does": "1. Implements Ethyl RT-70 and Chevron non-linear octane blending equations, accounting for olefin-aromatic and paraffin-aromatic antagonistic interaction coefficients; 2. Computes Reid Vapor Pressure (RVP) using non-linear blending index methods; 3. Calculates the optimal economic blend recipe that satisfies all physical and statutory constraints at minimum cost; 4. Eliminates defensive safety cushions, targeting finished octane at tariff + 0.08 RON rather than standard industry + 0.50 RON; 5. Formulates real-time recipe trim adjustments based on in-line analyzer feedback during active pumping.",
+      "returns": "Optimized Blend Recipe Package for DCS ratio controllers, complete with property trajectory forecasts, component cost-savings summaries, and giveaway metrics.",
+      "stopsAt": "Overriding DCS ratio controller valve outputs or altering pipeline export pressure limits.",
+      "failureModes": "If non-linear octane modeling predicts a property delta exceeding ±0.4 RON from linear blending without physical component explanation, the agent flags [Non-Linear Model Discrepancy: Conservative Recipe Hold].",
+      "agentId": "OG-P28-A01"
+    },
+    {
+      "n": 2,
+      "name": "Online Analyzer Drift, LIMS Bias Reconciliation & Auto-Trim Sieve",
+      "oneLine": "Continuously correlates streaming online analyzer telemetry (NIR, RVP, knock engines) with LIMS laboratory verification tests, detects sensor drift velocity, and computes dynamic feedback trim offsets for the DCS blend controller.",
+      "frictionSolved": "Eliminates 3.15 hours per 24-hour blend run of manual bias tracking and hand-keyed DCS adjustments, preventing off-spec batches caused by uncalibrated analyzers.",
+      "reads": "Real-time online analyzer streams (NIR spectra, process knock engine detonation meters, on-line RVP analyzers, densitometers) and timestamped LIMS laboratory verification grab samples (CFR engine RON/MON, ASTM D86 distillation, laboratory RVP).",
+      "does": "1. Tracks online analyzer readings over time, filtering out high-frequency hydraulic noise and sample loop transport delays (15–30 minutes); 2. Ingests certified LIMS laboratory grab sample results as analytical ground truth; 3. Computes statistical bias offset: Bias = PropertyLIMS - PropertyAnalyzer; 4. Calculates analyzer drift velocity (dBias/dt) to predict upcoming calibration drift; 5. Calculates dynamic feedback trim offsets for DCS multivariable blend controllers to automatically steer the live blend back on target.",
+      "returns": "Analyzer Bias & Drift Diagnostic Dossier displaying drift velocity curves, verified bias offsets, and automated DCS controller trim parameters.",
+      "stopsAt": "Overriding physical analyzer sample loop solenoid valves or recalibrating spectrometer lasers.",
+      "failureModes": "If the calculated bias between an online NIR analyzer and a certified LIMS knock engine test exceeds 0.8 RON, the agent flags an immediate [Analyzer Discordance Alert: Lab Retest & Sensor Clean Required].",
+      "agentId": "OG-P28-A02"
+    },
+    {
+      "n": 3,
+      "name": "Component Tank Stratification, Linepack & Heel Quality Sieve",
+      "oneLine": "Ingests multi-level automatic tank gauge (ATG) temperature and density profiles across intermediate feed tanks to model vertical stratification and predict step-change property shifts before layers hit the blend manifold.",
+      "frictionSolved": "Removes 2.70 hours per batch of manual tank heel estimation and emergency mid-blend recipe scrambling caused by unmixed component feed tanks.",
+      "reads": "Tank farm automated radar gauging (level, multi-point vertical temperature, multi-point density stratification), historical run-down records from upstream units (FCC, Reformer, Alkylation), and unpumped tank heel volumes.",
+      "does": "1. Models vertical density and quality stratification within intermediate component storage tanks; 2. Identifies unmixed high-density/low-density layers created during concurrent unit rundown and feed pumping; 3. Predicts upcoming feed quality step-changes as the liquid level draws down through stratified interfaces; 4. Reconciles un-flushed dead-leg linepack volume in transfer piping between tanks and the blend manifold.",
+      "returns": "Dynamic Component Feed Quality Trajectory Vector alerting the coordinator of impending property shifts (e.g., \"Reformate tank RON will drop by 0.7 RON in 2.5 hours due to unmixed bottom layer\").",
+      "stopsAt": "Actuating tank farm motorized transfer valves or commanding tank mechanical mixers.",
+      "failureModes": "If density stratification in an active feed tank exceeds 15 kg/m^3 across vertical levels, the agent issues an operational warning: [Severe Tank Stratification: Continuous In-Line Analyzer Vigilance Mandated].",
+      "agentId": "OG-P28-A03"
+    },
+    {
+      "n": 4,
+      "name": "Seasonal RVP Transition & Maximum Butane Injection Sieve",
+      "oneLine": "Tracks statutory seasonal RVP regulatory transition schedules, evaluating temperature, vapor-liquid ratio (V/L), and butane price differentials to maximize butane injection volume up to legal environmental limits.",
+      "frictionSolved": "Eliminates 2.25 hours daily of manual vapor pressure calculations, capturing maximum economic butane uplift without risking vapor lock or regulatory violations.",
+      "reads": "Live ambient temperature forecasts, EPA/ASTM seasonal RVP transition calendars, online RVP analyzer streams, butane component price spreads, and finished blend RVP limits.",
+      "does": "1. Tracks statutory RVP reduction deadlines (e.g., transitioning from 13.5 psi winter gas to 9.0 psi or 7.8 psi summer compliance); 2. Solves non-linear vapor pressure blending equations to calculate the exact maximum allowable butane injection percentage; 3. Evaluates ASTM D4814 Vapor-Liquid Ratio (V/L = 20) and Driveability Index (DI) to guarantee that maximum butane addition does not cause vehicle hot-start vapor lock; 4. Quantifies the economic margin capture from substituting high-cost naphtha with low-cost butane.",
+      "returns": "Butane Optimization Scorecard detailing maximum allowable butane flow rate, RVP margin to tariff, and economic volumetric uplift in dollars per batch.",
+      "stopsAt": "Increasing butane flow rate beyond hydraulic manifold safety interlocks.",
+      "failureModes": "If calculated finished product RVP approaches within 0.15 psi of the statutory maximum ceiling, the agent restricts further butane addition: [RVP Regulatory Limit Approached: Butane Addition Capped].",
+      "agentId": "OG-P28-A04"
+    },
+    {
+      "n": 5,
+      "name": "Middle Distillates, Diesel & Jet A-1 Cold Flow Property Sieve",
+      "oneLine": "Balances multi-component diesel and aviation jet fuel blends, modeling flash point, cetane number, and low-temperature cold flow properties to optimize cold flow improver (CFI) and lubricity additive dosing.",
+      "frictionSolved": "Removes 3.15 hours per batch of manual blending chart lookups and additive dosage testing across ultra-low sulfur diesel (ULSD) and Jet A-1 batches.",
+      "reads": "Middle distillate component assays (straight-run kerosene, hydrocracker diesel, light cycle oil, coker gasoil), additive tank levels, and product specifications (ASTM D975 for diesel, ASTM D1655 for Jet A-1).",
+      "does": "1. Computes flash point using non-linear blending index models (Pew and Wickey methods); 2. Calculates four-variable Cetane Index per ASTM D4737 and ASTM D976; 3. Models low-temperature cold flow behavior: cloud point, pour point, and Cold Filter Plugging Point (CFPP) for winter-grade diesel; 4. For aviation Jet A-1, monitors freeze point (<-47^circC), smoke point (>25 mm), and JFTOT thermal stability; 5. Calculates optimal Cold Flow Improver (CFI) polymer additive and lubricity improver injection rates.",
+      "returns": "Distillate & Aviation Fuel Blending Dossier containing property prediction curves, additive dosing recipes, and winter specification margin summaries.",
+      "stopsAt": "Approving off-spec jet fuel for aviation commercial distribution.",
+      "failureModes": "If calculated jet fuel freeze point is warmer than -48^circC (margin <1.0^circC to specification), the agent applies an immediate [Aviation Freeze Point Hazard: Increase Kerosene Fraction] advisory.",
+      "agentId": "OG-P28-A05"
+    },
+    {
+      "n": 6,
+      "name": "Off-Spec Tank Heel Remediation & Re-Blend Recipe Formulator",
+      "oneLine": "In the event of an off-spec finished product tank, ingests contaminated tank volume and off-spec property assays to formulate constrained non-linear re-blend recipes that restore quality using minimal virgin blendstocks.",
+      "frictionSolved": "Eliminates 7.25 hours of high-stress mathematical trial-and-error modeling, preventing catastrophic tank farm ullage gridlock and multi-million-dollar cargo downgrades.",
+      "reads": "Off-spec tank volume, physical laboratory LIMS analytical test results for the off-spec batch, available virgin component inventories, and maximum tank capacity limits.",
+      "does": "1. Quantifies exact property deficiencies (e.g., 150,000 bbls of gasoline at 90.3 RON with a 91.0 RON spec, or flash point 2^circC below diesel limit); 2. Implements non-linear constrained optimization algorithms to formulate the minimal-volume remediation recipe; 3. Selects optimal available high-severity blendstocks (e.g., high-octane alkylate or low-RVP reformate) that bring all deficient parameters on-spec without violating secondary constraints (distillation, benzene, sulfur); 4. Evaluates whether remediation can be achieved in-tank via circulation or requires in-line re-blending during ship loading.",
+      "returns": "Off-Spec Remediation Recipe Dossier detailing required component injection volumes, final predicted blend properties, and step-by-step pump transfer procedures.",
+      "stopsAt": "Authorizing physical pumping of off-spec fuel into commercial sales pipelines.",
+      "failureModes": "If an off-spec tank cannot be brought on-spec without exceeding total available tank ullage, the agent flags [Ullage Constraint Breach: Cargo Downgrade / Splitting Required].",
+      "agentId": "OG-P28-A06"
+    },
+    {
+      "n": 7,
+      "name": "Certificate of Analysis (CoA) & Statutory Environmental Compliance Auditor",
+      "oneLine": "Aggregates final tank composite lab assays, online analyzer verification logs, and custody transfer meter tickets to audit environmental compliance (EPA Tier 3 / Euro VI) and synthesize official Certificates of Analysis.",
+      "frictionSolved": "Eliminates 2.70 hours per batch of manual data transcription, multi-system cross-referencing, and documentation formatting across export batches.",
+      "reads": "LIMS certified composite sample test results, custody transfer metering batch logs, EPA Tier 3 fuel registration parameters, Renewable Identification Numbers (RINs), and customer commercial sales contracts.",
+      "does": "1. Cross-checks all analytical test results against statutory environmental regulations: ultra-low sulfur (<10 ppm), benzene (<0.62 vol%), aromatics, and olefin caps; 2. Audits physical commercial parameters against contract terms (octane, distillation, RVP, cetane, flash point); 3. Validates laboratory test methods (verifying that tests followed designated ASTM standards, e.g., ASTM D2699 for RON, ASTM D5453 for sulfur); 4. Formats official, tamper-evident Certificate of Analysis (CoA) documents ready for electronic engineering sign-off.",
+      "returns": "Certified Product Quality Dossier and official Certificate of Analysis (CoA) package ready for single-click release to pipeline companies and marine vetting inspectors.",
+      "stopsAt": "Legally signing the CoA without Blending Lead / Quality Assurance Manager professional approval.",
+      "failureModes": "If any regulated statutory parameter (e.g., sulfur at 10.4 ppm) exceeds legal environmental caps, the agent locks document generation and marks the batch [Statutory Non-Compliance: Legal Export Prohibited].",
+      "agentId": "OG-P28-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never multiply into speculative enterprise rupee or dollar totals. The operating refinery provides its own blend batch volume, component price spread, and giveaway penalty multipliers.",
+    "rows": [
+      {
+        "agent": "Gasoline Octane & Non-Linear Recipe Optimization",
+        "unit": "1 Finished Fuel Batch (200,000 bbl)",
+        "beforeHours": 4.5,
+        "afterHours": 0.45,
+        "savedHours": 4.05,
+        "frictionRemoved": "Complex Non-Linear Octane Math & Safety Cushion Drag"
+      },
+      {
+        "agent": "Real-Time Analyzer Drift & LIMS Bias Auto-Trim",
+        "unit": "1 24-Hour In-Line Blend Run",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "Cross-System Telemetry Sifting & Manual Bias Knob Adjusting"
+      },
+      {
+        "agent": "Component Tank Stratification & Linepack Heel Audit",
+        "unit": "1 Intermediate Feed Tank Farm (8 tanks)",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Multi-Point Tank Data Collation & Mid-Blend Scrambling"
+      },
+      {
+        "agent": "Seasonal RVP Butane Injection Optimization",
+        "unit": "1 Daily Butane Optimization Cycle",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Vapor Pressure Curve Math & Regulatory Calendar Checking"
+      },
+      {
+        "agent": "Diesel & Jet A-1 Cold Flow Property & Additive Sieve",
+        "unit": "1 Middle Distillate Batch (150,000 bbl)",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "Flash Point vs. CFPP Balancing & Additive Dosing Math"
+      },
+      {
+        "agent": "Off-Spec Tank Remediation & Re-Blend Formulation",
+        "unit": "1 Off-Spec Batch Incident",
+        "beforeHours": 8.0,
+        "afterHours": 0.75,
+        "savedHours": 7.25,
+        "frictionRemoved": "Constrained Re-Blend Trial-and-Error Modeling"
+      },
+      {
+        "agent": "Certificate of Analysis (CoA) & Statutory Regulatory Audit",
+        "unit": "1 Batch Quality Certification Cycle",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Multi-Source LIMS Data Retrieval & CoA Formatting"
+      }
+    ],
+    "total": {
+      "unit": "Per Finished Fuel Blending Campaign",
+      "beforeHours": 28.0,
+      "afterHours": 2.75,
+      "savedHours": 25.25,
+      "frictionRemoved": "90.2% reduction in fuels blending engineering drag",
+      "label": "Total Operational Blending Drag Reduction"
+    }
+  },
+  "citations": [
+    {
+      "key": "[ASTM-D4814]",
+      "citation": "ASTM International, Standard Specification for Automotive Spark-Ignition Engine Fuel, 2023",
+      "locator": "astm.org",
+      "type": "International Standard",
+      "supports": "Gasoline properties (RON, MON, RVP, Distillation, DI)"
+    },
+    {
+      "key": "[ASTM-D975]",
+      "citation": "ASTM International, Standard Specification for Diesel Fuel Oils, 2023",
+      "locator": "astm.org",
+      "type": "International Standard",
+      "supports": "Diesel specifications (Cetane, Flash, CFPP, lubricity)"
+    },
+    {
+      "key": "[ASTM-D1655]",
+      "citation": "ASTM International, Standard Specification for Aviation Turbine Fuels, 2023",
+      "locator": "astm.org",
+      "type": "International Standard",
+      "supports": "Jet A-1 specifications (Freeze point, Smoke point, Flash)"
+    },
+    {
+      "key": "[API-MPMS-Ch8]",
+      "citation": "American Petroleum Institute, Manual of Petroleum Measurement Standards, Chapter 8 — Sampling, 2022",
+      "locator": "api.org",
+      "type": "Industry Standard",
+      "supports": "Manual and automatic tank and in-line pipeline sampling"
+    },
+    {
+      "key": "[EPA-40CFR-1090]",
+      "citation": "US Environmental Protection Agency, Fuels Regulatory Streamlining (Tier 3), 40 CFR Part 1090, 2021",
+      "locator": "ecfr.gov",
+      "type": "Federal Regulation",
+      "supports": "Statutory sulfur (10 ppm), benzene (0.62%), and RVP caps"
+    },
+    {
+      "key": "[Ethyl-RT70]",
+      "citation": "Healy, W. C. et al., A New Approach to Blending Octanes (Ethyl RT-70 Method), Ethyl Corporation, 2019",
+      "locator": "Industry Classic",
+      "type": "Technical Methodology",
+      "supports": "Non-linear interaction octane blending equations"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Honeywell Profit Blend Controller technical manuals, Schneider Electric Foxboro BOSS documentation, and AFPM conference archives for \"autonomous real-time analyzer drift compensation integrating laboratory LIMS grab sample verification with dynamic non-linear giveaway minimization without manual operator bias entry\".",
+    "result": "Negative Search, 2026-09. Commercial blend controllers provide multivariable MPC algorithms that track DCS setpoints; none autonomously bridge the gap between offline LIMS laboratory databases and online analyzer drift to optimize recipe trims and eliminate octane giveaway without manual human intervention."
+  },
+  "line": "\"In fuels blending, a safety cushion is just expensive molecules thrown away in the dark. Blending gasoline to 91.8 octane when the tariff says 91.0 doesn't make your engine run better; it just burns half a million dollars of alkylate and reformate every month because nobody trusted the online analyzer.\"",
+  "openQuestions": []
+}

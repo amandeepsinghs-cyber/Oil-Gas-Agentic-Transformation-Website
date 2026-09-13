@@ -808,13 +808,26 @@
        the rail, because the rail shows all twenty at once and the full set
        of originals is ~14 MB. */
     /* This page lives in personas/, so portraits resolve relative to it. */
+    /* Portraits were renumbered to the research ids (P01-P33). This page still
+       runs on the old deck-row dataset, so it translates on the way out.
+       LEGACY: delete this map, and this page, once the chessboard is rebuilt
+       off the research data (Phase 2). */
     var AVATAR_BASE = "avatars/";
+    var DECK_TO_RESEARCH = {
+      p01: "P18", p02: "P05", p03: "P10", p04: "P07", p05: "P08",
+      p06: "P01", p07: "P02", p08: "P06", p09: "P09", p10: "P04",
+      p11: "P12", p12: "P13", p13: "P14", p14: "P15", p15: "P16",
+      p16: "P03", p17: "P11", p18: "P20", p19: "P17", p20: "P19"
+    };
 
+    function avatarId(persona) {
+      return DECK_TO_RESEARCH[persona.id] || persona.id;
+    }
     function portraitPath(persona) {
-      return AVATAR_BASE + persona.id + "_persona.jpg";
+      return AVATAR_BASE + avatarId(persona) + "_persona.jpg";
     }
     function thumbPath(persona) {
-      return AVATAR_BASE + "thumbs/" + persona.id + "_thumb.jpg";
+      return AVATAR_BASE + "thumbs/" + avatarId(persona) + "_thumb.jpg";
     }
 
     function initialsOf(name) {

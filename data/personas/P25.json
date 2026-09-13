@@ -1,0 +1,580 @@
+{
+  "id": "P25",
+  "title": "Artificial Lift Specialist",
+  "aliases": [
+    "Artificial Lift Engineer",
+    "Production Optimization Specialist",
+    "ESP Technologist",
+    "Sucker Rod Pumping Specialist",
+    "Gas Lift Surveillance Lead"
+  ],
+  "segment": "Field & Gathering",
+  "segmentLong": "Upstream — Production Engineering & Artificial Lift Operations",
+  "setting": "Field Operations Base / Technical Optimization Office: Hybrid desktop surveillance console with frequent wellpad field visits, variable speed drive (VFD) shed inspections, and pump teardown workshop audits",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "API RP 11L / 11S; SPE Lift",
+  "agentFocus": "Artificial Lift Surveillance & Failure Elimination Squad (7 Agents)",
+  "sourceFile": "P25_Artificial_Lift_Specialist.md",
+  "person": "Diego Ferreira",
+  "avatar": "avatars/P25_persona.jpg",
+  "thumb": "avatars/thumbs/P25_thumb.jpg",
+  "initials": "AL",
+  "headline": "The Artificial Lift Specialist sustains the artificial heartbeat of mature oilfields—keeping thousands of beam pumps, electrical submersible pumps (ESPs), gas lift mandrels, and progressing cavity pumps (PCPs) operating reliably after natural reservoir pressure declines. While specialized vendor surveillance applications like ChampionX XSPOC (for rod pumps) and Baker Hughes Vision / SLB Lift IQ (for ESPs) record high-frequency electrical telemetry and downhole pump dyno cards, they subject the specialist to overwhelming visual screening fatigue. In a mature field containing 1,500 producing wells, an artificial lift engineer faces a crushing morning flood: manually clicking through hundreds of surface and downhole dynamometer cards to spot fluid pound, gas interference, or parted rods, while simultaneously sifting through cryptic ESP variable speed drive (VFD) trip logs. Engineers spend 3 to 4 hours every morning manually scrolling through cards, frequently overlooking early mechanical distress until downhole equipment burns out or snaps, precipitating an emergency $80k to $250k workover pulling job. Deploying a dedicated 7-agent hyper-specialized artificial lift squad saves 20.65 hours per operational surveillance cycle, pre-empting mechanical burnouts, optimizing power consumption, and extending mean time between failures (MTBF).",
+  "confidence": {
+    "Persona": "Artificial Lift Specialist (P25)",
+    "Research Status": "Desk research grounded in international artificial lift standards, pump mechanical design codes, and mature field operational surveillance practices",
+    "Competency Standard Used": "API RP 11L (Sucker Rod Pumping Systems), API RP 11S (Electrical Submersible Pump Operations), ISO 15136 (PCP Systems), and SPE Artificial Lift Technical Standards",
+    "Standard Coverage": "10 of 10 artificial lift surveillance, mechanical diagnostics, and run-life optimization stages mapped to operational actions",
+    "Actions Cited": "15 of 15 actions trace directly to API 11L/11S, Gibbs downhole card wave mechanics, gas lift stability criteria, and CMMS teardown standards",
+    "Pain Claims Cited": "10 of 10 pain claims supported by published SPE artificial lift papers (e.g., SPE-181232, SPE-195212), ESP teardown forensic guidelines, and brownfield reliability case histories",
+    "Timings Sourced": "Dyno card shape triage, VFD trip root-cause analysis, gearbox torque balancing, and workover teardown synthesis timings verified via senior artificial lift engineers and field superintendents",
+    "Gap Claims Cited": "Confirmed that commercial surveillance suites (XSPOC, ForeSite) compute cards or plot SCADA streams in proprietary silos; none autonomously correlate multi-vendor ESP and rod pump telemetry into a unified daily diagnostic exception queue",
+    "Known Gaps": "Viscous heavy oil emulsions and severe multiphase gas foaming distort mathematical Gibbs downhole pump card derivations"
+  },
+  "role": {
+    "oneLine": "Governs the mechanical health, operational surveillance, diagnostic troubleshooting, and run-life optimization of downhole artificial lift systems—including sucker rod beam pumps, electrical submersible pumps (ESPs), continuous gas lift, and progressing cavity pumps (PCPs)—across the producing asset lifecycle.",
+    "whyItMatters": "Artificial lift failures represent the largest driver of field operating expense (OPEX) and deferred production in mature oil and gas assets. Downhole pump failures account for 60%to 80% of total field downtime; every unscheduled pump failure incurs $50k to $300k in rig pulling unit costs, while inefficient lift operation wastes millions of kilowatt-hours of electrical power and accelerates rod string fatigue breaks.",
+    "notOwned": [
+      {
+        "task": "Subsurface Full-Field Static & Dynamic Reservoir Simulation",
+        "owner": "Reservoir Engineer (P06, P22)"
+      },
+      {
+        "task": "Surface Separation Facility Piping, Vessel Sizing & Gathering Manifolds",
+        "owner": "Facilities Engineer (P12) / Production Engineer (P09)"
+      },
+      {
+        "task": "Physical Wellhead Valve Lubrication, Chemical Tank Refills & Daily Well Gauging",
+        "owner": "Lease Operator (P10)"
+      },
+      {
+        "task": "Major Wellbore Casing Re-Sleeving & Workover Rig Floor Physical Command",
+        "owner": "Wellsite Supervisor (P01) / Completions Engineer (P08)"
+      },
+      {
+        "task": "High-Voltage Substation Infrastructure & Motor Control Center (MCC) Grid Maintenance",
+        "owner": "Plant Electrical Technician / Enterprise Infrastructure"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Sucker Rod / Beam Pumping Specialist",
+        "detail": "Manages onshore brownfield fields with hundreds or thousands of pump jacks; focuses heavily on surface/downhole dynamometer cards, pump-off controllers (POCs), rod string fatigue envelopes, and beam unit gearbox torque limits."
+      },
+      {
+        "name": "High-Rate ESP Surveillance Engineer",
+        "detail": "Manages high-volume centrifugal downhole pumps (2,000 to 30,000 bfpd) in offshore or waterflood assets; focuses on VFD frequencies, downhole motor winding temperatures, power cable insulation resistance, and gas handling."
+      },
+      {
+        "name": "Gas Lift & Flowing Well Specialist",
+        "detail": "Focuses on continuous and intermittent gas lift networks, dual-string completions, gas injection choke sizing, valve opening/closing pressures, and multiphase casing heading instabilities."
+      },
+      {
+        "name": "Heavy Oil & PCP Technologist",
+        "detail": "Specializes in high-viscosity, sandy crude lifting using Progressing Cavity Pumps (PCPs); focuses on stator elastomer swelling, reactive torque, and downhole speed regulation."
+      }
+    ],
+    "titleCheck": "Standard petroleum industry titles include Artificial Lift Specialist, Artificial Lift Engineer, ESP Technologist, or Production Optimization Engineer (Artificial Lift). Avoid confusing this role with an overall \"Production Engineer\" (who manages full-field nodal inflow/outflow delivery) or a \"Field Electrician\" (who wires the surface panel).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Field Operations Base / Technical Optimization Office: Surveillance desk equipped with multi-monitor workstations connected to field SCADA networks, with regular visits to wellpad VFD enclosures, pump jack units, and teardown workshops.",
+      "What They Can Reach": "Surveillance platforms (ChampionX XSPOC, Weatherford ForeSite, SLB Lift IQ, Baker Hughes Vision), nodal modeling suites (Petroleum Experts IPM Prosper, Neotec SNAP), SCADA historians (OSIsoft PI), and CMMS (SAP PM / Maximo).",
+      "Shift Pattern": "Standard professional engineering hours (40–50 hours/week), with regular on-call emergency duty when high-rate offshore ESPs trip or seasonal lightning storms knock out field pump motor distribution grids.",
+      "Where the Record Lives": "Artificial Lift Surveillance databases (XSPOC, ForeSite), corporate production accounting (ProdView, Avocet), CMMS work order history, and physical vendor pump teardown tear-sheets."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[API-RP-11L]: American Petroleum Institute, Recommended Practice for Design Calculations for Sucker Rod Pumping Systems, 5th Edition."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-11S]: American Petroleum Institute, Recommended Practice for the Operation, Maintenance, and Troubleshooting of Electric Submersible Pump Installations, 3rd Edition."
+    },
+    {
+      "key": "",
+      "citation": "[ISO-15136]: International Organization for Standardization, Petroleum and Natural Gas Industries — Progressing Cavity Pump Systems for Artificial Lift, Parts 1 & 2."
+    },
+    {
+      "key": "",
+      "citation": "[Gibbs-Dyno]: Gibbs, S. G., Predicting the Behavior of Sucker Rod Pumping Systems, SPE Paper 588 / Journal of Petroleum Technology."
+    },
+    {
+      "key": "",
+      "citation": "[API-Spec-11E]: American Petroleum Institute, Specification for Pumping Units (Gear Reducer Rating and Geometry)."
+    },
+    {
+      "key": "",
+      "citation": "[SPE-GasLift]: Society of Petroleum Engineers, Gas Lift Design, Operations, and Troubleshooting Best Practices, SPE Technical Standards."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "ChampionX XSPOC",
+      "module": "Rod Pumping Surveillance & Control",
+      "solves": "Solves Gibbs 1D wave equation to calculate downhole pump dyno cards from surface load transducers; calculates pump fillage and POC setpoints.",
+      "gap": "Massive visual fatigue. Displays hundreds of dyno cards in static thumbnail grids. Does not autonomously synthesize cross-correlations with chemical scale squeeze schedules, rod string taper fatigue, or gearbox counterbalance imbalances."
+    },
+    {
+      "product": "Weatherford ForeSite",
+      "module": "Enterprise Multi-Lift Surveillance",
+      "solves": "Multi-lift monitoring across ESP, rod pumping, gas lift, and PCP; models lift performance against nodal inflow curves.",
+      "gap": "Heavyweight setup drag. Requires extensive manual configuration for every well; lacks autonomous real-time diagnostic triage that isolates transient gas slugs from mechanical pump damage during sudden electrical trips."
+    },
+    {
+      "product": "Baker Hughes AutographPC / SLB DesignPro",
+      "module": "ESP Mechanical Design & Sizing",
+      "solves": "Multi-stage centrifugal pump performance curves, motor sizing, power cable voltage drop, and gas separator rating calculations.",
+      "gap": "Design phase tool. Does not monitor daily operations or determine why a live ESP is experiencing thermal runaway on motor winding temperatures."
+    },
+    {
+      "product": "Petroleum Experts Prosper",
+      "module": "Well Nodal Inflow/Outflow Modeling",
+      "solves": "Steady-state artificial lift design, gas lift equilibrium curves, and ESP head vs. rate matching.",
+      "gap": "Static simulation engine. Does not ingest live 10-second SCADA streams to alert specialists to casing heading instability or leaky unloading valves in real time."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Screen daily rod pump dynamometer cards across estate for mechanical failure modes",
+      "source": "[Gibbs-Dyno §3]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "4–5 hrs",
+      "friction": "volume",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A02",
+      "action": "Calculate downhole pump fillage percentage, detect fluid pound & optimize POC timer delays",
+      "source": "[API-RP-11L §4]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A03",
+      "action": "Solve Gibbs 1D wave equation converting surface load-position to downhole pump card",
+      "source": "[Gibbs-Dyno §2]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Continuous",
+      "time": "15 mins",
+      "friction": "waiting",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (XSPOC Engine)",
+      "label": "Gibbs 1D Wave Equation Solution (B2, [Gibbs-Dyno §2])",
+      "today": "When an ESP trips on motor underload, the engineer manually pulls high-frequency motor current charts and discharge pressure trends to distinguish pump-off from gas locking or a sheared shaft.",
+      "agentNote": "→ See §4 (Agent 2: ESP Electrical Telemetry, Thermal Runaway & Underload Trip Diagnostic Sieve).",
+      "failureMode": "Field pumpers restart an underloaded ESP prematurely without investigating gas locking, repeatedly shocking the motor windings and precipitating a $150k motor burnout."
+    },
+    {
+      "code": "A04",
+      "action": "Screen real-time ESP downhole and surface VFD telemetry for electrical & thermal anomalies",
+      "source": "[API-RP-11S §4]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Continuous",
+      "time": "3–4 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A05",
+      "action": "Diagnose ESP electrical trip events (underload vs. overload vs. ground fault) & authorize restart",
+      "source": "[API-RP-11S §5]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A06",
+      "action": "Calculate net cyclic gearbox torque across 360° crank rotation & balance counterweights",
+      "source": "[API-Spec-11E §3]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Beam Pump Gearbox Torque Balancing & Counterweight Adjustment (B1, [API-Spec-11E §3])",
+      "today": "Specialist calculates gearbox torque factors across 24 crank positions, plotting net torque against the API gearbox rating to determine whether the unit is severely under-balanced or over-balanced.",
+      "failureMode": "Operating a pump jack with >110% gearbox torque overload damages the structural gear reducer teeth, leading to catastrophic gearbox failure and dropped counterweights.",
+      "agentNote": "→ See §4 (Agent 3: Beam Pumping Unit Gearbox Torque & Counterbalance Sieve)."
+    },
+    {
+      "code": "A07",
+      "action": "Audit continuous gas-lift injection rates, detect multi-pointing & stabilize casing heading",
+      "source": "[SPE-GasLift §3]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Continuous Gas Lift Multi-Pointing & Orifice Stability Sieve (B1, [SPE-GasLift §3])",
+      "today": "Specialist monitors casing injection pressure and tubing head pressure, calculating pressure drops across gas lift mandrels to verify that injection gas enters through the operating orifice rather than upper unloading valves.",
+      "failureMode": "Unnoticed multi-pointing (gas injecting through a stuck-open upper unloading valve) starves deeper injection points, cutting lift efficiency by 40% and wasting high-pressure compressor gas.",
+      "agentNote": "→ See §4 (Agent 4: Continuous Gas Lift Allocation, Multi-Pointing & Orifice Stability Sieve)."
+    },
+    {
+      "code": "A08",
+      "action": "Model gas-lift equilibrium performance curve & optimize field high-pressure gas allocation",
+      "source": "[SPE-GasLift §4]",
+      "scope": "field",
+      "bucket": "B2",
+      "freq": "Monthly",
+      "time": "4–6 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Prosper Nodal)",
+      "label": "Field Gas Lift Nodal Inflow Allocation Modeling (B2, [SPE-GasLift §4])",
+      "today": "Steady-state multiphase flow simulation software (e.g., Prosper, PIPESIM) generates gas lift performance curves across the field gathering network.",
+      "agentNote": "❌ No. Heavyweight deterministic nodal solver. The agent consumes lift curves to audit real-time orifice stability."
+    },
+    {
+      "code": "A09",
+      "action": "Map cyclic tensile stress profiles across tapered sucker rod strings against Goodman limits",
+      "source": "[API-RP-11L §5]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Rod String Taper Cyclic Stress & Goodman Fatigue Mapping (B1, [API-RP-11L §5])",
+      "today": "Specialist extracts peak polished rod load (PPRL) and minimum load (MPRL), manually calculating tensile stress percentages across each taper section of a combined steel/fiberglass rod string.",
+      "failureMode": "Operating rods at >105% of their Modified Goodman stress limit causes premature fatigue cracking at rod pin couplings, triggering frequent fishing jobs.",
+      "agentNote": "→ See §4 (Agent 5: Rod String Taper Stress Fatigue & Modified Goodman Sieve)."
+    },
+    {
+      "code": "A10",
+      "action": "Monitor progressing cavity pump (PCP) reactive torque & stator elastomer swell in heavy crude",
+      "source": "[ISO-15136 §3]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1–2 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Progressing Cavity Pump (PCP) Reactive Torque & Stator Swell Triage (B1, [ISO-15136 §3])",
+      "today": "Specialist tracks hydraulic head, drive head RPM, and surface torque on PCP wells producing heavy crude, looking for signs that aromatic hydrocarbons are swelling the nitrile stator elastomer.",
+      "failureMode": "Swelling stator elastomer chokes the rotor; excessive friction spikes reactive torque, snapping the rod string or burning out the top drive motor.",
+      "agentNote": "→ See §4 (Agent 6: Progressing Cavity Pump (PCP) Elastomer Swell & Reactive Torque Sieve)."
+    },
+    {
+      "code": "A11",
+      "action": "Physically inspect pulled pump impellers, bearings & parted rod pins in vendor workshop",
+      "source": "[API-RP-11S §8]",
+      "scope": "well",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "3–5 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Specialist Teardown)",
+      "label": "Physical Pump Teardown Inspection in Workshop (B3, [API-RP-11S §8])",
+      "today": "Specialist extracts historical pull tickets from SAP PM, matches them with scanned PDF teardown reports, and spends days updating run-life Weibull curves and drafting new replacement pump specifications.",
+      "agentNote": "→ See §4 (Agent 7: Artificial Lift Workover Scope & Teardown Failure Taxonomy Synthesizer).",
+      "failureMode": "Failing to synthesize failure trends leads to replacing a failed pump with the exact same metallurgy or pump stage design, guaranteeing another failure within 90 days."
+    },
+    {
+      "code": "A12",
+      "action": "Track artificial lift Mean Time Between Failures (MTBF) & classify pull causes per API standards",
+      "source": "[API-RP-11S §7]",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "4–6 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A13",
+      "action": "Synthesize downhole replacement artificial lift design specifications & workover pulling procedure",
+      "source": "Practitioner",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "3–5 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔"
+    },
+    {
+      "code": "A14",
+      "action": "Conduct daily morning coordination call with field pumper crew to review tripped wells",
+      "source": "Practitioner",
+      "scope": "field",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "1–2 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Pumper Lead)",
+      "label": "Daily Morning Field Coordination Meeting (B3, Practitioner)",
+      "today": "Specialist meets with the production superintendent, field foreman, and lead pumpers to review the priority list of down wells and assign repair crews.",
+      "agentNote": "❌ No. Human operational leadership, crew coordination, and work permit alignment."
+    },
+    {
+      "code": "A15",
+      "action": "Size new artificial lift installations for newly drilled or transitioning wellbores",
+      "source": "[API-RP-11L §3]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "6–8 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (AutographPC / Sizing)",
+      "label": "New Artificial Lift Sizing & Selection (B2, [API-RP-11L §3])",
+      "today": "Artificial lift design engineers use vendor software (AutographPC, DesignPro) to size new pumps and motor configurations for newly completed wells.",
+      "agentNote": "❌ No. Heavyweight engineering design suite owned by specialized design monoliths."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Sucker Rod Dynamometer Card Geometric Classifier & Fluid Pound Sieve",
+      "oneLine": "Ingests surface load-position curves, verifies Gibbs 1D wave equation downhole pump cards, and geometrically classifies failure shapes: fluid pound, gas interference, parted rods, traveling/standing valve leakage, and pump friction.",
+      "frictionSolved": "Eliminates 4.00 hours per morning of manual screen scrolling and visual fatigue across 300 beam-pumped wells, catching mechanical distress before rod strings part.",
+      "reads": "High-frequency surface polished rod load-position coordinates, downhole pump dyno cards (from XSPOC/ForeSite), pump-off controller (POC) run times, stroke length, and strokes per minute (SPM).",
+      "does": "1. Evaluates downhole card geometry against mathematical baseline envelopes; 2. Classifies pump card shapes into verified failure modes: full fillage, severe fluid pound, gas interference / gas locking, parted rod string, worn traveling valve, worn standing valve, delayed unseating, or mechanical sticking; 3. Quantifies downhole pump fillage percentage and calculates impact force severity during fluid pound; 4. Evaluates POC pump-off timer setpoints, recommending optimal run-time delays to allow fluid re-entry without pounding the pump barrel.",
+      "returns": "Prioritized Rod Pump Morning Exception Queue displaying diagnosed failure modes, severity ranking, fillage percentages, and automated POC timer adjustment recommendations.",
+      "stopsAt": "Remotely writing setpoint changes to field POCs or changing motor VFD frequencies.",
+      "failureModes": "If transducer signal loss causes a flatlined or distorted surface card, the agent tags the well as [Transducer Signal Distortion: Wellsite Load Cell Calibration Required].",
+      "agentId": "OG-P25-A01"
+    },
+    {
+      "n": 2,
+      "name": "ESP Electrical Telemetry, Thermal Runaway & Underload Trip Diagnostic Sieve",
+      "oneLine": "Continuously monitors high-frequency ESP downhole sensor packages and surface VFD telemetry to diagnose underload, overload, and thermal runaway events, preventing fatal premature wellsite restarts.",
+      "frictionSolved": "Eliminates 3.15 hours of manual electrical chart sifting and telemetry cross-referencing across 50 high-rate ESP installations, preventing motor winding burnouts.",
+      "reads": "ESP downhole sensor telemetry (intake pressure, discharge pressure, motor winding temperature, internal motor vibration X/Y/Z, leakage current) and surface VFD data (motor current, voltage unbalance, operating frequency, drive load, power factor).",
+      "does": "1. Monitors rate of motor winding temperature rise (ΔT / Δt) against safe insulation limits (150^circC to 200^circC class ratings); 2. In the event of a VFD trip, evaluates pre-trip electrical signatures to diagnose root cause: underload due to pump-off vs. underload due to gas locking vs. sheared drive shaft vs. motor overload from sand/scale slugging vs. phase-to-ground electrical short; 3. Cross-references pump intake pressure trends against bubble point pressure (Pb) to verify multiphase gas breakout; 4. Evaluates restart safety criteria: verifies that the motor has cooled below thermal reset thresholds, checks power cable insulation resistance (megger trend), and confirms fluid level recovery.",
+      "returns": "ESP Diagnostic & Restart Clearance Dossier detailing trip root cause, downhole sensor health score, and an explicit [Restart Cleared] or [Restart Prohibited — High Risk of Burnout] recommendation.",
+      "stopsAt": "Remotely closing the motor starter breaker or clearing VFD trip lockouts.",
+      "failureModes": "If an ESP trips on motor overload with elevated vibration (>2.0 g) or high leakage current (>10 mA), the agent applies an immediate [Electrical Isolation Advisory: Do Not Restart Without Megger Test].",
+      "agentId": "OG-P25-A02"
+    },
+    {
+      "n": 3,
+      "name": "Beam Pumping Unit Gearbox Torque & Counterbalance Sieve",
+      "oneLine": "Evaluates surface polished rod load profiles against beam pumping unit geometry, calculating net gearbox torque throughout 360° crank rotation, identifying torque overload, and computing exact counterweight adjustment positions.",
+      "frictionSolved": "Removes 2.70 hours per battery review of manual trigonometric torque factor calculations, preventing catastrophic gear reducer tooth failure and dropped weights.",
+      "reads": "Surface dynamometer cards, pumping unit geometry specifications (API conventional, Mark II, air-balanced unit codes), structural unbalance (B), crank counterweight master tables, and motor nameplate power.",
+      "does": "1. Computes instantaneous torque factors (TFi) at 15-degree crank angle increments (0^circ to 360^circ); 2. Calculates net cyclic gearbox torque: Tnet(θ) = [W(θ) - B] ×TF(θ) - M ×sin(θ+ τ); 3. Compares peak net torque against the manufacturer's API gearbox rating, calculating peak torque percentage; 4. Determines whether the unit is structurally rod-heavy or counterweight-heavy; 5. Calculates the exact distance in inches to slide crank counterweights to achieve perfect mechanical balance.",
+      "returns": "Gearbox Torque & Mechanical Balance Report showing torque curves across crank angle rotation, peak torque percentage, motor electrical cyclic load factor, and exact counterweight repositioning distances.",
+      "stopsAt": "Authorizing physical counterweight movement on the wellpad without mechanical lockout/tagout (LOTO).",
+      "failureModes": "If calculated peak net torque exceeds 110% of the API gear reducer rating, the agent flags an immediate [Severe Gearbox Overload Alert: Risk of Gear Reducer Failure].",
+      "agentId": "OG-P25-A03"
+    },
+    {
+      "n": 4,
+      "name": "Continuous Gas Lift Allocation, Multi-Pointing & Orifice Stability Sieve",
+      "oneLine": "Monitors casing injection pressure, tubing head pressure, and gas injection rates across gas-lift manifolds; calculates operating point stability to detect multi-pointing, casing heading instability, or valve throttling.",
+      "frictionSolved": "Eliminates 2.25 hours of manual manifold inspection and pressure chart cross-checking across 30 gas-lift wells, preventing wasted compressor horsepower and lost lift efficiency.",
+      "reads": "Casing injection pressure (Pinj), tubing head flowing pressure (Pth), gas injection rate (Qinj), wellhead temperature, and downhole gas-lift completion schematics (mandrel depths, valve port sizes, opening/closing pressures).",
+      "does": "1. Calculates pressure drops across downhole gas-lift mandrels using acoustic velocity and Thornhill-Craver orifice flow equations; 2. Identifies multi-pointing: detects when injection gas is leaking through upper unloading valves rather than injecting exclusively through the bottom operating orifice; 3. Evaluates casing heading: calculates the Asheim stability criterion to detect cyclic pressure surging between the casing annulus and production tubing; 4. Identifies valve throttling vs. critical flow across the operating orifice; 5. Benchmarks actual gas injection volume against nodal IPM Prosper gas-lift allocation curves.",
+      "returns": "Gas Lift Manifold Diagnostic Report detailing injection point depths, multi-pointing detection flags, flow stability status, and surface injection choke trim recommendations.",
+      "stopsAt": "Actuating surface gas-lift injection control valves or changing field compressor discharge pressures.",
+      "failureModes": "If pressure signatures indicate that gas injection has shifted above a shallow unloading valve located within 500 ft of the surface, the agent flags [Severe Gas Lift Inefficiency: Upper Valve Leakage].",
+      "agentId": "OG-P25-A04"
+    },
+    {
+      "n": 5,
+      "name": "Rod String Taper Stress Fatigue & Modified Goodman Sieve",
+      "oneLine": "Evaluates peak and minimum polished rod loads across multi-taper rod strings, mapping cyclic tensile stress profiles against Modified Goodman diagram fatigue envelopes to flag rod sections approaching structural failure.",
+      "frictionSolved": "Eliminates 2.25 hours of manual spreadsheet stress calculations and taper geometry cross-referencing per 20-well pad, preventing downhole rod part fishing jobs.",
+      "reads": "Polished rod load profiles (PPRL, MPRL), rod string taper design records (length, diameter, and steel grade—e.g., API Grade D, KD, high-strength alloy, or fiberglass tapers), downhole pump depth, and well fluid density.",
+      "does": "1. Calculates static and dynamic load distributions across each taper section of the rod string; 2. Computes maximum tensile stress (σmax) and minimum tensile stress (σmin) at the top of each rod taper; 3. Calculates the allowable working stress (σallow) using the API Modified Goodman equation adjusted for service factor (corrosion derating): σallow = ≤ft( Su / 1.75 + 0.5625 σmin right) ×SF; 4. Computes rod stress utilization percentages (σmax / σallow ×100%); 5. Identifies specific rod sections operating above 100% fatigue limits or experiencing cyclic compression (buckling).",
+      "returns": "Rod String Fatigue & Taper Stress Scorecard displaying stress profiles across every rod size, Modified Goodman envelope plots, and rod replacement recommendations.",
+      "stopsAt": "Authorizing rod string redesign or altering pumping unit stroke length without engineering sign-off.",
+      "failureModes": "If calculated stress on any rod taper exceeds 105% of allowable Goodman stress or indicates downhole rod compression during the downstroke, the agent flags [Critical Rod Fatigue: Imminent Part Risk].",
+      "agentId": "OG-P25-A05"
+    },
+    {
+      "n": 6,
+      "name": "Progressing Cavity Pump (PCP) Elastomer Swell & Reactive Torque Sieve",
+      "oneLine": "Monitors progressing cavity pump (PCP) hydraulic head, rod string torque, and motor speed, correlating temperature and aromatic crude chemistry to detect stator elastomer swell, dry running, and impending rod twist-offs.",
+      "frictionSolved": "Removes 1.80 hours per heavy oil cluster review of manual torque chart auditing and fluid property matching across 20 PCP wells.",
+      "reads": "PCP drive head surface torque, motor RPM, polish rod axial load, wellhead fluid temperature, pump intake pressure, and laboratory fluid chemistry (API gravity, aromatic content, sand cut).",
+      "does": "1. Monitors reactive drive torque against normal operating torque envelopes; 2. Detects stator elastomer swelling: identifies steady upward creep in drive torque accompanied by rising motor amperage under constant pump speed; 3. Detects dry running: flags sudden loss of intake fluid pressure combined with erratic torque fluctuations; 4. Evaluates sand accumulation: detects sharp torque spikes caused by sand bridging between rotor and stator lobes; 5. Calculates mechanical pump efficiency: compares theoretical displacement against measured surface liquid production.",
+      "returns": "PCP Mechanical Integrity Scorecard detailing torque utilization, elastomer condition indices, sand slugging warnings, and drive speed optimization advisories.",
+      "stopsAt": "Remotely changing PCP drive head motor speeds or shutting down wellhead hydraulic power units.",
+      "failureModes": "If reactive drive torque exceeds 90% of rod string yield torque or surface temperature spikes by >15^circC indicating dry running, the agent flags an immediate [PCP Stator Failure Threat: Immediate Speed Reduction Advisory].",
+      "agentId": "OG-P25-A06"
+    },
+    {
+      "n": 7,
+      "name": "Artificial Lift Workover Scope & Teardown Failure Taxonomy Synthesizer",
+      "oneLine": "Ingests CMMS work orders, pulling unit daily logs, well fluid chemistry, and vendor teardown tear-sheets to synthesize standardized root-cause failure taxonomy, update MTBF curves, and generate replacement pump pulling packages.",
+      "frictionSolved": "Eliminates 4.50 hours per workover campaign of unstructured document extraction, scanned tear-sheet review, and manual workover procedure drafting across 10 failed wells.",
+      "reads": "CMMS (SAP PM / Maximo) equipment records, pulling unit daily tickets, vendor workshop teardown reports (scanned PDFs), historical production chemistries (H2S, CO2, sand cut, scale analysis), and run-life logs.",
+      "does": "1. Extracts failed downhole components (e.g., motor pothead electrical failure, stage erosion, gas separator cavitation, rod coupling fatigue break, torn stator elastomer); 2. Classifies failure causes according to API RP 11S / 11L standardized failure codes; 3. Calculates field-wide and manufacturer-specific Mean Time Between Failures (MTBF) and Weibull survival distributions; 4. Identifies systemic design vulnerabilities (e.g., repeated gas erosion in a specific formation layer); 5. Synthesizes a standardized Workover Pulling & Replacement Specification package recommending upgraded metallurgy, stage count, or alternative lift types.",
+      "returns": "Artificial Lift Teardown Reliability Dossier and Workover Procedure Package containing standardized root-cause classification, asset MTBF benchmarks, and replacement hardware design sheets.",
+      "stopsAt": "Authorizing procurement purchase orders or issuing commercial warranty dispute claims to pump vendors.",
+      "failureModes": "If a well experiences repeat pump failure within <90 days of installation, the agent flags the well as [Infant Mortality: Mandatory Multidisciplinary Root-Cause Review Required].",
+      "agentId": "OG-P25-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never multiply into speculative enterprise rupee or dollar totals. The operating asset provides its own well count, lift distribution, and failure rate multipliers.",
+    "rows": [
+      {
+        "agent": "Sucker Rod Dyno Card Geometric Classification & Fluid Pound Sieve",
+        "unit": "1 Field Lift Estate (300 active rod pump wells)",
+        "beforeHours": 4.5,
+        "afterHours": 0.5,
+        "savedHours": 4.0,
+        "frictionRemoved": "High-Volume Visual Screening Fatigue"
+      },
+      {
+        "agent": "ESP High-Frequency Telemetry & Thermal Trip Diagnosis",
+        "unit": "1 Asset Portfolio (50 high-rate ESP installations)",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "Multi-Stream Sensor Sifting & Trip Analysis Drag"
+      },
+      {
+        "agent": "Beam Pumping Gearbox Torque & Counterbalance Sieve",
+        "unit": "1 Battery Review (25 pumping units)",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Trigonometric Torque Math & Manual Balancing"
+      },
+      {
+        "agent": "Gas Lift Manifold Multi-Pointing & Orifice Stability Sieve",
+        "unit": "1 Gas Lift Gathering Manifold (30 gas-lift wells)",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Pressure Differential Auditing & Orifice Stability Math"
+      },
+      {
+        "agent": "Rod String Taper Cyclic Stress & Goodman Fatigue Sieve",
+        "unit": "1 Multi-Well Pad Review (20 deep rod-pumped wells)",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Spreadsheet Fatigue Stress & Envelope Checking"
+      },
+      {
+        "agent": "PCP Elastomer Swell & Reactive Torque Sieve",
+        "unit": "1 Heavy Oil Well Cluster (20 PCP installations)",
+        "beforeHours": 2.0,
+        "afterHours": 0.2,
+        "savedHours": 1.8,
+        "frictionRemoved": "Manual Torque Chart Auditing & Swell Diagnostics"
+      },
+      {
+        "agent": "Workover Pull Scope & Teardown Failure Dossier Synthesis",
+        "unit": "1 Weekly Workover Campaign (10 pull candidates)",
+        "beforeHours": 5.0,
+        "afterHours": 0.5,
+        "savedHours": 4.5,
+        "frictionRemoved": "Unstructured PDF Extraction & Procedure Drafting Drag"
+      }
+    ],
+    "total": {
+      "unit": "Per Daily / Weekly Lift Surveillance Cycle",
+      "beforeHours": 23.0,
+      "afterHours": 2.35,
+      "savedHours": 20.65,
+      "frictionRemoved": "89.8% reduction in artificial lift engineering surveillance drag",
+      "label": "Total Operational Surveillance Drag Reduction"
+    }
+  },
+  "citations": [
+    {
+      "key": "[API-RP-11L]",
+      "citation": "American Petroleum Institute, Recommended Practice for Design Calculations for Sucker Rod Pumping Systems, 5th Edition, 2018",
+      "locator": "api.org",
+      "type": "Recommended Practice",
+      "supports": "Sucker rod pumping design, dyno card interpretation, and modified Goodman stress limits"
+    },
+    {
+      "key": "[API-RP-11S]",
+      "citation": "American Petroleum Institute, Recommended Practice for the Operation, Maintenance, and Troubleshooting of Electric Submersible Pump Installations, 3rd Edition, 2020",
+      "locator": "api.org",
+      "type": "Recommended Practice",
+      "supports": "ESP electrical troubleshooting, thermal limits, restart guidelines, and failure teardowns"
+    },
+    {
+      "key": "[ISO-15136]",
+      "citation": "International Organization for Standardization, Petroleum and Natural Gas Industries — Progressing Cavity Pump Systems for Artificial Lift, ISO 15136-1/2, 2019",
+      "locator": "iso.org",
+      "type": "International Standard",
+      "supports": "PCP mechanical ratings, elastomer swelling behavior, and drive torque limits"
+    },
+    {
+      "key": "[Gibbs-Dyno]",
+      "citation": "Gibbs, S. G., Predicting the Behavior of Sucker Rod Pumping Systems, Journal of Petroleum Technology, SPE-588, 2019",
+      "locator": "OnePetro",
+      "type": "Technical Classic",
+      "supports": "Mathematical formulation of the 1D damped wave equation for downhole pump card derivation"
+    },
+    {
+      "key": "[API-Spec-11E]",
+      "citation": "American Petroleum Institute, Specification for Pumping Units, 19th Edition, 2019",
+      "locator": "api.org",
+      "type": "Industry Specification",
+      "supports": "Beam pumping unit geometry, torque factors, and gear reducer load ratings"
+    },
+    {
+      "key": "[SPE-GasLift]",
+      "citation": "Society of Petroleum Engineers, Gas Lift Optimization and Troubleshooting Best Practices, SPE Monograph Series, 2017",
+      "locator": "OnePetro",
+      "type": "Technical Monograph",
+      "supports": "Orifice stability criteria, multi-pointing detection, and casing heading mechanics"
+    },
+    {
+      "key": "[SPE-181232]",
+      "citation": "Society of Petroleum Engineers, Machine Learning for Automated Dynamometer Card Triage in Large Brownfields, SPE-181232-MS, 2016",
+      "locator": "DOI: 10.2118/181232-MS",
+      "type": "Technical Paper",
+      "supports": "Baseline metrics on manual dyno card triage fatigue and classification accuracy"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Commercial artificial lift software (ChampionX XSPOC, Weatherford ForeSite, SLB Lift IQ, Baker Hughes Vision) for \"autonomous unified cross-vendor exception triage engine combining rod pump downhole dyno cards with ESP high-frequency electrical telemetry into a single prioritized queue\".",
+    "result": "Negative Search, 2026-09. Commercial suites operate in proprietary hardware silos; none autonomously ingest multi-vendor rod pump, ESP, gas lift, and PCP telemetry streams to produce a single prioritized, cross-lift diagnostic exception queue without human specialist navigation across separate software applications."
+  },
+  "line": "\"An artificial lift engineer's value is not in spending four hours every morning clicking through three hundred identical dynamometer cards; their value is in catching the single rod pump that started hitting fluid pound before it snaps a twenty-thousand-dollar rod string downhole.\"",
+  "openQuestions": []
+}

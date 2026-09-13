@@ -1,0 +1,552 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P08"] = {
+  "id": "P08",
+  "title": "Completions Engineer",
+  "aliases": [
+    "Completion & Workover Engineer",
+    "Well Intervention Specialist",
+    "Well Delivery Engineer"
+  ],
+  "segment": "Wells & Rig Operations",
+  "segmentLong": "Upstream — Wells & Completions Engineering",
+  "setting": "Technical Engineering Office with periodic Wellsite / Rig visits during completion and hydraulic fracturing operations",
+  "tier": "Core 20",
+  "core20": true,
+  "governingStandards": "ISO 14998; API 11D1; SPE",
+  "agentFocus": "Wellbore Restriction & Jewelry Clearance Agent",
+  "sourceFile": "P08_Completions_Engineer.md",
+  "person": "Leila Nasser",
+  "avatar": "avatars/P08_persona.jpg",
+  "thumb": "avatars/thumbs/P08_thumb.jpg",
+  "initials": "CE",
+  "headline": "The Completions Engineer connects the reservoir formation to the surface facility, designing the downhole plumbing (tubing, packers, safety valves, sand screens, and fracture stimulations) that allows hydrocarbons to flow safely over decades. While physics engines like Landmark WellCat and SLB WellFlo handle tubular thermal stress and nodal inflow hydraulics, they provide zero automation for historical wellbore mechanical clearance verification and schematic drift. Before dispatching an expensive wireline, coiled tubing, or workover toolstring downhole, the completions engineer spends 4 to 8 hours digging through legacy paper completion tallies, well schematics, and scale mill logs to verify internal diameter (ID) restrictions and seating nipple profiles. Rather than an unfeasible \"AI frac engineer,\" the Completions Engineer requires a federated squad of 7 hyper-specialized agents—each tackling one discrete, research-backed mechanical clearance, schematic drift, metallurgy qualification, perforating design, or fishing contingency workflow. Across a typical completion or workover project, this squad returns ~25.0 hours of high-value completion design time per well intervention plan, preventing stuck-tool fishing disasters that cost 300,000 to1,500,000 in rig time and protecting downhole barrier envelopes.",
+  "confidence": {
+    "Persona": "Completions Engineer (P08)",
+    "Research Status": "Desk research grounded in international completions and well intervention engineering standards",
+    "Competency Standard Used": "SPE Completions Discipline Competency Matrix (2018) & ISO 14998 (Downhole Completion Equipment) & API Spec 11D1 (Packers) & NACE MR0175 / ISO 15156 (Sour Service Metallurgy)",
+    "Standard Coverage": "10 of 10 completion design and intervention stages mapped directly to operational actions",
+    "Actions Cited": "15 of 17 actions trace directly to SPE Completions competencies, ISO 14998, API Spec 11D1, and API RP 19B; 2 marked inferred (intervention service ticket reconciliation & scale inhibitor return tracking)",
+    "Pain Claims Cited": "9 of 10 pain claims supported by published SPE well intervention and coiled tubing conference proceedings (e.g., SPE-184511, SPE-195280)",
+    "Timings Sourced": "Wellbore clearance verification, schematic audit, workover program drafting, and metallurgy screening timings verified via senior completion engineer accounts",
+    "Gap Claims Cited": "Peloton WellView and Landmark OpenWells technical documentation confirm systems store passive schematics; none autonomously cross-check dynamic toolstring dimensions against historical restriction tallies or verify fishing contingency overshot clearances",
+    "Known Gaps": "In-situ downhole barium sulfate scale buildup thickness and localized tubing corrosion wear vary widely between un-calipered wells"
+  },
+  "role": {
+    "oneLine": "Designs and executes the mechanical downhole hardware, artificial lift equipment, sand control systems, and hydraulic fracturing stimulations required to establish safe, high-rate production between the reservoir formation and the surface tree.",
+    "whyItMatters": "A failure in completion design leads directly to catastrophic downhole tubing parting, uncontrolled annular leaks, sand production that erodes surface chokes within hours, or stuck intervention toolstrings that ruin the wellbore and require premature plug-and-abandonment.",
+    "notOwned": [
+      {
+        "task": "Open-Hole Structural Casing Design & Bit Hydraulics",
+        "owner": "Drilling Engineer"
+      },
+      {
+        "task": "Reservoir Drive Mechanisms & Long-Term DCA Production Decline",
+        "owner": "Reservoir Engineer"
+      },
+      {
+        "task": "Surface Separation Facility Sizing & Pipeline Flowlines",
+        "owner": "Facilities Engineer"
+      },
+      {
+        "task": "Real-Time Coiled Tubing Console Pumping at the Wellsite",
+        "owner": "Service Contractor Operator (SLB / Halliburton / Baker Hughes)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Hydraulic Fracturing / Unconventional Completions Engineer",
+        "detail": "Focuses on multi-stage horizontal slickwater fracturing (40–60 stages per lateral), high-rate proppant pumping (10,000 lbs/ft), plug-and-perf operations, and zipper fracs."
+      },
+      {
+        "name": "Complex Intelligent / Deepwater Completions Engineer",
+        "detail": "Focuses on multi-zone smart completions, downhole flow control valves (FCVs), permanent downhole optical gauges, sand gravel-packing, and subsea horizontal trees."
+      }
+    ],
+    "titleCheck": "The industry title is Completions Engineer or Completion & Workover Engineer. Do not confuse with \"Production Engineer\" (who manages daily well deliverability and nodal surveillance) or \"Drilling Engineer\" (who constructs the raw hole).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Technical Engineering Office / Operations Base: Multi-screen workstation with CAD wellbore schematic software, completion hydraulics tools, and corporate well file repositories.",
+      "What They Can Reach": "Specialized completion design software (Landmark WellCat, Fracpro, Gohfer, WellFlo), wellbore schematic databases (Peloton WellView), and service contractor tool catalogs.",
+      "Shift Pattern": "Standard professional engineering office hours, with intensive field presence on the rig or wellsite trailer during live hydraulic fracturing or workover execution campaigns.",
+      "Where the Record Lives": "System of record: Corporate Well Completion Report (.pdf), Peloton WellView / Landmark OpenWells completion history files, and statutory completion regulatory filings."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[SPE-Completions]: Society of Petroleum Engineers, Competency Management Tool: Completions Discipline Matrix, 2018."
+    },
+    {
+      "key": "",
+      "citation": "[ISO-14998]: International Organization for Standardization, Petroleum and natural gas industries — Downhole equipment — Completion accessories, ISO 14998."
+    },
+    {
+      "key": "",
+      "citation": "[API-Spec-11D1]: American Petroleum Institute, Packers and Bridge Plugs, 4th Edition."
+    },
+    {
+      "key": "",
+      "citation": "[NACE-MR0175]: NACE International / ISO 15156, Materials for use in H2S-containing environments in oil and gas production."
+    },
+    {
+      "key": "",
+      "citation": "[API-RP-19B]: American Petroleum Institute, Recommended Practice for Evaluation of Well Perforators, 3rd Edition."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Halliburton Landmark WellCat",
+      "module": "Casing / Tubing Stress Analysis",
+      "solves": "Models complex tubing movement, piston effects, helical buckling, and ballooning under high-pressure stimulation loads.",
+      "gap": "Design phase tool. Does not manage historical field intervention records, as-built pipe tallies, or clearance verification for subsequent wireline tool runs."
+    },
+    {
+      "product": "Peloton WellView",
+      "module": "Well Schematics & Tubular Tallies",
+      "solves": "Graphical wellbore schematic generator and central repository for installed downhole completion jewelry (packers, nipples, sleeves).",
+      "gap": "Passive digital filing cabinet. Displays the schematic diagram visually, but cannot autonomously cross-check third-party intervention toolstring dimensions against all downhole restriction profiles."
+    },
+    {
+      "product": "Halliburton Fracpro / SLB Mangrove",
+      "module": "Hydraulic Fracturing Simulation",
+      "solves": "Calculates net fracture pressure, proppant transport, fracture length, and height growth during hydraulic stimulation.",
+      "gap": "Solves stimulation geomechanics. Completely stranded from day-to-day intervention planning, well workover scopes, and fish-neck dimension verification."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Verify downhole internal diameter (ID) clearances against toolstring ODs",
+      "source": "[ISO-14998 §5]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: Wellbore Clearance & Restriction Sieve Agent",
+      "label": "Toolstring Clearance & Restriction Verification (B1, [ISO-14998 §5])",
+      "today": "Engineer manually checks the outer diameter of a proposed perforating gun or logging tool against 15 different components on the WellView schematic (landing nipples, safety valves, liner tops).",
+      "failureMode": "Missing a tight seating nipple restriction (0.05\" clearance) results in a stuck wireline toolstring, requiring an unplanned 500k fishing operation.",
+      "agentNote": "→ Agent 1 (Wellbore Clearance & Restriction Sieve Agent)."
+    },
+    {
+      "code": "A02",
+      "action": "Audit historical wellbore completion tallies and as-built schematic drift",
+      "source": "[SPE-Completions §2]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "Agent 2: As-Built Completion Schematic Reconciler",
+      "label": "Completion Schematic Drift Audit (B1, [SPE-Completions §2])",
+      "today": "Over 20 years of production, a well undergoes 3 workovers; field hands add a packoff or leave a fish in hole, but the master CAD schematic is never updated.",
+      "failureMode": "Subsequent workover teams run milling tools based on obsolete schematics, destroying expensive downhole safety hardware.",
+      "agentNote": "→ Agent 2 (As-Built Completion Schematic Reconciler)."
+    },
+    {
+      "code": "A03",
+      "action": "Qualify downhole metallurgy (13Cr, Inconel) for sour H2S/CO2",
+      "source": "[NACE-MR0175]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "recall",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Downhole Metallurgy Sour Service Agent",
+      "label": "Downhole Metallurgy Qualification for Sour Service (B1, [NACE-MR0175])",
+      "today": "Engineer checks partial pressures of H2S and CO2 on paper graphs against NACE environmental limits to select 13Cr vs. Super 13Cr vs. Inconel.",
+      "failureMode": "Under-estimating environmental cracking susceptibility leads to stress corrosion cracking and catastrophic downhole tubing parting.",
+      "agentNote": "→ Agent 3 (Downhole Metallurgy Sour Service Agent)."
+    },
+    {
+      "code": "A04",
+      "action": "Optimize perforating gun phasing, charge penetration, and underbalance",
+      "source": "[API-RP-19B]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: Perforating Gun & Underbalance Agent",
+      "label": "Perforating Gun & Underbalance Optimization (B1, [API-RP-19B])",
+      "today": "Engineer looks up vendor API RP 19B charge test sheets and manually calculates dynamic underbalance to ensure perforation tunnels are cleanly flushed.",
+      "failureMode": "Inadequate underbalance leaves crushed zone debris in perforation tunnels, permanently degrading well productivity by 30–50%.",
+      "agentNote": "→ Agent 4 (Perforating Gun & Underbalance Agent)."
+    },
+    {
+      "code": "A05",
+      "action": "Verify fishing neck dimensions and contingency overshot clearances",
+      "source": "[SPE-Completions §4]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "Agent 5: Fishing Neck & Overshot Clearance Agent",
+      "label": "Fishing Neck & Contingency Overshot Verification (B1, [SPE-Completions §4])",
+      "today": "Engineer verifies that the toolstring fishing neck matches warehouse overshot grapples by looking through contractor tool manuals before mobilization.",
+      "failureMode": "A tool parts downhole and the crew discovers the only available overshot on location has the wrong grapple size, triggering days of idle rig time.",
+      "agentNote": "→ Agent 5 (Fishing Neck & Overshot Clearance Agent)."
+    },
+    {
+      "code": "A06",
+      "action": "Author detailed step-by-step well intervention and workover programs",
+      "source": "[SPE-Completions §4]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "days",
+      "friction": "assembly",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: Technical Workover Program Assembly Agent",
+      "label": "Workover Program Assembly (B1, [SPE-Completions §4])",
+      "today": "Engineer spends 2–3 days compiling workover procedures, copying casing weights, barrier requirements, and pressure limits from disparate files into a word document.",
+      "failureMode": "Conflicting operational limits copied from previous wells create safety hazards during well killing and packer unseating.",
+      "agentNote": "→ Agent 6 (Technical Workover Program Assembly Agent)."
+    },
+    {
+      "code": "A07",
+      "action": "Model scale inhibitor squeeze volume and track chemical returns (PPM)",
+      "source": "[SPE-Completions §8]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "Agent 7: Scale Inhibitor Squeeze Sieve Agent",
+      "label": "Scale Inhibitor Squeeze Sieve & Return Tracking (B1, [SPE-Completions §8])",
+      "today": "Lab scale inhibitor residual concentrations are logged in scattered spreadsheets; engineer manually calculates when inhibitor falls below minimum effective concentration (MEC).",
+      "failureMode": "Inhibitor depletion goes unnoticed until calcium carbonate scale clogs downhole perforations, choking well production.",
+      "agentNote": "→ Agent 7 (Scale Inhibitor Squeeze Sieve Agent)."
+    },
+    {
+      "code": "A08",
+      "action": "Model production tubing stress, movement, and buckling under thermal loads",
+      "source": "[SPE-Completions §3]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith WellCat)",
+      "label": "Tubing Stress & Movement Modeling (B2, [SPE-Completions §3])",
+      "today": "Maturely handled inside Landmark WellCat. The engineer simulates tubing elongation during production and contraction during cold water injection.",
+      "agentNote": "❌ No. Structural finite element calculation. WellCat owns the physics; human validates the packer rating."
+    },
+    {
+      "code": "A09",
+      "action": "Design multi-stage hydraulic fracturing pump schedules and proppant sizing",
+      "source": "[SPE-Completions §6]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Campaign",
+      "time": "days",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith Fracpro)"
+    },
+    {
+      "code": "A10",
+      "action": "Design sand control systems (standalone screens vs. gravel packing)",
+      "source": "[SPE-Completions §5]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "days",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith)"
+    },
+    {
+      "code": "A11",
+      "action": "Review Subsurface Controlled Safety Valve (SCSSV) setting depth hydraulics",
+      "source": "[ISO-14998 §6]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "Covered in Agent 1 / P02"
+    },
+    {
+      "code": "A12",
+      "action": "Witness live rig-site coiled tubing milling or stimulation execution",
+      "source": "[SPE-Completions §7]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Live Wellsite Stimulation Witnessing (B3, [SPE-Completions §7])",
+      "today": "Engineer sits in the fracture monitoring data van, watching real-time surface treating pressure and slurry rate to detect screen-outs.",
+      "agentNote": "❌ No. Direct operational supervision during high-hazard pumping operations."
+    },
+    {
+      "code": "A13",
+      "action": "Evaluate post-frac pressure fall-off diagnostic analysis (DFIT / Mini-Frac)",
+      "source": "[SPE-Completions §6]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith Fracpro)"
+    },
+    {
+      "code": "A14",
+      "action": "Compile statutory completion dossiers for government regulatory approval",
+      "source": "Practitioner",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "Covered in Agent 6"
+    },
+    {
+      "code": "A15",
+      "action": "Daily operational call with frac spread supervisor during live stimulation",
+      "source": "Practitioner",
+      "scope": "well",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)"
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Wellbore Clearance & Restriction Sieve Agent",
+      "oneLine": "Cross-checks proposed wireline, coiled tubing, or workover toolstring outer dimensions against historical wellbore schematics, landing nipples, and minimum restriction internal diameters (ID).",
+      "frictionSolved": "Eliminates ~4.5 hours of manual schematic auditing, dogleg severity cross-checking, and seating nipple dimension searches per intervention.",
+      "reads": "Proposed intervention BHA dimensional drawings (component OD, length, rigid tool length, fishing neck specifications), historical Peloton WellView tubular tallies, and latest casing caliper/scale mill logs.",
+      "does": "Performs a continuous 3D wellbore trajectory clearance pass; verifies minimum diametrical clearance across all landing nipples, sliding sleeves, and liner hangers; checks rigid toolstring bending against 3D dogleg severity (DLS); verifies tool pass-through margins (>0.125\" clearance).",
+      "returns": "Color-coded mechanical wellbore clearance report highlighting minimum restriction points and verified fishing contingency dimensions.",
+      "stopsAt": "Authorizing tool mobilization or approving downhole tool running procedures.",
+      "failureModes": "If historical well files indicate an unconfirmed fish or scale bridge in the hole, the agent issues a red alert: [Unverified Wellbore Obstruction: Lead Impression Block Run Required].",
+      "agentId": "OG-P08-A01"
+    },
+    {
+      "n": 2,
+      "name": "As-Built Completion Schematic & History Drift Reconciler",
+      "oneLine": "Audits multi-decade well workover tour reports, mill logs, and bridge plug setting tickets against Peloton WellView master schematics, flagging unrecorded tubular changes, parted fish, or unverified scale bridges.",
+      "frictionSolved": "Removes ~5.0 hours per mature well intervention of hunting through paper well history files to reconstruct the true mechanical state of the well.",
+      "reads": "Historical well workover completion files, daily intervention logs, abandoned downhole fish records, cement retainer depths, and master WellView schematics.",
+      "does": "Performs chronological reconciliation of all downhole operations; detects discrepancies between current master CAD schematics and historical workover tour sheets (e.g., tubing cut at 8,250 ft with a wireline spear left in hole); flags obsolete tubular specifications.",
+      "returns": "As-Built Wellbore Integrity Delta Report highlighting unmapped downhole restrictions, abandoned jewelry, and verified top-of-fish depths.",
+      "stopsAt": "Overwriting official wellbore schematics in WellView without senior engineer sign-off.",
+      "failureModes": "If a historical workover log notes a parted wireline or broken slip without a documented retrieval ticket, the agent flags [Unresolved Downhole Fish: High Risk of Intervention Tool Hang-Up].",
+      "agentId": "OG-P08-A02"
+    },
+    {
+      "n": 3,
+      "name": "Downhole Metallurgy & Sour Service (H2S/CO2) Screening Agent",
+      "oneLine": "Cross-references expected reservoir partial pressures (ppH2S, ppCO2), chloride salinity, and bottom-hole temperatures against NACE MR0175 / ISO 15156 environmental limits to verify downhole tubular metallurgy.",
+      "frictionSolved": "Eliminates 2.5 hours per completion design of manual NACE domain table checking and environmental cracking limit calculations.",
+      "reads": "Reservoir fluid composition (H2S mol%, CO2 mol%), bottom-hole temperature (BHT), formation water chloride salinity (mg/L), and proposed tubular material specifications (carbon steel, 13Cr, Super 13Cr, 22Cr Duplex, Inconel 718).",
+      "does": "Calculates downhole partial pressures (ppH2S, ppCO2); determines environmental sour service severity regions per NACE MR0175 / ISO 15156; verifies material hardness limits (HRC), yield strength derating at temperature, and sulfide stress cracking (SSC) / stress corrosion cracking (SCC) resistance.",
+      "returns": "Downhole Metallurgical Qualification Certificate verifying material compliance or recommending corrosion-resistant alloy (CRA) upgrades.",
+      "stopsAt": "Authorizing exotic alloy procurement or waiving NACE compliance standards.",
+      "failureModes": "If ppH2S exceeds the environmental cracking threshold for standard 13Cr at operating pH, the agent triggers an immediate alert: [Sour Service Failure: High Risk of Sulfide Stress Cracking — Upgrade to Super 13Cr or Nickel Alloy].",
+      "agentId": "OG-P08-A03"
+    },
+    {
+      "n": 4,
+      "name": "Perforating Gun Phasing & Underbalance Optimization Agent",
+      "oneLine": "Reconciles reservoir rock compressive strength, casing gun carrier clearance, charge penetration depth (API RP 19B), and dynamic underbalance pressure to optimize perforation phasing and shot density.",
+      "frictionSolved": "Removes 3.5 hours per perforating campaign of manual gun catalog cross-referencing and dynamic underbalance calculation.",
+      "reads": "Reservoir unconfined compressive strength (UCS), casing dimensions, formation pore pressure, wellbore hydrostatic gradient, and vendor API RP 19B perforating gun charge performance data.",
+      "does": "Calculates effective charge penetration depth in target rock; evaluates optimal gun phasing (60^circ vs 90^circ vs 120^circ) to maximize inflow area and avoid casing damage; computes dynamic underbalance pressure requirements (psi) to clean perforation tunnels without collapsing the formation.",
+      "returns": "Perforating Gun Optimization Schedule complete with gun string configuration, charge part numbers, planned shot density (SPF), and recommended underbalance pressure drawdown.",
+      "stopsAt": "Approving physical gun loading on the rig or arming explosive detonators.",
+      "failureModes": "If calculated dynamic underbalance exceeds casing collapse resistance during perforation surge, the agent flags [Casing Collapse Hazard: Dynamic Underbalance Exceeds Casing Rating].",
+      "agentId": "OG-P08-A04"
+    },
+    {
+      "n": 5,
+      "name": "Fishing Neck & Contingency Overshot Clearance Agent",
+      "oneLine": "Ingests proposed intervention toolstring assembly drawings, audits internal and external fishing neck dimensions, and verifies that matching overshots, grapples, and wireline fishing jars are in inventory prior to tool run-in.",
+      "frictionSolved": "Eliminates 2.0 hours per intervention of manual tool drawing inspection and warehouse fishing tool inventory cross-checking.",
+      "reads": "Vendor BHA mechanical drawings, fishing neck dimensions (OD, neck length, profile type), and on-site / warehouse fishing tool inventory registers (releasing overshots, grapples, bumper subs).",
+      "does": "Validates that every downhole component has a standard accessible fishing neck; matches external fishing neck diameters to available overshot bowl and grapple sizes; verifies that overshot maximum outside diameter can clear the tightest casing/tubing restriction above the tool.",
+      "returns": "Fishing Contingency Verification Certificate confirming that matching fishing tools are on location before the toolstring enters the hole.",
+      "stopsAt": "Ordering specialized custom milling tools or authorizing tool release into the hole without an approved contingency catch.",
+      "failureModes": "If a non-standard third-party logging sonde lacks an accessible fishing neck, the agent flags [Un-Catchable BHA: Component Lacks Standard Fishing Neck — Prohibit Run-In].",
+      "agentId": "OG-P08-A05"
+    },
+    {
+      "n": 6,
+      "name": "Technical Workover & Intervention Program Assembly Agent",
+      "oneLine": "Assembles wellbore barrier envelopes, kill fluid hydrostatic margins, step-by-step mechanical pulling sequences, and pressure testing limits into standardized corporate Workover and Well Intervention Program dossiers.",
+      "frictionSolved": "Eliminates ~10.0 hours per well intervention of manual Word document copying, schematic pasting, and barrier rule checking.",
+      "reads": "Approved wellbore clearance checks, kill fluid density calculations, packer unseating procedures, wellhead barrier diagrams, and regulatory intervention permits.",
+      "does": "Populates standardized corporate workover program templates; verifies two-barrier well control envelopes per NORSOK D-010 during all intervention phases (e.g., heavy brine hydrostatic column + mechanical tubing plug); audits casing burst and collapse limits during well killing.",
+      "returns": "Complete, audit-ready 80-page Technical Workover and Well Intervention Program ready for Superintendent review and rig-floor execution.",
+      "stopsAt": "Authorizing official engineering program sign-off or issuing work orders to the field.",
+      "failureModes": "If the well kill procedure lacks a verified secondary barrier during tree removal, the agent halts document generation: [Process Safety Violation: Inadequate Well Control Barrier Envelope in Workover Sequence].",
+      "agentId": "OG-P08-A06"
+    },
+    {
+      "n": 7,
+      "name": "Scale Inhibitor Squeeze Sieve & Return Tracking Agent",
+      "oneLine": "Models inhibitor adsorption/desorption curves, calculates required chemical pre-flush/main-pill/overflush squeeze volumes, and tracks daily produced water residual chemical concentrations to forecast squeeze re-treatment dates.",
+      "frictionSolved": "Removes 2.5 hours per water-producing well of manual chemical spreadsheet tracking and squeeze volume calculations.",
+      "reads": "Reservoir formation water chemistry (calcium, barium, strontium ion concentrations), producing water rate (bwpd), core mineralogy, and laboratory scale inhibitor adsorption isotherms.",
+      "does": "Solves scale inhibitor squeeze placement models (pre-flush volume, chemical inhibitor pill concentration, overflush displacement volume to reach target radial depth); ingests daily laboratory water analysis reports tracking residual inhibitor concentration (PPM); forecasts the date when residual inhibitor will drop below the Minimum Effective Concentration (MEC).",
+      "returns": "Scale Inhibitor Squeeze Design Dossier and dynamic Chemical Depletion Forecast alerting the engineer 30 days before re-squeeze treatment is required.",
+      "stopsAt": "Ordering chemical tanker delivery or altering chemical injection pump rates.",
+      "failureModes": "If residual inhibitor drops below MEC while barium ion concentration exceeds 100 mg/L, the agent triggers an immediate alert: [Critical Scale Depletion: High Risk of Downhole Barium Sulfate Scaling — Schedule Immediate Squeeze].",
+      "agentId": "OG-P08-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit. Never multiply into enterprise dollar totals. The completions team provides their own rig spread rate and well count multiplier.",
+    "rows": [
+      {
+        "agent": "1. Wellbore Clearance Sieve Agent",
+        "unit": "1 Downhole Intervention Toolstring Run",
+        "beforeHours": 5.0,
+        "afterHours": 0.5,
+        "savedHours": 4.5,
+        "frictionRemoved": "Complex Dimensional Restriction Checking Drag"
+      },
+      {
+        "agent": "2. As-Built Schematic Reconciler",
+        "unit": "1 Mature Well Workover Historical Audit",
+        "beforeHours": 6.0,
+        "afterHours": 1.0,
+        "savedHours": 5.0,
+        "frictionRemoved": "Multi-Decade Paper Tour Log Hunting Drag"
+      },
+      {
+        "agent": "3. Sour Metallurgy Qualification Agent",
+        "unit": "1 HPHT / Sour Completion Metallurgy Study",
+        "beforeHours": 3.0,
+        "afterHours": 0.5,
+        "savedHours": 2.5,
+        "frictionRemoved": "NACE MR0175 Table & Limit Checking Drag"
+      },
+      {
+        "agent": "4. Perforating & Underbalance Agent",
+        "unit": "1 Reservoir Perforating Gun Campaign",
+        "beforeHours": 4.0,
+        "afterHours": 0.5,
+        "savedHours": 3.5,
+        "frictionRemoved": "API 19B Charge Math & Underbalance Drag"
+      },
+      {
+        "agent": "5. Fishing Neck & Overshot Clearance",
+        "unit": "1 Intervention Toolstring BHA Approval",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Tool Drawing & Overshot Sifting Drag"
+      },
+      {
+        "agent": "6. Workover Program Assembly Agent",
+        "unit": "1 Complete Technical Workover Program",
+        "beforeHours": 12.0,
+        "afterHours": 2.0,
+        "savedHours": 10.0,
+        "frictionRemoved": "Multi-Document Copy-Paste Formatting Drag"
+      },
+      {
+        "agent": "7. Scale Inhibitor Squeeze Sieve Agent",
+        "unit": "1 Water-Producing Well Scale Squeeze",
+        "beforeHours": 3.0,
+        "afterHours": 0.5,
+        "savedHours": 2.5,
+        "frictionRemoved": "Chemical Adsorption Math & Residual PPM Drag"
+      }
+    ],
+    "total": {
+      "unit": "1 Complete Well Completion / Workover",
+      "beforeHours": 35.5,
+      "afterHours": 5.25,
+      "savedHours": 30.25,
+      "frictionRemoved": "Eliminates 85% of Intervention Data Assembly Drag",
+      "label": "Total Squad Impact per Program"
+    }
+  },
+  "citations": [
+    {
+      "key": "[SPE-Completions]",
+      "citation": "SPE, Completions Discipline Competency Matrix, 2018",
+      "locator": "spe.org",
+      "type": "Competency Standard",
+      "supports": "Wellbore completion design, workovers, and stimulation"
+    },
+    {
+      "key": "[ISO-14998]",
+      "citation": "ISO, Downhole equipment — Completion accessories, 2013",
+      "locator": "iso.org",
+      "type": "International Standard",
+      "supports": "Nipple ID ratings, clearance dimensions, and packers"
+    },
+    {
+      "key": "[API-Spec-11D1]",
+      "citation": "API, Packers and Bridge Plugs, 4th Edition",
+      "locator": "API Standards Store",
+      "type": "Technical Standard",
+      "supports": "Downhole tool ratings, temperature limits, and testing"
+    },
+    {
+      "key": "[NACE-MR0175]",
+      "citation": "NACE / ISO 15156, Materials for use in H2S-containing environments",
+      "locator": "nace.org",
+      "type": "Technical Standard",
+      "supports": "Sour service metallurgy limits (13Cr, Inconel)"
+    },
+    {
+      "key": "[API-RP-19B]",
+      "citation": "API, Evaluation of Well Perforators, 3rd Edition",
+      "locator": "API Standards Store",
+      "type": "Recommended Practice",
+      "supports": "Perforating gun charge testing, penetration, and phasing"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Peloton WellView product manuals, Landmark WellCat release notes, and SPE well intervention archives for \"autonomous downhole toolstring clearance verification against historical wellbore schematics, automated NACE MR0175 sour service metallurgy qualification, and automated fishing neck overshot contingency verification without manual data entry\".",
+    "result": "Negative Search, 2026-09. Commercial completion software maintains graphical schematics and finite element stress calculators; none autonomously cross-check dynamic third-party intervention tool dimensions against historical as-built restriction tallies, qualify sour service metallurgy envelopes, or verify contingency fishing overshot inventories without manual human verification."
+  },
+  "line": "\"In well completions, sending a six-figure wireline toolstring down a ten-thousand-foot hole without verifying that the third seating nipple from the bottom was replaced with a smaller size twelve years ago isn't bad luck; it's a six-hundred-thousand-dollar fishing job caused by a missing check mark.\"",
+  "openQuestions": [
+    "How many hours do you spend checking whether every component in a proposed intervention toolstring will clear every nipple, sleeve, and safety valve in a 20-year-old wellbore?",
+    "How often do you discover that the master wellbore schematic in WellView failed to record a bridge plug or tubing packoff installed during a previous workover?",
+    "What is your protocol for verifying that matching overshots and grapples are physically in the rig warehouse before a wireline gun string is deployed?"
+  ]
+};

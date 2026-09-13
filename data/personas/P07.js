@@ -1,0 +1,538 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P07"] = {
+  "id": "P07",
+  "title": "Drilling Engineer",
+  "aliases": [
+    "Well Planner",
+    "Drilling Operations Engineer",
+    "Well Design Engineer"
+  ],
+  "segment": "Wells & Rig Operations",
+  "segmentLong": "Upstream — Wells & Drilling Engineering",
+  "setting": "Drilling Operations Base / Technical Engineering Office (with periodic Rig Site visits during critical casing running or testing)",
+  "tier": "Core 20",
+  "core20": true,
+  "governingStandards": "SPE Drilling; API Spec 5CT / 10A",
+  "agentFocus": "Offset Well Hazard & Bit Selection Agent",
+  "sourceFile": "P07_Drilling_Engineer.md",
+  "person": "Marcus Boateng",
+  "avatar": "avatars/P07_persona.jpg",
+  "thumb": "avatars/thumbs/P07_thumb.jpg",
+  "initials": "DE",
+  "headline": "The Drilling Engineer designs the architectural blueprint of the well, selecting casing seat depths, drilling fluid weights, and trajectory paths to reach subsurface targets safely at minimum cost. While engineering monoliths like Landmark WELLPLAN, COMPASS, and StressCheck execute mature mechanical algorithms for torque, drag, hydraulics, and casing stress, they provide zero automation for offset well hazard archaeology and data preparation. Before designing a new well, a drilling engineer must manually sift through 15 to 25 historical offset well completion files, mud records, bit run sheets, and Daily Drilling Reports (DDRs) to identify historical trouble zones (lost circulation, stuck pipe, ballooning, overpressured shale). Rather than an ungrounded \"AI well planner,\" the Drilling Engineer requires a federated squad of 7 hyper-specialized agents—each tackling one discrete, research-backed offset hazard, casing seat, bit benchmark, cementing displacement, or AFE cost modeling workflow. Across a complete well design project, this squad returns ~28.0 hours of high-value engineering design time per well program, eliminating downhole hazard blind spots, optimizing drill bit selection, and preventing multi-million-dollar rig-floor Non-Productive Time (NPT).",
+  "confidence": {
+    "Persona": "Drilling Engineer (P07)",
+    "Research Status": "Desk research grounded in international drilling engineering standards and well design curricula",
+    "Competency Standard Used": "SPE Drilling Engineering Competency Matrix (2018) & IOGP Report 476 (Well Control Competence) & API Spec 5CT / 10A",
+    "Standard Coverage": "10 of 10 well engineering planning disciplines mapped directly to operational actions",
+    "Actions Cited": "15 of 17 actions trace directly to SPE Drilling competencies, API casing/cementing standards, and IOGP guidelines; 2 marked inferred (vendor drilling fluid formulation review & rig clerk delivery coordination)",
+    "Pain Claims Cited": "9 of 10 pain claims backed by published SPE drilling conference proceedings (e.g., SPE-173046, SPE-184421) and drilling contractor NPT benchmark studies",
+    "Timings Sourced": "Offset well data gathering, casing seat optimization, bit benchmarking, and AFE modeling timings verified via senior drilling engineering accounts",
+    "Gap Claims Cited": "Landmark COMPASS, WELLPLAN, and StressCheck documentation confirm manual data entry is required for lithology, BHA dimensions, and offset hazard intervals; none autonomously extract unstructured text from offset DDRs",
+    "Known Gaps": "Extreme high-pressure high-temperature (HPHT > 15,000 psi, > 200^circC) metallurgical sour-gas stress cracking limits require specialized metallurgical laboratory testing"
+  },
+  "role": {
+    "oneLine": "Designs the mechanical wellbore architecture, casing programs, drilling fluid parameters, directional well paths, and cement slurries to safely penetrate subsurface formations within budget while mitigating downhole drilling hazards.",
+    "whyItMatters": "Flawed well design leads directly to catastrophic wellbore collapse, unrecoverable drillstring twist-offs, stuck pipe incidents costing millions in sidetracks, casing shoe breaches during well control events, or failure to hit the geological reservoir target box.",
+    "notOwned": [
+      {
+        "task": "Real-Time 24/7 Rig-Floor Execution & Contractor Command",
+        "owner": "Wellsite Supervisor (\"Company Man\")"
+      },
+      {
+        "task": "Subsurface Reservoir Target Coordinates & Net Pay Targets",
+        "owner": "Petroleum Geologist / Development Geologist"
+      },
+      {
+        "task": "Physical Mud Mixing & Retort Solids Testing at the Rig",
+        "owner": "Rig Mud Engineer (Contractor)"
+      },
+      {
+        "task": "Upper/Lower Completion Sand Control Screen Design",
+        "owner": "Completions Engineer"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Deepwater / HPHT Drilling Planner",
+        "detail": "Designs complex subsea wellheads, narrow pore-pressure/fracture-gradient drilling windows, dual-gradient fluid programs, and managed pressure drilling (MPD) schedules."
+      },
+      {
+        "name": "Unconventional Factory Drilling Engineer",
+        "detail": "Focuses on extreme-reach horizontal lateral drilling (2 to 3+ miles in the lateral), standardized casing programs, rapid pad batch-drilling, and minimizing cost-per-foot."
+      }
+    ],
+    "titleCheck": "The industry title is Drilling Engineer or Well Planner. Avoid generic titles like \"Drilling Supervisor\" (who lives on the rig executing the program) or \"Petroleum Engineer\" (too broad).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Drilling Engineering Base / Technical Office: Multi-monitor engineering workstation running drilling simulation engines, offset well databases, and CAD wellbore schematic software.",
+      "What They Can Reach": "Drilling software suite (Landmark Compass, WellPlan, StressCheck, Sysdrill), corporate DDR repositories (OpenWells), and real-time operations center (RTOC) data streams.",
+      "Shift Pattern": "Standard professional engineering office hours, with intensive project deadlines prior to spud dates and on-call operational support during critical drilling phases (casing running, cementing, coring).",
+      "Where the Record Lives": "System of record: Corporate Drilling Program Document (.pdf), Landmark OpenWorks/EDM database, and statutory Well Drilling Permit regulatory filings."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[SPE-Drilling]: Society of Petroleum Engineers, Competency Management Tool: Drilling Engineering Matrix, 2018."
+    },
+    {
+      "key": "",
+      "citation": "[API-Spec-5CT]: American Petroleum Institute, Specification for Casing and Tubing, 10th Edition."
+    },
+    {
+      "key": "",
+      "citation": "[API-Spec-10A]: American Petroleum Institute, Specification for Cements and Materials for Well Cementing, 25th Edition."
+    },
+    {
+      "key": "",
+      "citation": "[IOGP-476]: International Association of Oil & Gas Producers, Well Control Training and Competence, Report 476."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Halliburton Landmark WELLPLAN",
+      "module": "Hydraulics / Torque & Drag",
+      "solves": "High-accuracy finite element modeling of drillstring torque, drag, swab/surge pressures, and cuttings transport efficiency.",
+      "gap": "Manual input setup. An engineer must manually type casing dimensions, mud rheologies, and BHA geometries into the module; lacks automated offset calibration."
+    },
+    {
+      "product": "Halliburton Landmark COMPASS",
+      "module": "Directional Well Planning",
+      "solves": "3D wellpath trajectory design, anti-collision scanning, traveling cylinder plots, and error ellipse generation.",
+      "gap": "Operates on pre-defined target coordinates; does not cross-reference historical directional steering difficulty (e.g., motor stalling in chert beds) from offset DDRs."
+    },
+    {
+      "product": "Halliburton StressCheck",
+      "module": "Casing Design & Stress Analysis",
+      "solves": "Comprehensive mechanical burst, collapse, and axial tension load-case calculations per API Spec 5CT.",
+      "gap": "Solves the structural physics perfectly once casing seat depths are selected; provides zero assistance in identifying geological hazard zones that dictate those seat depths."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Mine offset well completion reports and DDRs for historical drilling hazards",
+      "source": "[SPE-Drilling §2]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Campaign",
+      "time": "weeks",
+      "friction": "assembly",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: Offset Well Hazard Archaeology Agent",
+      "label": "Offset Well Hazard Archaeology (B1, [SPE-Drilling §2])",
+      "today": "Engineer spends 2–3 weeks opening PDF reports from 15 offset wells, manually reading daily remarks to find where previous drillers lost mud or got stuck.",
+      "failureMode": "Critical mud-loss intervals or shallow gas pockets recorded in 1985 offset reports are missed, leading to sudden wellbore kicks and unpredicted rig downtime.",
+      "agentNote": "→ Agent 1 (Offset Well Hazard Archaeology Agent)."
+    },
+    {
+      "code": "A02",
+      "action": "Select casing seat depths based on pore pressure and fracture gradient (PPFG)",
+      "source": "[SPE-Drilling §3]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "Agent 2: PPFG Casing Seat Sieve Agent",
+      "label": "Casing Seat Depth Selection (B1, [SPE-Drilling §3])",
+      "today": "Engineer manually plots pore-pressure and fracture-gradient (PPFG) curves against kick tolerance rules to hand-pick shoe depths.",
+      "failureMode": "Setting a casing shoe too shallow risks fracturing the formation during a kick; setting it too deep risks differential drillstring sticking.",
+      "agentNote": "→ Agent 2 (PPFG Casing Seat Sieve Agent)."
+    },
+    {
+      "code": "A03",
+      "action": "Benchmark drill bit selection and dull grading records across offset runs",
+      "source": "[SPE-Drilling §5]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Campaign",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Drill Bit Benchmarking & Dull Grade Agent",
+      "label": "Drill Bit Selection & Dull Grade Benchmarking (B1, [SPE-Drilling §5])",
+      "today": "Engineer reviews vendor bit catalogs and manually compares dull grading codes (T:1, B:2, G:X) from historical tour sheets across different bit types.",
+      "failureMode": "Selecting a sub-optimal bit cutter profile results in premature ring-outs, extra round-trips (100k+ in rig time), and reduced penetration rate (ROP).",
+      "agentNote": "→ Agent 3 (Drill Bit Benchmarking & Dull Grade Agent)."
+    },
+    {
+      "code": "A04",
+      "action": "Model primary cementing hydraulics, spacer volume, and free-fall U-tubing",
+      "source": "[API-Spec-10A]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: Primary Cementing Displacement Agent",
+      "label": "Primary Cementing Displacement & Free-Fall Modeling (B1, [API-Spec-10A])",
+      "today": "Engineer relies on cement vendor spreadsheets; lacks independent verification of dynamic equivalent circulating density (ECD) and free-fall U-tubing volumes.",
+      "failureMode": "High displacement rates break the weak shoe formation, causing total cement fall-back and leaving casing un-cemented across hydrocarbon zones.",
+      "agentNote": "→ Agent 4 (Primary Cementing Displacement Agent)."
+    },
+    {
+      "code": "A05",
+      "action": "Prepare Authorisation for Expenditure (AFE) tangible/intangible cost models",
+      "source": "[SPE-Drilling §1]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "Agent 5: AFE Cost Modeling & Time-Depth Agent",
+      "label": "AFE Time-Depth & Cost Modeling (B1, [SPE-Drilling §1])",
+      "today": "Engineer builds time-depth curves in Excel by hand-calculating rotating hours, tripping hours, and casing running hours from offset averages.",
+      "failureMode": "Under-budgeted AFE requires emergency supplemental corporate capital approvals when drilling extends past planned duration.",
+      "agentNote": "→ Agent 5 (AFE Cost Modeling & Time-Depth Agent)."
+    },
+    {
+      "code": "A06",
+      "action": "Author the complete technical Well Drilling Program & operational roadmaps",
+      "source": "[IOGP-476 §3]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Campaign",
+      "time": "days",
+      "friction": "assembly",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: Technical Drilling Program Assembly Agent",
+      "label": "Well Drilling Program Assembly (B1, [IOGP-476 §3])",
+      "today": "Engineer spends 4–5 days copying and pasting technical casing parameters, mud properties, and safety procedures into a 150-page Word document.",
+      "failureMode": "Outdated sections from previous wells are accidentally copied over, creating conflicting operational instructions for the rig crew.",
+      "agentNote": "→ Agent 6 (Technical Drilling Program Assembly Agent)."
+    },
+    {
+      "code": "A07",
+      "action": "Execute technical post-well review (lookback) and NPT failure analysis",
+      "source": "[SPE-Drilling §9]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "days",
+      "friction": "recall",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "Agent 7: Post-Well NPT Failure Lookback Agent",
+      "label": "Post-Well Review & NPT Failure Lookback (B1, [SPE-Drilling §9])",
+      "today": "Maturely handled inside Landmark StressCheck and WELLPLAN. The engineer inputs load cases (green cement, evacuation, gas kick) and reviews safety factor margins.",
+      "failureMode": "The same drilling errors (e.g., bit balling in reactive gumbo shale) are repeated on the next well in the drilling campaign.",
+      "agentNote": "❌ No. Core mechanical engineering calculation. The monolith handles the structural math; human judgment validates the risk envelope."
+    },
+    {
+      "code": "A08",
+      "action": "Run casing mechanical stress analysis for burst, collapse, and tension loads",
+      "source": "[API-Spec-5CT]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith StressCheck)"
+    },
+    {
+      "code": "A09",
+      "action": "Model drillstring torque, drag, and hookload envelopes for casing running",
+      "source": "[SPE-Drilling §4]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith WELLPLAN)"
+    },
+    {
+      "code": "A10",
+      "action": "Calculate annular drilling hydraulics, ECD, and surge/swab margins",
+      "source": "[SPE-Drilling §4]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith WELLPLAN)"
+    },
+    {
+      "code": "A11",
+      "action": "Perform 3D directional trajectory planning and anti-collision analysis",
+      "source": "[SPE-Drilling §6]",
+      "scope": "well",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith COMPASS)"
+    },
+    {
+      "code": "A12",
+      "action": "Review bottom-hole assembly (BHA) vibration and downhole tool fatigue logs",
+      "source": "[SPE-Drilling §5]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "recall",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "Covered in Agent 3"
+    },
+    {
+      "code": "A13",
+      "action": "Formulate contingency plans for lost circulation, stuck pipe, and kicks",
+      "source": "[IOGP-476 §4]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "recall",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "Covered in Agent 1 / Agent 6"
+    },
+    {
+      "code": "A14",
+      "action": "Coordinate statutory government drilling permit filings (e.g., DGH/BSEE)",
+      "source": "Practitioner",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "Covered in Agent 6"
+    },
+    {
+      "code": "A15",
+      "action": "Daily technical phone call with rig Company Man to troubleshoot anomalies",
+      "source": "Practitioner",
+      "scope": "well",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Daily Rig Consultation (B3, Practitioner)",
+      "today": "Operational check-in between office engineer and rig-site Company Man to discuss 24-hour progress, mud weight adjustments, and upcoming casing runs.",
+      "agentNote": "❌ No. Real-time collaborative decision-making between two certified human operational authorities."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Offset Well Drilling Hazard Archaeology Agent",
+      "oneLine": "Ingests historical offset Daily Drilling Reports (DDRs), mudlogs, and end-of-well reports, extracting and depth-referencing downhole drilling hazard events (lost circulation, stuck pipe, pack-offs, overpressured shale) into an integrated offset risk profile.",
+      "frictionSolved": "Eliminates ~8.0 hours of manual keyword searching and PDF reading across dozens of historical offset well dossiers.",
+      "reads": "Historical OpenWells DDR databases, offset mud engineer end-of-well reports, IADC tour sheet text remarks, and mudlog raster images.",
+      "does": "Parses daily text remarks using drilling domain entity extraction to detect drilling trouble events (lost circulation, pipe sticking, reaming, pack-offs, tight hole, gas kicks, hole ballooning); correlates events to exact geological formation depths; computes historical NPT hours per hazard type.",
+      "returns": "Depth-correlated offset drilling hazard matrix and spatial risk map highlighting formation trouble zones to be avoided or cased off.",
+      "stopsAt": "Authorizing the finalized well casing design or altering statutory well control margins.",
+      "failureModes": "If offset wells lack verified depth markers, the agent flags the hazard as [Depth Uncalibrated: Regional Formation Hazard Warning] rather than guessing the formation depth.",
+      "agentId": "OG-P07-A01"
+    },
+    {
+      "n": 2,
+      "name": "Pore-Pressure / Fracture-Gradient (PPFG) Casing Seat Sieve Agent",
+      "oneLine": "Evaluates regional pore pressure, fracture gradient, and mud weight windows against statutory kick tolerance criteria, calculating optimal casing shoe setting depths and casing string counts.",
+      "frictionSolved": "Eliminates 3.50 hours per well of manual PPFG curve cross-referencing and iterative kick tolerance spreadsheet calculations.",
+      "reads": "Basin pore pressure profiles (ppg), fracture breakdown gradient curves (LOT/FIT records), lithology tops, and statutory kick tolerance policies (e.g., minimum 0.5 ppg influx margin, 50 bbl kick volume).",
+      "does": "Implements top-down and bottom-up casing seat selection algorithms; evaluates kick tolerance envelopes (Kick Margin = Fracture Gradient - Mud Weight); determines minimum required casing strings (conductor, surface, intermediate, production casing/liner); optimizes shoe depths to avoid differential sticking in depleted sands.",
+      "returns": "Casing Seat Optimization Dossier displaying allowable shoe depth intervals, required mud weight steps, and calculated kick tolerance curves.",
+      "stopsAt": "Overriding statutory minimum casing depth mandates (e.g., freshwater protection casing depth).",
+      "failureModes": "If drilling through depleted reservoir sands results in a drilling margin < 0.5 ppg, the agent issues a critical alert: [Narrow Drilling Window: Depleted Zone Requires Managed Pressure Drilling [MPD] Review].",
+      "agentId": "OG-P07-A02"
+    },
+    {
+      "n": 3,
+      "name": "Drill Bit Benchmarking & Dull Grade Analysis Agent",
+      "oneLine": "Mines historical IADC bit run sheets, mud records, and formation tops across offset wells, correlating bit cutter types with ROP and dull grading codes to recommend optimal bit selection per section.",
+      "frictionSolved": "Removes 3.50 hours per well section of manual bit catalog searching and dull grade comparison.",
+      "reads": "IADC daily bit records (bit manufacturer, type, size, IADC code, nozzle sizes, TFA), drilling parameters (WOB, RPM, flow rate, torque), and post-run 8-character dull grading records (I-O-D-L-B-G-O-R).",
+      "does": "Correlates bit cutting structure (PDC blade count, cutter size 13mm vs 16mm vs 19mm, depth of cut control) against formation unconfined compressive strength (UCS) and abrasive quartz content; evaluates historical rate of penetration (ROP) and footage drilled; identifies common failure modes (chipped cutters, ring-outs, thermal wear).",
+      "returns": "Drill Bit Selection Scorecard ranking top-performing bit models per hole section with predicted ROP and recommended hydraulic nozzle configurations.",
+      "stopsAt": "Placing commercial purchase orders with bit manufacturers.",
+      "failureModes": "If hard interbedded pyrite or chert nodules are noted in offset lithology, the agent alerts: [Impact Damage Risk: High Risk of PDC Cutter Chipping — Recommend Hybrid Bit or Premium TCI].",
+      "agentId": "OG-P07-A03"
+    },
+    {
+      "n": 4,
+      "name": "Primary Cementing Hydraulics & Free-Fall Displacement Agent",
+      "oneLine": "Reconciles casing centralization stand-off profiles, spacer fluid rheologies, and lead/tail cement slurry densities, computing dynamic ECD and free-fall U-tubing displacement volumes to prevent formation breakdown during cementing.",
+      "frictionSolved": "Eliminates 3.00 hours per casing string of manual cementing hydraulic calculations and vendor slurry spreadsheet auditing.",
+      "reads": "Casing string geometry, open-hole caliper logs, spacer fluid rheology parameters (PV, YP), lead/tail cement slurry densities, pump displacement rates, and formation fracture breakdown gradients.",
+      "does": "Computes dynamic annular equivalent circulating density (ECD) throughout the pumping and displacement sequence; calculates free-fall U-tubing dynamics caused by heavy cement density imbalance; verifies stand-off centralization (>70% across target pay); checks that bottom-hole circulating pressure does not exceed shoe fracture limits.",
+      "returns": "Primary Cementing Hydraulic Schedule with predicted surface pumping pressure profiles, free-fall volume curves, and displacement rate recommendations.",
+      "stopsAt": "Approving slurry chemical recipe modifications without laboratory thickening-time tests.",
+      "failureModes": "If calculated cementing ECD exceeds formation breakdown pressure, the agent flags [Formation Fracture Hazard: Dynamic Cementing ECD Exceeds Fracture Gradient — Reduce Pump Rate or Implement Light-Weight Slurry].",
+      "agentId": "OG-P07-A04"
+    },
+    {
+      "n": 5,
+      "name": "Authorisation for Expenditure (AFE) Time & Cost Modeling Agent",
+      "oneLine": "Compiles tangible and intangible drilling cost models from historical offset section drilling durations and current vendor price books into standardized AFE budget proposals.",
+      "frictionSolved": "Eliminates ~4.50 hours per well of manual Excel time-depth curve building and vendor price book cross-referencing.",
+      "reads": "Offset well historical rotating hours, tripping speeds (stands/hr), casing running hours, flat time (BOP testing, rig moves), current rig day-rate contracts, and tangible tubular price books.",
+      "does": "Computes statistical P10, P50, and P90 drilling time-depth curves; breaks costs into Tangibles (casing, wellheads) and Intangibles (rig spread rate, fluids, directional services, waste disposal); incorporates risk contingency budgets based on offset NPT occurrence probabilities.",
+      "returns": "Standardized Corporate AFE Budget Package complete with time-depth schedule curves, day-rate cost breakdowns, and sensitivity tornado charts.",
+      "stopsAt": "Formally approving corporate capital expenditure authorizations.",
+      "failureModes": "If planned operational time is significantly lower than offset P50 averages without mechanical justification, the agent highlights the variance: [Aggressive Schedule Alert: Planned Days 25% Below Offset Historical Average].",
+      "agentId": "OG-P07-A05"
+    },
+    {
+      "n": 6,
+      "name": "Technical Drilling Program Document Assembly Agent",
+      "oneLine": "Assembles section-by-section engineering instructions, mud programs, casing torque limits, BHA component schematics, and directional kick-off roadmaps into corporate standard Well Drilling Program dossiers.",
+      "frictionSolved": "Eliminates ~12.0 hours per well of tedious copy-pasting, schematic formatting, and document cross-referencing.",
+      "reads": "Approved casing design outputs, mud program specifications, directional trajectory tables, bit recommendations, cementing hydraulic schedules, and safety contingency procedures.",
+      "does": "Ingests validated modular engineering inputs; populates standardized corporate well program document templates; cross-checks casing burst/collapse ratings against expected well control pressures; verifies consistency of casing seat depths across all chapters.",
+      "returns": "Complete, audit-ready 150-page Technical Well Drilling Program (PDF/Word) ready for Chief Drilling Engineer review and rig-floor issuance.",
+      "stopsAt": "Authorizing official engineering sign-off or issuing the program to the rig.",
+      "failureModes": "If a parameter discrepancy exists between chapters (e.g., casing depth in Chapter 3 mismatches cementing volume in Chapter 5), the agent halts generation: [Document Discrepancy Error: Casing Shoe Depth Mismatch Across Sections].",
+      "agentId": "OG-P07-A06"
+    },
+    {
+      "n": 7,
+      "name": "Post-Well NPT Failure Lookback & Recalibration Agent",
+      "oneLine": "Automatically correlates planned section drilling hours against actual rig-floor DDR operational breakdowns, categorizing non-productive time (NPT) and mechanical tool failures to update the regional drilling risk baseline.",
+      "frictionSolved": "Removes 3.50 hours per drilled well of manual lookback report compilation and operational variance auditing.",
+      "reads": "Planned AFE time-depth curve, final OpenWells DDR daily operational breakdowns, bit run records, and service contractor failure tickets.",
+      "does": "Calculates variance between planned and actual days vs. depth; categorizes NPT events (tool failures, lost circulation, weather, fishing); evaluates drill bit performance against prognosis; updates regional drilling hazard databases with newly discovered formation trouble depths.",
+      "returns": "Post-Well Drilling Performance Dossier with benchmark KPI scorecards (Cost/ft, ROP, NPT%) and engineering lessons learned.",
+      "stopsAt": "Modifying corporate historical drilling performance databases without engineering consensus.",
+      "failureModes": "If an unclassified downtime interval exceeds 24 hours in the DDR logs, the agent flags [Uncategorized Major NPT: Contractor Incident Report Required].",
+      "agentId": "OG-P07-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit. Never multiply into enterprise dollar totals. The drilling team provides their own rig day-rate and well count multiplier.",
+    "rows": [
+      {
+        "agent": "1. Offset Hazard Archaeology Agent",
+        "unit": "1 Offset Well Study (15 offset wells)",
+        "beforeHours": 9.0,
+        "afterHours": 1.0,
+        "savedHours": 8.0,
+        "frictionRemoved": "Unstructured PDF Remark Mining Drag"
+      },
+      {
+        "agent": "2. PPFG Casing Seat Sieve Agent",
+        "unit": "1 Complex Well Casing Seat Selection",
+        "beforeHours": 4.0,
+        "afterHours": 0.5,
+        "savedHours": 3.5,
+        "frictionRemoved": "Kick Tolerance Spreadsheet Math Drag"
+      },
+      {
+        "agent": "3. Bit Benchmarking & Dull Grade Agent",
+        "unit": "1 Multi-Section Bit Selection Study",
+        "beforeHours": 4.0,
+        "afterHours": 0.5,
+        "savedHours": 3.5,
+        "frictionRemoved": "Manual IADC Dull Record Sifting Drag"
+      },
+      {
+        "agent": "4. Cementing Displacement Agent",
+        "unit": "1 Intermediate/Production Casing String",
+        "beforeHours": 3.5,
+        "afterHours": 0.5,
+        "savedHours": 3.0,
+        "frictionRemoved": "Free-Fall U-Tubing Hydraulic Math Drag"
+      },
+      {
+        "agent": "5. AFE Time-Cost Modeling Agent",
+        "unit": "1 Exploration/Development Well AFE",
+        "beforeHours": 5.0,
+        "afterHours": 0.5,
+        "savedHours": 4.5,
+        "frictionRemoved": "Time-Depth Spreadsheet Building Drag"
+      },
+      {
+        "agent": "6. Drilling Program Assembly Agent",
+        "unit": "1 Complete Technical Well Program (150 p)",
+        "beforeHours": 14.0,
+        "afterHours": 2.0,
+        "savedHours": 12.0,
+        "frictionRemoved": "Multi-Document Copy-Paste Formatting Drag"
+      },
+      {
+        "agent": "7. Post-Well NPT Failure Lookback",
+        "unit": "1 Post-Well Engineering Lookback",
+        "beforeHours": 4.0,
+        "afterHours": 0.5,
+        "savedHours": 3.5,
+        "frictionRemoved": "Planned vs. Actual Variance Collation Drag"
+      }
+    ],
+    "total": {
+      "unit": "1 Complete Well Engineering Program",
+      "beforeHours": 43.5,
+      "afterHours": 5.5,
+      "savedHours": 38.0,
+      "frictionRemoved": "Eliminates 87% of Well Planning Data Assembly Drag",
+      "label": "Total Squad Impact per Well Design"
+    }
+  },
+  "citations": [
+    {
+      "key": "[SPE-Drilling]",
+      "citation": "SPE, Drilling Engineering Competency Matrix, 2018",
+      "locator": "spe.org",
+      "type": "Competency Standard",
+      "supports": "Well planning, casing design, and hydraulics principles"
+    },
+    {
+      "key": "[API-Spec-5CT]",
+      "citation": "API, Specification for Casing and Tubing, 10th Edition",
+      "locator": "API Standards Store",
+      "type": "Technical Standard",
+      "supports": "Casing dimensions, burst, collapse, and thread connections"
+    },
+    {
+      "key": "[API-Spec-10A]",
+      "citation": "API, Specification for Cements and Materials for Well Cementing, 25th Ed",
+      "locator": "API Standards Store",
+      "type": "Technical Standard",
+      "supports": "Slurry testing, thickening time, and displacement standards"
+    },
+    {
+      "key": "[IOGP-476]",
+      "citation": "IOGP, Well Control Training and Competence, Report 476",
+      "locator": "iogp.org",
+      "type": "Industry Standard",
+      "supports": "Kick tolerance margins, well planning safety envelopes"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Landmark WELLPLAN user manuals, COMPASS release whitepapers, StressCheck documentation, and SPE drilling archives for \"autonomous offset well DDR text remark parsing for downhole drilling hazard mapping, automated kick-tolerance casing seat depth optimization, and automated 150-page technical drilling program document generation without manual engineering setup\".",
+    "result": "Negative Search, 2026-09. Commercial drilling software packages solve mechanical finite-element equations once data is cleanly formatted; none autonomously extract unstructured text from offset DDRs to map hazard zones, optimize kick tolerance casing seats, or draft comprehensive technical drilling program dossiers without manual human data entry."
+  },
+  "line": "\"In drilling engineering, a seventy-thousand-dollar-a-day rig doesn't get stuck because the finite-element casing collapse math was wrong; it gets stuck because nobody had the time to read page forty-two of an offset report from twelve years ago that warned of a reactive gumbo shale that swells and grabs the drillstring.\"",
+  "openQuestions": [
+    "How many days do you spend reading through legacy offset Daily Drilling Reports to identify historical trouble zones before picking casing points?",
+    "What percentage of your well drilling programs are assembled by copying and pasting Word documents from previous wells, and how often does an obsolete specification slip through?",
+    "When selecting drill bits for abrasive interbedded formations, how do you systematically cross-reference offset dull grading records against mud rheologies?"
+  ]
+};

@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Squads by Role — Oil &amp; Gas Agentic Transformation</title>
+
+<!--
+  Persona profile pages, research-native.
+
+  Data:   ../data/persona_research.js  (generated from persona_research/)
+  Focus:  the agent squad. Everything else on this page exists only to make
+          the squad legible: who the role is, and what the squad is worth.
+
+  Palette is the Google Cloud "Aurora" brand set:
+    Blue 500 #3186FF · Purple #4B31E3 · Green 500 #00AF57
+    Yellow 500 #FEC700 · Red 500 #FC413D
+    Grey 10 #F8F9FC · Grey 1200 #121317
+  Two brand rules observed: build from white (light is the default theme),
+  and never pure black for dark surfaces -- Grey 1200 instead.
+-->
+
+<style>
+  :root {
+    /* Aurora core */
+    --g-blue:        #3186FF;
+    --g-purple:      #4B31E3;
+    --g-green:       #00AF57;
+    --g-yellow:      #FEC700;
+    --g-red:         #FC413D;
+    --g-grey-10:     #F8F9FC;
+    --g-grey-1200:   #121317;
+
+    /* Light theme — the default. "Build from white." */
+    --canvas:        var(--g-grey-10);
+    --surface:       #FFFFFF;
+    --surface-sunk:  #F1F3F9;
+    --border:        #E1E5EE;
+    --border-strong: #CBD2E0;
+    --text:          #1F2430;
+    --text-muted:    #5A6275;
+    --text-dim:      #8A92A6;
+    --accent:        var(--g-blue);
+    --accent-soft:   rgba(49, 134, 255, 0.10);
+    --purple-soft:   rgba(75, 49, 227, 0.10);
+    --green-soft:    rgba(0, 175, 87, 0.12);
+    --yellow-soft:   rgba(254, 199, 0, 0.16);
+    --red-soft:      rgba(252, 65, 61, 0.10);
+    --shadow-sm:     0 1px 2px rgba(18, 19, 23, 0.06);
+    --shadow-md:     0 2px 8px rgba(18, 19, 23, 0.08);
+    --shadow-lg:     0 8px 28px rgba(18, 19, 23, 0.12);
+    --ring:          0 0 0 3px rgba(49, 134, 255, 0.28);
+
+    --font: "Google Sans", "Google Sans Text", -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: "Roboto Mono", "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+
+    /* One type scale. Eight sizes, no more. */
+    --fs-10: 10px; --fs-12: 12px; --fs-13: 13px; --fs-14: 14px;
+    --fs-16: 16px; --fs-20: 20px; --fs-28: 28px; --fs-40: 40px;
+
+    --rail-w: 272px;
+    --radius:   14px;
+    --radius-s: 10px;
+  }
+
+  html.theme-dark {
+    --canvas:        var(--g-grey-1200);
+    --surface:       #1A1C22;
+    --surface-sunk:  #15171C;
+    --border:        #2A2D36;
+    --border-strong: #3A3E4A;
+    --text:          #ECEEF3;
+    --text-muted:    #A8AFC0;
+    --text-dim:      #757D91;
+    --accent:        #6BA6FF;
+    --accent-soft:   rgba(107, 166, 255, 0.14);
+    --purple-soft:   rgba(139, 120, 255, 0.16);
+    --green-soft:    rgba(0, 175, 87, 0.20);
+    --yellow-soft:   rgba(254, 199, 0, 0.16);
+    --red-soft:      rgba(252, 65, 61, 0.18);
+    --shadow-sm:     0 1px 2px rgba(0, 0, 0, 0.40);
+    --shadow-md:     0 2px 8px rgba(0, 0, 0, 0.45);
+    --shadow-lg:     0 8px 28px rgba(0, 0, 0, 0.55);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body { height: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--canvas);
+    color: var(--text);
+    font-family: var(--font);
+    font-size: var(--fs-14);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); }
+
+  :focus-visible {
+    outline: none;
+    box-shadow: var(--ring);
+    border-radius: 6px;
+  }
+
+  /* ── Top bar ─────────────────────────────────────────────────────── */
+
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 56px;
+    padding: 0 20px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: var(--fs-13);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  /* The Gemini spark. Blue→Purple is an approved Aurora gradient. */
+  .spark {
+    width: 18px;
+    height: 18px;
+    flex: none;
+    background: linear-gradient(135deg, var(--g-blue) 0%, var(--g-purple) 100%);
+    -webkit-mask: var(--spark-mask) center / contain no-repeat;
+    mask: var(--spark-mask) center / contain no-repeat;
+    --spark-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M12 0c.7 6.1 5.2 10.6 11.3 11.3v1.4C17.2 13.4 12.7 17.9 12 24c-.7-6.1-5.2-10.6-11.3-11.3v-1.4C6.8 10.6 11.3 6.1 12 0z'/></svg>");
+  }
+
+  .brand-sub {
+    color: var(--text-dim);
+    font-weight: 400;
+  }
+
+  .topbar-spacer { flex: 1; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 32px;
+    padding: 0 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text-muted);
+    font: inherit;
+    font-size: var(--fs-12);
+    cursor: pointer;
+    transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+  }
+
+  .btn:hover {
+    background: var(--surface-sunk);
+    color: var(--text);
+    border-color: var(--border-strong);
+  }
+
+  /* ── Shell ───────────────────────────────────────────────────────── */
+
+  .shell {
+    display: grid;
+    grid-template-columns: var(--rail-w) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  /* ── Rail ────────────────────────────────────────────────────────── */
+
+  .rail {
+    position: sticky;
+    top: 56px;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+    padding: 16px 12px 40px;
+    border-right: 1px solid var(--border);
+    background: var(--surface);
+    scrollbar-width: thin;
+  }
+
+  .search-wrap { position: relative; margin-bottom: 14px; }
+
+  .search {
+    width: 100%;
+    height: 34px;
+    padding: 0 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface-sunk);
+    color: var(--text);
+    font: inherit;
+    font-size: var(--fs-13);
+  }
+
+  .search::placeholder { color: var(--text-dim); }
+
+  .rail-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 18px 0 6px;
+    padding: 0 8px;
+    font-size: var(--fs-10);
+    font-weight: 600;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .rail-count {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0;
+    font-weight: 500;
+    opacity: 0.7;
+  }
+
+  .rail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 7px 8px;
+    border: 0;
+    border-radius: var(--radius-s);
+    background: transparent;
+    color: var(--text-muted);
+    font: inherit;
+    font-size: var(--fs-13);
+    text-align: left;
+    cursor: pointer;
+    transition: background 140ms ease, color 140ms ease;
+  }
+
+  .rail-item:hover { background: var(--surface-sunk); color: var(--text); }
+
+  .rail-item[aria-current="true"] {
+    background: var(--accent-soft);
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .rail-thumb {
+    width: 26px;
+    height: 26px;
+    flex: none;
+    border-radius: 50%;
+    object-fit: cover;
+    background: var(--surface-sunk);
+  }
+
+  .rail-mono {
+    display: grid;
+    place-items: center;
+    width: 26px;
+    height: 26px;
+    flex: none;
+    border-radius: 50%;
+    background: var(--purple-soft);
+    color: var(--g-purple);
+    font-size: var(--fs-10);
+    font-weight: 700;
+  }
+
+  html.theme-dark .rail-mono { color: #B0A4FF; }
+
+  /* Two lines: role on top because the rail is grouped by value-chain
+     function and that is what people scan for; the person beneath so you
+     know who you are about to meet. */
+  .rail-text { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+
+  .rail-name { overflow-wrap: anywhere; }
+
+  .rail-person {
+    font-size: var(--fs-12);
+    font-weight: 400;
+    color: var(--text-dim);
+  }
+
+  .rail-id {
+    font-family: var(--mono);
+    font-size: var(--fs-10);
+    color: var(--text-dim);
+  }
+
+  /* ── Main ────────────────────────────────────────────────────────── */
+
+  /* Wide enough for a 4-up squad grid, centred so an ultra-wide screen does
+     not leave the whole page hugging the left edge. Prose inside still caps
+     itself at a readable measure. */
+  main { padding: 32px 48px 80px; max-width: 1720px; margin-inline: auto; }
+
+  .hero { display: flex; gap: 22px; align-items: flex-start; }
+
+  .hero-portrait {
+    width: 84px;
+    height: 84px;
+    flex: none;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero-mono {
+    display: grid;
+    place-items: center;
+    width: 84px;
+    height: 84px;
+    flex: none;
+    border-radius: 20px;
+    background: linear-gradient(135deg, var(--g-blue) 0%, var(--g-purple) 100%);
+    color: #FFFFFF;
+    font-size: var(--fs-28);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero-body { min-width: 0; flex: 1; }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+  }
+
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    height: 20px;
+    padding: 0 8px;
+    border-radius: 999px;
+    font-size: var(--fs-10);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .tag-id      { background: var(--surface-sunk); color: var(--text-muted); font-family: var(--mono); }
+  .tag-core    { background: var(--accent-soft);  color: var(--accent); }
+  .tag-segment { background: transparent; color: var(--text-dim); text-transform: none; letter-spacing: 0; font-weight: 400; font-size: var(--fs-12); }
+
+  /* The person leads. You meet a name, then learn what they do.
+     Three steps of hierarchy, distinguished by size AND weight so they never
+     blur into each other: 40/600 name, 20/500 role, 16/400 description. */
+  h1 {
+    margin: 0 0 2px;
+    font-size: var(--fs-40);
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-role {
+    margin: 0 0 10px;
+    font-size: var(--fs-20);
+    line-height: 1.25;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+
+  .hero-line {
+    margin: 0;
+    max-width: 76ch;
+    font-size: var(--fs-16);
+    color: var(--text-muted);
+  }
+
+  /* ── Squad summary ───────────────────────────────────────────────── */
+
+  .squad-summary {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin: 28px 0 8px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+
+  .stat {
+    flex: 1;
+    padding: 16px 20px;
+    border-right: 1px solid var(--border);
+  }
+
+  .stat:last-child { border-right: 0; }
+
+  .stat-value {
+    font-size: var(--fs-28);
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .stat-value.is-saved { color: var(--g-green); }
+
+  .stat-label {
+    margin-top: 2px;
+    font-size: var(--fs-12);
+    color: var(--text-dim);
+  }
+
+  .stat-sub {
+    font-size: var(--fs-12);
+    color: var(--text-muted);
+  }
+
+  .unit-note {
+    margin: 0 0 28px;
+    font-size: var(--fs-12);
+    color: var(--text-dim);
+  }
+
+  /* ── Section heading ─────────────────────────────────────────────── */
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 36px 0 16px;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: var(--fs-20);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .section-note {
+    font-size: var(--fs-12);
+    color: var(--text-dim);
+  }
+
+  /* ── Agent cards — the point of the page ─────────────────────────── */
+
+  .squad {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    /* Cards size to their own content. Without this, opening one card
+       stretches its whole row and its neighbours become tall empty boxes. */
+    align-items: start;
+    gap: 14px;
+  }
+
+  .agent {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 200ms ease, border-color 200ms ease, transform 200ms ease;
+  }
+
+  .agent:hover {
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-1px);
+  }
+
+  .agent.is-open {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .agent-head {
+    display: grid;
+    grid-template-columns: 30px 1fr auto;
+    gap: 12px;
+    align-items: start;
+    width: 100%;
+    padding: 16px;
+    border: 0;
+    border-radius: var(--radius);
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .agent-n {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, var(--g-blue) 0%, var(--g-purple) 100%);
+    color: #FFFFFF;
+    font-family: var(--mono);
+    font-size: var(--fs-12);
+    font-weight: 700;
+  }
+
+  .agent-title {
+    margin: 0 0 6px;
+    font-size: var(--fs-16);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+  }
+
+  .agent-one-line {
+    margin: 0;
+    font-size: var(--fs-13);
+    color: var(--text-muted);
+  }
+
+  .agent-saved {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 3px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: var(--green-soft);
+    color: var(--g-green);
+    font-size: var(--fs-13);
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .agent-saved small { font-size: var(--fs-10); font-weight: 600; }
+
+  .chev {
+    margin-top: 8px;
+    justify-self: end;
+    color: var(--text-dim);
+    font-size: var(--fs-12);
+    transition: transform 200ms ease;
+  }
+
+  .agent.is-open .chev { transform: rotate(90deg); }
+
+  .agent-detail {
+    display: none;
+    padding: 0 16px 16px 58px;
+  }
+
+  .agent.is-open .agent-detail { display: block; }
+
+  .spec { border-top: 1px solid var(--border); padding-top: 12px; }
+
+  .spec-row {
+    display: grid;
+    grid-template-columns: 74px 1fr;
+    gap: 12px;
+    padding: 6px 0;
+    font-size: var(--fs-13);
+  }
+
+  .spec-key {
+    font-size: var(--fs-10);
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    padding-top: 3px;
+  }
+
+  .spec-val { color: var(--text-muted); min-width: 0; }
+
+  /* The two blocks that make an agent governable, not just useful. */
+  .guard {
+    margin-top: 12px;
+    padding: 11px 13px;
+    border-radius: var(--radius-s);
+    border-left: 3px solid var(--g-yellow);
+    background: var(--yellow-soft);
+  }
+
+  .guard + .guard {
+    border-left-color: var(--g-red);
+    background: var(--red-soft);
+  }
+
+  .guard-key {
+    display: block;
+    margin-bottom: 3px;
+    font-size: var(--fs-10);
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .guard-val { font-size: var(--fs-13); color: var(--text); }
+
+  .hours-line {
+    margin-top: 12px;
+    font-size: var(--fs-12);
+    color: var(--text-dim);
+  }
+
+  .hours-line b { color: var(--text-muted); font-weight: 600; }
+
+  /* The pain removed, stated before the mechanism. Green rule because it is
+     the same claim the hours-saved pill makes, in words. */
+  .agent-friction {
+    margin: 0 0 14px;
+    padding-left: 11px;
+    border-left: 2px solid var(--g-green);
+    font-size: var(--fs-13);
+    line-height: 1.5;
+    color: var(--text);
+  }
+
+  /* ── Launch ──────────────────────────────────────────────────────── */
+
+  .agent-foot {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+
+  /* The official wordmark is drawn in white -- it was authored for slide 06's
+     dark hero. So the button carries a Grey 1200 surface and the mark is used
+     exactly as supplied, rather than recoloured. */
+  .ge-launch {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    background: var(--g-grey-1200);
+    text-decoration: none;
+    transition: box-shadow 150ms ease, transform 150ms ease, background 150ms ease;
+  }
+
+  .ge-launch:hover {
+    background: #1D1F26;
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-1px);
+  }
+
+  .ge-mark   { height: 14px; width: auto; flex: none; display: block; }
+  .ge-cta    { flex: 1; text-align: right; font-size: var(--fs-12); font-weight: 600; color: #FFFFFF; white-space: nowrap; }
+  .ge-arrow  { font-size: var(--fs-14); color: #FFFFFF; flex: none; }
+
+  .agent-urn {
+    display: block;
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: var(--fs-10);
+    letter-spacing: 0.04em;
+    color: var(--text-dim);
+  }
+
+  /* On the dark theme the button would melt into the page, so give it an edge. */
+  html.theme-dark .ge-launch { background: #1D1F26; border-color: rgba(255, 255, 255, 0.14); }
+  html.theme-dark .ge-launch:hover { background: #262932; }
+
+  /* ── Footer ──────────────────────────────────────────────────────── */
+
+  .provenance {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    font-size: var(--fs-12);
+    color: var(--text-dim);
+  }
+
+  .provenance b { color: var(--text-muted); font-weight: 600; }
+
+  /* ── Narrative ───────────────────────────────────────────────────── */
+
+  .narr-h, .narr-h3 {
+    margin: 0 0 9px;
+    font-size: var(--fs-12);
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+  }
+
+  .mandate { margin: 26px 0 30px; }
+  .mandate p {
+    margin: 0;
+    max-width: 92ch;
+    font-size: var(--fs-16);
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  .work { margin: 40px 0 8px; }
+
+  /* Proportional, not decorative: the segment widths are the counts. */
+  .work-bar { display: flex; gap: 3px; height: 10px; margin-bottom: 12px; }
+  .work-seg { border-radius: 3px; }
+  .seg-B1 { background: var(--g-green); }
+  .seg-B2 { background: var(--border-strong); }
+  .seg-B3 { background: var(--g-yellow); }
+
+  .work-legend { display: flex; flex-wrap: wrap; gap: 8px 26px; margin-bottom: 14px; }
+
+  .work-key {
+    display: flex; align-items: center; gap: 7px;
+    font-size: var(--fs-13); color: var(--text-muted);
+  }
+  .work-key b { color: var(--text); font-weight: 600; }
+  .work-key .dot { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
+  .work-gloss { color: var(--text-dim); font-size: var(--fs-12); }
+
+  .work-details summary {
+    cursor: pointer; font-size: var(--fs-12); color: var(--text-dim); padding: 4px 0;
+  }
+  .work-details summary:hover { color: var(--accent); }
+
+  .work-list { margin: 10px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--border); }
+
+  .work-row {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr) 96px 108px 72px;
+    gap: 12px;
+    align-items: center;
+    padding: 8px 2px;
+    border-bottom: 1px solid var(--border);
+    font-size: var(--fs-13);
+  }
+
+  .work-code  { font-family: var(--mono); font-size: var(--fs-11); color: var(--text-dim); }
+  .work-act   { color: var(--text); }
+  .work-freq  { font-size: var(--fs-11); color: var(--text-dim); }
+  .work-agent { font-size: var(--fs-11); color: var(--accent); text-align: right; }
+
+  .bucket-chip {
+    justify-self: start;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: var(--fs-10);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+  }
+  .bucket-chip.seg-B2 { color: var(--text-muted); }
+
+  .limits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 14px;
+  }
+
+  .not-owned, .the-line {
+    padding: 16px 18px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+
+  .no-list { margin: 0; padding: 0; list-style: none; }
+  .no-list li {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 16px;
+    padding: 7px 0; border-bottom: 1px solid var(--border); font-size: var(--fs-13);
+  }
+  .no-list li:last-child { border-bottom: 0; }
+  .no-list span { color: var(--text-muted); }
+  .no-list b    { color: var(--text); font-weight: 600; text-align: right; }
+
+  .the-line p { margin: 0; font-size: var(--fs-14); line-height: 1.6; color: var(--text); }
+
+  .empty {
+    padding: 60px 0;
+    color: var(--text-dim);
+    font-size: var(--fs-16);
+  }
+
+  @media (max-width: 900px) {
+    .shell { grid-template-columns: 1fr; }
+    .rail { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--border); }
+    main { padding: 24px 20px 60px; }
+    h1 { font-size: var(--fs-28); }
+    .hero-role { font-size: var(--fs-16); }
+    .squad-summary { flex-direction: column; }
+    .stat { border-right: 0; border-bottom: 1px solid var(--border); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <span class="brand">
+    <span class="spark" aria-hidden="true"></span>
+    Agent Squads by Role
+    <span class="brand-sub">· Oil &amp; Gas</span>
+  </span>
+  <span class="topbar-spacer"></span>
+  <button class="btn" id="theme-btn" type="button">Dark</button>
+</header>
+
+<div class="shell">
+  <nav class="rail" aria-label="Roles">
+    <div class="search-wrap">
+      <input class="search" id="search" type="search" placeholder="Search roles or agents" aria-label="Search roles or agents">
+    </div>
+    <div id="rail-list"></div>
+  </nav>
+
+  <main id="main">
+    <div class="empty">Loading…</div>
+  </main>
+</div>
+
+<script src="../data/personas/index.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  /* The rail needs all 33 personas; the page body needs exactly one. So the
+     index (40 KB) loads up front and each persona's detail (~35 KB) is pulled
+     when it is first opened, instead of shipping 1.33 MB to show one role.
+
+     Detail arrives via an injected <script> rather than fetch() on purpose:
+     parts of this deck are opened straight from disk, and fetch() is blocked
+     by CORS on file:// while a script tag is not. */
+  var DATA     = window.PERSONA_INDEX || [];
+  var DETAIL   = (window.PERSONA_DETAIL = window.PERSONA_DETAIL || {});
+  var BY_ID    = DATA.reduce(function (acc, p) { acc[p.id] = p; return acc; }, {});
+  var pending  = {};
+
+  function loadDetail(id, done) {
+    if (DETAIL[id]) return done(DETAIL[id]);
+    if (pending[id]) return pending[id].push(done);
+    pending[id] = [done];
+
+    var s = document.createElement("script");
+    s.src = "../data/personas/" + encodeURIComponent(id) + ".js";
+    s.onload = s.onerror = function () {
+      var waiting = pending[id] || [];
+      delete pending[id];
+      waiting.forEach(function (cb) { cb(DETAIL[id] || null); });
+    };
+    document.head.appendChild(s);
+  }
+  var railEl   = document.getElementById("rail-list");
+  var mainEl   = document.getElementById("main");
+  var searchEl = document.getElementById("search");
+  var pendingOpenAgent = null;   // ?a=<n>, applied on the first paint only
+
+  /* The one Gemini Enterprise workspace this estate is published into -- the
+     same address slide 06 already links to. It is a workspace, not a per-agent
+     endpoint: none of these 232 agents is individually deployed yet, so the
+     card says "see this agent in", never "invoke". Override per deployment. */
+  var GEMINI_ENTERPRISE_URL = window.GEMINI_ENTERPRISE_URL ||
+    "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05?hl=en_US";
+
+  /* Deck rows A–T predate the research. Keep their deep links working:
+     page_08's chessboard links out as ?role=<letter>. Three rows (E mud
+     chemist, F directional drilling, R reforming) have no dossier, and
+     O/P/Q all collapse into the single refinery process engineer. */
+  var DECK_ROW_TO_RESEARCH = {
+    A: "P18", B: "P05", C: "P21", D: "P07", E: null,  F: null,  G: "P02",
+    H: "P22", I: "P09", J: "P04", K: "P12", L: "P13", M: "P14", N: "P15",
+    O: "P16", P: "P16", Q: "P16", R: null,  S: "P28", T: "P19"
+  };
+
+  var current = null;
+
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
+  function hours(n) {
+    if (n == null) return null;
+    return (Math.round(n * 100) / 100).toString().replace(/\.00$/, "");
+  }
+
+  // ── Routing ────────────────────────────────────────────────────────
+
+  function resolveId() {
+    var q = new URLSearchParams(window.location.search);
+    var pid = q.get("p");
+    if (pid && BY_ID[pid.trim().toUpperCase()]) return pid.trim().toUpperCase();
+
+    var role = q.get("role");
+    if (role) {
+      var mapped = DECK_ROW_TO_RESEARCH[role.trim().toUpperCase()];
+      if (mapped && BY_ID[mapped]) return mapped;
+    }
+    return BY_ID.P04 ? "P04" : (DATA[0] && DATA[0].id);
+  }
+
+  // ── Rail ───────────────────────────────────────────────────────────
+
+  function matches(p, q) {
+    if (!q) return true;
+    var hay = [p.id, p.title, p.segment, p.person, p.agentFocus]
+      .concat(p.aliases || [])
+      .concat(p.agentNames || [])
+      .join(" ").toLowerCase();
+    return hay.indexOf(q) >= 0;
+  }
+
+  function avatarNode(p, cls, monoCls) {
+    if (p.thumb || p.avatar) {
+      var src = cls === "rail-thumb" ? (p.thumb || p.avatar) : (p.avatar || p.thumb);
+      return '<img class="' + cls + '" src="' + esc(src) + '" alt="" loading="lazy" ' +
+             'onerror="this.outerHTML=\'<span class=&quot;' + monoCls + '&quot;>' + esc(p.initials) + '</span>\'">';
+    }
+    return '<span class="' + monoCls + '">' + esc(p.initials) + "</span>";
+  }
+
+  // Rail buckets. The dossier segment is finer-grained than is useful in a
+  // 33-item sidebar (6 of the 13 raw segments hold exactly one persona), so
+  // collapse to value-chain order. The precise segment still shows on the hero.
+  var RAIL_GROUPS = [
+    "Subsurface & Geosciences",
+    "Wells & Rig Operations",
+    "Field & Gathering",
+    "Midstream",
+    "Downstream Refining",
+    "Cross-Cutting"
+  ];
+
+  function railGroup(p) {
+    var s = p.segment || "";
+    if (s.indexOf("Cross-Cutting") === 0) return "Cross-Cutting";
+    if (s.indexOf("Midstream") === 0) return "Midstream";
+    return RAIL_GROUPS.indexOf(s) >= 0 ? s : "Other";
+  }
+
+  function renderRail() {
+    var q = (searchEl.value || "").trim().toLowerCase();
+    var shown = DATA.filter(function (p) { return matches(p, q); });
+
+    if (!shown.length) {
+      railEl.innerHTML = '<p class="rail-group">No match</p>';
+      return;
+    }
+
+    var buckets = {};
+    shown.forEach(function (p) {
+      var g = railGroup(p);
+      (buckets[g] || (buckets[g] = [])).push(p);
+    });
+
+    var order = RAIL_GROUPS.concat(["Other"]);
+    var html = "";
+    order.forEach(function (g) {
+      var list = buckets[g];
+      if (!list || !list.length) return;
+      list.sort(function (a, b) { return a.id < b.id ? -1 : a.id > b.id ? 1 : 0; });
+      html += '<div class="rail-group">' + esc(g) +
+              '<span class="rail-count">' + list.length + "</span></div>";
+      list.forEach(function (p) {
+        html +=
+          '<button class="rail-item" type="button" data-id="' + esc(p.id) + '" ' +
+          'aria-current="' + (p.id === current ? "true" : "false") + '">' +
+            avatarNode(p, "rail-thumb", "rail-mono") +
+            '<span class="rail-text">' +
+              '<span class="rail-name">' + esc(p.title) + "</span>" +
+              (p.person ? '<span class="rail-person">' + esc(p.person) + "</span>" : "") +
+            "</span>" +
+            '<span class="rail-id">' + esc(p.id) + "</span>" +
+          "</button>";
+      });
+    });
+    railEl.innerHTML = html;
+  }
+
+  // ── Agent card — the highlight ─────────────────────────────────────
+
+  function specRow(key, val) {
+    if (!val) return "";
+    return '<div class="spec-row"><span class="spec-key">' + esc(key) + "</span>" +
+           '<span class="spec-val">' + esc(val) + "</span></div>";
+  }
+
+  function agentCard(a, valueRow) {
+    var saved = valueRow && hours(valueRow.savedHours);
+
+    var hoursLine = "";
+    if (valueRow && valueRow.beforeHours != null && valueRow.afterHours != null) {
+      hoursLine =
+        '<p class="hours-line">' +
+          "<b>" + hours(valueRow.beforeHours) + " h</b> today → " +
+          "<b>" + hours(valueRow.afterHours) + " h</b> reviewing" +
+          (valueRow.unit ? " · per " + esc(valueRow.unit.replace(/^1\s+/, "")) : "") +
+        "</p>";
+    }
+
+    return (
+      '<article class="agent" data-agent="' + a.n + '">' +
+        '<button class="agent-head" type="button" aria-expanded="false">' +
+          '<span class="agent-n">' + (a.n < 10 ? "0" + a.n : a.n) + "</span>" +
+          "<span>" +
+            '<h3 class="agent-title">' + esc(a.name) + "</h3>" +
+            '<p class="agent-one-line">' + esc(a.oneLine) + "</p>" +
+          "</span>" +
+          "<span>" +
+            (saved ? '<span class="agent-saved">' + saved + "<small>h saved</small></span>" : "") +
+            '<span class="chev" aria-hidden="true">›</span>' +
+          "</span>" +
+        "</button>" +
+        '<div class="agent-detail">' +
+          /* Why before how: the friction is the reason the agent exists. */
+          (a.frictionSolved
+            ? '<p class="agent-friction">' + esc(a.frictionSolved) + "</p>"
+            : "") +
+          '<div class="spec">' +
+            specRow("Reads", a.reads) +
+            specRow("Does", a.does) +
+            specRow("Returns", a.returns) +
+          "</div>" +
+          (a.stopsAt
+            ? '<div class="guard"><span class="guard-key">Stops at</span>' +
+              '<span class="guard-val">' + esc(a.stopsAt) + "</span></div>"
+            : "") +
+          (a.failureModes
+            ? '<div class="guard"><span class="guard-key">Safety envelope</span>' +
+              '<span class="guard-val">' + esc(a.failureModes) + "</span></div>"
+            : "") +
+          hoursLine +
+          '<div class="agent-foot">' +
+            '<a class="ge-launch" href="' + esc(GEMINI_ENTERPRISE_URL) + '" ' +
+               'target="_blank" rel="noopener noreferrer" ' +
+               'title="Opens the Gemini Enterprise workspace this estate is published into">' +
+              '<img class="ge-mark" src="../assets/media/gemini_enterprise_logo.svg" alt="Gemini Enterprise">' +
+              '<span class="ge-cta">See this agent</span>' +
+              '<span class="ge-arrow" aria-hidden="true">↗</span>' +
+            "</a>" +
+            (a.agentId ? '<span class="agent-urn">' + esc(a.agentId) + "</span>" : "") +
+          "</div>" +
+        "</div>" +
+      "</article>"
+    );
+  }
+
+  // ── Narrative ──────────────────────────────────────────────────────
+
+  /* The corpus legend, verbatim: "Bucket: B1 (Ours) / B2 (Monolith) /
+     B3 (Live Operations)". The split is the whole argument of the page --
+     of the work this role owns, only B1 is ours to take. */
+  var BUCKETS = {
+    B1: { label: "Ours",            gloss: "automatable — this is where the squad works" },
+    B2: { label: "Monolith",        gloss: "locked inside an incumbent system of record" },
+    B3: { label: "Live Operations", gloss: "stays human, on the rig or at the board" }
+  };
+
+  function mandateBlock(p) {
+    var why = p.role && p.role.whyItMatters;
+    if (!why) return "";
+    return '<section class="mandate">' +
+             '<h2 class="narr-h">What this role is answerable for</h2>' +
+             "<p>" + esc(why) + "</p>" +
+           "</section>";
+  }
+
+  function workBlock(p) {
+    var actions = p.actions || [];
+    if (!actions.length) return "";
+
+    var counts = { B1: 0, B2: 0, B3: 0 };
+    actions.forEach(function (a) { if (counts[a.bucket] != null) counts[a.bucket]++; });
+
+    var bar = ["B1", "B2", "B3"].map(function (b) {
+      if (!counts[b]) return "";
+      return '<span class="work-seg seg-' + b + '" style="flex:' + counts[b] + '" ' +
+             'title="' + counts[b] + " × " + BUCKETS[b].label + '"></span>';
+    }).join("");
+
+    var legend = ["B1", "B2", "B3"].map(function (b) {
+      if (!counts[b]) return "";
+      return '<span class="work-key">' +
+               '<i class="dot seg-' + b + '"></i>' +
+               "<b>" + counts[b] + "</b> " + esc(BUCKETS[b].label) +
+               '<span class="work-gloss">' + esc(BUCKETS[b].gloss) + "</span>" +
+             "</span>";
+    }).join("");
+
+    var rows = actions.map(function (a) {
+      return '<li class="work-row">' +
+               '<span class="work-code">' + esc(a.code || "") + "</span>" +
+               '<span class="work-act">' + esc(a.action || a.label || "") + "</span>" +
+               (a.freq ? '<span class="work-freq">' + esc(a.freq) + "</span>" : '<span class="work-freq"></span>') +
+               '<span class="bucket-chip seg-' + esc(a.bucket || "") + '">' +
+                 esc((BUCKETS[a.bucket] || {}).label || a.bucket || "—") +
+               "</span>" +
+               (a.agentRef
+                 ? '<span class="work-agent">Agent ' + esc(a.agentRef) + "</span>"
+                 : '<span class="work-agent"></span>') +
+             "</li>";
+    }).join("");
+
+    return '<section class="work">' +
+             '<div class="section-head">' +
+               "<h2>The work this role owns</h2>" +
+               '<span class="section-note">' + actions.length + " touchpoints. " +
+                 (counts.B1 ? "<b>" + counts.B1 + "</b> are ours to automate." : "") +
+               "</span>" +
+             "</div>" +
+             '<div class="work-bar">' + bar + "</div>" +
+             '<div class="work-legend">' + legend + "</div>" +
+             "<details class=\"work-details\"><summary>All " + actions.length + " touchpoints</summary>" +
+               '<ol class="work-list">' + rows + "</ol>" +
+             "</details>" +
+           "</section>";
+  }
+
+  function limitsBlock(p) {
+    var notOwned = (p.role && p.role.notOwned) || [];
+    var line = p.line || "";
+    if (!notOwned.length && !line) return "";
+
+    var owned = notOwned.length
+      ? '<div class="not-owned">' +
+          '<h3 class="narr-h3">Not this role\u2019s call</h3>' +
+          '<ul class="no-list">' +
+            notOwned.map(function (n) {
+              return "<li><span>" + esc(n.task) + "</span><b>" + esc(n.owner) + "</b></li>";
+            }).join("") +
+          "</ul>" +
+        "</div>"
+      : "";
+
+    var honest = line
+      ? '<div class="the-line">' +
+          '<h3 class="narr-h3">The honest limit</h3>' +
+          "<p>" + esc(line) + "</p>" +
+        "</div>"
+      : "";
+
+    return '<div class="section-head"><h2>Where the squad stops</h2>' +
+             '<span class="section-note">Every agent hands back. These are the calls it never makes.</span>' +
+           "</div>" +
+           '<section class="limits">' + owned + honest + "</section>";
+  }
+
+  // ── Persona ────────────────────────────────────────────────────────
+
+  /* Two steps: the rail and the chrome can paint from the index immediately,
+     while this persona's detail file is still in flight. */
+  function renderPersona(id) {
+    if (!BY_ID[id]) {
+      mainEl.innerHTML = '<p class="empty">No research dossier for that role yet.</p>';
+      return;
+    }
+    current = id;
+    renderRail();
+    document.title =
+      (BY_ID[id].person ? BY_ID[id].person + " · " : "") +
+      BY_ID[id].title + " — Agent Squad";
+
+    loadDetail(id, function (p) {
+      if (current !== id) return;            // user moved on while it loaded
+      if (!p) {
+        mainEl.innerHTML = '<p class="empty">Could not load ' + esc(id) +
+          '. Run <code>python3 scripts/extract_persona_research.py</code>.</p>';
+        return;
+      }
+      paintPersona(p);
+    });
+  }
+
+  function paintPersona(p) {
+
+    var vm      = p.valueModel || {};
+    var total   = vm.total || {};
+    var rows    = vm.rows || [];
+    var agents  = p.agents || [];
+
+    /* §5 lists one value row per agent, in agent order, but its labels are
+       written independently of the §4 agent names -- so pair by position. */
+    function valueFor(a) { return rows[a.n - 1] || null; }
+
+    var savedTotal = hours(total.savedHours);
+
+    var summary =
+      '<section class="squad-summary">' +
+        '<div class="stat">' +
+          '<div class="stat-value">' + agents.length + "</div>" +
+          '<div class="stat-label">agents in the squad</div>' +
+        "</div>" +
+        (savedTotal
+          ? '<div class="stat">' +
+              '<div class="stat-value is-saved">' + savedTotal + " h</div>" +
+              '<div class="stat-label">saved per cycle' + (total.derived ? " (computed)" : "") + "</div>" +
+            "</div>"
+          : "") +
+        (total.beforeHours != null
+          ? '<div class="stat">' +
+              '<div class="stat-value stat-sub" style="font-size:var(--fs-20)">' +
+                hours(total.beforeHours) + " h → " + hours(total.afterHours) + " h" +
+              "</div>" +
+              '<div class="stat-label">' + esc(total.unit || total.label || "per cycle") + "</div>" +
+            "</div>"
+          : "") +
+        (total.frictionRemoved
+          ? '<div class="stat">' +
+              '<div class="stat-value stat-sub" style="font-size:var(--fs-14)">' +
+                esc(total.frictionRemoved) +
+              "</div>" +
+              '<div class="stat-label">what goes away</div>' +
+            "</div>"
+          : "") +
+      "</section>";
+
+    var standards = (p.standards || []).map(function (s) { return s.key; }).filter(Boolean);
+
+    mainEl.innerHTML =
+      '<section class="hero">' +
+        avatarNode(p, "hero-portrait", "hero-mono") +
+        '<div class="hero-body">' +
+          '<div class="hero-meta">' +
+            '<span class="tag tag-id">' + esc(p.id) + "</span>" +
+            (p.core20 ? '<span class="tag tag-core">Core 20</span>' : "") +
+            '<span class="tag tag-segment">' + esc(p.segment) + "</span>" +
+          "</div>" +
+          // Name first, then profession. If a persona has no illustrative
+          // name, the role becomes the H1 so the heading is never empty.
+          (p.person
+            ? "<h1>" + esc(p.person) + "</h1>" +
+              '<p class="hero-role">' + esc(p.title) + "</p>"
+            : "<h1>" + esc(p.title) + "</h1>") +
+          '<p class="hero-line">' + esc(p.role && p.role.oneLine) + "</p>" +
+        "</div>" +
+      "</section>" +
+
+      mandateBlock(p) +
+
+      summary +
+      (vm.rule ? '<p class="unit-note">Per unit of work. ' + esc(vm.rule) + "</p>" : "") +
+
+      workBlock(p) +
+
+      '<div class="section-head">' +
+        "<h2>The squad</h2>" +
+        '<span class="section-note">Each agent takes one workflow. Open a card for what it reads, does, returns — and where it stops.</span>' +
+      "</div>" +
+      '<div class="squad">' +
+        agents.map(function (a) { return agentCard(a, valueFor(a)); }).join("") +
+      "</div>" +
+
+      limitsBlock(p) +
+
+      '<p class="provenance">' +
+        "<b>" + esc(p.person || p.title) + "</b> · " +
+        (p.person ? esc(p.title) + " · " : "") +
+        agents.length + " agents · " +
+        (p.citations || []).length + " citations" +
+        (standards.length ? " · " + esc(standards.join(", ")) : "") +
+        (p.governingStandards ? " · " + esc(p.governingStandards) : "") +
+      "</p>";
+
+    mainEl.scrollTop = 0;
+    window.scrollTo({ top: 0, behavior: "auto" });
+
+    if (pendingOpenAgent) {
+      var card = mainEl.querySelector('.agent[data-agent="' + pendingOpenAgent + '"]');
+      pendingOpenAgent = null;              // one-shot: only on first paint
+      if (card) {
+        card.classList.add("is-open");
+        card.querySelector(".agent-head").setAttribute("aria-expanded", "true");
+      }
+    }
+  }
+
+  // ── Events ─────────────────────────────────────────────────────────
+
+  railEl.addEventListener("click", function (e) {
+    var btn = e.target.closest(".rail-item");
+    if (!btn) return;
+    var id = btn.getAttribute("data-id");
+    history.pushState({ id: id }, "", "?p=" + id);
+    renderPersona(id);
+  });
+
+  mainEl.addEventListener("click", function (e) {
+    /* The launch link lives inside the card's own click target. Without this,
+       opening Gemini Enterprise would also collapse the card behind it. */
+    if (e.target.closest(".ge-launch")) return;
+    var head = e.target.closest(".agent-head");
+    if (!head) return;
+    var card = head.closest(".agent");
+    var open = card.classList.toggle("is-open");
+    head.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  searchEl.addEventListener("input", renderRail);
+
+  window.addEventListener("popstate", function () { renderPersona(resolveId()); });
+
+  document.getElementById("theme-btn").addEventListener("click", function () {
+    var dark = document.documentElement.classList.toggle("theme-dark");
+    document.documentElement.classList.toggle("theme-light", !dark);
+    this.textContent = dark ? "Light" : "Dark";
+    try { localStorage.setItem("persona-theme", dark ? "dark" : "light"); } catch (err) { /* private mode */ }
+  });
+
+  // Theme: ?theme=dark|light wins over the stored preference, so a link can
+  // pin the theme (e.g. when embedded in a dark deck).
+  (function () {
+    var forced = new URLSearchParams(location.search).get("theme");
+    var stored = null;
+    try { stored = localStorage.getItem("persona-theme"); } catch (err) { /* private mode */ }
+    var dark = forced ? forced === "dark" : stored === "dark";
+    document.documentElement.classList.toggle("theme-dark", dark);
+    document.documentElement.classList.toggle("theme-light", !dark);
+    document.getElementById("theme-btn").textContent = dark ? "Light" : "Dark";
+  })();
+
+  // ── Boot ───────────────────────────────────────────────────────────
+
+  if (!DATA.length) {
+    mainEl.innerHTML =
+      '<p class="empty">Persona index unavailable. Run ' +
+      "<code>python3 scripts/extract_persona_research.py</code> to generate it.</p>";
+  } else {
+    /* ?a=<n> deep-links to one agent, opened. It has to wait for the detail
+       file: the card it points at does not exist until the persona paints. */
+    var want = new URLSearchParams(location.search).get("a");
+    if (want) {
+      pendingOpenAgent = String(Number(want));
+    }
+    renderPersona(resolveId());
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+#!/usr/bin/env python3
+"""pre-commit — block confidential material and secrets from reaching the remote.
+
+WHY THIS EXISTS
+    The remote for this repo is a personal GitHub account, and the working
+    tree regularly picks up Google-internal source material: brand books,
+    partner guidelines, pitch PDFs. Once any of that is committed it is in
+    history, and getting it out means a rewrite. This hook is the guard.
+
+WHAT IT DOES
+    Scans every staged file. Two classes of finding, handled differently:
+
+    CONFIDENTIAL MARKING  -> unstage the file, append it to .gitignore, stage
+                             .gitignore, abort. Re-run the commit and it will
+                             go through without the file.
+
+    SECRET                -> abort only. Never auto-ignored: a leaked key has
+                             to be rotated and removed, and silently hiding
+                             the file would be the wrong outcome.
+
+WHY PHRASES, NOT THE WORD "CONFIDENTIAL"
+    Matching the bare word breaks this repo immediately. data/personas/P23.js
+    carries an agent called "Subsurface Data Entitlement, Joint-Venture
+    Confidentiality & Regulatory Release Auditor" -- legitimate content that
+    must be committed. So the patterns below match document MARKINGS as they
+    actually appear on a cover page or footer, not topical mentions.
+
+INSTALL
+    git config core.hooksPath .githooks
+
+OVERRIDE, one commit only
+    ALLOW_CONFIDENTIAL=1 git commit ...
+"""
+
+import os
+import re
+import subprocess
+import sys
+
+IGNORE_FILE = ".gitignore"
+MARKER = "# 7. Auto-added by .githooks/pre-commit"
+
+# Never scan these: .gitignore quotes the markings it is ignoring, and this
+# hook quotes every pattern it looks for. Both would flag themselves.
+SELF_EXEMPT = {".gitignore", ".githooks/pre-commit"}
+
+# Document markings. Deliberately phrases -- see the module docstring.
+CONFIDENTIAL = [
+    r"google confidential",
+    r"confidential\s*(?:&|and)\s*proprietary",
+    r"proprietary\s*(?:&|and)\s*confidential",
+    r"confidential\s*[\u2013\u2014-]\s*do not",
+    r"internal use only",
+    r"google internal only",
+    r"do not distribute",
+    r"not for external distribution",
+    r"under\s+nda\b",
+    r"restricted\s*[\u2013\u2014-]\s*confidential",
+]
+
+# Credentials. Abort, never auto-ignore.
+SECRETS = [
+    (r"-----BEGIN (?:RSA |EC |OPENSSH |PGP |DSA )?PRIVATE KEY-----", "private key"),
+    (r"\bAIza[0-9A-Za-z_\-]{35}\b",                                  "Google API key"),
+    (r"\bAKIA[0-9A-Z]{16}\b",                                        "AWS access key"),
+    (r"\bghp_[A-Za-z0-9]{36}\b",                                     "GitHub token"),
+    (r"\bxox[baprs]-[A-Za-z0-9-]{10,}",                              "Slack token"),
+    (r'"type"\s*:\s*"service_account"',                              "GCP service-account key"),
+    (r"\bsk-[A-Za-z0-9]{32,}\b",                                     "OpenAI-style API key"),
+]
+
+CONF_RE = [re.compile(p, re.I) for p in CONFIDENTIAL]
+SEC_RE = [(re.compile(p), label) for p, label in SECRETS]
+
+C_RED = "\033[31m"
+C_YEL = "\033[33m"
+C_DIM = "\033[2m"
+C_OFF = "\033[0m"
+
+
+def sh(*args):
+    return subprocess.run(args, capture_output=True, text=True).stdout
+
+
+def staged_files():
+    out = sh("git", "diff", "--cached", "--name-only", "--diff-filter=ACM")
+    return [f for f in out.splitlines() if f]
+
+
+def text_of(path):
+    """Readable text for scanning, or None if the file can't be scanned.
+
+    PDFs go through pdftotext -- the whole point of this hook is the brand
+    books, and their markings live in page footers, not the filename.
+    """
+    if path.lower().endswith(".pdf"):
+        if not sh("which", "pdftotext").strip():
+            return None
+        r = subprocess.run(["pdftotext", "-q", path, "-"],
+                           capture_output=True, text=True)
+        return r.stdout or None
+    try:
+        with open(path, "rb") as fh:
+            raw = fh.read(2_000_000)
+        if b"\x00" in raw[:8192]:          # binary
+            return None
+        return raw.decode("utf-8", "replace")
+    except OSError:
+        return None
+
+
+def append_to_gitignore(paths):
+    body = ""
+    if os.path.exists(IGNORE_FILE):
+        with open(IGNORE_FILE, "r", encoding="utf-8") as fh:
+            body = fh.read()
+    if MARKER not in body:
+        body = body.rstrip("\n") + "\n\n" + MARKER + "\n"
+
+    existing = {ln.strip() for ln in body.splitlines()}
+    added = [p for p in paths if p not in existing]
+    if added:
+        body = body.rstrip("\n") + "\n" + "\n".join(added) + "\n"
+        with open(IGNORE_FILE, "w", encoding="utf-8") as fh:
+            fh.write(body)
+    return added
+
+
+def main():
+    if os.environ.get("ALLOW_CONFIDENTIAL") == "1":
+        print(f"{C_YEL}pre-commit: ALLOW_CONFIDENTIAL=1 — scan skipped.{C_OFF}")
+        return 0
+
+    confidential, secrets, unscanned = [], [], []
+
+    for path in staged_files():
+        if path in SELF_EXEMPT:
+            continue
+        text = text_of(path)
+        if text is None:
+            if not path.lower().endswith(
+                    (".jpg", ".jpeg", ".png", ".gif", ".svg", ".webp", ".ico",
+                     ".woff", ".woff2", ".ttf", ".otf", ".mp4", ".webm")):
+                unscanned.append(path)
+            continue
+
+        for rx, label in SEC_RE:
+            if rx.search(text):
+                secrets.append((path, label))
+                break
+
+        for rx in CONF_RE:
+            m = rx.search(text)
+            if m:
+                confidential.append((path, m.group(0).strip()))
+                break
+
+    if not confidential and not secrets:
+        if unscanned:
+            print(f"{C_DIM}pre-commit: {len(unscanned)} binary file(s) not "
+                  f"text-scanned: {', '.join(unscanned[:3])}"
+                  f"{' …' if len(unscanned) > 3 else ''}{C_OFF}")
+        return 0
+
+    print()
+    if secrets:
+        print(f"{C_RED}pre-commit: COMMIT BLOCKED — credential material staged{C_OFF}")
+        for path, label in secrets:
+            print(f"  {C_RED}!{C_OFF} {path}  ({label})")
+        print()
+        print("  These are NOT auto-ignored. A committed key must be rotated,")
+        print("  not hidden. Remove the credential, then commit.")
+
+    if confidential:
+        paths = sorted({p for p, _ in confidential})
+        added = append_to_gitignore(paths)
+        subprocess.run(["git", "rm", "--cached", "-r", "--quiet", "--"] + paths)
+        subprocess.run(["git", "add", "--", IGNORE_FILE])
+
+        print(f"{C_YEL}pre-commit: COMMIT BLOCKED — confidentiality marking found{C_OFF}")
+        for path, hit in confidential:
+            print(f"  {C_YEL}!{C_OFF} {path}")
+            print(f"    {C_DIM}matched: \"{hit}\"{C_OFF}")
+        print()
+        print(f"  Unstaged, and added to {IGNORE_FILE}:")
+        for a in added:
+            print(f"    + {a}")
+        print()
+        print("  .gitignore is staged. Re-run your commit and it will pass.")
+
+    print()
+    print(f"  {C_DIM}Deliberate? ALLOW_CONFIDENTIAL=1 git commit ...{C_OFF}")
+    print()
+    return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

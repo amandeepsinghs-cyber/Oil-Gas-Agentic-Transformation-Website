@@ -1,0 +1,559 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P03"] = {
+  "id": "P03",
+  "title": "Board Operator (Refinery)",
+  "aliases": [
+    "Panel Operator",
+    "Console Operator",
+    "DCS Specialist",
+    "Unit Boardman"
+  ],
+  "segment": "Downstream Refining",
+  "segmentLong": "Downstream — Refining & Petrochemicals",
+  "setting": "Refinery Central Control Room (CCR), seated at a 4-to-6 screen DCS console station surrounded by alarm banners, CCTV monitors, and emergency shutdown consoles",
+  "tier": "Core 20",
+  "core20": true,
+  "governingStandards": "API RP 755; ISA-18.2; PetroLMI",
+  "agentFocus": "Shift Handover & Loop Override Log Agent",
+  "sourceFile": "P03_Board_Operator_Refinery.md",
+  "person": "Elena Duarte",
+  "avatar": "avatars/P03_persona.jpg",
+  "thumb": "avatars/thumbs/P03_thumb.jpg",
+  "initials": "BO",
+  "headline": "The Board Operator is the real-time pilot of multi-billion dollar refinery processing units, navigating volatile crude diet switches, furnace firing limits, and emergency plant upsets. While the Distributed Control System (DCS) executes closed-loop PID control and alarm managers log raw event timestamps, the operational context of the shift remains completely stranded in human memory and informal scratchpads. During a 12-hour shift, a single boardman manages 200 to 500 control loops, makes dozens of manual setpoint trims, and navigates alarm cascades. At shift handover, unrecorded context—such as a sluggish reflux valve, an overridden interlock, or an uncalibrated online analyzer—is lost across the shift boundary, a documented root cause of major industrial catastrophes (e.g., BP Texas City). Rather than an unfeasible \"autonomous plant controller,\" the Board Operator requires a federated squad of 7 hyper-specialized agents—each tackling one discrete, research-backed cognitive and operational friction point. Across a 12-hour shift, this squad returns ~4.75 hours of cognitive focus per operator shift, eliminating catastrophic handover communication blind spots, taming alarm floods during severe unit trips, and preventing expensive off-spec product giveaways.",
+  "confidence": {
+    "Persona": "Board Operator (Refinery) (P03)",
+    "Research Status": "Desk research grounded in international process automation, alarm management, and human factors safety standards",
+    "Competency Standard Used": "API RP 755 (Fatigue Risk Management in Refining) & ISA-18.2 / IEC 62682 (Alarm Management for Process Industries) & CCPS Guidelines for Safe Automation of Chemical Processes",
+    "Standard Coverage": "10 of 11 console operational competencies mapped directly to operational actions",
+    "Actions Cited": "15 of 17 actions trace directly to ISA-18.2, API RP 755, CCPS automation guidelines, and API STD 560; 2 marked inferred (informal board scratchpad notes & radio communication synthesis)",
+    "Pain Claims Cited": "9 of 10 pain claims backed by published CSB (US Chemical Safety Board) investigation reports and ASM (Abnormal Situation Management) Consortium research",
+    "Timings Sourced": "Shift handover compilation, alarm flood triage, and furnace pass balancing timings verified via ASM Consortium and practitioner accounts",
+    "Gap Claims Cited": "Hexagon j5, Honeywell Experion, and Yokogawa Centum technical documentation confirm systems record raw data; none autonomously correlate multi-variable controller overrides, filter first-out alarm root causes, or forecast crude switch column thermal waves without manual engineering",
+    "Known Gaps": "Console operator span of control (number of loops per operator) varies widely from 150 to 500+ depending on refinery automation maturity and APC deployment"
+  },
+  "role": {
+    "oneLine": "Directly manipulates the digital Distributed Control System (DCS) to maintain refinery conversion and distillation units within safe operating limits, balancing product yield optimization against furnace, column, and compressor constraints.",
+    "whyItMatters": "A control console failure or delayed response leads directly to catastrophic refinery fires, hydrocracker thermal runaways, distillation tower overpressure and atmospheric relief venting, off-spec fuel batches contaminating tank farms, or unplanned unit trips costing 500,000 to2,000,000 per day in downtime.",
+    "notOwned": [
+      {
+        "task": "Physical Field Valve Cracking, Pump Strainer Cleaning, and Gauge Reading",
+        "owner": "Field Outside Operator (Auxiliary Operator)"
+      },
+      {
+        "task": "Long-Term Catalyst Activity Modeling & Heat Exchanger Network Design",
+        "owner": "Refinery Process Engineer"
+      },
+      {
+        "task": "Economic Crude Diet Selection & Monthly Operating Plan (MOP) Modeling",
+        "owner": "Production Planner (LP Modeler)"
+      },
+      {
+        "task": "Mechanical Repair of Compressors and Control Valve Actuators",
+        "owner": "Plant Maintenance / Instrument Technician"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Crude & Vacuum Distillation (CDU/VDU) Boardman",
+        "detail": "Manages massive volumetric throughput, furnace coil skin temperatures, atmospheric tower cut points, and desalter electrical grids."
+      },
+      {
+        "name": "Conversion Unit (FCCU / Hydrocracker) Boardman",
+        "detail": "Manages extreme thermodynamic severity, high-pressure hydrogen loops (150–200 bar), reactor catalyst bed exotherms, and catalyst circulation slide valves."
+      }
+    ],
+    "titleCheck": "The industry title is Board Operator, Panel Operator, or Console Operator. Never call this role \"Refinery Engineer\" (an office staff desk) or \"Plant Operator\" (an ambiguous term often meaning outside field workers).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Refinery Central Control Room (CCR): Pressurized, blast-resistant, climate-controlled control bunker. Low ambient noise, subdued lighting, continuous electronic hum.",
+      "What They Can Reach": "Seated in an ergonomic console chair surrounded by 4 to 6 large LCD screens displaying DCS graphics, alarm banners, CCTV unit cameras, and an emergency shutdown (ESD) hardwired button console; desk phone and plant UHF radio.",
+      "Shift Pattern": "12-hour rotating shifts (e.g., 2 Days on, 2 Nights on, 4 Days off; 06:00 to 18:00 handover). High cognitive fatigue during the 02:00–05:00 window.",
+      "Where the Record Lives": "System of record: DCS Sequence of Events (SOE) historian, Matrikon alarm database, electronic shift logbook (e.g., j5 Operations Management or Yokogawa jLog), and paper scratchpads."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[API-RP-755]: American Petroleum Institute, Fatigue Risk Management Systems for Personnel in the Refining and Petrochemical Industries, 2nd Edition."
+    },
+    {
+      "key": "",
+      "citation": "[ISA-18-2]: International Society of Automation, Management of Alarm Systems for the Process Industries, ANSI/ISA-18.2 / IEC 62682."
+    },
+    {
+      "key": "",
+      "citation": "[CCPS-Auto]: Center for Chemical Process Safety, Guidelines for Safe Automation of Chemical Processes, 2nd Edition, AIChE."
+    },
+    {
+      "key": "",
+      "citation": "[API-STD-560]: American Petroleum Institute, Fired Heaters for General Refinery Service (Combustion, Draft, and Tube Skin Temperature Limits)."
+    },
+    {
+      "key": "",
+      "citation": "[HSSC-QP-Downstream]: Hydrocarbon Sector Skill Council, Qualification Pack: Console Operator — Petroleum Downstream."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Honeywell Experion PKS / Yokogawa Centum VP",
+      "module": "Distributed Control System (DCS) Console",
+      "solves": "Executes real-time closed-loop regulatory control (PID loops), graphic mimics, and Advanced Process Control (APC) multivariable targets.",
+      "gap": "Zero context retention. The DCS logs every click and setpoint change as raw hex/time records, but cannot explain why the operator took a loop out of cascade into manual mode or why an interlock was bypassed."
+    },
+    {
+      "product": "Matrikon / Honeywell DynAMo",
+      "module": "Alarm Management & Rationalization",
+      "solves": "Ingests alarm frequency metrics, tracks chattering alarms, and calculates alarms-per-hour per console.",
+      "gap": "Operates as an engineering analysis tool after the fact. Does not assist the operator in real time during an alarm flood to filter root causes from cascading secondary symptoms."
+    },
+    {
+      "product": "Hexagon / AspenTech j5 Operations",
+      "module": "Electronic Shift Logbook",
+      "solves": "Provides structured web forms for shift handover notes, standing equipment logs, and safety bypass tracking.",
+      "gap": "100% manual transcription. The outgoing operator must manually remember and type their actions into text fields while exhausted at the end of a 12-hour shift."
+    },
+    {
+      "product": "LIMS (LabWare / Thermo Fisher)",
+      "module": "Laboratory Information Management System",
+      "solves": "Stores certified laboratory grab sample test results (density, sulfur, flash point, ASTM D86 distillation curves).",
+      "gap": "Data silo. LIMS test results arrive 2 to 4 hours after sampling; DCS does not autonomously calculate analyzer bias offsets or alert the boardman to analyzer drift."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Compile end-of-shift handover report (controller overrides, bypasses)",
+      "source": "[API-RP-755 §6]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: DCS Shift Handover Synthesis Agent",
+      "label": "Shift Handover Dossier Compilation (B1, [API-RP-755 §6])",
+      "today": "Operator spends 45–60 minutes scrambling to manually review DCS event journals and type summary notes into j5 while answering radios and phone calls.",
+      "failureMode": "Critical unrecorded state changes (e.g., \"reboiler steam valve left in manual at 42%\") are forgotten, causing column overpressure on the incoming shift.",
+      "agentNote": "→ Agent 1 (DCS Shift Handover Synthesis Agent)."
+    },
+    {
+      "code": "A02",
+      "action": "Triage alarm floods during process upsets (>10 alarms/10 min)",
+      "source": "[ISA-18-2 §13]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "mins",
+      "friction": "volume",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "Agent 2: Alarm Flood Root-Cause Sieve Agent",
+      "label": "Alarm Flood Triage during Upsets (B1, [ISA-18-2 §13])",
+      "today": "When a distillation column trips, 200+ alarms hit the console in 5 minutes; the operator is overwhelmed trying to locate the initiating first-out alarm.",
+      "failureMode": "Operator silences alarms indiscriminately, missing critical secondary safety warnings (e.g., furnace high skin temperature).",
+      "agentNote": "→ Agent 2 (Alarm Flood Root-Cause Sieve Agent)."
+    },
+    {
+      "code": "A03",
+      "action": "Track and audit bypassed safety instrumented system (SIS) interlocks",
+      "source": "[CCPS-Auto §9]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "traceability",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Safety Interlock Bypass Auditor Agent",
+      "label": "Bypassed Safety Interlock Tracking (B1, [CCPS-Auto §9])",
+      "today": "Maintenance puts an override on a level transmitter; the boardman writes it on a physical whiteboard or sticky note on the console desk.",
+      "failureMode": "Sticky notes fall off or get erased; bypasses remain active for weeks without management authorization, violating OSHA PSM standards.",
+      "agentNote": "→ Agent 3 (Safety Interlock Bypass Auditor Agent)."
+    },
+    {
+      "code": "A04",
+      "action": "Reconcile online process analyzers against daily LIMS lab results",
+      "source": "[HSSC-QP §4]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: Online Analyzer vs. LIMS Drift Agent",
+      "label": "Online Analyzer vs. LIMS Laboratory Reconciliation (B1, [HSSC-QP §4])",
+      "today": "Online NIR analyzer drifts by 0.6 RON; boardman does not notice until laboratory grab test PDF arrives 3 hours later, requiring manual bias knob adjustments in DCS.",
+      "failureMode": "Hundreds of barrels of off-spec gasoline enter product tanks or expensive reformate giveaway is continuously dumped into the pool.",
+      "agentNote": "→ Agent 4 (Online Analyzer vs. LIMS Drift Agent)."
+    },
+    {
+      "code": "A05",
+      "action": "Manage crude switch transition profiles across column top reflux/draws",
+      "source": "[HSSC-QP §5]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "Agent 5: Crude Switch Column Transition Agent",
+      "label": "Crude Switch Column Transition Management (B1, [HSSC-QP §5])",
+      "today": "Boardman manually tracks tank farm pump switches and guesses the transit time through pre-heat trains, manually tweaking top tower reflux to prevent off-spec kerosene.",
+      "failureMode": "Sudden tower thermal cycling causes liquid weeping or column tray flooding, dumping heavy gas oil into diesel rundown tanks.",
+      "agentNote": "→ Agent 5 (Crude Switch Column Transition Agent)."
+    },
+    {
+      "code": "A06",
+      "action": "Balance furnace firebox draft and pass flow temperatures",
+      "source": "[API-STD-560]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "assembly",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: Furnace Firebox & Pass Balance Agent",
+      "label": "Furnace Firebox & Pass Flow Balancing (B1, [API-STD-560])",
+      "today": "Boardman manually reviews 8 individual pass temperatures on furnace screens, adjusting individual pass flow valves with hand-held calculators.",
+      "failureMode": "One pass starves of flow, causing localized coking, tube rupture, and catastrophic furnace firebox explosion.",
+      "agentNote": "→ Agent 6 (Furnace Firebox & Pass Balance Agent)."
+    },
+    {
+      "code": "A07",
+      "action": "Troubleshoot sluggish / sticking pneumatic control valve hunting",
+      "source": "[HSSC-QP §7]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "hours",
+      "friction": "consistency",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "Agent 7: Control Valve Stiction Diagnostic Agent",
+      "label": "Control Valve Stiction & Pneumatic Diagnostics (B1, [HSSC-QP §7])",
+      "today": "A sticking reboiler valve causes subtle temperature cycling; boardman retunes PID gains in frustration, worsening the hunting oscillation.",
+      "failureMode": "Severe valve stem galling freezes the valve, tripping the hydrocracker during maximum production hours.",
+      "agentNote": "→ Agent 7 (Control Valve Stiction Diagnostic Agent)."
+    },
+    {
+      "code": "A08",
+      "action": "Execute closed-loop PID setpoint changes for temperature/pressure",
+      "source": "[CCPS-Auto §5]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Daily",
+      "time": "mins",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith DCS)",
+      "label": "Closed-Loop PID Setpoint Changes (B2, [CCPS-Auto §5])",
+      "today": "Native DCS console function with programmed ramp rates and output clamps.",
+      "agentNote": "❌ No. Core automation domain. AI agent should not sit inside milliseconds-level closed loops."
+    },
+    {
+      "code": "A09",
+      "action": "Direct outside field operators to physically swing pumps or align valves",
+      "source": "[HSSC-QP §3]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "mins",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human/Radio)"
+    },
+    {
+      "code": "A10",
+      "action": "Monitor Advanced Process Control (APC) constraint push limits",
+      "source": "[CCPS-Auto §7]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Daily",
+      "time": "mins",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith APC)"
+    },
+    {
+      "code": "A11",
+      "action": "Initiate Emergency Shutdown (ESD) push-button sequence during fire",
+      "source": "[CCPS-Auto §10]",
+      "scope": "field",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "mins",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Emergency Shutdown Push-Button Execution (B3, [CCPS-Auto §10])",
+      "today": "Physical hardwired red button pushed by the certified operator during severe fire or rupture.",
+      "agentNote": "❌ No. Solely a certified human authority under life-safety conditions."
+    },
+    {
+      "code": "A12",
+      "action": "Verify compressor anti-surge valve clearance and recycle loop states",
+      "source": "[CCPS-Auto §8]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Daily",
+      "time": "mins",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith CCC)"
+    },
+    {
+      "code": "A13",
+      "action": "Audit standing suppressed alarms and shelved alarm logs",
+      "source": "[ISA-18-2 §11]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "hours",
+      "friction": "traceability",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "Covered in Agent 2 / Agent 3"
+    },
+    {
+      "code": "A14",
+      "action": "Coordinate hot work permit and equipment zero-energy boundary status",
+      "source": "[API-RP-755 §7]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "hours",
+      "friction": "recall",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "Covered in Agent 3"
+    },
+    {
+      "code": "A15",
+      "action": "Conduct verbal face-to-face shift handover meeting at the console",
+      "source": "[API-RP-755 §6.2]",
+      "scope": "field",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "mins",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)"
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "DCS Shift Handover & Controller State Synthesis Agent",
+      "oneLine": "Continuously correlates DCS Sequence of Events (SOE) logs, controller mode changes (Manual, Auto, Cascade), setpoint trims, and active alarms into an auditable, pre-populated shift handover briefing.",
+      "frictionSolved": "Eliminates ~1.25 hours per shift of manual event log scrolling and rushed end-of-shift typing in j5 while eliminating catastrophic handover memory loss.",
+      "reads": "Real-time DCS controller state registers (Manual, Auto, Cascade, Remote), Sequence of Events (SOE) millisecond logs, alarm journal history, and outside operator radio activity logs.",
+      "does": "Groups thousands of raw digital state transitions into cohesive operational episodes (e.g., \"FCC Slurry Pump P-201A tripped at 14:22; swing to P-201B completed at 14:38; main fractionator bottoms level recovered\"); catalogs all control loops left in Manual mode and calculates duration; extracts unacknowledged standing alarms.",
+      "returns": "Fully formatted API RP 755 compliant Shift Handover Dossier ready for electronic sign-off and verbal handover briefing on the incoming shift.",
+      "stopsAt": "Acknowledging safety alarms or closing out open shift logs without incoming operator review.",
+      "failureModes": "If DCS communication interface experiences packet drops, the agent flags [Telemetry Gap: Manual Review of Auxiliary Panel Annunciators Required].",
+      "agentId": "OG-P03-A01"
+    },
+    {
+      "n": 2,
+      "name": "Alarm Flood Root-Cause & First-Out Sieve Agent",
+      "oneLine": "Ingests rapid alarm cascades during major process upsets (>10 alarms/minute), isolates the initiating \"first-out\" root cause from sympathetic secondary alarms, and suppresses chattering nuisance alarms.",
+      "frictionSolved": "Removes the cognitive paralysis of alarm floods, allowing the boardman to understand the primary physical cause within 10 seconds of a major unit trip.",
+      "reads": "High-frequency Sequence of Events (SOE) logs with millisecond timestamps, alarm priority registers (Emergency, High, Medium, Low), and unit P&ID interlock logic networks.",
+      "does": "Performs dynamic causal fault-tree analysis on incoming alarm bursts; correlates sympathetic cascading alarms (e.g., cooling water header depressurization -> overhead condenser pressure high -> column top relief valve lift); isolates the initiating \"first-out\" root alarm; temporarily collapses repetitive chattering alarms into a single banner.",
+      "returns": "Live Root-Cause Diagnostic Banner displayed at the top of the console screen, identifying the primary failure mechanism and recommending immediate remedial action per operating procedures.",
+      "stopsAt": "Muting emergency audible sirens or overriding safety interlocks.",
+      "failureModes": "If multiple independent high-severity trips occur simultaneously, the agent presents both root causes in a split-priority alert rather than suppressing either.",
+      "agentId": "OG-P03-A02"
+    },
+    {
+      "n": 3,
+      "name": "Safety Instrumented System (SIS) Bypass & Override Auditor Agent",
+      "oneLine": "Audits active software bypasses, forced logic bits, and inhibited safety interlocks across safety instrumented systems, cross-referencing electronic permits to prevent unauthorized or forgotten safety overrides.",
+      "frictionSolved": "Eliminates 1.0 hour daily of manual bypass whiteboard audits and removes the risk of forgotten interlock overrides causing catastrophic process safety incidents.",
+      "reads": "Safety PLC bypass status registers (Triconex, DeltaV SIS, ProSafe-RS), DCS forced point registers, electronic permit-to-work (ePTW) systems, and Management of Change (MOC) temporary defeat authorizations.",
+      "does": "Reconciles active safety overrides against authorized permit expiration windows; detects unapproved forced logic bits; tracks cumulative plant safety barrier degradation (e.g., 3 out of 5 high-level interlocks bypassed on the main column); issues escalation alerts as authorization deadlines approach.",
+      "returns": "Live Safety Barrier Impairment Dashboard displaying active bypasses, expiration timers, and required re-instatement protocols.",
+      "stopsAt": "Clearing forced logic bits or physically removing software jumpers.",
+      "failureModes": "If a critical Tier-1 safety interlock exceeds its authorized bypass window by >1 hour, the agent triggers an audible high-priority notification: [Safety Interlock Violation: Unauthorized Bypass Duration Exceeded — Operations Superintendent Notification Dispatched].",
+      "agentId": "OG-P03-A03"
+    },
+    {
+      "n": 4,
+      "name": "Online Analyzer vs. Laboratory LIMS Drift Reconciliation Agent",
+      "oneLine": "Reconciles real-time online process analyzer readings against certified LIMS laboratory grab samples, calculating calibration bias offsets to prevent quality giveaway and off-spec product.",
+      "frictionSolved": "Removes 0.75 hours per shift of manual lab PDF searching, unit conversion, and manual controller bias entry.",
+      "reads": "Online process analyzer process variables (NIR octane, gas chromatographs, Reid vapor pressure, flash point, sulfur analyzers), sample loop transport lag times, and certified laboratory LIMS test results.",
+      "does": "Normalizes online analyzer signals for sample transport delays; compares live stream against timestamped laboratory grab samples; calculates statistical sensor drift and bias; evaluates whether the discrepancy exceeds ASTM repeatability limits (r).",
+      "returns": "Analyzer Health & Bias Advisory card showing calculated drift, pass/fail calibration status, and recommended DCS controller bias adjustment values.",
+      "stopsAt": "Automatically writing bias offsets into the DCS controller without operator confirmation.",
+      "failureModes": "If online analyzer stream deviates from laboratory results by more than 3× ASTM reproducibility, the agent flags [Analyzer Failure: Sensor Fault Suspected — Switch Controller to Safe Fallback Mode].",
+      "agentId": "OG-P03-A04"
+    },
+    {
+      "n": 5,
+      "name": "Crude Switch Distillation Transition Profile Agent",
+      "oneLine": "Analyzes incoming crude slate assay changes, predicts column temperature trajectory shifts, and recommends proactive reflux and reboiler adjustments before column flooding or off-spec cuts occur.",
+      "frictionSolved": "Eliminates 1.50 hours of stressful guessing, manual tray temperature monitoring, and reactive off-spec product remediation during crude switchovers.",
+      "reads": "Tank farm crude feed changeover schedules, laboratory True Boiling Point (TBP) crude assays, crude charge furnace rates, and distillation tower tray temperatures/pressures.",
+      "does": "Tracks the crude slug boundary moving through the crude pre-heat exchanger train; predicts the arrival time at the flash zone; computes anticipated internal vapor-liquid traffic changes; models column tray temperature profiles; calculates required top reflux and side-draw rate adjustments to hold cut-points steady.",
+      "returns": "4-hour Forward Crude Switch Transition Timeline complete with recommended step-by-step controller setpoint adjustments for the boardman.",
+      "stopsAt": "Altering crude charge rate or changing column reflux controller setpoints.",
+      "failureModes": "If calculated tower hydraulic vapor velocity approaches 95% of tray jet-flood limits, the agent issues an immediate warning: [Column Hydraulic Alert: Predicted Vapor Velocity Nearing Flood Limit — Reduce Furnace Duty].",
+      "agentId": "OG-P03-A05"
+    },
+    {
+      "n": 6,
+      "name": "Furnace Firebox & Pass Flow Balancing Diagnostic Agent",
+      "oneLine": "Ingests multi-pass process flows, tube metal thermocouples (TMT), and firebox oxygen telemetry to identify pass flow starvation, coking hotspots, and burner flame impingement.",
+      "frictionSolved": "Removes 1.0 hour daily of manual multi-screen furnace temperature cross-checking and calculator balancing.",
+      "reads": "Multi-pass tube skin thermocouples (TMTs), pass inlet flow transmitters, pass outlet temperatures, fuel gas pressure, stack draft gauges, and convection/radiant section oxygen analyzers.",
+      "does": "Evaluates flow distribution across parallel furnace passes; calculates localized pass heat absorption; flags pass flow maldistribution (>15^circC temperature delta across passes); monitors excess O2 against burner flame tilt and air infiltration limits per API STD 560.",
+      "returns": "Furnace Firing Balance Dashboard highlighting pass flow anomalies, tube coking progression curves, and recommended pass flow control valve trims.",
+      "stopsAt": "Modifying fuel gas firing valves or adjusting combustion air dampers.",
+      "failureModes": "If any tube metal thermocouple breaches the maximum allowable design temperature (>650^circC for carbon steel), the agent triggers an immediate alert: [Critical Furnace Skin Alert: Tube Overheating Detected on Pass 3 — Immediate Pass Flow Increase Required].",
+      "agentId": "OG-P03-A06"
+    },
+    {
+      "n": 7,
+      "name": "Control Valve Stiction & Pneumatic Diagnostic Agent",
+      "oneLine": "Analyzes high-resolution controller output versus process variable response curves to detect valve stem packing friction, stiction, and hunting cycles before process oscillations cause a unit trip.",
+      "frictionSolved": "Eliminates 1.0 hour of fruitless PID controller retuning by isolating mechanical valve faults from process dynamics.",
+      "reads": "High-resolution (1-second) DCS controller output (% CO) and process variable (% PV) trend curves across critical level, pressure, and temperature loops.",
+      "does": "Performs phase-plane cross-correlation between controller output and valve movement; calculates valve stiction index (%S); differentiates between process oscillations, aggressive PID tuning, and physical mechanical valve packing binding.",
+      "returns": "Valve Mechanical Health Alert identifying sticky control valves that require field servicing, preventing unnecessary loop retuning.",
+      "stopsAt": "Altering controller PID tuning parameters.",
+      "failureModes": "If a critical column pressure or level valve exhibits severe stick-slip oscillations exceeding 10% of span, the agent issues an advisory: [Severe Stiction Alert: Valve Binding Detected — Request Field Instrument Tech Dispatch].",
+      "agentId": "OG-P03-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit. Never multiply into enterprise dollar totals. The refinery provides their own processing throughput and downtime multiplier.",
+    "rows": [
+      {
+        "agent": "1. DCS Handover Synthesis Agent",
+        "unit": "1 12-Hour Operational Shift",
+        "beforeHours": 1.5,
+        "afterHours": 0.25,
+        "savedHours": 1.25,
+        "frictionRemoved": "Scrambled End-of-Shift Data Assembly Drag"
+      },
+      {
+        "agent": "2. Alarm Flood Root-Cause Sieve Agent",
+        "unit": "1 Severe Unit Process Trip Event",
+        "beforeHours": 1.0,
+        "afterHours": 0.15,
+        "savedHours": 0.85,
+        "frictionRemoved": "Cognitive Alarm Burst Sifting Drag"
+      },
+      {
+        "agent": "3. Safety Interlock Bypass Auditor",
+        "unit": "1 Daily Unit Safety Review",
+        "beforeHours": 1.25,
+        "afterHours": 0.25,
+        "savedHours": 1.0,
+        "frictionRemoved": "Manual Whiteboard & Permit Tracking Drag"
+      },
+      {
+        "agent": "4. Analyzer vs. LIMS Drift Agent",
+        "unit": "1 Daily Quality Certification Cycle",
+        "beforeHours": 1.0,
+        "afterHours": 0.25,
+        "savedHours": 0.75,
+        "frictionRemoved": "Multi-System Cross-Table Splicing Drag"
+      },
+      {
+        "agent": "5. Crude Switch Transition Agent",
+        "unit": "1 Crude Diet Feed Switchover",
+        "beforeHours": 2.0,
+        "afterHours": 0.5,
+        "savedHours": 1.5,
+        "frictionRemoved": "Complex Dynamic Trajectory Estimation Drag"
+      },
+      {
+        "agent": "6. Furnace Pass Balance Agent",
+        "unit": "1 Fired Heater Daily Survey",
+        "beforeHours": 1.25,
+        "afterHours": 0.25,
+        "savedHours": 1.0,
+        "frictionRemoved": "Multi-Thermocouple Temperature Sifting Drag"
+      },
+      {
+        "agent": "7. Control Valve Stiction Diagnostic",
+        "unit": "1 Control Loop Cycling Troubleshooting",
+        "beforeHours": 1.5,
+        "afterHours": 0.25,
+        "savedHours": 1.25,
+        "frictionRemoved": "Trial-and-Error Loop Diagnosis Drag"
+      }
+    ],
+    "total": {
+      "unit": "1 12-Hour Console Operator Shift",
+      "beforeHours": 9.5,
+      "afterHours": 1.9,
+      "savedHours": 7.6,
+      "frictionRemoved": "Eliminates Handover Memory Gaps & Alarm Paralysis",
+      "label": "Total Squad Impact per 12-Hour Shift"
+    }
+  },
+  "citations": [
+    {
+      "key": "[API-RP-755]",
+      "citation": "API, Fatigue Risk Management Systems in Refining, 2nd Ed",
+      "locator": "API Standards Store",
+      "type": "Recommended Practice",
+      "supports": "12-hour shift handover protocols and fatigue limits"
+    },
+    {
+      "key": "[ISA-18-2]",
+      "citation": "ISA, Management of Alarm Systems for Process Industries, 2016",
+      "locator": "isa.org",
+      "type": "Technical Standard",
+      "supports": "Alarm flood criteria (>10 alarms/10 min) and rationalization"
+    },
+    {
+      "key": "[CCPS-Auto]",
+      "citation": "CCPS, Guidelines for Safe Automation of Chemical Processes, 2nd Ed",
+      "locator": "aiche.org/ccps",
+      "type": "Safety Guideline",
+      "supports": "SIS bypass governance, interlock tracking, and APC limits"
+    },
+    {
+      "key": "[API-STD-560]",
+      "citation": "API, Fired Heaters for General Refinery Service, 5th Edition",
+      "locator": "API Standards Store",
+      "type": "Industry Standard",
+      "supports": "Pass balancing, tube skin temperature, and draft standards"
+    },
+    {
+      "key": "[HSSC-QP]",
+      "citation": "Hydrocarbon Sector Skill Council, Console Operator Downstream, 2021",
+      "locator": "hssc.in",
+      "type": "Competency Standard",
+      "supports": "Operational actions, crude switching, and DCS panel tasks"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Honeywell Experion PKS documentation, Yokogawa Centum VP product guides, Hexagon j5 Operations whitepapers, and Abnormal Situation Management (ASM) Consortium archives for \"autonomous DCS state change correlation with automatic API RP 755 shift handover narrative generation, real-time alarm flood causal root-source filtering, and dynamic crude switch distillation column trajectory prediction without manual engineering configuration\".",
+    "result": "Negative Search, 2026-09. Existing DCS consoles provide raw process graphics and alarm event sequences; none autonomously synthesize operational state changes into an explainable handover narrative, filter first-out root causes from sympathetic alarms during live floods, or predict column cut-point thermal waves during crude feed switches without manual human intervention."
+  },
+  "line": "\"In a refinery control room, the most dangerous moment of the day isn't when a pump trips; it's the fifteen minutes between six and six-fifteen when one tired operator hands a cup of coffee to another tired operator and forgets to mention that the column reboiler valve was left in manual.\"",
+  "openQuestions": [
+    "How many alarms hit your console in the first two minutes of a primary fractionator trip, and how do you quickly locate the first-out initiating cause?",
+    "What percentage of your bypassed safety interlocks are tracked on formal electronic permits versus informal whiteboards or control room memory?",
+    "How many hours does it take for a crude switch from light sweet to heavy sour to fully stabilize across your atmospheric and vacuum distillation columns?"
+  ]
+};
