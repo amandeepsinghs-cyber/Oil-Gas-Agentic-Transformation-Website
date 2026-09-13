@@ -43,6 +43,9 @@
     --g-blue:        #3186FF;
     --g-purple:      #4B31E3;
     --g-green:       #00AF57;
+    --g-cyan:        #12B5CB;   /* Recovery. Google data-viz cyan: the only
+                                   remaining brand hue once red and yellow are
+                                   reserved for the chessboard. */
     --g-yellow:      #FEC700;   /* defined, deliberately unused here */
     --g-red:         #FC413D;   /* defined, deliberately unused here */
     --g-grey-10:     #F8F9FC;
@@ -454,22 +457,16 @@
     color: var(--text-dim); margin-top: 7px;
   }
 
-  /* ── Work bar ─────────────────────────────────────────────────────
-     Proportional, not decorative: the segment widths are the counts. A green
-     to grey ramp, reading as "how much of this is ours" -- not a warning
-     scale, so no yellow. */
+  /* ── Bucket colours ───────────────────────────────────────────────
+     A green to grey ramp, reading as "how much of this is ours" -- not a
+     warning scale, so no yellow. These once drove a proportional bar at the
+     top of the work section; that bar moved to the board. All that is left
+     here is the chip on each workflow row. */
 
-  .work-bar { display: flex; gap: 3px; height: 10px; margin-bottom: 12px; }
-  .work-seg { border-radius: 3px; }
   .seg-B1 { background: var(--g-green); }
   .seg-B2 { background: var(--border-strong); }
   .seg-B3 { background: var(--text-dim); }
 
-  .work-legend { display: flex; flex-wrap: wrap; gap: 8px 26px; margin-bottom: 12px; }
-  .work-key { display: flex; align-items: center; gap: 7px; font-size: var(--fs-13); color: var(--text-muted); }
-  .work-key b { color: var(--text); font-weight: 600; }
-  .work-key .dot { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
-  .work-gloss { color: var(--text-dim); font-size: var(--fs-12); }
 
   .work-list { margin: 12px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--border); }
 
@@ -612,6 +609,7 @@
   .v-human { border-left-color: var(--g-blue); }
   .v-asset { border-left-color: var(--g-green); }
   .v-risk  { border-left-color: var(--g-purple); }
+  .v-recov { border-left-color: var(--g-cyan); }
 
   /* An honest zero, rendered as one. */
   .v-zero               { border-left-color: var(--border); }
@@ -664,9 +662,10 @@
   .bstrip-seg.b-human { background: var(--g-blue); }
   .bstrip-seg.b-asset { background: var(--g-green); }
   .bstrip-seg.b-risk  { background: var(--g-purple); }
+  .bstrip-seg.b-recov { background: var(--g-cyan); }
 
   .bstrip-cells {
-    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px;
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px;
   }
   .bcell {
     display: grid; grid-template-columns: auto 1fr; gap: 0 8px;
@@ -678,6 +677,7 @@
   .bcell-dot.b-human { background: var(--g-blue); }
   .bcell-dot.b-asset { background: var(--g-green); }
   .bcell-dot.b-risk  { background: var(--g-purple); }
+  .bcell-dot.b-recov { background: var(--g-cyan); }
   .bcell-key { font-size: var(--fs-12); font-weight: 600; color: var(--text); }
   .bcell-val {
     grid-column: 2; font-family: var(--mono); font-size: var(--fs-20);
@@ -697,18 +697,7 @@
     .bstrip-cells { grid-template-columns: 1fr; gap: 14px; }
   }
 
-  /* Persona-level friction mix. Derived from the `friction` tag on all 15
-     touchpoints -- the one field in the corpus that says what KIND of value
-     an agent returns, and which this page rendered nowhere until now.
-     It sits at persona level and not on each card on purpose: only 96 of the
-     495 actions name their agent, so a per-card chip would be a guess. */
-  .vmix { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 10px; }
-  .vmix-item { display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-12); color: var(--text-muted); }
-  .vmix-dot { width: 8px; height: 8px; border-radius: 2px; flex: none; }
-  .vmix-acc  { background: var(--g-blue); }
-  .vmix-time { background: var(--g-green); }
-  .vmix-risk { background: var(--g-purple); }
-  .vmix-item b { color: var(--text); font-weight: 600; }
+
 
   /* ── Assumptions ──────────────────────────────────────────────────────
      Dashed, like every other "not real yet" object on this page. */
@@ -903,17 +892,18 @@
     <div class="topline-eyebrow">Agentic Transformation &nbsp;//&nbsp; Workforce &amp; Workflows</div>
     <h1 class="topline-title">An agentic taskforce augmenting human workflows<br>and transforming operational processes.</h1>
     <p class="topline-lede">
-      Thirty-three enterprise roles, four hundred and ninety-five operational touchpoints,
+      Thirty-three enterprise roles, four hundred and ninety-five operational workflows,
       two hundred and thirty-two agents &mdash; upstream exploration through downstream refining.
       The engineer&rsquo;s signature still carries the decision. The agent removes the manual
       reconstruction, the waiting and the unwatched interval that stand between them and it.
     </p>
     <p class="topline-frame">
-      Each squad is priced three ways &mdash; <b>human capital</b> returned to people,
-      <b>asset capital</b> returned to rigs, units and pipelines, and <b>asset risk</b>
-      removed as expected loss. Roughly <b>&#8377;2,600 Cr a year</b> across the estate at
-      combined ONGC + IOCL scale, on stated assumptions. A way to measure the transformation,
-      not a forecast of it.
+      Each squad is priced four ways &mdash; <b>productivity</b> redeployed to people,
+      <b>uptime</b> returned to rigs, units and pipelines, <b>integrity</b>
+      removed as expected loss, and <b>recovery</b> &mdash; the barrels found and
+      produced because the data finally agreed with itself. Roughly
+      <b>&#8377;3,650 Cr a year</b> across the estate at combined ONGC + IOCL scale,
+      on stated assumptions. A way to measure the transformation, not a forecast of it.
     </p>
   </div>
 </div>
@@ -983,7 +973,7 @@
      Two earlier attempts are worth recording so nobody rebuilds them.
 
      Scaling by the corpus `freq` tags produced a 6x gap between two roles
-     that both hold seven agents, purely because one dossier's touchpoints
+     that both hold seven agents, purely because one dossier's workflows
      were tagged "Daily" and the other's "Periodic" -- a labelling artefact,
      not an operational difference. Scaling by each dossier's before/after
      reduction ratio failed the other way: every dossier claims an 85-90%
@@ -1016,6 +1006,15 @@
   var SEATS  = window.VALUE_SEATS   || {};
   var ASSETS = window.ASSET_CAPITAL || {};
   var RISKS  = window.ASSET_RISK    || {};
+  /* The corpus numbers each role's actions A01-A15; the deck shows them as
+     WORKFLOW nodes -- P02W03. Two reasons. The workflow is the thesis: a row
+     IS one persona's workflow, and a cell is one node in it. And it keeps the
+     letter A free for agents (OG-P02-A04), so the two id spaces can no longer
+     be confused -- which matters because their numbers do not correspond.
+     Display only: the data keeps its A-codes, which are research provenance. */
+  function wcode(c) { return "W" + String(c || "").replace(/^A/, ""); }
+
+  var RECOV  = window.RESOURCE_RECOVERY || {};
 
   /* Crore above a crore, lakh below it. An Indian operator reads "Cr"; a
      rupee figure with eight digits in it reads as noise. */
@@ -1025,19 +1024,29 @@
     return "\u20B9" + (n / 1e5).toFixed(1) + " L";
   }
 
-  /* ── The three savings ──────────────────────────────────────────────────
-       1. HUMAN CAPITAL  hours returned to a person x loaded rate
-       2. ASSET CAPITAL  NPT, downtime, giveaway, deferment recovered
-       3. ASSET RISK     probability of a loss event x its consequence
+  /* ── The four levers ────────────────────────────────────────────────────
+       Names are canonical in data/value_model.js as VALUE_LEVERS. The internal
+       term names below read human/asset/risk/recov for historical reasons; the
+       displayed names are the only ones that matter to a reader.
 
-     One and two are deterministic; three is an expectation. The card keeps
-     them apart for that reason -- a reader is entitled to discount the third
-     differently, and a single blended figure would hide that choice.
+       1. PRODUCTIVITY  hours returned to a person x loaded rate   [human]
+       2. UPTIME        NPT, downtime, giveaway, deferment held    [asset]
+       3. INTEGRITY     probability of a loss event x consequence  [risk]
+       4. RECOVERY      barrels found and recovered x margin       [recov]
 
-     Asset capital counts only hours on an asset's CRITICAL PATH, which is
-     what stops the same saved hour being banked twice. 12 of the 33 roles
-     therefore carry no asset term at all, and 17 carry no risk term. Those
-     zeros are load-bearing: they are what makes the non-zeros believable. */
+     One and two are deterministic. Three is an expectation. Four is the only
+     one that counts UPWARD, and it is the reason the estate total is no longer
+     composed entirely of money not spent. The card keeps them apart because a
+     reader is entitled to discount three and four differently, and a single
+     blended figure would hide that choice.
+
+     Uptime counts only hours on an asset's CRITICAL PATH, which is what stops
+     the same saved hour being banked twice. 12 of the 33 roles carry no uptime
+     term, 17 carry no integrity term, and 24 carry no recovery term. Those
+     zeros are load-bearing: they are what makes the non-zeros believable.
+
+     Note the structure: no role carries both integrity and recovery. A role
+     whose errors MISALLOCATE capital is not a role whose errors DESTROY it. */
   function assetCapital(p) {
     var a = ASSETS[p.id];
     if (!a) return null;
@@ -1058,7 +1067,31 @@
     };
   }
 
-  /* Squad-level annual value: the three terms, and their sum. */
+  /* Recovery: the fourth lever, and the only one that counts upward.
+
+     Same five factors as assetRisk deliberately, so a reader who accepted
+     that term has already accepted this one's shape:
+
+       barrels = unitsPerYear x bblPerUnit x alpha x beta
+       rupees  = barrels x bblMargin
+
+     The barrel count is carried separately and is the harder number. The
+     rupees rest on one margin assumption; the barrels rest on stated well
+     counts. Lead with barrels if challenged. */
+  function resourceRecovery(p) {
+    var r = RECOV[p.id];
+    if (!r) return null;
+    var gross = r.unitsPerYear * r.bblPerUnit;
+    var bbl   = gross * r.alpha * r.beta;
+    return {
+      inr:   bbl * (VALUE.bblMargin || 2500),
+      bbl:   bbl,
+      gross: gross,
+      spec:  r
+    };
+  }
+
+  /* Squad-level annual value: the four levers, and their sum. */
   function squadValue(p) {
     var vm    = p.valueModel || {};
     var total = vm.total || {};
@@ -1070,6 +1103,7 @@
     var human     = freedPer * seats * VALUE.rate;
     var asset     = assetCapital(p);
     var risk      = assetRisk(p);
+    var recov     = resourceRecovery(p);
 
     return {
       seats:     seats,
@@ -1079,7 +1113,9 @@
       human:     human,
       asset:     asset,
       risk:      risk,
-      inr:       human + (asset ? asset.inr : 0) + (risk ? risk.inr : 0)
+      recov:     recov,
+      inr:       human + (asset ? asset.inr : 0) + (risk ? risk.inr : 0) +
+                 (recov ? recov.inr : 0)
     };
   }
 
@@ -1097,27 +1133,12 @@
     return m[1].toLowerCase().replace(/\b[a-z]/g, function (c) { return c.toUpperCase(); });
   }
 
-  /* The `friction` tag on every one of the 495 touchpoints says what KIND of
-     value the work returns. All 13 observed types map cleanly onto three
-     classes, and across the corpus accuracy is the LARGEST of them -- 248
-     touchpoints against 221 for toil -- which is the opposite of the story a
-     page full of hours-saved figures tells. */
-  var FRICTION_CLASS = {
-    consistency: "acc", judgment: "acc", calculation: "acc",
-    computation:  "acc", synthesis: "acc",
-    assembly:  "time", physical: "time", volume: "time",
-    recall:    "time", waiting:  "time", execution: "time",
-    traceability: "risk", integrity: "risk"
-  };
-
-  function frictionMix(p) {
-    var m = { acc: 0, time: 0, risk: 0 };
-    (p.actions || []).forEach(function (a) {
-      var k = FRICTION_CLASS[a.friction];
-      if (k) m[k]++;
-    });
-    return m;
-  }
+  /* The `friction` tag on every one of the 495 workflows used to be rolled
+     up here into a three-class mix (accuracy / toil / risk) and printed on the
+     profile. That summary moved to the board, which colours the bottom edge of
+     every cell by the same tag across all 33 roles at once. The classifier
+     lives in scripts/build_matrix_33.js now -- if you reinstate a per-persona
+     mix, take the map from there so the two pages cannot disagree. */
 
 
   /* Deck rows A-T predate the research. Keep their deep links working:
@@ -1290,9 +1311,12 @@
     if (share && share.inr != null && share.squadINR) {
       var sq   = share.squad;
       var line = function (cls, key, val, basis) {
+        /* A zero lever is "does not apply", not "worth nothing measurable",
+           so it gets an em-dash. Printing "0.0 L" implied we had measured
+           something and found it negligible. */
         return '<div class="vrow ' + cls + '">' +
                  '<span class="vrow-key">' + key + "</span>" +
-                 '<span class="vrow-val">' + inr(val) + "</span>" +
+                 '<span class="vrow-val">' + (val ? inr(val) : "\u2014") + "</span>" +
                  '<span class="vrow-basis">' + basis + "</span>" +
                "</div>";
       };
@@ -1301,25 +1325,34 @@
         '<div class="vbreak">' +
           '<div class="vbreak-h">Where the ' + inr(share.inr) + " comes from</div>" +
 
-          line("v-human", "Human capital", share.human,
+          line("v-human", "Productivity", share.human,
                esc(hours(sq.freedPer * 1) ? Math.round(sq.freedPer).toLocaleString() : "") +
                " h freed &times; " + sq.seats.toLocaleString() + " people &times; \u20B9" +
                VALUE.rate.toLocaleString() + "/h, at this agent's " +
                (share.pct * 100).toFixed(0) + "% share") +
 
           (sq.asset
-            ? line("v-asset", "Asset capital", share.asset,
+            ? line("v-asset", "Uptime", share.asset,
                    esc(sq.asset.spec.basis) + " &mdash; " + esc(sq.asset.spec.asset).toLowerCase())
-            : line("v-zero", "Asset capital", 0,
+            : line("v-zero", "Uptime", 0,
                    "nothing physical waits on this role, so the hours are already fully counted above")) +
 
           (sq.risk
-            ? line("v-risk", "Asset risk", share.risk,
+            ? line("v-risk", "Integrity", share.risk,
                    esc(sq.risk.spec.scenario) + " &mdash; " + inr(sq.risk.exposure) +
                    "/yr exposed, &alpha;" + sq.risk.spec.alpha + " &times; &beta;" +
                    sq.risk.spec.beta + " credited")
-            : line("v-zero", "Asset risk", 0,
+            : line("v-zero", "Integrity", 0,
                    "no loss event this role's decisions govern")) +
+
+          (sq.recov
+            ? line("v-recov", "Recovery", share.recov,
+                   Math.round(sq.recov.bbl * share.pct).toLocaleString() +
+                   " bbl/yr &mdash; " + esc(sq.recov.spec.mechanism).toLowerCase() +
+                   ", &alpha;" + sq.recov.spec.alpha + " &times; &beta;" +
+                   sq.recov.spec.beta + " credited")
+            : line("v-zero", "Recovery", 0,
+                   "this role does not change which barrels are found or how many are recovered")) +
 
           '<div class="vrow vrow-total">' +
             '<span class="vrow-key">Total</span>' +
@@ -1330,8 +1363,10 @@
           '<p class="vbreak-note">' +
             "<b>" + (saved || "\u2014") + " h</b> returned per " + esc(unit || "unit of work") +
             " is the measured figure; the rupees are modelled. " +
-            (sq.risk ? "Asset risk is an <b>expectation</b>, not a cash saving \u2014 " +
-                       "it is banked on average, over years." : "") +
+            (sq.risk ? "Integrity is an <b>expectation</b>, not a cash saving \u2014 " +
+                       "it is banked on average, over years. " : "") +
+            (sq.recov ? "Recovery is priced from a single margin assumption; the " +
+                        "<b>barrel count</b> is the harder number." : "") +
           "</p>" +
         "</div>";
     }
@@ -1485,7 +1520,7 @@
                             '<div class="fp-act">' + esc(a.action || a.label || "") + "</div>" +
                             '<div class="fp-today">' + esc(a.today) + "</div>" +
                             (a.failureMode ? '<div class="fp-fail">' + esc(a.failureMode) + "</div>" : "") +
-                            '<div class="fp-meta">' + esc(a.code || "") +
+                            '<div class="fp-meta">' + esc(wcode(a.code)) +
                               (a.freq ? " &middot; " + esc(a.freq) : "") +
                               (a.agentRef ? " &middot; Agent " + esc(a.agentRef) : "") +
                               (a.source ? " &middot; " + esc(a.source) : "") +
@@ -1508,23 +1543,31 @@
      in a meeting. Three paragraphs, in the order an unfriendly reader asks
      for them: how it was calculated, who it belongs to, and what it leaves
      out. */
-  /* The three buckets, side by side, under the squad. This is the framework
+  /* The four levers, side by side, under the squad. This is the framework
      the whole page is arguing for: an agent estate is worth the hours it
-     returns to people, the time it returns to assets, and the losses it
-     stops happening -- and those are three different kinds of number that
-     deserve to be read separately. */
+     redeploys, the time it returns to assets, the losses it stops happening,
+     and the barrels it finds -- four different kinds of number that deserve
+     to be read separately.
+
+     The fourth matters disproportionately. The first three all count money
+     NOT SPENT, and an arithmetic that can only subtract reads as an
+     efficiency programme however the page is worded. Recovery is the only
+     term here that counts upward. */
   function bucketStrip(squad) {
     if (!squad) return "";
 
     var parts = [
-      { cls: "b-human", key: "Human capital", v: squad.human,
-        sub: "hours returned to people" },
-      { cls: "b-asset", key: "Asset capital", v: squad.asset ? squad.asset.inr : 0,
+      { cls: "b-human", key: "Productivity", v: squad.human,
+        sub: "hours redeployed" },
+      { cls: "b-asset", key: "Uptime", v: squad.asset ? squad.asset.inr : 0,
         sub: squad.asset ? esc(squad.asset.spec.asset).toLowerCase()
                          : "no asset waits on this role" },
-      { cls: "b-risk",  key: "Asset risk",    v: squad.risk ? squad.risk.inr : 0,
+      { cls: "b-risk",  key: "Integrity",    v: squad.risk ? squad.risk.inr : 0,
         sub: squad.risk ? esc(squad.risk.spec.scenario).toLowerCase()
-                        : "no loss event this role governs" }
+                        : "no loss event this role governs" },
+      { cls: "b-recov", key: "Recovery",     v: squad.recov ? squad.recov.inr : 0,
+        sub: squad.recov ? Math.round(squad.recov.bbl).toLocaleString() + " bbl a year"
+                         : "no barrels turn on this role" }
     ];
     var tot = squad.inr || 1;
 
@@ -1561,7 +1604,7 @@
     if (!squad) return "";
 
     var out = '<div class="assumptions">' +
-      "<h4>How the three numbers are built</h4>" +
+      "<h4>How the four numbers are built</h4>" +
 
       "<p>These are gross figures on stated assumptions, and they are meant " +
         "to be. The point is not a precise forecast &mdash; it is a <b>framework " +
@@ -1570,7 +1613,7 @@
         "where the argument is won. Replace the multipliers with your own and " +
         "the framework still holds.</p>" +
 
-      "<p><b>Human capital.</b> <b>" + squad.seats.toLocaleString() +
+      "<p><b>Productivity.</b> <b>" + squad.seats.toLocaleString() +
         "</b> people in this role at " + esc(VALUE.scale) + " &times; <b>" +
         VALUE.yearHours.toLocaleString() + " h</b> productive a year &times; <b>" +
         Math.round(VALUE.onTask * 100) + "%</b> of that year inside this workflow " +
@@ -1582,23 +1625,23 @@
 
     if (squad.asset) {
       var a = squad.asset.spec;
-      out += "<p><b>Asset capital.</b> " + esc(a.basis) + " across <b>" +
+      out += "<p><b>Uptime.</b> " + esc(a.basis) + " across <b>" +
         (a.form === "time"
           ? a.units.toLocaleString() + " " + esc(a.unitLabel)
           : a.qtyPerYear.toLocaleString() + " " + esc(a.qtyLabel)) +
         "</b> = <b>" + inr(squad.asset.inr) + "</b> a year. " + esc(a.source) +
         " This counts only time on the asset's <b>critical path</b> &mdash; hours " +
-        "that were already counted as human capital are not counted again here.</p>";
+        "that were already counted as productivity are not counted again here.</p>";
     } else {
-      out += "<p><b>Asset capital: nil.</b> Nothing physical waits on this role " +
+      out += "<p><b>Uptime: nil.</b> Nothing physical waits on this role " +
         "inside the workflows these agents cover, so every hour they return is " +
-        "already fully counted as human capital. Booking an asset saving here " +
+        "already fully counted as productivity. Booking an uptime saving here " +
         "would be counting the same hour twice.</p>";
     }
 
     if (squad.risk) {
       var r = squad.risk.spec;
-      out += "<p><b>Asset risk.</b> " + esc(r.scenario) + ": <b>" +
+      out += "<p><b>Integrity.</b> " + esc(r.scenario) + ": <b>" +
         r.unitsPerYear.toLocaleString() + " " + esc(r.unitLabel) + "</b> &times; <b>" +
         r.frequency + "</b> events each &times; <b>" + inr(r.consequence) +
         "</b> per event = <b>" + inr(squad.risk.exposure) + "</b> a year exposed. " +
@@ -1608,11 +1651,38 @@
         esc(r.source) + " <b>&alpha; and &beta; are judgement, not data.</b> This " +
         "term is an expectation: it is banked on average, over years, not every cycle.</p>";
     } else {
-      out += "<p><b>Asset risk: nil.</b> No loss event turns on this role's " +
+      out += "<p><b>Integrity: nil.</b> No loss event turns on this role's " +
         "decisions in a way we are willing to price. Where the failure mode is " +
         "capital <i>misallocated</i> rather than lost &mdash; a mis-picked " +
         "saturation exponent, say &mdash; scoring it as avoided loss would be the " +
-        "kind of claim that discredits the rows that are real.</p>";
+        "kind of claim that discredits the rows that are real. " +
+        (squad.recov
+          ? "That misallocated capital is not lost to the model: it is counted " +
+            "below, under recovery, where it belongs."
+          : "") + "</p>";
+    }
+
+    if (squad.recov) {
+      var rc = squad.recov.spec;
+      out += "<p><b>Recovery.</b> " + esc(rc.mechanism) + ". <b>" +
+        rc.unitsPerYear.toLocaleString() + " " + esc(rc.unitLabel) + "</b> &times; <b>" +
+        rc.bblPerUnit.toLocaleString() + " bbl</b> at stake on each = <b>" +
+        Math.round(squad.recov.gross).toLocaleString() + " bbl</b> a year in play. " +
+        "Of that, <b>&alpha; " + rc.alpha + "</b> is attributed to information or " +
+        "decision quality and <b>&beta; " + rc.beta + "</b> of that slice is credited " +
+        "to the agents &mdash; <b>" + Math.round(squad.recov.bbl).toLocaleString() +
+        " bbl</b> a year, <b>" + inr(squad.recov.inr) + "</b> at &#8377;" +
+        (VALUE.bblMargin || 2500).toLocaleString() + " a barrel of contribution. " +
+        esc(rc.source) + " <b>&alpha; and &beta; are judgement, not data</b>, and the " +
+        "barrel count is the harder of the two numbers &mdash; the rupees rest on a " +
+        "single margin assumption, the barrels on stated well counts. " +
+        "<b>This is the only term on the page that counts upward.</b></p>";
+    } else {
+      out += "<p><b>Recovery: nil.</b> This role does not change which barrels " +
+        "are found or how many are ultimately recovered. Protecting throughput on " +
+        "barrels already discovered is uptime, and it is counted above. Stretching " +
+        "recovery across roles it does not belong to is the move that would make " +
+        "the other three levers unbelievable.</p>";
     }
 
     out += "<p><b>The rupees are ours; the hours are the research's.</b> Every " +
@@ -1635,25 +1705,13 @@
     var actions = p.actions || [];
     if (!actions.length) return "";
 
+    /* counts still feeds the section note ("N are ours to automate"). */
     var counts = { B1: 0, B2: 0, B3: 0 };
     actions.forEach(function (a) { if (counts[a.bucket] != null) counts[a.bucket]++; });
 
-    var bar = ["B1", "B2", "B3"].map(function (b) {
-      if (!counts[b]) return "";
-      return '<span class="work-seg seg-' + b + '" style="flex:' + counts[b] +
-             '" title="' + counts[b] + " \u00d7 " + BUCKETS[b].label + '"></span>';
-    }).join("");
-
-    var legend = ["B1", "B2", "B3"].map(function (b) {
-      if (!counts[b]) return "";
-      return '<span class="work-key"><i class="dot seg-' + b + '"></i>' +
-               "<b>" + counts[b] + "</b> " + esc(BUCKETS[b].label) +
-               '<span class="work-gloss">' + esc(BUCKETS[b].gloss) + "</span></span>";
-    }).join("");
-
     var rows = actions.map(function (a) {
       return '<li class="work-row">' +
-               '<span class="work-code">' + esc(a.code || "") + "</span>" +
+               '<span class="work-code">' + esc(wcode(a.code)) + "</span>" +
                '<span class="work-act">' + esc(a.action || a.label || "") + "</span>" +
                '<span class="work-freq">' + esc(a.freq || "") + "</span>" +
                '<span class="bucket-chip seg-' + esc(a.bucket || "") + '">' +
@@ -1662,33 +1720,21 @@
              "</li>";
     }).join("");
 
-    /* What KIND of friction this role carries. Every touchpoint in the
-       corpus is tagged, and across all 33 dossiers accuracy outweighs toil
-       248 to 221 -- so a page that only ever reports hours saved is telling
-       the smaller half of the story. */
-    var mix = frictionMix(p);
-    var mixEl = (mix.acc || mix.time || mix.risk)
-      ? '<div class="vmix">' +
-          (mix.acc  ? '<span class="vmix-item"><i class="vmix-dot vmix-acc"></i><b>' + mix.acc +
-                      "</b> decision accuracy</span>" : "") +
-          (mix.time ? '<span class="vmix-item"><i class="vmix-dot vmix-time"></i><b>' + mix.time +
-                      "</b> toil &amp; elapsed time</span>" : "") +
-          (mix.risk ? '<span class="vmix-item"><i class="vmix-dot vmix-risk"></i><b>' + mix.risk +
-                      "</b> traceability &amp; risk</span>" : "") +
-        "</div>"
-      : "";
+    /* The bucket split and the friction mix both used to be summarised here,
+       as a proportional bar and a dot legend. They now live on the board
+       (working_deck/pages/page_08_v2.html), which reads all 33 roles at once
+       and is the right place for a distribution. Repeating them per-persona
+       said nothing the workflow list below doesn't already say, one row at
+       a time and with the action attached. */
 
     return '<section class="block">' +
              '<div class="section-head">' +
                "<h2>The work this role owns</h2>" +
-               '<span class="section-note">' + actions.length + " touchpoints. " +
+               '<span class="section-note">' + actions.length + " workflows. " +
                  (counts.B1 ? "<b>" + counts.B1 + "</b> are ours to automate." : "") +
                "</span>" +
              "</div>" +
-             '<div class="work-bar">' + bar + "</div>" +
-             '<div class="work-legend">' + legend + "</div>" +
-             mixEl +
-             '<details class="fold"><summary>All ' + actions.length + " touchpoints</summary>" +
+             '<details class="fold"><summary>All ' + actions.length + " workflows</summary>" +
                '<ol class="work-list">' + rows + "</ol>" +
              "</details>" +
            "</section>";
@@ -1794,6 +1840,7 @@
         human:    squad.human * pct,
         asset:    squad.asset ? squad.asset.inr * pct : 0,
         risk:     squad.risk  ? squad.risk.inr  * pct : 0,
+        recov:    squad.recov ? squad.recov.inr * pct : 0,
         squad:    squad,
         squadINR: squad.inr
       };
@@ -1879,7 +1926,7 @@
         "<b>" + esc(p.person || p.title) + "</b> \u00b7 " +
         (p.person ? esc(p.title) + " \u00b7 " : "") +
         agents.length + " agents \u00b7 " +
-        (p.actions || []).length + " touchpoints \u00b7 " +
+        (p.actions || []).length + " workflows \u00b7 " +
         (p.citations || []).length + " citations" +
         (standards.length ? " \u00b7 " + esc(standards.join(", ")) : "") +
         (p.governingStandards ? " \u00b7 " + esc(p.governingStandards) : "") +

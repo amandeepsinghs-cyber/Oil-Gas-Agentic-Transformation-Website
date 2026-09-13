@@ -289,10 +289,15 @@
 
               <!-- Plot Frame with Zoomed Image -->
               <div class="plot-frame">
-                <img src="file:///usr/local/google/home/amandeepsinghs/Downloads/Petrophysicist-20260906T060323Z-1-001/Petrophysicist/splice_agent_v8/outputs/3_overlap_detail.png" 
-                     alt="Well A-12 Gamma Ray Overlap Interval - Before vs After Shift" 
-                     class="plot-img"
-                     onerror="this.onerror=null; this.src='../../../../Downloads/Petrophysicist-20260906T060323Z-1-001/Petrophysicist/splice_agent_v8/outputs/3_overlap_detail.png';">
+                <!-- Was an absolute file:/// path into a personal Downloads
+                     folder, with a ../../../../Downloads fallback that was no
+                     better. Both resolved on one laptop and nowhere else, so
+                     this rendered as an empty white frame for every other
+                     viewer -- on a projector, on the web, for anyone sent the
+                     deck. The file now lives in the repo and travels with it. -->
+                <img src="../../assets/media/evidence/a12_gamma_ray_overlap.png"
+                     alt="Well A-12 gamma ray overlap interval, before and after depth shift"
+                     class="plot-img" loading="lazy">
               </div>
 
               <!-- Plot Caption & Ground Truth Telemetry -->

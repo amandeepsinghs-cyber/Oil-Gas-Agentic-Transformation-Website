@@ -16,12 +16,48 @@ At Minute 6.5 of the briefing, the C-suite and Board have one urgent, inevitable
 **Slide 06 provides that definitive proof.**
 It moves past theoretical slides into grounded reality: demonstrating a live Google Gemini Enterprise agent (`splice_agent_v8`) executing a real-world subsurface physics workflow on Kansas Well A-12.
 
-### Respecting the Domain Expert (Giving Time Back & Increasing Decision Accuracy)
-Rather than abstract claims of "replacing workers", Slide 06 frames the AI Agent as an intelligent partner that serves and elevates high-stakes domain experts:
-- **The Petrophysicist** is the domain expert who evaluates porosity, permeability, and reservoir hydrocarbon volumes.
-- Curve splicing takes **1–2 hours** of manual, repetitive curve alignment on every wireline run.
-- If rushed at 3:00 AM under operational pressure, manual variance introduces severe business risks (distorted reserve valuations, compromised casing shoe depths).
-- Automating this mechanical physics workflow returns **1–2 critical hours back** to the petrophysicist on every run while **substantially increasing workflow decision accuracy**.
+### What the Agent Is Actually For (Accuracy First, Hours Second)
+Rather than abstract claims of "replacing workers", Slide 06 frames the AI Agent as a barrier in a layer — a partner that serves and elevates a high-stakes domain expert:
+- **The Petrophysicist** is the domain expert who evaluates porosity, permeability, and reservoir hydrocarbon volumes. Every number that reaches the reserves report and the casing design passes through this desk.
+- **The defect this agent catches:** wireline cable stretch and vendor mnemonic drift put the curves on the wrong depth. Spliced by hand at 3:00 AM under operational pressure, the error is small, invisible, and entirely defensible.
+- **What lines up if it doesn't:** that depth error propagates into net-pay calculation and into the casing shoe depth. The research is explicit about the consequences — **distorted reserve valuations** and **compromised casing shoe depths**. One is a wrong number the board will act on; the other is a well control risk.
+- **What the organisation loses:** a reserves figure nobody can defend, capital allocated against it, and — in the other direction — pay zones read as water, which is oil you own and will never produce.
+- **The agent runs deterministic physics, not judgement.** It puts every curve on one true depth reference, so the petrophysicist's interpretation rests on data that agrees with itself. That is what **increasing decision accuracy** means concretely: it is not a slogan, it is two layers that now line up.
+- **And, secondarily:** the manual version of this takes **1–2 hours** on every wireline run. Those hours come back. That is real, and it is the smaller half of the claim — say it second, never first.
+
+> [!IMPORTANT]
+> **Do not open this slide on the time saving.** An audience that hears
+> "1–2 hours per run" first will correctly file the entire programme under
+> operational hygiene, and every subsequent slide will be read through that
+> frame. Open on the depth error and what it does to the reserves number.
+
+---
+
+## 1b. The Placement of This Slide in the Chain
+
+| Chain link | Where slide 06 sits |
+|---|---|
+| Latent defect | cable stretch / mnemonic drift puts curves on the wrong depth |
+| Holes align | the error propagates into net pay **and** into casing design |
+| Critical failure | a wrong belief: overstated net reserves, or a shoe set in the wrong rock |
+| Business risk | capital allocated against an indefensible number |
+| Growth impeded | pay logged as water — barrels already owned, never produced |
+
+**Levers this slide moves, in the order you should say them:**
+
+| Order | Lever | On this slide |
+|---|---|---|
+| 1st | **Integrity** | a depth error caught before it reaches the casing design |
+| 2nd | **Recovery** | net pay computed on curves that agree — pay not written off as water |
+| 3rd | **Productivity** | 1–2 hours per wireline run, returned |
+
+> **Uptime is not on this slide**, and don't claim it. The splice agent does not
+> protect a rig day. Three levers is enough; a fourth asserted without evidence
+> is what invites the audience to test the other three.
+
+This slide is the first place in the deck where the audience sees a single
+concrete agent occupying a single concrete position on that chain. It is worth
+saying the chain out loud here, once, so slides 07 onward inherit the frame.
 
 ---
 

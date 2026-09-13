@@ -12,6 +12,46 @@
 
 ---
 
+## The Four Levers (Canonical · Governs Every Stage)
+
+**Every agent moves exactly one of these four, and every number anywhere in this deck rolls up to one of them.** These are the only names to use. They are defined once in code as `VALUE_LEVERS` in `data/value_model.js`; if a stage invents its own phrasing for value, the stage is wrong, not the table.
+
+| # | Lever | What it counts | Board metric it moves | Unit | Status |
+|---|---|---|---|---|---|
+| 1 | **Productivity** | Expert hours redeployed onto work only they can do | Opex, cost per barrel | ₹ | ₹1,496 Cr · 33/33 roles · **41%** |
+| 2 | **Uptime** | Production and throughput not lost | NPT %, on-stream factor | ₹ | ₹845 Cr · 21/33 roles |
+| 3 | **Integrity** | Expected loss avoided before it occurs | Process safety events, LOPC | ₹ | ₹300 Cr · 16/33 roles |
+| 4 | **Recovery** | Barrels found, recovered and booked | Reserves replacement ratio, recovery factor | ₹ + bbl | ₹1,011 Cr · 4.04 Mbbl · 9/33 roles |
+
+**The order is the argument, and it is the arc of the deck:** Productivity is cheapest to prove and least interesting to a board. Uptime is the operator's own language. Integrity is the first lever that prices being *right* rather than being *fast*. **Recovery is the only one of the four that counts upward.**
+
+> [!IMPORTANT]
+> **The first three levers all count money NOT SPENT.** An arithmetic that can
+> only subtract will sound like an efficiency programme however the slides are
+> worded. This is the structural reason the deck repeatedly drifted into
+> sounding like data preparation, and no amount of rewriting fixes it — only
+> the fourth lever does. **Stage 01 must plant Recovery, and Stage 02 must
+> show it has the same cause as the other three.**
+
+**Three standing rules, each of which has already been breached once:**
+
+1. **Productivity is never stated as headcount reduction.** Say *hours redeployed*. For an NOC board the other phrasing loses the room, and it is not what the model computes.
+2. **Recovery is quoted in rupees AND barrels, together, always.** The rupees make it comparable to the other three; the barrels are what you fall back to when challenged. ₹1,011 Cr is also 4.04 Mbbl a year — roughly 2.6% of ONGC's production, which is the number that makes it credible rather than large.
+3. **Never defend the margin assumption.** One number converts barrels to rupees (₹2,500/bbl contribution). If a CFO attacks it, concede immediately and restate in barrels. The argument was never about the margin.
+4. **α and β are stated on the page, not buried.** Same discipline as the Integrity term. If someone thinks 0.075 is generous, invite them to halve it — every figure moves and the shape of the argument survives.
+
+**Lever coverage by stage — read this before editing any stage:**
+
+| Stage | Levers it currently carries | Gap |
+|---|---|---|
+| 01 Capital Reality | Uptime, Integrity, **Recovery** | — |
+| 02 Swiss Cheese | Integrity (Chain A), **Recovery** (Chain B) | — |
+| 06 Grounded Proof | Integrity, **Recovery** | Productivity is present but must be stated second |
+| 10 Enterprise Fleet | Productivity only | **Needs all four** |
+
+---
+
+
 ## The Strategic Architecture of the Pitch (Fast-Pace Pivot Arc)
 
 ```
@@ -85,18 +125,30 @@
 * **Kicker:** `THE CAPITAL REALITY`
 * **Display Headline:** `In energy, there are no low-consequence mistakes.`
 * **Narrative Lead:** `Oil & gas is an unforgiving, high-capital business. Multi-crore losses rarely stem from visible catastrophes—they leak quietly every single day through routine operational friction across siloed disciplines.`
-* **The 4 Monumental Capital Numbers (Heroic Data Floating on Canvas · Zero Boxes):**
+* **The 4 Monumental Capital Numbers — THE COST OF BEING WRONG (Heroic Data Floating on Canvas · Zero Boxes):**
   1. **₹200–500 Cr — Single Deepwater Well:** Rig spread rate, casing program, wireline logging suite & marine fleet sunk before first commercial oil is confirmed.
   2. **Billions — Acreage & Farm-In Bidding:** Multi-year concession commitments and PSC acreage valuations negotiated against fragmented, legacy well archives.
   3. **₹30L – 1.2 Cr — Single Idle Rig Day (NPT):** Offshore drilling spread idling while petrophysicists and drilling superintendents manually reconcile wireline logs.
   4. **₹25–100 Cr — One Lost Refinery Day:** CDU/FCC unplanned shutdown or off-spec crude run gross profit margin loss per operating day.
-* **Editorial Pivot Question:** `Where does this money actually disappear?`
-* **Transition Text:** `It rarely vanishes in headline-grabbing catastrophes. It leaks quietly through routine 2-hour handover lags between disciplines—until latent micro-gaps align.`
+* **The Counterweight — THE VALUE OF BEING RIGHT (3 Upside Numbers · same visual treatment, no boxes):**
+  1. **~1 in 3 — Exploration Success Rate:** Roughly two of every three exploration wells find nothing commercial. Moving that ratio by a single well is worth more than any efficiency programme in this deck.
+  2. **+1% Recovery Factor — Millions of Barrels:** On a mature field, one percentage point of recovery is oil already discovered, already leased, already paid for—and never produced.
+  3. **Bypassed Pay — Zones Logged as Water:** Intervals written off by 1990s cut-offs and vintage tool response, re-readable today against modern petrophysics.
+* **Levers evidenced on this stage:** rig day and refinery day → **Uptime**. Well cost and the JV bid → **Integrity**. All three upside numbers → **Recovery**. Productivity is deliberately absent here; it arrives with the personas, not with the capital numbers. **If a board member can only recall one thing from Stage 01, it should be that two of the seven numbers count upward.**
+* **Editorial Pivot Question:** `Where does this money actually disappear—and what never arrives at all?`
+* **Transition Text:** `It rarely vanishes in headline-grabbing catastrophes. It leaks quietly through routine 2-hour handover lags between disciplines—until latent micro-gaps align. And the larger number is the one no ledger records: the barrel we never found because the data never agreed with itself.`
 * **Transition Link:** `The Swiss Cheese Model of Compounding Gaps (Slide 02) →`
 
 ### 2. Core Strategic Intent & Boardroom Point
-* **The Goal:** Speak directly in the native language of the Board: capex, day-rates, gross refining margins, and exploration exposure.
+* **The Goal:** Speak directly in the native language of the Board: capex, day-rates, gross refining margins, exploration exposure—**and reserves replacement.**
 * **The Boardroom Directive ("State the Obvious"):** Acknowledge that the CMD and CEO know these numbers intimately. The point is not teaching them oil and gas, but isolating the critical question: *Where does capital actually bleed?* It bleeds in tiny, routine fractions across unmonitored human handovers.
+* **The Second Directive ("State What Nobody Counts"):** A cost overrun has an owner, a variance report and a review meeting. A prospect that was ranked second when it should have been first has none of those things. **Every board tracks the cost of being wrong; almost none of them track the cost of not being right.** Stage 01 must plant both, because Stage 02 will show they have the same cause.
+
+> [!IMPORTANT]
+> Do not let the upside numbers read as a separate "growth pitch" bolted onto a
+> risk pitch. They are the same chain read one link further. Efficiency is what
+> you save when the hole is plugged early; growth is what you do not lose when
+> it isn't.
 
 ### 3. Boardroom Spoken Script (CMD & CEO Track)
 > *"Chairman, CEO, Directors: Allow me to begin by stating what everyone in this room lives every day:
@@ -107,9 +159,11 @@
 > 
 > When an offshore rig sits idle on standby, Non-Productive Time burns ₹30 Lakh to over ₹1.2 Crore every single day. And in downstream refining, an unscheduled shutdown of a Crude Distillation Unit or Fluid Catalytic Cracker bleeds ₹25 to ₹100 Crore in gross profit margin per operating day.
 > 
-> You know these numbers. They are the reality of your balance sheet. But the vital question for our briefing today is: **Where does this money actually disappear?**
+> And let me state the other half, which our industry measures far less carefully: **there is no such thing as a low-consequence omission either.** Two out of every three exploration wells find nothing commercial. One percentage point of recovery factor on a mature field is millions of barrels you have already discovered, already leased and already paid for—and will never produce. Somewhere in your archive there are pay zones logged as water in the 1990s that modern petrophysics would read differently today.
 > 
-> It rarely vanishes in singular, headline-grabbing catastrophes. It leaks quietly, invisibly, every single day through routine 2-hour handover lags between disciplines—until latent micro-gaps align into disaster."*
+> You know these numbers. They are the reality of your balance sheet. But the vital question for our briefing today is: **Where does this money actually disappear—and what never arrives at all?**
+> 
+> It rarely vanishes in singular, headline-grabbing catastrophes. It leaks quietly, invisibly, every single day through routine 2-hour handover lags between disciplines—until latent micro-gaps align into disaster. And the barrels we never found leak out of exactly the same seams. I will show you both, because they have the same cause."*
 
 ---
 
@@ -140,6 +194,27 @@
   - **02 // PETROPHYSICS DEPTH:** Wireline Cable Stretch (1.48m Manual Approximation) — Wireline cable stretch shifted depth readings by 1.48m. Eyeballed manually, the protective caprock boundary was assumed 1.5m deeper than reality.
   - **03 // RIG FLOOR HANDOVER:** 3:00 AM Shift Changeover (4-Hour Communication Lag) — During the 3:00 AM shift swap, the updated hazard depth was lost in email. The rig crew continued drilling ahead for 4 hours without knowing the danger window.
   - **04 // CASING INTEGRITY:** Casing Shoe Landed in Gas Zone (₹50+ Cr Loss · Kick & Stuck Pipe) — With an accumulated 2m error, the casing shoe landed directly into the fractured gas sand instead of solid rock—causing an uncontrollable kick and stuck drillstring.
+* **Chain B — The Same Mechanism, Ending in a Dry Hole Instead of an Incident (Subsurface Vector · use when the audience is E&P / exploration-led):**
+  - **01 // CHECKSHOT VELOCITY AUDIT:** Unnoticed checkshot errors create artificial velocity pull-ups — *"causing interpreters to map non-existent structural high targets."*
+  - **02 // WELL ELEVATION DATUM:** Datum calculation errors of 15–30 m systematically shift synthetic seismograms — *"corrupting the entire regional depth conversion framework."*
+  - **03 // SYNTHETIC-TO-LOG TIE:** Over-stretching synthetics forces artificial correlations that *"misidentify reservoir top reflection peaks."*
+  - **04 // VELOCITY MODEL BUILD:** Lateral velocity anomalies get smoothed over, producing *"severe depth prognosis errors at the target reservoir."*
+  - **05 // MULTI-VINTAGE MISTIE:** Unharmonised surveys create *"artificial ghost faults,"* corrupting regional structural mapping.
+  - **06 // GRV UNCERTAINTY:** Unquantified velocity uncertainty produces *"distorted capital expenditure decisions for offshore appraisal drilling."*
+  - **OUTCOME:** A structural high that does not exist is ranked first. ₹200–500 Cr is committed to prove it. The well is dry—and the prospect that *should* have been ranked first was never drilled at all.
+* **Levers evidenced on this stage:** Chain A → **Integrity** (a loss event avoided) with **Uptime** alongside it (the ₹50 Cr is NPT). Chain B → **Recovery** (a barrel never found). **This is the whole reason both chains are here.** One mechanism, two levers, and the second one is the only one that counts upward. Presenting Chain A alone is what makes the deck sound like operational hygiene.
+
+> [!IMPORTANT]
+> **Chain B is not a variant of Chain A; it is the half of the story Chain A
+> cannot tell.** Chain A ends in an incident and a cost — ₹50 Cr of NPT that
+> appears in a report with an owner. Chain B ends in a **wrong belief**, and its
+> cost is a barrel never found, which appears in no report at all. Every one of
+> these six steps is an agent we are building, and every one of them is tagged
+> in the corpus as routine `consistency`, `assembly` or `volume` work. Read one
+> at a time they are housekeeping. Read as a chain they are the anatomy of a
+> dry hole. **If we only ever present Chain A, the audience will correctly
+> conclude that we sell operational hygiene.**
+
 * **Editorial Transition to Stage 03:**
   - *Question:* *"What kind of defensive system can permanently seal these seams?"*
   - *Lead:* *"Before selecting a technology, energy operations demand five non-negotiable engineering criteria for the defensive plug."*
@@ -148,6 +223,8 @@
 ### 2. Core Strategic Intent & Boardroom Point
 * **The Goal:** Ground the compounding mechanism in an unassailable engineering and safety framework recognized by every technical director.
 * **The Causal Chain:** Connect four distinct real-world oilfield operations across departments (Well Planning ➔ Petrophysics Wireline ➔ Drilling Graveyard Handover ➔ Casing Seat Integrity). Show that each individual engineer acted in good faith, but the unmonitored human seams between them created a ₹50+ Cr NPT disaster.
+* **The Blamelessness Point (say it explicitly):** *A dry well is not one person's mistake.* It is what happens when the velocity model and the well logs quietly disagree and nobody is positioned to notice. This matters commercially, not just diplomatically: if the cause were individual error the answer would be training and accountability, and we would have nothing to sell. Because the cause is **systemic disagreement between layers**, the answer is a systemic barrier in every layer — which is exactly what an agent is.
+* **The Consequence Point:** Follow the chain one link past the incident. Latent defect → holes align → critical failure (a wrong belief) → business risk (capital committed) → **growth impeded (reserves not added)**. Stop at the incident and this is a safety pitch. Follow it to the end and it is a growth pitch, with the same evidence.
 
 ### 3. Boardroom Spoken Script (CMD & CEO Track)
 > *"Every Director and Operations Chief in this room knows Prof. James Reason’s System Safety model. High-consequence disasters never stem from a single colossal error. They happen when micro-vulnerabilities align across handovers into an unbroken failure ray.
@@ -160,6 +237,16 @@
 > 4. **Seam 04 (Casing Seating Catastrophe):** With an accumulated 2-meter physical error, the driller set the heavy casing shoe directly into the fractured, high-pressure gas zone instead of the impermeable caprock. Immediate result: an uncontrolled fluid kick, differential stuck drillpipe, weeks of recovery fishing, and ₹50+ Crore in direct Non-Productive Time.
 > 
 > In isolation, every team believed they followed standard operating procedure. But because the seams were unmonitored, the disaster compounded across disciplines.
+> 
+> And I want to be precise about something, because it changes what you should do about it. **Not one person in that chain made a mistake.** Every judgement was defensible on the information that person had. The failure was that the layers never agreed with each other, and nobody was positioned to notice. If this were human error, you would fix it with training. It isn't, so you can't.
+> 
+> Now let me show you the same mechanism with a completely different ending—because this is the one that does not appear in any incident report you have ever read.
+> 
+> A checkshot survey carries a small unnoticed error, creating an artificial velocity pull-up. A well elevation datum is out by twenty metres, shifting every synthetic seismogram. A synthetic is over-stretched to force a tie. Lateral velocity anomalies get smoothed over in the model build. Two seismic vintages are never properly harmonised, and a ghost fault appears. Nobody quantifies the depth uncertainty.
+> 
+> Six routine steps. Six small, defensible compromises. And at the end of them, a structural high that **does not exist** is ranked first in the drilling portfolio. You commit ₹300 Crore to prove it. The well comes up dry.
+> 
+> Here is the part that should concern this board most: there is no explosion, no injury, no regulatory filing, no root-cause investigation. There is simply a well that found nothing, a prospect elsewhere in the portfolio that was ranked second and never drilled, and reserves you did not add this year. **The loss is real, it is large, and your systems have no line to record it in.**
 > 
 > Before selecting a technology, energy operations demand five non-negotiable engineering criteria for the defensive plug."*
 

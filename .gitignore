@@ -14,6 +14,16 @@ assets/media/*
 # Whitelist ONLY the exact images actively used in the website/slides:
 !assets/media/gemini_enterprise_logo.svg
 !assets/media/photos/
+# Official Gemini marks, recovered from the Y26 brand guidelines. These are
+# public marketing assets (they appear on cloud.google.com); the confidential
+# PDF they came out of stays ignored in brand_guidelines/.
+!assets/media/brand/
+!assets/media/brand/*
+# Evidence plots referenced by the slides. slide 06 pointed at a file:/// path
+# in a personal Downloads folder, which rendered for nobody else; the image now
+# lives in the repo and has to be allowed through the assets/media/* block.
+!assets/media/evidence/
+!assets/media/evidence/*
 !assets/media/photos/swiss_cheese_nebula.jpg
 !assets/media/photos/swiss_cheese_fortified.jpg
 

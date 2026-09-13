@@ -62,8 +62,85 @@
     rate:      2500,    // INR per loaded technical-staff hour
     yearHours: 1800,    // productive hours per person per year
     onTask:    0.50,    // share of that year spent inside this workflow
+    bblMargin: 2500,    // INR of contribution per incremental barrel
     scale:     "combined ONGC + IOCL scale"
   });
+
+  // ── 1b. The four levers ────────────────────────────────────────────────
+  /* CANONICAL. Every agent moves exactly one of these four, and every number
+     anywhere in this programme rolls up to one of them. Defined here, beside
+     the terms that compute them, so the names cannot drift between the deck,
+     the dossiers and the board.
+
+     The order is deliberate and is the narrative arc: cost -> risk -> growth.
+
+       PRODUCTIVITY  cheapest to prove, least interesting to a board
+       UPTIME        the operator's own language
+       INTEGRITY     the only term that prices a loss NOT happening
+       RECOVERY      the only term that counts upward
+
+     Note what the first three have in common: every rupee is money NOT SPENT.
+     An arithmetic that can only count downward will always read as an
+     efficiency pitch, however the slides are worded. RECOVERY is the fix.
+     It is priced in rupees so it sums with the other three -- a lever in a
+     different unit gets read as a footnote -- but it carries its barrel count
+     everywhere, and the barrels are the harder number. Argue in barrels.
+
+     `term` maps the lever to the object in this file that computes it. */
+  defaults("VALUE_LEVERS", {
+    order: ["productivity", "uptime", "integrity", "recovery"],
+
+    productivity: {
+      label:   "Productivity",
+      counts:  "Expert hours redeployed onto work only they can do",
+      metric:  "Opex, cost per barrel",
+      unit:    "INR",
+      term:    "VALUE_SEATS",     // human capital
+      built:   true,
+      /* Say "hours redeployed", never "headcount removed". For an NOC
+         audience the second phrasing loses the room and is not what the
+         model computes -- seats are an input, not an output. */
+      caution: "Never state this as headcount reduction."
+    },
+
+    uptime: {
+      label:   "Uptime",
+      counts:  "Production and throughput not lost",
+      metric:  "NPT %, on-stream factor",
+      unit:    "INR",
+      term:    "ASSET_CAPITAL",
+      built:   true,
+      caution: "Only counts hours on an asset's critical path. 12 of 33 roles carry no term here, and those zeros are load-bearing."
+    },
+
+    integrity: {
+      label:   "Integrity",
+      counts:  "Expected loss avoided before it occurs",
+      metric:  "Process safety events, loss of primary containment",
+      unit:    "INR",
+      term:    "ASSET_RISK",
+      built:   true,
+      caution: "An expectation, not a forecast. Alpha and beta are stated judgement."
+    },
+
+    recovery: {
+      label:   "Recovery",
+      counts:  "Barrels found, recovered and booked",
+      metric:  "Reserves replacement ratio, recovery factor",
+      unit:    "INR",            // priced, with the barrel count kept alongside
+      term:    "RESOURCE_RECOVERY",
+      built:   true,
+      /* Priced in rupees so it sits on the same footing as the other three and
+         sums into one estate number -- a lever quoted in a different unit gets
+         read as a footnote, which is exactly what it must not be. The barrel
+         count is carried alongside every figure and is the more defensible of
+         the two: barrels come from stated well counts and per-unit volumes,
+         the rupees come from one margin assumption (VALUE_MODEL.bblMargin).
+         Quote barrels when challenged. */
+      caution: "Rupees rest on a single margin assumption. The barrel count is the harder number -- lead with it if pressed."
+    }
+  });
+
 
   // ── 2. Human capital: headcount per role ───────────────────────────────
   /* ~7,700 people across these 33 technical roles, against ~57,000 combined
@@ -348,11 +425,110 @@
            alpha: 0.30, beta: 0.35,
            source: "Loss of containment on a gas processing train." }
 
-    /* No risk term, deliberately: P04 P05 P06 P09 P10 P13 P15 P16 P17 P18
-       P21 P22 P23 P24 P25 P28 P29. The subsurface roles are the pointed
+    /* No INTEGRITY term, deliberately: P04 P05 P06 P09 P10 P13 P15 P16 P17
+       P18 P21 P22 P23 P24 P25 P28 P29. The subsurface roles are the pointed
        case -- a petrophysicist who mis-picks water saturation causes capital
        to be MISALLOCATED, not lost, and booking that as avoided expected
-       loss would be the kind of claim that discredits the other 16 rows. */
+       loss would be the kind of claim that discredits the other 16 rows.
+
+       These 17 zeros were never a gap in the research. They are RECOVERY,
+       the fourth lever, seen from the other side. Misallocated capital is
+       precisely a dry hole, a prospect ranked below a better one, a pay
+       zone logged as water -- growth foregone rather than money lost.
+
+       RESOURCE_RECOVERY below now carries 9 of these 17 rows (P04 P05 P06
+       P09 P18 P21 P22 P23 P24), so the estate total is no longer composed
+       entirely of money not spent.
+
+       Note the structure, which fell out of the model rather than being
+       imposed on it: every recovery role is drawn from this list, so NO
+       ROLE CARRIES BOTH INTEGRITY AND RECOVERY. Roles whose errors
+       misallocate capital are exactly the roles whose errors do not
+       destroy it. Three levers is the ceiling for any one row.
+
+       The 8 that remain zero in both columns (P10 P13 P15 P16 P17 P25 P28
+       P29) are read correctly as "this role does not move that lever". */
+  });
+
+  // ── 5. Recovery: barrels found, recovered and booked ───────────────────
+  /* The fourth lever, and the only one that counts upward.
+
+     Shape is deliberately the same five factors as ASSET_RISK:
+
+       barrels = unitsPerYear x bblPerUnit x alpha x beta
+       rupees  = barrels x VALUE_MODEL.bblMargin
+
+     alpha  what share of the outcome turns on information quality at all
+     beta   what share of THAT the agents can credibly claim
+
+     Both are judgement, exactly as in the risk term, and both are stated
+     rather than buried. They are set low on purpose -- 0.03 to 0.075
+     combined. The whole block lands ~4.0 Mbbl/yr against ONGC's ~154 Mbbl/yr,
+     about 2.6% of production. A reader who thinks that is too generous can
+     halve beta and watch every figure move.
+
+     WHY THESE NINE ROLES. Seven of them (P04 P05 P06 P18 P21 P22 P23) carried
+     Productivity and nothing else -- no rig waits on them, and a mis-picked
+     saturation misallocates capital rather than destroying it, so they have
+     no Integrity term either. That is not because their work is worth less.
+     It is because the model had no upward-counting term until now. P09 and
+     P24 already carry Uptime; recovery is additional to it, not instead.
+
+     A role may move more than one lever. A single AGENT moves one. */
+  defaults("RESOURCE_RECOVERY", {
+
+    P04: { mechanism: "Pay intervals correctly identified rather than written off as water",
+           unitsPerYear: 550, unitLabel: "wells logged per year",
+           bblPerUnit: 25000, alpha: 0.20, beta: 0.25,
+           source: "Depth-correct, mnemonic-correct curves change net pay at the margin on most wells. Vintage cut-offs and tool-response errors systematically under-call pay rather than over-call it." },
+
+    P05: { mechanism: "Prospects ranked on defensible Pg rather than on advocacy",
+           unitsPerYear: 40, unitLabel: "prospects matured per year",
+           bblPerUnit: 400000, alpha: 0.15, beta: 0.20,
+           source: "Value is in drilling the better prospect first, not in drilling more of them. Low alpha: ranking is a judgement call that data informs but does not settle." },
+
+    P06: { mechanism: "Recovery factor defended by material balance that reconciles",
+           unitsPerYear: 25, unitLabel: "major producing fields",
+           bblPerUnit: 600000, alpha: 0.15, beta: 0.20,
+           source: "A percentage point of recovery factor on a mature field is oil already discovered and already leased. Attribution is deliberately thin -- reservoir management is far more than its data layer." },
+
+    P09: { mechanism: "Workover candidates selected on economics that hold up",
+           unitsPerYear: 400, unitLabel: "workovers per year",
+           bblPerUnit: 9000, alpha: 0.25, beta: 0.30,
+           source: "The agent already emits estimated_uplift_bopd, payback_period_days and capital_efficiency_index. Higher alpha and beta than the exploration rows because the causal link from candidate screening to incremental barrels is short and measurable." },
+
+    P18: { mechanism: "Depth conversion and fluid response the well logs actually agree with",
+           unitsPerYear: 60, unitLabel: "exploration and appraisal wells",
+           bblPerUnit: 150000, alpha: 0.25, beta: 0.30,
+           source: "The velocity chain -- checkshot audit, datum harmonisation, synthetic tie, velocity model, mistie, GRV uncertainty. This is the worked example the pitch is built on, so alpha and beta should be defensible line by line." },
+
+    P21: { mechanism: "Bypassed pay and infill targets located in fields already producing",
+           unitsPerYear: 120, unitLabel: "infill and re-entry candidates screened per year",
+           bblPerUnit: 80000, alpha: 0.25, beta: 0.30,
+           source: "The agent returns ranked bottom-hole target coordinates and estimated un-drained HCPV. Barrels inside existing acreage with existing facilities -- the cheapest barrels an operator can add." },
+
+    P22: { mechanism: "Plateau length and recovery tested against a forecast that history-matches",
+           unitsPerYear: 15, unitLabel: "field development plans per year",
+           bblPerUnit: 800000, alpha: 0.15, beta: 0.20,
+           source: "FDP decisions set recovery for decades. Large per-unit volume, deliberately low attribution: the simulation is one input to a decision with many." },
+
+    P23: { mechanism: "Subsurface data findable, so the other eight roles can act on it",
+           unitsPerYear: 550, unitLabel: "well datasets curated per year",
+           bblPerUnit: 8000, alpha: 0.15, beta: 0.20,
+           source: "An enabler, priced as one. The smallest recovery figure in the block on purpose -- the barrels are realised by the interpreters downstream, and counting them fully here would double-count those rows." },
+
+    P24: { mechanism: "Wellbores steered inside the pay they were planned to contact",
+           unitsPerYear: 180, unitLabel: "horizontal and high-angle wells per year",
+           bblPerUnit: 30000, alpha: 0.20, beta: 0.25,
+           source: "Geosteering on correlations that hold keeps reservoir contact. Distinct from this role's uptime term, which counts rig hours rather than barrels." }
+
+    /* No recovery term for the other 24 roles, deliberately. A board operator
+       who prevents a column upset protects throughput -- that is Uptime, and
+       it is already counted. A terminal superintendent moves barrels that are
+       already produced. Only work that changes WHICH barrels are found or how
+       many are ultimately recovered belongs here. Stretching this term across
+       the estate to make the total larger is precisely the move that would
+       make the other three levers unbelievable. */
   });
 
 })(window);

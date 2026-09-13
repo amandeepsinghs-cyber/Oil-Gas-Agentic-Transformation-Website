@@ -705,22 +705,14 @@
 
   .work { margin: 40px 0 8px; }
 
-  /* Proportional, not decorative: the segment widths are the counts. */
-  .work-bar { display: flex; gap: 3px; height: 10px; margin-bottom: 12px; }
-  .work-seg { border-radius: 3px; }
+  /* Bucket colours. A green to grey ramp, reading as "how much of this is
+     ours". B3 used to be yellow here, which broke the standing rule that red
+     and yellow appear ONLY on the chessboard, where they carry priority. The
+     bar these once filled has moved to the board; all that is left is the chip
+     on each touchpoint row. */
   .seg-B1 { background: var(--g-green); }
   .seg-B2 { background: var(--border-strong); }
-  .seg-B3 { background: var(--g-yellow); }
-
-  .work-legend { display: flex; flex-wrap: wrap; gap: 8px 26px; margin-bottom: 14px; }
-
-  .work-key {
-    display: flex; align-items: center; gap: 7px;
-    font-size: var(--fs-13); color: var(--text-muted);
-  }
-  .work-key b { color: var(--text); font-weight: 600; }
-  .work-key .dot { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
-  .work-gloss { color: var(--text-dim); font-size: var(--fs-12); }
+  .seg-B3 { background: var(--text-dim); }
 
   .work-details summary {
     cursor: pointer; font-size: var(--fs-12); color: var(--text-dim); padding: 4px 0;
@@ -1079,23 +1071,12 @@
     var actions = p.actions || [];
     if (!actions.length) return "";
 
+    /* counts still feeds the section note ("N are ours to automate"). The
+       proportional bar and its legend that used to sit at the top of this
+       section moved to the board, which reads all 33 roles at once and is the
+       right place for a distribution. */
     var counts = { B1: 0, B2: 0, B3: 0 };
     actions.forEach(function (a) { if (counts[a.bucket] != null) counts[a.bucket]++; });
-
-    var bar = ["B1", "B2", "B3"].map(function (b) {
-      if (!counts[b]) return "";
-      return '<span class="work-seg seg-' + b + '" style="flex:' + counts[b] + '" ' +
-             'title="' + counts[b] + " × " + BUCKETS[b].label + '"></span>';
-    }).join("");
-
-    var legend = ["B1", "B2", "B3"].map(function (b) {
-      if (!counts[b]) return "";
-      return '<span class="work-key">' +
-               '<i class="dot seg-' + b + '"></i>' +
-               "<b>" + counts[b] + "</b> " + esc(BUCKETS[b].label) +
-               '<span class="work-gloss">' + esc(BUCKETS[b].gloss) + "</span>" +
-             "</span>";
-    }).join("");
 
     var rows = actions.map(function (a) {
       return '<li class="work-row">' +
@@ -1118,8 +1099,6 @@
                  (counts.B1 ? "<b>" + counts.B1 + "</b> are ours to automate." : "") +
                "</span>" +
              "</div>" +
-             '<div class="work-bar">' + bar + "</div>" +
-             '<div class="work-legend">' + legend + "</div>" +
              "<details class=\"work-details\"><summary>All " + actions.length + " touchpoints</summary>" +
                '<ol class="work-list">' + rows + "</ol>" +
              "</details>" +
