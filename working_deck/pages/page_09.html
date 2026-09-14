@@ -10,10 +10,10 @@
       --slate-bg: #06090E;
       --slate-panel: rgba(13, 19, 32, 0.85);
       --slate-border: rgba(255, 255, 255, 0.08);
-      --security-turquoise: #00D2B4;
+      --security-turquoise: #12B5CB;
       --security-azure: #00A3FF;
-      --nebula-crimson: #EF4444;
-      --hazard-amber: #F59E0B;
+      --nebula-crimson: #FC413D;
+      --hazard-amber: #FEC700;
       --font-display: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
     }
@@ -69,8 +69,8 @@
       border-radius: 10px;
       overflow: hidden;
       background: radial-gradient(circle at 50% 50%, #0B1323 0%, #06090E 95%);
-      border: 1px solid rgba(0, 210, 180, 0.25);
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 40px rgba(0, 210, 180, 0.04);
+      border: 1px solid rgba(18, 181, 203, 0.25);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 40px rgba(18, 181, 203, 0.04);
     }
 
     #terrain-canvas {
@@ -96,7 +96,7 @@
       font-family: var(--font-mono);
       font-size: 11px;
       color: #FFF;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 210, 180, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(18, 181, 203, 0.3);
       z-index: 100;
       display: none;
       transform: translate(-50%, -120%);
@@ -123,14 +123,14 @@
     }
 
     .summit-card.active-summit {
-      background: rgba(0, 210, 180, 0.12);
+      background: rgba(18, 181, 203, 0.12);
       border-color: var(--security-turquoise);
-      box-shadow: 0 0 18px rgba(0, 210, 180, 0.25);
+      box-shadow: 0 0 18px rgba(18, 181, 203, 0.25);
       transform: translateX(6px);
     }
 
     .summit-card.summit-plugged {
-      background: linear-gradient(135deg, rgba(0, 210, 180, 0.18) 0%, rgba(0, 163, 255, 0.12) 100%);
+      background: linear-gradient(135deg, rgba(18, 181, 203, 0.18) 0%, rgba(0, 163, 255, 0.12) 100%);
       border: 1.5px solid var(--security-turquoise);
     }
 
@@ -160,15 +160,15 @@
 
     .mini-cell.mini-plugged { background: var(--security-turquoise); box-shadow: 0 0 8px var(--security-turquoise); }
     .mini-cell.mini-starburst { background: #FFFFFF; box-shadow: 0 0 6px #FFFFFF; }
-    .mini-cell.mini-red { background: #EA4335; box-shadow: 0 0 4px #EA4335; }
-    .mini-cell.mini-yellow { background: #FBBC04; box-shadow: 0 0 4px #FBBC04; }
-    .mini-cell.mini-green { background: #34A853; }
-    .mini-cell.mini-aquagreen { background: #00D2B4; }
-    .mini-cell.mini-blue { background: #4285F4; }
-    .mini-cell.mini-indigo { background: #1E1B4B; }
-    .mini-cell.mini-amber { background: #F59E0B; box-shadow: 0 0 4px #F59E0B; }
-    .mini-cell.mini-orchid { background: #9333EA; box-shadow: 0 0 4px rgba(147, 51, 234, 0.4); }
-    .mini-cell.mini-teal { background: #064E52; }
+    .mini-cell.mini-red { background: #FC413D; box-shadow: 0 0 4px #FC413D; }
+    .mini-cell.mini-yellow { background: #FEC700; box-shadow: 0 0 4px #FEC700; }
+    .mini-cell.mini-green { background: #00AF57; }
+    .mini-cell.mini-aquagreen { background: #12B5CB; }
+    .mini-cell.mini-blue { background: #3186FF; }
+    .mini-cell.mini-indigo { background: #1B1745; }
+    .mini-cell.mini-amber { background: #FEC700; box-shadow: 0 0 4px #FEC700; }
+    .mini-cell.mini-orchid { background: #4B31E3; box-shadow: 0 0 4px rgba(147, 51, 234, 0.4); }
+    .mini-cell.mini-teal { background: #0A3B44; }
 
     /* Custom Buttons */
     .pill-btn {
@@ -190,7 +190,7 @@
     }
 
     .pill-btn.active {
-      background: rgba(0, 210, 180, 0.18);
+      background: rgba(18, 181, 203, 0.18);
       border-color: var(--security-turquoise);
       color: var(--security-turquoise);
       font-weight: 700;
@@ -252,7 +252,7 @@
     <!-- Atmospheric Grid Backdrop -->
     <div class="slide-bg-media">
       <div class="slide-bg-grid"></div>
-      <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 35%, rgba(0, 210, 180, 0.05) 0%, rgba(6, 9, 14, 0.96) 65%, var(--slate-bg) 100%);"></div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 35%, rgba(18, 181, 203, 0.05) 0%, rgba(6, 9, 14, 0.96) 65%, var(--slate-bg) 100%);"></div>
     </div>
 
     <div id="stage-09" style="max-width: 1720px; margin: 0 auto; padding: 30px max(20px, 2.5vw); position: relative; z-index: 2;">
@@ -341,7 +341,7 @@
             <div class="summit-card" id="card-hydro" onclick="focusSummit('s-hydro')">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
                 <div style="display: flex; align-items: center; gap: 6px;">
-                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #FCA5A5; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
+                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #F28B82; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
                     TARGET 01 // HIGHEST EXPOSURE
                   </span>
                   <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">Hydrocracker Specialist</span>
@@ -360,7 +360,7 @@
             <div class="summit-card" id="card-drill" onclick="focusSummit('s-drill')">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
                 <div style="display: flex; align-items: center; gap: 6px;">
-                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #FCA5A5; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
+                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #F28B82; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
                     TARGET 02
                   </span>
                   <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">Drilling Operations Lead</span>
@@ -379,7 +379,7 @@
             <div class="summit-card" id="card-fccu" onclick="focusSummit('s-fccu')">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
                 <div style="display: flex; align-items: center; gap: 6px;">
-                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #FCA5A5; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
+                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #F28B82; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
                     TARGET 03
                   </span>
                   <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">FCCU Process Engineer</span>
@@ -398,7 +398,7 @@
             <div class="summit-card" id="card-cdu" onclick="focusSummit('s-cdu')">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
                 <div style="display: flex; align-items: center; gap: 6px;">
-                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(245, 158, 11, 0.2); color: #FDE68A; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(245, 158, 11, 0.4);">
+                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(245, 158, 11, 0.2); color: #FDD663; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(245, 158, 11, 0.4);">
                     TARGET 04
                   </span>
                   <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">CDU/VDU Distillation Lead</span>
@@ -435,10 +435,10 @@
         <div style="display: flex; flex-direction: column; gap: 14px;">
           
           <!-- 3D Canvas Container (Cosmic Void Backdrop) -->
-          <div id="topology-canvas-container" style="position: relative; width: 100%; height: 640px; border-radius: 10px; overflow: hidden; background: radial-gradient(circle at 50% 50%, #061A22 0%, #030F14 70%, #01080B 100%); border: 1px solid rgba(0, 210, 180, 0.25); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), inset 0 0 50px rgba(0, 210, 180, 0.04);">
+          <div id="topology-canvas-container" style="position: relative; width: 100%; height: 640px; border-radius: 10px; overflow: hidden; background: radial-gradient(circle at 50% 50%, #061A22 0%, #030F14 70%, #01080B 100%); border: 1px solid rgba(18, 181, 203, 0.25); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), inset 0 0 50px rgba(18, 181, 203, 0.04);">
             
             <!-- Subtle aqua-teal and solar amber ambient glow -->
-            <div style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 65% 45%, rgba(0, 210, 180, 0.10) 0%, rgba(245, 158, 11, 0.05) 45%, transparent 70%);"></div>
+            <div style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 65% 45%, rgba(18, 181, 203, 0.10) 0%, rgba(245, 158, 11, 0.05) 45%, transparent 70%);"></div>
 
             <canvas id="terrain-canvas" style="position: relative; z-index: 1;"></canvas>
 
@@ -456,27 +456,27 @@
                 <span>&gt; ₹118 Cr / yr (White-Hot Apex Summits • 0ms Collision &amp; Runaway)</span>
               </div>
               <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #EA4335; border-radius: 2px; box-shadow: 0 0 6px #EA4335;"></span>
+                <span style="display: inline-block; width: 12px; height: 12px; background: #FC413D; border-radius: 2px; box-shadow: 0 0 6px #FC413D;"></span>
                 <span>₹95–118 Cr / yr (Google Crimson Red • Critical Process Hazard Folds)</span>
               </div>
               <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #FBBC04; border-radius: 2px; box-shadow: 0 0 6px #FBBC04;"></span>
+                <span style="display: inline-block; width: 12px; height: 12px; background: #FEC700; border-radius: 2px; box-shadow: 0 0 6px #FEC700;"></span>
                 <span>₹75–95 Cr / yr (Google Sun Yellow • Friction Bottleneck Ridges)</span>
               </div>
               <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #34A853; border-radius: 2px; box-shadow: 0 0 6px #34A853;"></span>
+                <span style="display: inline-block; width: 12px; height: 12px; background: #00AF57; border-radius: 2px; box-shadow: 0 0 6px #00AF57;"></span>
                 <span>₹50–75 Cr / yr (Google Emerald Green • Operational Flanks &amp; Slopes)</span>
               </div>
               <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #00D2B4; border-radius: 2px; box-shadow: 0 0 6px #00D2B4;"></span>
+                <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 6px #12B5CB;"></span>
                 <span>₹25–50 Cr / yr (Electric Cyan &amp; Sovereign Turquoise • Proven Agent Level)</span>
               </div>
               <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #4285F4; border-radius: 2px; box-shadow: 0 0 6px #4285F4;"></span>
+                <span style="display: inline-block; width: 12px; height: 12px; background: #3186FF; border-radius: 2px; box-shadow: 0 0 6px #3186FF;"></span>
                 <span>&lt; ₹25 Cr / yr (Google Blue &amp; Deep Cosmic Indigo • Monolith Plains)</span>
               </div>
               <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #00FFD5; border-radius: 2px; box-shadow: 0 0 8px #00FFD5;"></span>
+                <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 8px #12B5CB;"></span>
                 <span>★ Proven Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
               </div>
             </div>
@@ -487,12 +487,12 @@
               <div id="btn-palette-toggle" onclick="togglePalette()" title="Toggle Color Spectrum (Google Light Spectrum ⟷ Oceanic Aqua)" style="cursor: pointer; display: flex; align-items: center; gap: 8px; background: rgba(6, 9, 14, 0.88); backdrop-filter: blur(8px); border: 1px solid rgba(66, 133, 244, 0.4); padding: 5px 10px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); user-select: none; transition: all 0.25s ease;">
                 <span style="font-size: 12px; line-height: 1;">🎨</span>
                 <div id="palette-switch-track" style="width: 32px; height: 16px; border-radius: 10px; background: rgba(66, 133, 244, 0.25); border: 1px solid rgba(66, 133, 244, 0.6); position: relative; transition: all 0.25s ease;">
-                  <div id="palette-switch-thumb" style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #4285F4, #EA4335); position: absolute; top: 1px; left: 2px; box-shadow: 0 0 6px #4285F4; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);"></div>
+                  <div id="palette-switch-thumb" style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #3186FF, #FC413D); position: absolute; top: 1px; left: 2px; box-shadow: 0 0 6px #3186FF; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);"></div>
                 </div>
               </div>
 
               <!-- Status Indicator -->
-              <div style="font-family: var(--font-mono); font-size: 11px; background: rgba(6, 9, 14, 0.85); border: 1px solid rgba(0, 210, 180, 0.4); padding: 6px 14px; border-radius: 20px; color: var(--security-turquoise); display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+              <div style="font-family: var(--font-mono); font-size: 11px; background: rgba(6, 9, 14, 0.85); border: 1px solid rgba(18, 181, 203, 0.4); padding: 6px 14px; border-radius: 20px; color: var(--security-turquoise); display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise); box-shadow: 0 0 8px var(--security-turquoise); animation: pulse-dot 1.5s infinite alternate;"></span>
                 <span>4,389-NODE NEBULA PARTICLE ENGINE</span>
               </div>
@@ -540,11 +540,11 @@
   <script>
     // 1. Definition of Key Summits (Matching image78.png High Crests & Glowing Cores)
     const SUMMIT_COORDINATES = {
-      's-petro': { x: 7, y: 9, name: 'Lead Petrophysicist (Proven Agent)', action: 'Wireline Splicing (Slide 06 Benchmark)', value: 45, color: '#00D2B4', cardId: 'card-petro' },
-      's-hydro': { x: 0, y: 16, name: 'Hydrocracker Specialist', action: 'Reactor Thermal Runaway & Quench', value: 130, color: '#00F0FF', cardId: 'card-hydro' },
-      's-drill': { x: 1, y: 3, name: 'Drilling Operations Lead', action: 'Anti-Collision & Collision Scanning', value: 120, color: '#00F0FF', cardId: 'card-drill' },
-      's-fccu':  { x: 0, y: 15, name: 'FCCU Process Engineer', action: 'Slide Valve Reverse & Catalyst Loss', value: 115, color: '#FFE600', cardId: 'card-fccu' },
-      's-cdu':   { x: 0, y: 14, name: 'CDU/VDU Distillation Lead', action: 'Crude Assay True Boiling Point Blend', value: 90, color: '#F59E0B', cardId: 'card-cdu' }
+      's-petro': { x: 7, y: 9, name: 'Lead Petrophysicist (Proven Agent)', action: 'Wireline Splicing (Slide 06 Benchmark)', value: 45, color: '#12B5CB', cardId: 'card-petro' },
+      's-hydro': { x: 0, y: 16, name: 'Hydrocracker Specialist', action: 'Reactor Thermal Runaway & Quench', value: 130, color: '#6FD3E0', cardId: 'card-hydro' },
+      's-drill': { x: 1, y: 3, name: 'Drilling Operations Lead', action: 'Anti-Collision & Collision Scanning', value: 120, color: '#6FD3E0', cardId: 'card-drill' },
+      's-fccu':  { x: 0, y: 15, name: 'FCCU Process Engineer', action: 'Slide Valve Reverse & Catalyst Loss', value: 115, color: '#FEC700', cardId: 'card-fccu' },
+      's-cdu':   { x: 0, y: 14, name: 'CDU/VDU Distillation Lead', action: 'Crude Assay True Boiling Point Blend', value: 90, color: '#FEC700', cardId: 'card-cdu' }
     };
 
     // 2. Generate 20×15 Elevation Grid (₹ Cr Capital at Risk)
@@ -788,10 +788,10 @@
           strokeR = Math.round(30 + 50 * t);
           strokeG = Math.round(50 + 90 * t);
           strokeB = Math.round(120 + 130 * t);
-          dotColor = '#60A5FA';
+          dotColor = '#8AB4F8';
           glowColor = 'rgba(96, 165, 250, 0.35)';
         } else if (norm < 0.35) {
-          // 2. Google Blue (66, 133, 244) -> Sovereign Turquoise (0, 210, 180) [₹26–51 Cr - Lighthouse Agent]
+          // 2. Google Blue (66, 133, 244) -> Sovereign Turquoise (18, 181, 203) [₹26–51 Cr - Lighthouse Agent]
           const t = (norm - 0.15) / 0.20;
           r = Math.round(66 - 66 * t);
           g = Math.round(133 + 77 * t);
@@ -799,10 +799,10 @@
           strokeR = 0;
           strokeG = Math.round(160 + 55 * t);
           strokeB = Math.round(240 - 40 * t);
-          dotColor = '#00FFD5';
-          glowColor = 'rgba(0, 255, 213, 0.45)';
+          dotColor = '#12B5CB';
+          glowColor = 'rgba(18, 181, 203, 0.45)';
         } else if (norm < 0.55) {
-          // 3. Sovereign Turquoise (0, 210, 180) -> Google Emerald Green (52, 168, 83) [₹51–75 Cr - Operational Slopes]
+          // 3. Sovereign Turquoise (18, 181, 203) -> Google Emerald Green (52, 168, 83) [₹51–75 Cr - Operational Slopes]
           const t = (norm - 0.35) / 0.20;
           r = Math.round(0 + 52 * t);
           g = Math.round(210 - 42 * t);
@@ -810,7 +810,7 @@
           strokeR = Math.round(52 * t);
           strokeG = Math.round(215 - 35 * t);
           strokeB = Math.round(170 - 80 * t);
-          dotColor = '#4ADE80';
+          dotColor = '#5BB974';
           glowColor = 'rgba(74, 222, 128, 0.50)';
         } else if (norm < 0.75) {
           // 4. Google Green (52, 168, 83) -> Google Sun Yellow (251, 188, 4) [₹75–100 Cr - Friction Bottleneck Ridges]
@@ -821,7 +821,7 @@
           strokeR = Math.round(60 + 195 * t);
           strokeG = Math.round(180 + 35 * t);
           strokeB = Math.round(90 * (1 - t));
-          dotColor = '#FDE047';
+          dotColor = '#FDD663';
           glowColor = 'rgba(253, 224, 71, 0.65)';
         } else if (norm < 0.90) {
           // 5. Google Yellow (251, 188, 4) -> Google Crimson Red (234, 67, 53) [₹100–118 Cr - Process Hazards]
@@ -832,7 +832,7 @@
           strokeR = 255;
           strokeG = Math.round(210 - 130 * t);
           strokeB = Math.round(40 + 30 * t);
-          dotColor = '#F87171';
+          dotColor = '#F28B82';
           glowColor = 'rgba(248, 113, 113, 0.75)';
         } else {
           // 6. Google Red (234, 67, 53) -> Starburst Pure White (255, 255, 255) [> ₹118 Cr - Apex Summits]
@@ -857,7 +857,7 @@
           strokeR = Math.round(0 + 20 * t);
           strokeG = Math.round(140 + 40 * t);
           strokeB = Math.round(150 + 30 * t);
-          dotColor = '#5EEAD4';
+          dotColor = '#6FD3E0';
           glowColor = 'rgba(94, 234, 212, 0.3)';
         } else if (norm < 0.52) {
           // Luminous Aqua-Green & Electric Turquoise (₹35–72 Cr)
@@ -868,8 +868,8 @@
           strokeR = 0;
           strokeG = Math.round(180 + 55 * t);
           strokeB = Math.round(180 + 35 * t);
-          dotColor = '#00FFD5';
-          glowColor = 'rgba(0, 255, 213, 0.45)';
+          dotColor = '#12B5CB';
+          glowColor = 'rgba(18, 181, 203, 0.45)';
         } else if (norm < 0.74) {
           // Molten Solar Gold & Amber Heat Vein (₹72–98 Cr)
           const t = (norm - 0.52) / 0.22;
@@ -879,7 +879,7 @@
           strokeR = 255;
           strokeG = Math.round(220 + (200 - 220) * t);
           strokeB = Math.round(120 + (30 - 120) * t);
-          dotColor = '#FDE047';
+          dotColor = '#FDD663';
           glowColor = 'rgba(253, 224, 71, 0.6)';
         } else {
           // Starburst Cyan & Pure White Summits (> ₹98 Cr)
@@ -905,7 +905,7 @@
           strokeR = Math.round(35 + 35 * t);
           strokeG = Math.round(50 + 60 * t);
           strokeB = Math.round(110 + 80 * t);
-          dotColor = '#818CF8';
+          dotColor = '#C6B2FF';
           glowColor = 'rgba(129, 140, 248, 0.35)';
         } else if (norm < 0.42) {
           // Sovereign Turquoise & Electric Azure River (₹30–60 Cr - signature image78 aura)
@@ -916,8 +916,8 @@
           strokeR = 0;
           strokeG = Math.round(210 + (180 - 210) * t);
           strokeB = Math.round(200 + (255 - 200) * t);
-          dotColor = '#00FFD5';
-          glowColor = 'rgba(0, 255, 213, 0.45)';
+          dotColor = '#12B5CB';
+          glowColor = 'rgba(18, 181, 203, 0.45)';
         } else if (norm < 0.68) {
           // Gemini Orchid Violet & Radiant Magenta (₹60–90 Cr - friction ridges)
           const t = (norm - 0.42) / 0.26;
@@ -927,7 +927,7 @@
           strokeR = 245;
           strokeG = Math.round(110 + (50 - 110) * t);
           strokeB = Math.round(245 + (160 - 245) * t);
-          dotColor = '#F472B6';
+          dotColor = '#E8710A';
           glowColor = 'rgba(244, 114, 182, 0.55)';
         } else if (norm < 0.88) {
           // Molten Solar Gold & Sunburst Amber (₹90–115 Cr - critical warning folds)
@@ -938,7 +938,7 @@
           strokeR = 255;
           strokeG = Math.round(215 + 40 * t);
           strokeB = Math.round(40 * (1 - t));
-          dotColor = '#FDE047';
+          dotColor = '#FDD663';
           glowColor = 'rgba(253, 224, 71, 0.65)';
         } else {
           // Starburst Cyan & Pure Brilliant White Summits (> ₹115 Cr)
@@ -973,7 +973,7 @@
       ctx.clearRect(0, 0, width, height);
 
       // Subtle ambient orbital radar rings in the cosmic void
-      ctx.strokeStyle = 'rgba(0, 210, 180, 0.05)';
+      ctx.strokeStyle = 'rgba(18, 181, 203, 0.05)';
       ctx.lineWidth = 1;
       for (let r = 100; r < 450; r += 85) {
         ctx.beginPath();
@@ -1043,8 +1043,8 @@
         ctx.closePath();
 
         if (q.isPluggedQuad) {
-          ctx.fillStyle = 'rgba(0, 210, 180, 0.52)';
-          ctx.strokeStyle = '#00FFD5';
+          ctx.fillStyle = 'rgba(18, 181, 203, 0.52)';
+          ctx.strokeStyle = '#12B5CB';
           ctx.lineWidth = 0.9;
         } else {
           ctx.fillStyle = q.col.fill;
@@ -1093,12 +1093,12 @@
           if (isPlugged) {
             ctx.beginPath();
             ctx.arc(sp.x, sp.y, r * 1.8, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(0, 255, 213, 0.4)';
+            ctx.fillStyle = 'rgba(18, 181, 203, 0.4)';
             ctx.fill();
 
             ctx.beginPath();
             ctx.arc(sp.x, sp.y, r, 0, Math.PI * 2);
-            ctx.fillStyle = '#00FFD5';
+            ctx.fillStyle = '#12B5CB';
             ctx.fill();
           } else {
             // High summits (elev >= 95 Cr) have soft celestial halo
@@ -1134,7 +1134,7 @@
         ctx.beginPath();
         ctx.moveTo(groundPt.x, groundPt.y);
         ctx.lineTo(screenPt.x, screenPt.y);
-        ctx.strokeStyle = (s.color === '#00D2B4') ? 'rgba(0, 210, 180, 0.75)' : 'rgba(0, 240, 255, 0.6)';
+        ctx.strokeStyle = (s.color === '#12B5CB') ? 'rgba(18, 181, 203, 0.75)' : 'rgba(0, 240, 255, 0.6)';
         ctx.lineWidth = 1.5;
         ctx.setLineDash([3, 3]);
         ctx.stroke();
@@ -1183,7 +1183,7 @@
 
           ctx.beginPath();
           ctx.arc(hp.p.x, hp.p.y, reticlePulse + 5, 0, Math.PI * 2);
-          ctx.strokeStyle = 'rgba(0, 210, 180, 0.7)';
+          ctx.strokeStyle = 'rgba(18, 181, 203, 0.7)';
           ctx.lineWidth = 1;
           ctx.setLineDash([2, 2]);
           ctx.stroke();
@@ -1360,16 +1360,16 @@
           track.style.background = 'rgba(66, 133, 244, 0.25)';
           track.style.borderColor = 'rgba(66, 133, 244, 0.6)';
           thumb.style.left = '2px';
-          thumb.style.background = 'linear-gradient(135deg, #4285F4, #EA4335)';
-          thumb.style.boxShadow = '0 0 6px #4285F4';
+          thumb.style.background = 'linear-gradient(135deg, #3186FF, #FC413D)';
+          thumb.style.boxShadow = '0 0 6px #3186FF';
           if (containerBtn) containerBtn.style.borderColor = 'rgba(66, 133, 244, 0.4)';
         } else {
-          track.style.background = 'rgba(0, 210, 180, 0.25)';
-          track.style.borderColor = 'rgba(0, 210, 180, 0.6)';
+          track.style.background = 'rgba(18, 181, 203, 0.25)';
+          track.style.borderColor = 'rgba(18, 181, 203, 0.6)';
           thumb.style.left = '16px';
-          thumb.style.background = 'linear-gradient(135deg, #00D2B4, #00FFD5)';
-          thumb.style.boxShadow = '0 0 6px #00D2B4';
-          if (containerBtn) containerBtn.style.borderColor = 'rgba(0, 210, 180, 0.4)';
+          thumb.style.background = 'linear-gradient(135deg, #12B5CB, #12B5CB)';
+          thumb.style.boxShadow = '0 0 6px #12B5CB';
+          if (containerBtn) containerBtn.style.borderColor = 'rgba(18, 181, 203, 0.4)';
         }
       }
 
@@ -1381,27 +1381,27 @@
               <span>&gt; ₹118 Cr / yr (White-Hot Apex Summits • 0ms Collision &amp; Runaway)</span>
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #EA4335; border-radius: 2px; box-shadow: 0 0 6px #EA4335;"></span>
+              <span style="display: inline-block; width: 12px; height: 12px; background: #FC413D; border-radius: 2px; box-shadow: 0 0 6px #FC413D;"></span>
               <span>₹95–118 Cr / yr (Google Crimson Red • Critical Process Hazard Folds)</span>
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #FBBC04; border-radius: 2px; box-shadow: 0 0 6px #FBBC04;"></span>
+              <span style="display: inline-block; width: 12px; height: 12px; background: #FEC700; border-radius: 2px; box-shadow: 0 0 6px #FEC700;"></span>
               <span>₹75–95 Cr / yr (Google Sun Yellow • Friction Bottleneck Ridges)</span>
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #34A853; border-radius: 2px; box-shadow: 0 0 6px #34A853;"></span>
+              <span style="display: inline-block; width: 12px; height: 12px; background: #00AF57; border-radius: 2px; box-shadow: 0 0 6px #00AF57;"></span>
               <span>₹50–75 Cr / yr (Google Emerald Green • Operational Flanks &amp; Slopes)</span>
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #00D2B4; border-radius: 2px; box-shadow: 0 0 6px #00D2B4;"></span>
+              <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 6px #12B5CB;"></span>
               <span>₹25–50 Cr / yr (Electric Cyan &amp; Sovereign Turquoise • Proven Agent Level)</span>
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #4285F4; border-radius: 2px; box-shadow: 0 0 6px #4285F4;"></span>
+              <span style="display: inline-block; width: 12px; height: 12px; background: #3186FF; border-radius: 2px; box-shadow: 0 0 6px #3186FF;"></span>
               <span>&lt; ₹25 Cr / yr (Google Blue &amp; Deep Cosmic Indigo • Monolith Plains)</span>
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #00FFD5; border-radius: 2px; box-shadow: 0 0 8px #00FFD5;"></span>
+              <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 8px #12B5CB;"></span>
               <span>★ Proven Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
             </div>
           `;
@@ -1409,23 +1409,23 @@
           legendEl.innerHTML = `
             <div style="font-weight: 800; color: var(--text-primary, #FFF); margin-bottom: 3px; letter-spacing: 0.5px;">OCEANIC AQUA SPECTRUM (₹ CAPITAL EXPOSURE)</div>
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #00F0FF, #FFFFFF); border-radius: 2px; box-shadow: 0 0 8px #00F0FF;"></span>
+              <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #6FD3E0, #FFFFFF); border-radius: 2px; box-shadow: 0 0 8px #6FD3E0;"></span>
               <span>&gt; ₹95 Cr / yr (Starburst Cyan &amp; White Summits • Stardust Crests)</span>
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #EA580C, #FBBF24); border-radius: 2px; box-shadow: 0 0 6px #FBBF24;"></span>
+              <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #E8710A, #FEC700); border-radius: 2px; box-shadow: 0 0 6px #FEC700;"></span>
               <span>₹60–95 Cr / yr (Solar Gold &amp; Amber Heat Folds)</span>
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #00D2B4, #10B981); border-radius: 2px; box-shadow: 0 0 6px #00D2B4;"></span>
+              <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #12B5CB, #00AF57); border-radius: 2px; box-shadow: 0 0 6px #12B5CB;"></span>
               <span>₹25–60 Cr / yr (Luminous Aqua-Green &amp; Turquoise Flanks)</span>
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #064E52; border: 1px solid #0D9488; border-radius: 2px;"></span>
+              <span style="display: inline-block; width: 12px; height: 12px; background: #0A3B44; border: 1px solid #0D9488; border-radius: 2px;"></span>
               <span>&lt; ₹25 Cr / yr (Deep Oceanic Teal &amp; Marine Plains)</span>
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #00FFD5; border-radius: 2px; box-shadow: 0 0 8px #00FFD5;"></span>
+              <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 8px #12B5CB;"></span>
               <span>★ Proven Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
             </div>
           `;

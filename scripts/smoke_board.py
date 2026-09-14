@@ -2,7 +2,7 @@
 """
 smoke_board.py — structural check on the rebuilt vulnerability board.
 
-Renders page_08_v2.html headless and asserts the DOM actually contains what
+Renders page_08.html headless and asserts the DOM actually contains what
 the data says it should. Run with the preview server up:
 
     python3 scripts/smoke_board.py
@@ -22,7 +22,7 @@ import sys
 from pathlib import Path
 
 BASE = "http://127.0.0.1:8899"
-PAGE = "/working_deck/pages/page_08_v2.html"
+PAGE = "/working_deck/pages/page_08.html"
 ROOT = Path(__file__).resolve().parent.parent
 
 STRIP = re.compile(r"<(script|style)\b.*?</\1>", re.S | re.I)

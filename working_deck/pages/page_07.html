@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Architecture of the Petrophysical AI Agent | Sovereign Agentic Transformation</title>
   <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/aurora.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700;800&family=Roboto:wght@300;400;500;700&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,17 +14,21 @@
     :root {
       --font-display: 'Google Sans', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
       --font-mono: 'Roboto Mono', 'SF Mono', Consolas, monospace;
-      --security-turquoise: #00D2B4;
-      --security-azure: #00A3FF;
-      --nebula-cyan-bright: #00E5FF;
-      --nebula-amber: #F29900;
-      --security-mint: #34A853;
-      --google-blue: #1A73E8;
+      /* Repointed onto the Cloud categorical palette. These five were
+         already doing categorical work -- one per architecture layer -- so
+         they keep that job with brand-correct values and enough contrast to
+         be read as small labels on the white diagram frame. */
+      --security-turquoise: #0A7684;  /* cyan ink   -- control plane   */
+      --security-azure:     #286DD1;  /* blue ink   -- runtime         */
+      --nebula-cyan-bright: #4B31E3;  /* purple     -- Gemini core     */
+      --nebula-amber:       #8A6200;  /* amber ink  -- attention       */
+      --security-mint:      #007F3F;  /* green ink  -- verified        */
+      --google-blue:        #3186FF;
     }
 
     body {
-      background: #06090E;
-      color: #CBD5E1;
+      background: var(--canvas);
+      color: var(--text-muted);
       font-family: var(--font-display);
       margin: 0;
       padding: 0;
@@ -32,18 +37,19 @@
 
     /* Gradient Typography */
     .gradient-text {
-      background: linear-gradient(135deg, #00E5FF 0%, #00D2B4 100%);
+      background: linear-gradient(90deg, #217BFE 0%, #078EFB 33%, #AC87EB 67%, #EE4D5D 100%);
       -webkit-background-clip: text;
+              background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     /* Architecture Visual Frame */
     .arch-frame {
       background: #FFFFFF;
-      border: 1px solid rgba(0, 229, 255, 0.3);
+      border: 1px solid var(--border-subtle);
       border-radius: 14px;
       overflow: hidden;
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 32px rgba(0, 229, 255, 0.08);
+      box-shadow: 0 16px 48px rgba(18,19,23,.14), 0 0 32px rgba(49, 134, 255, 0.10);
       margin-bottom: 24px;
       position: relative;
     }
@@ -56,16 +62,16 @@
   </style>
   <script>
     (function() {
-      const saved = localStorage.getItem('deck-theme') || 'dark';
-      if (saved === 'light') {
-        document.documentElement.classList.add('theme-light');
+      const saved = localStorage.getItem('deck-theme') || 'light';
+      if (saved === 'dark') {
+        document.documentElement.classList.add('theme-dark');
       }
     })();
     function toggleTheme() {
-      const isCurrentlyLight = document.documentElement.classList.toggle('theme-light');
-      if (document.body) document.body.classList.toggle('theme-light', isCurrentlyLight);
-      localStorage.setItem('deck-theme', isCurrentlyLight ? 'light' : 'dark');
-      updateThemeButtons(isCurrentlyLight);
+      const isDark = document.documentElement.classList.toggle('theme-dark');
+      if (document.body) document.body.classList.toggle('theme-dark', isDark);
+      localStorage.setItem('deck-theme', isDark ? 'dark' : 'light');
+      updateThemeButtons(!isDark);
     }
     function updateThemeButtons(isLight) {
       document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
@@ -76,7 +82,7 @@
       });
     }
     document.addEventListener('DOMContentLoaded', function() {
-      const isLight = document.documentElement.classList.contains('theme-light');
+      const isLight = !document.documentElement.classList.contains('theme-dark');
       updateThemeButtons(isLight);
     });
   </script>
@@ -84,20 +90,20 @@
 <body>
 
   <!-- Single-Page Executive Top Navigation Bar -->
-  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(6, 9, 14, 0.85); border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
+  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(248, 249, 252, 0.85); border-bottom: 1px solid var(--border-subtle); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
     <a href="../index.html#stage-07" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
       <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
-      <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2);"></div>
-      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: #FFFFFF; letter-spacing: 1.5px; text-transform: uppercase;">STAGE 07 // SOVEREIGN REFERENCE ARCHITECTURE</span>
+      <div style="width: 1px; height: 20px; background: var(--surface-sunk);"></div>
+      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text); letter-spacing: 1.5px; text-transform: uppercase;">STAGE 07 // SOVEREIGN REFERENCE ARCHITECTURE</span>
     </a>
     <nav style="display: flex; align-items: center; gap: 16px;">
       <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Light Mode">
         <span style="font-size: 13px; line-height: 1;">☀️</span>
         <span>Light Mode</span>
       </button>
-      <a href="page_06.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #94A3B8; text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(255,255,255,0.04); transition: color 0.2s;">← Prev Page</a>
-      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--security-turquoise); font-weight: 700;">8 / 11</span>
-      <a href="page_08.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(0, 163, 255, 0.08); transition: color 0.2s;">Next Page →</a>
+      <a href="page_06.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;">8 / 11</span>
+      <a href="page_08.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--blue-ink); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
       <a href="../index.html#stage-07" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
         Continuous Deck View ↗
       </a>
@@ -111,8 +117,8 @@
       <!-- Atmospheric Cinematic Backdrop -->
       <div class="slide-bg-media">
         <img src="../../assets/media/retail_agentic/image8.png" alt="Neural AI Stardust" class="slide-bg-img" style="opacity: 0.14; filter: blur(24px) brightness(0.22);">
-        <div class="slide-bg-overlay" style="background: radial-gradient(circle at 40% 30%, rgba(0, 210, 180, 0.05) 0%, rgba(6, 9, 14, 0.94) 55%, rgba(6, 9, 14, 0.99) 100%);"></div>
-        <div class="slide-glow-mesh" style="background: radial-gradient(circle at 80% 20%, rgba(0, 163, 255, 0.07) 0%, transparent 60%);"></div>
+        <div class="slide-bg-overlay" style="background: var(--canvas);"></div>
+        <div class="slide-glow-mesh" style="background: radial-gradient(circle at 80% 20%, rgba(49, 134, 255, 0.08) 0%, transparent 60%);"></div>
       </div>
 
       <div class="editorial-container" style="max-width: 1480px; margin: 0 auto; width: 100%; position: relative; z-index: 2;">
@@ -122,13 +128,13 @@
           07 ARCHITECTURE // PRODUCTION AGENT &amp; CENTRAL CONTROL PLANE
         </div>
 
-        <h1 style="font-family: var(--font-display); font-size: clamp(32px, 3.4vw, 52px); font-weight: 800; line-height: 1.12; letter-spacing: -1.5px; color: #FFFFFF; margin: 0 0 14px 0;">
+        <h1 style="font-family: var(--font-display); font-size: clamp(32px, 3.4vw, 52px); font-weight: 800; line-height: 1.12; letter-spacing: -1.5px; color: var(--text); margin: 0 0 14px 0;">
           Architecture of the <span class="gradient-text">Petrophysical AI Agent</span>
         </h1>
 
         <!-- 2. Subtitle / Narrative Anchor -->
-        <p style="font-size: clamp(15px, 1.1vw, 18.5px); line-height: 1.5; color: #94A3B8; max-width: 1280px; margin: 0 0 24px 0; font-weight: 400;">
-          The production anatomy of our subsurface agent—built on <strong style="color: #FFF;">Google Agent Development Kit (ADK)</strong>, powered by deterministic physics, and centrally governed as the reference blueprint for enterprise scale.
+        <p style="font-size: clamp(15px, 1.1vw, 18.5px); line-height: 1.5; color: var(--text-dim); max-width: 1280px; margin: 0 0 24px 0; font-weight: 400;">
+          The production anatomy of our subsurface agent—built on <strong style="color: var(--text);">Google Agent Development Kit (ADK)</strong>, powered by deterministic physics, and centrally governed as the reference blueprint for enterprise scale.
         </p>
 
         <!-- 3. MAIN ARCHITECTURAL STAGE: Embedded Official Reference Architecture SVG -->
@@ -236,7 +242,7 @@
                 <line x1="23" y1="23" x2="31" y2="31" stroke="#9333EA" stroke-width="3" stroke-linecap="round"/>
                 <rect x="11" y="12" width="3" height="7" fill="#A855F7"/>
                 <rect x="15" y="10" width="3" height="9" fill="#9333EA"/>
-                <rect x="19" y="14" width="3" height="5" fill="#C084FC"/>
+                <rect x="19" y="14" width="3" height="5" fill="#4B31E3"/>
               </g>
 
               <!-- Cloud IAM Official Security Shield Logo -->

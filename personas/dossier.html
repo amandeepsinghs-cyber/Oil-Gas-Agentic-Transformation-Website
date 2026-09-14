@@ -43,6 +43,9 @@
     --g-blue:        #3186FF;
     --g-purple:      #4B31E3;
     --g-green:       #00AF57;
+    /* AA companion. #00AF57 is 2.89:1 on white and fails even the 3:1 graphic
+       floor, so the 500 is for rails/fills and this is for any text. */
+    --green-ink:     #007F3F;
     --g-cyan:        #12B5CB;   /* Recovery. Google data-viz cyan: the only
                                    remaining brand hue once red and yellow are
                                    reserved for the chessboard. */
@@ -52,7 +55,9 @@
     --g-grey-1200:   #121317;
 
     /* Light theme — the default. "Build from white." */
-    --canvas:        var(--g-grey-10);
+    /* Repointed from var(--g-grey-10) #F8F9FC to #F0F5FE -- the Cloud Console
+       CM3 backdrop token -- so persona pages sit on the same ground as the deck. */
+    --canvas:        #F0F5FE;
     --surface:       #FFFFFF;
     --surface-sunk:  #F1F3F9;
     --border:        #E1E5EE;
@@ -95,6 +100,8 @@
     --accent-soft:   rgba(107, 166, 255, 0.14);
     --purple-soft:   rgba(139, 120, 255, 0.16);
     --green-soft:    rgba(0, 175, 87, 0.20);
+    /* dark-mode companion: #007F3F is unreadable on #1A1C22, this is 7.0:1 */
+    --green-ink:     #5BB974;
     --shadow-sm:     0 1px 2px rgba(0, 0, 0, 0.40);
     --shadow-md:     0 2px 8px rgba(0, 0, 0, 0.45);
     --shadow-lg:     0 8px 28px rgba(0, 0, 0, 0.55);
@@ -186,23 +193,14 @@
   .topline-title {
     font-size: clamp(28px, 3.4vw, 40px); font-weight: 600;
     letter-spacing: -0.02em; line-height: 1.16;
-    margin: 0 0 12px; color: var(--text);
+    margin: 0; color: var(--text);
   }
 
-  .topline-lede {
-    margin: 0; max-width: 104ch;
-    font-size: var(--fs-16); line-height: 1.62; color: var(--text-muted);
-  }
-
-  /* The method note. A step down from the standfirst in size and a step up
-     in precision -- it is the first place the three buckets are named, and
-     the last place anyone should mistake these figures for a forecast. */
-  .topline-frame {
-    margin: 14px 0 0; max-width: 104ch; padding-left: 13px;
-    border-left: 3px solid var(--g-blue);
-    font-size: var(--fs-13); line-height: 1.6; color: var(--text-dim);
-  }
-  .topline-frame b { color: var(--text-muted); font-weight: 600; }
+  /* The estate-level standfirst and the four-lever method note used to live
+     here. Removed: the argument is estate-wide, so repeating it on all 33
+     dossiers buried the person the page is actually about. The board (slide
+     09) carries the estate strip; each dossier still argues the four levers
+     in its own numbers, which is the same case made concretely. */
 
   /* ── Roster: filter chips over a scrolling face strip ─────────────
      33 roles in a flat strip is five screens of blind dragging. The filter
@@ -330,7 +328,7 @@
   }
   .figure-val {
     font-size: var(--fs-28); font-weight: 600; line-height: 1.15;
-    letter-spacing: -0.01em; color: var(--g-green);
+    letter-spacing: -0.01em; color: var(--green-ink);
   }
   .figure-sub { font-size: var(--fs-11); color: var(--text-dim); line-height: 1.35; }
 
@@ -345,7 +343,7 @@
   }
   .tag-id      { background: var(--surface-sunk); color: var(--text-muted); font-family: var(--mono); }
   .tag-core    { background: var(--accent-soft);  color: var(--accent); }
-  .tag-live    { background: var(--green-soft);   color: var(--g-green); }
+  .tag-live    { background: var(--green-soft);   color: var(--green-ink); }
   .tag-segment {
     background: transparent; color: var(--text-dim);
     text-transform: none; letter-spacing: 0; font-weight: 400; font-size: var(--fs-12);
@@ -415,7 +413,7 @@
     letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 9px;
   }
   .h-today .half-label { color: var(--text-dim); }
-  .h-agent .half-label { color: var(--g-green); }
+  .h-agent .half-label { color: var(--green-ink); }
 
   .half-foot {
     margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border);
@@ -552,7 +550,7 @@
   .agent-saved {
     display: inline-flex; align-items: baseline; gap: 3px;
     padding: 3px 9px; border-radius: 999px;
-    background: var(--green-soft); color: var(--g-green);
+    background: var(--green-soft); color: var(--green-ink);
     font-size: var(--fs-12); font-weight: 700; white-space: nowrap;
   }
   .agent-saved small { font-size: var(--fs-10); font-weight: 600; }
@@ -728,7 +726,7 @@
 
   .agent-value {
     font-size: var(--fs-11); font-weight: 600; line-height: 1.35;
-    color: var(--g-green); min-width: 0;
+    color: var(--green-ink); min-width: 0;
   }
 
   .agent-open { font-size: var(--fs-12); font-weight: 600; color: var(--accent); white-space: nowrap; }
@@ -891,20 +889,6 @@
   <div class="topline">
     <div class="topline-eyebrow">Agentic Transformation &nbsp;//&nbsp; Workforce &amp; Workflows</div>
     <h1 class="topline-title">An agentic taskforce augmenting human workflows<br>and transforming operational processes.</h1>
-    <p class="topline-lede">
-      Thirty-three enterprise roles, four hundred and ninety-five operational workflows,
-      two hundred and thirty-two agents &mdash; upstream exploration through downstream refining.
-      The engineer&rsquo;s signature still carries the decision. The agent removes the manual
-      reconstruction, the waiting and the unwatched interval that stand between them and it.
-    </p>
-    <p class="topline-frame">
-      Each squad is priced four ways &mdash; <b>productivity</b> redeployed to people,
-      <b>uptime</b> returned to rigs, units and pipelines, <b>integrity</b>
-      removed as expected loss, and <b>recovery</b> &mdash; the barrels found and
-      produced because the data finally agreed with itself. Roughly
-      <b>&#8377;3,650 Cr a year</b> across the estate at combined ONGC + IOCL scale,
-      on stated assumptions. A way to measure the transformation, not a forecast of it.
-    </p>
   </div>
 </div>
 
@@ -1020,7 +1004,7 @@
      rupee figure with eight digits in it reads as noise. */
   function inr(n) {
     if (n == null || !isFinite(n)) return null;
-    if (n >= 1e7) return "\u20B9" + (n / 1e7).toFixed(n >= 1e9 ? 0 : 1) + " Cr";
+    if (n >= 1e7) return "\u20B9" + (n / 1e7).toFixed(1) + " Cr";
     return "\u20B9" + (n / 1e5).toFixed(1) + " L";
   }
 
@@ -1722,7 +1706,7 @@
 
     /* The bucket split and the friction mix both used to be summarised here,
        as a proportional bar and a dot legend. They now live on the board
-       (working_deck/pages/page_08_v2.html), which reads all 33 roles at once
+       (working_deck/pages/page_08.html), which reads all 33 roles at once
        and is the right place for a distribution. Repeating them per-persona
        said nothing the workflow list below doesn't already say, one row at
        a time and with the action attached. */
@@ -1779,13 +1763,16 @@
     var idx = DATA.findIndex(function (p) { return p.id === id; });
     countEl.textContent = (idx >= 0 ? String(idx + 1).padStart(2, "0") : "\u2014") + " / " + DATA.length;
 
-    /* Only the personas that actually sit on the board get a row-specific
-       link back to it; the other sixteen get the board itself. */
-    var row = RESEARCH_TO_DECK_ROW[id];
-    backEl.href = "../working_deck/pages/page_08.html" + (row ? "#row-" + row : "");
-    backEl.title = row
-      ? "This role is row " + row + " on the chessboard"
-      : "This role is not yet on the chessboard";
+    /* Every one of the 33 personas is on the board now, so the old
+       RESEARCH_TO_DECK_ROW indirection is dead here. It mapped research ids to
+       the PREVIOUS board's twenty rows, which were lettered A-T; the new board
+       is keyed P01-P33 and has no #row-E to jump to. Sixteen roles used to get
+       no link at all.
+
+       ?p= rather than #row= because the board's deep-link handler activates
+       and scrolls to the row, where a bare anchor only scrolls. */
+    backEl.href = "../working_deck/pages/page_08.html?p=" + encodeURIComponent(id);
+    backEl.title = "Show " + id + " on the board";
 
     if (filter !== null && groupOf(BY_ID[id]) !== filter) filter = groupOf(BY_ID[id]);
     renderFilters();
@@ -1850,13 +1837,28 @@
     var savedTotal = hours(total.savedHours);
     var scene      = pickScene(p);
 
-    var figure = savedTotal
+    /* The face of the card is the money, not the hours. Hours are one of the
+       four levers -- productivity -- and leading with them quietly claimed
+       that the whole case is a timesheet argument. It is not: for most roles
+       uptime, integrity or recovery is the larger term, and twelve roles
+       carry no uptime at all. The hour figure still appears, as the basis
+       line underneath and on every agent card, where it can be challenged
+       next to the unit of work it was measured against. */
+    var squadINR = squad && squad.inr ? inr(squad.inr) : null;
+
+    var figure = (squadINR || savedTotal)
       ? '<div class="figure">' +
-          '<div class="figure-key">Saved per cycle</div>' +
-          '<div class="figure-val">' + savedTotal + " h</div>" +
+          '<div class="figure-key">' + (squadINR ? "Annual value" : "Saved per cycle") + "</div>" +
+          '<div class="figure-val">' + (squadINR || (savedTotal + " h")) + "</div>" +
           '<div class="figure-sub">' +
-            esc(total.unit ? "per " + total.unit.replace(/^1\s+/, "") : "per cycle") +
-            (total.derived ? " (computed)" : "") +
+            (squadINR
+              ? "across four levers" +
+                (savedTotal
+                  ? "<br>" + savedTotal + " h saved per " +
+                    esc(total.unit ? total.unit.replace(/^1\s+/, "").replace(/^per\s+/i, "") : "cycle")
+                  : "")
+              : esc(total.unit ? "per " + total.unit.replace(/^1\s+/, "") : "per cycle") +
+                (total.derived ? " (computed)" : "")) +
           "</div>" +
         "</div>"
       : "";

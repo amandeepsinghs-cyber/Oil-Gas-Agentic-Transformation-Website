@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI AGENT: THE INTELLIGENT MICROSERVICE | Sovereign Agentic Transformation</title>
   <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/aurora.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <style>
     .coexist-box {
-      background: rgba(13, 17, 23, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: var(--surface);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 26px 20px;
       display: flex;
@@ -21,18 +22,19 @@
       min-height: 130px;
     }
     .coexist-box:hover {
-      border-color: var(--security-turquoise);
+      border-color: var(--border-strong);
       transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(0, 210, 180, 0.1);
+      box-shadow: var(--shadow-md);
     }
     .hero-agent-box {
-      background: rgba(0, 210, 180, 0.04);
-      border: 2px solid var(--security-turquoise);
-      box-shadow: 0 0 25px rgba(0, 210, 180, 0.2);
+      background: rgba(0, 175, 87, 0.05);
+      border: 2px solid var(--g-green);
+      box-shadow: var(--shadow-md);
     }
     .feature-pillar-card {
-      background: rgba(13, 17, 23, 0.75);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
       border-radius: 10px;
       padding: 20px 18px;
       display: flex;
@@ -42,23 +44,23 @@
       transition: all 0.25s ease;
     }
     .feature-pillar-card:hover {
-      border-color: rgba(255, 255, 255, 0.3);
+      border-color: var(--text-dim);
       transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 8px 24px rgba(18,19,23,.14);
     }
   </style>
   <script>
     (function() {
-      const saved = localStorage.getItem('deck-theme') || 'dark';
-      if (saved === 'light') {
-        document.documentElement.classList.add('theme-light');
+      const saved = localStorage.getItem('deck-theme') || 'light';
+      if (saved === 'dark') {
+        document.documentElement.classList.add('theme-dark');
       }
     })();
     function toggleTheme() {
-      const isCurrentlyLight = document.documentElement.classList.toggle('theme-light');
-      if (document.body) document.body.classList.toggle('theme-light', isCurrentlyLight);
-      localStorage.setItem('deck-theme', isCurrentlyLight ? 'light' : 'dark');
-      updateThemeButtons(isCurrentlyLight);
+      const isDark = document.documentElement.classList.toggle('theme-dark');
+      if (document.body) document.body.classList.toggle('theme-dark', isDark);
+      localStorage.setItem('deck-theme', isDark ? 'dark' : 'light');
+      updateThemeButtons(!isDark);
     }
     function updateThemeButtons(isLight) {
       document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
@@ -69,28 +71,28 @@
       });
     }
     document.addEventListener('DOMContentLoaded', function() {
-      const isLight = document.documentElement.classList.contains('theme-light');
+      const isLight = !document.documentElement.classList.contains('theme-dark');
       updateThemeButtons(isLight);
     });
   </script>
 </head>
-<body style="background: #06090E; color: #CBD5E1; font-family: var(--font-display); margin: 0; padding: 0; overflow-x: hidden;">
+<body style="background: var(--canvas); color: var(--text-muted); font-family: var(--font-display); margin: 0; padding: 0; overflow-x: hidden;">
 
   <!-- Single-Page Executive Top Navigation Bar -->
-  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(6, 9, 14, 0.85); border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
+  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(248, 249, 252, 0.85); border-bottom: 1px solid var(--border-subtle); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
     <a href="../../index.html#stage-04" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
       <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
-      <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2);"></div>
-      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: #FFFFFF; letter-spacing: 1.5px; text-transform: uppercase;">STAGE 04 // THE INTELLIGENT MICROSERVICE</span>
+      <div style="width: 1px; height: 20px; background: var(--border-strong);"></div>
+      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text); letter-spacing: 1.5px; text-transform: uppercase;">STAGE 04 // THE INTELLIGENT MICROSERVICE</span>
     </a>
     <nav style="display: flex; align-items: center; gap: 16px;">
       <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Light Mode">
         <span style="font-size: 13px; line-height: 1;">☀️</span>
         <span>Light Mode</span>
       </button>
-      <a href="page_03.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #94A3B8; text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(255,255,255,0.04); transition: color 0.2s;">← Prev Page</a>
-      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--security-turquoise); font-weight: 700;">5 / 11</span>
-      <a href="page_05.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(0, 163, 255, 0.08); transition: color 0.2s;">Next Page →</a>
+      <a href="page_03.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;">5 / 11</span>
+      <a href="page_05.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--blue-ink); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
       <a href="../../index.html#stage-04" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
         Continuous Deck View ↗
       </a>
@@ -99,12 +101,12 @@
 
   <!-- Main Viewport -->
   <main id="viewport-scaler" style="padding-top: 60px;">
-    <section class="slide narrative-stage theme-azure" id="stage-04" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 75px max(24px, 4vw); position: relative; background: #06090E; box-sizing: border-box;">
+    <section class="slide narrative-stage theme-azure" id="stage-04" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 75px max(24px, 4vw); position: relative; background: var(--canvas); box-sizing: border-box;">
       
       <!-- Atmospheric Backdrop -->
       <div class="slide-bg-media" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
-        <div class="slide-bg-overlay" style="position: absolute; inset: 0; background: radial-gradient(circle at 50% 15%, rgba(0, 163, 255, 0.08) 0%, rgba(6, 9, 14, 0.94) 55%, rgba(6, 9, 14, 0.99) 100%);"></div>
-        <div class="slide-glow-mesh" style="position: absolute; inset: 0; background: radial-gradient(circle at 80% 65%, rgba(0, 210, 180, 0.06) 0%, transparent 60%);"></div>
+        <div class="slide-bg-overlay" style="position: absolute; inset: 0; background: var(--bg-canvas)"></div>
+        <div class="slide-glow-mesh" style="position: absolute; inset: 0; background: transparent"></div>
       </div>
 
       <div class="editorial-container" style="max-width: 1440px; margin: 0 auto; width: 100%; position: relative; z-index: 2;">
@@ -113,77 +115,77 @@
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 12px;">
           <div class="title-kicker" style="display: flex; align-items: center; gap: 10px;">
             <span class="kicker-bar" style="width: 24px; height: 3px; background: var(--grad-security); border-radius: 2px;"></span>
-            <span style="color: var(--security-turquoise); font-family: var(--font-display); font-size: 13.5px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">
+            <span style="color: var(--green-ink); font-family: var(--font-display); font-size: 13.5px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">
               HIGHER-LEVEL SOFTWARE ENGINEERING
             </span>
-            <span style="color: rgba(255, 255, 255, 0.25);">//</span>
-            <span style="color: #CBD5E1; font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; letter-spacing: 0.5px;">
+            <span style="color: var(--text-dim);">//</span>
+            <span style="color: var(--text-muted); font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; letter-spacing: 0.5px;">
               THE COEXISTENCE PARADIGM
             </span>
           </div>
         </div>
 
         <!-- Monumental Heading & Subheading -->
-        <h1 style="font-family: var(--font-display); font-size: clamp(34px, 4vw, 54px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; color: #FFFFFF; margin: 0 0 10px 0;">
-          AI Agent: The Intelligent Microservice
+        <h1 style="font-family: var(--font-display); font-size: clamp(34px, 4vw, 54px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; color: var(--text); margin: 0 0 10px 0;">
+          AI Agent: <span class="au-display-grad">The Intelligent Microservice</span>
         </h1>
 
-        <p style="font-family: var(--font-display); font-size: clamp(17px, 1.35vw, 23px); line-height: 1.4; color: #CBD5E1; margin: 0 0 34px 0; max-width: 1200px;">
-          The future of enterprise workflows is in the coexistence of <strong style="color: #FFF;">software monoliths</strong> and <strong style="color: var(--security-turquoise);">intelligent microservices</strong>.
+        <p style="font-family: var(--font-display); font-size: clamp(17px, 1.35vw, 23px); line-height: 1.4; color: var(--text-muted); margin: 0 0 34px 0; max-width: 1200px;">
+          The future of enterprise workflows is in the coexistence of <strong style="color: var(--text);">software monoliths</strong> and <strong style="color: var(--green-ink);">intelligent microservices</strong>.
         </p>
 
         <!-- ========================================================================= -->
         <!-- ULTRA-CLEAN VISUAL COEXISTENCE SCHEMATIC                                  -->
         <!-- ========================================================================= -->
-        <div style="background: rgba(13, 17, 23, 0.8); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; padding: 24px 30px; margin-bottom: 34px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+        <div style="background: var(--bg-canvas); border: 1px solid var(--border); border-radius: 14px; padding: 24px 30px; margin-bottom: 34px; box-shadow: none;">
           
           <div style="display: grid; grid-template-columns: 1fr 60px 1.35fr 60px 1fr; align-items: center; gap: 12px;">
             
             <!-- Box 1: Domain Monoliths -->
             <div class="coexist-box">
-              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #94A3B8; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 8px;">
+              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--text-dim); letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 8px;">
                 PROVEN DOMAIN ENGINES
               </span>
-              <div style="font-family: var(--font-display); font-size: 24px; font-weight: 800; color: #FFFFFF; margin-bottom: 6px;">
+              <div style="font-family: var(--font-display); font-size: 24px; font-weight: 800; color: var(--text); margin-bottom: 6px;">
                 Domain Monoliths
               </div>
-              <div style="font-family: var(--font-mono); font-size: 12px; color: #64748B;">
+              <div style="font-family: var(--font-mono); font-size: 12px; color: var(--text-dim);">
                 Deep Domain Logic &amp; Enterprise Truth
               </div>
             </div>
 
             <!-- Connector Plus -->
             <div style="text-align: center;">
-              <span style="font-family: var(--font-display); font-size: 32px; font-weight: 900; color: var(--security-turquoise); opacity: 0.85;">+</span>
+              <span style="font-family: var(--font-display); font-size: 32px; font-weight: 900; color: var(--text-dim); opacity: 0.85;">+</span>
             </div>
 
             <!-- Box 2: The Intelligent Microservice (AI Agent) -->
             <div class="coexist-box hero-agent-box">
-              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 8px;">
+              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--green-ink); letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 8px;">
                 TARGETED WORKFLOW INTELLIGENCE
               </span>
-              <div style="font-family: var(--font-display); font-size: 24px; font-weight: 800; color: #FFFFFF; margin-bottom: 6px;">
+              <div style="font-family: var(--font-display); font-size: 24px; font-weight: 800; color: var(--text); margin-bottom: 6px;">
                 Intelligent Microservices
               </div>
-              <div style="font-family: var(--font-mono); font-size: 12.5px; color: var(--security-turquoise); font-weight: 600;">
+              <div style="font-family: var(--font-mono); font-size: 12.5px; color: var(--green-ink); font-weight: 600;">
                 AI Agents Targeting High-Risk Gaps &amp; Optimization Value
               </div>
             </div>
 
             <!-- Connector Equals -->
             <div style="text-align: center;">
-              <span style="font-family: var(--font-display); font-size: 32px; font-weight: 900; color: #C084FC; opacity: 0.85;">=</span>
+              <span style="font-family: var(--font-display); font-size: 32px; font-weight: 900; color: var(--text-dim); opacity: 0.85;">=</span>
             </div>
 
             <!-- Box 3: The Agentic Organization -->
-            <div class="coexist-box" style="border-color: rgba(192, 132, 252, 0.35); background: rgba(192, 132, 252, 0.04);">
-              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #C084FC; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 8px;">
+            <div class="coexist-box" style="border-color: rgba(75, 49, 227, 0.30); background: rgba(75, 49, 227, 0.04);">
+              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--g-purple); letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 8px;">
                 THE UNIFIED OPERATING MODEL
               </span>
-              <div style="font-family: var(--font-display); font-size: 24px; font-weight: 800; color: #FFFFFF; margin-bottom: 6px;">
+              <div style="font-family: var(--font-display); font-size: 24px; font-weight: 800; color: var(--text); margin-bottom: 6px;">
                 Agentic Organization
               </div>
-              <div style="font-family: var(--font-mono); font-size: 12px; color: #C084FC;">
+              <div style="font-family: var(--font-mono); font-size: 12px; color: var(--g-purple);">
                 Governed Fleet of Specialized Agents
               </div>
             </div>
@@ -197,11 +199,11 @@
         <div style="margin-bottom: 28px;">
           
           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-            <div style="font-family: var(--font-mono); font-size: 12px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 1.5px; text-transform: uppercase; display: flex; align-items: center; gap: 8px;">
-              <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--security-turquoise);"></span>
+            <div style="font-family: var(--font-mono); font-size: 12px; font-weight: 800; color: var(--text-muted); letter-spacing: 1.5px; text-transform: uppercase; display: flex; align-items: center; gap: 8px;">
+              <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--gemini-spark);"></span>
               <span>FEATURES OF AN AI AGENT // THE 5 CORE ATTRIBUTES</span>
             </div>
-            <span style="font-family: var(--font-mono); font-size: 11px; color: #64748B;">
+            <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-dim);">
               MAPPED FROM SLIDE 03 CRITERIA
             </span>
           </div>
@@ -209,81 +211,81 @@
           <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;">
             
             <!-- Feature 1: Surgical -->
-            <div class="feature-pillar-card" style="border-top: 3px solid var(--nebula-amber);">
+            <div class="feature-pillar-card" style="border-top: 3px solid var(--g-blue); background: linear-gradient(rgba(49, 134, 255, 0.10), rgba(49, 134, 255, 0.10)), var(--surface);">
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--nebula-amber); letter-spacing: 1px;">01 // FOCUS</span>
-                  <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 900; color: var(--nebula-amber); opacity: 0.9;">01</span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--blue-ink); letter-spacing: 1px;">01 // FOCUS</span>
+                  <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 900; color: var(--blue-ink); opacity: 0.9;">01</span>
                 </div>
-                <div style="font-family: var(--font-display); font-size: 19px; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">
+                <div style="font-family: var(--font-display); font-size: 19px; font-weight: 800; color: var(--text); margin-bottom: 8px;">
                   Surgical
                 </div>
               </div>
-              <p style="font-size: 13px; color: #CBD5E1; line-height: 1.5; margin: 0;">
+              <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0;">
                 Targets the exact seam where the operational vulnerability lives.
               </p>
             </div>
 
             <!-- Feature 2: Autonomous / Automated -->
-            <div class="feature-pillar-card" style="border-top: 3px solid var(--security-azure);">
+            <div class="feature-pillar-card" style="border-top: 3px solid var(--g-cyan); background: linear-gradient(rgba(18, 181, 203, 0.10), rgba(18, 181, 203, 0.10)), var(--surface);">
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-azure); letter-spacing: 1px;">02 // TRIGGER</span>
-                  <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 900; color: var(--security-azure); opacity: 0.9;">02</span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--cyan-ink); letter-spacing: 1px;">02 // TRIGGER</span>
+                  <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 900; color: var(--cyan-ink); opacity: 0.9;">02</span>
                 </div>
-                <div style="font-family: var(--font-display); font-size: 19px; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">
+                <div style="font-family: var(--font-display); font-size: 19px; font-weight: 800; color: var(--text); margin-bottom: 8px;">
                   Autonomous
                 </div>
               </div>
-              <p style="font-size: 13px; color: #CBD5E1; line-height: 1.5; margin: 0;">
+              <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0;">
                 Triggers instantaneously on live operational data, guarding handovers 24/7 without delay.
               </p>
             </div>
 
             <!-- Feature 3: Intelligent -->
-            <div class="feature-pillar-card" style="border-top: 3px solid var(--security-turquoise);">
+            <div class="feature-pillar-card" style="border-top: 3px solid var(--g-green); background: linear-gradient(rgba(0, 175, 87, 0.09), rgba(0, 175, 87, 0.09)), var(--surface);">
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 1px;">03 // CONTEXT</span>
-                  <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 900; color: var(--security-turquoise); opacity: 0.9;">03</span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--green-ink); letter-spacing: 1px;">03 // CONTEXT</span>
+                  <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 900; color: var(--green-ink); opacity: 0.9;">03</span>
                 </div>
-                <div style="font-family: var(--font-display); font-size: 19px; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">
+                <div style="font-family: var(--font-display); font-size: 19px; font-weight: 800; color: var(--text); margin-bottom: 8px;">
                   Intelligent
                 </div>
               </div>
-              <p style="font-size: 13px; color: #CBD5E1; line-height: 1.5; margin: 0;">
+              <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0;">
                 Understands domain context, and cross-discipline data.
               </p>
             </div>
 
             <!-- Feature 4: Governed -->
-            <div class="feature-pillar-card" style="border-top: 3px solid var(--security-mint);">
+            <div class="feature-pillar-card" style="border-top: 3px solid var(--g-yellow); background: linear-gradient(rgba(254, 199, 0, 0.06), rgba(254, 199, 0, 0.06)), var(--surface);">
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-mint); letter-spacing: 1px;">04 // CONTROL</span>
-                  <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 900; color: var(--security-mint); opacity: 0.9;">04</span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--amber-ink); letter-spacing: 1px;">04 // CONTROL</span>
+                  <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 900; color: var(--amber-ink); opacity: 0.9;">04</span>
                 </div>
-                <div style="font-family: var(--font-display); font-size: 19px; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">
+                <div style="font-family: var(--font-display); font-size: 19px; font-weight: 800; color: var(--text); margin-bottom: 8px;">
                   Governed
                 </div>
               </div>
-              <p style="font-size: 13px; color: #CBD5E1; line-height: 1.5; margin: 0;">
+              <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0;">
                 Centrally controlled, immutable audit trail, and non-negotiable Human-in-the-Loop veto.
               </p>
             </div>
 
             <!-- Feature 5: Deterministic -->
-            <div class="feature-pillar-card" style="border-top: 3px solid #C084FC;">
+            <div class="feature-pillar-card" style="border-top: 3px solid var(--g-purple); background: linear-gradient(rgba(75, 49, 227, 0.09), rgba(75, 49, 227, 0.09)), var(--surface);">
               <div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #C084FC; letter-spacing: 1px;">05 // PHYSICS</span>
-                  <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 900; color: #C084FC; opacity: 0.9;">05</span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--purple-ink); letter-spacing: 1px;">05 // PHYSICS</span>
+                  <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 900; color: var(--purple-ink); opacity: 0.9;">05</span>
                 </div>
-                <div style="font-family: var(--font-display); font-size: 19px; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">
+                <div style="font-family: var(--font-display); font-size: 19px; font-weight: 800; color: var(--text); margin-bottom: 8px;">
                   Deterministic
                 </div>
               </div>
-              <p style="font-size: 13px; color: #CBD5E1; line-height: 1.5; margin: 0;">
+              <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0;">
                 Grounded in physical science and exact mathematical solvers—zero generative guesswork.
               </p>
             </div>
@@ -297,14 +299,14 @@
   </main>
 
   <!-- Floating Page Dock -->
-  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: rgba(13, 17, 23, 0.88); border: 1px solid var(--border-hairline); border-radius: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
-    <a href="page_03.html" style="background: rgba(255,255,255,0.08); border: none; color: #FFF; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none;">
+  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(18,19,23,.14); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+    <a href="page_03.html" style="background: var(--surface-sunk); border: 1px solid var(--border); color: var(--text-muted); width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none;">
       ◀
     </a>
-    <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: var(--security-turquoise); white-space: nowrap;">
+    <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: var(--text-muted); white-space: nowrap;">
       PAGE 04 // THE INTELLIGENT MICROSERVICE
     </div>
-    <a href="page_05.html" style="background: var(--security-azure); border: none; color: #FFF; padding: 7px 16px; border-radius: 20px; font-family: var(--font-display); font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+    <a href="page_05.html" style="background: var(--g-blue); border: none; color: #FFF; padding: 7px 16px; border-radius: 20px; font-family: var(--font-display); font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;">
       <span>Next Page</span>
       <span>▶</span>
     </a>

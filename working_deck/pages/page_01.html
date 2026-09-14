@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capital Reality | Sovereign Agentic Transformation</title>
   <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/aurora.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script>
     (function() {
-      const saved = localStorage.getItem('deck-theme') || 'dark';
-      if (saved === 'light') {
-        document.documentElement.classList.add('theme-light');
+      const saved = localStorage.getItem('deck-theme') || 'light';
+      if (saved === 'dark') {
+        document.documentElement.classList.add('theme-dark');
       }
     })();
     function toggleTheme() {
-      const isCurrentlyLight = document.documentElement.classList.toggle('theme-light');
-      if (document.body) document.body.classList.toggle('theme-light', isCurrentlyLight);
-      localStorage.setItem('deck-theme', isCurrentlyLight ? 'light' : 'dark');
-      updateThemeButtons(isCurrentlyLight);
+      const isDark = document.documentElement.classList.toggle('theme-dark');
+      if (document.body) document.body.classList.toggle('theme-dark', isDark);
+      localStorage.setItem('deck-theme', isDark ? 'dark' : 'light');
+      updateThemeButtons(!isDark);
     }
     function updateThemeButtons(isLight) {
       document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
@@ -28,28 +29,28 @@
       });
     }
     document.addEventListener('DOMContentLoaded', function() {
-      const isLight = document.documentElement.classList.contains('theme-light');
+      const isLight = !document.documentElement.classList.contains('theme-dark');
       updateThemeButtons(isLight);
     });
   </script>
 </head>
-<body style="background: #06090E; color: #CBD5E1; font-family: var(--font-display);">
+<body style="background: var(--canvas); color: var(--text-muted); font-family: var(--font-display);">
 
   <!-- Single-Page Executive Top Navigation Bar -->
-  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(6, 9, 14, 0.85); border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
+  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(248, 249, 252, 0.85); border-bottom: 1px solid var(--border-subtle); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
     <a href="../../index.html#stage-01" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
       <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
-      <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2);"></div>
-      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: #FFFFFF; letter-spacing: 1.5px; text-transform: uppercase;">STAGE 01 // CAPITAL REALITY</span>
+      <div style="width: 1px; height: 20px; background: var(--surface-sunk);"></div>
+      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text); letter-spacing: 1.5px; text-transform: uppercase;">STAGE 01 // CAPITAL REALITY</span>
     </a>
     <nav style="display: flex; align-items: center; gap: 16px;">
       <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Light Mode">
         <span style="font-size: 13px; line-height: 1;">☀️</span>
         <span>Light Mode</span>
       </button>
-      <a href="page_00.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #94A3B8; text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(255,255,255,0.04); transition: color 0.2s;">← Prev Page</a>
-      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--security-turquoise); font-weight: 700;">2 / 11</span>
-      <a href="page_02.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(0, 163, 255, 0.08); transition: color 0.2s;">Next Page →</a>
+      <a href="page_00.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;">2 / 11</span>
+      <a href="page_02.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--blue-ink); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
       <a href="../../index.html#stage-01" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
         Continuous Deck View ↗
       </a>
@@ -58,11 +59,11 @@
 
   <!-- Main Viewport -->
   <main id="viewport-scaler" style="padding-top: 60px;">
-<section class="slide narrative-stage" id="stage-01" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 100px max(24px, 4vw); position: relative; background: #06090E;">
+<section class="slide narrative-stage" id="stage-01" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 100px max(24px, 4vw); position: relative; background: var(--canvas);">
       <!-- Atmospheric Cinematic Backdrop with Google Cloud Sovereign Glow Mesh -->
       <div class="slide-bg-media" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
-        <div class="slide-bg-overlay" style="position: absolute; inset: 0; background: radial-gradient(circle at 15% 25%, rgba(0, 210, 180, 0.05) 0%, rgba(6, 9, 14, 0.95) 50%, rgba(6, 9, 14, 0.99) 100%);"></div>
-        <div class="slide-glow-mesh" style="position: absolute; inset: 0; background: radial-gradient(circle at 85% 15%, rgba(0, 163, 255, 0.07) 0%, transparent 55%);"></div>
+        <div class="slide-bg-overlay" style="position: absolute; inset: 0; background: var(--bg-canvas)"></div>
+        <div class="slide-glow-mesh" style="position: absolute; inset: 0; background: transparent"></div>
       </div>
 
       <div class="editorial-container" style="max-width: 1440px; margin: 0 auto; width: 100%; position: relative; z-index: 2;">
@@ -75,37 +76,37 @@
             <!-- 1. Eyebrow Kicker Bar -->
             <div class="title-kicker" style="display: flex; align-items: center; gap: 10px; margin-bottom: 18px;">
               <span class="kicker-bar" style="width: 24px; height: 3px; background: var(--grad-security); border-radius: 2px;"></span>
-              <span style="color: var(--security-turquoise); font-family: var(--font-display); font-size: 13.5px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">THE CAPITAL REALITY</span>
+              <span style="color: var(--cat-1-ink); font-family: var(--font-display); font-size: 13.5px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">THE CAPITAL REALITY</span>
               <span style="color: var(--border-hairline);">//</span>
               <span style="color: var(--text-dim); font-family: var(--font-mono); font-size: 13.5px; letter-spacing: 0.5px;">HIGH-CONSEQUENCE PHYSICAL ASSETS</span>
             </div>
 
             <!-- 2. Monumental Display Headline -->
-            <h2 style="font-family: var(--font-display); font-size: clamp(34px, 3.8vw, 54px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: #FFFFFF; margin: 0 0 20px 0;">
+            <h2 style="font-family: var(--font-display); font-size: clamp(34px, 3.8vw, 54px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: var(--text); margin: 0 0 20px 0;">
               In energy, there are no<br>
-              <span style="background: var(--grad-security); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">low-consequence mistakes.</span>
+              <span class="au-display-grad">low-consequence mistakes.</span>
             </h2>
 
             <!-- 3. Secondary Voice / Narrative Lead -->
-            <p style="font-size: clamp(16.5px, 1.2vw, 19px); line-height: 1.6; color: #94A3B8; margin: 0; font-weight: 400; max-width: 680px;">
+            <p style="font-size: clamp(16.5px, 1.2vw, 19px); line-height: 1.6; color: var(--text-dim); margin: 0; font-weight: 400; max-width: 680px;">
               Oil &amp; gas is an unforgiving, high-capital business. Multi-crore losses rarely stem from visible catastrophes—they leak quietly every single day through routine operational friction across siloed disciplines.
             </p>
           </div>
 
           <!-- Right Column: Visual Image of Rig in Framed Asset Card -->
-          <div style="position: relative; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 163, 255, 0.25); background: rgba(13, 17, 23, 0.7); box-shadow: 0 20px 50px rgba(0,0,0,0.6);">
+          <div style="position: relative; border-radius: 12px; overflow: hidden; border: 1px solid rgba(0, 163, 255, 0.25); background: var(--surface-sunk); box-shadow: 0 20px 50px rgba(18,19,23,.14);">
             <img src="../../assets/media/wip/image77.jpg" alt="High-Consequence Offshore Drilling Rig Asset" style="width: 100%; height: 230px; object-fit: cover; object-position: center 65%; display: block;">
-            <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(6, 9, 14, 0.08) 0%, rgba(6, 9, 14, 0.35) 45%, rgba(6, 9, 14, 0.95) 100%);"></div>
-            <div style="position: absolute; top: 14px; left: 16px; display: flex; align-items: center; gap: 8px; padding: 4px 10px; background: rgba(6, 9, 14, 0.75); border: 1px solid rgba(0, 210, 180, 0.3); border-radius: 4px; backdrop-filter: blur(8px);">
-              <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise); box-shadow: 0 0 6px var(--security-turquoise);"></span>
-              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #FFFFFF; letter-spacing: 0.8px;">OFFSHORE OPERATIONAL ASSET</span>
+            <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(248, 249, 252, 0.08) 0%, rgba(248, 249, 252, 0.35) 45%, rgba(248, 249, 252, 0.95) 100%);"></div>
+            <div style="position: absolute; top: 14px; left: 16px; display: flex; align-items: center; gap: 8px; padding: 4px 10px; background: rgba(248, 249, 252, 0.75); border: 1px solid rgba(0, 175, 87, 0.30); border-radius: 4px; backdrop-filter: blur(8px);">
+              <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--g-red);"></span>
+              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text); letter-spacing: 0.8px;">OFFSHORE OPERATIONAL ASSET</span>
             </div>
             <div style="position: absolute; bottom: 12px; left: 16px; right: 16px; display: flex; justify-content: space-between; align-items: flex-end;">
               <div>
-                <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--security-turquoise); letter-spacing: 1px;">CRITICAL RIG SPREAD</div>
-                <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #FFFFFF; margin-top: 2px;">Offshore Jack-Up &amp; Deepwater Semi-Submersible</div>
+                <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--red-ink); letter-spacing: 1px;">CRITICAL RIG SPREAD</div>
+                <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text); margin-top: 2px;">Offshore Jack-Up &amp; Deepwater Semi-Submersible</div>
               </div>
-              <span style="padding: 4px 10px; border-radius: 4px; background: rgba(0, 163, 255, 0.15); border: 1px solid rgba(0, 163, 255, 0.4); font-family: var(--font-mono); font-size: 11px; color: var(--security-azure); font-weight: 700; white-space: nowrap;">₹1.2 Cr / Day Spread Rate</span>
+              <span style="padding: 4px 10px; border-radius: 4px; background: rgba(49, 134, 255, 0.12); border: 1px solid rgba(49, 134, 255, 0.35); font-family: var(--font-mono); font-size: 11px; color: var(--blue-ink); font-weight: 700; white-space: nowrap;">₹1.2 Cr / Day Spread Rate</span>
             </div>
           </div>
 
@@ -115,57 +116,57 @@
         <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 56px; border-top: 1px solid var(--border-hairline); padding-top: 36px;">
           
           <!-- Metric 1: Deepwater Well Capex -->
-          <div style="background: rgba(13, 17, 23, 0.55); border: 1px solid var(--border-hairline); border-radius: 8px; padding: 22px 20px; display: flex; flex-direction: column;">
-            <div style="height: 2px; width: 32px; background: var(--security-turquoise); border-radius: 1px; margin-bottom: 14px;"></div>
-            <div style="font-family: var(--font-display); font-size: clamp(26px, 2.1vw, 34px); font-weight: 800; line-height: 1.1; color: var(--security-turquoise); letter-spacing: -0.8px; white-space: nowrap; margin-bottom: 12px;">
+          <div style="background: linear-gradient(rgba(49, 134, 255, .07), rgba(49, 134, 255, .07)), var(--surface); border: 1px solid var(--border-subtle); border-top: 3px solid var(--cat-1); border-radius: 12px; padding: 20px 20px 22px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+            <div style="height: 2px; width: 32px; background: var(--cat-1); border-radius: 1px; margin-bottom: 14px;"></div>
+            <div style="font-family: var(--font-display); font-size: clamp(26px, 2.1vw, 34px); font-weight: 800; line-height: 1.1; color: var(--cat-1-ink); letter-spacing: -0.8px; white-space: nowrap; margin-bottom: 12px;">
               ₹200–500 Cr
             </div>
-            <div style="font-family: var(--font-display); font-size: 16px; font-weight: 700; color: #FFFFFF; min-height: 42px; line-height: 1.3; margin-bottom: 10px;">
+            <div style="font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--text); min-height: 42px; line-height: 1.3; margin-bottom: 10px;">
               Single Deepwater Well
             </div>
-            <div style="font-size: 13.5px; line-height: 1.55; color: #94A3B8;">
+            <div style="font-size: 13.5px; line-height: 1.55; color: var(--text-dim);">
               Rig spread rate, casing program, wireline logging suite &amp; marine fleet sunk before first commercial oil is confirmed.
             </div>
           </div>
 
           <!-- Metric 2: Acreage Bidding -->
-          <div style="background: rgba(13, 17, 23, 0.55); border: 1px solid var(--border-hairline); border-radius: 8px; padding: 22px 20px; display: flex; flex-direction: column;">
-            <div style="height: 2px; width: 32px; background: var(--nebula-cyan); border-radius: 1px; margin-bottom: 14px;"></div>
-            <div style="font-family: var(--font-display); font-size: clamp(26px, 2.1vw, 34px); font-weight: 800; line-height: 1.1; color: var(--nebula-cyan); letter-spacing: -0.8px; white-space: nowrap; margin-bottom: 12px;">
+          <div style="background: linear-gradient(rgba(18, 181, 203, .08), rgba(18, 181, 203, .08)), var(--surface); border: 1px solid var(--border-subtle); border-top: 3px solid var(--cat-2); border-radius: 12px; padding: 20px 20px 22px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+            <div style="height: 2px; width: 32px; background: var(--cat-2); border-radius: 1px; margin-bottom: 14px;"></div>
+            <div style="font-family: var(--font-display); font-size: clamp(26px, 2.1vw, 34px); font-weight: 800; line-height: 1.1; color: var(--cat-2-ink); letter-spacing: -0.8px; white-space: nowrap; margin-bottom: 12px;">
               Billions
             </div>
-            <div style="font-family: var(--font-display); font-size: 16px; font-weight: 700; color: #FFFFFF; min-height: 42px; line-height: 1.3; margin-bottom: 10px;">
+            <div style="font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--text); min-height: 42px; line-height: 1.3; margin-bottom: 10px;">
               Acreage &amp; Farm-In Bidding
             </div>
-            <div style="font-size: 13.5px; line-height: 1.55; color: #94A3B8;">
+            <div style="font-size: 13.5px; line-height: 1.55; color: var(--text-dim);">
               Multi-year concession commitments and PSC acreage valuations negotiated against fragmented, legacy well archives.
             </div>
           </div>
 
           <!-- Metric 3: Idle Rig NPT -->
-          <div style="background: rgba(13, 17, 23, 0.55); border: 1px solid var(--border-hairline); border-radius: 8px; padding: 22px 20px; display: flex; flex-direction: column;">
-            <div style="height: 2px; width: 32px; background: var(--security-azure); border-radius: 1px; margin-bottom: 14px;"></div>
-            <div style="font-family: var(--font-display); font-size: clamp(26px, 2.1vw, 34px); font-weight: 800; line-height: 1.1; color: var(--security-azure); letter-spacing: -0.8px; white-space: nowrap; margin-bottom: 12px;">
+          <div style="background: linear-gradient(rgba(0, 175, 87, .07), rgba(0, 175, 87, .07)), var(--surface); border: 1px solid var(--border-subtle); border-top: 3px solid var(--cat-3); border-radius: 12px; padding: 20px 20px 22px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+            <div style="height: 2px; width: 32px; background: var(--cat-3); border-radius: 1px; margin-bottom: 14px;"></div>
+            <div style="font-family: var(--font-display); font-size: clamp(26px, 2.1vw, 34px); font-weight: 800; line-height: 1.1; color: var(--cat-3-ink); letter-spacing: -0.8px; white-space: nowrap; margin-bottom: 12px;">
               ₹30L – 1.2 Cr
             </div>
-            <div style="font-family: var(--font-display); font-size: 16px; font-weight: 700; color: #FFFFFF; min-height: 42px; line-height: 1.3; margin-bottom: 10px;">
+            <div style="font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--text); min-height: 42px; line-height: 1.3; margin-bottom: 10px;">
               Single Idle Rig Day (NPT)
             </div>
-            <div style="font-size: 13.5px; line-height: 1.55; color: #94A3B8;">
+            <div style="font-size: 13.5px; line-height: 1.55; color: var(--text-dim);">
               Offshore drilling spread idling while petrophysicists and drilling superintendents manually reconcile wireline logs.
             </div>
           </div>
 
           <!-- Metric 4: Refinery Unplanned Day -->
-          <div style="background: rgba(13, 17, 23, 0.55); border: 1px solid var(--border-hairline); border-radius: 8px; padding: 22px 20px; display: flex; flex-direction: column;">
-            <div style="height: 2px; width: 32px; background: #818CF8; border-radius: 1px; margin-bottom: 14px;"></div>
-            <div style="font-family: var(--font-display); font-size: clamp(26px, 2.1vw, 34px); font-weight: 800; line-height: 1.1; color: #818CF8; letter-spacing: -0.8px; white-space: nowrap; margin-bottom: 12px;">
+          <div style="background: linear-gradient(rgba(75, 49, 227, .07), rgba(75, 49, 227, .07)), var(--surface); border: 1px solid var(--border-subtle); border-top: 3px solid var(--cat-5); border-radius: 12px; padding: 20px 20px 22px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+            <div style="height: 2px; width: 32px; background: var(--cat-5); border-radius: 1px; margin-bottom: 14px;"></div>
+            <div style="font-family: var(--font-display); font-size: clamp(26px, 2.1vw, 34px); font-weight: 800; line-height: 1.1; color: var(--cat-5-ink); letter-spacing: -0.8px; white-space: nowrap; margin-bottom: 12px;">
               ₹25–100 Cr
             </div>
-            <div style="font-family: var(--font-display); font-size: 16px; font-weight: 700; color: #FFFFFF; min-height: 42px; line-height: 1.3; margin-bottom: 10px;">
+            <div style="font-family: var(--font-display); font-size: 16px; font-weight: 700; color: var(--text); min-height: 42px; line-height: 1.3; margin-bottom: 10px;">
               One Lost Refinery Day
             </div>
-            <div style="font-size: 13.5px; line-height: 1.55; color: #94A3B8;">
+            <div style="font-size: 13.5px; line-height: 1.55; color: var(--text-dim);">
               CDU/FCC unplanned shutdown or off-spec crude run gross profit margin loss per operating day.
             </div>
           </div>
@@ -177,14 +178,14 @@
   </main>
 
   <!-- Floating Page Dock -->
-  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: rgba(13, 17, 23, 0.88); border: 1px solid var(--border-hairline); border-radius: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
-    <a href="page_00.html" style="background: rgba(255,255,255,0.08); border: none; color: #FFF; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none;">
+  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: var(--surface-sunk); border: 1px solid var(--border-hairline); border-radius: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(18,19,23,.14); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+    <a href="page_00.html" style="background: var(--surface-sunk); border: 1px solid var(--border); color: var(--text-muted); width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none;">
       ◀
     </a>
-    <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: var(--security-turquoise); white-space: nowrap;">
+    <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: var(--text-muted); white-space: nowrap;">
       PAGE 01 // CAPITAL REALITY
     </div>
-    <a href="page_02.html" style="background: var(--security-azure); border: none; color: #FFF; padding: 7px 16px; border-radius: 20px; font-family: var(--font-display); font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+    <a href="page_02.html" style="background: var(--g-blue); border: none; color: #FFF; padding: 7px 16px; border-radius: 20px; font-family: var(--font-display); font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;">
       <span>Next Page</span>
       <span>▶</span>
     </a>
@@ -327,17 +328,17 @@
           nodes.petro.style.borderColor = 'rgba(239, 68, 68, 0.3)';
           nodes.petro.innerHTML = `
             <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--nebula-crimson); letter-spacing: 0.5px;">⚠ LATENT SEAM</div>
-            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #FFF; margin: 2px 0;">2–3h Curve Drift Lag</div>
-            <div style="font-size: 12px; color: #CBD5E1; line-height: 1.35;">Rig waits while logs manually shifted.</div>
+            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text); margin: 2px 0;">2–3h Curve Drift Lag</div>
+            <div style="font-size: 12px; color: var(--text-muted); line-height: 1.35;">Rig waits while logs manually shifted.</div>
           `;
         }
         if (nodes.geoIngest) {
-          nodes.geoIngest.style.background = 'rgba(245, 158, 11, 0.12)';
-          nodes.geoIngest.style.borderColor = 'rgba(245, 158, 11, 0.3)';
+          nodes.geoIngest.style.background = 'rgba(254, 199, 0, 0.16)';
+          nodes.geoIngest.style.borderColor = 'rgba(254, 199, 0, 0.40)';
           nodes.geoIngest.innerHTML = `
-            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--nebula-amber); letter-spacing: 0.5px;">⚠ DARK DATA</div>
-            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #FFF; margin: 2px 0;">Unindexed Mud Logs</div>
-            <div style="font-size: 12px; color: #CBD5E1; line-height: 1.35;">Trapped in PDF and legacy scan silos.</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--amber-ink); letter-spacing: 0.5px;">⚠ DARK DATA</div>
+            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text); margin: 2px 0;">Unindexed Mud Logs</div>
+            <div style="font-size: 12px; color: var(--text-muted); line-height: 1.35;">Trapped in PDF and legacy scan silos.</div>
           `;
         }
         if (nodes.drillRop) {
@@ -345,17 +346,17 @@
           nodes.drillRop.style.borderColor = 'rgba(239, 68, 68, 0.3)';
           nodes.drillRop.innerHTML = `
             <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--nebula-crimson); letter-spacing: 0.5px;">⚠ DECISION LAG</div>
-            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #FFF; margin: 2px 0;">4-hr Casing Seat Lag</div>
-            <div style="font-size: 12px; color: #CBD5E1; line-height: 1.35;">High-capital spread waiting for approval.</div>
+            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text); margin: 2px 0;">4-hr Casing Seat Lag</div>
+            <div style="font-size: 12px; color: var(--text-muted); line-height: 1.35;">High-capital spread waiting for approval.</div>
           `;
         }
         if (nodes.prodScada) {
-          nodes.prodScada.style.background = 'rgba(245, 158, 11, 0.12)';
-          nodes.prodScada.style.borderColor = 'rgba(245, 158, 11, 0.3)';
+          nodes.prodScada.style.background = 'rgba(254, 199, 0, 0.16)';
+          nodes.prodScada.style.borderColor = 'rgba(254, 199, 0, 0.40)';
           nodes.prodScada.innerHTML = `
-            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--nebula-amber); letter-spacing: 0.5px;">⚠ CLERICAL BURDEN</div>
-            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #FFF; margin: 2px 0;">3h Morning CSV Wrangling</div>
-            <div style="font-size: 12px; color: #CBD5E1; line-height: 1.35;">Engineers making slides instead of tuning.</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--amber-ink); letter-spacing: 0.5px;">⚠ CLERICAL BURDEN</div>
+            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text); margin: 2px 0;">3h Morning CSV Wrangling</div>
+            <div style="font-size: 12px; color: var(--text-muted); line-height: 1.35;">Engineers making slides instead of tuning.</div>
           `;
         }
       } else {
@@ -364,43 +365,43 @@
           btnBase.style.color = 'var(--text-dim)';
         }
         if (btnFort) {
-          btnFort.style.background = 'rgba(0, 210, 180, 0.25)';
+          btnFort.style.background = 'rgba(0, 175, 87, 0.22)';
           btnFort.style.color = '#FFF';
         }
 
         if (nodes.petro) {
-          nodes.petro.style.background = 'rgba(0, 210, 180, 0.15)';
-          nodes.petro.style.borderColor = 'rgba(0, 210, 180, 0.4)';
+          nodes.petro.style.background = 'rgba(0, 175, 87, 0.12)';
+          nodes.petro.style.borderColor = 'rgba(0, 175, 87, 0.40)';
           nodes.petro.innerHTML = `
-            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-mint); letter-spacing: 0.5px;">🛡 FORTIFIED SENTINEL</div>
-            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #FFF; margin: 2px 0;">SciPy Splicer</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--green-ink); letter-spacing: 0.5px;">🛡 FORTIFIED SENTINEL</div>
+            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text); margin: 2px 0;">SciPy Splicer</div>
             <div style="font-size: 12px; color: #A7F3D0; line-height: 1.35;">r = 0.9899 mathematical convergence.</div>
           `;
         }
         if (nodes.geoIngest) {
-          nodes.geoIngest.style.background = 'rgba(0, 210, 180, 0.15)';
-          nodes.geoIngest.style.borderColor = 'rgba(0, 210, 180, 0.4)';
+          nodes.geoIngest.style.background = 'rgba(0, 175, 87, 0.12)';
+          nodes.geoIngest.style.borderColor = 'rgba(0, 175, 87, 0.40)';
           nodes.geoIngest.innerHTML = `
-            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-mint); letter-spacing: 0.5px;">🛡 FORTIFIED SENTINEL</div>
-            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #FFF; margin: 2px 0;">42ms Autonomous Parser</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--green-ink); letter-spacing: 0.5px;">🛡 FORTIFIED SENTINEL</div>
+            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text); margin: 2px 0;">42ms Autonomous Parser</div>
             <div style="font-size: 12px; color: #A7F3D0; line-height: 1.35;">Multimodal indexing across dark archives.</div>
           `;
         }
         if (nodes.drillRop) {
-          nodes.drillRop.style.background = 'rgba(0, 210, 180, 0.15)';
-          nodes.drillRop.style.borderColor = 'rgba(0, 210, 180, 0.4)';
+          nodes.drillRop.style.background = 'rgba(0, 175, 87, 0.12)';
+          nodes.drillRop.style.borderColor = 'rgba(0, 175, 87, 0.40)';
           nodes.drillRop.innerHTML = `
-            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-mint); letter-spacing: 0.5px;">🛡 FORTIFIED SENTINEL</div>
-            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #FFF; margin: 2px 0;">Real-Time ROP Sentinel</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--green-ink); letter-spacing: 0.5px;">🛡 FORTIFIED SENTINEL</div>
+            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text); margin: 2px 0;">Real-Time ROP Sentinel</div>
             <div style="font-size: 12px; color: #A7F3D0; line-height: 1.35;">Sub-second formation boundary alert.</div>
           `;
         }
         if (nodes.prodScada) {
-          nodes.prodScada.style.background = 'rgba(0, 210, 180, 0.15)';
-          nodes.prodScada.style.borderColor = 'rgba(0, 210, 180, 0.4)';
+          nodes.prodScada.style.background = 'rgba(0, 175, 87, 0.12)';
+          nodes.prodScada.style.borderColor = 'rgba(0, 175, 87, 0.40)';
           nodes.prodScada.innerHTML = `
-            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--security-mint); letter-spacing: 0.5px;">🛡 FORTIFIED SENTINEL</div>
-            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #FFF; margin: 2px 0;">Automated Dispatcher</div>
+            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--green-ink); letter-spacing: 0.5px;">🛡 FORTIFIED SENTINEL</div>
+            <div style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text); margin: 2px 0;">Automated Dispatcher</div>
             <div style="font-size: 12px; color: #A7F3D0; line-height: 1.35;">Zero manual CSV wrangling; auto-briefing.</div>
           `;
         }
@@ -426,7 +427,7 @@
           container.setAttribute('transform', 'translate(0, 18)');
         }
         if (legend) {
-          legend.style.color = 'var(--nebula-amber)';
+          legend.style.color = 'var(--amber-ink)';
           legend.innerText = '-- RUN 2 (+1.48m OFFSET DRIFT)';
         }
       } else {
@@ -435,14 +436,14 @@
           btnOffset.style.color = 'var(--text-dim)';
         }
         if (btnAligned) {
-          btnAligned.style.background = 'rgba(0, 210, 180, 0.25)';
+          btnAligned.style.background = 'rgba(0, 175, 87, 0.22)';
           btnAligned.style.color = '#FFF';
         }
         if (container) {
           container.setAttribute('transform', 'translate(0, 0)');
         }
         if (legend) {
-          legend.style.color = 'var(--security-mint)';
+          legend.style.color = 'var(--green-ink)';
           legend.innerText = '-- RUN 2 (SPLICED r=0.9899)';
         }
       }
@@ -511,8 +512,8 @@
 
       if (state === 'agentic') {
         if (btnAgentic) {
-          btnAgentic.style.background = 'rgba(0, 210, 180, 0.2)';
-          btnAgentic.style.borderColor = 'rgba(0, 210, 180, 0.5)';
+          btnAgentic.style.background = 'rgba(0, 175, 87, 0.20)';
+          btnAgentic.style.borderColor = 'rgba(0, 175, 87, 0.5)';
           btnAgentic.style.color = '#FFF';
         }
         if (btnLegacy) {
@@ -528,7 +529,7 @@
           headlineMain.innerText = 'Every latent vulnerability is intercepted before it aligns.';
         }
         if (headlineAccent) {
-          headlineAccent.style.color = 'var(--security-turquoise)';
+          headlineAccent.style.color = 'var(--cat-1-ink)';
           headlineAccent.innerHTML = 'Permanently sealed at source by deterministic physics&nbsp;Agents.';
           headlineAccent.style.marginBottom = '10px';
         }
@@ -536,26 +537,26 @@
           narrativeLead.style.display = 'block';
         }
         if (statusDot) {
-          statusDot.style.background = 'var(--security-turquoise)';
-          statusDot.style.boxShadow = '0 0 10px rgba(0, 210, 180, 0.5)';
+          statusDot.style.background = 'var(--cat-1-ink)';
+          statusDot.style.boxShadow = '0 0 10px rgba(0, 175, 87, 0.5)';
         }
         if (statusText) {
-          statusText.style.color = 'var(--security-turquoise)';
+          statusText.style.color = 'var(--cat-1-ink)';
           statusText.innerText = 'Active Defense: Autonomous Agents Intercepting Vulnerabilities (0 NPT)';
         }
 
         // Tier 1: Subsurface Ingestion Agent
         if (tiers[0].card) {
-          tiers[0].card.style.borderColor = 'rgba(0, 210, 180, 0.4)';
-          tiers[0].card.style.background = 'rgba(0, 210, 180, 0.04)';
+          tiers[0].card.style.borderColor = 'rgba(0, 175, 87, 0.40)';
+          tiers[0].card.style.background = 'rgba(0, 175, 87, 0.04)';
         }
         if (tiers[0].badge) {
-          tiers[0].badge.style.background = 'rgba(0, 210, 180, 0.18)';
-          tiers[0].badge.style.borderColor = 'rgba(0, 210, 180, 0.5)';
-          tiers[0].badge.style.color = 'var(--security-turquoise)';
+          tiers[0].badge.style.background = 'rgba(0, 175, 87, 0.18)';
+          tiers[0].badge.style.borderColor = 'rgba(0, 175, 87, 0.5)';
+          tiers[0].badge.style.color = 'var(--cat-1-ink)';
           tiers[0].badge.innerText = 'AGENT 01: ACTIVE';
         }
-        if (tiers[0].title) tiers[0].title.innerHTML = '<span style="color: #FFF;">PDF-to-LAS & BigQuery Agent</span>';
+        if (tiers[0].title) tiers[0].title.innerHTML = '<span style="color: var(--text);">PDF-to-LAS & BigQuery Agent</span>';
         if (tiers[0].metric) {
           tiers[0].metric.style.color = '#FFF';
           tiers[0].metric.innerText = '42ms Parse · GCS Bucket & BigQuery';
@@ -564,16 +565,16 @@
 
         // Tier 2: Deterministic Splice Agent
         if (tiers[1].card) {
-          tiers[1].card.style.borderColor = 'rgba(0, 210, 180, 0.4)';
-          tiers[1].card.style.background = 'rgba(0, 210, 180, 0.04)';
+          tiers[1].card.style.borderColor = 'rgba(0, 175, 87, 0.40)';
+          tiers[1].card.style.background = 'rgba(0, 175, 87, 0.04)';
         }
         if (tiers[1].badge) {
-          tiers[1].badge.style.background = 'rgba(0, 210, 180, 0.18)';
-          tiers[1].badge.style.borderColor = 'rgba(0, 210, 180, 0.5)';
-          tiers[1].badge.style.color = 'var(--security-turquoise)';
+          tiers[1].badge.style.background = 'rgba(0, 175, 87, 0.18)';
+          tiers[1].badge.style.borderColor = 'rgba(0, 175, 87, 0.5)';
+          tiers[1].badge.style.color = 'var(--cat-1-ink)';
           tiers[1].badge.innerText = 'AGENT 02: ACTIVE';
         }
-        if (tiers[1].title) tiers[1].title.innerHTML = '<span style="color: #FFF;">Deterministic Splice Agent</span>';
+        if (tiers[1].title) tiers[1].title.innerHTML = '<span style="color: var(--text);">Deterministic Splice Agent</span>';
         if (tiers[1].metric) {
           tiers[1].metric.style.color = '#FFF';
           tiers[1].metric.innerText = 'Seconds Exec · SciPy Match (r = 0.9899)';
@@ -582,16 +583,16 @@
 
         // Tier 3: Rig Handover Agent
         if (tiers[2].card) {
-          tiers[2].card.style.borderColor = 'rgba(0, 210, 180, 0.4)';
-          tiers[2].card.style.background = 'rgba(0, 210, 180, 0.04)';
+          tiers[2].card.style.borderColor = 'rgba(0, 175, 87, 0.40)';
+          tiers[2].card.style.background = 'rgba(0, 175, 87, 0.04)';
         }
         if (tiers[2].badge) {
-          tiers[2].badge.style.background = 'rgba(0, 210, 180, 0.18)';
-          tiers[2].badge.style.borderColor = 'rgba(0, 210, 180, 0.5)';
-          tiers[2].badge.style.color = 'var(--security-turquoise)';
+          tiers[2].badge.style.background = 'rgba(0, 175, 87, 0.18)';
+          tiers[2].badge.style.borderColor = 'rgba(0, 175, 87, 0.5)';
+          tiers[2].badge.style.color = 'var(--cat-1-ink)';
           tiers[2].badge.innerText = 'AGENT 03: ACTIVE';
         }
-        if (tiers[2].title) tiers[2].title.innerHTML = '<span style="color: #FFF;">Live Rig Agent</span>';
+        if (tiers[2].title) tiers[2].title.innerHTML = '<span style="color: var(--text);">Live Rig Agent</span>';
         if (tiers[2].metric) {
           tiers[2].metric.style.color = '#FFF';
           tiers[2].metric.innerText = 'Real-Time WITSML Push · 0ms Lag';
@@ -600,22 +601,22 @@
 
         // Tier 4: Zero-Defect Operational Barrier
         if (tiers[3].card) {
-          tiers[3].card.style.borderColor = 'rgba(0, 210, 180, 0.6)';
-          tiers[3].card.style.background = 'rgba(0, 210, 180, 0.06)';
+          tiers[3].card.style.borderColor = 'rgba(0, 175, 87, 0.6)';
+          tiers[3].card.style.background = 'rgba(0, 175, 87, 0.06)';
         }
         if (tiers[3].badge) {
-          tiers[3].badge.style.background = 'rgba(0, 210, 180, 0.25)';
-          tiers[3].badge.style.borderColor = 'rgba(0, 210, 180, 0.6)';
+          tiers[3].badge.style.background = 'rgba(0, 175, 87, 0.22)';
+          tiers[3].badge.style.borderColor = 'rgba(0, 175, 87, 0.6)';
           tiers[3].badge.style.color = '#FFF';
           tiers[3].badge.innerText = '100% PROTECTED';
         }
-        if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: #FFF;">Governed Casing Barrier</span>';
+        if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: var(--text);">Governed Casing Barrier</span>';
         if (tiers[3].metric) {
           tiers[3].metric.style.color = '#FFF';
           tiers[3].metric.innerText = '0 NPT · Zero Blowout Risk';
         }
         if (tiers[3].desc) {
-          tiers[3].desc.style.color = '#CBD5E1';
+          tiers[3].desc.style.color = 'var(--text-muted)';
           tiers[3].desc.innerText = 'Failure ray intercepted at source. Casing shoe seats with cms precision in solid caprock—preventing kicks, stuck pipe, and saving ₹50+ Cr.';
         }
 
@@ -638,20 +639,20 @@
           headlineMain.innerText = 'A major incident is never a single failure.';
         }
         if (headlineAccent) {
-          headlineAccent.style.color = '#94A3B8';
+          headlineAccent.style.color = 'var(--text-dim)';
           headlineAccent.innerText = 'It’s the quiet alignment of invisible gaps.';
           headlineAccent.style.marginBottom = '10px';
         }
         if (narrativeLead) {
           narrativeLead.style.display = 'block';
-          narrativeLead.innerHTML = 'Rooted in <strong style="color: #FFF;">Prof. James Reason’s System Safety model</strong>: disasters in high-consequence operations rarely stem from a single colossal error, but from routine friction and unmonitored seams lining up across siloed disciplines.';
+          narrativeLead.innerHTML = 'Rooted in <strong style="color: var(--text);">Prof. James Reason’s System Safety model</strong>: disasters in high-consequence operations rarely stem from a single colossal error, but from routine friction and unmonitored seams lining up across siloed disciplines.';
         }
         if (statusDot) {
-          statusDot.style.background = '#F59E0B';
+          statusDot.style.background = 'var(--g-yellow)';
           statusDot.style.boxShadow = 'none';
         }
         if (statusText) {
-          statusText.style.color = '#94A3B8';
+          statusText.style.color = 'var(--text-dim)';
           statusText.innerText = 'Latent Hazard Path: Unmonitored Cross-Discipline Vulnerabilities';
         }
 
@@ -663,12 +664,12 @@
         if (tiers[0].badge) {
           tiers[0].badge.style.background = 'rgba(255, 255, 255, 0.06)';
           tiers[0].badge.style.borderColor = 'rgba(255, 255, 255, 0.12)';
-          tiers[0].badge.style.color = '#94A3B8';
+          tiers[0].badge.style.color = 'var(--text-dim)';
           tiers[0].badge.innerText = 'Vulnerability 1';
         }
         if (tiers[0].title) tiers[0].title.innerText = 'Legacy Mudlog in PDF Archive';
         if (tiers[0].metric) {
-          tiers[0].metric.style.color = '#F59E0B';
+          tiers[0].metric.style.color = 'var(--g-yellow)';
           tiers[0].metric.innerText = '2004 Offset Well · Unindexed Scan';
         }
         if (tiers[0].desc) tiers[0].desc.innerText = 'A critical gas kick from a 2004 offset well remained buried in an unindexed PDF scan, unread during well planning.';
@@ -681,12 +682,12 @@
         if (tiers[1].badge) {
           tiers[1].badge.style.background = 'rgba(255, 255, 255, 0.06)';
           tiers[1].badge.style.borderColor = 'rgba(255, 255, 255, 0.12)';
-          tiers[1].badge.style.color = '#94A3B8';
+          tiers[1].badge.style.color = 'var(--text-dim)';
           tiers[1].badge.innerText = 'Vulnerability 2';
         }
         if (tiers[1].title) tiers[1].title.innerText = 'Wireline Cable Stretch';
         if (tiers[1].metric) {
-          tiers[1].metric.style.color = '#F59E0B';
+          tiers[1].metric.style.color = 'var(--g-yellow)';
           tiers[1].metric.innerText = '1.48m Uncalibrated Discrepancy';
         }
         if (tiers[1].desc) tiers[1].desc.innerText = 'Mechanical cable stretch shifted logging depth by 1.48m. Approximated manually, placing the caprock 1.5m deeper than reality.';
@@ -699,34 +700,34 @@
         if (tiers[2].badge) {
           tiers[2].badge.style.background = 'rgba(255, 255, 255, 0.06)';
           tiers[2].badge.style.borderColor = 'rgba(255, 255, 255, 0.12)';
-          tiers[2].badge.style.color = '#94A3B8';
+          tiers[2].badge.style.color = 'var(--text-dim)';
           tiers[2].badge.innerText = 'Vulnerability 3';
         }
         if (tiers[2].title) tiers[2].title.innerText = 'Rig Crew Changeover';
         if (tiers[2].metric) {
-          tiers[2].metric.style.color = '#F59E0B';
+          tiers[2].metric.style.color = 'var(--g-yellow)';
           tiers[2].metric.innerText = '4-Hour Communication Lag';
         }
         if (tiers[2].desc) tiers[2].desc.innerText = 'Updated depth warnings were lost in an email handover at 3:00 AM. The rig crew continued drilling ahead unaware of the danger window.';
 
         // Tier 4 Reset
         if (tiers[3].card) {
-          tiers[3].card.style.borderColor = 'rgba(245, 158, 11, 0.3)';
+          tiers[3].card.style.borderColor = 'rgba(254, 199, 0, 0.40)';
           tiers[3].card.style.background = 'rgba(15, 23, 42, 0.45)';
         }
         if (tiers[3].badge) {
-          tiers[3].badge.style.background = 'rgba(245, 158, 11, 0.15)';
-          tiers[3].badge.style.borderColor = 'rgba(245, 158, 11, 0.35)';
-          tiers[3].badge.style.color = '#F59E0B';
+          tiers[3].badge.style.background = 'rgba(254, 199, 0, 0.15)';
+          tiers[3].badge.style.borderColor = 'rgba(254, 199, 0, 0.35)';
+          tiers[3].badge.style.color = 'var(--g-yellow)';
           tiers[3].badge.innerText = 'CRITICAL HAZARD';
         }
-        if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: #FFF;">Casing Shoe Misplacement</span>';
+        if (tiers[3].title) tiers[3].title.innerHTML = '<span style="color: var(--text);">Casing Shoe Misplacement</span>';
         if (tiers[3].metric) {
-          tiers[3].metric.style.color = '#F59E0B';
+          tiers[3].metric.style.color = 'var(--g-yellow)';
           tiers[3].metric.innerText = 'Cumulative 2m Error · Gas Sand Landed';
         }
         if (tiers[3].desc) {
-          tiers[3].desc.style.color = '#94A3B8';
+          tiers[3].desc.style.color = 'var(--text-dim)';
           tiers[3].desc.innerText = 'The casing shoe seated directly into the fractured gas sand rather than solid rock, causing an uncontrollable kick and stuck drillstring.';
         }
       }
@@ -761,7 +762,7 @@
         if (roi) roi.innerText = 'Expected ROI: ₹110–180 Cr / yr';
       } else if (asset === 'refinery') {
         if (btnRefinery) {
-          btnRefinery.style.background = 'rgba(0, 210, 180, 0.25)';
+          btnRefinery.style.background = 'rgba(0, 175, 87, 0.22)';
           btnRefinery.style.color = '#FFF';
         }
         if (title) title.innerText = 'Flagship Refinery // CDU & Petrochemical Processing Units';
@@ -769,7 +770,7 @@
         if (roi) roi.innerText = 'Expected ROI: ₹140–250 Cr / yr';
       } else {
         if (btnBarmer) {
-          btnBarmer.style.background = 'rgba(245, 158, 11, 0.25)';
+          btnBarmer.style.background = 'rgba(254, 199, 0, 0.25)';
           btnBarmer.style.color = '#FFF';
         }
         if (title) title.innerText = 'Barmer Basin // Upstream E&P Exploration & Development';
