@@ -184,15 +184,26 @@ function shortAction(s) {
    who sees squares marked "a human holds this, deliberately" will believe the
    agented ones far more readily.
 
-   Resolution order: agentRef -> "Agent N:" in agentLabel -> explicit refusal
-   -> "Agent N" in agentNote -> unspecified.                                 */
+   Resolution order: agentRef -> "Agent N" leading agentLabel (any coverage
+   marker such as a tick is skipped first) -> explicit refusal -> "Agent N"
+   in agentNote -> unspecified.                                            */
 function coverageFor(p, act) {
   const byN = n => (p.agents || []).find(a => a.n === Number(n)) || null;
 
   let hit = act.agentRef ? byN(act.agentRef) : null;
 
   if (!hit && act.agentLabel) {
-    const m = /^Agent\s+(\d+)/i.exec(act.agentLabel);
+    /* Skip any leading marker before the word "Agent". Labels arrive as
+       "Agent 3", but also as "\u2714\u2714 Agent 3" -- the tick is a coverage
+       marker, not prose. The old pattern anchored hard at "^Agent" and so
+       could not see past the tick, which silently stranded 26 actions across
+       P32 and P33. P32 Instrument Technician was the worst of it: 7 agents
+       specified, 0 reachable from the board, on a Rs 239 Cr role.
+
+       Still anchored, deliberately: [^A-Za-z]* permits markers and spaces but
+       not words, so a label like "No, see Agent 3" cannot match here and is
+       left to the refusal branch below. */
+    const m = /^[^A-Za-z]*Agent\s+(\d+)/i.exec(act.agentLabel);
     if (m) hit = byN(m[1]);
   }
 
