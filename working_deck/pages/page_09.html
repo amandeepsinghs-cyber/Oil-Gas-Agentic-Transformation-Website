@@ -3,266 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Agentic Value Topology | Sovereign Agentic Transformation</title>
+  <title>100 Days to Proof of Value | Sovereign Agentic Transformation</title>
   <link rel="stylesheet" href="../../assets/styles.css">
   <link rel="stylesheet" href="../../assets/aurora.css">
-  <style>
-    /* ─── PAGE-LOCAL TOKENS ───────────────────────────────────────────────────
-       Loaded after styles.css and aurora.css, so these :root declarations win
-       over both. That matters: aurora's PART 3 "legacy bridge" re-points
-       --security-turquoise at var(--text-muted), which would silently turn
-       every accent on this page grey. Declaring it here shields it.
-
-       Light is the default, matching the rest of the deck (localStorage key
-       "deck-theme"). html.theme-dark restores the original dark surface.
-
-       Fonts are deliberately NOT declared here. The previous values were
-       'Cabinet Grotesk' and 'JetBrains Mono', neither of which is loaded
-       anywhere in the repo, so both silently fell back. The page now inherits
-       --font-display / --font-mono from aurora.css like every other slide. */
-    :root {
-      --slate-bg: #FFFFFF;
-      --slate-panel: #FFFFFF;
-      --slate-sunk: #F1F4FB;
-      --slate-border: #E2E6F0;
-      --nav-bg: rgba(255, 255, 255, 0.88);
-      --ink: #121317;
-      --ink-soft: #5F6368;
-      --grid-line: rgba(18, 23, 42, 0.05);
-      --canvas-surface: #FFFFFF;
-      --canvas-edge: rgba(10, 118, 132, 0.28);
-      --canvas-shadow: 0 8px 28px rgba(18, 23, 42, 0.10);
-      --starburst: #121317;
-      --stage-wash: radial-gradient(circle at 70% 35%, rgba(10, 118, 132, 0.05) 0%, rgba(241, 244, 251, 0.55) 55%, var(--slate-bg) 100%);
-      --canvas-wash: radial-gradient(circle at 65% 45%, rgba(10, 118, 132, 0.05) 0%, rgba(138, 98, 0, 0.03) 45%, transparent 70%);
-      --panel-glass: rgba(255, 255, 255, 0.92);
-      --dock-shadow: 0 4px 14px rgba(18, 23, 42, 0.12);
-      /* Accent inks chosen for contrast on white, not for glow on black. */
-      --security-turquoise: #0A7684;
-      --security-azure: #286DD1;
-      --nebula-crimson: #C62A27;
-      --hazard-amber: #8A6200;
-    }
-
-    html.theme-dark {
-      --slate-bg: #06090E;
-      --slate-panel: rgba(13, 19, 32, 0.85);
-      --slate-sunk: rgba(255, 255, 255, 0.04);
-      --slate-border: rgba(255, 255, 255, 0.08);
-      --nav-bg: rgba(6, 9, 14, 0.90);
-      --ink: #E2E8F0;
-      --ink-soft: #94A3B8;
-      --grid-line: rgba(255, 255, 255, 0.03);
-      --canvas-surface: radial-gradient(circle at 50% 50%, #0B1323 0%, #06090E 95%);
-      --canvas-edge: rgba(18, 181, 203, 0.25);
-      --canvas-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 40px rgba(18, 181, 203, 0.04);
-      --starburst: #FFFFFF;
-      --stage-wash: radial-gradient(circle at 70% 35%, rgba(18, 181, 203, 0.05) 0%, rgba(6, 9, 14, 0.96) 65%, var(--slate-bg) 100%);
-      --canvas-wash: radial-gradient(circle at 65% 45%, rgba(18, 181, 203, 0.10) 0%, rgba(245, 158, 11, 0.05) 45%, transparent 70%);
-      --panel-glass: rgba(6, 9, 14, 0.86);
-      --dock-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-      --security-turquoise: #12B5CB;
-      --security-azure: #00A3FF;
-      --nebula-crimson: #FC413D;
-      --hazard-amber: #FEC700;
-    }
-
-    body {
-      background: var(--slate-bg);
-      color: var(--ink);
-      font-family: var(--font-display);
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
-
-    /* Top Navigation */
-    .executive-top-nav {
-      backdrop-filter: blur(20px);
-      background: var(--nav-bg);
-      border-bottom: 1px solid var(--slate-border);
-      padding: 12px max(24px, 3.5vw);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    /* Background Grids */
-    .slide-bg-media {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
-
-    .slide-bg-grid {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-
-    /* 3D Canvas Viewport */
-    #topology-canvas-container {
-      width: 100%;
-      height: 640px;
-      position: relative;
-      border-radius: 10px;
-      overflow: hidden;
-      background: var(--canvas-surface);
-      border: 1px solid var(--canvas-edge);
-      box-shadow: var(--canvas-shadow);
-    }
-
-    #terrain-canvas {
-      width: 100%;
-      height: 100%;
-      display: block;
-      cursor: grab;
-    }
-
-    #terrain-canvas:active {
-      cursor: grabbing;
-    }
-
-    /* Floating 3D HUD Tooltip */
-    #terrain-tooltip {
-      position: absolute;
-      pointer-events: none;
-      background: var(--slate-panel);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--security-turquoise);
-      border-radius: 6px;
-      padding: 10px 14px;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--ink);
-      box-shadow: 0 10px 30px rgba(18, 23, 42, 0.18);
-      z-index: 100;
-      display: none;
-      transform: translate(-50%, -120%);
-      transition: opacity 0.15s ease;
-    }
-
-    html.theme-dark #terrain-tooltip {
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(18, 181, 203, 0.3);
-    }
-
-    /* .summit-card rules removed with the leaderboard they styled.
-       See legacy_strategic_files/page_09_pre_light/ */
-
-    /* Mini Matrix Grid */
-    .mini-grid {
-      display: grid;
-      grid-template-columns: repeat(15, 1fr);
-      gap: 2px;
-      padding: 8px;
-      background: var(--slate-sunk);
-      border: 1px solid var(--slate-border);
-      border-radius: 6px;
-    }
-
-    .mini-cell {
-      height: 10px;
-      border-radius: 1px;
-      background: rgba(18, 23, 42, 0.08);
-      cursor: pointer;
-      transition: transform 0.15s ease;
-    }
-
-    html.theme-dark .mini-cell {
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .mini-cell:hover {
-      transform: scale(1.6);
-      z-index: 10;
-    }
-
-    /* Swatch fills. Glow shadows are suppressed in light mode — a halo only
-       reads against a dark surface, and on white it just muddies the edge. */
-    .mini-cell.mini-plugged   { background: #12B5CB; }
-    .mini-cell.mini-starburst { background: var(--starburst); }
-    .mini-cell.mini-red       { background: #FC413D; }
-    .mini-cell.mini-yellow    { background: #FEC700; }
-    .mini-cell.mini-green     { background: #00AF57; }
-    .mini-cell.mini-aquagreen { background: #12B5CB; }
-    .mini-cell.mini-blue      { background: #3186FF; }
-    .mini-cell.mini-indigo    { background: #1B1745; }
-    .mini-cell.mini-amber     { background: #FEC700; }
-    .mini-cell.mini-orchid    { background: #4B31E3; }
-    .mini-cell.mini-teal      { background: #0A3B44; }
-
-    html.theme-dark .mini-cell.mini-plugged   { box-shadow: 0 0 8px #12B5CB; }
-    html.theme-dark .mini-cell.mini-starburst { box-shadow: 0 0 6px #FFFFFF; }
-    html.theme-dark .mini-cell.mini-red       { box-shadow: 0 0 4px #FC413D; }
-    html.theme-dark .mini-cell.mini-yellow    { box-shadow: 0 0 4px #FEC700; }
-    html.theme-dark .mini-cell.mini-amber     { box-shadow: 0 0 4px #FEC700; }
-    html.theme-dark .mini-cell.mini-orchid    { box-shadow: 0 0 4px rgba(147, 51, 234, 0.4); }
-
-    /* Custom Buttons */
-    .pill-btn {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      padding: 5px 12px;
-      border-radius: 16px;
-      border: 1px solid var(--slate-border);
-      background: var(--slate-sunk);
-      color: var(--ink-soft);
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .pill-btn:hover {
-      background: #E7EEFB;
-      color: var(--ink);
-      border-color: #C9D4E8;
-    }
-
-    html.theme-dark .pill-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #FFF;
-      border-color: rgba(255, 255, 255, 0.25);
-    }
-
-    .pill-btn:focus-visible {
-      outline: 2px solid var(--security-azure);
-      outline-offset: 2px;
-    }
-
-    .pill-btn.active {
-      background: rgba(10, 118, 132, 0.10);
-      border-color: var(--security-turquoise);
-      color: var(--security-turquoise);
-      font-weight: 700;
-    }
-
-    html.theme-dark .pill-btn.active {
-      background: rgba(18, 181, 203, 0.18);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .mini-cell, .pill-btn { transition: none; }
-    }
-  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script>
     (function() {
-      /* Standard deck theme bootstrap: light by default, dark opt-in via the
-         "deck-theme" key. Matches page_10 and the rest of the aurora pages.
-
-         This page previously pinned itself dark, because its stylesheet and
-         canvas were both authored against a near-black surface. Both have now
-         been converted: the <style> block above is tokenised with an
-         html.theme-dark override, and the canvas clamps its colour ramp via
-         LIGHT_INK_CEILING. */
       const saved = localStorage.getItem('deck-theme') || 'light';
       if (saved === 'dark') {
         document.documentElement.classList.add('theme-dark');
@@ -273,9 +19,6 @@
       if (document.body) document.body.classList.toggle('theme-dark', isDark);
       localStorage.setItem('deck-theme', isDark ? 'dark' : 'light');
       updateThemeButtons(!isDark);
-      /* Defined further down, with the canvas engine. Guarded because the
-         engine script has not parsed yet when this function is declared. */
-      if (typeof syncCanvasTheme === 'function') syncCanvasTheme();
     }
     function updateThemeButtons(isLight) {
       document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
@@ -291,1101 +34,276 @@
     });
   </script>
 </head>
-<body>
+<body style="background: var(--canvas); color: var(--text-muted); font-family: var(--font-display); margin: 0; padding: 0;">
 
-  <!-- Top Executive Navigation Bar -->
-  <header class="executive-top-nav">
+  <!-- Single-Page Executive Top Navigation Bar -->
+  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(248, 249, 252, 0.85); border-bottom: 1px solid var(--border-subtle); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
     <a href="../../index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
       <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
-      <div style="width: 1px; height: 20px; background: var(--slate-border);"></div>
-      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--ink); letter-spacing: 1.5px; text-transform: uppercase;">STAGE 09 // THE AGENTIC VALUE TOPOLOGY</span>
+      <div style="width: 1px; height: 20px; background: var(--surface-sunk);"></div>
+      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text); letter-spacing: 1.5px; text-transform: uppercase;">STAGE 10 // 100 DAYS TO PROOF OF VALUE</span>
     </a>
     <nav style="display: flex; align-items: center; gap: 16px;">
-      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Dark Mode">
-        <span style="font-size: 13px; line-height: 1;">🌙</span>
-        <span>Dark Mode</span>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Light Mode">
+        <span style="font-size: 13px; line-height: 1;">☀️</span>
+        <span>Light Mode</span>
       </button>
-      <a href="page_08.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--ink-soft); text-decoration: none; padding: 4px 12px; border-radius: 6px; background: var(--slate-sunk); transition: color 0.2s;">← Prev Page (Slide 08)</a>
-      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--security-turquoise); font-weight: 700;">10 / 11</span>
-      <a href="page_10.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 12px; border-radius: 6px; background: rgba(40, 109, 209, 0.10); transition: color 0.2s;">Next Page (Slide 11) →</a>
-      <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #FFF; background: #121317; padding: 6px 16px; border-radius: 20px; text-decoration: none; margin-left: 6px;">
+      <a href="page_08.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 12px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page (Slide 08)</a>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;">10 / 10 (Conclusion)</span>
+      <a href="page_00.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--blue-ink); text-decoration: none; padding: 4px 12px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Overview (Slide 00) ↺</a>
+      <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 16px; border-radius: 20px; text-decoration: none; margin-left: 6px;">
         All Slides ↗
       </a>
     </nav>
   </header>
 
   <!-- Main Viewport -->
-  <main id="viewport-scaler" class="stage-09 stage-container" style="padding-top: 75px; min-height: 100vh; position: relative;">
+  <main id="viewport-scaler" style="padding-top: 60px;">
+<!-- ========================================================================= -->
+<!-- FINALIZED SLIDE: STAGE 10 // 100 DAYS TO PROOF OF VALUE                   -->
+<!-- STATUS: FINALIZED & VISUALIZED                                            -->
+<!-- APPROVED: 2026-09-11                                                      -->
+<!-- ========================================================================= -->
+<section class="slide narrative-stage theme-amber" id="stage-10" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 100px max(24px, 4vw); position: relative; background: var(--canvas);">
+  
+  <!-- Atmospheric Cinematic Backdrop -->
+  <div class="slide-bg-media" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
+    <img src="../../assets/media/retail_agentic/image7.png" alt="Dawn Horizon" class="slide-bg-img" style="opacity: 0.17; filter: blur(28px) brightness(0.25);">
+    <div class="slide-bg-overlay" style="position: absolute; inset: 0; background: var(--bg-canvas)"></div>
+    <div class="slide-glow-mesh" style="background: radial-gradient(circle at 25% 75%, rgba(49, 134, 255, 0.06) 0%, transparent 60%);"></div>
+  </div>
+
+  <div class="editorial-container" style="max-width: 1440px; margin: 0 auto; width: 100%; position: relative; z-index: 2;">
     
-    <!-- Atmospheric Grid Backdrop -->
-    <div class="slide-bg-media">
-      <div class="slide-bg-grid"></div>
-      <div style="position: absolute; inset: 0; background: var(--stage-wash);"></div>
+    <!-- 1. Kicker Bar -->
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+      <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--blue-ink); letter-spacing: 2px; text-transform: uppercase;">
+        THE ROADMAP // 100-DAY PROOF OF VALUE
+      </span>
+      <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--blue-ink);"></span>
+      <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-dim);">EXECUTIVE EXECUTION MODEL</span>
     </div>
 
-    <div id="stage-09" style="max-width: 1720px; margin: 0 auto; padding: 30px max(20px, 2.5vw); position: relative; z-index: 2;">
+    <!-- 2. Monumental Billboard Headline & Subheading -->
+    <h1 style="font-family: var(--font-display); font-size: clamp(34px, 4vw, 56px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; color: var(--text); max-width: 1280px; margin: 0 0 8px 0;">
+      100 Days to <span class="au-display-grad">Proof of Value.</span>
+    </h1>
+    <h2 style="font-family: var(--font-display); font-size: clamp(18px, 1.5vw, 25px); font-weight: 600; line-height: 1.35; color: var(--blue-ink); letter-spacing: -0.3px; margin: 0 0 14px 0;">
+      Building an agentic workforce to automate workflows.
+    </h2>
+
+    <!-- 3. Secondary Voice / Concise Lead -->
+    <p style="font-size: clamp(16px, 1.2vw, 20px); line-height: 1.5; color: var(--text-dim); max-width: 1180px; margin: 0 0 32px 0; font-weight: 400;">
+      Solving specific operational bottlenecks on your historical data—proving measurable value and mathematical accuracy in 100 days before scaling across the enterprise.
+    </p>
+
+    <!-- 4. Hero Visual: Compounding Value-Over-Time Graph (Interactive SVG) -->
+    <div style="background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 24px 28px 18px 28px; margin-bottom: 36px; position: relative; overflow: hidden; box-shadow: var(--shadow-md);">
       
-      <!-- Stage Header Block -->
-      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; margin-bottom: 22px; flex-wrap: wrap;">
-        <div>
-          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
-            <span style="font-family: var(--font-mono); font-size: 12px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 2px; text-transform: uppercase;">
-              AGENT ECONOMICS // ENTERPRISE VALUE TOPOLOGY
-            </span>
-            <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise);"></span>
-            <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft);">300-TOUCHPOINT VALUE UNLOCK MODEL</span>
-          </div>
-
-          <h1 style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 46px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: var(--ink); margin: 0 0 8px 0;">
-            Agent Economics: The Value Map of Agentic Transformation.
-          </h1>
-          <h2 style="font-family: var(--font-display); font-size: clamp(18px, 1.4vw, 24px); font-weight: 600; line-height: 1.35; color: var(--security-turquoise); letter-spacing: -0.3px; margin: 0 0 12px 0;">
-            Strategic prioritization and continuous value tracking ensure every deployed agent remains strictly net positive.
-          </h2>
-
-          <p style="font-size: clamp(14px, 1.05vw, 16px); line-height: 1.45; color: var(--ink-soft); max-width: 1100px; margin: 0;">
-            Quantifying a <strong style="color: var(--ink);">fleet of autonomous agents</strong> by <strong style="color: var(--ink);">capital at risk and value unlock (₹ Cr / yr)</strong> establishes a clear investment topology, sequencing rollouts directly into your <strong style="color: var(--ink);">highest-impact enterprise targets</strong>. Ongoing economic tracking continuously audits delivered value, guaranteeing every deployed agent operates with <strong style="color: var(--security-turquoise);">strictly net-positive Agentic AI ROI</strong>.
-          </p>
+      <!-- Graph Header Bar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 12px; flex-wrap: wrap; gap: 12px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--g-purple); box-shadow: 0 0 8px var(--g-purple);"></span>
+          <span style="font-family: var(--font-mono); font-size: 12px; font-weight: 700; color: var(--text); letter-spacing: 1px; text-transform: uppercase;">
+            VALUE REALIZATION TRAJECTORY // FROM DISCOVERY TO ENTERPRISE SCALE
+          </span>
         </div>
-
-        <!-- 3D Controls Toolstrip -->
-        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">
-          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-            <button class="pill-btn active" id="btn-auto-rotate" onclick="toggleAutoRotate()">Auto-Rotate: ON</button>
-            <button class="pill-btn" onclick="resetTerrainView()">Reset Perspective</button>
-            <button class="pill-btn" onclick="setTopDownView()">Top-Down Contour (2D)</button>
-          </div>
-          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft);">
-            Interactive Orbit: Click &amp; drag to rotate • Scroll to zoom elevation
+        <div style="display: flex; align-items: center; gap: 18px; font-family: var(--font-mono); font-size: 11px; color: var(--text-dim);">
+          <span style="display: flex; align-items: center; gap: 6px;">
+            <span style="width: 12px; height: 2px; background: var(--g-blue); display: inline-block;"></span> Weeks 1–6 Prioritize
+          </span>
+          <span style="display: flex; align-items: center; gap: 6px;">
+            <span style="width: 12px; height: 2px; background: var(--g-purple); display: inline-block;"></span> Day 100 Proof of Value
+          </span>
+          <span style="display: flex; align-items: center; gap: 6px;">
+            <span style="width: 12px; height: 2px; background: #00AF57; display: inline-block;"></span> Beyond Day 100 Scale
           </span>
         </div>
       </div>
 
-      <!-- Single-column stack: full-width map, radar beneath. Was a 480px + 1fr grid
-           when the left rail carried the leaderboard. -->
-      <div style="display: flex; flex-direction: column; gap: 22px;">
-        
-        <!-- ===== COORDINATE RADAR (order: 2 — renders beneath the map) ===== -->
-        <div style="display: flex; flex-direction: column; gap: 16px; order: 2; max-width: 560px;">
-          
-          <!-- Sector filter bar removed. Its five pills existed only to call
-               focusSummit(), which went with the leaderboard. -->
+      <!-- High-Fidelity SVG Curve -->
+      <svg viewBox="0 0 1200 310" style="width: 100%; height: auto; display: block; overflow: visible;">
+        <defs>
+          <!-- Gradient for Curve Area Fill -->
+          <linearGradient id="valueAreaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#4B31E3" stop-opacity="0.16" />
+            <stop offset="60%" stop-color="#3186FF" stop-opacity="0.08" />
+            <stop offset="100%" stop-color="var(--canvas)" stop-opacity="0.0" />
+          </linearGradient>
 
-          <!-- Summit leaderboard removed (PRIORITISED VALUE-UNLOCK AGENTS).
-               Five cards carrying ₹45/130/120/115/90 Cr figures that were
-               hardcoded literals, plus "★ PROVEN AGENT" and "VALIDATED IN
-               PRODUCTION" claims. The terrain is harmonic, not measured, so
-               these read as precision the model does not have. Peak detail is
-               now hover-only via #terrain-tooltip.
-               Original: legacy_strategic_files/page_09_pre_light/ -->
+          <!-- Gradient for Value Stroke -->
+          <linearGradient id="valueStrokeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#3186FF" />
+            <stop offset="45%" stop-color="#4B31E3" />
+            <stop offset="100%" stop-color="#00AF57" />
+          </linearGradient>
 
-          <!-- 20×15 Mini Coordinate Radar -->
-          <div style="background: var(--slate-panel); border: 1px solid var(--slate-border); border-radius: 8px; padding: 14px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--ink-soft); letter-spacing: 1px;">
-                2D CHESSBOARD COORDINATE RADAR
-              </span>
-              <span style="font-family: var(--font-mono); font-size: 9px; color: var(--security-turquoise);">HOVER TO LOCATE ON 3D TERRAIN</span>
-            </div>
-            
-            <div class="mini-grid" id="mini-matrix-radar">
-              <!-- Injected by JS: 300 mini cells -->
-            </div>
-          </div>
+          <!-- Glow Filter -->
+          <filter id="curveGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="4" result="blur" />
+            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+          </filter>
+        </defs>
 
+        <!-- Horizontal Grid Lines & Y-Axis Reference -->
+        <line x1="100" y1="50" x2="1140" y2="50" stroke="var(--text-dim)" stroke-dasharray="4,4" />
+        <text x="90" y="54" fill="var(--green-ink)" font-size="10.5" font-family="var(--font-mono)" text-anchor="end" font-weight="700">ENTERPRISE SCALE</text>
+
+        <line x1="100" y1="120" x2="1140" y2="120" stroke="var(--text-dim)" stroke-dasharray="4,4" />
+        <text x="90" y="124" fill="var(--purple-ink)" font-size="10.5" font-family="var(--font-mono)" text-anchor="end" font-weight="700">PILOT PROOF</text>
+
+        <line x1="100" y1="195" x2="1140" y2="195" stroke="var(--text-dim)" stroke-dasharray="4,4" />
+        <text x="90" y="199" fill="var(--blue-ink)" font-size="10.5" font-family="var(--font-mono)" text-anchor="end" font-weight="600">DISCOVERY</text>
+
+        <line x1="100" y1="260" x2="1140" y2="260" stroke="var(--text-dim)" />
+        <text x="90" y="264" fill="var(--text-dim)" font-size="10.5" font-family="var(--font-mono)" text-anchor="end" font-weight="600">BASELINE</text>
+
+        <!-- Vertical Phase Boundaries -->
+        <line x1="390" y1="30" x2="390" y2="260" stroke="rgba(49, 134, 255, 0.28)" stroke-dasharray="3,3" />
+        <line x1="720" y1="30" x2="720" y2="260" stroke="rgba(75, 49, 227, 0.28)" stroke-dasharray="3,3" />
+
+        <!-- Shaded Area Under Curve -->
+        <path d="M 100,250 C 220,248 300,230 390,210 C 510,185 610,150 720,120 C 840,85 980,50 1130,35 L 1130,260 L 100,260 Z" fill="url(#valueAreaGrad)" />
+
+        <!-- The Value Curve Line -->
+        <path d="M 100,250 C 220,248 300,230 390,210 C 510,185 610,150 720,120 C 840,85 980,50 1130,35" fill="none" stroke="url(#valueStrokeGrad)" stroke-width="4.5" filter="url(#curveGlow)" />
+
+        <!-- Milestone 1 Node: Week 6 (Prioritize) -->
+        <circle cx="390" cy="210" r="6" fill="var(--g-blue)" />
+        <circle cx="390" cy="210" r="11" fill="none" stroke="rgba(49, 134, 255, 0.45)" stroke-width="1.5" />
+        <rect x="270" y="152" width="220" height="42" rx="6" fill="#FFFFFF" stroke="rgba(49, 134, 255, 0.5)" stroke-width="1" />
+        <text x="380" y="170" fill="var(--blue-ink)" font-family="var(--font-mono)" font-size="11" font-weight="700" text-anchor="middle">WEEK 6: PRIORITIZED WORKFLOWS</text>
+        <text x="380" y="185" fill="var(--text-muted)" font-family="var(--font-display)" font-size="10.5" text-anchor="middle">High-friction tasks identified</text>
+        <line x1="390" y1="194" x2="390" y2="204" stroke="var(--g-blue)" stroke-width="1.2" />
+
+        <!-- Milestone 2 Node: DAY 100 (THE HERO INFLECTION BEACON) -->
+        <circle cx="720" cy="120" r="20" fill="rgba(75, 49, 227, 0.14)" />
+        <circle cx="720" cy="120" r="10" fill="none" stroke="var(--g-purple)" stroke-width="2" />
+        <circle cx="720" cy="120" r="5" fill="var(--g-purple)" />
+
+        <!-- Day 100 Callout Card directly on graph -->
+        <g transform="translate(585, 42)">
+          <rect x="0" y="0" width="270" height="58" rx="8" fill="#FFFFFF" stroke="var(--g-purple)" stroke-width="1.5" filter="url(#curveGlow)" />
+          <text x="135" y="24" fill="var(--g-purple)" font-family="var(--font-mono)" font-size="12.5" font-weight="800" text-anchor="middle" letter-spacing="0.8px">★ DAY 100: PROOF OF VALUE</text>
+          <text x="135" y="44" fill="var(--text-muted)" font-family="var(--font-display)" font-size="12" font-weight="600" text-anchor="middle">Proven Value of an Agentic Workforce</text>
+          <line x1="135" y1="58" x2="135" y2="78" stroke="var(--g-purple)" stroke-width="1.5" />
+        </g>
+
+        <!-- Milestone 3 Node: Beyond Day 100 (Enterprise Scaling) -->
+        <circle cx="1130" cy="35" r="7" fill="var(--g-green)" />
+        <circle cx="1130" cy="35" r="13" fill="none" stroke="rgba(0, 175, 87, 0.45)" stroke-width="1.5" />
+        <g transform="translate(930, 8)">
+          <rect x="0" y="0" width="195" height="42" rx="6" fill="#FFFFFF" stroke="var(--g-green)" stroke-width="1.5" filter="url(#curveGlow)" />
+          <text x="97" y="20" fill="var(--green-ink)" font-family="var(--font-mono)" font-size="11" font-weight="800" text-anchor="middle">ENTERPRISE SCALE</text>
+          <text x="97" y="34" fill="var(--text-muted)" font-family="var(--font-display)" font-size="10.5" text-anchor="middle">Agentic workforce 24/7</text>
+        </g>
+
+        <!-- X-Axis Timeline Labels at Bottom -->
+        <text x="245" y="290" fill="var(--blue-ink)" font-family="var(--font-mono)" font-size="12" font-weight="700" text-anchor="middle">WEEKS 01–06: PRIORITIZE</text>
+        <text x="555" y="290" fill="var(--blue-ink)" font-family="var(--font-mono)" font-size="12" font-weight="700" text-anchor="middle">WEEKS 07–14: CO-DEVELOP</text>
+        <text x="720" y="290" fill="var(--g-purple)" font-family="var(--font-mono)" font-size="13" font-weight="800" text-anchor="middle">★ DAY 100</text>
+        <text x="925" y="290" fill="var(--green-ink)" font-family="var(--font-mono)" font-size="12" font-weight="700" text-anchor="middle">BEYOND DAY 100: SCALE WORKFORCE</text>
+      </svg>
+    </div>
+
+    <!-- 5. Simplified 3-Column Milestone Cards (Direct, Zero AI Slop) -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-bottom: 40px;">
+      
+      <!-- Phase 1 Card -->
+      <div style="background: linear-gradient(rgba(49,134,255,.06), rgba(49,134,255,.06)), var(--surface); border: 1px solid var(--border-subtle); border-top: 3px solid var(--g-blue); border-radius: 12px; padding: 20px 20px 22px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+        <div style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 800; color: var(--blue-ink); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;">
+          PHASE 01 // WEEKS 01–06
         </div>
-
-        <!-- ===== 3D TOPOGRAPHICAL TERRAIN (order: 1 — renders first) ===== -->
-        <div style="display: flex; flex-direction: column; gap: 14px; order: 1;">
-          
-          <!-- 3D Canvas Container (Cosmic Void Backdrop) -->
-          <!-- Visual styling lives in the #topology-canvas-container rule above, so it
-                 follows the theme. It used to be inline, which overrode the sheet. -->
-            <div id="topology-canvas-container">
-            
-            <!-- Subtle aqua-teal and solar amber ambient glow -->
-            <div style="position: absolute; inset: 0; pointer-events: none; background: var(--canvas-wash);"></div>
-
-            <canvas id="terrain-canvas" style="position: relative; z-index: 1;"></canvas>
-
-            <!-- Floating 3D Hover Tooltip -->
-            <div id="terrain-tooltip">
-              <div style="font-weight: 800; font-size: 12px; margin-bottom: 2px;" id="tt-title">Peak Name</div>
-              <div style="font-size: 10px; color: var(--security-turquoise); margin-bottom: 4px;" id="tt-persona">Persona</div>
-              <div style="font-size: 11px; color: var(--ink);" id="tt-elevation">Elevation: ₹0 Cr / yr</div>
-            </div>
-
-            <!-- Overlay Compass & Contour Legend (Dynamic Multi-Palette Supported) -->
-            <div id="topology-legend-items" style="position: absolute; bottom: 16px; left: 18px; pointer-events: none; font-family: var(--font-mono); font-size: 10px; color: var(--ink-soft); display: flex; flex-direction: column; gap: 4px; background: var(--panel-glass); backdrop-filter: blur(10px); padding: 10px 14px; border-radius: 6px; border: 1px solid var(--slate-border);">
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: var(--starburst); border-radius: 2px;"></span>
-                <span>&gt; ₹118 Cr / yr (White-Hot Apex Summits • 0ms Collision &amp; Runaway)</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #FC413D; border-radius: 2px; box-shadow: 0 0 6px #FC413D;"></span>
-                <span>₹95–118 Cr / yr (Google Crimson Red • Critical Process Hazard Folds)</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #FEC700; border-radius: 2px; box-shadow: 0 0 6px #FEC700;"></span>
-                <span>₹75–95 Cr / yr (Google Sun Yellow • Friction Bottleneck Ridges)</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #00AF57; border-radius: 2px; box-shadow: 0 0 6px #00AF57;"></span>
-                <span>₹50–75 Cr / yr (Google Emerald Green • Operational Flanks &amp; Slopes)</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 6px #12B5CB;"></span>
-                <span>₹25–50 Cr / yr (Electric Cyan &amp; Sovereign Turquoise • Proven Agent Level)</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #3186FF; border-radius: 2px; box-shadow: 0 0 6px #3186FF;"></span>
-                <span>&lt; ₹25 Cr / yr (Google Blue &amp; Deep Cosmic Indigo • Monolith Plains)</span>
-              </div>
-              <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 8px #12B5CB;"></span>
-                <span>★ Proven Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
-              </div>
-            </div>
-
-            <!-- Top Right Controls Dock (Minimalist Toggle Switch + Status Badge) -->
-            <div style="position: absolute; top: 16px; right: 18px; display: flex; align-items: center; gap: 10px; z-index: 10;">
-              <!-- Minimalist Spectrum Toggle Switch (No Verbose Text Naming) -->
-              <div id="btn-palette-toggle" onclick="togglePalette()" title="Toggle Color Spectrum (Google Light Spectrum ⟷ Oceanic Aqua)" style="cursor: pointer; display: flex; align-items: center; gap: 8px; background: var(--panel-glass); backdrop-filter: blur(8px); border: 1px solid rgba(66, 133, 244, 0.4); padding: 5px 10px; border-radius: 20px; box-shadow: var(--dock-shadow); user-select: none; transition: all 0.25s ease;">
-                <span style="font-size: 12px; line-height: 1;">🎨</span>
-                <div id="palette-switch-track" style="width: 32px; height: 16px; border-radius: 10px; background: rgba(66, 133, 244, 0.25); border: 1px solid rgba(66, 133, 244, 0.6); position: relative; transition: all 0.25s ease;">
-                  <div id="palette-switch-thumb" style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #3186FF, #FC413D); position: absolute; top: 1px; left: 2px; box-shadow: 0 0 6px #3186FF; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);"></div>
-                </div>
-              </div>
-
-              <!-- Status Indicator -->
-              <div style="font-family: var(--font-mono); font-size: 11px; background: var(--panel-glass); border: 1px solid var(--canvas-edge); padding: 6px 14px; border-radius: 20px; color: var(--security-turquoise); display: flex; align-items: center; gap: 8px; box-shadow: var(--dock-shadow);">
-                <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise); box-shadow: 0 0 8px var(--security-turquoise); animation: pulse-dot 1.5s infinite alternate;"></span>
-                <span>4,389-NODE NEBULA PARTICLE ENGINE</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Phase metric strip removed (PHASE 1 / 2 / 3 cards).
-               Dropped with the summit leaderboard: the "₹570 Cr / yr" figure
-               did not reconcile with the five summits it cited, named a sixth
-               agent (Tank Overfill) that was never in the data, and "84
-               Value-Unlock Agents" conflicts with the 232 in the value model.
-               The .phase-metric-val / .phase-metric-desc rules at
-               assets/styles.css:2727-2734 are now dead; they were the only
-               light-mode support this page ever had.
-               Original: legacy_strategic_files/page_09_pre_light/ -->
-
+        <div style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 12px;">
+          Prioritized Workflows
         </div>
+        <ul style="margin: 0 0 16px 0; padding-left: 18px; font-size: 14px; line-height: 1.6; color: var(--text-muted);">
+          <li>Nominate initial domain leads and critical workflows</li>
+          <li>Identify tasks with high operational friction, delay, or risk</li>
+          <li>Integrate with existing workflows</li>
+        </ul>
+        <div style="margin-top: auto; font-family: var(--font-mono); font-size: 11.5px; color: var(--blue-ink); background: rgba(49, 134, 255, 0.07); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(49, 134, 255, 0.25);">
+          OUTPUT: Prioritized Personas &amp; Workflows
+        </div>
+      </div>
 
+      <!-- Phase 2 Card (Day 100 Hero) -->
+      <div style="background: linear-gradient(rgba(75,49,227,.07), rgba(75,49,227,.07)), var(--surface); border: 1px solid var(--border-subtle); border-top: 3px solid var(--g-purple); border-radius: 12px; padding: 20px 20px 22px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+        <div style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 800; color: var(--purple-ink); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;">
+          PHASE 02 // DAY 100 MILESTONE
+        </div>
+        <div style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 12px;">
+          Co-Develop &amp; Prove Value
+        </div>
+        <ul style="margin: 0 0 16px 0; padding-left: 18px; font-size: 14px; line-height: 1.6; color: var(--text-muted);">
+          <li>Co-develop targeted agents alongside your domain specialists</li>
+          <li>Validate mathematical accuracy against real historical data</li>
+          <li>Quantify Agent ROI before enterprise rollout</li>
+        </ul>
+        <div style="margin-top: auto; font-family: var(--font-mono); font-size: 11.5px; color: var(--purple-ink); background: rgba(75, 49, 227, 0.07); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(75, 49, 227, 0.28);">
+          OUTPUT: Proven Value of an Agentic Workforce
+        </div>
+      </div>
+
+      <!-- Phase 3 Card -->
+      <div style="background: linear-gradient(rgba(0,175,87,.06), rgba(0,175,87,.06)), var(--surface); border: 1px solid var(--border-subtle); border-top: 3px solid var(--g-green); border-radius: 12px; padding: 20px 20px 22px; display: flex; flex-direction: column; box-shadow: var(--shadow-sm);">
+        <div style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 800; color: var(--green-ink); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;">
+          PHASE 03 // BEYOND DAY 100
+        </div>
+        <div style="font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 12px;">
+          Scale the Agentic Workforce
+        </div>
+        <ul style="margin: 0 0 16px 0; padding-left: 18px; font-size: 14px; line-height: 1.6; color: var(--text-muted);">
+          <li>Expand proven agents across relevant teams and departments</li>
+          <li>Automate connected operational workflows 24/7</li>
+          <li>Manage and govern agentic workforce</li>
+        </ul>
+        <div style="margin-top: auto; font-family: var(--font-mono); font-size: 11.5px; color: var(--green-ink); background: rgba(0, 175, 87, 0.08); padding: 6px 12px; border-radius: 4px; border: 1px solid rgba(0, 175, 87, 0.25);">
+          OUTPUT: Enterprise-Wide Automation
+        </div>
       </div>
 
     </div>
 
+  </div>
+</section>
+
   </main>
 
-  <!-- Self-Contained 3D Topographical Canvas Engine (Zero External Dependencies) -->
+  <!-- Floating Page Dock -->
+  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: var(--surface); border: 1px solid var(--border-hairline); border-radius: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(18,19,23,.14); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+    <a href="page_08.html" style="background: var(--surface-sunk); border: 1px solid var(--border); color: var(--text-muted); width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none;">
+      ◀
+    </a>
+    <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: var(--text-muted); white-space: nowrap;">
+      PAGE 10 // 100 DAYS TO PROOF OF VALUE (CONCLUSION)
+    </div>
+    <a href="page_00.html" style="background: var(--g-blue); border: none; color: #FFF; padding: 7px 16px; border-radius: 20px; font-family: var(--font-display); font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+      <span>Overview</span>
+      <span>↺</span>
+    </a>
+  </aside>
+
+  <!-- Interactive Scripts -->
   <script>
-    // 1. (SUMMIT_COORDINATES removed.)
-    //    Five hardcoded peaks with ₹45/130/120/115/90 Cr labels. The values were
-    //    literals with no derivation from data/value_model.js, and the elevation
-    //    grid below is harmonic, not measured. Both consumers (the canvas beacon
-    //    layer and focusSummit) have been removed with it.
-    //    Original: legacy_strategic_files/page_09_pre_light/page_09_dark_original.html
-
-    // 2. Generate 20×15 Elevation Grid (₹ Cr Capital at Risk)
-    // Undulating wave patterns inspired by the natural fluid billowing folds of image78.png
-    const ROWS = 20;
-    const COLS = 15;
-    const elevationMatrix = [];
-
-    for (let r = 0; r < ROWS; r++) {
-      const row = [];
-      for (let c = 0; c < COLS; c++) {
-        // Natural harmonic wave ripples creating graceful cloth billows
-        let val = 15 + Math.sin(r * 0.42 + c * 0.25) * 8 + Math.cos(c * 0.65 - r * 0.2) * 6;
-        
-        // Downstream refining high-energy crest ridge
-        if (r >= 14 && r <= 18) val += 18 + Math.sin(c * 0.85) * 14;
-        // Drilling high-consequence ridge
-        else if (r >= 2 && r <= 6) val += 14 + Math.cos(c * 0.75) * 12;
-
-        // Specific high-consequence operational peaks (exact financial exposure)
-        if (r === 9 && c === 7) val = 75; // Kansas Petrophysicist Center (Proven Agent)
-        else if (r === 16 && c === 0) val = 130; // Hydrocracker runaway
-        else if (r === 3 && c === 1) val = 120; // Drilling anti-collision
-        else if (r === 15 && c === 0) val = 115; // FCCU Slide valve
-        else if (r === 14 && c === 0) val = 90; // CDU blend
-        else if (r === 19 && c === 0) val = 120; // PSM SIS bypass
-        else if (r === 13 && c === 11) val = 120; // Marine tank overfill
-        else if (r === 6 && c === 1) val = 95; // Casing APB burst
-        else if (r === 10 && c === 5) val = 95; // Flare KO drum liquid
-        else if (r === 11 && c === 1) val = 90; // Flow assurance severe slugging
-        else if (r === 4 && c === 12) val = 85; // Mud H2S scavenger
-        else if (r === 1 && c === 6) val = 85; // Pore pressure kick
-        else if (r === 5 && c === 0) val = 90; // Directional geosteering
-
-        row.push(Math.max(8, val));
-      }
-      elevationMatrix.push(row);
-    }
-
-    // Palette state: 'google' (Google Light Spectrum) vs 'aqua' (Oceanic Aqua) vs 'gemini' (Gemini Cosmic)
-    let currentPalette = 'google';
-
-    function getRadarClass(val, r, c) {
-      if (r === 9 && c === 7) return 'mini-plugged';
-      if (currentPalette === 'google') {
-        if (val >= 118) return 'mini-starburst';
-        if (val >= 95) return 'mini-red';
-        if (val >= 75) return 'mini-yellow';
-        if (val >= 50) return 'mini-green';
-        if (val >= 25) return 'mini-aquagreen';
-        return 'mini-blue';
-      } else if (currentPalette === 'aqua') {
-        if (val >= 95) return 'mini-starburst';
-        if (val >= 60) return 'mini-amber';
-        if (val >= 25) return 'mini-aquagreen';
-        return 'mini-teal';
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
       } else {
-        if (val >= 115) return 'mini-starburst';
-        if (val >= 90) return 'mini-amber';
-        if (val >= 60) return 'mini-orchid';
-        if (val >= 30) return 'mini-aquagreen';
-        return 'mini-indigo';
+        document.exitFullscreen();
       }
     }
 
-    // 3. Render 2D Mini Coordinate Radar on Left (Nebula Coordinated Colors)
-    const miniRadarEl = document.getElementById('mini-matrix-radar');
-    if (miniRadarEl) {
-      let radarHTML = '';
-      for (let r = 0; r < ROWS; r++) {
-        for (let c = 0; c < COLS; c++) {
-          const val = elevationMatrix[r][c];
-          const statusClass = getRadarClass(val, r, c);
-
-          radarHTML += `
-            <div class="mini-cell ${statusClass}" 
-                 id="mcell-${r}-${c}"
-                 data-r="${r}" data-c="${c}" data-val="${val.toFixed(0)}"
-                 onmouseenter="highlightRadarCell(${r}, ${c})"
-                 onclick="focusGridCoordinate(${r}, ${c})"
-                 title="Row ${r+1}, Col ${c+1}: ₹${val.toFixed(0)} Cr / yr"></div>
-          `;
-        }
-      }
-      miniRadarEl.innerHTML = radarHTML;
-    }
-
-    function updateRadarCells() {
-      for (let r = 0; r < ROWS; r++) {
-        for (let c = 0; c < COLS; c++) {
-          const cell = document.getElementById(`mcell-${r}-${c}`);
-          if (!cell) continue;
-          const val = elevationMatrix[r][c];
-          cell.className = `mini-cell ${getRadarClass(val, r, c)}`;
-        }
-      }
-    }
-
-    // 4. Pure HTML5 Canvas 3D Nebula Topography Engine
-    const canvas = document.getElementById('terrain-canvas');
-    const container = document.getElementById('topology-canvas-container');
-    const ctx = canvas.getContext('2d');
-    const tooltipEl = document.getElementById('terrain-tooltip');
-    const ttTitle = document.getElementById('tt-title');
-    const ttPersona = document.getElementById('tt-persona');
-    const ttElevation = document.getElementById('tt-elevation');
-
-    // Camera State
-    let angleX = 0.65; // Pitch (vertical tilt)
-    let angleY = -0.55; // Yaw (horizontal rotation)
-    let zoom = 1.0;
-    let autoRotate = true;
-    let isDragging = false;
-    let lastMouseX = 0;
-    let lastMouseY = 0;
-    let highlightedCoord = { r: 9, c: 7 }; // default focus Kansas Lighthouse Agent
-    let pulsePhase = 0;
-
-    function resizeCanvas() {
-      if (!canvas || !container) return;
-      const rect = container.getBoundingClientRect();
-      const dpr = window.devicePixelRatio || 1;
-      const width = rect.width || container.clientWidth || 800;
-      const height = rect.height || container.clientHeight || 640;
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    }
-
-    // 3D Projection Math (Euler Pitch/Yaw + Perspective Divide)
-    function project3D(x, y, z, width, height) {
-      // Rotate around Y axis (yaw)
-      const cosY = Math.cos(angleY);
-      const sinY = Math.sin(angleY);
-      const x1 = x * cosY - z * sinY;
-      const z1 = x * sinY + z * cosY;
-
-      // Rotate around X axis (pitch)
-      const cosX = Math.cos(angleX);
-      const sinX = Math.sin(angleX);
-      const y2 = y * cosX - z1 * sinX;
-      const z2 = y * sinX + z1 * cosX;
-
-      // Perspective divide
-      const fov = 420 * zoom;
-      const distance = 265;
-      const scale = fov / (z2 + distance);
-
-      // Baseline anchored at bottom 2/3rd of the screen (~67% down), eliminating empty void at bottom as peaks rise
-      const baseAnchorY = height * (0.67 - (angleX - 0.65) * 0.20);
-      const screenX = width / 2 + x1 * scale;
-      const screenY = baseAnchorY - y2 * scale;
-
-      return {
-        x: screenX,
-        y: screenY,
-        depth: z2,
-        scale: scale
-      };
-    }
-
-    // 2D Bicubic Catmull-Rom Spline Interpolation Engine
-    function catmullRom1D(p0, p1, p2, p3, t) {
-      const t2 = t * t;
-      const t3 = t2 * t;
-      return 0.5 * (
-        (2 * p1) +
-        (-p0 + p2) * t +
-        (2 * p0 - 5 * p1 + 4 * p2 - p3) * t2 +
-        (-p0 + 3 * p1 - 3 * p2 + p3) * t3
-      );
-    }
-
-    function getCoarseElev(r, c) {
-      const cr = Math.max(0, Math.min(ROWS - 1, r));
-      const cc = Math.max(0, Math.min(COLS - 1, c));
-      return elevationMatrix[cr][cc];
-    }
-
-    function sampleSplineElevation(u, v) {
-      const r1 = Math.floor(u);
-      const c1 = Math.floor(v);
-      const tr = u - r1;
-      const tc = v - c1;
-
-      const r0 = r1 - 1, r2 = r1 + 1, r3 = r1 + 2;
-      const c0 = c1 - 1, c2 = c1 + 1, c3 = c1 + 2;
-
-      const col0 = catmullRom1D(getCoarseElev(r0, c0), getCoarseElev(r0, c1), getCoarseElev(r0, c2), getCoarseElev(r0, c3), tc);
-      const col1 = catmullRom1D(getCoarseElev(r1, c0), getCoarseElev(r1, c1), getCoarseElev(r1, c2), getCoarseElev(r1, c3), tc);
-      const col2 = catmullRom1D(getCoarseElev(r2, c0), getCoarseElev(r2, c1), getCoarseElev(r2, c2), getCoarseElev(r2, c3), tc);
-      const col3 = catmullRom1D(getCoarseElev(r3, c0), getCoarseElev(r3, c1), getCoarseElev(r3, c2), getCoarseElev(r3, c3), tc);
-
-      const val = catmullRom1D(col0, col1, col2, col3, tr);
-      return Math.max(8, val);
-    }
-
-    // High-Density Nebula Mesh Subdivision: 4x Subdivisions (77 x 57 = 4,389 Nodes)
-    const SUB_R = 4;
-    const SUB_C = 4;
-    const FINE_ROWS = (ROWS - 1) * SUB_R + 1; // 77 vertices
-    const FINE_COLS = (COLS - 1) * SUB_C + 1; // 57 vertices
-    const gridWidth = 270;
-    const gridDepth = 205;
-
-    const fineGridPoints = [];
-    for (let fi = 0; fi < FINE_ROWS; fi++) {
-      fineGridPoints[fi] = [];
-      const u = (fi / (FINE_ROWS - 1)) * (ROWS - 1);
-      const rawZ = (fi / (FINE_ROWS - 1) - 0.5) * gridDepth;
-
-      for (let fj = 0; fj < FINE_COLS; fj++) {
-        const v = (fj / (FINE_COLS - 1)) * (COLS - 1);
-        const rawX = (fj / (FINE_COLS - 1) - 0.5) * gridWidth;
-        const elev = sampleSplineElevation(u, v);
-        const rawY = elev * 0.82; // Vertical amplitude
-
-        fineGridPoints[fi][fj] = {
-          rawX, rawY, rawZ,
-          elev,
-          u, v, fi, fj
-        };
-      }
-    }
-
-    // Authentic Tri-Palette Topography Engine: Google Light Spectrum, Oceanic Aqua & Gemini Cosmic
-    /* Luminance clamp for the light background.
-       The colour ramps below were authored as emissive light on a near-black
-       void. On white the bright bands invert into invisibility, so every
-       terrain colour is passed through inkLimit(), which scales it down until
-       its relative luminance sits under the ceiling. Hue and band ordering are
-       preserved; only brightness is capped.
-
-       In dark mode the ceiling is 1.0, which makes inkLimit() a no-op and
-       restores the original artwork exactly. */
-    const INK_CEILING_LIGHT = 0.62;
-    let LIGHT_INK_CEILING = INK_CEILING_LIGHT;
-    let ringInkPrimary = 'rgba(10, 118, 132, 0.13)';
-    let ringInkAccent = 'rgba(138, 98, 0, 0.10)';
-    let reticleInk = '#121317';
-
-    function syncCanvasTheme() {
-      const dark = document.documentElement.classList.contains('theme-dark');
-      LIGHT_INK_CEILING = dark ? 1.0 : INK_CEILING_LIGHT;
-      ringInkPrimary = dark ? 'rgba(18, 181, 203, 0.05)' : 'rgba(10, 118, 132, 0.13)';
-      ringInkAccent = dark ? 'rgba(245, 158, 11, 0.03)' : 'rgba(138, 98, 0, 0.10)';
-      reticleInk = dark ? '#FFFFFF' : '#121317';
-    }
-    syncCanvasTheme();
-
-    function inkLimit(r, g, b) {
-      const lum = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
-      if (lum <= LIGHT_INK_CEILING || lum === 0) return [r, g, b];
-      const k = LIGHT_INK_CEILING / lum;
-      return [Math.round(r * k), Math.round(g * k), Math.round(b * k)];
-    }
-
-    function inkLimitHex(hex) {
-      if (typeof hex !== 'string' || hex.charAt(0) !== '#' || hex.length !== 7) return hex;
-      const [r, g, b] = inkLimit(
-        parseInt(hex.slice(1, 3), 16),
-        parseInt(hex.slice(3, 5), 16),
-        parseInt(hex.slice(5, 7), 16)
-      );
-      return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
-    }
-
-    function getNebulaColor(elev, alpha = 1.0) {
-      const norm = Math.max(0, Math.min(1, (elev - 8) / (130 - 8)));
-
-      let r, g, b, strokeR, strokeG, strokeB, dotColor, glowColor;
-
-      if (currentPalette === 'google') {
-        // --- 1. GOOGLE PHYSICAL LIGHT SPECTRUM (WAVELENGTH ORDER ROYGBIV) ---
-        // Cosmic Indigo -> Google Blue (460nm) -> Sovereign Turquoise (490nm) -> Google Emerald Green (530nm) -> Google Sun Yellow (580nm) -> Google Crimson Red (650nm) -> Starburst White (>700nm apex)
-        if (norm < 0.15) {
-          // 1. Deep Cosmic Indigo (15, 23, 60) -> Google Blue (66, 133, 244) [< ₹26 Cr]
-          const t = norm / 0.15;
-          r = Math.round(15 + 51 * t);
-          g = Math.round(23 + 110 * t);
-          b = Math.round(60 + 184 * t);
-          strokeR = Math.round(30 + 50 * t);
-          strokeG = Math.round(50 + 90 * t);
-          strokeB = Math.round(120 + 130 * t);
-          dotColor = '#8AB4F8';
-          glowColor = 'rgba(96, 165, 250, 0.35)';
-        } else if (norm < 0.35) {
-          // 2. Google Blue (66, 133, 244) -> Sovereign Turquoise (18, 181, 203) [₹26–51 Cr - Lighthouse Agent]
-          const t = (norm - 0.15) / 0.20;
-          r = Math.round(66 - 66 * t);
-          g = Math.round(133 + 77 * t);
-          b = Math.round(244 - 64 * t);
-          strokeR = 0;
-          strokeG = Math.round(160 + 55 * t);
-          strokeB = Math.round(240 - 40 * t);
-          dotColor = '#12B5CB';
-          glowColor = 'rgba(18, 181, 203, 0.45)';
-        } else if (norm < 0.55) {
-          // 3. Sovereign Turquoise (18, 181, 203) -> Google Emerald Green (52, 168, 83) [₹51–75 Cr - Operational Slopes]
-          const t = (norm - 0.35) / 0.20;
-          r = Math.round(0 + 52 * t);
-          g = Math.round(210 - 42 * t);
-          b = Math.round(180 - 97 * t);
-          strokeR = Math.round(52 * t);
-          strokeG = Math.round(215 - 35 * t);
-          strokeB = Math.round(170 - 80 * t);
-          dotColor = '#5BB974';
-          glowColor = 'rgba(74, 222, 128, 0.50)';
-        } else if (norm < 0.75) {
-          // 4. Google Green (52, 168, 83) -> Google Sun Yellow (251, 188, 4) [₹75–100 Cr - Friction Bottleneck Ridges]
-          const t = (norm - 0.55) / 0.20;
-          r = Math.round(52 + 199 * t);
-          g = Math.round(168 + 20 * t);
-          b = Math.round(83 - 79 * t);
-          strokeR = Math.round(60 + 195 * t);
-          strokeG = Math.round(180 + 35 * t);
-          strokeB = Math.round(90 * (1 - t));
-          dotColor = '#FDD663';
-          glowColor = 'rgba(253, 224, 71, 0.65)';
-        } else if (norm < 0.90) {
-          // 5. Google Yellow (251, 188, 4) -> Google Crimson Red (234, 67, 53) [₹100–118 Cr - Process Hazards]
-          const t = (norm - 0.75) / 0.15;
-          r = Math.round(251 - 17 * t);
-          g = Math.round(188 - 121 * t);
-          b = Math.round(4 + 49 * t);
-          strokeR = 255;
-          strokeG = Math.round(210 - 130 * t);
-          strokeB = Math.round(40 + 30 * t);
-          dotColor = '#F28B82';
-          glowColor = 'rgba(248, 113, 113, 0.75)';
-        } else {
-          // 6. Google Red (234, 67, 53) -> Starburst Pure White (255, 255, 255) [> ₹118 Cr - Apex Summits]
-          const t = (norm - 0.90) / 0.10;
-          r = Math.round(234 + 21 * t);
-          g = Math.round(67 + 188 * t);
-          b = Math.round(53 + 202 * t);
-          strokeR = 255;
-          strokeG = 255;
-          strokeB = 255;
-          dotColor = '#FFFFFF';
-          glowColor = 'rgba(255, 255, 255, 0.95)';
-        }
-      } else if (currentPalette === 'aqua') {
-        // --- 2. OCEANIC AQUA & TURQUOISE MONOCHROME SPECTRUM ---
-        if (norm < 0.22) {
-          // Deep Oceanic Teal & Marine Void (< ₹35 Cr)
-          const t = norm / 0.22;
-          r = Math.round(4 + (8 - 4) * t);
-          g = Math.round(35 + (72 - 35) * t);
-          b = Math.round(42 + (78 - 42) * t);
-          strokeR = Math.round(0 + 20 * t);
-          strokeG = Math.round(140 + 40 * t);
-          strokeB = Math.round(150 + 30 * t);
-          dotColor = '#6FD3E0';
-          glowColor = 'rgba(94, 234, 212, 0.3)';
-        } else if (norm < 0.52) {
-          // Luminous Aqua-Green & Electric Turquoise (₹35–72 Cr)
-          const t = (norm - 0.22) / 0.30;
-          r = Math.round(8 + (0 - 8) * t);
-          g = Math.round(72 + (210 - 72) * t);
-          b = Math.round(78 + (180 - 78) * t);
-          strokeR = 0;
-          strokeG = Math.round(180 + 55 * t);
-          strokeB = Math.round(180 + 35 * t);
-          dotColor = '#12B5CB';
-          glowColor = 'rgba(18, 181, 203, 0.45)';
-        } else if (norm < 0.74) {
-          // Molten Solar Gold & Amber Heat Vein (₹72–98 Cr)
-          const t = (norm - 0.52) / 0.22;
-          r = Math.round(0 + (245 - 0) * t);
-          g = Math.round(210 + (158 - 210) * t);
-          b = Math.round(180 + (11 - 180) * t);
-          strokeR = 255;
-          strokeG = Math.round(220 + (200 - 220) * t);
-          strokeB = Math.round(120 + (30 - 120) * t);
-          dotColor = '#FDD663';
-          glowColor = 'rgba(253, 224, 71, 0.6)';
-        } else {
-          // Starburst Cyan & Pure White Summits (> ₹98 Cr)
-          const t = (norm - 0.74) / 0.26;
-          r = Math.round(0 + (255 - 0) * t);
-          g = Math.round(240 + (255 - 240) * t);
-          b = 255;
-          strokeR = 255;
-          strokeG = 255;
-          strokeB = 255;
-          dotColor = '#FFFFFF';
-          glowColor = 'rgba(0, 240, 255, 0.85)';
-        }
-      } else {
-        // --- 3. REBALANCED OFFICIAL GOOGLE GEMINI SPECTRUM ---
-        // Blends image78 turquoise with official Gemini violet, magenta, amber, and starburst white
-        if (norm < 0.18) {
-          // Deep Space Indigo & Midnight Navy Plains (< ₹30 Cr)
-          const t = norm / 0.18;
-          r = Math.round(10 + (22 - 10) * t);
-          g = Math.round(16 + (32 - 16) * t);
-          b = Math.round(38 + (75 - 38) * t);
-          strokeR = Math.round(35 + 35 * t);
-          strokeG = Math.round(50 + 60 * t);
-          strokeB = Math.round(110 + 80 * t);
-          dotColor = '#C6B2FF';
-          glowColor = 'rgba(129, 140, 248, 0.35)';
-        } else if (norm < 0.42) {
-          // Sovereign Turquoise & Electric Azure River (₹30–60 Cr - signature image78 aura)
-          const t = (norm - 0.18) / 0.24;
-          r = Math.round(0 + (0 - 0) * t);
-          g = Math.round(180 + (163 - 180) * t);
-          b = Math.round(180 + (255 - 180) * t);
-          strokeR = 0;
-          strokeG = Math.round(210 + (180 - 210) * t);
-          strokeB = Math.round(200 + (255 - 200) * t);
-          dotColor = '#12B5CB';
-          glowColor = 'rgba(18, 181, 203, 0.45)';
-        } else if (norm < 0.68) {
-          // Gemini Orchid Violet & Radiant Magenta (₹60–90 Cr - friction ridges)
-          const t = (norm - 0.42) / 0.26;
-          r = Math.round(139 + (219 - 139) * t);
-          g = Math.round(92 + (39 - 92) * t);
-          b = Math.round(246 + (119 - 246) * t);
-          strokeR = 245;
-          strokeG = Math.round(110 + (50 - 110) * t);
-          strokeB = Math.round(245 + (160 - 245) * t);
-          dotColor = '#E8710A';
-          glowColor = 'rgba(244, 114, 182, 0.55)';
-        } else if (norm < 0.88) {
-          // Molten Solar Gold & Sunburst Amber (₹90–115 Cr - critical warning folds)
-          const t = (norm - 0.68) / 0.20;
-          r = Math.round(234 + (245 - 234) * t);
-          g = Math.round(88 + (158 - 88) * t);
-          b = Math.round(12 + (11 - 12) * t);
-          strokeR = 255;
-          strokeG = Math.round(215 + 40 * t);
-          strokeB = Math.round(40 * (1 - t));
-          dotColor = '#FDD663';
-          glowColor = 'rgba(253, 224, 71, 0.65)';
-        } else {
-          // Starburst Cyan & Pure Brilliant White Summits (> ₹115 Cr)
-          const t = (norm - 0.88) / 0.12;
-          r = Math.round(0 + (255 - 0) * t);
-          g = Math.round(240 + (255 - 240) * t);
-          b = 255;
-          strokeR = 255;
-          strokeG = 255;
-          strokeB = 255;
-          dotColor = '#FFFFFF';
-          glowColor = 'rgba(0, 240, 255, 0.9)';
-        }
-      }
-
-      // ---- Light-background adaptation -------------------------------------
-      // The two ramps above were authored as emissive light against a near-black
-      // void: bright, low-alpha fills that glow. On white they invert into
-      // invisibility (the apex band is literally 255,255,255). inkLimit() keeps
-      // each band's hue and ordering but caps luminance so every step stays
-      // legible as ink on white. Opacities are raised for the same reason.
-      const [ir, ig, ib] = inkLimit(r, g, b);
-      const [sr, sg, sb] = inkLimit(strokeR, strokeG, strokeB);
-
-      return {
-        fill: `rgba(${ir}, ${ig}, ${ib}, ${alpha * 0.42})`,
-        stroke: `rgba(${sr}, ${sg}, ${sb}, ${Math.min(1, alpha * 0.85)})`,
-        dot: inkLimitHex(dotColor),
-        glow: glowColor,
-        r: ir, g: ig, b: ib,
-        norm
-      };
-    }
-
-    // Main 3D Nebula Render Loop
-    function render3D() {
-      const rect = container.getBoundingClientRect();
-      const width = rect.width || container.clientWidth || 800;
-      const height = rect.height || container.clientHeight || 640;
-
-      ctx.clearRect(0, 0, width, height);
-
-      // Subtle ambient orbital radar rings in the cosmic void
-      ctx.strokeStyle = ringInkPrimary;
-      ctx.lineWidth = 1;
-      for (let r = 100; r < 450; r += 85) {
-        ctx.beginPath();
-        ctx.arc(width / 2, height * 0.67, r, 0, Math.PI * 2);
-        ctx.stroke();
-      }
-      ctx.strokeStyle = ringInkAccent;
-      ctx.beginPath();
-      ctx.arc(width / 2, height * 0.67, 320, 0, Math.PI * 2);
-      ctx.stroke();
-
-      // Project all 4,389 fine grid vertices and pre-calculate color tokens
-      const projectedMesh = [];
-      const plugFi = 9 * SUB_R; // Row 10 (index 9) -> Kansas Petrophysicist
-      const plugFj = 7 * SUB_C; // Col 08 (index 7)
-
-      for (let fi = 0; fi < FINE_ROWS; fi++) {
-        projectedMesh[fi] = [];
-        for (let fj = 0; fj < FINE_COLS; fj++) {
-          const pt = fineGridPoints[fi][fj];
-          projectedMesh[fi][fj] = {
-            rawX: pt.rawX,
-            rawY: pt.rawY,
-            rawZ: pt.rawZ,
-            elev: pt.elev,
-            p: project3D(pt.rawX, pt.rawY, pt.rawZ, width, height),
-            col: getNebulaColor(pt.elev)
-          };
-        }
-      }
-
-      // Build Fine Cloth Quads
-      const quads = [];
-      for (let fi = 0; fi < FINE_ROWS - 1; fi++) {
-        for (let fj = 0; fj < FINE_COLS - 1; fj++) {
-          const p1 = projectedMesh[fi][fj];
-          const p2 = projectedMesh[fi][fj + 1];
-          const p3 = projectedMesh[fi + 1][fj + 1];
-          const p4 = projectedMesh[fi + 1][fj];
-
-          const avgDepth = (p1.p.depth + p2.p.depth + p3.p.depth + p4.p.depth) * 0.25;
-          const avgElev = (p1.elev + p2.elev + p3.elev + p4.elev) * 0.25;
-
-          // Sovereign Sanctuary around Lighthouse Agent (Kansas Petrophysicist Wireline Splicing)
-          const isPluggedQuad = (Math.abs(fi - plugFi) <= 2 && Math.abs(fj - plugFj) <= 2);
-
-          quads.push({ 
-            p1, p2, p3, p4, 
-            avgDepth, avgElev, 
-            isPluggedQuad, 
-            fi, fj,
-            col: getNebulaColor(avgElev)
-          });
-        }
-      }
-
-      // Depth sort back to front (Painter's Algorithm)
-      quads.sort((a, b) => b.avgDepth - a.avgDepth);
-
-      // 1. Render Translucent Silk-Cloth Quads (Transmits light through undulating folds)
-      quads.forEach(q => {
-        ctx.beginPath();
-        ctx.moveTo(q.p1.p.x, q.p1.p.y);
-        ctx.lineTo(q.p2.p.x, q.p2.p.y);
-        ctx.lineTo(q.p3.p.x, q.p3.p.y);
-        ctx.lineTo(q.p4.p.x, q.p4.p.y);
-        ctx.closePath();
-
-        if (q.isPluggedQuad) {
-          ctx.fillStyle = 'rgba(18, 181, 203, 0.52)';
-          ctx.strokeStyle = '#12B5CB';
-          ctx.lineWidth = 0.9;
-        } else {
-          ctx.fillStyle = q.col.fill;
-          ctx.strokeStyle = q.col.stroke;
-          ctx.lineWidth = 0.45;
-        }
-
-        ctx.fill();
-        ctx.stroke();
-      });
-
-      // 2. Render Continuous Spline Flow Ribbons (Streamlines echoing image78.png)
-      for (let fj = 0; fj < FINE_COLS; fj += 3) {
-        ctx.beginPath();
-        for (let fi = 0; fi < FINE_ROWS; fi++) {
-          const pt = projectedMesh[fi][fj];
-          if (fi === 0) ctx.moveTo(pt.p.x, pt.p.y);
-          else ctx.lineTo(pt.p.x, pt.p.y);
-        }
-        const midElev = projectedMesh[Math.floor(FINE_ROWS / 2)][fj].elev;
-        const streamCol = getNebulaColor(midElev, 0.9);
-        ctx.strokeStyle = streamCol.stroke;
-        ctx.lineWidth = 0.7;
-        ctx.stroke();
-      }
-
-      // 3. Render Luminous Stardust Particles (ONLY at High Peaks & Summits)
-      for (let fi = 0; fi < FINE_ROWS; fi++) {
-        for (let fj = 0; fj < FINE_COLS; fj++) {
-          const pt = projectedMesh[fi][fj];
-          const sp = pt.p;
-          if (sp.depth < -180) continue; // Behind camera clipping
-
-          const elev = pt.elev;
-          const isPlugged = (Math.abs(fi - plugFi) <= 1 && Math.abs(fj - plugFj) <= 1);
-
-          // ONLY render stardust dots at peaks (elev >= 75 Cr) or at Lighthouse Agent
-          if (elev < 75 && !isPlugged) continue;
-
-          const col = pt.col;
-
-          // Gentle, refined stardust dot size at the peaks
-          let r = (0.55 + col.norm * 1.1) * (sp.scale / 1.6);
-          r = Math.max(0.6, Math.min(2.2, r));
-
-          if (isPlugged) {
-            ctx.beginPath();
-            ctx.arc(sp.x, sp.y, r * 1.8, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(18, 181, 203, 0.4)';
-            ctx.fill();
-
-            ctx.beginPath();
-            ctx.arc(sp.x, sp.y, r, 0, Math.PI * 2);
-            ctx.fillStyle = '#12B5CB';
-            ctx.fill();
-          } else {
-            // High summits (elev >= 95 Cr) have soft celestial halo
-            if (elev >= 95) {
-              ctx.beginPath();
-              ctx.arc(sp.x, sp.y, r * 1.6, 0, Math.PI * 2);
-              ctx.fillStyle = col.glow;
-              ctx.fill();
-            }
-
-            // Core bright stardust dot crowning the peak
-            ctx.beginPath();
-            ctx.arc(sp.x, sp.y, r, 0, Math.PI * 2);
-            ctx.fillStyle = col.dot;
-            ctx.fill();
-          }
-        }
-      }
-
-      // 4. (Summit beacon layer removed.)
-      //    Previously drew vertical light pillars, pulsing halos and billboard
-      //    "₹NN Cr" labels for five hardcoded summits. Those figures were not
-      //    sourced from the data layer, and the layer's white dots and near-black
-      //    label chips could not survive a white background. Peak identification
-      //    is now hover-only via #terrain-tooltip.
-      pulsePhase += 0.04;
-
-      // 5. Highlighted Radar Target Cursor Reticle
-      if (highlightedCoord) {
-        const fi = highlightedCoord.r * SUB_R;
-        const fj = highlightedCoord.c * SUB_C;
-        if (projectedMesh[fi] && projectedMesh[fi][fj]) {
-          const hp = projectedMesh[fi][fj];
-          const reticlePulse = 8 + Math.sin(pulsePhase * 2) * 3;
-          ctx.beginPath();
-          ctx.arc(hp.p.x, hp.p.y, reticlePulse, 0, Math.PI * 2);
-          ctx.strokeStyle = reticleInk;
-          ctx.lineWidth = 2;
-          ctx.stroke();
-
-          ctx.beginPath();
-          ctx.arc(hp.p.x, hp.p.y, reticlePulse + 5, 0, Math.PI * 2);
-          ctx.strokeStyle = 'rgba(18, 181, 203, 0.7)';
-          ctx.lineWidth = 1;
-          ctx.setLineDash([2, 2]);
-          ctx.stroke();
-          ctx.setLineDash([]);
-        }
-      }
-
-      // Auto-rotation increment
-      if (autoRotate && !isDragging) {
-        angleY += 0.0022;
-      }
-
-      requestAnimationFrame(render3D);
-    }
-
-    // Mouse Controls (Orbit, Rotate, Zoom)
-    canvas.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      lastMouseX = e.clientX;
-      lastMouseY = e.clientY;
-      autoRotate = false;
-      const btn = document.getElementById('btn-auto-rotate');
-      if (btn) {
-        btn.innerText = 'Auto-Rotate: OFF';
-        btn.classList.remove('active');
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        window.location.href = 'page_08.html';
+      } else if (e.key === 'ArrowRight' || e.key === ' ') {
+        window.location.href = 'page_00.html';
+      } else if (e.key.toLowerCase() === 'f') {
+        toggleFullscreen();
       }
     });
-
-    window.addEventListener('mouseup', () => {
-      isDragging = false;
-    });
-
-    window.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
-      const dx = e.clientX - lastMouseX;
-      const dy = e.clientY - lastMouseY;
-
-      angleY += dx * 0.008;
-      angleX = Math.max(0.2, Math.min(1.4, angleX + dy * 0.006)); // pitch clamp
-
-      lastMouseX = e.clientX;
-      lastMouseY = e.clientY;
-    });
-
-    // Zoom via Scroll Wheel
-    canvas.addEventListener('wheel', (e) => {
-      e.preventDefault();
-      const delta = e.deltaY > 0 ? -0.08 : 0.08;
-      zoom = Math.max(0.55, Math.min(2.2, zoom + delta));
-    }, { passive: false });
-
-    // Buttons
-    function toggleAutoRotate() {
-      autoRotate = !autoRotate;
-      const btn = document.getElementById('btn-auto-rotate');
-      if (btn) {
-        btn.innerText = `Auto-Rotate: ${autoRotate ? 'ON' : 'OFF'}`;
-        btn.classList.toggle('active', autoRotate);
-      }
-    }
-
-    // Airlock-Proof Native Camera Tweening (Zero External Dependencies)
-    let activeCameraTween = null;
-    function tweenCamera(targetState, duration = 850) {
-      if (activeCameraTween) cancelAnimationFrame(activeCameraTween);
-      const startPitch = angleX;
-      const startYaw = angleY;
-      const startZoom = zoom;
-      const targetPitch = targetState.aX !== undefined ? targetState.aX : startPitch;
-      const targetYaw = targetState.aY !== undefined ? targetState.aY : startYaw;
-      const targetZoom = targetState.z !== undefined ? targetState.z : startZoom;
-      const startTime = performance.now();
-
-      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
-
-      function step(now) {
-        const elapsed = now - startTime;
-        const progress = Math.min(1, elapsed / duration);
-        const t = easeOutCubic(progress);
-
-        angleX = startPitch + (targetPitch - startPitch) * t;
-        angleY = startYaw + (targetYaw - startYaw) * t;
-        zoom = startZoom + (targetZoom - startZoom) * t;
-
-        if (progress < 1) {
-          activeCameraTween = requestAnimationFrame(step);
-        } else {
-          activeCameraTween = null;
-        }
-      }
-      activeCameraTween = requestAnimationFrame(step);
-    }
-
-    function resetTerrainView() {
-      tweenCamera({ aX: 0.65, aY: -0.55, z: 1.0 }, 900);
-    }
-
-    function setTopDownView() {
-      tweenCamera({ aX: 1.45, aY: 0, z: 1.25 }, 900);
-    }
-
-    /* focusSummit() removed with the summit leaderboard and the canvas beacon
-       layer. Camera focus is still available via resetTerrainView(),
-       setTopDownView() and focusGridCoordinate() (mini radar). */
-
-    function highlightRadarCell(r, c) {
-      document.querySelectorAll('.mini-cell').forEach(cell => {
-        const cr = parseInt(cell.getAttribute('data-r'));
-        const cc = parseInt(cell.getAttribute('data-c'));
-        if (cr === r && cc === c) {
-          cell.style.transform = 'scale(2.2)';
-          cell.style.outline = '2px solid #121317';
-          cell.style.zIndex = '50';
-        } else {
-          cell.style.transform = 'scale(1)';
-          cell.style.outline = 'none';
-          cell.style.zIndex = '1';
-        }
-      });
-      highlightedCoord = { r, c };
-    }
-
-    function focusGridCoordinate(r, c) {
-      highlightRadarCell(r, c);
-      autoRotate = false;
-      const btn = document.getElementById('btn-auto-rotate');
-      if (btn) {
-        btn.innerText = 'Auto-Rotate: OFF';
-        btn.classList.remove('active');
-      }
-      const targetAngleY = -((c / (COLS - 1) - 0.5) * 1.6);
-      tweenCamera({ aY: targetAngleY, aX: 0.7 }, 900);
-    }
-
-    /* filterTerrainSector() removed — the sector pill bar it served was
-       stripped along with the summit leaderboard. Original preserved at
-       legacy_strategic_files/page_09_pre_light/page_09_dark_original.html */
-
-    function togglePalette() {
-      currentPalette = (currentPalette === 'google') ? 'aqua' : 'google';
-
-      const thumb = document.getElementById('palette-switch-thumb') || document.getElementById('palette-switch-thumb-stage');
-      const track = document.getElementById('palette-switch-track') || document.getElementById('palette-switch-track-stage');
-      const containerBtn = document.getElementById('btn-palette-toggle') || document.getElementById('btn-palette-toggle-stage');
-      const legendEl = document.getElementById('topology-legend-items') || document.getElementById('topology-legend-items-stage');
-
-      if (thumb && track) {
-        if (currentPalette === 'google') {
-          track.style.background = 'rgba(66, 133, 244, 0.25)';
-          track.style.borderColor = 'rgba(66, 133, 244, 0.6)';
-          thumb.style.left = '2px';
-          thumb.style.background = 'linear-gradient(135deg, #3186FF, #FC413D)';
-          thumb.style.boxShadow = '0 0 6px #3186FF';
-          if (containerBtn) containerBtn.style.borderColor = 'rgba(66, 133, 244, 0.4)';
-        } else {
-          track.style.background = 'rgba(18, 181, 203, 0.25)';
-          track.style.borderColor = 'rgba(18, 181, 203, 0.6)';
-          thumb.style.left = '16px';
-          thumb.style.background = 'linear-gradient(135deg, #12B5CB, #12B5CB)';
-          thumb.style.boxShadow = '0 0 6px #12B5CB';
-          if (containerBtn) containerBtn.style.borderColor = 'rgba(18, 181, 203, 0.4)';
-        }
-      }
-
-      if (legendEl) {
-        if (currentPalette === 'google') {
-          legendEl.innerHTML = `
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: var(--starburst); border-radius: 2px;"></span>
-              <span>&gt; ₹118 Cr / yr (White-Hot Apex Summits • 0ms Collision &amp; Runaway)</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #FC413D; border-radius: 2px; box-shadow: 0 0 6px #FC413D;"></span>
-              <span>₹95–118 Cr / yr (Google Crimson Red • Critical Process Hazard Folds)</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #FEC700; border-radius: 2px; box-shadow: 0 0 6px #FEC700;"></span>
-              <span>₹75–95 Cr / yr (Google Sun Yellow • Friction Bottleneck Ridges)</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #00AF57; border-radius: 2px; box-shadow: 0 0 6px #00AF57;"></span>
-              <span>₹50–75 Cr / yr (Google Emerald Green • Operational Flanks &amp; Slopes)</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 6px #12B5CB;"></span>
-              <span>₹25–50 Cr / yr (Electric Cyan &amp; Sovereign Turquoise • Proven Agent Level)</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #3186FF; border-radius: 2px; box-shadow: 0 0 6px #3186FF;"></span>
-              <span>&lt; ₹25 Cr / yr (Google Blue &amp; Deep Cosmic Indigo • Monolith Plains)</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 8px #12B5CB;"></span>
-              <span>★ Proven Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
-            </div>
-          `;
-        } else {
-          legendEl.innerHTML = `
-            <div style="font-weight: 800; color: var(--ink); margin-bottom: 3px; letter-spacing: 0.5px;">OCEANIC AQUA SPECTRUM (₹ CAPITAL EXPOSURE)</div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #6FD3E0, #FFFFFF); border-radius: 2px; box-shadow: 0 0 8px #6FD3E0;"></span>
-              <span>&gt; ₹95 Cr / yr (Starburst Cyan &amp; White Summits • Stardust Crests)</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #E8710A, #FEC700); border-radius: 2px; box-shadow: 0 0 6px #FEC700;"></span>
-              <span>₹60–95 Cr / yr (Solar Gold &amp; Amber Heat Folds)</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #12B5CB, #00AF57); border-radius: 2px; box-shadow: 0 0 6px #12B5CB;"></span>
-              <span>₹25–60 Cr / yr (Luminous Aqua-Green &amp; Turquoise Flanks)</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #0A3B44; border: 1px solid #0D9488; border-radius: 2px;"></span>
-              <span>&lt; ₹25 Cr / yr (Deep Oceanic Teal &amp; Marine Plains)</span>
-            </div>
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 8px #12B5CB;"></span>
-              <span>★ Proven Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
-            </div>
-          `;
-        }
-      }
-
-      updateRadarCells();
-    }
-
-    // Expose globally for inline event handlers
-    window.togglePalette = togglePalette;
-    window.toggleAutoRotate = toggleAutoRotate;
-    window.resetTerrainView = resetTerrainView;
-    window.setTopDownView = setTopDownView;
-    window.highlightRadarCell = highlightRadarCell;
-    window.focusGridCoordinate = focusGridCoordinate;
-    // Called by toggleTheme() in the <head> so the terrain re-tunes on theme flip.
-    window.syncCanvasTheme = syncCanvasTheme;
-
-    // Initialize on load with immediate fallback if DOM already interactive
-    function initTopologyEngine() {
-      resizeCanvas();
-      window.addEventListener('resize', resizeCanvas);
-      requestAnimationFrame(render3D);
-    }
-
-    if (document.readyState === 'loading') {
-      window.addEventListener('DOMContentLoaded', initTopologyEngine);
-    } else {
-      initTopologyEngine();
-    }
   </script>
-
 </body>
 </html>
