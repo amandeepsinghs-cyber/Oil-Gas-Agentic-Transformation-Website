@@ -4,6 +4,24 @@ build_deck.py — Fast Compiler for Fluid Web-First Modular Executive Deck
 Stitches modular slides in slides/slide_*.html into master deck.html
 """
 
+# ─── QUARANTINED 2026-09-14 ───────────────────────────────────────────────────
+# Archived from the repo root. This script rebuilds deck.html from the stale
+# 16-stage sources in slides/, and re-injects assets/interactive.js and
+# assets/presenter.js, which collide with the inline handlers in index.html.
+# The live deck is working_deck/pages/page_00..page_10.
+#
+# To restore deliberately: git mv this file back to the repo root, then delete
+# this block. See legacy_strategic_files/build_pipeline/README.md
+import sys
+
+print(
+    "QUARANTINED — build_deck.py rebuilds deck.html from stale 16-stage sources\n"
+    "and re-injects two dead JS files. It is archived, not live.\n"
+    "See legacy_strategic_files/build_pipeline/README.md to restore it."
+)
+sys.exit(1)
+# ──────────────────────────────────────────────────────────────────────────────
+
 import os, glob, re
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

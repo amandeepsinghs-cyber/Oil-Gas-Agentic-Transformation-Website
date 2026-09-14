@@ -9,6 +9,29 @@ Usage:
   python3 working_deck/build.py --pages  # Also re-syncs standalone preview pages/
 """
 
+# ─── QUARANTINED 2026-09-14 ───────────────────────────────────────────────────
+# Archived from working_deck/. Running this with --pages regenerates
+# working_deck/pages/page_00..page_16 from the 17 stale files in
+# working_deck/slides/, overwriting the live hand-authored deck — including the
+# 73 KB page_08.html Vulnerability Board.
+#
+# It is also internally inconsistent: slides/ holds 17 files against a 16-entry
+# STAGE_TITLES, because both slide_03_mece_traps.html and
+# slide_03_the_need_criteria.html declare id="stage-03". Every stage title from
+# index 4 up is shifted by one.
+#
+# To restore deliberately: git mv this file back to working_deck/build.py, then
+# delete this block. See legacy_strategic_files/build_pipeline/README.md
+import sys
+
+print(
+    "QUARANTINED — working_deck/build.py --pages overwrites all 11 live pages\n"
+    "with output regenerated from stale 16-stage sources. It is archived, not live.\n"
+    "See legacy_strategic_files/build_pipeline/README.md to restore it."
+)
+sys.exit(1)
+# ──────────────────────────────────────────────────────────────────────────────
+
 import os
 import sys
 import glob

@@ -7,6 +7,34 @@ working_deck/modularize.py — Slices working_deck/index.html into a modular arc
 4. Creates working_deck/pages/page_00.html through page_15.html with 100% visual fidelity to final_deck
 """
 
+# ─── QUARANTINED 2026-09-14 ───────────────────────────────────────────────────
+# Archived from working_deck/. This script re-slices working_deck/index.html
+# back into slides/ and pages/, overwriting the live hand-authored deck. Against
+# today's 6-stage index.html it would emit only page_00..page_05 and orphan the
+# rest.
+#
+# It is also broken in two ways:
+#   - BRAIN_DIR (below) is hardcoded to an unrelated conversation directory, and
+#     the two source images it expects do not exist.
+#   - Its <script> regex matches the FIRST <script> in index.html, which is the
+#     theme-toggle block in <head>, not the interactive script.
+#
+# The guard sits above the imports deliberately: this module calls os.makedirs()
+# at import time (SLIDES_DIR, PAGES_DIR, ASSETS_PHOTOS_DIR), so merely running it
+# would scatter empty directories.
+#
+# To restore deliberately: git mv this file back to working_deck/modularize.py,
+# then delete this block. See legacy_strategic_files/build_pipeline/README.md
+import sys
+
+print(
+    "QUARANTINED — working_deck/modularize.py re-slices index.html over the live\n"
+    "pages/ and slides/ directories. It is archived, not live.\n"
+    "See legacy_strategic_files/build_pipeline/README.md to restore it."
+)
+sys.exit(1)
+# ──────────────────────────────────────────────────────────────────────────────
+
 import os
 import re
 import shutil

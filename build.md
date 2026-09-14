@@ -2,6 +2,24 @@
 ## Project: Sovereign Oil & Gas Agentic Transformation Platform
 ### Derived Faithfully from the Hand-Authored Boardroom Strategy (`Agentic Pitch.pdf`)
 
+> [!WARNING]
+> **Stale as of 2026-09-14 — kept for historical reference.**
+>
+> This document describes a compiled-deck architecture that is no longer how the
+> project is built.
+>
+> - The compiler it references, `build_deck.py`, has been **quarantined** to
+>   `legacy_strategic_files/build_pipeline/build_deck.py` and carries a hard-exit
+>   guard. So have `working_deck/build.py` and `working_deck/modularize.py`.
+> - `deck.html` is no longer the master deliverable. The live deck is
+>   **`working_deck/pages/page_00.html` … `page_10.html`**, hand-authored, with no
+>   build step.
+> - The 12-slide `final_slides/` layout described in §2 does not match what is
+>   built, and `page_11.html` no longer exists.
+>
+> For current state see `legacy_strategic_files/build_pipeline/README.md` and
+> `LOCKED_SLIDES.md`.
+
 **Platform Identity:** Google Cloud Sovereign Enterprise AI Executive Experience  
 **Target Audience:** Energy Leadership (CMD, CEO, Board of Directors, Executive Directors of E&P, Refining, Pipelines)  
 **Master Deliverable:** Fluid Web-First Modular Executive Deck ([`deck.html`](file:///usr/local/google/home/amandeepsinghs/O&G_slidedeck_agentic_transformation/deck.html))  
