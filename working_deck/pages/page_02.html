@@ -116,7 +116,7 @@
 
         <!-- 3. Secondary Voice / Narrative Lead -->
         <p id="s2-narrative-lead" style="font-size: clamp(14.5px, 1.05vw, 16.5px); line-height: 1.6; color: var(--text-dim); max-width: 1040px; margin: 0 0 22px 0; font-weight: 400; transition: color 0.3s ease;">
-          Rooted in <strong style="color: var(--text);">Prof. James Reason’s System Safety model</strong>: disasters in high-consequence operations rarely stem from a single colossal error, but from routine friction and unmonitored seams lining up across siloed disciplines.
+          Disasters in high-consequence operations rarely stem from a single colossal error, but from the alignment of multiple vulnerabilities across siloed disciplines.
         </p>
 
         <!-- 4. The 3D Render Canvas -->
@@ -704,7 +704,9 @@
         }
         if (narrativeLead) {
           narrativeLead.style.display = 'block';
-          narrativeLead.innerHTML = 'Rooted in <strong style="color: var(--text);">Prof. James Reason’s System Safety model</strong>: disasters in high-consequence operations rarely stem from a single colossal error, but from routine friction and unmonitored seams lining up across siloed disciplines.';
+          // Keep this string identical to the #s2-narrative-lead markup above;
+          // this branch overwrites it whenever the Legacy button is clicked.
+          narrativeLead.innerHTML = 'Disasters in high-consequence operations rarely stem from a single colossal error, but from the alignment of multiple vulnerabilities across siloed disciplines.';
         }
         if (statusDot) {
           statusDot.style.background = 'var(--g-yellow)';
