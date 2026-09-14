@@ -107,7 +107,7 @@
        Verified: #3186FF reads 3.51 on white, #00AF57 reads 2.89.
        These are the darkened partners that pass on BOTH white and sunk. */
     --blue-ink:    #286DD1;   /* 5.00 on white · 4.51 on sunk */
-    --green-ink:   #007F3F;   /* 5.11 · 4.61 */
+    --green-ink:   #0A6E3C;   /* 6.35 · 5.72 */
     --red-ink:     #C62A27;
     --amber-ink:   #8A6200;   /* yellow is unreadable as text at any size */
     --dim-ink:     #686E7E;   /* 5.10 · 4.59 */
@@ -335,6 +335,11 @@
     font-size: var(--fs-12);
     color: var(--text-muted);
   }
+  /* `display: flex` above outranks the browser's own `[hidden] {display:none}`,
+     so without this the view toggle sets .hidden on a legend and nothing
+     happens -- both legends stay on screen and the board explains itself twice
+     at once. Same guard as .detail further down. */
+  .legend[hidden] { display: none; }
   .lg-group { display: flex; align-items: center; gap: 13px; flex-wrap: wrap; }
   .lg-title {
     font-family: var(--mono);
@@ -387,6 +392,133 @@
       var(--surface);
     border: 1px solid rgba(49, 134, 255, .38);
     border-left: 4px solid var(--g-yellow);
+  }
+
+  /* ═══ VIEW TOGGLE ══════════════════════════════════════════════════════
+     Two readings of one board. "Build priority" is the default and answers
+     what we would build first. "Value map" answers where the money is. Same
+     rows, same squares, same cards -- only the fill changes, so nobody has to
+     re-find their place mid-sentence. */
+  .viewtoggle {
+    display: inline-flex; gap: 0;
+    border: 1px solid var(--border-strong);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-left: auto;
+    flex: none;
+  }
+  .vt-btn {
+    font-family: var(--font-display);
+    font-size: var(--fs-12);
+    font-weight: 600;
+    padding: 7px 15px;
+    border: 0;
+    background: var(--surface);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: background .15s, color .15s;
+    white-space: nowrap;
+  }
+  .vt-btn + .vt-btn { border-left: 1px solid var(--border-strong); }
+  .vt-btn:hover { background: var(--surface-sunk); color: var(--text); }
+  .vt-btn[aria-pressed="true"] {
+    background: var(--g-blue);
+    color: #FFF;
+  }
+  .vt-btn:focus-visible { outline: none; box-shadow: var(--ring); z-index: 2; }
+
+  /* ═══ VALUE MAP ════════════════════════════════════════════════════════
+     --heat and --heat-ink are written onto every cell once, at render time,
+     from a LOG-scaled rupee value. Log rather than linear because the range
+     is Rs 1.1 to Rs 68.1 Cr: on a linear ramp 303 of 334 squares collapse
+     into the palest step and the third band comes out completely empty. Log
+     spreads them 68/129/99/34/4, which keeps a genuine handful of standouts
+     instead of flattening everything or, as an even-sized banding would do,
+     dyeing a fifth of the board dark and losing the signal entirely. */
+  .board.mode-value .bcell i {
+    /* Longhand rather than the `background` shorthand, so the two jobs are
+       stated separately: kill the ownership hatch (which is a background
+       IMAGE on the system and human cells), then set the fill. The shorthand
+       would do both implicitly and read as if only the colour mattered. */
+    background-image: none;
+    background-color: var(--heat, var(--surface));
+    color: var(--heat-ink, var(--text-muted));
+    border-color: transparent;
+    /* 600 was chosen for pale tiles with a white halo behind the text. Here the
+       tile carries a saturated fill, and semibold on top of it makes the code
+       compete with the colour rather than label it. Medium is enough at this
+       size, and it is the same weight for both halves of the code. */
+    font-weight: 500;
+    /* The base rule puts a white halo behind the code so it lifts off the
+       diagonal ownership hatch. There is no hatch here -- the fill is solid --
+       so the halo has nothing to do except glow white behind white text on the
+       dark squares, which is what makes those labels look soft. */
+    text-shadow: none;
+  }
+  /* The build-queue rails and ownership hatching are meaningless here and
+     would fight the fill, so they are suppressed rather than overpainted. */
+  .board.mode-value .bcell i::before,
+  .board.mode-value .bcell i::after { display: none; }
+  /* The rails are drawn with a `border-left` shorthand on .own-agentic and on
+     the two .prio-* rules. A bare `border-color` above is a weaker statement
+     against a shorthand than it looks, and the rails were surviving the
+     switch -- which put the build-priority reading back on top of the value
+     reading, i.e. exactly the two-stories-at-once problem this toggle exists
+     to avoid. Name the same classes, and name the left edge explicitly. */
+  .board.mode-value .bcell.own-agentic i,
+  .board.mode-value .bcell.prio-first i,
+  .board.mode-value .bcell.prio-next i {
+    border-color: transparent;
+    border-left-color: transparent;
+  }
+  /* ONE string, not two. This carried `opacity: .72` on the <b>, which put the
+     persona prefix at 72% and the workflow code at 100% -- so P03W11 read as
+     two half-finished words, worst on the dark squares where a 72% white sits
+     visibly behind a 100% white.
+
+     That is the identical mistake the base .bcell i rule further down was
+     written to undo ("it read as P09 light and W13 dark, i.e. broken
+     formatting"). It had crept back in here. One ink, one opacity, one weight,
+     as the base rule already insists. */
+  .board.mode-value .bcell i b {
+    color: inherit;
+    opacity: 1;
+    font-weight: inherit;
+  }
+  /* The per-ownership hover fills (.bcell.own-agentic:hover i and the two
+     prio variants) tie with the rule above on specificity and are declared
+     later, so they would repaint a hovered square pale blue and drop the
+     heat. Reassert it here rather than relying on cascade order. */
+  .board.mode-value .bcell:hover i {
+    background-image: none;
+    background-color: var(--heat, var(--surface));
+    filter: brightness(1.06);
+  }
+  .board.mode-value .bcell.is-open i {
+    box-shadow: inset 0 0 0 2px var(--text);
+  }
+  /* Squares we are not building carry value but we are not claiming it. */
+  .board.mode-value .bcell.own-system i,
+  .board.mode-value .bcell.own-human i {
+    background-image: none;
+    background-color: var(--surface-sunk);
+    color: var(--dim-ink);
+    opacity: .55;
+  }
+
+  /* legend gradient for the value view */
+  .lg-ramp {
+    display: inline-flex; align-items: center; gap: 9px;
+  }
+  .lg-bar {
+    width: 190px; height: 13px; border-radius: 3px;
+    border: 1px solid var(--border-strong);
+  }
+  .lg-tick { font-family: var(--mono); font-size: var(--fs-10); color: var(--dim-ink); }
+
+  @media (max-width: 900px) {
+    .viewtoggle { margin-left: 0; }
+    .lg-bar { width: 120px; }
   }
 
   /* ═══ BOARD ════════════════════════════════════════════════════════════ */
@@ -943,7 +1075,7 @@
   .tag.own-agentic { color: var(--blue-ink); border-color: rgba(49,134,255,.45); background: var(--accent-soft); }
   .tag.own-system  { color: var(--text-muted); }
   .tag.own-human   { color: var(--text-muted); border-style: dashed; }
-  .tag.agent    { color: var(--green-ink); border-color: rgba(0,127,63,.45);   background: rgba(0,175,87,.10); }
+  .tag.agent    { color: var(--green-ink); border-color: rgba(10,110,60,.45);   background: rgba(0,175,87,.10); }
   .tag.human    { color: var(--text-muted); border-style: dashed; }
 
   .d-body { padding: 16px 22px 22px; display: grid; gap: 16px; }
@@ -1184,6 +1316,7 @@
   <div class="controls">
     <div class="chips" id="chips" role="group" aria-label="Filter by value-chain segment"></div>
     <div class="legend" id="legend"></div>
+    <div class="legend" id="legendValue" hidden></div>
   </div>
 
   <div class="stage">
@@ -1334,7 +1467,13 @@
 
   chipsEl.innerHTML =
     chip("all", "All personas", DATA.length) +
-    groups.map(function (g) { return chip(g.key, g.label, g.n); }).join("");
+    groups.map(function (g) { return chip(g.key, g.label, g.n); }).join("") +
+    /* Sits in the same row as the filters, pushed right by margin-left:auto,
+       so the two controls that change what you are looking at stay together. */
+    '<span class="viewtoggle" role="group" aria-label="Board view">' +
+      '<button class="vt-btn" type="button" data-view="prio" aria-pressed="true">Build priority</button>' +
+      '<button class="vt-btn" type="button" data-view="value" aria-pressed="false">Value map</button>' +
+    "</span>";
 
   function chip(key, label, n) {
     return '<button class="chip" type="button" data-k="' + esc(key) + '" ' +
@@ -1367,6 +1506,100 @@
                        crs(cr) + "/yr" +
                        (filter === "all" ? "" : "  (filtered)");
     document.getElementById("boardScroll").scrollTop = 0;
+  }
+
+  /* ── value map model ───────────────────────────────────────────────────
+     THE ONE DERIVATION, stated plainly so nobody mistakes it for measurement:
+     the dataset carries a rupee value per ROLE and a status per CELL. It does
+     NOT carry a rupee value per cell. Each role's total is split across its 15
+     workflows in proportion to STATUS_WEIGHT. Row totals are therefore exact
+     and the grid sums to the Rs 3,652.5 Cr estate; individual cell figures are
+     modelled. The same split drives the parked value-topology page, so the two
+     never disagree.
+
+     Only the 334 squares an agent would prepare are coloured. The other 161
+     carry value too -- Rs 1,462 Cr of it -- but we are not building them, and
+     shading a square we are not touching reads as claiming its value. */
+  var STATUS_WEIGHT = { critical: 3.0, friction: 2.0, baseline: 1.0 };
+
+  var cellCr = [];          // [rowIndex][colIndex] -> modelled Rs Cr
+  var heatLo = Infinity, heatHi = 0, agenticCr = 0, heldCr = 0;
+
+  DATA.forEach(function (r, ri) {
+    var wts = r.actions.map(function (a) { return STATUS_WEIGHT[a.status] || 1; });
+    var sw  = wts.reduce(function (x, y) { return x + y; }, 0) || 1;
+    var tot = (r.value && r.value.total) || 0;
+    cellCr[ri] = r.actions.map(function (a, ci) {
+      var cr = tot * wts[ci] / sw;
+      if (a.own === "agentic") {
+        agenticCr += cr;
+        if (cr < heatLo) heatLo = cr;
+        if (cr > heatHi) heatHi = cr;
+      } else {
+        heldCr += cr;
+      }
+      return cr;
+    });
+  });
+  if (!isFinite(heatLo)) heatLo = 0;
+
+  /* LOG, not linear. The coloured range is Rs 1.1 to Rs 68.1 Cr -- a 62x
+     spread. Measured across the real 334 squares, a linear ramp puts 303 of
+     them in the palest fifth and leaves the middle fifth completely empty,
+     which is the flat-sheet failure that killed the 3D terrain. Log spreads
+     them 68/129/99/34/4. The thin top band is the point: four squares a CXO
+     can be pointed at. Even-sized bands would dye 67 squares dark and lose
+     exactly that signal. */
+  function heatT(cr) {
+    if (!(cr > 0) || heatHi <= heatLo) return 0;
+    return (Math.log(cr) - Math.log(heatLo)) / (Math.log(heatHi) - Math.log(heatLo));
+  }
+
+  /* Single-hue ramp on the deck's brand green #00AF57 -- the same green the
+     rupee figures use, because this board is answering a money question and
+     should not answer it in a second colour. Near-white through to a deep
+     forest. Fixed stops rather than a gradient function so the colour is
+     identical in every browser. */
+  function heatColor(t) {
+    var stops = [
+      [246, 253, 249], [209, 240, 224], [150, 222, 186],
+      [ 74, 199, 141], [  0, 160,  82], [  8,  86,  53]
+    ];
+    var x = Math.max(0, Math.min(0.9999, t)) * (stops.length - 1);
+    var i = Math.floor(x), f = x - i;
+    var a = stops[i], b = stops[i + 1] || stops[i];
+    return "rgb(" + Math.round(a[0] + (b[0] - a[0]) * f) + "," +
+                    Math.round(a[1] + (b[1] - a[1]) * f) + "," +
+                    Math.round(a[2] + (b[2] - a[2]) * f) + ")";
+  }
+
+  /* Label ink, decided by measured contrast rather than by a threshold.
+     This used to be `t > 0.62 ? white : dark`, and 0.62 was a number I chose,
+     not one I measured -- so white landed on mid-tone squares that read
+     perfectly well in black, and the grid looked like it could not make up its
+     mind. Computing the real WCAG ratio and keeping black until black actually
+     fails puts white on exactly 4 of the 334 coloured squares: the standouts.
+     White then MEANS something instead of looking like a glitch. */
+  function relLum(c) {
+    var a = c.map(function (v) {
+      v /= 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
+  }
+  function contrast(c1, c2) {
+    var l1 = relLum(c1), l2 = relLum(c2);
+    return (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+  }
+  function heatInk(t) {
+    var rgb = heatColor(t).match(/\d+/g).map(Number);
+    var dark = [18, 19, 23];
+    if (contrast(rgb, dark) >= 4.5) return "#121317";
+    return contrast(rgb, [255, 255, 255]) > contrast(rgb, dark) ? "#FFFFFF" : "#121317";
+  }
+
+  function crCell(n) {
+    return "\u20B9" + (n >= 10 ? Math.round(n) : n.toFixed(1)) + " Cr";
   }
 
   /* ── board ─────────────────────────────────────────────────────────── */
@@ -1409,10 +1642,20 @@
       /* prio is "" for anything not ours, which is exactly how the monolith
          and human cells end up with no rail. Do NOT fall back to a.status. */
       var PL = (META.prioLabel || {});
+      /* Heat is resolved once, here, and parked on the element as a custom
+         property. Toggling the view is then a single class change on .board
+         rather than 495 style writes, which keeps the switch instant even
+         with every row expanded. */
+      var cr = cellCr[ri][ci];
+      var t  = heatT(cr);
+      var heat = (a.own === "agentic")
+        ? ' style="--heat:' + heatColor(t) + ';--heat-ink:' + heatInk(t) + '"'
+        : "";
       html.push(
         '<button class="bcell own-' + a.own + (a.prio ? " prio-" + a.prio : "") +
         '" type="button" ' +
         'data-r="' + ri + '" data-c="' + ci + '" ' +
+        'data-cellcr="' + cr.toFixed(2) + '"' + heat + " " +
         'title="' + esc(r.id + wcode(a.code) + " \u00b7 " + a.name + "\n" + (PL[a.prio] || "")) + '">' +
           "<i><b>" + esc(r.id) + "</b>" + esc(wcode(a.code)) + "</i>" +
         "</button>"
@@ -1422,6 +1665,74 @@
   });
 
   board.innerHTML = html.join("");
+
+  /* ── value-map legend + view toggle ────────────────────────────────────
+     The ticks are read off the live ramp, not typed, so the legend cannot
+     drift from the board the way a hand-written scale would. The derivation
+     is stated on the strip itself rather than in a footnote, because a
+     modelled number presented without its assumption is the one thing a CFO
+     will not forgive. */
+  var legendValue = document.getElementById("legendValue");
+  if (legendValue) {
+    var ticks = [0, 0.25, 0.5, 0.75, 1].map(function (t) {
+      return Math.exp(Math.log(heatLo) + (Math.log(heatHi) - Math.log(heatLo)) * t);
+    });
+    var ramp = [0, .2, .4, .6, .8, 1].map(function (t) {
+      return heatColor(t) + " " + Math.round(t * 100) + "%";
+    }).join(", ");
+
+    legendValue.innerHTML =
+      '<div class="lg-group"><span class="lg-title">Value per workflow</span>' +
+        '<span class="lg-ramp">' +
+          '<span class="lg-tick">' + crCell(ticks[0]) + "</span>" +
+          '<span class="lg-bar" style="background: linear-gradient(90deg, ' + ramp + ')"></span>' +
+          '<span class="lg-tick">' + crCell(ticks[4]) + "</span>" +
+        "</span>" +
+        '<span class="lg-note">log scale &middot; midpoint ' + crCell(ticks[2]) + "</span>" +
+      "</div>" +
+      '<div class="lg-group"><span class="lg-title">Not coloured</span>' +
+        lg("own-system", "Existing system or human holds it",
+           null, "carries value, but it is not ours to build") +
+        '<span class="lg-note">' + crs(heldCr) + " held outside the build" +
+        "</span>" +
+      "</div>" +
+      '<div class="lg-group">' +
+        '<span class="lg-note">Role totals are exact. A role\u2019s value is ' +
+        "split across its 15 workflows by criticality, so individual squares " +
+        "are modelled, not measured." +
+        "</span>" +
+      "</div>";
+  }
+
+  var view = "prio";
+  chipsEl.addEventListener("click", function (e) {
+    var b = e.target.closest(".vt-btn");
+    if (!b) return;
+    setView(b.dataset.view);
+  });
+
+  function setView(next) {
+    view = next === "value" ? "value" : "prio";
+    board.classList.toggle("mode-value", view === "value");
+    [].forEach.call(chipsEl.querySelectorAll(".vt-btn"), function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.view === view));
+    });
+    if (legendValue) legendValue.hidden = (view !== "value");
+    legend.hidden = (view === "value");
+    /* Re-render whatever is pinned so its card picks up or drops the rupee
+       line. Without this the drawer keeps whichever version was open when
+       the view changed, which reads as a bug during a live demo. */
+    if (pinned) {
+      showCell(Number(pinned.dataset.r), Number(pinned.dataset.c), pinned, true);
+    }
+  }
+
+  /* Deep link. page_08.html?view=value (or #value) opens straight on the value
+     map, so it can be sent to someone as a link in its own right instead of
+     only being reachable by a click once you are already on the board. */
+  if (/[?&]view=value(\b|$)/.test(location.search) || location.hash === "#value") {
+    setView("value");
+  }
 
   /* ── why a square is marked ────────────────────────────────────────────
      Counts are read from the data, never typed in, so this block cannot drift
@@ -1674,6 +1985,16 @@
       '<div class="d-tags">' +
         prioTag +
         covTag +
+        /* Only while the value map is on. In build-priority view this number
+           is not what the reader is being asked to look at, and a rupee
+           figure sitting on every card dilutes the one view where it matters.
+           Labelled "modelled" because it is a split of the role total, not a
+           measured per-workflow figure. */
+        (view === "value" && cellCr[ri] != null
+          ? '<span class="tag" title="A share of this role\u2019s annual value, ' +
+            'apportioned across its 15 workflows by criticality. Modelled, ' +
+            'not measured.">' + crCell(cellCr[ri][ci]) + " \u00b7 modelled</span>"
+          : "") +
         (a.freq ? '<span class="tag">' + esc(a.freq) + "</span>" : "") +
         (a.bucket ? '<span class="tag">' + esc(a.bucket) + "</span>" : "") +
       "</div>" +
