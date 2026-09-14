@@ -1,7 +1,7 @@
 /* ─────────────────────────────────────────────────────────────────────────
    build_matrix_33.js — generates working_deck/data/matrix_33.js
 
-   Feeds the rebuilt vulnerability board (page_08.html) from the persona
+   Feeds the rebuilt vulnerability board (page_07.html) from the persona
    research instead of the hand-written cells that predated it.
 
    33 personas x 15 operational actions = 495 cells.
@@ -407,7 +407,7 @@ const banner =
    status: critical ${tally.critical} · friction ${tally.friction} · baseline ${tally.baseline}
    estate: Rs ${Math.round(estate)} Cr/yr across the three savings
 
-   Consumed by working_deck/pages/page_08.html via the pre-existing
+   Consumed by working_deck/pages/page_07.html via the pre-existing
    window.ENTERPRISE_MATRIX_DATA override hook.
    ───────────────────────────────────────────────────────────────────────── */
 

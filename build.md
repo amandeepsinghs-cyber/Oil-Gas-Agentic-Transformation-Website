@@ -12,8 +12,12 @@
 >   `legacy_strategic_files/build_pipeline/build_deck.py` and carries a hard-exit
 >   guard. So have `working_deck/build.py` and `working_deck/modularize.py`.
 > - `deck.html` is no longer the master deliverable. The live deck is
->   **`working_deck/pages/page_00.html` … `page_10.html`**, hand-authored, with no
->   build step.
+>   **`working_deck/pages/page_00.html` … `page_08.html`** (9 slides, plus the
+>   unnumbered `alternate_story.html` interstitial), hand-authored, with no
+>   build step. Stages 03 and 04 were consolidated into a single slide on
+>   2026-09-14; the originals are kept unlinked as
+>   `working_deck/pages/_parked_page_03_criteria.html` and
+>   `_parked_page_04_microservice.html`.
 > - The 12-slide `final_slides/` layout described in §2 does not match what is
 >   built, and `page_11.html` no longer exists.
 >

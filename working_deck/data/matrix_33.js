@@ -8,7 +8,7 @@
    status: critical 126 · friction 148 · baseline 221
    estate: Rs 3652 Cr/yr across the three savings
 
-   Consumed by working_deck/pages/page_08.html via the pre-existing
+   Consumed by working_deck/pages/page_07.html via the pre-existing
    window.ENTERPRISE_MATRIX_DATA override hook.
    ───────────────────────────────────────────────────────────────────────── */
 

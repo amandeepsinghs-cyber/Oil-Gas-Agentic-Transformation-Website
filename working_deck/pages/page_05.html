@@ -3,72 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Structural Resilience of an Agentic Organisation | Sovereign Agentic Transformation</title>
+  <title>The Petrophysical AI Agent | Sovereign Agentic Transformation</title>
   <link rel="stylesheet" href="../../assets/styles.css">
   <link rel="stylesheet" href="../../assets/aurora.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <style>
-    .jenga-card {
-      background: var(--surface-sunk);
-      border: 1px solid var(--border-subtle);
-      border-radius: 14px;
-      padding: 20px 22px;
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 0.98fr 1.02fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+    @media (max-width: 1080px) {
+      .layout-grid {
+        grid-template-columns: 1fr;
+        align-items: start;
+      }
+    }
+    .narrative-col {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.3s ease;
+      height: 100%;
+      gap: 16px;
     }
-    .jenga-card-fragile {
-      border-top: 3px solid var(--border-strong);
-    }
-    .jenga-card-fragile:hover {
-      border-color: var(--text-dim);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(18,19,23,.10);
-    }
-    .jenga-card-fortified {
-      border-top: 3px solid var(--g-blue);
+    .narrative-block {
       background: var(--surface);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      border-radius: 12px;
+      padding: 22px 24px;
+      backdrop-filter: blur(12px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      margin-bottom: 0;
     }
-    .jenga-card-fortified:hover {
-      border-color: var(--g-blue);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(49,134,255,.16);
+    .narrative-block-role {
+      border-left: 3px solid var(--g-purple);
     }
-    .jenga-img-box {
-      position: relative;
-      width: 100%;
-      height: 390px;
-      border-radius: 10px;
-      overflow: hidden;
+    .narrative-block-bottleneck {
+      border-left: 3px solid var(--g-yellow);
+    }
+    .narrative-block-need {
+      border-left: 3px solid var(--g-green);
+      background: rgba(0, 175, 87, 0.04);
+    }
+    .visual-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      gap: 16px;
+    }
+    .plot-container {
       background: var(--canvas);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      border-radius: 14px;
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 12px 36px rgba(18,19,23,.14);
+      flex: 1;
+    }
+    .plot-frame {
+      width: 100%;
+      flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 18px;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #FFFFFF;
+      border: 1px solid var(--border-subtle);
+      position: relative;
     }
-    .jenga-img-box img {
+    .plot-img {
+      max-height: 440px;
       height: 100%;
       width: auto;
       max-width: 100%;
       object-fit: contain;
-      display: block;
+      transform: scale(1.06);
+      transform-origin: center center;
       transition: transform 0.3s ease;
     }
-    .jenga-card:hover .jenga-img-box img {
-      transform: scale(1.02);
+    .plot-frame:hover .plot-img {
+      transform: scale(1.12);
     }
-    .jenga-img-light {
-      display: none !important;
+    .demo-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--g-blue);
+      border-radius: 12px;
+      padding: 18px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0;
+      width: 100%;
+      box-sizing: border-box;
+      transition: all 0.25s ease;
     }
-    .jenga-img-dark {
-      display: block !important;
+    .demo-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
     }
-    .theme-light .jenga-img-dark {
-      display: none !important;
+    .gemini-btn {
+      background: var(--gemini-spark);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 14.5px;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 24px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-md);
+      transition: all 0.2s ease;
     }
-    .theme-light .jenga-img-light {
-      display: block !important;
+    .gemini-btn:hover {
+      transform: scale(1.03);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
     }
   </style>
   <script>
@@ -97,16 +162,6 @@
       updateThemeButtons(isLight);
     });
   </script>
-
-  <style>
-    /* aurora: light is native, so the *_light image of each pair is the
-       default and the dark twin is the opt-in. The rules these replace live
-       in styles.css under .theme-light, which this page no longer sets. */
-    [class*="-img-dark"]  { display: none  !important; }
-    [class*="-img-light"] { display: block !important; }
-    html.theme-dark [class*="-img-dark"]  { display: block !important; }
-    html.theme-dark [class*="-img-light"] { display: none  !important; }
-  </style>
 </head>
 <body style="background: var(--canvas); color: var(--text-muted); font-family: var(--font-display); margin: 0; padding: 0; overflow-x: hidden;">
 
@@ -115,7 +170,7 @@
     <a href="../../index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
       <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
       <div style="width: 1px; height: 20px; background: var(--surface-sunk);"></div>
-      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text); letter-spacing: 1.5px; text-transform: uppercase;">STAGE 05 // STRUCTURAL RESILIENCE</span>
+      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text); letter-spacing: 1.5px; text-transform: uppercase;">STAGE 05 // THE PETROPHYSICAL AI AGENT</span>
     </a>
     <nav style="display: flex; align-items: center; gap: 16px;">
       <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Light Mode">
@@ -123,8 +178,8 @@
         <span>Light Mode</span>
       </button>
       <a href="page_04.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
-      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;">6 / 10</span>
-      <a href="page_06.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;">6 / 9</span>
+      <a href="page_06.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--blue-ink); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
       <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
         All Slides ↗
       </a>
@@ -133,9 +188,9 @@
 
   <!-- Main Viewport -->
   <main id="viewport-scaler" style="padding-top: 60px;">
-    <section class="slide narrative-stage theme-amber" id="stage-05" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 70px max(24px, 4vw); position: relative; background: var(--canvas); box-sizing: border-box;">
+    <section class="slide narrative-stage theme-blue" id="stage-06" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 60px max(24px, 4vw); position: relative; background: var(--canvas); box-sizing: border-box;">
       
-      <!-- Atmospheric Backdrop -->
+      <!-- Atmospheric Backdrop with Futuristic Nebula Glow -->
       <div class="slide-bg-media" style="position: absolute; inset: 0; overflow: hidden; pointer-events: none;">
         <div class="slide-bg-overlay" style="position: absolute; inset: 0; background: var(--bg-canvas)"></div>
         <div class="slide-glow-mesh" style="position: absolute; inset: 0; background: transparent"></div>
@@ -144,101 +199,160 @@
       <div class="editorial-container" style="max-width: 1440px; margin: 0 auto; width: 100%; position: relative; z-index: 2;">
         
         <!-- Top Eyebrow -->
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 12px;">
           <div class="title-kicker" style="display: flex; align-items: center; gap: 10px;">
             <span class="kicker-bar" style="width: 24px; height: 3px; background: var(--gemini-spark); border-radius: 2px;"></span>
-            <span style="color: var(--text); font-family: var(--font-display); font-size: 13.5px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">
-              OPERATIONAL RESILIENCE
+            <span style="color: var(--green-ink); font-family: var(--font-display); font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">
+              FIELD VALIDATION
             </span>
-            <span style="color: var(--border-strong);">//</span>
-            <span style="color: var(--text-muted); font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; letter-spacing: 0.5px;">
-              SYSTEMIC DEFENSE IN DEPTH
+            <span style="color: var(--text-dim);">//</span>
+            <span style="color: var(--text-muted); font-family: var(--font-mono); font-size: 13px; font-weight: 700; letter-spacing: 0.5px;">
+              DETERMINISTIC WIRELINE SPLICING
             </span>
           </div>
         </div>
 
-        <!-- Monumental Heading & Subheading -->
-        <h1 style="font-family: var(--font-display); font-size: clamp(34px, 4vw, 50px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; color: var(--text); margin: 0 0 8px 0;">
-          Structural Resilience of an <span class="au-display-grad">Agentic Organisation</span>
+        <!-- Monumental Heading & Lead with Futuristic Nebula Gradient Signature -->
+        <h1 style="font-family: var(--font-display); font-size: clamp(30px, 3.5vw, 44px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: var(--text); margin: 0 0 6px 0;">
+          The <span class="au-display-grad">Petrophysical AI Agent</span>
         </h1>
 
-        <p style="font-family: var(--font-display); font-size: clamp(16px, 1.2vw, 20px); line-height: 1.45; color: var(--text-muted); margin: 0 0 24px 0; max-width: 1200px;">
-          Operational vulnerabilities exist across both <strong style="color: var(--text);">workflows</strong> and <strong style="color: var(--text);">workforce</strong>. AI Agents eliminate these operational gaps to build a structurally resilient organization.
+        <p style="font-family: var(--font-display); font-size: clamp(14px, 1.1vw, 17px); line-height: 1.4; color: var(--text-muted); margin: 0 0 20px 0; max-width: 1200px;">
+          Eliminating hours of manual curve alignment with an autonomous subsurface physics agent.
         </p>
 
         <!-- ========================================================================= -->
-        <!-- TWO BALANCED CONTRAST COLUMNS: EACH WITH ITS OWN DEDICATED CENTERED TOWER -->
+        <!-- TWO BALANCED WINGS: LEFT NARRATIVE (SUPER SIMPLE) | RIGHT PLOT & DEMO LINK -->
         <!-- ========================================================================= -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 26px;">
+        <div class="layout-grid">
           
-          <!-- Column 1: Without Agents (Left Jenga) -->
-          <div class="jenga-card jenga-card-fragile">
-            <!-- Dedicated Left Jenga Image -->
-            <div class="jenga-img-box" style="border: 1px solid var(--border-subtle);">
-              <img class="jenga-img-dark" src="../../assets/media/wip/image74_left.jpg" alt="An Enterprise Without Agents - The Fragile Jenga Tower">
-              <img class="jenga-img-light" src="../../assets/media/wip/image74_left_light.jpg" alt="An Enterprise Without Agents - The Fragile Jenga Tower">
-            </div>
-
-            <!-- Content -->
-            <div>
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-                <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--text-muted); letter-spacing: 1.2px; text-transform: uppercase;">
-                  THE UNBRACED TOWER
-                </span>
-                <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text-muted);">
-                  HIGH SYSTEMIC FRAGILITY
-                </span>
+          <!-- LEFT WING: The Problem, The Stakes & What is Needed -->
+          <div class="narrative-col">
+            
+            <!-- Part 1: The Challenge (Operational Friction & Human Fatigue) -->
+            <div class="narrative-block narrative-block-bottleneck">
+              <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--amber-ink); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;">
+                01 THE CHALLENGE // MANUAL CURVE ALIGNMENT
               </div>
-              <div style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--text); margin-bottom: 6px;">
-                Without AI Agents
+              <div style="font-family: var(--font-display); font-size: 17.5px; font-weight: 700; color: var(--text); line-height: 1.3; margin-bottom: 10px;">
+                Raw Well Logs Arrive Mismatched &amp; Disconnected
               </div>
-              <p style="font-size: 14px; color: var(--text-muted); line-height: 1.55; margin: 0;">
-                Gaps across disconnected workflows and a stretched workforce leave mission-critical processes unmonitored and vulnerable to friction.
+              <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.55; margin: 0;">
+                Separate wireline logging passes never line up due to cable stretch and sensor drift. Today, senior petrophysicists spend <strong>1–2 hours manually nudging and eyeballing curves at 3:00 AM</strong>—where human fatigue risks multi-crore drilling depth errors.
               </p>
             </div>
+
+            <!-- Part 2: What is Needed (Targeted Physics Intelligence) -->
+            <div class="narrative-block narrative-block-role">
+              <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--g-purple); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px;">
+                02 WHAT IS NEEDED // TARGETED PHYSICS INTELLIGENCE
+              </div>
+              <div style="font-family: var(--font-display); font-size: 17.5px; font-weight: 700; color: var(--text); line-height: 1.3; margin-bottom: 10px;">
+                Automated Deterministic Alignment
+              </div>
+              <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.55; margin: 0;">
+                A targeted solution that works alongside existing subsurface systems—normalizing tool calibration drift, running signal cross-correlation across the overlap, and locking in the exact depth offset where curve alignment is mathematically maximized.
+              </p>
+            </div>
+
+            <!-- Part 3: What the Agent Builds (The Unified Composite Log) -->
+            <div class="narrative-block narrative-block-need">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--green-ink); letter-spacing: 1.5px; text-transform: uppercase;">
+                  03 WHAT THE AGENT BUILDS // UNIFIED COMPOSITE LOG
+                </span>
+                <span style="font-family: var(--font-mono); font-size: 10.5px; color: var(--green-ink); background: rgba(0, 175, 87, 0.10); padding: 3px 9px; border-radius: 4px; font-weight: 700;">
+                  WITHIN SECONDS
+                </span>
+              </div>
+              <div style="font-family: var(--font-display); font-size: 17.5px; font-weight: 700; color: var(--text); line-height: 1.3; margin-bottom: 10px;">
+                Verified Composite Well Log Within Seconds
+              </div>
+              <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.55; margin: 0;">
+                Within seconds, the AI Agent ingests raw passes, normalizes curve scales, and executes the optimal -1.8m shift where cross-correlation peaks (<strong>r = 0.99</strong>), delivering an audit-ready composite log for instant visual verification.
+              </p>
+            </div>
+
           </div>
 
-          <!-- Column 2: Fortified With Agents (Right Jenga) -->
-          <div class="jenga-card jenga-card-fortified">
-            <!-- Dedicated Right Jenga Image -->
-            <div class="jenga-img-box" style="border: 1px solid rgba(49, 134, 255, 0.35);">
-              <img class="jenga-img-dark" src="../../assets/media/wip/image74_right.jpg" alt="An Enterprise Fortified by Agents - The Fortified Jenga Tower">
-              <img class="jenga-img-light" src="../../assets/media/wip/image74_right_light.jpg" alt="An Enterprise Fortified by Agents - The Fortified Jenga Tower">
+          <!-- RIGHT WING: The Plot & The Live Demo Link -->
+          <div class="visual-col">
+            
+            <!-- Plot Container: Genuine Kansas Well A-12 Output -->
+            <div class="plot-container" style="width: 100%; box-sizing: border-box;">
+              
+              <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--green-ink); text-transform: uppercase;">
+                  KANSAS WELL A-12 // AUTOMATED OVERLAP ALIGNMENT
+                </span>
+                <span style="font-family: var(--font-mono); font-size: 10.5px; color: #34D399; font-weight: 700;">
+                  PEAK CORRELATION: r = 0.99
+                </span>
+              </div>
+
+              <!-- Plot Frame with Zoomed Image -->
+              <div class="plot-frame">
+                <!-- Was an absolute file:/// path into a personal Downloads
+                     folder, with a ../../../../Downloads fallback that was no
+                     better. Both resolved on one laptop and nowhere else, so
+                     this rendered as an empty white frame for every other
+                     viewer -- on a projector, on the web, for anyone sent the
+                     deck. The file now lives in the repo and travels with it. -->
+                <img src="../../assets/media/evidence/a12_gamma_ray_overlap.png"
+                     alt="Well A-12 gamma ray overlap interval, before and after depth shift"
+                     class="plot-img" loading="lazy">
+              </div>
+
+              <!-- Plot Caption & Ground Truth Telemetry -->
+              <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; margin-top: 10px; font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); border-top: 1px solid var(--border-subtle); padding-top: 8px;">
+                <div>
+                  <span style="color: #F87171;">Raw Log:</span> 1.83m offset (misaligned)
+                </div>
+                <div style="color: var(--text-dim);">→</div>
+                <div>
+                  <span style="color: #34D399;">Agent Shifted -1.829m:</span> Snapped into exact match within seconds
+                </div>
+              </div>
+
             </div>
 
-            <!-- Content -->
-            <div>
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-                <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--blue-ink); letter-spacing: 1.2px; text-transform: uppercase;">
-                  THE FORTIFIED MESH
-                </span>
-                <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--blue-ink);">
-                  STRUCTURAL RESILIENCE
-                </span>
+            <!-- Prominent Gemini Enterprise Demo Link Card -->
+            <div class="demo-card">
+              <div style="display: flex; align-items: center; gap: 14px;">
+                <img src="../../assets/media/brand/gemini_spark_fullcolor_768.png" alt="Gemini Enterprise" style="width: 34px; height: 34px; flex-shrink: 0;">
+                <div>
+                  <div style="font-family: var(--font-display); font-size: 17px; font-weight: 800; color: var(--text);">
+                    Live AI Agent Demonstration
+                  </div>
+                  <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-dim);">
+                    Deployed on Gemini Enterprise · <span style="color: var(--text-muted);">ID: 7dab71a6...5c05</span>
+                  </div>
+                </div>
               </div>
-              <div style="font-family: var(--font-display); font-size: 22px; font-weight: 800; color: var(--text); margin-bottom: 6px;">
-                With AI Agents
+
+              <div>
+                <a href="https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05?hl=en_US" target="_blank" rel="noopener noreferrer" class="gemini-btn" title="Launch Kansas Well A-12 Agent on Gemini Enterprise">
+                  <span>Launch Demo</span>
+                  <span style="font-size: 16px;">↗</span>
+                </a>
               </div>
-              <p style="font-size: 14px; color: var(--text-muted); line-height: 1.55; margin: 0;">
-                AI Agents augment both workforce and workflows—bridging operational gaps with 24/7 autonomous monitoring and exact solvers.
-              </p>
             </div>
+
           </div>
 
         </div>
-
 
       </div>
     </section>
   </main>
 
   <!-- Floating Page Dock -->
-  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(18,19,23,.14); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: var(--surface-sunk); border: 1px solid var(--border-hairline); border-radius: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(18,19,23,.14); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
     <a href="page_04.html" style="background: var(--surface-sunk); border: 1px solid var(--border); color: var(--text-muted); width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none;">
       ◀
     </a>
     <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: var(--text-muted); white-space: nowrap;">
-      PAGE 05 // STRUCTURAL RESILIENCE
+      PAGE 06 // THE PETROPHYSICAL AI AGENT
     </div>
     <a href="page_06.html" style="background: var(--g-blue); border: none; color: #FFF; padding: 7px 16px; border-radius: 20px; font-family: var(--font-display); font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;">
       <span>Next Page</span>
