@@ -125,7 +125,7 @@
         
         <!-- 1. Eyebrow & Display Headline -->
         <div style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px;">
-          07 ARCHITECTURE // PRODUCTION AGENT &amp; CENTRAL CONTROL PLANE
+          06 ARCHITECTURE // PRODUCTION AGENT &amp; CENTRAL CONTROL PLANE
         </div>
 
         <h1 style="font-family: var(--font-display); font-size: clamp(32px, 3.4vw, 52px); font-weight: 800; line-height: 1.12; letter-spacing: -1.5px; color: var(--text); margin: 0 0 14px 0;">
@@ -429,7 +429,10 @@
                     <use href="#iconVertexAI"/>
                   </g>
                   <text x="66" y="32" font-size="14" font-weight="700" fill="#1A73E8">Vertex AI Reasoning Engine • Google ADK Agent (`depth_match_splice_agent`)</text>
-                  <text x="66" y="48" font-size="11" font-weight="500" fill="#5F6368">Model: Gemini 2.5 Flash / Pro • A2A Executor • Resource ID: .../reasoningEngines/1264866631721418752</text>
+                  <!-- Placeholder, deliberately. This line used to print the
+                       numeric ID of a real deployed reasoning engine. Never
+                       put a live resource ID on a customer-facing slide. -->
+                  <text x="66" y="48" font-size="11" font-weight="500" fill="#5F6368">Model: Gemini 2.5 Flash / Pro • A2A Executor • Resource ID: .../reasoningEngines/&lt;deployment-id&gt;</text>
                   
                   <line x1="20" y1="62" x2="925" y2="62" stroke="#F1F3F4" stroke-width="1"/>
                   <text x="20" y="82" font-size="10.5" fill="#202124"><tspan font-weight="bold">Agent Decision Loop:</tspan> Basin Triage → Status QC → Multi-Run Inspection → Overlap Focus → Shift Optimization → Ground Truth QC → Lakehouse Release</text>
