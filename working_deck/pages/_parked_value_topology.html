@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  PARKED - NOT PART OF THE DECK NARRATIVE
+  ============================================================================
+  Was: working_deck/pages/page_09.html, "Stage 09 - The Agentic Value Topology".
+
+  Removed from the flow because the 3D terrain asked a boardroom to decode a
+  camera angle, a colour ramp and a height axis before it learned anything.
+  Stage 08 already presents the same 495-cell dataset as a clickable board,
+  and the per-role value story now lands on the persona dossiers, where a
+  ranked bar chart makes the same point with no interpretation cost.
+
+  The deck now runs page_00 .. page_09 (10 slides), where page_09 is the
+  closing "100 Days to Proof of Value". Nothing links here any more.
+
+  The code is kept, working and unmodified, in case it is adapted later:
+    - relative paths (../../assets/, ../data/matrix_33.js) are intact, so
+      this file still renders correctly if opened directly
+    - its own prev/next were repointed at the renumbered deck so the link
+      checker stays green; the terrain itself is untouched
+
+  State of the terrain at the time of parking - all verified against the
+  live file, 495 real cells, Rs 3,652.5 Cr estate:
+    - height encodes role value (row peak = role total), not cell share
+    - height-to-value rank agreement is exact for all 33 roles
+    - 8 distinct peak columns (was 2: everything piled into one centre ridge)
+    - peak-preserving blur: smooth surface WITHOUT eroding isolated summits
+    - vertical exaggeration 1.55, camera pitch 0.45 rad, horizon anchor 0.74
+    - mesh and summit chips verified inside the 640px canvas across a full
+      360 degree yaw sweep and both pitch clamps
+
+  Do not re-introduce plain (non-peak-preserving) smoothing or the old
+  share-based height encoding - together they inverted the ranking, which is
+  what made the surface read as a flat undulating sheet.
+  ============================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Agentic Value Topology | Sovereign Agentic Transformation</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/aurora.css">
+  <style>
+    /* ─── PAGE-LOCAL TOKENS ───────────────────────────────────────────────────
+       Loaded after styles.css and aurora.css, so these :root declarations win
+       over both. That matters: aurora's PART 3 "legacy bridge" re-points
+       --security-turquoise at var(--text-muted), which would silently turn
+       every accent on this page grey. Declaring it here shields it.
+
+       Light is the default, matching the rest of the deck (localStorage key
+       "deck-theme"). html.theme-dark restores the original dark surface.
+
+       Fonts are deliberately NOT declared here. The previous values were
+       'Cabinet Grotesk' and 'JetBrains Mono', neither of which is loaded
+       anywhere in the repo, so both silently fell back. The page now inherits
+       --font-display / --font-mono from aurora.css like every other slide. */
+    :root {
+      --slate-bg: #FFFFFF;
+      --slate-panel: #FFFFFF;
+      --slate-sunk: #F1F4FB;
+      --slate-border: #E2E6F0;
+      --nav-bg: rgba(255, 255, 255, 0.88);
+      --ink: #121317;
+      --ink-soft: #5F6368;
+      --grid-line: rgba(18, 23, 42, 0.05);
+      --canvas-surface: #FFFFFF;
+      --canvas-edge: rgba(10, 118, 132, 0.28);
+      --canvas-shadow: 0 8px 28px rgba(18, 23, 42, 0.10);
+      --starburst: #121317;
+      --stage-wash: radial-gradient(circle at 70% 35%, rgba(10, 118, 132, 0.05) 0%, rgba(241, 244, 251, 0.55) 55%, var(--slate-bg) 100%);
+      --canvas-wash: radial-gradient(circle at 65% 45%, rgba(10, 118, 132, 0.05) 0%, rgba(138, 98, 0, 0.03) 45%, transparent 70%);
+      --panel-glass: rgba(255, 255, 255, 0.92);
+      --dock-shadow: 0 4px 14px rgba(18, 23, 42, 0.12);
+      /* Accent inks chosen for contrast on white, not for glow on black. */
+      --security-turquoise: #0A7684;
+      --security-azure: #286DD1;
+      --nebula-crimson: #C62A27;
+      --hazard-amber: #8A6200;
+    }
+
+    html.theme-dark {
+      --slate-bg: #06090E;
+      --slate-panel: rgba(13, 19, 32, 0.85);
+      --slate-sunk: rgba(255, 255, 255, 0.04);
+      --slate-border: rgba(255, 255, 255, 0.08);
+      --nav-bg: rgba(6, 9, 14, 0.90);
+      --ink: #E2E8F0;
+      --ink-soft: #94A3B8;
+      --grid-line: rgba(255, 255, 255, 0.03);
+      --canvas-surface: radial-gradient(circle at 50% 50%, #0B1323 0%, #06090E 95%);
+      --canvas-edge: rgba(18, 181, 203, 0.25);
+      --canvas-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 40px rgba(18, 181, 203, 0.04);
+      --starburst: #FFFFFF;
+      --stage-wash: radial-gradient(circle at 70% 35%, rgba(18, 181, 203, 0.05) 0%, rgba(6, 9, 14, 0.96) 65%, var(--slate-bg) 100%);
+      --canvas-wash: radial-gradient(circle at 65% 45%, rgba(18, 181, 203, 0.10) 0%, rgba(245, 158, 11, 0.05) 45%, transparent 70%);
+      --panel-glass: rgba(6, 9, 14, 0.86);
+      --dock-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      --security-turquoise: #12B5CB;
+      --security-azure: #00A3FF;
+      --nebula-crimson: #FC413D;
+      --hazard-amber: #FEC700;
+    }
+
+    body {
+      background: var(--slate-bg);
+      color: var(--ink);
+      font-family: var(--font-display);
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    /* Top Navigation */
+    .executive-top-nav {
+      backdrop-filter: blur(20px);
+      background: var(--nav-bg);
+      border-bottom: 1px solid var(--slate-border);
+      padding: 12px max(24px, 3.5vw);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Background Grids */
+    .slide-bg-media {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .slide-bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* 3D Canvas Viewport */
+    #topology-canvas-container {
+      width: 100%;
+      height: 640px;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--canvas-surface);
+      border: 1px solid var(--canvas-edge);
+      box-shadow: var(--canvas-shadow);
+    }
+
+    #terrain-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+      cursor: grab;
+    }
+
+    #terrain-canvas:active {
+      cursor: grabbing;
+    }
+
+    /* Floating 3D HUD Tooltip */
+    #terrain-tooltip {
+      position: absolute;
+      pointer-events: none;
+      background: var(--slate-panel);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--security-turquoise);
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink);
+      box-shadow: 0 10px 30px rgba(18, 23, 42, 0.18);
+      z-index: 100;
+      display: none;
+      max-width: 320px;
+      line-height: 1.35;
+      transform: translate(-50%, -120%);
+      transition: opacity 0.15s ease;
+    }
+
+    html.theme-dark #terrain-tooltip {
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(18, 181, 203, 0.3);
+    }
+
+    /* .summit-card rules removed with the leaderboard they styled.
+       See legacy_strategic_files/page_09_pre_light/ */
+
+    /* Mini Matrix Grid */
+    .mini-grid {
+      display: grid;
+      grid-template-columns: repeat(15, 1fr);
+      gap: 2px;
+      padding: 8px;
+      background: var(--slate-sunk);
+      border: 1px solid var(--slate-border);
+      border-radius: 6px;
+    }
+
+    .mini-cell {
+      height: 8px;
+      border-radius: 1px;
+      background: rgba(18, 23, 42, 0.08);
+      cursor: pointer;
+      transition: transform 0.15s ease;
+    }
+
+    html.theme-dark .mini-cell {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .mini-cell:hover {
+      transform: scale(1.6);
+      z-index: 10;
+    }
+
+    /* Swatch fills. Glow shadows are suppressed in light mode — a halo only
+       reads against a dark surface, and on white it just muddies the edge. */
+    .mini-cell.mini-plugged   { background: #12B5CB; }
+    .mini-cell.mini-starburst { background: var(--starburst); }
+    .mini-cell.mini-red       { background: #FC413D; }
+    .mini-cell.mini-yellow    { background: #FEC700; }
+    .mini-cell.mini-green     { background: #00AF57; }
+    .mini-cell.mini-aquagreen { background: #12B5CB; }
+    .mini-cell.mini-blue      { background: #3186FF; }
+    .mini-cell.mini-indigo    { background: #1B1745; }
+    .mini-cell.mini-amber     { background: #FEC700; }
+    .mini-cell.mini-orchid    { background: #4B31E3; }
+    .mini-cell.mini-teal      { background: #0A3B44; }
+
+    html.theme-dark .mini-cell.mini-plugged   { box-shadow: 0 0 8px #12B5CB; }
+    html.theme-dark .mini-cell.mini-starburst { box-shadow: 0 0 6px #FFFFFF; }
+    html.theme-dark .mini-cell.mini-red       { box-shadow: 0 0 4px #FC413D; }
+    html.theme-dark .mini-cell.mini-yellow    { box-shadow: 0 0 4px #FEC700; }
+    html.theme-dark .mini-cell.mini-amber     { box-shadow: 0 0 4px #FEC700; }
+    html.theme-dark .mini-cell.mini-orchid    { box-shadow: 0 0 4px rgba(147, 51, 234, 0.4); }
+
+    /* Custom Buttons */
+    .pill-btn {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      padding: 5px 12px;
+      border-radius: 16px;
+      border: 1px solid var(--slate-border);
+      background: var(--slate-sunk);
+      color: var(--ink-soft);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .pill-btn:hover {
+      background: #E7EEFB;
+      color: var(--ink);
+      border-color: #C9D4E8;
+    }
+
+    html.theme-dark .pill-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #FFF;
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .pill-btn:focus-visible {
+      outline: 2px solid var(--security-azure);
+      outline-offset: 2px;
+    }
+
+    .pill-btn.active {
+      background: rgba(10, 118, 132, 0.10);
+      border-color: var(--security-turquoise);
+      color: var(--security-turquoise);
+      font-weight: 700;
+    }
+
+    html.theme-dark .pill-btn.active {
+      background: rgba(18, 181, 203, 0.18);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .mini-cell, .pill-btn { transition: none; }
+    }
+  </style>
+  <script>
+    (function() {
+      /* Standard deck theme bootstrap: light by default, dark opt-in via the
+         "deck-theme" key. Matches the closing slide and the rest of the
+         aurora pages.
+
+         This page previously pinned itself dark, because its stylesheet and
+         canvas were both authored against a near-black surface. Both have now
+         been converted: the <style> block above is tokenised with an
+         html.theme-dark override, and the canvas clamps its colour ramp via
+         LIGHT_INK_CEILING. */
+      const saved = localStorage.getItem('deck-theme') || 'light';
+      if (saved === 'dark') {
+        document.documentElement.classList.add('theme-dark');
+      }
+    })();
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('theme-dark');
+      if (document.body) document.body.classList.toggle('theme-dark', isDark);
+      localStorage.setItem('deck-theme', isDark ? 'dark' : 'light');
+      updateThemeButtons(!isDark);
+      /* Defined further down, with the canvas engine. Guarded because the
+         engine script has not parsed yet when this function is declared. */
+      if (typeof syncCanvasTheme === 'function') syncCanvasTheme();
+    }
+    function updateThemeButtons(isLight) {
+      document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+        btn.innerHTML = isLight 
+          ? '<span style="font-size: 13px; line-height: 1;">🌙</span><span>Dark Mode</span>' 
+          : '<span style="font-size: 13px; line-height: 1;">☀️</span><span>Light Mode</span>';
+        btn.setAttribute('title', isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const isLight = !document.documentElement.classList.contains('theme-dark');
+      updateThemeButtons(isLight);
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Top Executive Navigation Bar -->
+  <header class="executive-top-nav">
+    <a href="../../index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
+      <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
+      <div style="width: 1px; height: 20px; background: var(--slate-border);"></div>
+      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--ink); letter-spacing: 1.5px; text-transform: uppercase;">STAGE 09 // THE AGENTIC VALUE TOPOLOGY</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: 16px;">
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Dark Mode">
+        <span style="font-size: 13px; line-height: 1;">🌙</span>
+        <span>Dark Mode</span>
+      </button>
+      <a href="page_08.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--ink-soft); text-decoration: none; padding: 4px 12px; border-radius: 6px; background: var(--slate-sunk); transition: color 0.2s;">← Prev Page (Slide 08)</a>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--security-turquoise); font-weight: 700;">PARKED &middot; not in the deck</span>
+      <a href="page_09.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 12px; border-radius: 6px; background: rgba(40, 109, 209, 0.10); transition: color 0.2s;">Next Page (Slide 10) →</a>
+      <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #FFF; background: #121317; padding: 6px 16px; border-radius: 20px; text-decoration: none; margin-left: 6px;">
+        All Slides ↗
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Viewport -->
+  <main id="viewport-scaler" class="stage-09 stage-container" style="padding-top: 75px; min-height: 100vh; position: relative;">
+    
+    <!-- Atmospheric Grid Backdrop -->
+    <div class="slide-bg-media">
+      <div class="slide-bg-grid"></div>
+      <div style="position: absolute; inset: 0; background: var(--stage-wash);"></div>
+    </div>
+
+    <div id="stage-09" style="max-width: 1720px; margin: 0 auto; padding: 30px max(20px, 2.5vw); position: relative; z-index: 2;">
+      
+      <!-- Stage Header Block -->
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 32px; margin-bottom: 22px; flex-wrap: wrap;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+            <span style="font-family: var(--font-mono); font-size: 12px; font-weight: 800; color: var(--security-turquoise); letter-spacing: 2px; text-transform: uppercase;">
+              AGENT ECONOMICS // ENTERPRISE VALUE TOPOLOGY
+            </span>
+            <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise);"></span>
+            <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft);">495-TOUCHPOINT VALUE UNLOCK MODEL</span>
+          </div>
+
+          <h1 style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 46px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: var(--ink); margin: 0 0 8px 0;">
+            Agent Economics: The Value Map of Agentic Transformation.
+          </h1>
+          <h2 style="font-family: var(--font-display); font-size: clamp(18px, 1.4vw, 24px); font-weight: 600; line-height: 1.35; color: var(--security-turquoise); letter-spacing: -0.3px; margin: 0 0 12px 0;">
+            Strategic prioritization and continuous value tracking ensure every deployed agent remains strictly net positive.
+          </h2>
+
+          <!-- The actual takeaway. Computed from the dataset at runtime by the
+               engine script below, so it cannot drift from matrix_33.js. -->
+          <div id="value-concentration"
+               style="display: inline-flex; align-items: baseline; gap: 10px;
+                      background: var(--slate-sunk); border: 1px solid var(--slate-border);
+                      border-left: 3px solid var(--security-turquoise);
+                      padding: 9px 16px; border-radius: 6px; margin: 0 0 14px 0;
+                      font-family: var(--font-mono); font-size: 13px; color: var(--ink);">
+            <span>Calculating concentration…</span>
+          </div>
+
+          <p style="font-size: clamp(14px, 1.05vw, 16px); line-height: 1.45; color: var(--ink-soft); max-width: 1100px; margin: 0;">
+            Quantifying a <strong style="color: var(--ink);">fleet of autonomous agents</strong> by <strong style="color: var(--ink);">capital at risk and value unlock (₹ Cr / yr)</strong> establishes a clear investment topology, sequencing rollouts directly into your <strong style="color: var(--ink);">highest-impact enterprise targets</strong>. Ongoing economic tracking continuously audits delivered value, guaranteeing every deployed agent operates with <strong style="color: var(--security-turquoise);">strictly net-positive Agentic AI ROI</strong>.
+          </p>
+        </div>
+
+        <!-- 3D Controls Toolstrip -->
+        <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <button class="pill-btn active" id="btn-auto-rotate" onclick="toggleAutoRotate()">Auto-Rotate: ON</button>
+            <button class="pill-btn" onclick="resetTerrainView()">Reset Perspective</button>
+            <button class="pill-btn" onclick="setTopDownView()">Top-Down Contour (2D)</button>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft);">
+            Click &amp; drag to rotate • scroll to zoom • hover the surface to inspect a role and action
+          </span>
+        </div>
+      </div>
+
+      <!-- Single-column stack: full-width map, radar beneath. Was a 480px + 1fr grid
+           when the left rail carried the leaderboard. -->
+      <div style="display: flex; flex-direction: column; gap: 22px;">
+        
+        <!-- ===== COORDINATE RADAR (order: 2 — renders beneath the map) ===== -->
+        <div style="display: flex; flex-direction: column; gap: 16px; order: 2; max-width: 560px;">
+          
+          <!-- Sector filter bar removed. Its five pills existed only to call
+               focusSummit(), which went with the leaderboard. -->
+
+          <!-- Summit leaderboard removed (PRIORITISED VALUE-UNLOCK AGENTS).
+               Five cards carrying ₹45/130/120/115/90 Cr figures that were
+               hardcoded literals, plus "★ PROVEN AGENT" and "VALIDATED IN
+               PRODUCTION" claims. The terrain is harmonic, not measured, so
+               these read as precision the model does not have. Peak detail is
+               now hover-only via #terrain-tooltip.
+               Original: legacy_strategic_files/page_09_pre_light/ -->
+
+          <!-- 20×15 Mini Coordinate Radar -->
+          <div style="background: var(--slate-panel); border: 1px solid var(--slate-border); border-radius: 8px; padding: 14px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--ink-soft); letter-spacing: 1px;">
+                2D COORDINATE RADAR · 33 × 15
+              </span>
+              <span style="font-family: var(--font-mono); font-size: 9px; color: var(--security-turquoise);">HOVER TO LOCATE ON 3D TERRAIN</span>
+            </div>
+            
+            <div class="mini-grid" id="mini-matrix-radar">
+              <!-- Injected by JS: 495 cells, one per role/action pair -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ===== 3D TOPOGRAPHICAL TERRAIN (order: 1 — renders first) ===== -->
+        <div style="display: flex; flex-direction: column; gap: 14px; order: 1;">
+          
+          <!-- 3D Canvas Container (Cosmic Void Backdrop) -->
+          <!-- Visual styling lives in the #topology-canvas-container rule above, so it
+                 follows the theme. It used to be inline, which overrode the sheet. -->
+            <div id="topology-canvas-container">
+            
+            <!-- Subtle aqua-teal and solar amber ambient glow -->
+            <div style="position: absolute; inset: 0; pointer-events: none; background: var(--canvas-wash);"></div>
+
+            <canvas id="terrain-canvas" style="position: relative; z-index: 1;"></canvas>
+
+            <!-- Floating 3D Hover Tooltip -->
+            <div id="terrain-tooltip">
+              <div style="font-weight: 800; font-size: 12px; margin-bottom: 2px;" id="tt-title">Role</div>
+              <div style="font-size: 10px; color: var(--security-turquoise); margin-bottom: 4px;" id="tt-persona">Segment</div>
+              <div style="font-size: 11px; color: var(--ink);" id="tt-elevation">Action</div>
+            </div>
+
+            <!-- Overlay Compass & Contour Legend (Dynamic Multi-Palette Supported) -->
+            <div id="topology-legend-items" data-scale-note="relative value density; exact figures on hover" style="position: absolute; bottom: 16px; left: 18px; pointer-events: none; font-family: var(--font-mono); font-size: 10px; color: var(--ink-soft); display: flex; flex-direction: column; gap: 4px; background: var(--panel-glass); backdrop-filter: blur(10px); padding: 10px 14px; border-radius: 6px; border: 1px solid var(--slate-border);">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="display: inline-block; width: 12px; height: 12px; background: var(--starburst); border-radius: 2px;"></span>
+                <span>Highest value density • apex summits</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="display: inline-block; width: 12px; height: 12px; background: #FC413D; border-radius: 2px; box-shadow: 0 0 6px #FC413D;"></span>
+                <span>Very high • critical-status concentration</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="display: inline-block; width: 12px; height: 12px; background: #FEC700; border-radius: 2px; box-shadow: 0 0 6px #FEC700;"></span>
+                <span>High • friction bottleneck ridges</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="display: inline-block; width: 12px; height: 12px; background: #00AF57; border-radius: 2px; box-shadow: 0 0 6px #00AF57;"></span>
+                <span>Moderate • operational flanks</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 6px #12B5CB;"></span>
+                <span>Low-moderate • routine slopes</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="display: inline-block; width: 12px; height: 12px; background: #3186FF; border-radius: 2px; box-shadow: 0 0 6px #3186FF;"></span>
+                <span>Baseline • monolith plains</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 8px #12B5CB;"></span>
+                <span>★ Proven Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
+              </div>
+            </div>
+
+            <!-- Top Right Controls Dock (Minimalist Toggle Switch + Status Badge) -->
+            <div style="position: absolute; top: 16px; right: 18px; display: flex; align-items: center; gap: 10px; z-index: 10;">
+              <!-- Minimalist Spectrum Toggle Switch (No Verbose Text Naming) -->
+              <div id="btn-palette-toggle" onclick="togglePalette()" title="Toggle Color Spectrum (Google Light Spectrum ⟷ Oceanic Aqua)" style="cursor: pointer; display: flex; align-items: center; gap: 8px; background: var(--panel-glass); backdrop-filter: blur(8px); border: 1px solid rgba(66, 133, 244, 0.4); padding: 5px 10px; border-radius: 20px; box-shadow: var(--dock-shadow); user-select: none; transition: all 0.25s ease;">
+                <span style="font-size: 12px; line-height: 1;">🎨</span>
+                <div id="palette-switch-track" style="width: 32px; height: 16px; border-radius: 10px; background: rgba(66, 133, 244, 0.25); border: 1px solid rgba(66, 133, 244, 0.6); position: relative; transition: all 0.25s ease;">
+                  <div id="palette-switch-thumb" style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #3186FF, #FC413D); position: absolute; top: 1px; left: 2px; box-shadow: 0 0 6px #3186FF; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);"></div>
+                </div>
+              </div>
+
+              <!-- Status Indicator -->
+              <div style="font-family: var(--font-mono); font-size: 11px; background: var(--panel-glass); border: 1px solid var(--canvas-edge); padding: 6px 14px; border-radius: 20px; color: var(--security-turquoise); display: flex; align-items: center; gap: 8px; box-shadow: var(--dock-shadow);">
+                <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise); box-shadow: 0 0 8px var(--security-turquoise); animation: pulse-dot 1.5s infinite alternate;"></span>
+                <span>33 ROLES × 15 ACTIONS · ₹3,652 Cr MODELLED</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase metric strip removed (PHASE 1 / 2 / 3 cards).
+               Dropped with the summit leaderboard: the "₹570 Cr / yr" figure
+               did not reconcile with the five summits it cited, named a sixth
+               agent (Tank Overfill) that was never in the data, and "84
+               Value-Unlock Agents" conflicts with the 232 in the value model.
+               The .phase-metric-val / .phase-metric-desc rules at
+               assets/styles.css:2727-2734 are now dead; they were the only
+               light-mode support this page ever had.
+               Original: legacy_strategic_files/page_09_pre_light/ -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- The generated enterprise matrix: 33 personas x 15 operational actions.
+       Same file and same window.ENTERPRISE_MATRIX_DATA hook page_08 reads. -->
+  <script src="../data/matrix_33.js"></script>
+
+  <!-- Self-Contained 3D Topographical Canvas Engine -->
+  <script>
+    /* ═══ TERRAIN SOURCE ═══════════════════════════════════════════════════
+       The elevation grid used to be Math.sin/Math.cos harmonics — decoration
+       with no data behind it. It is now built from the generated enterprise
+       matrix: 33 personas x 15 operational actions = 495 cells, the same
+       dataset page_08 renders, totalling the Rs 3,652.5 Cr estate in
+       data/value_model.js.
+
+       THE ONE DERIVATION, stated plainly so nobody mistakes it for measurement:
+       the dataset carries a rupee value per PERSONA and a status per CELL. It
+       does NOT carry a rupee value per cell. Each persona's total is split
+       across its 15 actions in proportion to STATUS_WEIGHT below. Row totals
+       are therefore exact; individual cell values are modelled.
+
+       HEIGHT ENCODES ROLE VALUE. Each row's PEAK equals that role's total, so
+       the tallest mountain is the most valuable role and the map can be read
+       as a priority order. This is deliberate and it is NOT the same as the
+       per-cell rupee split above: an earlier version made height proportional
+       to a role's single largest action, which ranked Drilling Engineer
+       (Rs 118.9 Cr) above Instrument Technician (Rs 239.0 Cr, second largest
+       in the whole estate) purely because the latter spreads its value over
+       more actions. On a prioritisation slide that reads as an error.
+
+       Three presentational transforms, all deliberate:
+         GAMMA  - role values run ~5x from median to max, which renders as a
+                  few needles on a flat plain. Compressing by ^0.70 gives
+                  rolling terrain while preserving rank order exactly.
+         SEGMENT COLUMNS - each SEGMENT is given its own peak column, and rows
+                  within a segment are jittered +/-1 around it. Previously
+                  every one of the 33 rows peaked at the centre column, which
+                  produced a single ridge down the middle of the map: the
+                  surface read as a sheet draped over a beam rather than as
+                  terrain. COLUMN POSITION CARRIES NO MEANING; the action
+                  behind any cell is in the hover tooltip. Row position does
+                  carry meaning: rows are grouped by segment.
+         PEAK-PRESERVING SMOOTH - the blur is applied for flank shape, then
+                  each row is rescaled back to its pre-blur maximum. A plain
+                  blur lifts roles that happen to sit beside tall neighbours
+                  and erodes isolated ones, which silently re-ranks the map.
+       ═══════════════════════════════════════════════════════════════════════ */
+    const STATUS_WEIGHT = { critical: 3.0, friction: 2.0, baseline: 1.0 };
+    /* Tuning note. These decide whether the surface reads as a landscape or a
+       rug. Measured against the real matrix, not guessed:
+
+         TERRAIN_GAMMA  compresses the range. Role values span ~4.9x from
+                        median to max. At 0.85 the terrain is sparse -- only
+                        ~10 of 495 cells clear the upper bands and the map
+                        looks like two spikes on a plain. At 0.70 the spread
+                        is ~4.7x with ~15 cells up there, which keeps the
+                        summits pointable while giving the mid-value roles
+                        visible foothills.
+         SMOOTH_PASSES  blurs neighbours for flank shape. Safe to raise here
+                        BECAUSE the blur is peak-preserving (see buildTerrain):
+                        rows are rescaled back to their true maxima afterwards,
+                        so extra passes soften slopes without re-ranking
+                        anything. 2 passes reads as landform; past ~4 the
+                        segment massifs merge into one plateau.
+         COL_MARGIN     keeps every segment's peak this far from the plate
+                        edge, so no mountain is sliced off by the boundary.
+         SEG_OFFSETS    column offset per segment, in descending-value order.
+                        Biggest segment sits centre stage; each subsequent one
+                        is thrown to the far side so that segments adjacent in
+                        row order never share a column and their massifs stay
+                        separate. Purely presentational.
+
+       If the terrain ever looks flat again, lower GAMMA before touching
+       anything else -- it is the range compressor and the usual culprit. */
+    const TERRAIN_GAMMA = 0.70;
+    const SMOOTH_PASSES = 2;
+    const SUMMIT_COUNT = 5;
+    const ELEV_FLOOR = 8, ELEV_CEIL = 130;
+    const COL_MARGIN = 3;
+    const SEG_OFFSETS = [0, -4, 4, -2, 2, -3, 3, -1, 1, -4, 4, -2, 2];
+
+    function smoothGrid(g, passes) {
+      const K = [[1, 2, 1], [2, 4, 2], [1, 2, 1]];
+      const R = g.length, C = g[0].length;
+      for (let pass = 0; pass < passes; pass++) {
+        const out = g.map(row => row.slice());
+        for (let r = 0; r < R; r++) {
+          for (let c = 0; c < C; c++) {
+            let acc = 0, wsum = 0;
+            for (let dr = -1; dr <= 1; dr++) {
+              for (let dc = -1; dc <= 1; dc++) {
+                const rr = r + dr, cc = c + dc;
+                if (rr >= 0 && rr < R && cc >= 0 && cc < C) {
+                  const w = K[dr + 1][dc + 1];
+                  acc += g[rr][cc] * w;
+                  wsum += w;
+                }
+              }
+            }
+            out[r][c] = acc / wsum;
+          }
+        }
+        g = out;
+      }
+      return g;
+    }
+
+    function buildTerrain(matrix) {
+      const segTotal = {};
+      matrix.forEach(p => {
+        segTotal[p.segment] = (segTotal[p.segment] || 0) + p.value.total;
+      });
+
+      // Rows: segments by total value desc, then personas by value desc, so
+      // related roles form contiguous massifs instead of scattered spikes.
+      const rows = matrix.slice().sort((a, b) =>
+        (segTotal[b.segment] - segTotal[a.segment]) ||
+        a.segment.localeCompare(b.segment) ||
+        (b.value.total - a.value.total));
+
+      /* Column placement. Each segment gets an anchor column; rows inside a
+         segment are jittered +/-1 around it so two roles in the same segment
+         never stack in one column (which would overlap their summit chips).
+         The anchor is inset one extra column from the margin so the jitter
+         always has room -- without that, an anchor sitting on the margin gets
+         clamped and the jitter collapses back to a single column. */
+      const COLS_N = rows[0].actions.length;
+      const midCol = Math.floor(COLS_N / 2);
+      const loCol = COL_MARGIN, hiCol = COLS_N - 1 - COL_MARGIN;
+      const segAnchor = {}, segSeen = {};
+      let segIdx = 0;
+      rows.forEach(p => {
+        if (!(p.segment in segAnchor)) {
+          segAnchor[p.segment] = Math.max(loCol + 1, Math.min(hiCol - 1,
+            midCol + SEG_OFFSETS[segIdx % SEG_OFFSETS.length]));
+          segSeen[p.segment] = 0;
+          segIdx++;
+        }
+      });
+
+      const cells = rows.map(p => {
+        const wts = p.actions.map(a => STATUS_WEIGHT[a.status] || 1);
+        const tw = wts.reduce((s, w) => s + w, 0) || 1;
+        const mw = Math.max.apply(null, wts) || 1;
+
+        const withVal = p.actions.map((a, i) => ({
+          // cr: the honest rupee attribution. Rows sum to the persona total and
+          //     the grid sums to the estate. This is what the tooltip reports.
+          cr: p.value.total * wts[i] / tw,
+          // h:  the height encoding. Divided by the row's MAX weight rather
+          //     than its SUM, so every row peaks at exactly the role total and
+          //     height therefore ranks roles by value. Never shown as a number.
+          h: p.value.total * wts[i] / mw,
+          code: a.code, action: a.name, status: a.status, agent: a.agent,
+          persona: p.name, segment: p.segment, personaTotal: p.value.total
+        }));
+        const sorted = withVal.slice().sort((x, y) => y.h - x.h);
+
+        // Organ-pipe outward from this row's own centre: largest at the peak
+        // column, tapering both ways, spilling to the far side at an edge.
+        const k = segSeen[p.segment]++;
+        const centre = Math.max(loCol, Math.min(hiCol,
+          segAnchor[p.segment] + ((k % 3) - 1)));
+
+        const out = new Array(COLS_N);
+        out[centre] = sorted[0];
+        let lo = centre - 1, hi = centre + 1;
+        for (let i = 1; i < sorted.length; i++) {
+          let useLeft;
+          if (lo < 0) useLeft = false;
+          else if (hi >= COLS_N) useLeft = true;
+          else useLeft = (i % 2 === 1);
+          if (useLeft) out[lo--] = sorted[i]; else out[hi++] = sorted[i];
+        }
+        return out;
+      });
+
+      /* Compress -> smooth -> restore peaks -> normalise.
+
+         Order matters twice over. Normalising last means the peak reaches the
+         top of the ramp and the hot colour bands are actually used. Restoring
+         peaks after the blur means the blur cannot re-rank the map: a plain
+         blur lifts a role sitting beside tall neighbours and erodes an
+         isolated one, which is how Instrument Technician (Rs 239 Cr) ended up
+         rendering shorter than Drilling Engineer (Rs 118.9 Cr). */
+      const raw = cells.map(r => r.map(c => Math.pow(c.h, TERRAIN_GAMMA)));
+      const blurred = smoothGrid(raw, SMOOTH_PASSES);
+      const shaped = blurred.map((row, r) => {
+        const before = Math.max.apply(null, raw[r]);
+        const after = Math.max.apply(null, row);
+        const k = after > 0 ? before / after : 1;
+        return row.map(v => v * k);
+      });
+
+      let lo = Infinity, hi = -Infinity;
+      shaped.forEach(r => r.forEach(v => { if (v < lo) lo = v; if (v > hi) hi = v; }));
+      const span = (hi - lo) || 1;
+      const elevation = shaped.map(r =>
+        r.map(v => ELEV_FLOOR + (v - lo) / span * (ELEV_CEIL - ELEV_FLOOR)));
+
+      /* Summits: located on the grid, not invented.
+
+         Each row contributes its own crest, found by scanning the finished
+         elevation rather than assuming a column -- the blur can shift a crest
+         a column or two, and a label floating beside the peak it names reads
+         as a bug from the back of a room. Because height now encodes role
+         value, taking the tallest SUMMIT_COUNT crests yields exactly the top
+         roles by value, so the label ranking and the rupee ranking agree. */
+      const rowPeaks = elevation.map((row, r) => {
+        const c = row.indexOf(Math.max.apply(null, row));
+        return { r, c, peak: row[c] };
+      });
+      const summits = rowPeaks.slice()
+        .sort((a, b) => b.peak - a.peak)
+        .slice(0, SUMMIT_COUNT)
+        .map(s => ({
+          r: s.r, c: s.c, elev: s.peak,
+          name: rows[s.r].name,
+          segment: rows[s.r].segment,
+          value: rows[s.r].value.total
+        }));
+
+      const estate = rows.reduce((s, p) => s + p.value.total, 0);
+      const topSum = summits.reduce((s, x) => s + x.value, 0);
+
+      return { rows, cells, elevation, summits, estate, topSum };
+    }
+
+    function harmonicFallback(R, C) {
+      // Only reached if matrix_33.js fails to load. Keeps the page renderable
+      // rather than throwing, but it is NOT real data.
+      const g = [];
+      for (let r = 0; r < R; r++) {
+        const row = [];
+        for (let c = 0; c < C; c++) {
+          row.push(Math.max(8, 15 + Math.sin(r * 0.42 + c * 0.25) * 8
+                               + Math.cos(c * 0.65 - r * 0.2) * 6));
+        }
+        g.push(row);
+      }
+      return g;
+    }
+
+    const MATRIX = Array.isArray(window.ENTERPRISE_MATRIX_DATA)
+      ? window.ENTERPRISE_MATRIX_DATA : [];
+    const TERRAIN = MATRIX.length ? buildTerrain(MATRIX) : null;
+    if (!TERRAIN) {
+      console.warn('page_09: matrix_33.js did not load; '
+                 + 'falling back to a non-data placeholder surface.');
+    }
+
+    const elevationMatrix = TERRAIN ? TERRAIN.elevation : harmonicFallback(20, 15);
+    const cellMeta = TERRAIN ? TERRAIN.cells : null;
+    const ROWS = elevationMatrix.length;
+    const COLS = elevationMatrix[0].length;
+
+    // Palette state: 'google' (Google Light Spectrum) vs 'aqua' (Oceanic Aqua)
+    let currentPalette = 'google';
+
+    function getRadarClass(val) {
+      if (currentPalette === 'google') {
+        if (val >= 118) return 'mini-starburst';
+        if (val >= 95) return 'mini-red';
+        if (val >= 75) return 'mini-yellow';
+        if (val >= 50) return 'mini-green';
+        if (val >= 25) return 'mini-aquagreen';
+        return 'mini-blue';
+      } else if (currentPalette === 'aqua') {
+        if (val >= 95) return 'mini-starburst';
+        if (val >= 60) return 'mini-amber';
+        if (val >= 25) return 'mini-aquagreen';
+        return 'mini-teal';
+      } else {
+        if (val >= 115) return 'mini-starburst';
+        if (val >= 90) return 'mini-amber';
+        if (val >= 60) return 'mini-orchid';
+        if (val >= 30) return 'mini-aquagreen';
+        return 'mini-indigo';
+      }
+    }
+
+    // 2D coordinate radar: one cell per matrix cell, titled with the real
+    // persona, action and modelled rupee value.
+    const miniRadarEl = document.getElementById('mini-matrix-radar');
+    if (miniRadarEl) {
+      let radarHTML = '';
+      for (let r = 0; r < ROWS; r++) {
+        for (let c = 0; c < COLS; c++) {
+          const val = elevationMatrix[r][c];
+          const m = cellMeta ? cellMeta[r][c] : null;
+          const title = m
+            ? `${m.persona} — ${m.action} (${m.status}) · ~Rs ${m.cr.toFixed(1)} Cr/yr`
+            : `Row ${r + 1}, Col ${c + 1}`;
+          radarHTML += `
+            <div class="mini-cell ${getRadarClass(val)}"
+                 id="mcell-${r}-${c}"
+                 data-r="${r}" data-c="${c}"
+                 onmouseenter="highlightRadarCell(${r}, ${c})"
+                 onclick="focusGridCoordinate(${r}, ${c})"
+                 title="${title.replace(/"/g, '&quot;')}"></div>
+          `;
+        }
+      }
+      miniRadarEl.innerHTML = radarHTML;
+    }
+
+    function updateRadarCells() {
+      for (let r = 0; r < ROWS; r++) {
+        for (let c = 0; c < COLS; c++) {
+          const cell = document.getElementById(`mcell-${r}-${c}`);
+          if (!cell) continue;
+          cell.className = `mini-cell ${getRadarClass(elevationMatrix[r][c])}`;
+        }
+      }
+    }
+
+    // 4. Pure HTML5 Canvas 3D Nebula Topography Engine
+    const canvas = document.getElementById('terrain-canvas');
+    const container = document.getElementById('topology-canvas-container');
+    const ctx = canvas.getContext('2d');
+    const tooltipEl = document.getElementById('terrain-tooltip');
+    // Written each frame by render3D so the hover pick can hit-test
+    // against real screen positions.
+    let lastProjectedMesh = null;
+    const ttTitle = document.getElementById('tt-title');
+    const ttPersona = document.getElementById('tt-persona');
+    const ttElevation = document.getElementById('tt-elevation');
+
+    /* Relief scale and viewing angle. Both are presentational and both were
+       chosen against the real data, not guessed.
+
+       VERTICAL_EXAGGERATION multiplies elevation into world units. See the
+       note at its use site in the mesh builder.
+
+       BASE_PITCH is the default camera tilt in radians. At the previous 0.65
+       (37 degrees) the camera looked down ONTO the surface, which foreshortens
+       exactly the axis carrying the message: a viewer sees the footprint of
+       each mountain but not how tall it is. 0.45 (26 degrees) looks ACROSS the
+       range, so relative height is what the eye reads first. Lower still and
+       the far rows disappear behind the near ones; the pitch clamp on drag
+       keeps the user inside the usable band. */
+    const VERTICAL_EXAGGERATION = 1.55;
+    const BASE_PITCH = 0.45;
+
+    // Camera State
+    let angleX = BASE_PITCH; // Pitch (vertical tilt)
+    let angleY = -0.55; // Yaw (horizontal rotation)
+    let zoom = 1.0;
+    let autoRotate = true;
+    let isDragging = false;
+    let lastMouseX = 0;
+    let lastMouseY = 0;
+    // Opening reticle position. Purely a starting mark for the radar readout;
+    // it carries no claim about the cell underneath it.
+    let highlightedCoord = { r: 9, c: 7 };
+    let pulsePhase = 0;
+
+    function resizeCanvas() {
+      if (!canvas || !container) return;
+      const rect = container.getBoundingClientRect();
+      const dpr = window.devicePixelRatio || 1;
+      const width = rect.width || container.clientWidth || 800;
+      const height = rect.height || container.clientHeight || 640;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+
+    // 3D Projection Math (Euler Pitch/Yaw + Perspective Divide)
+    function project3D(x, y, z, width, height) {
+      // Rotate around Y axis (yaw)
+      const cosY = Math.cos(angleY);
+      const sinY = Math.sin(angleY);
+      const x1 = x * cosY - z * sinY;
+      const z1 = x * sinY + z * cosY;
+
+      // Rotate around X axis (pitch)
+      const cosX = Math.cos(angleX);
+      const sinX = Math.sin(angleX);
+      const y2 = y * cosX - z1 * sinX;
+      const z2 = y * sinX + z1 * cosX;
+
+      // Perspective divide
+      const fov = 420 * zoom;
+      const distance = 265;
+      const scale = fov / (z2 + distance);
+
+      /* Horizon line. Dropped from 0.67 to 0.74 of the canvas because the
+         relief is now ~1.9x taller: at the old line the tallest summit and
+         its chip ran off the top of the frame during auto-rotate. Simulated
+         over a full 360 yaw sweep at 640px tall, the mesh now spans y 53..531
+         and the highest chip tops out at y 95. The term tracks BASE_PITCH so
+         that retuning the default pitch does not silently move the horizon. */
+      const baseAnchorY = height * (0.74 - (angleX - BASE_PITCH) * 0.20);
+      const screenX = width / 2 + x1 * scale;
+      const screenY = baseAnchorY - y2 * scale;
+
+      return {
+        x: screenX,
+        y: screenY,
+        depth: z2,
+        scale: scale
+      };
+    }
+
+    // 2D Bicubic Catmull-Rom Spline Interpolation Engine
+    function catmullRom1D(p0, p1, p2, p3, t) {
+      const t2 = t * t;
+      const t3 = t2 * t;
+      return 0.5 * (
+        (2 * p1) +
+        (-p0 + p2) * t +
+        (2 * p0 - 5 * p1 + 4 * p2 - p3) * t2 +
+        (-p0 + 3 * p1 - 3 * p2 + p3) * t3
+      );
+    }
+
+    function getCoarseElev(r, c) {
+      const cr = Math.max(0, Math.min(ROWS - 1, r));
+      const cc = Math.max(0, Math.min(COLS - 1, c));
+      return elevationMatrix[cr][cc];
+    }
+
+    function sampleSplineElevation(u, v) {
+      const r1 = Math.floor(u);
+      const c1 = Math.floor(v);
+      const tr = u - r1;
+      const tc = v - c1;
+
+      const r0 = r1 - 1, r2 = r1 + 1, r3 = r1 + 2;
+      const c0 = c1 - 1, c2 = c1 + 1, c3 = c1 + 2;
+
+      const col0 = catmullRom1D(getCoarseElev(r0, c0), getCoarseElev(r0, c1), getCoarseElev(r0, c2), getCoarseElev(r0, c3), tc);
+      const col1 = catmullRom1D(getCoarseElev(r1, c0), getCoarseElev(r1, c1), getCoarseElev(r1, c2), getCoarseElev(r1, c3), tc);
+      const col2 = catmullRom1D(getCoarseElev(r2, c0), getCoarseElev(r2, c1), getCoarseElev(r2, c2), getCoarseElev(r2, c3), tc);
+      const col3 = catmullRom1D(getCoarseElev(r3, c0), getCoarseElev(r3, c1), getCoarseElev(r3, c2), getCoarseElev(r3, c3), tc);
+
+      const val = catmullRom1D(col0, col1, col2, col3, tr);
+      return Math.max(8, val);
+    }
+
+    // High-Density Nebula Mesh Subdivision: 4x Subdivisions (77 x 57 = 4,389 Nodes)
+    /* 33 real rows need less subdivision than the old 20 synthetic ones.
+       SUB_R 4 -> 2 keeps the mesh at 65 x 57 = 3,705 vertices, slightly
+       lighter than the previous 4,389, while resolving more actual data. */
+    const SUB_R = 2;
+    const SUB_C = 4;
+    const FINE_ROWS = (ROWS - 1) * SUB_R + 1;
+    const FINE_COLS = (COLS - 1) * SUB_C + 1;
+    const gridWidth = 270;
+    const gridDepth = 205;
+
+    const fineGridPoints = [];
+    for (let fi = 0; fi < FINE_ROWS; fi++) {
+      fineGridPoints[fi] = [];
+      const u = (fi / (FINE_ROWS - 1)) * (ROWS - 1);
+      const rawZ = (fi / (FINE_ROWS - 1) - 0.5) * gridDepth;
+
+      for (let fj = 0; fj < FINE_COLS; fj++) {
+        const v = (fj / (FINE_COLS - 1)) * (COLS - 1);
+        const rawX = (fj / (FINE_COLS - 1) - 0.5) * gridWidth;
+        const elev = sampleSplineElevation(u, v);
+        /* Vertical exaggeration, exactly as a physical relief map uses it.
+           At the previous 0.82 the tallest peak stood 107 units against a
+           270-unit plate -- a relief ratio of 0.4, which from any presenting
+           angle reads as a gently mounded sheet rather than terrain. 1.55
+           puts the summit at ~200 units, comparable to the plate width, so
+           height is the first thing the eye resolves. This scales the picture,
+           never the numbers: the rupee figures on the chips and in the tooltip
+           come straight from the dataset. */
+        const rawY = elev * VERTICAL_EXAGGERATION;
+
+        fineGridPoints[fi][fj] = {
+          rawX, rawY, rawZ,
+          elev,
+          u, v, fi, fj
+        };
+      }
+    }
+
+    // Authentic Tri-Palette Topography Engine: Google Light Spectrum, Oceanic Aqua & Gemini Cosmic
+    /* Luminance clamp for the light background.
+       The colour ramps below were authored as emissive light on a near-black
+       void. On white the bright bands invert into invisibility, so every
+       terrain colour is passed through inkLimit(), which scales it down until
+       its relative luminance sits under the ceiling. Hue and band ordering are
+       preserved; only brightness is capped.
+
+       In dark mode the ceiling is 1.0, which makes inkLimit() a no-op and
+       restores the original artwork exactly. */
+    const INK_CEILING_LIGHT = 0.62;
+    let LIGHT_INK_CEILING = INK_CEILING_LIGHT;
+    let ringInkPrimary = 'rgba(10, 118, 132, 0.13)';
+    let ringInkAccent = 'rgba(138, 98, 0, 0.10)';
+    let reticleInk = '#121317';
+
+    function syncCanvasTheme() {
+      const dark = document.documentElement.classList.contains('theme-dark');
+      LIGHT_INK_CEILING = dark ? 1.0 : INK_CEILING_LIGHT;
+      ringInkPrimary = dark ? 'rgba(18, 181, 203, 0.05)' : 'rgba(10, 118, 132, 0.13)';
+      ringInkAccent = dark ? 'rgba(245, 158, 11, 0.03)' : 'rgba(138, 98, 0, 0.10)';
+      reticleInk = dark ? '#FFFFFF' : '#121317';
+    }
+    syncCanvasTheme();
+
+    function inkLimit(r, g, b) {
+      const lum = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
+      if (lum <= LIGHT_INK_CEILING || lum === 0) return [r, g, b];
+      const k = LIGHT_INK_CEILING / lum;
+      return [Math.round(r * k), Math.round(g * k), Math.round(b * k)];
+    }
+
+    function inkLimitHex(hex) {
+      if (typeof hex !== 'string' || hex.charAt(0) !== '#' || hex.length !== 7) return hex;
+      const [r, g, b] = inkLimit(
+        parseInt(hex.slice(1, 3), 16),
+        parseInt(hex.slice(3, 5), 16),
+        parseInt(hex.slice(5, 7), 16)
+      );
+      return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+    }
+
+    function getNebulaColor(elev, alpha = 1.0) {
+      const norm = Math.max(0, Math.min(1, (elev - 8) / (130 - 8)));
+
+      let r, g, b, strokeR, strokeG, strokeB, dotColor, glowColor;
+
+      if (currentPalette === 'google') {
+        // --- 1. GOOGLE PHYSICAL LIGHT SPECTRUM (WAVELENGTH ORDER ROYGBIV) ---
+        // Cosmic Indigo -> Google Blue (460nm) -> Sovereign Turquoise (490nm) -> Google Emerald Green (530nm) -> Google Sun Yellow (580nm) -> Google Crimson Red (650nm) -> Starburst White (>700nm apex)
+        if (norm < 0.15) {
+          // 1. Deep Cosmic Indigo (15, 23, 60) -> Google Blue (66, 133, 244) [< ₹26 Cr]
+          const t = norm / 0.15;
+          r = Math.round(15 + 51 * t);
+          g = Math.round(23 + 110 * t);
+          b = Math.round(60 + 184 * t);
+          strokeR = Math.round(30 + 50 * t);
+          strokeG = Math.round(50 + 90 * t);
+          strokeB = Math.round(120 + 130 * t);
+          dotColor = '#8AB4F8';
+          glowColor = 'rgba(96, 165, 250, 0.35)';
+        } else if (norm < 0.35) {
+          // 2. Google Blue (66, 133, 244) -> Sovereign Turquoise (18, 181, 203) [₹26–51 Cr - Lighthouse Agent]
+          const t = (norm - 0.15) / 0.20;
+          r = Math.round(66 - 66 * t);
+          g = Math.round(133 + 77 * t);
+          b = Math.round(244 - 64 * t);
+          strokeR = 0;
+          strokeG = Math.round(160 + 55 * t);
+          strokeB = Math.round(240 - 40 * t);
+          dotColor = '#12B5CB';
+          glowColor = 'rgba(18, 181, 203, 0.45)';
+        } else if (norm < 0.55) {
+          // 3. Sovereign Turquoise (18, 181, 203) -> Google Emerald Green (52, 168, 83) [₹51–75 Cr - Operational Slopes]
+          const t = (norm - 0.35) / 0.20;
+          r = Math.round(0 + 52 * t);
+          g = Math.round(210 - 42 * t);
+          b = Math.round(180 - 97 * t);
+          strokeR = Math.round(52 * t);
+          strokeG = Math.round(215 - 35 * t);
+          strokeB = Math.round(170 - 80 * t);
+          dotColor = '#5BB974';
+          glowColor = 'rgba(74, 222, 128, 0.50)';
+        } else if (norm < 0.75) {
+          // 4. Google Green (52, 168, 83) -> Google Sun Yellow (251, 188, 4) [₹75–100 Cr - Friction Bottleneck Ridges]
+          const t = (norm - 0.55) / 0.20;
+          r = Math.round(52 + 199 * t);
+          g = Math.round(168 + 20 * t);
+          b = Math.round(83 - 79 * t);
+          strokeR = Math.round(60 + 195 * t);
+          strokeG = Math.round(180 + 35 * t);
+          strokeB = Math.round(90 * (1 - t));
+          dotColor = '#FDD663';
+          glowColor = 'rgba(253, 224, 71, 0.65)';
+        } else if (norm < 0.90) {
+          // 5. Google Yellow (251, 188, 4) -> Google Crimson Red (234, 67, 53) [₹100–118 Cr - Process Hazards]
+          const t = (norm - 0.75) / 0.15;
+          r = Math.round(251 - 17 * t);
+          g = Math.round(188 - 121 * t);
+          b = Math.round(4 + 49 * t);
+          strokeR = 255;
+          strokeG = Math.round(210 - 130 * t);
+          strokeB = Math.round(40 + 30 * t);
+          dotColor = '#F28B82';
+          glowColor = 'rgba(248, 113, 113, 0.75)';
+        } else {
+          // 6. Google Red (234, 67, 53) -> Starburst Pure White (255, 255, 255) [> ₹118 Cr - Apex Summits]
+          const t = (norm - 0.90) / 0.10;
+          r = Math.round(234 + 21 * t);
+          g = Math.round(67 + 188 * t);
+          b = Math.round(53 + 202 * t);
+          strokeR = 255;
+          strokeG = 255;
+          strokeB = 255;
+          dotColor = '#FFFFFF';
+          glowColor = 'rgba(255, 255, 255, 0.95)';
+        }
+      } else if (currentPalette === 'aqua') {
+        // --- 2. OCEANIC AQUA & TURQUOISE MONOCHROME SPECTRUM ---
+        if (norm < 0.22) {
+          // Deep Oceanic Teal & Marine Void (< ₹35 Cr)
+          const t = norm / 0.22;
+          r = Math.round(4 + (8 - 4) * t);
+          g = Math.round(35 + (72 - 35) * t);
+          b = Math.round(42 + (78 - 42) * t);
+          strokeR = Math.round(0 + 20 * t);
+          strokeG = Math.round(140 + 40 * t);
+          strokeB = Math.round(150 + 30 * t);
+          dotColor = '#6FD3E0';
+          glowColor = 'rgba(94, 234, 212, 0.3)';
+        } else if (norm < 0.52) {
+          // Luminous Aqua-Green & Electric Turquoise (₹35–72 Cr)
+          const t = (norm - 0.22) / 0.30;
+          r = Math.round(8 + (0 - 8) * t);
+          g = Math.round(72 + (210 - 72) * t);
+          b = Math.round(78 + (180 - 78) * t);
+          strokeR = 0;
+          strokeG = Math.round(180 + 55 * t);
+          strokeB = Math.round(180 + 35 * t);
+          dotColor = '#12B5CB';
+          glowColor = 'rgba(18, 181, 203, 0.45)';
+        } else if (norm < 0.74) {
+          // Molten Solar Gold & Amber Heat Vein (₹72–98 Cr)
+          const t = (norm - 0.52) / 0.22;
+          r = Math.round(0 + (245 - 0) * t);
+          g = Math.round(210 + (158 - 210) * t);
+          b = Math.round(180 + (11 - 180) * t);
+          strokeR = 255;
+          strokeG = Math.round(220 + (200 - 220) * t);
+          strokeB = Math.round(120 + (30 - 120) * t);
+          dotColor = '#FDD663';
+          glowColor = 'rgba(253, 224, 71, 0.6)';
+        } else {
+          // Starburst Cyan & Pure White Summits (> ₹98 Cr)
+          const t = (norm - 0.74) / 0.26;
+          r = Math.round(0 + (255 - 0) * t);
+          g = Math.round(240 + (255 - 240) * t);
+          b = 255;
+          strokeR = 255;
+          strokeG = 255;
+          strokeB = 255;
+          dotColor = '#FFFFFF';
+          glowColor = 'rgba(0, 240, 255, 0.85)';
+        }
+      } else {
+        // --- 3. REBALANCED OFFICIAL GOOGLE GEMINI SPECTRUM ---
+        // Blends image78 turquoise with official Gemini violet, magenta, amber, and starburst white
+        if (norm < 0.18) {
+          // Deep Space Indigo & Midnight Navy Plains (< ₹30 Cr)
+          const t = norm / 0.18;
+          r = Math.round(10 + (22 - 10) * t);
+          g = Math.round(16 + (32 - 16) * t);
+          b = Math.round(38 + (75 - 38) * t);
+          strokeR = Math.round(35 + 35 * t);
+          strokeG = Math.round(50 + 60 * t);
+          strokeB = Math.round(110 + 80 * t);
+          dotColor = '#C6B2FF';
+          glowColor = 'rgba(129, 140, 248, 0.35)';
+        } else if (norm < 0.42) {
+          // Sovereign Turquoise & Electric Azure River (₹30–60 Cr - signature image78 aura)
+          const t = (norm - 0.18) / 0.24;
+          r = Math.round(0 + (0 - 0) * t);
+          g = Math.round(180 + (163 - 180) * t);
+          b = Math.round(180 + (255 - 180) * t);
+          strokeR = 0;
+          strokeG = Math.round(210 + (180 - 210) * t);
+          strokeB = Math.round(200 + (255 - 200) * t);
+          dotColor = '#12B5CB';
+          glowColor = 'rgba(18, 181, 203, 0.45)';
+        } else if (norm < 0.68) {
+          // Gemini Orchid Violet & Radiant Magenta (₹60–90 Cr - friction ridges)
+          const t = (norm - 0.42) / 0.26;
+          r = Math.round(139 + (219 - 139) * t);
+          g = Math.round(92 + (39 - 92) * t);
+          b = Math.round(246 + (119 - 246) * t);
+          strokeR = 245;
+          strokeG = Math.round(110 + (50 - 110) * t);
+          strokeB = Math.round(245 + (160 - 245) * t);
+          dotColor = '#E8710A';
+          glowColor = 'rgba(244, 114, 182, 0.55)';
+        } else if (norm < 0.88) {
+          // Molten Solar Gold & Sunburst Amber (₹90–115 Cr - critical warning folds)
+          const t = (norm - 0.68) / 0.20;
+          r = Math.round(234 + (245 - 234) * t);
+          g = Math.round(88 + (158 - 88) * t);
+          b = Math.round(12 + (11 - 12) * t);
+          strokeR = 255;
+          strokeG = Math.round(215 + 40 * t);
+          strokeB = Math.round(40 * (1 - t));
+          dotColor = '#FDD663';
+          glowColor = 'rgba(253, 224, 71, 0.65)';
+        } else {
+          // Starburst Cyan & Pure Brilliant White Summits (> ₹115 Cr)
+          const t = (norm - 0.88) / 0.12;
+          r = Math.round(0 + (255 - 0) * t);
+          g = Math.round(240 + (255 - 240) * t);
+          b = 255;
+          strokeR = 255;
+          strokeG = 255;
+          strokeB = 255;
+          dotColor = '#FFFFFF';
+          glowColor = 'rgba(0, 240, 255, 0.9)';
+        }
+      }
+
+      // ---- Light-background adaptation -------------------------------------
+      // The two ramps above were authored as emissive light against a near-black
+      // void: bright, low-alpha fills that glow. On white they invert into
+      // invisibility (the apex band is literally 255,255,255). inkLimit() keeps
+      // each band's hue and ordering but caps luminance so every step stays
+      // legible as ink on white. Opacities are raised for the same reason.
+      const [ir, ig, ib] = inkLimit(r, g, b);
+      const [sr, sg, sb] = inkLimit(strokeR, strokeG, strokeB);
+
+      return {
+        fill: `rgba(${ir}, ${ig}, ${ib}, ${alpha * 0.42})`,
+        stroke: `rgba(${sr}, ${sg}, ${sb}, ${Math.min(1, alpha * 0.85)})`,
+        dot: inkLimitHex(dotColor),
+        glow: glowColor,
+        r: ir, g: ig, b: ib,
+        norm
+      };
+    }
+
+    // Main 3D Nebula Render Loop
+    function render3D() {
+      const rect = container.getBoundingClientRect();
+      const width = rect.width || container.clientWidth || 800;
+      const height = rect.height || container.clientHeight || 640;
+
+      ctx.clearRect(0, 0, width, height);
+
+      // Subtle ambient orbital radar rings in the cosmic void
+      ctx.strokeStyle = ringInkPrimary;
+      ctx.lineWidth = 1;
+      for (let r = 100; r < 450; r += 85) {
+        ctx.beginPath();
+        ctx.arc(width / 2, height * 0.67, r, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+      ctx.strokeStyle = ringInkAccent;
+      ctx.beginPath();
+      ctx.arc(width / 2, height * 0.67, 320, 0, Math.PI * 2);
+      ctx.stroke();
+
+      // Project all 4,389 fine grid vertices and pre-calculate color tokens
+      const projectedMesh = [];
+
+      for (let fi = 0; fi < FINE_ROWS; fi++) {
+        projectedMesh[fi] = [];
+        for (let fj = 0; fj < FINE_COLS; fj++) {
+          const pt = fineGridPoints[fi][fj];
+          projectedMesh[fi][fj] = {
+            rawX: pt.rawX,
+            rawY: pt.rawY,
+            rawZ: pt.rawZ,
+            elev: pt.elev,
+            p: project3D(pt.rawX, pt.rawY, pt.rawZ, width, height),
+            col: getNebulaColor(pt.elev)
+          };
+        }
+      }
+
+      // Build Fine Cloth Quads
+      const quads = [];
+      for (let fi = 0; fi < FINE_ROWS - 1; fi++) {
+        for (let fj = 0; fj < FINE_COLS - 1; fj++) {
+          const p1 = projectedMesh[fi][fj];
+          const p2 = projectedMesh[fi][fj + 1];
+          const p3 = projectedMesh[fi + 1][fj + 1];
+          const p4 = projectedMesh[fi + 1][fj];
+
+          const avgDepth = (p1.p.depth + p2.p.depth + p3.p.depth + p4.p.depth) * 0.25;
+          const avgElev = (p1.elev + p2.elev + p3.elev + p4.elev) * 0.25;
+
+          quads.push({ 
+            p1, p2, p3, p4, 
+            avgDepth, avgElev, 
+            fi, fj,
+            col: getNebulaColor(avgElev)
+          });
+        }
+      }
+
+      // Published for the hover tooltip, which needs screen positions.
+      lastProjectedMesh = projectedMesh;
+
+      // Depth sort back to front (Painter's Algorithm)
+      quads.sort((a, b) => b.avgDepth - a.avgDepth);
+
+      // 1. Render Translucent Silk-Cloth Quads (Transmits light through undulating folds)
+      quads.forEach(q => {
+        ctx.beginPath();
+        ctx.moveTo(q.p1.p.x, q.p1.p.y);
+        ctx.lineTo(q.p2.p.x, q.p2.p.y);
+        ctx.lineTo(q.p3.p.x, q.p3.p.y);
+        ctx.lineTo(q.p4.p.x, q.p4.p.y);
+        ctx.closePath();
+
+        ctx.fillStyle = q.col.fill;
+        ctx.strokeStyle = q.col.stroke;
+        ctx.lineWidth = 0.45;
+
+        ctx.fill();
+        ctx.stroke();
+      });
+
+      // 2. Render Continuous Spline Flow Ribbons (Streamlines echoing image78.png)
+      for (let fj = 0; fj < FINE_COLS; fj += 3) {
+        ctx.beginPath();
+        for (let fi = 0; fi < FINE_ROWS; fi++) {
+          const pt = projectedMesh[fi][fj];
+          if (fi === 0) ctx.moveTo(pt.p.x, pt.p.y);
+          else ctx.lineTo(pt.p.x, pt.p.y);
+        }
+        const midElev = projectedMesh[Math.floor(FINE_ROWS / 2)][fj].elev;
+        const streamCol = getNebulaColor(midElev, 0.9);
+        ctx.strokeStyle = streamCol.stroke;
+        ctx.lineWidth = 0.7;
+        ctx.stroke();
+      }
+
+      // 3. Render Luminous Stardust Particles (ONLY at High Peaks & Summits)
+      for (let fi = 0; fi < FINE_ROWS; fi++) {
+        for (let fj = 0; fj < FINE_COLS; fj++) {
+          const pt = projectedMesh[fi][fj];
+          const sp = pt.p;
+          if (sp.depth < -180) continue; // Behind camera clipping
+
+          const elev = pt.elev;
+
+          // Stardust only crowns the high ground.
+          if (elev < 75) continue;
+
+          const col = pt.col;
+
+          // Gentle, refined stardust dot size at the peaks
+          let r = (0.55 + col.norm * 1.1) * (sp.scale / 1.6);
+          r = Math.max(0.6, Math.min(2.2, r));
+
+          // High summits get a soft halo
+          if (elev >= 95) {
+            ctx.beginPath();
+            ctx.arc(sp.x, sp.y, r * 1.6, 0, Math.PI * 2);
+            ctx.fillStyle = col.glow;
+            ctx.fill();
+          }
+
+          ctx.beginPath();
+          ctx.arc(sp.x, sp.y, r, 0, Math.PI * 2);
+          ctx.fillStyle = col.dot;
+          ctx.fill();
+        }
+      }
+
+      /* 4. Summit beacons.
+            The original version of this layer carried five hardcoded peaks with
+            invented rupee figures. This one reads TERRAIN.summits, which is
+            derived from the dataset, and paints theme-aware so the chips stay
+            legible on white.
+
+            Two passes, not one. Chips are measured and de-overlapped in SCREEN
+            space before anything is drawn, because the map auto-rotates: any
+            arrangement that happens to be clear at the opening angle can
+            collide a second later. Lease Operator and Production Engineer are
+            the standing case -- adjacent rows, same peak column. */
+      pulsePhase += 0.04;
+      if (TERRAIN && TERRAIN.summits) {
+        const dark = document.documentElement.classList.contains('theme-dark');
+        const chipBg   = dark ? 'rgba(6, 9, 14, 0.88)'   : 'rgba(255, 255, 255, 0.95)';
+        const chipInk  = dark ? '#FFFFFF'                : '#121317';
+        const chipEdge = dark ? 'rgba(18, 181, 203, 0.85)' : 'rgba(10, 118, 132, 0.80)';
+        const beamInk  = dark ? 'rgba(18, 181, 203, 0.70)' : 'rgba(10, 118, 132, 0.40)';
+        const pulse = 4 + Math.sin(pulsePhase) * 2;
+        const CHIP_H = 17, GAP = 3;
+
+        ctx.font = 'bold 10px "Roboto Mono", ui-monospace, monospace';
+
+        // Pass 1: measure. Rank comes from array order, which buildTerrain
+        // already sorted by height, and height encodes role value.
+        const chips = [];
+        TERRAIN.summits.forEach((s, i) => {
+          const meshRow = projectedMesh[s.r * SUB_R];
+          if (!meshRow) return;
+          const node = meshRow[s.c * SUB_C];
+          if (!node || node.p.depth < -180) return;
+          const label = `${i + 1}. ${s.name} \u00b7 \u20b9${Math.round(s.value)} Cr`;
+          chips.push({
+            node, label, rank: i + 1,
+            w: ctx.measureText(label).width + 14,
+            y: node.p.y - 26,
+            depth: node.p.depth
+          });
+        });
+
+        /* Pass 2: resolve overlap. Walk top-down; when a chip's box intersects
+           one already placed, lift it clear. Only vertical nudging is used --
+           moving a chip sideways would slide it off the peak it names. */
+        chips.sort((a, b) => a.y - b.y);
+        for (let i = 1; i < chips.length; i++) {
+          for (let j = 0; j < i; j++) {
+            const a = chips[j], b = chips[i];
+            const overlapX = Math.abs(a.node.p.x - b.node.p.x) < (a.w + b.w) / 2;
+            const overlapY = Math.abs(a.y - b.y) < CHIP_H + GAP;
+            if (overlapX && overlapY) b.y = a.y - CHIP_H - GAP;
+          }
+        }
+
+        // Draw far mountains first so nearer chips sit on top of them.
+        chips.sort((a, b) => b.depth - a.depth);
+        chips.forEach(c => {
+          const node = c.node;
+          const ground = project3D(node.rawX, 0, node.rawZ, width, height);
+
+          // Tether to the ground plane, so height reads as height
+          ctx.beginPath();
+          ctx.moveTo(ground.x, ground.y);
+          ctx.lineTo(node.p.x, node.p.y);
+          ctx.strokeStyle = beamInk;
+          ctx.lineWidth = 1.2;
+          ctx.setLineDash([3, 3]);
+          ctx.stroke();
+          ctx.setLineDash([]);
+
+          // Leader line from the peak up to a chip that had to be lifted
+          if (c.y < node.p.y - 30) {
+            ctx.beginPath();
+            ctx.moveTo(node.p.x, node.p.y - 6);
+            ctx.lineTo(node.p.x, c.y + CHIP_H);
+            ctx.strokeStyle = beamInk;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+
+          ctx.beginPath();
+          ctx.arc(node.p.x, node.p.y, pulse + 4, 0, Math.PI * 2);
+          ctx.strokeStyle = chipEdge;
+          ctx.lineWidth = 1.1;
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.arc(node.p.x, node.p.y, 3.2, 0, Math.PI * 2);
+          ctx.fillStyle = chipInk;
+          ctx.fill();
+
+          const bx = node.p.x - c.w / 2;
+
+          ctx.fillStyle = chipBg;
+          ctx.fillRect(bx, c.y, c.w, CHIP_H);
+          ctx.strokeStyle = chipEdge;
+          ctx.lineWidth = 1;
+          ctx.strokeRect(bx, c.y, c.w, CHIP_H);
+
+          ctx.font = 'bold 10px "Roboto Mono", ui-monospace, monospace';
+          ctx.textAlign = 'center';
+          ctx.fillStyle = chipInk;
+          ctx.fillText(c.label, node.p.x, c.y + 12);
+          ctx.textAlign = 'start';
+        });
+      }
+
+      // 5. Highlighted Radar Target Cursor Reticle
+      if (highlightedCoord) {
+        const fi = highlightedCoord.r * SUB_R;
+        const fj = highlightedCoord.c * SUB_C;
+        if (projectedMesh[fi] && projectedMesh[fi][fj]) {
+          const hp = projectedMesh[fi][fj];
+          const reticlePulse = 8 + Math.sin(pulsePhase * 2) * 3;
+          ctx.beginPath();
+          ctx.arc(hp.p.x, hp.p.y, reticlePulse, 0, Math.PI * 2);
+          ctx.strokeStyle = reticleInk;
+          ctx.lineWidth = 2;
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.arc(hp.p.x, hp.p.y, reticlePulse + 5, 0, Math.PI * 2);
+          ctx.strokeStyle = 'rgba(18, 181, 203, 0.7)';
+          ctx.lineWidth = 1;
+          ctx.setLineDash([2, 2]);
+          ctx.stroke();
+          ctx.setLineDash([]);
+        }
+      }
+
+      // Auto-rotation increment
+      if (autoRotate && !isDragging) {
+        angleY += 0.0022;
+      }
+
+      requestAnimationFrame(render3D);
+    }
+
+    /* ── Hover pick ──────────────────────────────────────────────────────
+       Walks the 495 data cells (cheap) rather than all 3,705 mesh vertices,
+       converts each to its screen position via the mesh render3D last
+       published, and takes the nearest within HOVER_RADIUS px. */
+    const HOVER_RADIUS = 26;
+
+    function cellAtScreen(mx, my) {
+      if (!lastProjectedMesh || !cellMeta) return null;
+      let best = null, bestD2 = HOVER_RADIUS * HOVER_RADIUS;
+      for (let r = 0; r < ROWS; r++) {
+        const fi = r * SUB_R;
+        const meshRow = lastProjectedMesh[fi];
+        if (!meshRow) continue;
+        for (let c = 0; c < COLS; c++) {
+          const node = meshRow[c * SUB_C];
+          if (!node) continue;
+          const dx = node.p.x - mx, dy = node.p.y - my;
+          const d2 = dx * dx + dy * dy;
+          if (d2 < bestD2) { bestD2 = d2; best = { r, c, node }; }
+        }
+      }
+      return best;
+    }
+
+    function hideTerrainTooltip() {
+      if (tooltipEl) tooltipEl.style.display = 'none';
+    }
+
+    canvas.addEventListener('mousemove', (e) => {
+      if (isDragging || !tooltipEl) { hideTerrainTooltip(); return; }
+      const rect = canvas.getBoundingClientRect();
+      const hit = cellAtScreen(e.clientX - rect.left, e.clientY - rect.top);
+      if (!hit) { hideTerrainTooltip(); return; }
+
+      const m = cellMeta[hit.r][hit.c];
+      if (ttTitle) ttTitle.textContent = m.persona;
+      if (ttPersona) ttPersona.textContent = `${m.segment} · ${m.status}`;
+      if (ttElevation) {
+        ttElevation.textContent =
+          `${m.action}  —  ~\u20b9${m.cr.toFixed(1)} Cr / yr`;
+      }
+      tooltipEl.style.display = 'block';
+      tooltipEl.style.left = hit.node.p.x + 'px';
+      tooltipEl.style.top = hit.node.p.y + 'px';
+      highlightRadarCell(hit.r, hit.c);
+    });
+
+    canvas.addEventListener('mouseleave', hideTerrainTooltip);
+
+    // Mouse Controls (Orbit, Rotate, Zoom)
+    canvas.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      lastMouseX = e.clientX;
+      lastMouseY = e.clientY;
+      autoRotate = false;
+      const btn = document.getElementById('btn-auto-rotate');
+      if (btn) {
+        btn.innerText = 'Auto-Rotate: OFF';
+        btn.classList.remove('active');
+      }
+    });
+
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const dx = e.clientX - lastMouseX;
+      const dy = e.clientY - lastMouseY;
+
+      angleY += dx * 0.008;
+      angleX = Math.max(0.2, Math.min(1.4, angleX + dy * 0.006)); // pitch clamp
+
+      lastMouseX = e.clientX;
+      lastMouseY = e.clientY;
+    });
+
+    // Zoom via Scroll Wheel
+    canvas.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const delta = e.deltaY > 0 ? -0.08 : 0.08;
+      zoom = Math.max(0.55, Math.min(2.2, zoom + delta));
+    }, { passive: false });
+
+    // Buttons
+    function toggleAutoRotate() {
+      autoRotate = !autoRotate;
+      const btn = document.getElementById('btn-auto-rotate');
+      if (btn) {
+        btn.innerText = `Auto-Rotate: ${autoRotate ? 'ON' : 'OFF'}`;
+        btn.classList.toggle('active', autoRotate);
+      }
+    }
+
+    // Airlock-Proof Native Camera Tweening (Zero External Dependencies)
+    let activeCameraTween = null;
+    function tweenCamera(targetState, duration = 850) {
+      if (activeCameraTween) cancelAnimationFrame(activeCameraTween);
+      const startPitch = angleX;
+      const startYaw = angleY;
+      const startZoom = zoom;
+      const targetPitch = targetState.aX !== undefined ? targetState.aX : startPitch;
+      const targetYaw = targetState.aY !== undefined ? targetState.aY : startYaw;
+      const targetZoom = targetState.z !== undefined ? targetState.z : startZoom;
+      const startTime = performance.now();
+
+      function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+      function step(now) {
+        const elapsed = now - startTime;
+        const progress = Math.min(1, elapsed / duration);
+        const t = easeOutCubic(progress);
+
+        angleX = startPitch + (targetPitch - startPitch) * t;
+        angleY = startYaw + (targetYaw - startYaw) * t;
+        zoom = startZoom + (targetZoom - startZoom) * t;
+
+        if (progress < 1) {
+          activeCameraTween = requestAnimationFrame(step);
+        } else {
+          activeCameraTween = null;
+        }
+      }
+      activeCameraTween = requestAnimationFrame(step);
+    }
+
+    function resetTerrainView() {
+      // Must track BASE_PITCH. When these drifted apart, Reset Perspective
+      // returned to a different view than the one the page opened on.
+      tweenCamera({ aX: BASE_PITCH, aY: -0.55, z: 1.0 }, 900);
+    }
+
+    function setTopDownView() {
+      tweenCamera({ aX: 1.45, aY: 0, z: 1.25 }, 900);
+    }
+
+    /* focusSummit() removed with the summit leaderboard and the canvas beacon
+       layer. Camera focus is still available via resetTerrainView(),
+       setTopDownView() and focusGridCoordinate() (mini radar). */
+
+    function highlightRadarCell(r, c) {
+      document.querySelectorAll('.mini-cell').forEach(cell => {
+        const cr = parseInt(cell.getAttribute('data-r'));
+        const cc = parseInt(cell.getAttribute('data-c'));
+        if (cr === r && cc === c) {
+          cell.style.transform = 'scale(2.2)';
+          cell.style.outline = '2px solid #121317';
+          cell.style.zIndex = '50';
+        } else {
+          cell.style.transform = 'scale(1)';
+          cell.style.outline = 'none';
+          cell.style.zIndex = '1';
+        }
+      });
+      highlightedCoord = { r, c };
+    }
+
+    function focusGridCoordinate(r, c) {
+      highlightRadarCell(r, c);
+      autoRotate = false;
+      const btn = document.getElementById('btn-auto-rotate');
+      if (btn) {
+        btn.innerText = 'Auto-Rotate: OFF';
+        btn.classList.remove('active');
+      }
+      const targetAngleY = -((c / (COLS - 1) - 0.5) * 1.6);
+      tweenCamera({ aY: targetAngleY, aX: 0.7 }, 900);
+    }
+
+    /* filterTerrainSector() removed — the sector pill bar it served was
+       stripped along with the summit leaderboard. Original preserved at
+       legacy_strategic_files/page_09_pre_light/page_09_dark_original.html */
+
+    function togglePalette() {
+      currentPalette = (currentPalette === 'google') ? 'aqua' : 'google';
+
+      const thumb = document.getElementById('palette-switch-thumb') || document.getElementById('palette-switch-thumb-stage');
+      const track = document.getElementById('palette-switch-track') || document.getElementById('palette-switch-track-stage');
+      const containerBtn = document.getElementById('btn-palette-toggle') || document.getElementById('btn-palette-toggle-stage');
+      const legendEl = document.getElementById('topology-legend-items') || document.getElementById('topology-legend-items-stage');
+
+      if (thumb && track) {
+        if (currentPalette === 'google') {
+          track.style.background = 'rgba(66, 133, 244, 0.25)';
+          track.style.borderColor = 'rgba(66, 133, 244, 0.6)';
+          thumb.style.left = '2px';
+          thumb.style.background = 'linear-gradient(135deg, #3186FF, #FC413D)';
+          thumb.style.boxShadow = '0 0 6px #3186FF';
+          if (containerBtn) containerBtn.style.borderColor = 'rgba(66, 133, 244, 0.4)';
+        } else {
+          track.style.background = 'rgba(18, 181, 203, 0.25)';
+          track.style.borderColor = 'rgba(18, 181, 203, 0.6)';
+          thumb.style.left = '16px';
+          thumb.style.background = 'linear-gradient(135deg, #12B5CB, #12B5CB)';
+          thumb.style.boxShadow = '0 0 6px #12B5CB';
+          if (containerBtn) containerBtn.style.borderColor = 'rgba(18, 181, 203, 0.4)';
+        }
+      }
+
+      if (legendEl) {
+        if (currentPalette === 'google') {
+          legendEl.innerHTML = `
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: var(--starburst); border-radius: 2px;"></span>
+              <span>Highest value density • apex summits</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #FC413D; border-radius: 2px; box-shadow: 0 0 6px #FC413D;"></span>
+              <span>Very high • critical-status concentration</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #FEC700; border-radius: 2px; box-shadow: 0 0 6px #FEC700;"></span>
+              <span>High • friction bottleneck ridges</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #00AF57; border-radius: 2px; box-shadow: 0 0 6px #00AF57;"></span>
+              <span>Moderate • operational flanks</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 6px #12B5CB;"></span>
+              <span>Low-moderate • routine slopes</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #3186FF; border-radius: 2px; box-shadow: 0 0 6px #3186FF;"></span>
+              <span>Baseline • monolith plains</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 8px #12B5CB;"></span>
+              <span>★ Proven Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
+            </div>
+          `;
+        } else {
+          legendEl.innerHTML = `
+            <div style="font-weight: 800; color: var(--ink); margin-bottom: 3px; letter-spacing: 0.5px;">OCEANIC AQUA SPECTRUM (₹ CAPITAL EXPOSURE)</div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #6FD3E0, #FFFFFF); border-radius: 2px; box-shadow: 0 0 8px #6FD3E0;"></span>
+              <span>Highest value density • stardust crests</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #E8710A, #FEC700); border-radius: 2px; box-shadow: 0 0 6px #FEC700;"></span>
+              <span>High • heat folds</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #12B5CB, #00AF57); border-radius: 2px; box-shadow: 0 0 6px #12B5CB;"></span>
+              <span>Moderate • turquoise flanks</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #0A3B44; border: 1px solid #0D9488; border-radius: 2px;"></span>
+              <span>Baseline • marine plains</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="display: inline-block; width: 12px; height: 12px; background: #12B5CB; border-radius: 2px; box-shadow: 0 0 8px #12B5CB;"></span>
+              <span>★ Proven Agent (Kansas Well A-12 • Slide 06 Benchmark)</span>
+            </div>
+          `;
+        }
+      }
+
+      updateRadarCells();
+    }
+
+    /* Fill the concentration callout from the dataset. Phrased as "modelled"
+       because the per-cell split is a derivation; the role totals and the
+       estate total are straight from value_model.js. */
+    (function () {
+      const el = document.getElementById('value-concentration');
+      if (!el || !TERRAIN) return;
+      const pct = Math.round(TERRAIN.topSum / TERRAIN.estate * 100);
+      el.innerHTML =
+        '<strong style="font-size: 17px; font-weight: 800;">'
+        + SUMMIT_COUNT + ' of ' + ROWS + ' roles</strong>'
+        + '<span>carry ₹' + Math.round(TERRAIN.topSum).toLocaleString('en-IN')
+        + ' Cr of the ₹' + Math.round(TERRAIN.estate).toLocaleString('en-IN')
+        + ' Cr estate — <strong>' + pct + '%</strong> of modelled value. '
+        + 'Sequence them first.</span>';
+    })();
+
+    // Expose globally for inline event handlers
+    window.togglePalette = togglePalette;
+    window.toggleAutoRotate = toggleAutoRotate;
+    window.resetTerrainView = resetTerrainView;
+    window.setTopDownView = setTopDownView;
+    window.highlightRadarCell = highlightRadarCell;
+    window.focusGridCoordinate = focusGridCoordinate;
+    // Called by toggleTheme() in the <head> so the terrain re-tunes on theme flip.
+    window.syncCanvasTheme = syncCanvasTheme;
+
+    // Initialize on load with immediate fallback if DOM already interactive
+    function initTopologyEngine() {
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+      requestAnimationFrame(render3D);
+    }
+
+    if (document.readyState === 'loading') {
+      window.addEventListener('DOMContentLoaded', initTopologyEngine);
+    } else {
+      initTopologyEngine();
+    }
+  </script>
+
+</body>
+</html>
