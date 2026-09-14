@@ -20,8 +20,9 @@
     scrolling, and eleven "Continuous Deck View" buttons pointed at #stage-06..10
     anchors that did not exist.
 
-    The old scroll decks are preserved at
-    legacy_strategic_files/scroll_decks/ (see the README there).
+    The old scroll decks were archived to legacy_strategic_files/scroll_decks/
+    and that directory was deleted on 2026-09-14. They remain in git history:
+        git checkout d1f0ba9 -- legacy_strategic_files/scroll_decks/
 
   THE RULE THIS PAGE KEEPS
     A launcher holds links, never content. If you find yourself pasting slide
@@ -301,26 +302,20 @@
       <div class="card-desc">The five defining attributes, and where agents sit beside the monoliths.</div>
     </a>
 
-    <a class="card" href="working_deck/pages/page_04.html">
-      <div class="card-top"><span class="card-num">STAGE 05</span><span class="pill pill-i">Solution</span></div>
-      <div class="card-title">Structural Resilience</div>
-      <div class="card-desc">The Jenga organisation &mdash; fragile versus fortified.</div>
-    </a>
-
     <a class="card" href="working_deck/pages/page_05.html">
-      <div class="card-top"><span class="card-num">STAGE 06</span><span class="pill pill-p">Proof</span></div>
+      <div class="card-top"><span class="card-num">STAGE 05</span><span class="pill pill-p">Proof</span></div>
       <div class="card-title">The Petrophysical AI Agent</div>
       <div class="card-desc">Kansas Well A-12: wireline depth alignment, worked end to end.</div>
     </a>
 
     <a class="card" href="working_deck/pages/page_06.html">
-      <div class="card-top"><span class="card-num">STAGE 07</span><span class="pill pill-p">Proof</span></div>
+      <div class="card-top"><span class="card-num">STAGE 06</span><span class="pill pill-p">Proof</span></div>
       <div class="card-title">Sovereign Reference Architecture</div>
       <div class="card-desc">ADK, agent registry, deterministic solvers, and the governance path.</div>
     </a>
 
     <a class="card" href="working_deck/pages/page_07.html">
-      <div class="card-top"><span class="card-num">STAGE 08</span><span class="pill pill-p">Interactive</span></div>
+      <div class="card-top"><span class="card-num">STAGE 07</span><span class="pill pill-p">Interactive</span></div>
       <div class="card-title">The Vulnerability Board</div>
       <div class="card-desc">33 roles &times; 15 workflows. Every cell opens a persona dossier.</div>
     </a>
@@ -328,7 +323,7 @@
     <!-- Stage 09 "The Agentic Value Topology" (the 3D terrain) was pulled from
          the narrative deliberately. The plot asked a boardroom to decode a
          camera angle, a colour ramp and a height axis before it learned
-         anything, and a confused CXO says no. Stage 08 already carries the
+         anything, and a confused CXO says no. Stage 07 already carries the
          same data in a form that reads instantly, and the per-role value
          story now lands on the persona dossiers instead.
 
@@ -343,6 +338,16 @@
       <div class="card-desc">Where the value concentrates across the estate.</div>
     </a>
     -->
+
+    <!-- Structural Resilience moved here from Stage 05. Its subhead describes
+         the board's own two axes - workflows and workforce - so placed after
+         the board it reads as the verdict on the evidence, rather than a claim
+         made three slides before the evidence arrives. -->
+    <a class="card" href="working_deck/pages/page_04.html">
+      <div class="card-top"><span class="card-num">STAGE 08</span><span class="pill pill-i">Solution</span></div>
+      <div class="card-title">Structural Resilience</div>
+      <div class="card-desc">The Jenga organisation &mdash; fragile versus fortified.</div>
+    </a>
 
     <a class="card" href="working_deck/pages/page_08.html">
       <div class="card-top"><span class="card-num">STAGE 09</span><span class="pill pill-g">The Ask</span></div>
@@ -368,8 +373,7 @@
   <footer>
     Google Cloud Sovereign Energy Solutions Practice &middot; Executive Briefing<br>
     The deck is hand-authored in <code>working_deck/pages/</code>. There is no build step &mdash;
-    edit the pages directly. Superseded scroll decks and their build scripts are preserved
-    under <code>legacy_strategic_files/</code>.
+    edit the pages directly.
   </footer>
 
 </main>
