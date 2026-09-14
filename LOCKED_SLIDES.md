@@ -21,7 +21,7 @@
 | **Stage 08** | **Agentic Transformation Across Workforce & Workflows (300 Seams)** | `final_slides/slide_08_the_enterprise_chessboard.LOCKED.html` | 2026-09-08 16:25 UTC | **LOCKED & FROZEN** |
 | **Stage 09** | **The Agentic Value Topology (3D Prioritization Terrain)** | `final_slides/slide_09_the_agentic_value_topology.LOCKED.html` | 2026-09-08 15:15 UTC | **LOCKED & FROZEN** |
 | **Stage 10** | **100 Days to Proof of Value: Building an Agentic Workforce** | `final_slides/slide_10_the_discovery_sprint.LOCKED.html` | 2026-09-11 04:20 UTC | **LOCKED & FROZEN (FINAL SLIDE)** |
-| **Stage 11** | *(Retired / Consolidated into Stage 10)* | `legacy_strategic_files/retired_slides/` | 2026-09-11 | **RETIRED** |
+| **Stage 11** | *(Retired / Consolidated into Stage 10)* | deleted 2026-09-14 — `git checkout d1f0ba9 -- legacy_strategic_files/retired_slides/` | 2026-09-11 | **RETIRED** |
 
 
 ---
@@ -349,7 +349,10 @@
 ---
 
 ### Slide 11 (Stage 11) // RETIRED & CONSOLIDATED:
-- **Status:** **RETIRED & ARCHIVED** into `legacy_strategic_files/retired_slides/`.
+- **Status:** **RETIRED.** Archived into `legacy_strategic_files/retired_slides/`,
+  which was deleted on 2026-09-14. The markup survives in git history and is the
+  starting point if the closing "ask" slide is ever rebuilt:
+  `git show d1f0ba9:legacy_strategic_files/retired_slides/slide_11_the_strategic_mandate.html`
 - **Rationale:** The redundant 3-step text asking for asset nomination and workspace setup was consolidated directly into the definitive 100-Day Proof of Value concluding slide (Stage 10 / Slide 11), eliminating repetitive presentation overhead and enabling an immediate, natural transition into boardroom Q&A.
 
 

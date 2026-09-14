@@ -8,12 +8,15 @@
 > This document describes a compiled-deck architecture that is no longer how the
 > project is built.
 >
-> - The compiler it references, `build_deck.py`, has been **quarantined** to
->   `legacy_strategic_files/build_pipeline/build_deck.py` and carries a hard-exit
->   guard. So have `working_deck/build.py` and `working_deck/modularize.py`.
+> - The compiler it references, `build_deck.py`, was quarantined to
+>   `legacy_strategic_files/build_pipeline/` and then **deleted on 2026-09-14**,
+>   along with `working_deck/build.py` and `working_deck/modularize.py`. All
+>   three regenerated HTML over the live hand-authored pages. Recover with
+>   `git checkout d1f0ba9 -- legacy_strategic_files/build_pipeline/`.
 > - `deck.html` is no longer the master deliverable. The live deck is
->   **`working_deck/pages/page_00.html` … `page_08.html`** (9 slides, plus the
->   unnumbered `alternate_story.html` interstitial), hand-authored, with no
+>   **`working_deck/pages/page_00.html` … `page_08.html`** plus
+>   `alternate_story.html` — 10 slides, numbered 1–10 in the UI as stages
+>   00–09 — hand-authored, with no
 >   build step. Stages 03 and 04 were consolidated into a single slide on
 >   2026-09-14; the originals are kept unlinked as
 >   `working_deck/pages/_parked_page_03_criteria.html` and
@@ -21,8 +24,7 @@
 > - The 12-slide `final_slides/` layout described in §2 does not match what is
 >   built, and `page_11.html` no longer exists.
 >
-> For current state see `legacy_strategic_files/build_pipeline/README.md` and
-> `LOCKED_SLIDES.md`.
+> For current state see `LOCKED_SLIDES.md`.
 
 **Platform Identity:** Google Cloud Sovereign Enterprise AI Executive Experience  
 **Target Audience:** Energy Leadership (CMD, CEO, Board of Directors, Executive Directors of E&P, Refining, Pipelines)  
