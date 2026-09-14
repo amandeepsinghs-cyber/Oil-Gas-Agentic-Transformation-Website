@@ -8,8 +8,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script>
     (function() {
-      const saved = localStorage.getItem('deck-theme') || 'dark';
-      if (saved === 'light') {
+      // Light is the deck-wide default (matches pages 01-07, 10 and the launcher).
+      // This page predates aurora.css, so light is produced by ADDING .theme-light
+      // rather than by omitting .theme-dark -- hence the inverted test.
+      const saved = localStorage.getItem('deck-theme') || 'light';
+      if (saved !== 'dark') {
         document.documentElement.classList.add('theme-light');
       }
     })();
@@ -33,7 +36,7 @@
     });
   </script>
 </head>
-<body style="margin: 0; padding: 0; background-color: #06090E; overflow-x: hidden;">
+<body style="margin: 0; padding: 0; background-color: var(--bg-canvas); overflow-x: hidden;">
 
   <!-- Single-Page Executive Top Navigation Bar -->
   <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(6, 9, 14, 0.85); border-bottom: 1px solid rgba(255, 255, 255, 0.08); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">

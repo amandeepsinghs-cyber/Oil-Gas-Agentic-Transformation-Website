@@ -1989,7 +1989,7 @@
     var dark = document.documentElement.classList.toggle("theme-dark");
     document.documentElement.classList.toggle("theme-light", !dark);
     this.textContent = dark ? "Light" : "Dark";
-    try { localStorage.setItem("persona-theme", dark ? "dark" : "light"); } catch (err) { /* private mode */ }
+    try { localStorage.setItem("deck-theme", dark ? "dark" : "light"); } catch (err) { /* private mode */ }
   });
 
   /* Theme: ?theme=dark|light wins over the stored preference, so a link can
@@ -1997,7 +1997,7 @@
   (function () {
     var forced = new URLSearchParams(location.search).get("theme");
     var stored = null;
-    try { stored = localStorage.getItem("persona-theme"); } catch (err) { /* private mode */ }
+    try { stored = localStorage.getItem("deck-theme"); } catch (err) { /* private mode */ }
     var dark = forced ? forced === "dark" : stored === "dark";
     document.documentElement.classList.toggle("theme-dark", dark);
     document.documentElement.classList.toggle("theme-light", !dark);

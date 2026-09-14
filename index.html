@@ -35,10 +35,16 @@
     substrings; this page has no inline styles for them to match.
 
   THEME
-    Light by default, .theme-dark opt-in, localStorage key "deck-theme" -- the
-    same convention as pages 01-07 and 10. Note that pages 00 and 09 still use
-    the inverted legacy convention and page_08 uses key "persona-theme"; that
-    mismatch is a known open item, not something this page introduces.
+    Light by default, .theme-dark opt-in, localStorage key "deck-theme".
+    As of 2026-09-14 every live surface shares that key and that default, so the
+    theme follows you across the whole deck. Pages 00-07 and 10 express the same
+    default through the older .theme-light class because they predate
+    aurora.css; the stored value is identical either way.
+
+    working_deck/pages/page_09.html was previously pinned dark and ignored the
+    preference. It was converted on 2026-09-14: its stylesheet is now tokenised
+    with an html.theme-dark override, and its canvas clamps the colour ramp via
+    LIGHT_INK_CEILING. Every live surface now follows the convention.
 -->
 
 <link rel="stylesheet" href="assets/aurora.css">

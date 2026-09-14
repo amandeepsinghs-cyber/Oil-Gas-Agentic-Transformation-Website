@@ -5,71 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Agentic Value Topology | Sovereign Agentic Transformation</title>
   <link rel="stylesheet" href="../../assets/styles.css">
-  <link rel="stylesheet" href="../../assets/aurora.css">
   <style>
-    /* ─── PAGE-LOCAL TOKENS ───────────────────────────────────────────────────
-       Loaded after styles.css and aurora.css, so these :root declarations win
-       over both. That matters: aurora's PART 3 "legacy bridge" re-points
-       --security-turquoise at var(--text-muted), which would silently turn
-       every accent on this page grey. Declaring it here shields it.
-
-       Light is the default, matching the rest of the deck (localStorage key
-       "deck-theme"). html.theme-dark restores the original dark surface.
-
-       Fonts are deliberately NOT declared here. The previous values were
-       'Cabinet Grotesk' and 'JetBrains Mono', neither of which is loaded
-       anywhere in the repo, so both silently fell back. The page now inherits
-       --font-display / --font-mono from aurora.css like every other slide. */
     :root {
-      --slate-bg: #FFFFFF;
-      --slate-panel: #FFFFFF;
-      --slate-sunk: #F1F4FB;
-      --slate-border: #E2E6F0;
-      --nav-bg: rgba(255, 255, 255, 0.88);
-      --ink: #121317;
-      --ink-soft: #5F6368;
-      --grid-line: rgba(18, 23, 42, 0.05);
-      --canvas-surface: #FFFFFF;
-      --canvas-edge: rgba(10, 118, 132, 0.28);
-      --canvas-shadow: 0 8px 28px rgba(18, 23, 42, 0.10);
-      --starburst: #121317;
-      --stage-wash: radial-gradient(circle at 70% 35%, rgba(10, 118, 132, 0.05) 0%, rgba(241, 244, 251, 0.55) 55%, var(--slate-bg) 100%);
-      --canvas-wash: radial-gradient(circle at 65% 45%, rgba(10, 118, 132, 0.05) 0%, rgba(138, 98, 0, 0.03) 45%, transparent 70%);
-      --panel-glass: rgba(255, 255, 255, 0.92);
-      --dock-shadow: 0 4px 14px rgba(18, 23, 42, 0.12);
-      /* Accent inks chosen for contrast on white, not for glow on black. */
-      --security-turquoise: #0A7684;
-      --security-azure: #286DD1;
-      --nebula-crimson: #C62A27;
-      --hazard-amber: #8A6200;
-    }
-
-    html.theme-dark {
       --slate-bg: #06090E;
       --slate-panel: rgba(13, 19, 32, 0.85);
-      --slate-sunk: rgba(255, 255, 255, 0.04);
       --slate-border: rgba(255, 255, 255, 0.08);
-      --nav-bg: rgba(6, 9, 14, 0.90);
-      --ink: #E2E8F0;
-      --ink-soft: #94A3B8;
-      --grid-line: rgba(255, 255, 255, 0.03);
-      --canvas-surface: radial-gradient(circle at 50% 50%, #0B1323 0%, #06090E 95%);
-      --canvas-edge: rgba(18, 181, 203, 0.25);
-      --canvas-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 40px rgba(18, 181, 203, 0.04);
-      --starburst: #FFFFFF;
-      --stage-wash: radial-gradient(circle at 70% 35%, rgba(18, 181, 203, 0.05) 0%, rgba(6, 9, 14, 0.96) 65%, var(--slate-bg) 100%);
-      --canvas-wash: radial-gradient(circle at 65% 45%, rgba(18, 181, 203, 0.10) 0%, rgba(245, 158, 11, 0.05) 45%, transparent 70%);
-      --panel-glass: rgba(6, 9, 14, 0.86);
-      --dock-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
       --security-turquoise: #12B5CB;
       --security-azure: #00A3FF;
       --nebula-crimson: #FC413D;
       --hazard-amber: #FEC700;
+      --font-display: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
     }
 
     body {
       background: var(--slate-bg);
-      color: var(--ink);
+      color: #E2E8F0;
       font-family: var(--font-display);
       margin: 0;
       padding: 0;
@@ -79,7 +30,7 @@
     /* Top Navigation */
     .executive-top-nav {
       backdrop-filter: blur(20px);
-      background: var(--nav-bg);
+      background: rgba(6, 9, 14, 0.90);
       border-bottom: 1px solid var(--slate-border);
       padding: 12px max(24px, 3.5vw);
       position: fixed;
@@ -104,9 +55,9 @@
     .slide-bg-grid {
       position: absolute;
       inset: 0;
-      background-image:
-        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
       background-size: 40px 40px;
     }
 
@@ -117,9 +68,9 @@
       position: relative;
       border-radius: 10px;
       overflow: hidden;
-      background: var(--canvas-surface);
-      border: 1px solid var(--canvas-edge);
-      box-shadow: var(--canvas-shadow);
+      background: radial-gradient(circle at 50% 50%, #0B1323 0%, #06090E 95%);
+      border: 1px solid rgba(18, 181, 203, 0.25);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), inset 0 0 40px rgba(18, 181, 203, 0.04);
     }
 
     #terrain-canvas {
@@ -137,27 +88,51 @@
     #terrain-tooltip {
       position: absolute;
       pointer-events: none;
-      background: var(--slate-panel);
+      background: rgba(6, 9, 14, 0.94);
       backdrop-filter: blur(12px);
       border: 1px solid var(--security-turquoise);
       border-radius: 6px;
       padding: 10px 14px;
       font-family: var(--font-mono);
       font-size: 11px;
-      color: var(--ink);
-      box-shadow: 0 10px 30px rgba(18, 23, 42, 0.18);
+      color: #FFF;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(18, 181, 203, 0.3);
       z-index: 100;
       display: none;
       transform: translate(-50%, -120%);
       transition: opacity 0.15s ease;
     }
 
-    html.theme-dark #terrain-tooltip {
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(18, 181, 203, 0.3);
+    /* Leaderboard Peak Cards */
+    .summit-card {
+      background: rgba(13, 19, 32, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 6px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
     }
 
-    /* .summit-card rules removed with the leaderboard they styled.
-       See legacy_strategic_files/page_09_pre_light/ */
+    .summit-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      transform: translateX(4px);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .summit-card.active-summit {
+      background: rgba(18, 181, 203, 0.12);
+      border-color: var(--security-turquoise);
+      box-shadow: 0 0 18px rgba(18, 181, 203, 0.25);
+      transform: translateX(6px);
+    }
+
+    .summit-card.summit-plugged {
+      background: linear-gradient(135deg, rgba(18, 181, 203, 0.18) 0%, rgba(0, 163, 255, 0.12) 100%);
+      border: 1.5px solid var(--security-turquoise);
+    }
 
     /* Mini Matrix Grid */
     .mini-grid {
@@ -165,21 +140,17 @@
       grid-template-columns: repeat(15, 1fr);
       gap: 2px;
       padding: 8px;
-      background: var(--slate-sunk);
-      border: 1px solid var(--slate-border);
+      background: rgba(6, 9, 14, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 6px;
     }
 
     .mini-cell {
       height: 10px;
       border-radius: 1px;
-      background: rgba(18, 23, 42, 0.08);
+      background: rgba(255, 255, 255, 0.04);
       cursor: pointer;
       transition: transform 0.15s ease;
-    }
-
-    html.theme-dark .mini-cell {
-      background: rgba(255, 255, 255, 0.04);
     }
 
     .mini-cell:hover {
@@ -187,26 +158,17 @@
       z-index: 10;
     }
 
-    /* Swatch fills. Glow shadows are suppressed in light mode — a halo only
-       reads against a dark surface, and on white it just muddies the edge. */
-    .mini-cell.mini-plugged   { background: #12B5CB; }
-    .mini-cell.mini-starburst { background: var(--starburst); }
-    .mini-cell.mini-red       { background: #FC413D; }
-    .mini-cell.mini-yellow    { background: #FEC700; }
-    .mini-cell.mini-green     { background: #00AF57; }
+    .mini-cell.mini-plugged { background: var(--security-turquoise); box-shadow: 0 0 8px var(--security-turquoise); }
+    .mini-cell.mini-starburst { background: #FFFFFF; box-shadow: 0 0 6px #FFFFFF; }
+    .mini-cell.mini-red { background: #FC413D; box-shadow: 0 0 4px #FC413D; }
+    .mini-cell.mini-yellow { background: #FEC700; box-shadow: 0 0 4px #FEC700; }
+    .mini-cell.mini-green { background: #00AF57; }
     .mini-cell.mini-aquagreen { background: #12B5CB; }
-    .mini-cell.mini-blue      { background: #3186FF; }
-    .mini-cell.mini-indigo    { background: #1B1745; }
-    .mini-cell.mini-amber     { background: #FEC700; }
-    .mini-cell.mini-orchid    { background: #4B31E3; }
-    .mini-cell.mini-teal      { background: #0A3B44; }
-
-    html.theme-dark .mini-cell.mini-plugged   { box-shadow: 0 0 8px #12B5CB; }
-    html.theme-dark .mini-cell.mini-starburst { box-shadow: 0 0 6px #FFFFFF; }
-    html.theme-dark .mini-cell.mini-red       { box-shadow: 0 0 4px #FC413D; }
-    html.theme-dark .mini-cell.mini-yellow    { box-shadow: 0 0 4px #FEC700; }
-    html.theme-dark .mini-cell.mini-amber     { box-shadow: 0 0 4px #FEC700; }
-    html.theme-dark .mini-cell.mini-orchid    { box-shadow: 0 0 4px rgba(147, 51, 234, 0.4); }
+    .mini-cell.mini-blue { background: #3186FF; }
+    .mini-cell.mini-indigo { background: #1B1745; }
+    .mini-cell.mini-amber { background: #FEC700; box-shadow: 0 0 4px #FEC700; }
+    .mini-cell.mini-orchid { background: #4B31E3; box-shadow: 0 0 4px rgba(147, 51, 234, 0.4); }
+    .mini-cell.mini-teal { background: #0A3B44; }
 
     /* Custom Buttons */
     .pill-btn {
@@ -214,68 +176,52 @@
       font-size: 11px;
       padding: 5px 12px;
       border-radius: 16px;
-      border: 1px solid var(--slate-border);
-      background: var(--slate-sunk);
-      color: var(--ink-soft);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.04);
+      color: #94A3B8;
       cursor: pointer;
       transition: all 0.2s ease;
     }
 
     .pill-btn:hover {
-      background: #E7EEFB;
-      color: var(--ink);
-      border-color: #C9D4E8;
-    }
-
-    html.theme-dark .pill-btn:hover {
       background: rgba(255, 255, 255, 0.1);
       color: #FFF;
       border-color: rgba(255, 255, 255, 0.25);
     }
 
-    .pill-btn:focus-visible {
-      outline: 2px solid var(--security-azure);
-      outline-offset: 2px;
-    }
-
     .pill-btn.active {
-      background: rgba(10, 118, 132, 0.10);
+      background: rgba(18, 181, 203, 0.18);
       border-color: var(--security-turquoise);
       color: var(--security-turquoise);
       font-weight: 700;
     }
-
-    html.theme-dark .pill-btn.active {
-      background: rgba(18, 181, 203, 0.18);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .mini-cell, .pill-btn { transition: none; }
-    }
   </style>
   <script>
     (function() {
-      /* Standard deck theme bootstrap: light by default, dark opt-in via the
-         "deck-theme" key. Matches page_10 and the rest of the aurora pages.
+      /* DARK-ONLY SURFACE -- deliberately does not follow the deck theme.
+         ────────────────────────────────────────────────────────────────────
+         The rest of the deck defaults to light (key "deck-theme"). This page
+         cannot: its own <style> block above sets --slate-bg: #06090E and
+         body { background: var(--slate-bg) }, plus ~26 further background
+         rules and 19 hardcoded dark values. Those win over styles.css's
+         .theme-light overrides because they are page-local and more specific.
+         The value-topology canvas also paints fills directly
+         (ctx.fillStyle = 'rgba(6, 9, 14, 0.88)' and similar), which no
+         stylesheet can reach at all.
 
-         This page previously pinned itself dark, because its stylesheet and
-         canvas were both authored against a near-black surface. Both have now
-         been converted: the <style> block above is tokenised with an
-         html.theme-dark override, and the canvas clamps its colour ramp via
-         LIGHT_INK_CEILING. */
-      const saved = localStorage.getItem('deck-theme') || 'light';
-      if (saved === 'dark') {
-        document.documentElement.classList.add('theme-dark');
-      }
+         Honouring a stored "light" here produced a half-converted page: light
+         chrome over a dark canvas. Pinning to dark is the honest rendering
+         until the page is properly migrated to aurora.css.
+
+         Deliberately does NOT write to localStorage -- it must not clobber the
+         preference the rest of the deck relies on. */
+      document.documentElement.classList.remove('theme-light');
     })();
     function toggleTheme() {
-      const isDark = document.documentElement.classList.toggle('theme-dark');
-      if (document.body) document.body.classList.toggle('theme-dark', isDark);
-      localStorage.setItem('deck-theme', isDark ? 'dark' : 'light');
-      updateThemeButtons(!isDark);
-      /* Defined further down, with the canvas engine. Guarded because the
-         engine script has not parsed yet when this function is declared. */
-      if (typeof syncCanvasTheme === 'function') syncCanvasTheme();
+      const isCurrentlyLight = document.documentElement.classList.toggle('theme-light');
+      if (document.body) document.body.classList.toggle('theme-light', isCurrentlyLight);
+      localStorage.setItem('deck-theme', isCurrentlyLight ? 'light' : 'dark');
+      updateThemeButtons(isCurrentlyLight);
     }
     function updateThemeButtons(isLight) {
       document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
@@ -286,7 +232,7 @@
       });
     }
     document.addEventListener('DOMContentLoaded', function() {
-      const isLight = !document.documentElement.classList.contains('theme-dark');
+      const isLight = document.documentElement.classList.contains('theme-light');
       updateThemeButtons(isLight);
     });
   </script>
@@ -297,18 +243,17 @@
   <header class="executive-top-nav">
     <a href="../../index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
       <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
-      <div style="width: 1px; height: 20px; background: var(--slate-border);"></div>
-      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--ink); letter-spacing: 1.5px; text-transform: uppercase;">STAGE 09 // THE AGENTIC VALUE TOPOLOGY</span>
+      <div style="width: 1px; height: 20px; background: rgba(255, 255, 255, 0.2);"></div>
+      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: #FFFFFF; letter-spacing: 1.5px; text-transform: uppercase;">STAGE 09 // THE AGENTIC VALUE TOPOLOGY</span>
     </a>
     <nav style="display: flex; align-items: center; gap: 16px;">
-      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Dark Mode">
-        <span style="font-size: 13px; line-height: 1;">🌙</span>
-        <span>Dark Mode</span>
-      </button>
-      <a href="page_08.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--ink-soft); text-decoration: none; padding: 4px 12px; border-radius: 6px; background: var(--slate-sunk); transition: color 0.2s;">← Prev Page (Slide 08)</a>
+      <!-- Theme toggle intentionally omitted: this is a dark-only surface.
+           See the DARK-ONLY SURFACE note in the <head> script. Restore this
+           button when the page is migrated to aurora.css. -->
+      <a href="page_08.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #94A3B8; text-decoration: none; padding: 4px 12px; border-radius: 6px; background: rgba(255,255,255,0.04); transition: color 0.2s;">← Prev Page (Slide 08)</a>
       <span style="font-family: var(--font-mono); font-size: 13px; color: var(--security-turquoise); font-weight: 700;">10 / 11</span>
-      <a href="page_10.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 12px; border-radius: 6px; background: rgba(40, 109, 209, 0.10); transition: color 0.2s;">Next Page (Slide 11) →</a>
-      <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #FFF; background: #121317; padding: 6px 16px; border-radius: 20px; text-decoration: none; margin-left: 6px;">
+      <a href="page_10.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 12px; border-radius: 6px; background: rgba(0, 163, 255, 0.08); transition: color 0.2s;">Next Page (Slide 11) →</a>
+      <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 16px; border-radius: 20px; text-decoration: none; margin-left: 6px;">
         All Slides ↗
       </a>
     </nav>
@@ -320,7 +265,7 @@
     <!-- Atmospheric Grid Backdrop -->
     <div class="slide-bg-media">
       <div class="slide-bg-grid"></div>
-      <div style="position: absolute; inset: 0; background: var(--stage-wash);"></div>
+      <div style="position: absolute; inset: 0; background: radial-gradient(circle at 70% 35%, rgba(18, 181, 203, 0.05) 0%, rgba(6, 9, 14, 0.96) 65%, var(--slate-bg) 100%);"></div>
     </div>
 
     <div id="stage-09" style="max-width: 1720px; margin: 0 auto; padding: 30px max(20px, 2.5vw); position: relative; z-index: 2;">
@@ -333,18 +278,18 @@
               AGENT ECONOMICS // ENTERPRISE VALUE TOPOLOGY
             </span>
             <span style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise);"></span>
-            <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft);">300-TOUCHPOINT VALUE UNLOCK MODEL</span>
+            <span style="font-family: var(--font-mono); font-size: 11px; color: #94A3B8;">300-TOUCHPOINT VALUE UNLOCK MODEL</span>
           </div>
 
-          <h1 style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 46px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: var(--ink); margin: 0 0 8px 0;">
+          <h1 style="font-family: var(--font-display); font-size: clamp(28px, 3.2vw, 46px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: #FFFFFF; margin: 0 0 8px 0;">
             Agent Economics: The Value Map of Agentic Transformation.
           </h1>
           <h2 style="font-family: var(--font-display); font-size: clamp(18px, 1.4vw, 24px); font-weight: 600; line-height: 1.35; color: var(--security-turquoise); letter-spacing: -0.3px; margin: 0 0 12px 0;">
             Strategic prioritization and continuous value tracking ensure every deployed agent remains strictly net positive.
           </h2>
 
-          <p style="font-size: clamp(14px, 1.05vw, 16px); line-height: 1.45; color: var(--ink-soft); max-width: 1100px; margin: 0;">
-            Quantifying a <strong style="color: var(--ink);">fleet of autonomous agents</strong> by <strong style="color: var(--ink);">capital at risk and value unlock (₹ Cr / yr)</strong> establishes a clear investment topology, sequencing rollouts directly into your <strong style="color: var(--ink);">highest-impact enterprise targets</strong>. Ongoing economic tracking continuously audits delivered value, guaranteeing every deployed agent operates with <strong style="color: var(--security-turquoise);">strictly net-positive Agentic AI ROI</strong>.
+          <p style="font-size: clamp(14px, 1.05vw, 16px); line-height: 1.45; color: #94A3B8; max-width: 1100px; margin: 0;">
+            Quantifying a <strong style="color: #FFF;">fleet of autonomous agents</strong> by <strong style="color: #FFF;">capital at risk and value unlock (₹ Cr / yr)</strong> establishes a clear investment topology, sequencing rollouts directly into your <strong style="color: #FFF;">highest-impact enterprise targets</strong>. Ongoing economic tracking continuously audits delivered value, guaranteeing every deployed agent operates with <strong style="color: var(--security-turquoise);">strictly net-positive Agentic AI ROI</strong>.
           </p>
         </div>
 
@@ -354,35 +299,139 @@
             <button class="pill-btn active" id="btn-auto-rotate" onclick="toggleAutoRotate()">Auto-Rotate: ON</button>
             <button class="pill-btn" onclick="resetTerrainView()">Reset Perspective</button>
             <button class="pill-btn" onclick="setTopDownView()">Top-Down Contour (2D)</button>
+            <button class="pill-btn" onclick="focusSummit('s-petro')">★ Focus Proven Agent</button>
           </div>
-          <span style="font-family: var(--font-mono); font-size: 11px; color: var(--ink-soft);">
+          <span style="font-family: var(--font-mono); font-size: 11px; color: #64748B;">
             Interactive Orbit: Click &amp; drag to rotate • Scroll to zoom elevation
           </span>
         </div>
       </div>
 
-      <!-- Single-column stack: full-width map, radar beneath. Was a 480px + 1fr grid
-           when the left rail carried the leaderboard. -->
-      <div style="display: flex; flex-direction: column; gap: 22px;">
+      <!-- Split Layout: Left Box (38%) & Right 3D Topographical Map (62%) -->
+      <div style="display: grid; grid-template-columns: 480px minmax(0, 1fr); gap: 24px; align-items: start;">
         
-        <!-- ===== COORDINATE RADAR (order: 2 — renders beneath the map) ===== -->
-        <div style="display: flex; flex-direction: column; gap: 16px; order: 2; max-width: 560px;">
+        <!-- ================= LEFT PANEL: THE OPERATIONAL COORDINATES ================= -->
+        <div style="display: flex; flex-direction: column; gap: 16px;">
           
-          <!-- Sector filter bar removed. Its five pills existed only to call
-               focusSummit(), which went with the leaderboard. -->
+          <!-- Sector Filter Bar -->
+          <div style="display: flex; gap: 6px; flex-wrap: wrap; background: rgba(13, 19, 32, 0.7); padding: 8px 12px; border-radius: 6px; border: 1px solid var(--slate-border);">
+            <button class="pill-btn active" onclick="filterTerrainSector('all', this)">All Priority Agents</button>
+            <button class="pill-btn" onclick="filterTerrainSector('geosciences', this)">Geosciences</button>
+            <button class="pill-btn" onclick="filterTerrainSector('drilling', this)">Drilling</button>
+            <button class="pill-btn" onclick="filterTerrainSector('production', this)">Production</button>
+            <button class="pill-btn" onclick="filterTerrainSector('refining', this)">Downstream</button>
+          </div>
 
-          <!-- Summit leaderboard removed (PRIORITISED VALUE-UNLOCK AGENTS).
-               Five cards carrying ₹45/130/120/115/90 Cr figures that were
-               hardcoded literals, plus "★ PROVEN AGENT" and "VALIDATED IN
-               PRODUCTION" claims. The terrain is harmonic, not measured, so
-               these read as precision the model does not have. Peak detail is
-               now hover-only via #terrain-tooltip.
-               Original: legacy_strategic_files/page_09_pre_light/ -->
+          <!-- The High-Consequence Summit Leaderboard -->
+          <div style="background: rgba(13, 19, 32, 0.85); border: 1px solid var(--slate-border); border-radius: 8px; padding: 18px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--text-primary, #FFF); letter-spacing: 1px;">
+                PRIORITISED VALUE-UNLOCK AGENTS // HIGH-EXPOSURE TARGETS
+              </span>
+              <span style="font-family: var(--font-mono); font-size: 10px; color: var(--security-turquoise);">CLICK TO INSPECT AGENT</span>
+            </div>
+
+            <!-- Summit Item 1: Proven Agent -->
+            <div class="summit-card summit-plugged active-summit" id="card-petro" onclick="focusSummit('s-petro')">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span style="font-family: var(--font-mono); font-size: 10px; background: var(--security-turquoise); color: #06090E; font-weight: 800; padding: 1px 6px; border-radius: 3px;">
+                    ★ PROVEN AGENT
+                  </span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">Lead Petrophysicist</span>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--security-turquoise);">₹45 Cr / yr</span>
+              </div>
+              <div style="font-size: 13px; font-weight: 700; color: var(--text-primary, #FFF); margin-bottom: 2px;">
+                Wireline Curve Splicing (Slide 06 Benchmark)
+              </div>
+              <div style="font-size: 11.5px; color: #94A3B8;">
+                SciPy execution in seconds vs 2.5 hr drift • 2.9cm accuracy • <strong>VALIDATED IN PRODUCTION</strong>
+              </div>
+            </div>
+
+            <!-- Summit Item 2: Hydrocracker Runaway -->
+            <div class="summit-card" id="card-hydro" onclick="focusSummit('s-hydro')">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #F28B82; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
+                    TARGET 01 // HIGHEST EXPOSURE
+                  </span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">Hydrocracker Specialist</span>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--nebula-crimson);">₹130 Cr / yr</span>
+              </div>
+              <div style="font-size: 13px; font-weight: 700; color: var(--text-primary, #FFF); margin-bottom: 2px;">
+                Reactor Thermal Runaway &amp; Hydrogen Quench
+              </div>
+              <div style="font-size: 11.5px; color: #94A3B8;">
+                Exothermic bed spike &gt;450°C • 0.1s multi-point thermocouple quench agent
+              </div>
+            </div>
+
+            <!-- Summit Item 3: Deepwater Collision & Kick -->
+            <div class="summit-card" id="card-drill" onclick="focusSummit('s-drill')">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #F28B82; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
+                    TARGET 02
+                  </span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">Drilling Operations Lead</span>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--nebula-crimson);">₹120 Cr / yr</span>
+              </div>
+              <div style="font-size: 13px; font-weight: 700; color: var(--text-primary, #FFF); margin-bottom: 2px;">
+                Anti-Collision Scanning vs Offset Wellbores
+              </div>
+              <div style="font-size: 11.5px; color: #94A3B8;">
+                Travelling cylinder error ellipse scan • 0ms autonomous collision alert
+              </div>
+            </div>
+
+            <!-- Summit Item 4: FCCU Cyclone Zeolite Loss -->
+            <div class="summit-card" id="card-fccu" onclick="focusSummit('s-fccu')">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(239, 68, 68, 0.2); color: #F28B82; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(239, 68, 68, 0.4);">
+                    TARGET 03
+                  </span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">FCCU Process Engineer</span>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--nebula-crimson);">₹115 Cr / yr</span>
+              </div>
+              <div style="font-size: 13px; font-weight: 700; color: var(--text-primary, #FFF); margin-bottom: 2px;">
+                Slide Valve Reverse &amp; Cyclone Catalyst Blowout
+              </div>
+              <div style="font-size: 11.5px; color: #94A3B8;">
+                Reversal air surge &amp; ₹8 Cr catalyst loss • 0.1s differential pressure governor
+              </div>
+            </div>
+
+            <!-- Summit Item 5: CDU Multi-Crude Blend Desalter -->
+            <div class="summit-card" id="card-cdu" onclick="focusSummit('s-cdu')">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <div style="display: flex; align-items: center; gap: 6px;">
+                  <span style="font-family: var(--font-mono); font-size: 10px; background: rgba(245, 158, 11, 0.2); color: #FDD663; font-weight: 800; padding: 1px 6px; border-radius: 3px; border: 1px solid rgba(245, 158, 11, 0.4);">
+                    TARGET 04
+                  </span>
+                  <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: var(--text-primary, #FFF);">CDU/VDU Distillation Lead</span>
+                </div>
+                <span style="font-family: var(--font-mono); font-size: 13px; font-weight: 800; color: var(--hazard-amber);">₹90 Cr / yr</span>
+              </div>
+              <div style="font-size: 13px; font-weight: 700; color: var(--text-primary, #FFF); margin-bottom: 2px;">
+                Crude Assay True Boiling Point Blend
+              </div>
+              <div style="font-size: 11.5px; color: #94A3B8;">
+                High-TAN salt slip &amp; furnace coking • Real-time non-linear assay optimizer
+              </div>
+            </div>
+
+          </div>
 
           <!-- 20×15 Mini Coordinate Radar -->
-          <div style="background: var(--slate-panel); border: 1px solid var(--slate-border); border-radius: 8px; padding: 14px;">
+          <div style="background: rgba(13, 19, 32, 0.85); border: 1px solid var(--slate-border); border-radius: 8px; padding: 14px;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-              <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: var(--ink-soft); letter-spacing: 1px;">
+              <span style="font-family: var(--font-mono); font-size: 10px; font-weight: 800; color: #94A3B8; letter-spacing: 1px;">
                 2D CHESSBOARD COORDINATE RADAR
               </span>
               <span style="font-family: var(--font-mono); font-size: 9px; color: var(--security-turquoise);">HOVER TO LOCATE ON 3D TERRAIN</span>
@@ -395,16 +444,14 @@
 
         </div>
 
-        <!-- ===== 3D TOPOGRAPHICAL TERRAIN (order: 1 — renders first) ===== -->
-        <div style="display: flex; flex-direction: column; gap: 14px; order: 1;">
+        <!-- ================= RIGHT PANEL: THE 3D TOPOGRAPHICAL TERRAIN ================= -->
+        <div style="display: flex; flex-direction: column; gap: 14px;">
           
           <!-- 3D Canvas Container (Cosmic Void Backdrop) -->
-          <!-- Visual styling lives in the #topology-canvas-container rule above, so it
-                 follows the theme. It used to be inline, which overrode the sheet. -->
-            <div id="topology-canvas-container">
+          <div id="topology-canvas-container" style="position: relative; width: 100%; height: 640px; border-radius: 10px; overflow: hidden; background: radial-gradient(circle at 50% 50%, #061A22 0%, #030F14 70%, #01080B 100%); border: 1px solid rgba(18, 181, 203, 0.25); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), inset 0 0 50px rgba(18, 181, 203, 0.04);">
             
             <!-- Subtle aqua-teal and solar amber ambient glow -->
-            <div style="position: absolute; inset: 0; pointer-events: none; background: var(--canvas-wash);"></div>
+            <div style="position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 65% 45%, rgba(18, 181, 203, 0.10) 0%, rgba(245, 158, 11, 0.05) 45%, transparent 70%);"></div>
 
             <canvas id="terrain-canvas" style="position: relative; z-index: 1;"></canvas>
 
@@ -412,13 +459,13 @@
             <div id="terrain-tooltip">
               <div style="font-weight: 800; font-size: 12px; margin-bottom: 2px;" id="tt-title">Peak Name</div>
               <div style="font-size: 10px; color: var(--security-turquoise); margin-bottom: 4px;" id="tt-persona">Persona</div>
-              <div style="font-size: 11px; color: var(--ink);" id="tt-elevation">Elevation: ₹0 Cr / yr</div>
+              <div style="font-size: 11px; color: var(--text-primary, #FFF);" id="tt-elevation">Elevation: ₹0 Cr / yr</div>
             </div>
 
             <!-- Overlay Compass & Contour Legend (Dynamic Multi-Palette Supported) -->
-            <div id="topology-legend-items" style="position: absolute; bottom: 16px; left: 18px; pointer-events: none; font-family: var(--font-mono); font-size: 10px; color: var(--ink-soft); display: flex; flex-direction: column; gap: 4px; background: var(--panel-glass); backdrop-filter: blur(10px); padding: 10px 14px; border-radius: 6px; border: 1px solid var(--slate-border);">
+            <div id="topology-legend-items" style="position: absolute; bottom: 16px; left: 18px; pointer-events: none; font-family: var(--font-mono); font-size: 10px; color: rgba(255, 255, 255, 0.7); display: flex; flex-direction: column; gap: 4px; background: rgba(6, 9, 14, 0.85); backdrop-filter: blur(10px); padding: 10px 14px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.12);">
               <div style="display: flex; align-items: center; gap: 8px;">
-                <span style="display: inline-block; width: 12px; height: 12px; background: var(--starburst); border-radius: 2px;"></span>
+                <span style="display: inline-block; width: 12px; height: 12px; background: #FFFFFF; border-radius: 2px; box-shadow: 0 0 8px #FFFFFF;"></span>
                 <span>&gt; ₹118 Cr / yr (White-Hot Apex Summits • 0ms Collision &amp; Runaway)</span>
               </div>
               <div style="display: flex; align-items: center; gap: 8px;">
@@ -450,7 +497,7 @@
             <!-- Top Right Controls Dock (Minimalist Toggle Switch + Status Badge) -->
             <div style="position: absolute; top: 16px; right: 18px; display: flex; align-items: center; gap: 10px; z-index: 10;">
               <!-- Minimalist Spectrum Toggle Switch (No Verbose Text Naming) -->
-              <div id="btn-palette-toggle" onclick="togglePalette()" title="Toggle Color Spectrum (Google Light Spectrum ⟷ Oceanic Aqua)" style="cursor: pointer; display: flex; align-items: center; gap: 8px; background: var(--panel-glass); backdrop-filter: blur(8px); border: 1px solid rgba(66, 133, 244, 0.4); padding: 5px 10px; border-radius: 20px; box-shadow: var(--dock-shadow); user-select: none; transition: all 0.25s ease;">
+              <div id="btn-palette-toggle" onclick="togglePalette()" title="Toggle Color Spectrum (Google Light Spectrum ⟷ Oceanic Aqua)" style="cursor: pointer; display: flex; align-items: center; gap: 8px; background: rgba(6, 9, 14, 0.88); backdrop-filter: blur(8px); border: 1px solid rgba(66, 133, 244, 0.4); padding: 5px 10px; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); user-select: none; transition: all 0.25s ease;">
                 <span style="font-size: 12px; line-height: 1;">🎨</span>
                 <div id="palette-switch-track" style="width: 32px; height: 16px; border-radius: 10px; background: rgba(66, 133, 244, 0.25); border: 1px solid rgba(66, 133, 244, 0.6); position: relative; transition: all 0.25s ease;">
                   <div id="palette-switch-thumb" style="width: 12px; height: 12px; border-radius: 50%; background: linear-gradient(135deg, #3186FF, #FC413D); position: absolute; top: 1px; left: 2px; box-shadow: 0 0 6px #3186FF; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);"></div>
@@ -458,22 +505,41 @@
               </div>
 
               <!-- Status Indicator -->
-              <div style="font-family: var(--font-mono); font-size: 11px; background: var(--panel-glass); border: 1px solid var(--canvas-edge); padding: 6px 14px; border-radius: 20px; color: var(--security-turquoise); display: flex; align-items: center; gap: 8px; box-shadow: var(--dock-shadow);">
+              <div style="font-family: var(--font-mono); font-size: 11px; background: rgba(6, 9, 14, 0.85); border: 1px solid rgba(18, 181, 203, 0.4); padding: 6px 14px; border-radius: 20px; color: var(--security-turquoise); display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
                 <span style="width: 6px; height: 6px; border-radius: 50%; background: var(--security-turquoise); box-shadow: 0 0 8px var(--security-turquoise); animation: pulse-dot 1.5s infinite alternate;"></span>
                 <span>4,389-NODE NEBULA PARTICLE ENGINE</span>
               </div>
             </div>
           </div>
 
-          <!-- Phase metric strip removed (PHASE 1 / 2 / 3 cards).
-               Dropped with the summit leaderboard: the "₹570 Cr / yr" figure
-               did not reconcile with the five summits it cited, named a sixth
-               agent (Tank Overfill) that was never in the data, and "84
-               Value-Unlock Agents" conflicts with the 232 in the value model.
-               The .phase-metric-val / .phase-metric-desc rules at
-               assets/styles.css:2727-2734 are now dead; they were the only
-               light-mode support this page ever had.
-               Original: legacy_strategic_files/page_09_pre_light/ -->
+          <!-- Bottom Metric & Strategic Playbook Horizon -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+            
+            <div style="background: rgba(13, 19, 32, 0.7); border: 1px solid var(--slate-border); border-left: 3px solid var(--security-turquoise); padding: 14px 18px; border-radius: 6px;">
+              <div style="font-family: var(--font-mono); font-size: 10px; color: var(--security-turquoise); font-weight: 800; letter-spacing: 1px;">
+                PHASE 1: PROVEN AGENT
+              </div>
+              <div class="phase-metric-val" style="font-size: 18px; font-weight: 800; color: var(--text-primary, #FFF); margin: 2px 0;">1 Agent Validated in Production</div>
+              <div class="phase-metric-desc" style="font-size: 12px; color: #94A3B8;">Kansas Wireline Splicing • ₹45 Cr exposure eliminated in seconds</div>
+            </div>
+
+            <div style="background: rgba(13, 19, 32, 0.7); border: 1px solid var(--slate-border); border-left: 3px solid var(--nebula-crimson); padding: 14px 18px; border-radius: 6px;">
+              <div style="font-family: var(--font-mono); font-size: 10px; color: var(--nebula-crimson); font-weight: 800; letter-spacing: 1px;">
+                PHASE 2: TOP 5 HIGH-VALUE AGENTS (TARGET FLEET)
+              </div>
+              <div class="phase-metric-val" style="font-size: 18px; font-weight: 800; color: var(--text-primary, #FFF); margin: 2px 0;">₹570 Cr / yr Exposure Mitigated</div>
+              <div class="phase-metric-desc" style="font-size: 12px; color: #94A3B8;">Hydrocracker, Anti-Collision, FCCU, CDU, Tank Overfill</div>
+            </div>
+
+            <div style="background: rgba(13, 19, 32, 0.7); border: 1px solid var(--slate-border); border-left: 3px solid var(--hazard-amber); padding: 14px 18px; border-radius: 6px;">
+              <div style="font-family: var(--font-mono); font-size: 10px; color: var(--hazard-amber); font-weight: 800; letter-spacing: 1px;">
+                PHASE 3: ENTERPRISE-WIDE SCALE
+              </div>
+              <div class="phase-metric-val" style="font-size: 18px; font-weight: 800; color: var(--text-primary, #FFF); margin: 2px 0;">84 Value-Unlock Agents</div>
+              <div class="phase-metric-desc" style="font-size: 12px; color: #94A3B8;">1–4 hr engineering latency eliminated across all operational workflows</div>
+            </div>
+
+          </div>
 
         </div>
 
@@ -485,12 +551,14 @@
 
   <!-- Self-Contained 3D Topographical Canvas Engine (Zero External Dependencies) -->
   <script>
-    // 1. (SUMMIT_COORDINATES removed.)
-    //    Five hardcoded peaks with ₹45/130/120/115/90 Cr labels. The values were
-    //    literals with no derivation from data/value_model.js, and the elevation
-    //    grid below is harmonic, not measured. Both consumers (the canvas beacon
-    //    layer and focusSummit) have been removed with it.
-    //    Original: legacy_strategic_files/page_09_pre_light/page_09_dark_original.html
+    // 1. Definition of Key Summits (Matching image78.png High Crests & Glowing Cores)
+    const SUMMIT_COORDINATES = {
+      's-petro': { x: 7, y: 9, name: 'Lead Petrophysicist (Proven Agent)', action: 'Wireline Splicing (Slide 06 Benchmark)', value: 45, color: '#12B5CB', cardId: 'card-petro' },
+      's-hydro': { x: 0, y: 16, name: 'Hydrocracker Specialist', action: 'Reactor Thermal Runaway & Quench', value: 130, color: '#6FD3E0', cardId: 'card-hydro' },
+      's-drill': { x: 1, y: 3, name: 'Drilling Operations Lead', action: 'Anti-Collision & Collision Scanning', value: 120, color: '#6FD3E0', cardId: 'card-drill' },
+      's-fccu':  { x: 0, y: 15, name: 'FCCU Process Engineer', action: 'Slide Valve Reverse & Catalyst Loss', value: 115, color: '#FEC700', cardId: 'card-fccu' },
+      's-cdu':   { x: 0, y: 14, name: 'CDU/VDU Distillation Lead', action: 'Crude Assay True Boiling Point Blend', value: 90, color: '#FEC700', cardId: 'card-cdu' }
+    };
 
     // 2. Generate 20×15 Elevation Grid (₹ Cr Capital at Risk)
     // Undulating wave patterns inspired by the natural fluid billowing folds of image78.png
@@ -716,47 +784,6 @@
     }
 
     // Authentic Tri-Palette Topography Engine: Google Light Spectrum, Oceanic Aqua & Gemini Cosmic
-    /* Luminance clamp for the light background.
-       The colour ramps below were authored as emissive light on a near-black
-       void. On white the bright bands invert into invisibility, so every
-       terrain colour is passed through inkLimit(), which scales it down until
-       its relative luminance sits under the ceiling. Hue and band ordering are
-       preserved; only brightness is capped.
-
-       In dark mode the ceiling is 1.0, which makes inkLimit() a no-op and
-       restores the original artwork exactly. */
-    const INK_CEILING_LIGHT = 0.62;
-    let LIGHT_INK_CEILING = INK_CEILING_LIGHT;
-    let ringInkPrimary = 'rgba(10, 118, 132, 0.13)';
-    let ringInkAccent = 'rgba(138, 98, 0, 0.10)';
-    let reticleInk = '#121317';
-
-    function syncCanvasTheme() {
-      const dark = document.documentElement.classList.contains('theme-dark');
-      LIGHT_INK_CEILING = dark ? 1.0 : INK_CEILING_LIGHT;
-      ringInkPrimary = dark ? 'rgba(18, 181, 203, 0.05)' : 'rgba(10, 118, 132, 0.13)';
-      ringInkAccent = dark ? 'rgba(245, 158, 11, 0.03)' : 'rgba(138, 98, 0, 0.10)';
-      reticleInk = dark ? '#FFFFFF' : '#121317';
-    }
-    syncCanvasTheme();
-
-    function inkLimit(r, g, b) {
-      const lum = (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255;
-      if (lum <= LIGHT_INK_CEILING || lum === 0) return [r, g, b];
-      const k = LIGHT_INK_CEILING / lum;
-      return [Math.round(r * k), Math.round(g * k), Math.round(b * k)];
-    }
-
-    function inkLimitHex(hex) {
-      if (typeof hex !== 'string' || hex.charAt(0) !== '#' || hex.length !== 7) return hex;
-      const [r, g, b] = inkLimit(
-        parseInt(hex.slice(1, 3), 16),
-        parseInt(hex.slice(3, 5), 16),
-        parseInt(hex.slice(5, 7), 16)
-      );
-      return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
-    }
-
     function getNebulaColor(elev, alpha = 1.0) {
       const norm = Math.max(0, Math.min(1, (elev - 8) / (130 - 8)));
 
@@ -940,21 +967,12 @@
         }
       }
 
-      // ---- Light-background adaptation -------------------------------------
-      // The two ramps above were authored as emissive light against a near-black
-      // void: bright, low-alpha fills that glow. On white they invert into
-      // invisibility (the apex band is literally 255,255,255). inkLimit() keeps
-      // each band's hue and ordering but caps luminance so every step stays
-      // legible as ink on white. Opacities are raised for the same reason.
-      const [ir, ig, ib] = inkLimit(r, g, b);
-      const [sr, sg, sb] = inkLimit(strokeR, strokeG, strokeB);
-
       return {
-        fill: `rgba(${ir}, ${ig}, ${ib}, ${alpha * 0.42})`,
-        stroke: `rgba(${sr}, ${sg}, ${sb}, ${Math.min(1, alpha * 0.85)})`,
-        dot: inkLimitHex(dotColor),
+        fill: `rgba(${r}, ${g}, ${b}, ${alpha * 0.32})`,
+        stroke: `rgba(${strokeR}, ${strokeG}, ${strokeB}, ${Math.min(1, alpha * 0.72)})`,
+        dot: dotColor,
         glow: glowColor,
-        r: ir, g: ig, b: ib,
+        r, g, b,
         norm
       };
     }
@@ -968,14 +986,14 @@
       ctx.clearRect(0, 0, width, height);
 
       // Subtle ambient orbital radar rings in the cosmic void
-      ctx.strokeStyle = ringInkPrimary;
+      ctx.strokeStyle = 'rgba(18, 181, 203, 0.05)';
       ctx.lineWidth = 1;
       for (let r = 100; r < 450; r += 85) {
         ctx.beginPath();
         ctx.arc(width / 2, height * 0.67, r, 0, Math.PI * 2);
         ctx.stroke();
       }
-      ctx.strokeStyle = ringInkAccent;
+      ctx.strokeStyle = 'rgba(245, 158, 11, 0.03)';
       ctx.beginPath();
       ctx.arc(width / 2, height * 0.67, 320, 0, Math.PI * 2);
       ctx.stroke();
@@ -1113,13 +1131,55 @@
         }
       }
 
-      // 4. (Summit beacon layer removed.)
-      //    Previously drew vertical light pillars, pulsing halos and billboard
-      //    "₹NN Cr" labels for five hardcoded summits. Those figures were not
-      //    sourced from the data layer, and the layer's white dots and near-black
-      //    label chips could not survive a white background. Peak identification
-      //    is now hover-only via #terrain-tooltip.
+      // 4. Draw Summit Beacons & Vertical Light Pillars
       pulsePhase += 0.04;
+      Object.keys(SUMMIT_COORDINATES).forEach(key => {
+        const s = SUMMIT_COORDINATES[key];
+        const fi = s.y * SUB_R;
+        const fj = s.x * SUB_C;
+        const pt = fineGridPoints[fi][fj];
+        const screenPt = projectedMesh[fi][fj].p;
+
+        // Ground Projection Base
+        const groundPt = project3D(pt.rawX, 0, pt.rawZ, width, height);
+
+        // Vertical Light Beam from Ground Base to Peak
+        ctx.beginPath();
+        ctx.moveTo(groundPt.x, groundPt.y);
+        ctx.lineTo(screenPt.x, screenPt.y);
+        ctx.strokeStyle = (s.color === '#12B5CB') ? 'rgba(18, 181, 203, 0.75)' : 'rgba(0, 240, 255, 0.6)';
+        ctx.lineWidth = 1.5;
+        ctx.setLineDash([3, 3]);
+        ctx.stroke();
+        ctx.setLineDash([]);
+
+        // Pulsing Concentric Halos at Summit
+        const pulseSize = 4 + Math.sin(pulsePhase) * 2.5;
+        ctx.beginPath();
+        ctx.arc(screenPt.x, screenPt.y, pulseSize + 5, 0, Math.PI * 2);
+        ctx.strokeStyle = s.color;
+        ctx.lineWidth = 1.2;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(screenPt.x, screenPt.y, 4, 0, Math.PI * 2);
+        ctx.fillStyle = '#FFFFFF';
+        ctx.fill();
+
+        // 3D Billboard Summit Tag
+        ctx.font = 'bold 10px "JetBrains Mono", monospace';
+        const labelText = (s.value === 45) ? '★ PROVEN AGENT (₹45 Cr)' : `TARGET (₹${s.value} Cr)`;
+        ctx.fillStyle = 'rgba(6, 9, 14, 0.88)';
+        const textWidth = ctx.measureText(labelText).width;
+        ctx.fillRect(screenPt.x - textWidth / 2 - 6, screenPt.y - 24, textWidth + 12, 16);
+        ctx.strokeStyle = s.color;
+        ctx.lineWidth = 1;
+        ctx.strokeRect(screenPt.x - textWidth / 2 - 6, screenPt.y - 24, textWidth + 12, 16);
+
+        ctx.fillStyle = s.color;
+        ctx.textAlign = 'center';
+        ctx.fillText(labelText, screenPt.x, screenPt.y - 12);
+      });
 
       // 5. Highlighted Radar Target Cursor Reticle
       if (highlightedCoord) {
@@ -1130,7 +1190,7 @@
           const reticlePulse = 8 + Math.sin(pulsePhase * 2) * 3;
           ctx.beginPath();
           ctx.arc(hp.p.x, hp.p.y, reticlePulse, 0, Math.PI * 2);
-          ctx.strokeStyle = reticleInk;
+          ctx.strokeStyle = '#FFFFFF';
           ctx.lineWidth = 2;
           ctx.stroke();
 
@@ -1238,9 +1298,28 @@
       tweenCamera({ aX: 1.45, aY: 0, z: 1.25 }, 900);
     }
 
-    /* focusSummit() removed with the summit leaderboard and the canvas beacon
-       layer. Camera focus is still available via resetTerrainView(),
-       setTopDownView() and focusGridCoordinate() (mini radar). */
+    function focusSummit(summitKey) {
+      const s = SUMMIT_COORDINATES[summitKey];
+      if (!s) return;
+
+      document.querySelectorAll('.summit-card').forEach(c => c.classList.remove('active-summit'));
+      const activeCard = document.getElementById(s.cardId);
+      if (activeCard) activeCard.classList.add('active-summit');
+
+      highlightedCoord = { r: s.y, c: s.x };
+      highlightRadarCell(s.y, s.x);
+
+      // Rotate camera toward summit
+      autoRotate = false;
+      const btn = document.getElementById('btn-auto-rotate');
+      if (btn) {
+        btn.innerText = 'Auto-Rotate: OFF';
+        btn.classList.remove('active');
+      }
+
+      const targetAngleY = -((s.x / (COLS - 1) - 0.5) * 1.5);
+      tweenCamera({ aX: 0.75, aY: targetAngleY, z: 1.2 }, 1000);
+    }
 
     function highlightRadarCell(r, c) {
       document.querySelectorAll('.mini-cell').forEach(cell => {
@@ -1248,7 +1327,7 @@
         const cc = parseInt(cell.getAttribute('data-c'));
         if (cr === r && cc === c) {
           cell.style.transform = 'scale(2.2)';
-          cell.style.outline = '2px solid #121317';
+          cell.style.outline = '2px solid #FFF';
           cell.style.zIndex = '50';
         } else {
           cell.style.transform = 'scale(1)';
@@ -1271,9 +1350,15 @@
       tweenCamera({ aY: targetAngleY, aX: 0.7 }, 900);
     }
 
-    /* filterTerrainSector() removed — the sector pill bar it served was
-       stripped along with the summit leaderboard. Original preserved at
-       legacy_strategic_files/page_09_pre_light/page_09_dark_original.html */
+    function filterTerrainSector(sector, btnEl) {
+      document.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+
+      if (sector === 'geosciences') focusSummit('s-petro');
+      else if (sector === 'drilling') focusSummit('s-drill');
+      else if (sector === 'refining') focusSummit('s-hydro');
+      else resetTerrainView();
+    }
 
     function togglePalette() {
       currentPalette = (currentPalette === 'google') ? 'aqua' : 'google';
@@ -1305,7 +1390,7 @@
         if (currentPalette === 'google') {
           legendEl.innerHTML = `
             <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="display: inline-block; width: 12px; height: 12px; background: var(--starburst); border-radius: 2px;"></span>
+              <span style="display: inline-block; width: 12px; height: 12px; background: #FFFFFF; border-radius: 2px; box-shadow: 0 0 8px #FFFFFF;"></span>
               <span>&gt; ₹118 Cr / yr (White-Hot Apex Summits • 0ms Collision &amp; Runaway)</span>
             </div>
             <div style="display: flex; align-items: center; gap: 8px;">
@@ -1335,7 +1420,7 @@
           `;
         } else {
           legendEl.innerHTML = `
-            <div style="font-weight: 800; color: var(--ink); margin-bottom: 3px; letter-spacing: 0.5px;">OCEANIC AQUA SPECTRUM (₹ CAPITAL EXPOSURE)</div>
+            <div style="font-weight: 800; color: var(--text-primary, #FFF); margin-bottom: 3px; letter-spacing: 0.5px;">OCEANIC AQUA SPECTRUM (₹ CAPITAL EXPOSURE)</div>
             <div style="display: flex; align-items: center; gap: 8px;">
               <span style="display: inline-block; width: 12px; height: 12px; background: linear-gradient(135deg, #6FD3E0, #FFFFFF); border-radius: 2px; box-shadow: 0 0 8px #6FD3E0;"></span>
               <span>&gt; ₹95 Cr / yr (Starburst Cyan &amp; White Summits • Stardust Crests)</span>
@@ -1368,10 +1453,10 @@
     window.toggleAutoRotate = toggleAutoRotate;
     window.resetTerrainView = resetTerrainView;
     window.setTopDownView = setTopDownView;
+    window.focusSummit = focusSummit;
     window.highlightRadarCell = highlightRadarCell;
     window.focusGridCoordinate = focusGridCoordinate;
-    // Called by toggleTheme() in the <head> so the terrain re-tunes on theme flip.
-    window.syncCanvasTheme = syncCanvasTheme;
+    window.filterTerrainSector = filterTerrainSector;
 
     // Initialize on load with immediate fallback if DOM already interactive
     function initTopologyEngine() {

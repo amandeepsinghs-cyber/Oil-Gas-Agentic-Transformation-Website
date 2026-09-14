@@ -1711,11 +1711,16 @@
   });
 
   /* ── theme ─────────────────────────────────────────────────────────────
-     Matches the dossier convention -- class theme-dark, key persona-theme,
-     light by default -- so the two pages agree when you navigate between
-     them. The rest of the deck uses theme-light / deck-theme and does not
-     carry across; that mismatch is a known, separate issue. */
-  var KEY = "persona-theme";
+     Deck-wide convention: light by default, .theme-dark opt-in, key
+     "deck-theme". Shared with personas/dossier.html and every other surface,
+     so the theme follows you across the whole deck.
+
+     This page previously used a separate "persona-theme" key, paired only with
+     the dossier; unified 2026-09-14. Pages 00-07 and 10 express the same
+     default through the older .theme-light class because they predate
+     aurora.css -- the stored value is the same either way. page_09 was a
+     dark-only surface until 2026-09-14 and now participates too. */
+  var KEY = "deck-theme";
   var toggle = document.getElementById("themeToggle");
 
   function paint() {
