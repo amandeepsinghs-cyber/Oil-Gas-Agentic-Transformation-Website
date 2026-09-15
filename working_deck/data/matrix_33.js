@@ -2,7 +2,7 @@
    matrix_33.js — GENERATED. Do not hand-edit.
      source:    data/personas/*.js  +  data/value_model.js
      generator: scripts/build_matrix_33.js
-     built:     2026-09-14T11:33:02.259Z
+     built:     2026-09-15T02:51:37.399Z
 
    33 personas x 15 operational actions = 495 cells.
    status: critical 126 · friction 148 · baseline 221
@@ -1139,9 +1139,9 @@ window.ENTERPRISE_MATRIX_DATA = [
     "bucket": "B1",
     "freq": "Daily",
     "time": "hours",
-    "today": "Specialist receives multi-vendor files with 400+ unstandardized mnemonics (GR, GR_EDTC, GAM, CGR); spends hours manually mapping aliases into Techlog dictionaries.",
-    "vuln": "Mismapped curves cause batch inversion models to fail or silently process incorrect measurements (e.g., total gamma ray instead of spectral uranium-free gamma ray).",
-    "plug": "Ingests multi-vendor raw well log files (LAS, DLIS, ASCII), maps proprietary tool mnemonics to standard OSDU/PPDM dictionaries, and validates well header elevation and coordinate metadata.",
+    "today": "Six decades of wireline and LWD records across a dozen service contractors have produced 40,000+ distinct curve mnemonics; deep resistivity alone appears under 200+ codes (ILD, LLD, AT90, RDEP, M2RX) and gamma ray under 150+ (GR, GR_EDTC, GAM, CGR). The specialist hand-builds spreadsheet alias tables into Techlog dictionaries, consuming 30–50% of project cycle time before any rock physics begins.",
+    "vuln": "A static alias table maps shallow resistivity (ILS, AT10) into the deep slot (ILD, AT90) without complaint, corrupting the Archie water-saturation solution — invaded mud filtrate reads as formation water and a productive zone is condemned or sidetracked into. Unit drift compounds it: porosity stored as 18 rather than 0.18 passes every syntax check and fails every calculation.",
+    "plug": "Ingests entire legacy portfolios of multi-vendor well log files (LAS 2.0/3.0, DLIS, ASCII), resolves ambiguous curve codes through dictionary, description and rock-physics profiling tiers, conforms units and null padding, and emits standardized files with a per-curve confidence manifest.",
     "agent": "Curve Mnemonic Standardization & Header Hygiene Agent",
     "agentN": 1,
     "because": "",
@@ -11698,7 +11698,7 @@ window.ENTERPRISE_MATRIX_DATA = [
 ];
 
 window.ENTERPRISE_MATRIX_META = {
- "built": "2026-09-14T11:33:02.262Z",
+ "built": "2026-09-15T02:51:37.401Z",
  "personas": 33,
  "cells": 495,
  "status": {

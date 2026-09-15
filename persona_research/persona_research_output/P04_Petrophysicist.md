@@ -105,8 +105,8 @@
 ### Action Analysis (Two-Liners)
 
 * **A01 · Curve Mnemonic Standardization & Header Hygiene (B1, `[SPWLA §1.1]`)**:
-  * *Today*: Specialist receives multi-vendor files with 400+ unstandardized mnemonics (`GR`, `GR_EDTC`, `GAM`, `CGR`); spends hours manually mapping aliases into Techlog dictionaries.
-  * *Failure Mode*: Mismapped curves cause batch inversion models to fail or silently process incorrect measurements (e.g., total gamma ray instead of spectral uranium-free gamma ray).
+  * *Today*: Six decades of wireline and LWD records across a dozen service contractors have produced 40,000+ distinct curve mnemonics; deep resistivity alone appears under 200+ codes (`ILD`, `LLD`, `AT90`, `RDEP`, `M2RX`) and gamma ray under 150+ (`GR`, `GR_EDTC`, `GAM`, `CGR`). The specialist hand-builds spreadsheet alias tables into Techlog dictionaries, consuming 30–50% of project cycle time before any rock physics begins.
+  * *Failure Mode*: A static alias table maps shallow resistivity (`ILS`, `AT10`) into the deep slot (`ILD`, `AT90`) without complaint, corrupting the Archie water-saturation solution — invaded mud filtrate reads as formation water and a productive zone is condemned or sidetracked into. Unit drift compounds it: porosity stored as `18` rather than `0.18` passes every syntax check and fails every calculation.
   * *Agent*: **→ Agent 1 (Curve Mnemonic & Header Hygiene Agent)**.
 * **A02 · Multi-Run Depth Matching & Curve Splicing (B1, `[SPWLA §2.1]`)**:
   * *Today*: Specialist scrolls through overlapping logging runs (e.g., 12-1/4" hole Run 1 vs. 8-1/2" hole Run 2), manually picks depth tie-points, and hand-trims overlap tails.
@@ -155,14 +155,14 @@
 ```
 
 ### Agent 1: Curve Mnemonic Standardization & Header Hygiene Agent
-* **In One Line**: Ingests multi-vendor raw well log files (LAS, DLIS, ASCII), maps proprietary tool mnemonics to standard OSDU/PPDM dictionaries, and validates well header elevation and coordinate metadata.
+* **In One Line**: Ingests entire legacy portfolios of multi-vendor well log files (LAS 2.0/3.0, DLIS, ASCII), resolves ambiguous curve codes through dictionary, description and rock-physics profiling tiers, conforms units and null padding, and emits standardized files with a per-curve confidence manifest.
 * **Friction Solved**: Eliminates ~2.50 hours per well of tedious manual curve name renaming, dictionary lookup, and header discrepancy debugging.
 * **The Specification**:
-  * **Reads**: Raw multi-vendor well log files (LAS 2.0/3.0, DLIS), well master header registries, and corporate mnemonic taxonomy dictionaries.
-  * **Does**: Identifies proprietary vendor curves (e.g., SLB `HGR`, Halliburton `GRD`, Baker Hughes `GR`); maps curves to standardized canonical property classes (e.g., `GAMMA_RAY_TOTAL`, `RESISTIVITY_DEEP`); verifies surface coordinate datum (WGS84, UTM) and elevation references (Kelly Bushing [KB], Ground Level [GL], Permanent Datum).
-  * **Returns**: Standardized digital LAS/DLIS file with verified header records and an audit log detailing all mnemonic remappings.
-  * **Stops At**: Overwriting original raw archive files or discarding unmapped proprietary sensor curves.
-* **Failure Modes & Safety Envelopes**: If a curve mnemonic has ambiguous multiple interpretations (e.g., `RHOB` raw vs. `RHO8` processed), the agent flags `[Ambiguous Mnemonic: Specialist Verification Required]`.
+  * **Reads**: Raw multi-vendor well log files (LAS 2.0/3.0, DLIS), `~CURVE` section description comments and vendor run notes, well master header registries, and corporate mnemonic taxonomy dictionaries (CWLS, Energistics PWLS, OSDU WellLog, PPDM).
+  * **Does**: Resolves each curve through three escalating tiers — (1) direct dictionary match against canonical property classes such as `GAMMA_RAY_TOTAL` and `RESISTIVITY_DEEP`; (2) natural-language parsing of the curve description and run notes where the mnemonic itself is cryptic (`C1`, `CR_2`, `TEMP_RAW`); (3) statistical rock-physics profiling of the curve's own value distribution where description text is absent. Verifies units by distribution rather than by declaration, auto-scaling decimal fraction ↔ percentage; conforms every null representation (`-9999`, `-999.0`, `NaN`) to the CWLS `-999.25` standard; verifies surface coordinate datum (WGS84, UTM) and elevation reference (Kelly Bushing [KB], Ground Level [GL], Permanent Datum).
+  * **Returns**: Standardized `[UWI]_harmonized.las` files with verified header records, plus a companion harmonization manifest carrying a per-curve confidence score and the tier that resolved it.
+  * **Stops At**: Overwriting original raw archive files, discarding unmapped proprietary sensor curves, or silently accepting any mapping below the confidence threshold.
+* **Failure Modes & Safety Envelopes**: Curves resolving below 0.90 confidence are routed to an amber review queue rather than written through — the agent never guesses into the output. Where a mnemonic carries genuinely ambiguous interpretations (e.g., `RHOB` raw vs. `RHO8` processed), it flags `[Ambiguous Mnemonic: Specialist Verification Required]`.
 
 ### Agent 2: Multi-Run Log Splicing & Depth Match Agent
 * **In One Line**: Cross-correlates overlapping wireline/LWD logging runs across casing shoes and bit size transitions, calculates dynamic depth shifts, and stitches clean, continuous composite curves.
