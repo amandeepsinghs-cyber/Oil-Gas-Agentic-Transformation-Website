@@ -43,7 +43,7 @@
 | Regional Basin Petroleum Systems & Frontier Exploration Fairway Evaluation | Petroleum Geologist (Explorationist) (`P05`) |
 | 1D Single-Well Petrophysical Cutoff, Mineralogy & Water Saturation Modeling | Petrophysicist (`P04`) |
 | Dynamic Fluid Flow History Matching, Transmissibility Tuning & Eclipse Modeling | Reservoir Simulation Engineer (`P22`) |
-| Real-Time Geosteering Directional Bit Placement in Live Drilling Wellbores | Operations Geologist (`P24`) / Directional Driller |
+| Real-Time Geosteering Directional Bit Placement in Live Drilling Wellbores | Operations Geologist (wellsite) / Directional Driller |
 | Detailed Well Trajectory Torque & Drag and Casing Program Mechanical Design | Drilling Engineer (`P07`) |
 
 **Variants**:

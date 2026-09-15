@@ -63,7 +63,7 @@ Every persona listed below has a dedicated deep-dive research document in this d
 | **P21** | Development Geologist | Subsurface & Geosciences | Extended | AAPG; SPE Subsurface | 3D Geomodeling & Reservoir Characterization Squad (7 Agents) | [P21 Dossier](file:///usr/local/google/home/amandeepsinghs/O&G_slidedeck_agentic_transformation/persona_research/persona_research_output/P21_Development_Geologist.md) |
 | **P22** | Reservoir Simulation Engineer| Subsurface & Geosciences | Extended | SPE Reservoir Simulation | Numerical Simulation & Dynamic Forecasting Squad (7 Agents) | [P22 Dossier](file:///usr/local/google/home/amandeepsinghs/O&G_slidedeck_agentic_transformation/persona_research/persona_research_output/P22_Reservoir_Simulation_Engineer.md) |
 | **P23** | Subsurface Data Manager | Subsurface & Geosciences | Extended | PPDM Association; OSDU Forum | Subsurface Geodata Governance & OSDU Ingestion Squad (7 Agents) | [P23 Dossier](file:///usr/local/google/home/amandeepsinghs/O&G_slidedeck_agentic_transformation/persona_research/persona_research_output/P23_Subsurface_Data_Manager.md) |
-| **P24** | Operations Geologist | Wells & Rig Operations | Extended | AAPG; SPE Geosteering | Real-Time Geosteering & Wellsite Stratigraphic Surveillance Squad (7 Agents) | [P24 Dossier](file:///usr/local/google/home/amandeepsinghs/O&G_slidedeck_agentic_transformation/persona_research/persona_research_output/P24_Operations_Geologist.md) |
+| **P24** | Well Logging Engineer | Wells & Rig Operations | Extended | API RP 66; API RP 67; SPWLA LQC | Wireline Log Quality Control & Field Operations Custody Squad (6 Agents) | [P24 Dossier](file:///usr/local/google/home/amandeepsinghs/O&G_slidedeck_agentic_transformation/persona_research/persona_research_output/P24_Well_Logging_Engineer.md) |
 | **P25** | Artificial Lift Specialist | Field & Gathering | Extended | API RP 11L / 11S; SPE Lift | Artificial Lift Surveillance & Failure Elimination Squad (7 Agents) | [P25 Dossier](file:///usr/local/google/home/amandeepsinghs/O&G_slidedeck_agentic_transformation/persona_research/persona_research_output/P25_Artificial_Lift_Specialist.md) |
 | **P26** | Gas Plant Engineer | Midstream & Processing | Extended | GPSA Data Book; GPA Midstream | Gas Treating, NGL Recovery & Sulfur Management Squad (7 Agents) | [P26 Dossier](file:///usr/local/google/home/amandeepsinghs/O&G_slidedeck_agentic_transformation/persona_research/persona_research_output/P26_Gas_Plant_Engineer.md) |
 | **P27** | Pipeline Integrity Engineer | Midstream & Pipelines | Extended | ASME B31.8S; API 1160; B31G | Pipeline Integrity Management & ILI Dig Prioritization Squad (7 Agents) | [P27 Dossier](file:///usr/local/google/home/amandeepsinghs/O&G_slidedeck_agentic_transformation/persona_research/persona_research_output/P27_Pipeline_Integrity_Engineer.md) |
@@ -256,19 +256,19 @@ Every persona listed below has a dedicated deep-dive research document in this d
 
 ---
 
-### 12. Operations Geologist `[EXTENDED]`
-* **Canonical Title**: Operations Geologist
-* **Common Aliases**: Wellsite Geologist, Geosteering Specialist
-* **Operational Setting**: **Rig Doghouse / Remote Operations Center (ROC)**
-* **Work Cadence**: Real-time 24/7 monitoring while drilling the reservoir pay section
-* **Governing Competence Standards**: AAPG; SPE Subsurface
-* **Primary Ownership**: Real-time formation evaluation, mudlogging oversight, biostratigraphy checks, casing point depth picking, geosteering directional drill bits within the reservoir target window.
-* **Core Manual Friction**: Manually correlating real-time logging-while-drilling (LWD) gamma ray and resistivity curves against offset pilot-hole type logs to calculate structural dip in real time.
-* **Candidate Agent Focus**: **Real-Time Geosteering Correlation Agent**
-  * *Reads*: Real-time WITSML LWD curve data, mudlogging gas chromatograph readings, and seismic horizon grids.
-  * *Does*: Executes continuous pattern matching between current LWD logs and offset structural models.
-  * *Returns*: Estimated formation bed dip angles and distance-to-bed-boundary projections.
-  * *Stops at*: Issuing directional steering commands to the directional driller.
+### 12. Well Logging Engineer `[EXTENDED]`
+* **Canonical Title**: Well Logging Engineer
+* **Common Aliases**: Wireline Field Engineer, Field Engineer (Wireline & Perforating), Cased-Hole Logging Specialist
+* **Operational Setting**: **Wireline Logging Unit (Offshore Cabin / Land Logging Truck)**
+* **Work Cadence**: Call-out driven; 12 to 24+ continuous hours per job, followed by post-job close-out
+* **Governing Competence Standards**: API RP 66; API RP 67; SPWLA LQC
+* **Primary Ownership**: Wireline rig-up and pressure control, tool string calibration and readiness, cable depth control, wellsite log quality control and the re-run decision, sealed radioactive source and explosives custody, and the field print / LAS deliverable.
+* **Core Manual Friction**: Visually scanning roughly 150,000 recorded data points for cycle skips, sticking and repeat-section disagreement at the end of a 24-hour tour, inside the sixty-minute window before the tool is pulled and the interval is cased over.
+* **Candidate Agent Focus**: **Real-Time Log Quality Control & Re-Run Agent**
+  * *Reads*: Recorded main and repeat pass curve sets, cable tension and line speed records, the depth channel, and before-survey calibration values.
+  * *Does*: Computes SPWLA repeat-section agreement and screens every curve for cycle skips, sticking signatures and washout-driven artefacts.
+  * *Returns*: Per-curve, per-interval pass/fail verdict against named acceptance criteria with a costed re-run recommendation.
+  * *Stops at*: Ordering the re-run, which remains the engineer's and the Company Man's call on rig time.
 
 ---
 

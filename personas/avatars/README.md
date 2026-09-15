@@ -49,7 +49,7 @@ because the rail shows all 33 at once and the full set of originals is ~24 MB.
 | **P21** | Ananya Deshpande | Development Geologist | Subsurface & Geosciences | Extended |
 | **P22** | Kenji Nakamura | Reservoir Simulation Engineer | Subsurface & Geosciences | Extended |
 | **P23** | Thandiwe Mokoena | Subsurface Data Manager | Subsurface & Geosciences | Extended |
-| **P24** | Tom Brennan | Operations Geologist | Wells & Rig Operations | Extended |
+| **P24** | Tom Brennan | Well Logging Engineer | Wells & Rig Operations | Extended |
 | **P25** | Diego Ferreira | Artificial Lift Specialist | Field & Gathering | Extended |
 | **P26** | Nadia Farouk | Gas Plant Engineer | Midstream & Processing | Extended |
 | **P27** | Sanjay Iyer | Pipeline Integrity Engineer | Midstream & Pipelines | Extended |

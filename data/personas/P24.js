@@ -5,593 +5,587 @@
 window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
 window.PERSONA_DETAIL["P24"] = {
   "id": "P24",
-  "title": "Operations Geologist",
+  "title": "Well Logging Engineer",
   "aliases": [
-    "Wellsite Geologist",
-    "Geosteering Specialist",
-    "Rig Operations Geoscientist",
-    "Real-Time Stratigraphic Surveillance Lead"
+    "Wireline Field Engineer",
+    "Logging Engineer",
+    "Field Engineer (Wireline & Perforating)",
+    "Cased-Hole Logging Specialist",
+    "Logging Unit Operator"
   ],
   "segment": "Wells & Rig Operations",
   "segmentLong": "Upstream — Wells & Live Drilling Operations",
-  "setting": "Rig Doghouse / Remote Operations Center (ROC): 24/7 high-intensity real-time drilling console monitoring behind multi-screen geosteering, WITSML telemetry, and mudlogging displays",
+  "setting": "Wireline Logging Unit (Offshore Cabin / Land Logging Truck): a sealed acquisition cabin at the wellsite holding the winch controls, depth panel and acquisition workstation, with the rig floor, the radioactive source pit and the explosives magazine all within walking distance",
   "tier": "Extended",
   "core20": false,
-  "governingStandards": "AAPG; SPE Geosteering",
-  "agentFocus": "Real-Time Geosteering & Wellsite Stratigraphic Surveillance Squad (7 Agents)",
-  "sourceFile": "P24_Operations_Geologist.md",
+  "governingStandards": "API RP 66; API RP 67; SPWLA LQC",
+  "agentFocus": "Wireline Log Quality Control & Field Operations Custody Squad (6 Agents)",
+  "sourceFile": "P24_Well_Logging_Engineer.md",
   "person": "Tom Brennan",
   "avatar": "avatars/P24_persona.jpg",
   "thumb": "avatars/thumbs/P24_thumb.jpg",
-  "initials": "OG",
-  "headline": "The Operations Geologist pilots the drill bit through narrow geological sweet spots, steering horizontal laterals at high penetration rates (150--300 ft/hr) to maximize contact with high-productivity reservoir rock. While specialized commercial software like Rogii StarSteer and SLB Petrel Geosteering provide interactive 3D type-log correlation windows, they rely entirely on manual human visual curve sliding while pipe is continuously going in hole. During rapid unconventional lateral drilling or complex offshore geosteering, the operations geologist must manually stretch, squeeze, and match real-time Logging-While-Drilling (LWD) gamma ray and azimuthal resistivity curves against offset pilot-hole type logs to calculate apparent bed dip (α) and distance-to-bed boundaries. When an unexpected sub-seismic fault cuts the reservoir, a ten-minute correlation delay causes the bit to exit the pay zone into abrasive basement or swelling reactive shales, resulting in hundreds of feet of non-productive drilling and multi-million-dollar sidetracks. Deploying a dedicated 7-agent hyper-specialized operational geology squad saves 19.95 hours per operational drilling tour and daily cycle, keeping the wellbore inside the pay zone, accelerating casing shoe calls, and automating compliance reporting.",
+  "initials": "WL",
+  "headline": "The Well Logging Engineer is the last person who can prove a measurement is real while the tool is still in the hole — and the only one who can order the re-run before the window closes forever. When a triple- or quad-combo tool string finishes its pass across open hole, the rig is burning 10,000 to $40,000 per hour on standby and the engineer has roughly sixty minutes to decide whether the log is valid. Commercial acquisition platforms (SLB MAXWELL, Halliburton InSite, Warrior) faithfully record and plot every curve, but they do not adjudicate whether the recording is physically believable — they will plot a cycle-skipped sonic, a stretched depth track and a repeat section that disagrees with the main pass just as cleanly as good data. Shell's global operational audit found 15%to 20% of wireline jobs carried unrecognised quality defects. If the defect is caught while the tool is downhole, re-logging the interval costs 1.5 hours. If it is caught after pulling out of hole and casing over the interval, the data is gone permanently and the recovery attempt burns 36 to 72 hours of rig time. Compounding this, API RP 67 radio silence bans every electronic device on the rig floor during explosives and radioactive source handling, so the entire job tally is written by hand on a clipboard and keyed into SAP 45 to 60 minutes at a time by an engineer at the end of an 18 to 24 hour tour. Deploying a dedicated 6-agent wireline field operations squad saves 10.15 hours per logging run and post-job cycle, converting exhausted end-of-tour transcription and 3:00 AM curve-squinting into arithmetic that is finished before the tool reaches surface.",
   "confidence": {
-    "Persona": "Operations Geologist (P24)",
-    "Research Status": "Desk research grounded in international wellsite geoscience standards, real-time LWD telemetry protocols, and SPE/SPWLA geosteering technical literature",
-    "Competency Standard Used": "AAPG Wellsite Geologist Competency Guidelines, SPE Geosteering Best Practices (SPE-187214), SPWLA Real-Time LWD Standards, and Energistics WITSML v2.0",
-    "Standard Coverage": "10 of 10 real-time wellsite geology, geosteering, and formation evaluation stages mapped to operational actions",
-    "Actions Cited": "15 of 15 actions trace directly to AAPG Sample Examination manuals, SPWLA LWD logging guidelines, and mudlogging gas ratio standards (Pixler, Whorton)",
-    "Pain Claims Cited": "10 of 10 pain claims supported by published SPE/SPWLA geosteering case histories, NSTA wellbore placement studies, and field operational post-mortems",
-    "Timings Sourced": "Real-time type log correlation, fault throw identification, gas ratio tracking, and Daily Geological Report (DGR) synthesis timings verified via senior wellsite geologists and ROC leads",
-    "Gap Claims Cited": "Confirmed that commercial geosteering software (StarSteer, Petrel) requires manual human curve picking; none autonomously calculate dynamic bed dip from streaming WITSML feeds without human mouse-drag alignment",
-    "Known Gaps": "Inversion depths of investigation for ultra-deep azimuthal resistivity tools vary dynamically with mud filtrate salinity and formation resistivity contrasts"
+    "Persona": "Well Logging Engineer (P24)",
+    "Research Status": "Desk research grounded in wireline acquisition practice, SPWLA log quality control guidelines, API explosives and radioactive source protocols, and oilfield service ticketing literature",
+    "Competency Standard Used": "API RP 66 (Exploration and Production Wireline Operations), API RP 67 (Oilfield Explosives Safety), SPWLA Wireline and LWD Log Quality Control Guidelines, CWLS LAS 2.0/3.0, and AERB / IAEA SSR-6 sealed source transport rules",
+    "Standard Coverage": "10 of 10 wireline job-cycle stages mapped to operational actions, from pre-job tool string assembly through post-job ticket close-out",
+    "Actions Cited": "15 of 15 actions trace to API RP 66/67 field procedures, SPWLA LQC acceptance criteria, sealed-source custody rules, or documented service-ticketing practice"
   },
   "role": {
-    "oneLine": "Governs real-time geological formation evaluation at the wellsite and remote operations center—monitoring mudlogging cuttings and LWD telemetry, picking critical casing shoe points, detecting sub-seismic faults, and providing live geosteering dip adjustments to maximize horizontal wellbore pay contact.",
-    "whyItMatters": "A failure in operational geology directly compromises the entire economic return of the well: steering the drill bit out of the reservoir target window into abrasive basement or swelling shales triggers 500k to $2M mechanical sidetracks; misidentifying a regional casing shoe point risks catastrophic borehole kicks or lost circulation; failing to detect a hydrocarbon gas kick signature in mudlog chromatography compromises well integrity; and inaccurate in-zone pay tracking leads to flawed hydraulic fracturing stage designs.",
+    "oneLine": "Acquires the physical downhole measurement — rigs up the wireline unit, runs the tool string, controls depth, handles radioactive sources and perforating guns under explosives protocol, and certifies at the wellsite whether the recorded log is fit to deliver or must be re-run before the hole is lost.",
+    "whyItMatters": "Every petrophysical interpretation, every reserves booking and every completion design downstream rests on curves this role recorded. A log accepted with an undetected defect propagates silently: a cycle-skipped sonic corrupts the mechanical earth model, a mis-tied depth reference shifts every formation top by the error, and a bad-hole density reading inflates porosity into a net pay figure that drives a multi-stage fracture design into rock that was never productive. Unlike almost any other upstream measurement, the open-hole opportunity is non-repeatable — once casing is run, the formation is behind steel and the data is gone for the life of the well. The role also carries the two most tightly regulated physical hazards on the wellsite: sealed radioactive sources and explosive perforating charges.",
     "notOwned": [
       {
-        "task": "Full-Field Regional Static Geomodeling & Geostatistical Variograms",
-        "owner": "Development Geologist (P21) / Petroleum Geologist (P05)"
+        "task": "Petrophysical Interpretation — Vsh, porosity, water saturation, net pay cutoffs",
+        "owner": "Petrophysicist (P04)"
       },
       {
-        "task": "Physical Toolface Steering, BHA Mechanical Commands & Rotary Steerable Tool Telemetry",
-        "owner": "Directional Driller (Contractor — Baker Hughes, SLB, Halliburton)"
+        "task": "Real-Time Geosteering, Bed Dip Calculation and Formation Evaluation While Drilling",
+        "owner": "Operations / Wellsite Geologist (unmapped; see persona_research/unmapped_personas/)"
       },
       {
-        "task": "Rig Floor Drilling Hydraulics, Chemical Mud Weight & Retort Testing",
-        "owner": "Mud Engineer (Contractor) / Wellsite Supervisor (P01)"
-      },
-      {
-        "task": "Overall Wellsite Operational Command, Contractor Safety & Cost Authority",
+        "task": "Overall Wellsite Operational Command, Rig Time Authority and Contractor Safety",
         "owner": "Wellsite Supervisor (\"Company Man\", P01)"
       },
       {
-        "task": "Casing String Mechanical Design & Casing Setting Depth Engineering Calculations",
+        "task": "Casing Design, Mud Programme and Wellbore Mechanical Engineering",
         "owner": "Drilling Engineer (P07)"
+      },
+      {
+        "task": "Perforating Interval Selection and Completion Architecture",
+        "owner": "Completions Engineer (P08)"
+      },
+      {
+        "task": "Tool Physics, Inversion Algorithms and Sensor Design",
+        "owner": "Service Company R&D / Acquisition Monolith"
       }
     ],
     "variants": [
       {
-        "name": "Remote Operations Center (ROC) Geosteering Specialist",
-        "detail": "Stationed at an onshore technical center monitoring 4 to 8 active drilling rigs simultaneously via high-speed WITSML satellite feeds, providing 24/7 stratigraphic navigation across regional multi-well pad campaigns."
+        "name": "Open-Hole Wireline Field Engineer",
+        "detail": "Runs formation evaluation strings (gamma, resistivity, density-neutron, sonic, NMR, imaging) in open hole before casing. Owns the re-run decision under maximum time pressure, because the interval is about to be cased over."
       },
       {
-        "name": "On-Site Wellsite Geologist",
-        "detail": "Resident on the offshore platform or remote rig site living in the logging trailer; physically examines shaker cuttings under binocular microscopes and UV fluoroscopes, supervises the mudlogging crew, and works hand-in-hand with the Company Man."
+        "name": "Cased-Hole & Perforating Engineer",
+        "detail": "Runs production logging, cement bond and casing inspection tools, and executes perforating and plug-setting operations. Carries the explosives licence and enforces radio silence."
       },
       {
-        "name": "Operations Geology Asset Coordinator",
-        "detail": "Office-based technical lead who prepares pre-drill stratigraphic prognosis packages, defines casing shoe pick criteria, coordinates hot-shot biostratigraphy, and interfaces with the development geology asset team."
+        "name": "LWD / MWD Field Specialist",
+        "detail": "Embedded with the directional crew; owns memory-versus-real-time data reconciliation, tool health and mud-pulse telemetry quality rather than a wireline cable."
+      },
+      {
+        "name": "Logging Unit Field Supervisor / Party Chief",
+        "detail": "Coordinates multi-unit campaigns, signs the field ticket, and is the accountable authority for the source and explosives inventory on location."
       }
     ],
-    "titleCheck": "Standard industry titles include Operations Geologist, Wellsite Geologist, Geosteering Specialist, or Rig Operations Geoscientist. Avoid confusing this role with an office \"Petroleum Geologist\" (who generates regional prospects) or a \"Directional Driller\" (a mechanical drilling specialist who operates the steering motor).",
+    "titleCheck": "Standard industry titles include Well Logging Engineer, Wireline Field Engineer, Field Engineer (Wireline), or Logging Engineer. This is a measurement acquisition role. Do not confuse it with the Petrophysicist (P04), who interprets the delivered curves from an office, or with the Wellsite / Operations Geologist, who evaluates formation while drilling and steers the bit. The distinction is sharp in practice: the logging engineer is judged on whether the recording is valid, not on what the rock means.",
     "whereTheWorkHappens": {
-      "Work Setting": "Rig Site Doghouse / Remote Operations Center (ROC): 24/7 high-focus console monitoring environment equipped with 4 to 6 ultra-wide displays tracking live WITSML drilling telemetry, real-time LWD resistivity images, gas chromatography strip charts, and 3D geosteering curtains.",
-      "What They Can Reach": "Geosteering software (Rogii StarSteer, SLB Petrel Geosteering), rig telemetry platforms (Pason Systems, NOV WellData), mudlogging digital servers, live WITSML/WITS data feeds, offset pilot-hole petrophysical logs, and VHF radio/rig intercom links to the driller's console.",
-      "Shift Pattern": "12-hour rotating shifts (Day/Night: 06:00–18:00 or 18:00–06:00); 14/14 or 28/28 day hitch rotations during offshore or remote multi-pad drilling campaigns.",
-      "Where the Record Lives": "Real-time geosteering project files (.star, .pet), official Daily Geological Reports (DGR), Master Wellsite Composite Strip Logs, and mudlog hydrocarbon chromatography records."
+      "Work Setting": "Wireline Logging Unit: an acquisition cabin or truck body holding the winch and depth panel, tension readout, and the acquisition workstation. During perforating and source handling the engineer works on the rig floor under radio silence with no electronic device permitted.",
+      "What They Can Reach": "Acquisition platforms (SLB MAXWELL, Halliburton InSite, Warrior), the depth and tension panel, calibration jigs and API test pits, the tool shop maintenance database, the sealed-source custody register, the explosives magazine log, and SAP PM/MM for service orders — the last of which is only reachable once back in an electronic-safe zone.",
+      "Shift Pattern": "Call-out driven rather than rostered. A single job routinely runs 12 to 24+ continuous hours on location in extreme weather, followed by post-job close-out. Offshore hitches of 14/14 or 28/28.",
+      "Where the Record Lives": "Field prints and LAS deliverables (CWLS 2.0/3.0), calibration certificates before and after survey, the depth-tie record against driller's depth, sealed-source custody documents, the explosives and detonator tally, and the SAP service order / field ticket."
     }
   },
   "standards": [
     {
       "key": "",
-      "citation": "[AAPG-Wellsite]: American Association of Petroleum Geologists, Sample Examination Manual & Wellsite Geologist Field Procedures."
+      "citation": "[API-RP66]: American Petroleum Institute, Recommended Practice for Exploration and Production Wireline Operations — rig-up, pressure control, calibration discipline and tool failure reporting."
     },
     {
       "key": "",
-      "citation": "[SPE-Geosteering]: Society of Petroleum Engineers, Principles and Best Practices of Wellbore Geosteering, SPE Technical Paper SPE-187214-MS."
+      "citation": "[API-RP67]: American Petroleum Institute, Oilfield Explosives Safety — radio silence / HERO protocol, gun arming sequence, detonator and charge accountability."
     },
     {
       "key": "",
-      "citation": "[SPWLA-LWD-RT]: SPWLA, Real-Time LWD Data Quality Control and Azimuthal Logging Best Practices."
+      "citation": "[SPWLA-LQC]: SPWLA, Wireline and LWD Log Quality Control Guidelines — repeat-section acceptance criteria, curve validity thresholds and depth control tolerance."
     },
     {
       "key": "",
-      "citation": "[WITSML-Data]: Energistics Consortium, WITSML Data Standards for Real-Time Drilling and Formation Evaluation Information Exchange."
+      "citation": "[CWLS-LAS]: Canadian Well Logging Society, Log ASCII Standard (LAS) 2.0 / 3.0 Specification — deliverable curve format, null conventions and header requirements."
     },
     {
       "key": "",
-      "citation": "[PPDM-WhatIsAWell]: Professional Petroleum Data Management Association, Well Identification, Wellbore Directional Surveying, and Geological Top Reporting Standards."
+      "citation": "[AERB-Source]: Atomic Energy Regulatory Board / IAEA SSR-6 Regulations for the Safe Transport of Radioactive Material — sealed source custody chain, transport documentation and dose recording for Cs-137 and Am-241/Be."
     },
     {
       "key": "",
-      "citation": "[Pixler-GasRatios]: Pixler, B.O., Formation Evaluation by Analysis of Hydrocarbon Ratios in Mud Logging Gas, Journal of Petroleum Technology."
+      "citation": "[SPE-177439]: Modernizing Oilfield Service Ticketing: Eliminating Administrative Friction and Billing Disputes, SPE-177439-MS — field ticket clerical error rates and billing cycle latency."
+    },
+    {
+      "key": "",
+      "citation": "[SPE-214478]: Wellsite Log Quality Control Under Operational Time Pressure — re-run economics and the cost asymmetry between downhole and post-POOH defect detection."
     }
   ],
   "vendorGaps": [
     {
-      "product": "Rogii StarSteer",
-      "module": "3D Geosteering & Type-Log Correlation",
-      "solves": "Industry benchmark for interactive visual curve tie-in, apparent dip adjustment, and 3D wellbore curtain visualization.",
-      "gap": "Manual human curve dragging. Requires the geologist to continuously click and stretch LWD gamma/resistivity curves against the type log every 30 feet. At high ROP, the human cannot calculate bed dip changes fast enough to prevent exiting pay."
+      "product": "SLB MAXWELL / Halliburton InSite / Warrior",
+      "module": "Wireline Acquisition & Recording",
+      "solves": "Industry-standard acquisition, depth tracking, real-time curve plotting and LAS/DLIS export. Records everything faithfully at full sample rate.",
+      "gap": "Records without adjudicating. The platform plots a cycle-skipped sonic, a stuck-tool depth stretch and a repeat section that fails the SPWLA 95% agreement threshold exactly as cleanly as valid data. It has no opinion on whether the recording should be accepted."
     },
     {
-      "product": "SLB Petrel Geosteering",
-      "module": "Real-Time Subsurface Interpretation",
-      "solves": "Connects live WITSML drilling streams directly into the master 3D geocellular model, updating structural surfaces while drilling.",
-      "gap": "Too cumbersome for fast rig-floor steering calls. Excellent for post-drill surface updates, but too complex and slow for rapid 5-minute directional steering decisions required on the rig floor."
+      "product": "SLB Techlog / Emerson Paradigm",
+      "module": "Post-Acquisition Log QC",
+      "solves": "Rich interactive QC displays, curve editing, splicing and environmental correction — the town office toolset.",
+      "gap": "Arrives hours to days too late. By the time the data is loaded in town, the tool is out of the hole and often the interval is cased. The decision that mattered was made at the wellsite under fatigue with no computation available."
     },
     {
-      "product": "Pason Systems / NOV WellData",
-      "module": "Real-Time Rig Telemetry Pipeline",
-      "solves": "Streams real-time drilling mechanics (WOB, ROP, Torque, Pump Pressure) and LWD curves from the rig to cloud dashboards.",
-      "gap": "Pure communication pipe. Transmits raw sensor streams; possesses zero geological pattern matching, bed dip calculation, or fault detection intelligence."
+      "product": "Calibration Jigs & API Test Pits",
+      "module": "Sensor Reference Verification",
+      "solves": "Provide the physical primary standard for neutron, density and resistivity response.",
+      "gap": "Produce paper certificates. Before-survey and after-survey values are recorded by hand or in isolated tool files; nothing automatically computes drift across the run or compares it against the tolerance band before the log is delivered."
     },
     {
-      "product": "Commercial Mudlogging Systems (Geolog, Baker, Halliburton)",
-      "module": "Gas Chromatography & Strip Log",
-      "solves": "Records total gas, flame ionization detector (FID) gas components (C1 to C5), and lithology mudlogs.",
-      "gap": "Displays raw gas data without fluid typing intelligence. Plots gas curves, but does not autonomously calculate Pixler/Whorton hydrocarbon ratios or correlate gas anomalies with LWD porosity in real time."
+      "product": "SAP PM / MM",
+      "module": "Service Order, Billing & Asset Management",
+      "solves": "Authoritative enterprise system for service orders, rental line items, tool serial masters and invoicing.",
+      "gap": "Requires an electronic device and a functioning human. Radio silence bans devices on the rig floor, so the tally is handwritten; SAP then demands 45 to 60 minutes of accurate keying from an engineer at the end of a 24-hour tour. SPE-177439 measures the result: 22% of field tickets contain clerical errors."
     }
   ],
   "actions": [
     {
       "code": "A01",
-      "action": "Cross-correlate real-time LWD gamma & resistivity curves against offset pilot-hole type logs",
-      "source": "[SPE-Geosteering §3]",
+      "action": "Verify tool string combinability, pressure/temperature ratings & sensor spacing against the well programme",
+      "source": "[API-RP66 §5]",
       "scope": "well",
       "bucket": "B1",
-      "freq": "Continuous",
-      "time": "4–5 hrs/shift",
-      "friction": "assembly",
-      "agentRef": null,
-      "owner": "none",
-      "agentLabel": "✔✔",
-      "label": "Real-Time LWD Type-Log Correlation & Dynamic Bed-Dip Calculation (B1, [SPE-Geosteering §3, §4])",
-      "today": "Geologist manually clicks and shifts LWD curves over offset pilot-hole type logs in StarSteer every stand of pipe, trying to hand-estimate apparent bed dip (α).",
-      "failureMode": "When ROP exceeds 200 ft/hr, the geologist falls behind; an undetected 2^circ formation dip drop directs the bit out of pay into abrasive floor dolomite, wearing out the bit and losing 400 ft of pay.",
-      "agentNote": "→ See §4 (Agent 1: Real-Time LWD Stratigraphic Correlation & Dynamic Bed-Dip Sieve)."
+      "freq": "Event",
+      "time": "1–2 hrs",
+      "friction": "consistency",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Calibration & Tool Readiness",
+      "label": "Tool String Readiness and Calibration Traceability (B1, [API-RP66 §5, §7])",
+      "today": "Engineer assembles the string against the well programme, runs master and before-survey calibrations, files the paper certificates, and repeats the exercise after survey — then eyeballs whether the two sets look close enough.",
+      "failureMode": "A nuclear detector that drifted 4% across a hot, 14-hour run still produces a plausible-looking density curve. Nobody computes the before-versus-after delta against the tolerance band, so the drift is discovered months later during a reserves audit, if ever, and every porosity derived from that run is quietly wrong.",
+      "agentNote": "→ See §4 (Agent 3: Wireline Calibration Traceability & Tool Readiness Verification Agent)."
     },
     {
       "code": "A02",
-      "action": "Calculate apparent formation bed dip angle (α) and distance-to-bed boundaries (roof/floor)",
-      "source": "[SPE-Geosteering §4]",
-      "scope": "well",
+      "action": "Execute API master & before-survey calibrations for nuclear, resistivity and sonic sensors",
+      "source": "[API-RP66 §7]",
+      "scope": "task",
       "bucket": "B1",
-      "freq": "Continuous",
-      "time": "3–4 hrs/shift",
-      "friction": "consistency",
-      "agentRef": null,
-      "owner": "none",
-      "agentLabel": "✔✔",
-      "label": "Real-Time LWD Type-Log Correlation & Dynamic Bed-Dip Calculation (B1, [SPE-Geosteering §3, §4])",
-      "today": "Geologist manually clicks and shifts LWD curves over offset pilot-hole type logs in StarSteer every stand of pipe, trying to hand-estimate apparent bed dip (α).",
-      "failureMode": "When ROP exceeds 200 ft/hr, the geologist falls behind; an undetected 2^circ formation dip drop directs the bit out of pay into abrasive floor dolomite, wearing out the bit and losing 400 ft of pay.",
-      "agentNote": "→ See §4 (Agent 1: Real-Time LWD Stratigraphic Correlation & Dynamic Bed-Dip Sieve)."
+      "freq": "Event",
+      "time": "1–2 hrs",
+      "friction": "traceability",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Calibration & Tool Readiness",
+      "label": "Tool String Readiness and Calibration Traceability (B1, [API-RP66 §5, §7])",
+      "today": "Engineer assembles the string against the well programme, runs master and before-survey calibrations, files the paper certificates, and repeats the exercise after survey — then eyeballs whether the two sets look close enough.",
+      "failureMode": "A nuclear detector that drifted 4% across a hot, 14-hour run still produces a plausible-looking density curve. Nobody computes the before-versus-after delta against the tolerance band, so the drift is discovered months later during a reserves audit, if ever, and every porosity derived from that run is quietly wrong.",
+      "agentNote": "→ See §4 (Agent 3: Wireline Calibration Traceability & Tool Readiness Verification Agent)."
     },
     {
       "code": "A03",
-      "action": "Issue real-time target inclination and azimuth directional steering commands to Directional Driller",
-      "source": "[SPE-Geosteering §5]",
+      "action": "Verify after-survey calibration & compute sensor response drift across the completed run",
+      "source": "[API-RP66 §7]",
       "scope": "task",
-      "bucket": "B3",
-      "freq": "Continuous",
-      "time": "15–30 mins",
-      "friction": "judgment",
-      "agentRef": null,
-      "owner": "human",
-      "agentLabel": "❌ (Human Geosteerer & DD)",
-      "label": "Real-Time Directional Steering Target Commands (B3, [SPE-Geosteering §5])",
-      "today": "Geologist calls the Directional Driller on the rig floor intercom, instructing: \"Hold 89.2^circ inclination and steer 0.5^circ up, formation is dipping up at 1.5^circ.\"",
-      "agentNote": "❌ No. Direct operational steering command requiring licensed human professional accountability and mechanical rig awareness."
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "1 hr",
+      "friction": "traceability",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Calibration & Tool Readiness",
+      "label": "Tool String Readiness and Calibration Traceability (B1, [API-RP66 §5, §7])",
+      "today": "Engineer assembles the string against the well programme, runs master and before-survey calibrations, files the paper certificates, and repeats the exercise after survey — then eyeballs whether the two sets look close enough.",
+      "failureMode": "A nuclear detector that drifted 4% across a hot, 14-hour run still produces a plausible-looking density curve. Nobody computes the before-versus-after delta against the tolerance band, so the drift is discovered months later during a reserves audit, if ever, and every porosity derived from that run is quietly wrong.",
+      "agentNote": "→ See §4 (Agent 3: Wireline Calibration Traceability & Tool Readiness Verification Agent)."
     },
     {
       "code": "A04",
-      "action": "Detect sub-seismic fault crossings from sudden stratigraphic bed omissions, repeats & drilling breaks",
-      "source": "[SPE-Geosteering §6]",
-      "scope": "well",
-      "bucket": "B1",
+      "action": "Rig up the wireline unit, sheave assembly & pressure control equipment; pressure-test PCE to rated working pressure",
+      "source": "[API-RP66 §6]",
+      "scope": "task",
+      "bucket": "B3",
       "freq": "Event",
       "time": "2–3 hrs",
-      "friction": "recall",
+      "friction": "physical",
       "agentRef": null,
-      "owner": "none",
-      "agentLabel": "✔✔",
-      "label": "Sub-Seismic Fault Detection & Throw Triage (B1, [SPE-Geosteering §6])",
-      "today": "Geologist notices a sudden drilling break (ROP spike) and abrupt LWD gamma jump, scrambling to determine whether the well crossed a normal fault (missing section) or reverse fault (repeated section).",
-      "failureMode": "Guessing fault throw magnitude incorrectly leads to steering up when the downthrown block actually dropped, driving the bit deep into the underlying water-bearing sand.",
-      "agentNote": "→ See §4 (Agent 2: Structural Fault Crossing & Stratigraphic Throw Triage Sieve)."
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead / Rig Floor)",
+      "label": "Wireline Rig-Up and Pressure Control Equipment Test (B3, [API-RP66 §6])",
+      "today": "Crew spots the unit, strings up sheaves, makes up the PCE stack, and pressure-tests to rated working pressure with the Company Man witnessing.",
+      "agentNote": "❌ No. Physical rig-floor assembly and a witnessed pressure barrier test; the accountable signature is human by regulation."
     },
     {
       "code": "A05",
-      "action": "Calculate fault throw magnitude (ΔZ), fault plane dip & reservoir re-entry steering targets",
-      "source": "[SPE-Geosteering §6]",
+      "action": "Maintain cable depth control: tie to driller's depth, apply stretch & temperature correction, monitor tension",
+      "source": "[SPWLA-LQC §3]",
       "scope": "well",
       "bucket": "B1",
-      "freq": "Event",
-      "time": "1–2 hrs",
-      "friction": "consistency",
-      "agentRef": null,
-      "owner": "none",
-      "agentLabel": "✔✔",
-      "label": "Sub-Seismic Fault Detection & Throw Triage (B1, [SPE-Geosteering §6])",
-      "today": "Geologist notices a sudden drilling break (ROP spike) and abrupt LWD gamma jump, scrambling to determine whether the well crossed a normal fault (missing section) or reverse fault (repeated section).",
-      "failureMode": "Guessing fault throw magnitude incorrectly leads to steering up when the downthrown block actually dropped, driving the bit deep into the underlying water-bearing sand.",
-      "agentNote": "→ See §4 (Agent 2: Structural Fault Crossing & Stratigraphic Throw Triage Sieve)."
+      "freq": "Continuous",
+      "time": "2–3 hrs",
+      "friction": "calculation",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: Depth Control & Stretch Correction",
+      "label": "Cable Depth Control and Stretch Correction (B1, [SPWLA-LQC §3])",
+      "today": "Engineer ties logger's depth to driller's depth at a casing shoe or known marker, then applies cable stretch correction from a lookup chart against tension and temperature, adjusting by feel as the string goes deeper.",
+      "failureMode": "An uncorrected stretch error puts every curve a metre or more off true depth. The error is systematic and invisible on the plot — it surfaces when core will not tie to log, or when a perforating gun is run to a depth that misses the pay by the same offset.",
+      "agentNote": "→ See §4 (Agent 4: Cable Depth Control, Stretch Correction & Depth-Tie Reconciliation Agent)."
     },
     {
       "code": "A06",
-      "action": "Track real-time mudlog total gas & chromatography ratios (C1 to C5, Pixler, Whorton, Wetness)",
-      "source": "[Pixler-GasRatios]",
-      "scope": "task",
-      "bucket": "B1",
-      "freq": "Continuous",
-      "time": "2–3 hrs/shift",
-      "friction": "consistency",
+      "action": "Acquire the main logging pass & repeat section across the target reservoir interval",
+      "source": "[SPWLA-LQC §2]",
+      "scope": "well",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "3–5 hrs",
+      "friction": "execution",
       "agentRef": null,
-      "owner": "none",
-      "agentLabel": "✔✔",
-      "label": "Mudlog Gas Chromatography & Hydrocarbon Fluid Typing Triage (B1, [Pixler-GasRatios])",
-      "today": "Geologist reviews raw total gas curves and FID chromatograph readings (C1 to C5), manually calculating Pixler (C1/C2) and Whorton gas wetness ratios to evaluate hydrocarbon phase transitions.",
-      "failureMode": "Failing to recognize an upward trend in light gas (C1) and collapsing wetness ratios delays kick detection, risking a major well control influx while drilling underbalanced.",
-      "agentNote": "→ See §4 (Agent 3: Mudlog Gas Chromatography Ratio & Hydrocarbon Fluid Typing Correlator)."
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead / Tool in Hole)",
+      "label": "Main Pass and Repeat Section Acquisition (B3, [SPWLA-LQC §2])",
+      "today": "Engineer runs the tool to total depth and logs up at controlled speed, then repeats a section of the interval for verification.",
+      "agentNote": "❌ No. Live tool-in-hole operation with a cable under tension; the engineer controls the winch and owns the consequences."
     },
     {
       "code": "A07",
-      "action": "Identify formation fluid typing changes (gas cap, oil column, water contact) & seal breach signatures",
-      "source": "[Pixler-GasRatios]",
-      "scope": "task",
+      "action": "QC recorded curves for tool sticking, cycle skips, washout artefacts & repeat disagreement, then call the re-run before POOH",
+      "source": "[SPWLA-LQC §4]",
+      "scope": "well",
       "bucket": "B1",
-      "freq": "Daily",
+      "freq": "Event",
       "time": "1–2 hrs",
-      "friction": "consistency",
-      "agentRef": null,
-      "owner": "none",
-      "agentLabel": "✔✔",
-      "label": "Mudlog Gas Chromatography & Hydrocarbon Fluid Typing Triage (B1, [Pixler-GasRatios])",
-      "today": "Geologist reviews raw total gas curves and FID chromatograph readings (C1 to C5), manually calculating Pixler (C1/C2) and Whorton gas wetness ratios to evaluate hydrocarbon phase transitions.",
-      "failureMode": "Failing to recognize an upward trend in light gas (C1) and collapsing wetness ratios delays kick detection, risking a major well control influx while drilling underbalanced.",
-      "agentNote": "→ See §4 (Agent 3: Mudlog Gas Chromatography Ratio & Hydrocarbon Fluid Typing Correlator)."
+      "friction": "judgment",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: LQC & Re-Run Agent",
+      "label": "Wellsite Log Quality Control, the Re-Run Call and Deliverable Sign-Off (B1, [SPWLA-LQC §4], [CWLS-LAS])",
+      "today": "At 3:00 AM after a long tour, the engineer scrolls plots looking for cycle skips, sticking, washout artefacts and repeat-versus-main disagreement across roughly 150,000 data points on a kilometre of log, then argues the re-run question with the Company Man while the rig standby clock runs at 10k to $40k per hour.",
+      "failureMode": "Shell's audit found 15% to 20% of jobs carry unrecognised defects. Caught downhole, a re-log of a 50 m interval costs 1.5 hours. Caught after POOH and rig-down, recovery burns 36 to 72 hours — and if the interval has been cased, the open-hole measurement is gone for the life of the well.",
+      "agentNote": "→ See §4 (Agent 1: Real-Time Log Quality Control & Re-Run Agent)."
     },
     {
       "code": "A08",
-      "action": "Pick statutory intermediate casing shoe depth based on marker formation & pore pressure transition",
-      "source": "[AAPG-Wellsite §4]",
-      "scope": "well",
+      "action": "Maintain sealed radioactive source (Cs-137 / Am-241-Be) custody chain, transport papers, dose records & source pit reconciliation",
+      "source": "[AERB-Source]",
+      "scope": "task",
       "bucket": "B1",
       "freq": "Event",
-      "time": "2–4 hrs",
-      "friction": "consistency",
-      "agentRef": null,
-      "owner": "none",
-      "agentLabel": "✔✔",
-      "label": "Intermediate Casing Shoe & Core Point Trigger Sieve (B1, [AAPG-Wellsite §4, §5])",
-      "today": "Geologist monitors cuttings, ROP, and LWD markers approaching an overpressured target or coring point, manually comparing current TVD against pre-drill prognosis horizons.",
-      "failureMode": "Setting intermediate casing 20 ft too high leaves an unstable swelling shale un-cased; setting it 20 ft too deep penetrates an overpressured gas reservoir with under-weighted mud.",
-      "agentNote": "→ See §4 (Agent 4: Intermediate Casing Shoe & Core Point Trigger Sieve)."
+      "time": "1–2 hrs",
+      "friction": "traceability",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "Agent 5: Source & Explosives Custody",
+      "label": "Sealed Radioactive Source Custody Chain (B1, [AERB-Source])",
+      "today": "Engineer signs the source out of the pit, records serials and dose rates by hand, carries transport documents through customs or port control, and signs it back in — the paperwork trail spanning several authorities and a paper register.",
+      "failureMode": "A source serial recorded wrong, or a transport document that does not match the physical inventory, is a regulatory event in its own right. A source that cannot be accounted for at the end of a campaign escalates immediately to the national regulator.",
+      "agentNote": "→ See §4 (Agent 5: Sealed Source & Explosives Custody Chain Reconciliation Agent)."
     },
     {
       "code": "A09",
-      "action": "Verify core point trigger criteria & coring barrel landing depth during whole-diameter coring runs",
-      "source": "[AAPG-Wellsite §5]",
+      "action": "Enforce API RP 67 radio silence & RF emitter shutdown across the installation before arming perforating guns",
+      "source": "[API-RP67 §4.3]",
       "scope": "task",
-      "bucket": "B1",
+      "bucket": "B3",
       "freq": "Event",
-      "time": "2–3 hrs",
-      "friction": "consistency",
+      "time": "1–2 hrs",
+      "friction": "integrity",
       "agentRef": null,
-      "owner": "none",
-      "agentLabel": "✔✔",
-      "label": "Intermediate Casing Shoe & Core Point Trigger Sieve (B1, [AAPG-Wellsite §4, §5])",
-      "today": "Geologist monitors cuttings, ROP, and LWD markers approaching an overpressured target or coring point, manually comparing current TVD against pre-drill prognosis horizons.",
-      "failureMode": "Setting intermediate casing 20 ft too high leaves an unstable swelling shale un-cased; setting it 20 ft too deep penetrates an overpressured gas reservoir with under-weighted mud.",
-      "agentNote": "→ See §4 (Agent 4: Intermediate Casing Shoe & Core Point Trigger Sieve)."
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead / Party Chief)",
+      "label": "API RP 67 Radio Silence Enforcement (B3, [API-RP67 §4.3])",
+      "today": "Before guns are armed, every RF emitter on the installation is shut down — handheld radios, satcom, radar, welding sets, crane telemetry — and the Party Chief walks the location confirming each one before authorising arming.",
+      "agentNote": "❌ No. A physical walk-round and a life-safety authorisation against stray RF detonation; the arming call stays with the licensed human on location."
     },
     {
       "code": "A10",
-      "action": "Calculate cumulative in-zone reservoir contact footage & net pay percentage along the lateral",
-      "source": "[SPE-Geosteering §7]",
-      "scope": "well",
-      "bucket": "B1",
-      "freq": "Daily",
-      "time": "1–2 hrs",
-      "friction": "consistency",
+      "action": "Arm, run, fire & recover the perforating gun string; account for every shaped charge and detonator",
+      "source": "[API-RP67 §7]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "2–4 hrs",
+      "friction": "physical",
       "agentRef": null,
-      "owner": "none",
-      "agentLabel": "✔✔",
-      "label": "Lateral In-Zone Pay & Net Reservoir Contact Calculation (B1, [SPE-Geosteering §7])",
-      "today": "Geologist cross-references directional survey stations, LWD gamma/porosity logs, and interpreted bed boundaries to tally cumulative footage drilled within the target pay interval.",
-      "failureMode": "Inaccurate pay contact reporting leads completions engineers to place expensive multi-cluster frac stages in barren out-of-zone non-pay rock, wasting completions capital.",
-      "agentNote": "→ See §4 (Agent 5: Horizontal Lateral In-Zone Pay & Net Reservoir Contact Auditor)."
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead / Explosives)",
+      "label": "Perforating Gun Arming, Firing and Charge Accountability (B3, [API-RP67 §7])",
+      "today": "Engineer arms the gun string, runs to depth, correlates on CCL, fires, and recovers the carrier — then counts fired versus recovered charges and detonators against the magazine issue.",
+      "agentNote": "❌ No. Live explosives handling under licence. Every step is a human-signed, physically witnessed action."
     },
     {
       "code": "A11",
-      "action": "Screen real-time WITSML streaming data feeds for sensor dropouts, telemetry lags & depth-time errors",
-      "source": "[WITSML-Data §2]",
+      "action": "Monitor cable head tension, weak point margin & differential sticking risk during descent",
+      "source": "[SPWLA-LQC §5]",
       "scope": "task",
-      "bucket": "B1",
+      "bucket": "B2",
       "freq": "Continuous",
-      "time": "1–2 hrs/shift",
-      "friction": "waiting",
+      "time": "1–2 hrs",
+      "friction": "computation",
       "agentRef": null,
-      "owner": "none",
-      "agentLabel": "✔✔",
-      "label": "Streaming WITSML Telemetry & Sensor Quality Sieve (B1, [WITSML-Data §2])",
-      "today": "Geologist notices flatlined LWD curves or erratic spikes caused by telemetry packet drops over mud pulse or electromagnetic (EM) telemetry links, pausing drilling to request tool re-synchronization.",
-      "failureMode": "Steering based on corrupted or lagging LWD data points causes unneeded dogleg steering maneuvers that increase torque and drag, leading to stuck pipe.",
-      "agentNote": "→ See §4 (Agent 6: Real-Time WITSML Telemetry Stream Quality & Sensor Dropout Sieve)."
+      "owner": "monolith",
+      "agentLabel": "❌ (Acquisition Monolith)",
+      "label": "Cable Tension, Weak Point and Sticking Risk Monitoring (B2, [SPWLA-LQC §5])",
+      "today": "The acquisition platform displays real-time cable head tension against the computed weak-point rating and flags overpull trends during descent and logging.",
+      "agentNote": "❌ No. Native real-time function of the acquisition monolith, already instrumented and alarmed at the panel."
     },
     {
       "code": "A12",
-      "action": "Invert 3D azimuthal deep-directional resistivity boundary curves (e.g., PeriScope, GeoSphere)",
-      "source": "[SPWLA-LWD-RT]",
+      "action": "Triage downhole tool failures & telemetry loss; decide pull-out-of-hole versus continue the run",
+      "source": "[API-RP66 §9]",
       "scope": "well",
-      "bucket": "B2",
-      "freq": "Periodic",
-      "time": "2–4 hrs",
-      "friction": "judgment",
-      "agentRef": null,
-      "owner": "monolith",
-      "agentLabel": "❌ (Geosteering Monolith)",
-      "label": "Azimuthal Deep-Resistivity Boundary Inversion (B2, [SPWLA-LWD-RT])",
-      "today": "Multi-frequency, multi-spacing azimuthal resistivity inversion software (e.g., SLB PeriScope, Halliburton ADR) executes 1D/2D electromagnetic inversion algorithms.",
-      "agentNote": "❌ No. Heavyweight deterministic inversion solver. The agent consumes inversion boundary distances to guide stratigraphic correlation."
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "1–2 hrs",
+      "friction": "recall",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: Tool Failure Triage & Run History",
+      "label": "Downhole Tool Failure Triage and Run History (B1, [API-RP66 §9])",
+      "today": "When a sensor drops out mid-run, the engineer must decide within minutes whether to continue degraded or pull out of hole, drawing on whatever they personally remember about that tool serial's recent behaviour. Afterwards the serial tally and failure report are written up for the tool shop.",
+      "failureMode": "The same tool serial fails the same way on three consecutive jobs across three different engineers, and nobody connects them because the run history lives in separate handwritten failure reports. Each crew pays the diagnostic cost from scratch.",
+      "agentNote": "→ See §4 (Agent 6: Downhole Tool Failure Triage & Serial Run-History Agent)."
     },
     {
       "code": "A13",
-      "action": "Examine physical drill cuttings under binocular microscope & UV fluoroscope in wellsite trailer",
-      "source": "[AAPG-Wellsite §2]",
+      "action": "Maintain tool serial tally, maintenance records & field failure reporting back to the tool shop",
+      "source": "[API-RP66 §9]",
       "scope": "task",
-      "bucket": "B3",
-      "freq": "Continuous",
-      "time": "3–4 hrs/shift",
-      "friction": "physical",
-      "agentRef": null,
-      "owner": "none",
-      "agentLabel": "❌ (Field Wellsite Geo)",
-      "label": "Physical Cuttings Examination Under Microscope (B3, [AAPG-Wellsite §2])",
-      "today": "Wellsite geologist collects washed cuttings from shaker screens, inspects grain size, sorting, roundness, and mineralogy under binocular microscope, and tests hydrocarbon cut with solvent.",
-      "agentNote": "❌ No. Physical hands-on wellsite lab craft requiring tactile and optical inspection of physical rock fragments."
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "1 hr",
+      "friction": "assembly",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: Tool Failure Triage & Run History",
+      "label": "Downhole Tool Failure Triage and Run History (B1, [API-RP66 §9])",
+      "today": "When a sensor drops out mid-run, the engineer must decide within minutes whether to continue degraded or pull out of hole, drawing on whatever they personally remember about that tool serial's recent behaviour. Afterwards the serial tally and failure report are written up for the tool shop.",
+      "failureMode": "The same tool serial fails the same way on three consecutive jobs across three different engineers, and nobody connects them because the run history lives in separate handwritten failure reports. Each crew pays the diagnostic cost from scratch.",
+      "agentNote": "→ See §4 (Agent 6: Downhole Tool Failure Triage & Serial Run-History Agent)."
     },
     {
       "code": "A14",
-      "action": "Synthesize 24-hour Daily Geological Report (DGR) & morning briefing deck for town asset team",
-      "source": "Practitioner",
-      "scope": "well",
+      "action": "Transcribe the handwritten field ticket, billable standby hours & explosives/source tally into SAP once clear of radio silence",
+      "source": "[SPE-177439]",
+      "scope": "task",
       "bucket": "B1",
-      "freq": "Daily",
-      "time": "2–3 hrs",
+      "freq": "Event",
+      "time": "45–60 mins",
       "friction": "assembly",
-      "agentRef": null,
-      "owner": "none",
-      "agentLabel": "✔✔",
-      "label": "Daily Geological Report (DGR) & Composite Strip Log Compilation (B1, Practitioner)",
-      "today": "Geologist spends 2 to 3 hours every morning consolidating 24-hour drilling footage, bit records, gas readings, lithology descriptions, and survey stations into a static PDF DGR and updating the master strip log.",
-      "failureMode": "Manual data transcription introduces discrepancies between the DGR and official directional survey records, misleading asset managers during morning operational briefings.",
-      "agentNote": "→ See §4 (Agent 7: Daily Geological Report (DGR) & End-of-Well Composite Log Synthesizer)."
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "Agent 2: Radio-Silence Field Ticket Capture",
+      "label": "Post-Radio-Silence Field Ticket and Tally Capture (B1, [SPE-177439])",
+      "today": "Because radio silence banned every device on the rig floor, the whole job — operational hours, rig standby, tool rental lines, charge and source serials — exists only as handwritten notes on grease-smudged paper. The engineer keys it into SAP for 45 to 60 minutes after an 18 to 24 hour tour.",
+      "failureMode": "SPE-177439 measures 22% of field tickets carrying clerical errors — transposed serials, omitted standby. Forgetting 4.5 hours of rig standby while waiting on mud circulation forfeits ₹3,00,000 to ₹10,00,000 of legitimate billing, and disputed lines stretch the invoice cycle to 14 days.",
+      "agentNote": "→ See §4 (Agent 2: Radio-Silence Field Ticket & Explosives Tally Capture Agent)."
     },
     {
       "code": "A15",
-      "action": "Compile statutory end-of-well Composite Geological Master Strip Log & lithology summary",
-      "source": "Practitioner",
+      "action": "Deliver the witnessed field print, CWLS LAS deliverable & operator sign-off package",
+      "source": "[CWLS-LAS]",
       "scope": "well",
       "bucket": "B1",
-      "freq": "Campaign",
-      "time": "6–8 hrs",
+      "freq": "Event",
+      "time": "1–2 hrs",
       "friction": "assembly",
-      "agentRef": null,
-      "owner": "none",
-      "agentLabel": "✔✔",
-      "label": "Daily Geological Report (DGR) & Composite Strip Log Compilation (B1, Practitioner)",
-      "today": "Geologist spends 2 to 3 hours every morning consolidating 24-hour drilling footage, bit records, gas readings, lithology descriptions, and survey stations into a static PDF DGR and updating the master strip log.",
-      "failureMode": "Manual data transcription introduces discrepancies between the DGR and official directional survey records, misleading asset managers during morning operational briefings.",
-      "agentNote": "→ See §4 (Agent 7: Daily Geological Report (DGR) & End-of-Well Composite Log Synthesizer)."
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: LQC & Re-Run Agent",
+      "label": "Wellsite Log Quality Control, the Re-Run Call and Deliverable Sign-Off (B1, [SPWLA-LQC §4], [CWLS-LAS])",
+      "today": "At 3:00 AM after a long tour, the engineer scrolls plots looking for cycle skips, sticking, washout artefacts and repeat-versus-main disagreement across roughly 150,000 data points on a kilometre of log, then argues the re-run question with the Company Man while the rig standby clock runs at 10k to $40k per hour.",
+      "failureMode": "Shell's audit found 15% to 20% of jobs carry unrecognised defects. Caught downhole, a re-log of a 50 m interval costs 1.5 hours. Caught after POOH and rig-down, recovery burns 36 to 72 hours — and if the interval has been cased, the open-hole measurement is gone for the life of the well.",
+      "agentNote": "→ See §4 (Agent 1: Real-Time Log Quality Control & Re-Run Agent)."
     }
   ],
   "agents": [
     {
       "n": 1,
-      "name": "Real-Time LWD Stratigraphic Correlation & Dynamic Bed-Dip Sieve",
-      "oneLine": "Continuously cross-correlates streaming real-time LWD gamma and resistivity curves against offset pilot-hole type logs using dynamic time warping to calculate mathematical apparent formation bed dip (α) and distance-to-bed boundaries.",
-      "frictionSolved": "Eliminates 4.50 hours per 12-hour tour of manual visual curve sliding, stretching, and geometric trigonometry calculations while drilling horizontal laterals at high penetration rates.",
-      "reads": "Streaming real-time WITSML LWD curves (gamma ray, phase/attenuation resistivity, neutron-density porosity), directional wellbore survey station data, and offset pilot-hole stratigraphic type logs.",
-      "does": "1. Ingests real-time LWD data via WITSML streams; 2. Implements continuous sliding-window Dynamic Time Warping (DTW) and cross-correlation between live LWD curves and the offset type log; 3. Calculates apparent formation bed dip (α) along the wellbore trajectory azimuth; 4. Computes true stratigraphic thickness (TST) and true vertical thickness (TVT); 5. Calculates distance to upper (roof) and lower (floor) bed boundaries, generating dynamic target projection cones for the next 100 to 200 feet of drilling.",
-      "returns": "Real-Time Stratigraphic Navigation Dossier displaying continuous apparent bed dip profile, distance-to-boundary curves, type-log correlation confidence metrics, and projected bit entry/exit points.",
-      "stopsAt": "Issuing directional steering instructions to the directional driller or altering target landing coordinates.",
-      "failureModes": "If LWD curve cross-correlation confidence drops below 75% (e.g., in massive un-differentiated sandstones or severe borehole washouts), the agent halts automatic dip updates and flags [Low Correlation Confidence: Manual Type-Log Review Required].",
+      "name": "Real-Time Log Quality Control & Re-Run Agent",
+      "oneLine": "Computes SPWLA log quality criteria across every recorded curve the moment the pass completes — repeat-versus-main agreement, cycle skips, sticking signatures, washout-driven artefacts and depth consistency — and returns a pass/fail verdict per reservoir interval while the tool is still downhole and a re-run is still cheap.",
+      "frictionSolved": "Eliminates 2.00 hours per wireline logging run of manual plot scrolling, repeat-curve overlay tracing and LQC questionnaire completion, and delivers the verdict before the decision window closes rather than after.",
+      "reads": "The recorded curve set for main and repeat passes (gamma, resistivity, density, neutron, sonic, caliper), cable tension and line speed records, the depth channel, before-survey calibration values, and the well programme's declared target reservoir interval.",
+      "does": "1. Computes repeat-section agreement against the main pass across the overlapping interval and tests it against the SPWLA 95% threshold; 2. Detects sonic cycle skips, density-neutron separation anomalies inconsistent with declared lithology, and caliper excursions indicating washout beyond the pad-contact envelope; 3. Screens the depth channel and tension record for sticking signatures — tension spikes with corresponding depth discontinuity — which manifest as compressed or stretched curve intervals; 4. Tests deep resistivity tracking within ±5% in non-permeable uninvaded zones as a telemetry and electrode integrity check; 5. Scores each curve independently over the target reservoir interval and separately over the full logged section, so a failure confined to a non-reservoir interval is not escalated as if it were pay; 6. Assembles the CWLS LAS deliverable and field print package with the QC verdict attached as a machine-readable certificate.",
+      "returns": "Wellsite Log Quality Dossier stating a per-curve and per-interval pass/fail against named SPWLA criteria, the specific depth ranges and failure mechanism for every exception, the quantified repeat-section agreement percentage, and a costed re-run recommendation comparing downhole re-log time against post-POOH recovery.",
+      "stopsAt": "Ordering the re-run. The agent proves the log is invalid and prices both options; the decision to spend rig time belongs to the Well Logging Engineer and the Company Man.",
+      "failureModes": "In intervals where no repeat section was acquired, the agent cannot compute the primary agreement statistic and explicitly reports [No Repeat Section: Agreement Criterion Not Evaluable] rather than inferring a pass. In severely rugose or deviated hole where caliper indicates pad contact was never established, it flags the density and neutron curves as [Environmentally Invalid: Not a Tool Fault] so the crew does not re-run a tool that is working correctly in a hole that cannot be logged.",
       "agentId": "OG-P24-A01"
     },
     {
       "n": 2,
-      "name": "Structural Fault Crossing & Stratigraphic Throw Triage Sieve",
-      "oneLine": "Detects subtle sub-seismic fault crossings in real time from abrupt stratigraphic bed omissions, repetitions, drilling breaks, and azimuthal resistivity boundary inversions, calculating fault throw magnitude (ΔZ) and heave.",
-      "frictionSolved": "Eliminates 3.00 hours of high-stress diagnostic confusion when an unexpected fault displaces the reservoir, preventing prolonged out-of-zone drilling into abrasive or swelling non-pay formations.",
-      "reads": "Streaming LWD gamma and resistivity curves, instantaneous rate of penetration (ROP), drilling torque, azimuthal resistivity boundary distance signals, and structural seismic horizon grids.",
-      "does": "1. Monitors LWD signatures for sudden stratigraphic truncations or repeated marker sequences; 2. Correlates ROP drilling breaks (sudden acceleration/deceleration) with torque anomalies indicative of fault gouge or fracture zones; 3. Reconstructs missing or repeated stratigraphic intervals against the offset type log; 4. Determines fault classification (normal vs. reverse fault); 5. Calculates vertical fault throw (ΔZ) and provides required wellbore trajectory inclination correction angles to re-enter the target reservoir block.",
-      "returns": "Fault Encounter Diagnostic Report detailing fault crossing depth (MD/TVD), estimated vertical throw (ΔZ), fault plane apparent dip, and reservoir re-entry trajectory recommendation.",
-      "stopsAt": "Ordering directional steering changes or executing automated sidetrack trajectory planning.",
-      "failureModes": "If stratigraphic markers are completely missing on both sides of a fault (e.g., throwing the bit directly into uncharacterized basement), the agent issues an immediate [Uncharacterized Fault Displacement: Immediate Company Man Consultation Required] alert.",
+      "name": "Radio-Silence Field Ticket & Explosives Tally Capture Agent",
+      "oneLine": "Converts the handwritten clipboard tally — the only record that can legally exist on a rig floor under API RP 67 radio silence — into a structured, reconciled SAP service order from a single photograph taken once the engineer is back in an electronic-safe zone.",
+      "frictionSolved": "Eliminates 0.70 hours per job of end-of-tour manual SAP keying performed by an engineer who has been physically working for 18 to 24 hours, and independently recovers billable rig standby hours that fatigue routinely causes to be omitted.",
+      "reads": "Photographs of the handwritten field ticket and explosives/source tally sheet, the rig activity time log, the contractual standby and allowable-window terms for the service order, the SAP tool serial and rental line masters, and the magazine issue record for charges and detonators.",
+      "does": "1. Extracts handwritten operational time entries, tool serials, rental line items, charge and detonator counts and source serials from grease- and mud-marked paper; 2. Reconciles extracted tool and source serials against the SAP asset master, rejecting any serial that does not resolve rather than creating a new one; 3. Cross-checks the job time breakdown against the rig activity log and identifies waiting-on-operator intervals that qualify as billable standby under the contract terms; 4. Balances charges fired against charges issued and detonators returned, flagging any discrepancy as an explosives accountability exception before the ticket can close; 5. Assembles the draft SAP service order confirmation with every field traced back to a specific region of the source photograph for review.",
+      "returns": "Draft SAP service order with line-by-line provenance back to the scanned tally, an explicit list of recovered billable standby hours with contractual justification, and a blocking exception list for any serial or explosives count that does not reconcile.",
+      "stopsAt": "Submitting the service order or authorising the invoice. The engineer reviews and taps to authorise; the ticket is a commercial document carrying their name.",
+      "failureModes": "Any explosives or radioactive source count that fails to balance produces a hard block — the agent will not emit a submittable ticket with an unreconciled charge, detonator or source serial, because that tally is a regulatory record and not a billing line. Where handwriting confidence falls below threshold on a serial number or time entry, the field is left empty and flagged [Illegible: Manual Entry Required] rather than guessed.",
       "agentId": "OG-P24-A02"
     },
     {
       "n": 3,
-      "name": "Mudlog Gas Chromatography Ratio & Hydrocarbon Fluid Typing Correlator",
-      "oneLine": "Ingests real-time mudlog gas concentrations (C1 to C5), continuously computing Pixler, Whorton, and wetness ratios to detect reservoir fluid phase changes, gas cap penetrations, water contacts, and underbalanced gas kick signatures.",
-      "frictionSolved": "Removes 2.25 hours per tour of manual spreadsheet gas calculations, providing automated, continuous detection of hydrocarbon fluid contacts and early well control influx warnings.",
-      "reads": "Real-time mudlog total gas percentage, FID gas chromatograph components (Methane C1, Ethane C2, Propane C3, Iso-butane iC4, Normal butane nC4, Pentanes C5), mud flow-out rate, and active pit volume trends.",
-      "does": "1. Normalizes gas readings for mud flow rate, pump strokes, and ROP; 2. Calculates Pixler hydrocarbon ratios (C1/C2, C1/C3, C1/C4, C1/C5); 3. Computes Whorton gas wetness ratio (Wh = C2+C3+C4+C5 / C1+C2+C3+C4+C5 ×100), balance ratio (Bh), and character ratio (Ch); 4. Diagnoses hydrocarbon fluid type (dry gas vs. wet gas vs. light oil vs. residual heavy oil vs. non-productive water zone); 5. Detects connection gas surges, trip gas anomalies, and upward total gas trends signaling pore pressure ramps or underbalanced drilling conditions.",
-      "returns": "Continuous Hydrocarbon Fluid Evaluation Log displaying normalized gas ratios, fluid typing classifications, gas-oil/oil-water contact flags, and well control influx pre-warning scorecards.",
-      "stopsAt": "Adjusting drilling mud weight or initiating blowout preventer (BOP) well control shut-in protocols.",
-      "failureModes": "If total gas surges by >300% over background gas combined with an active pit volume increase, the agent triggers an audible high-priority [Gas Influx Alert: Potential Well Control Event] to the Company Man and Geosteerer.",
+      "name": "Wireline Calibration Traceability & Tool Readiness Verification Agent",
+      "oneLine": "Verifies before the string goes in hole that every tool is rated and combinable for the declared well conditions, and verifies after it comes out that each sensor's response has not drifted beyond tolerance across the run.",
+      "frictionSolved": "Eliminates 2.60 hours per job of manual specification cross-checking and paper calibration certificate comparison, and converts before-versus-after drift from an impression into a computed number with a stated tolerance.",
+      "reads": "The well programme's declared maximum temperature, pressure, hole size and mud properties; the tool catalogue's rating and sensor-spacing data; master calibration references and API test pit values; and the before-survey and after-survey calibration records for the run.",
+      "does": "1. Checks each tool in the proposed string against declared well temperature and pressure ratings, flagging any component operating inside its margin; 2. Verifies mechanical and telemetry combinability across the string and confirms sensor spacing supports the required vertical resolution; 3. Compares before-survey calibration values against the master and API reference standards; 4. Computes per-sensor response drift between before-survey and after-survey calibration and tests it against the published tolerance band for that sensor type; 5. Assembles the calibration traceability record linking every delivered curve to the specific calibration events that bound it.",
+      "returns": "Tool Readiness and Calibration Traceability Certificate listing per-tool rating margin against well conditions, per-sensor computed drift with pass/fail against tolerance, and an explicit statement of which delivered curves are affected by any out-of-tolerance sensor.",
+      "stopsAt": "Releasing the string to run, or condemning a tool. Tool acceptance and rejection are the engineer's call and the tool shop's disposition.",
+      "failureModes": "Where an after-survey calibration was not acquired — common when a tool is recovered damaged — the agent reports [Drift Not Evaluable: No After-Survey Reference] and marks the run's curves as calibration-unbounded rather than assuming the before-survey values held. It does not interpolate a missing calibration from an adjacent run on the same serial.",
       "agentId": "OG-P24-A03"
     },
     {
       "n": 4,
-      "name": "Intermediate Casing Shoe & Core Point Trigger Sieve",
-      "oneLine": "Continuously evaluates drilling mechanics (ROP, d-exponent) and LWD stratigraphic markers, calculating remaining vertical footage to overpressured casing seat intervals and triggering coring advisory windows.",
-      "frictionSolved": "Eliminates 2.70 hours of manual offset curve comparison and high-anxiety vigilance when drilling near narrow pore pressure/fracture gradient windows.",
-      "reads": "Real-time LWD gamma and resistivity curves, drilling mechanics (ROP, WOB, RPM, torque), corrected d-exponent trends, offset well casing point logs, and pre-drill pore pressure prognosis models.",
-      "does": "1. Cross-references real-time marker formation picks against pre-drill casing seat criteria (e.g., \"drill 30 ft into impermeable regional seal shale and stop\"); 2. Computes the real-time corrected d-exponent (dxc) to identify under-compaction pore pressure transition zones; 3. Calculates remaining vertical thickness before penetrating hazardous overpressured thief sands or lost-circulation carbonate vugs; 4. For coring runs, evaluates marker depth proximity and issues the \"core point reached\" notification to initiate bottoms-up circulation and pull-out-of-hole (POOH) for the core barrel.",
-      "returns": "Casing Shoe & Core Point Advisory Dossier containing remaining footage to target horizon, d-exponent pressure trend curves, offset correlation overlays, and casing point call recommendations.",
-      "stopsAt": "Ordering the driller to stop drilling, pull out of hole, or run casing.",
-      "failureModes": "If drilling mechanics indicate an immediate formation top penetration (ROP drill-off >50% combined with gamma drop) that is 50 ft shallower than prognosis, the agent immediately flags [Formation Top Anomaly: Immediate Casing Seat Decision Required].",
+      "name": "Cable Depth Control, Stretch Correction & Depth-Tie Reconciliation Agent",
+      "oneLine": "Computes cable stretch and thermal elongation continuously from tension, cable properties and temperature, and reconciles logger's depth against driller's depth and previous-run references so the depth channel behind every curve is defensible.",
+      "frictionSolved": "Eliminates 1.70 hours per run of chart-lookup stretch correction, manual depth-tie arithmetic and after-the-fact reconciliation against the driller's record.",
+      "reads": "Real-time cable head tension, line speed and measured depth; cable elastic and thermal constants for the deployed cable; borehole temperature profile; driller's depth reference and casing shoe tie points; and the depth channels of previous logging runs in the same wellbore.",
+      "does": "1. Computes elastic stretch from tension and cable modulus continuously along the deployed length; 2. Applies thermal elongation using the borehole temperature profile rather than a surface constant; 3. Reconciles the corrected logger's depth against declared casing shoe and driller's depth tie points, quantifying residual offset; 4. Cross-correlates the gamma channel against previous runs in the same wellbore to detect run-to-run depth inconsistency independent of the cable model; 5. Produces the corrected depth channel with a stated uncertainty envelope that travels with the deliverable.",
+      "returns": "Depth Control Record stating applied stretch and thermal corrections along the run, residual offset against each tie point, run-to-run gamma correlation offsets, and a depth uncertainty envelope for the logged interval.",
+      "stopsAt": "Overwriting the recorded depth channel in the deliverable. It proposes the correction and its basis; applying it is the engineer's action.",
+      "failureModes": "Where corrected depth still disagrees with driller's depth beyond the tolerance for the hole section, the agent reports [Depth Tie Unresolved] and refuses to state an uncertainty envelope, because a stretch model that cannot reproduce a known reference should not be trusted to bound an unknown one. Cable property constants that do not match the deployed cable serial produce a hard warning rather than a silent default.",
       "agentId": "OG-P24-A04"
     },
     {
       "n": 5,
-      "name": "Horizontal Lateral In-Zone Pay & Net Reservoir Contact Auditor",
-      "oneLine": "Integrates 3D wellbore survey coordinates, apparent dip variations, and petrophysical cutoff flags to calculate exact footage drilled in-zone, percentage reservoir pay contact, and out-of-zone trajectory segments.",
-      "frictionSolved": "Removes 3.50 hours per lateral section of manual trajectory cross-section mapping, pay-length integration, and completions staging coordination.",
-      "reads": "Verified 3D directional wellbore surveys (MD, TVD, inclination, azimuth), interpreted reservoir roof/floor boundary surfaces from Agent 1, and real-time LWD petrophysical curves (Vshale, porosity φ, resistivity Rt).",
-      "does": "1. Compares the 3D wellbore position against top and base reservoir boundaries at every survey station; 2. Applies petrophysical reservoir pay cutoffs (e.g., Vshale < 30%, φ> 8%, Rt > 15 Omega·m); 3. Quantifies cumulative lateral footage drilled in-zone (100% pay), roof exit (non-pay overburden), and floor exit (non-pay underburden); 4. Calculates total in-zone reservoir contact percentage across the lateral length; 5. Maps out-of-zone intervals to alert completions engineers during hydraulic fracture stage planning.",
-      "returns": "Lateral In-Zone Pay Audit Report containing cumulative pay contact percentage, spatial out-of-zone interval logs, net-to-gross lateral statistics, and completion stage pay quality overlays.",
-      "stopsAt": "Redesigning hydraulic fracturing stage cluster locations or modifying lateral target TD.",
-      "failureModes": "If cumulative out-of-zone drilling exceeds 250 continuous feet, the agent flags an operational warning [Significant Out-of-Zone Penalty: Trajectory Re-steering Priority].",
+      "name": "Sealed Source & Explosives Custody Chain Reconciliation Agent",
+      "oneLine": "Maintains a continuously reconciled custody position for every sealed radioactive source and every explosive item on the location, matching physical movements against transport documents, magazine records and regulatory returns.",
+      "frictionSolved": "Eliminates 1.25 hours per job of manual custody paperwork, serial transcription and inventory reconciliation across the source pit, magazine and transport documentation.",
+      "reads": "Sealed source serials, activities and last-assay dates; source pit sign-out and sign-in records; dose rate measurements; transport and customs documentation; the explosives magazine issue and return log; and per-job charge, detonator and source utilisation records.",
+      "does": "1. Maintains the current custody holder and physical location for every source and explosive item against its serial; 2. Reconciles each job's declared usage against magazine issue and return, surfacing any item neither returned nor accounted as expended; 3. Recomputes present source activity from the last assay and decay constant, flagging sources approaching regulatory re-assay or disposal thresholds; 4. Checks transport documentation completeness against the applicable AERB/IAEA requirements for the planned movement before the source leaves site; 5. Assembles the periodic regulatory inventory return from the reconciled position.",
+      "returns": "Custody Position Report stating the current accounted location of every source and explosive item, a dated exception list for anything unreconciled, computed present activities with re-assay due dates, and a draft regulatory inventory return.",
+      "stopsAt": "Signing the regulatory return or authorising a source movement. Both are licensed acts carrying named personal accountability.",
+      "failureModes": "Any unaccounted sealed source produces an immediate [Source Unaccounted: Escalate to Radiation Protection Supervisor] and the agent will not emit a regulatory return containing an unresolved item. It never infers that an item was expended because a job is closed — expenditure must be evidenced by a return record.",
       "agentId": "OG-P24-A05"
     },
     {
       "n": 6,
-      "name": "Real-Time WITSML Telemetry Stream Quality & Sensor Dropout Sieve",
-      "oneLine": "Continuously audits real-time streaming WITSML data channels, detecting sensor dropouts, mud pulse telemetry noise, un-synchronized depth-time records, and bad sensor flags before corrupted curves distort geosteering models.",
-      "frictionSolved": "Eliminates 1.80 hours per shift of manual telemetry troubleshooting, verifying that geosteering decisions are never made on corrupt, flatlined, or delayed LWD data.",
-      "reads": "Real-time WITSML v1.4.1.1 and v2.0 XML/JSON data streams, LWD tool telemetry status channels, surface acquisition server time stamps, and driller's depth tracking records.",
-      "does": "1. Audits streaming data packet arrival intervals, detecting mud pulse signal attenuation or telemetry carrier frequency dropouts; 2. Detects stuck sensor channels (flatline curves where values remain identical across >10 feet of drilling); 3. Identifies non-physical sensor spikes (e.g., gamma ray >1000 API or negative resistivity readings); 4. Verifies depth-time synchronization between surface rig sensors (drawworks encoder) and downhole LWD clock memory; 5. Flags intervals drilled with high tool shock/vibration (>15 g) that degrade measurement accuracy.",
-      "returns": "Real-Time Telemetry Data Quality Scorecard showing sensor latency metrics, bad data flags, flatline alerts, and tool shock indices.",
-      "stopsAt": "Resetting downhole MWD/LWD pulsers or modifying rig acquisition network protocols.",
-      "failureModes": "If primary geosteering curves (gamma/resistivity) flatline or experience telemetry loss for >30 continuous feet, the agent issues a [LWD Telemetry Loss: Halt Automated Geosteering Updates] notification.",
+      "name": "Downhole Tool Failure Triage & Serial Run-History Agent",
+      "oneLine": "When a sensor drops out mid-run, retrieves what that specific tool serial has done across every previous job and every crew, so the pull-out-of-hole decision is made against evidence rather than one engineer's recollection.",
+      "frictionSolved": "Eliminates 1.90 hours per event of failure diagnosis from memory and post-job failure report assembly, and breaks the pattern where the same serial fails the same way across consecutive crews without anyone connecting the runs.",
+      "reads": "Real-time tool health and telemetry status for the running string, the tool shop maintenance and repair database, prior field failure reports keyed by serial, and the run history and operating conditions for each serial.",
+      "does": "1. Matches the live failure signature against prior recorded failures for the same serial and the same tool type; 2. Retrieves maintenance and repair history for the serial, including time since last shop visit and components replaced; 3. Correlates prior failures against operating conditions — temperature, run duration, hole deviation — to identify whether the serial fails under a recurring condition; 4. Estimates the likelihood that continuing the run degrades further versus recovers, against the remaining interval to be logged; 5. Drafts the structured field failure report for the tool shop with the diagnosis and evidence pre-populated.",
+      "returns": "Tool Failure Triage Brief stating the matched failure pattern with prior occurrences by date and serial, maintenance history, the conditions under which this serial has previously failed, and a drafted field failure report ready for review.",
+      "stopsAt": "The pull-out-of-hole decision. Rig time and the remaining logging objective are the engineer's and the Company Man's to weigh.",
+      "failureModes": "Where a serial has no prior recorded history — a newly built or newly repaired tool — the agent states [No Serial History: Type-Level Pattern Only] and restricts itself to tool-type patterns rather than presenting type statistics as if they described this unit. It does not recommend continuing a run on a tool whose failure signature it cannot classify.",
       "agentId": "OG-P24-A06"
-    },
-    {
-      "n": 7,
-      "name": "Daily Geological Report (DGR) & End-of-Well Composite Log Synthesizer",
-      "oneLine": "Ingests 24-hour drilling footage, mudlog cuttings descriptions, gas chromatograph summaries, survey stations, and in-zone pay metrics to synthesize the statutory Daily Geological Report (DGR) and update the master composite strip log.",
-      "frictionSolved": "Eliminates 2.20 hours per daily reporting cycle of manual copy-pasting, multi-source data splicing, and PDF formatting.",
-      "reads": "24-hour footage drilled, bit runs, mud properties, mudlog lithology descriptions, gas chromatography logs from Agent 3, directional surveys from Agent 5, and stratigraphic picks from Agent 1.",
-      "does": "1. Aggregates 24-hour operational drilling and geological statistics; 2. Structures lithology descriptions according to standard AAPG sample examination conventions (color, grain size, sorting, matrix, cement, porosity, show); 3. Generates high-resolution digital composite strip log plots incorporating gamma, resistivity, ROP, total gas, lithology percentages, and formation tops; 4. Formats executive summary bullet points highlighting 24-hour footage, current formation, structural dip, gas peaks, and forecasted operations for the next 24 hours; 5. Formats the output according to operator corporate templates and national statutory reporting formats.",
-      "returns": "Fully Formatted Daily Geological Report (PDF/Excel) and updated Digital Composite Master Strip Log ready for single-click morning distribution to asset managers and government regulators.",
-      "stopsAt": "Distributing external regulatory reports without Operations Geology Lead sign-off.",
-      "failureModes": "If reported 24-hour footage in the DGR mismatches official driller's IADC Daily Drilling Report footage by >1.0 foot, the agent halts document generation and highlights the discrepancy for reconciliation.",
-      "agentId": "OG-P24-A07"
     }
   ],
   "valueModel": {
-    "rule": "Quantify the unit of work. Never multiply into speculative enterprise rupee or dollar totals. The operating asset provides its own rig count, ROP, and lateral footage multipliers.",
+    "rule": "Quantify the unit of work. Never multiply into speculative enterprise rupee or dollar totals. The operating asset provides its own logging run count, rig day rate and campaign multipliers.",
     "rows": [
       {
-        "agent": "Real-Time LWD Stratigraphic Correlation & Dynamic Bed-Dip Sieve",
-        "unit": "1 Drilling Tour (12-hr shift / 600 ft lateral)",
-        "beforeHours": 5.0,
-        "afterHours": 0.5,
-        "savedHours": 4.5,
-        "frictionRemoved": "Continuous Manual Pattern Matching & Curve Sliding Drag"
-      },
-      {
-        "agent": "Structural Fault Crossing & Stratigraphic Throw Triage Sieve",
-        "unit": "1 Fault Encounter Event",
-        "beforeHours": 3.5,
-        "afterHours": 0.5,
-        "savedHours": 3.0,
-        "frictionRemoved": "Diagnostic Confusion & Throw Math Calculation Drag"
-      },
-      {
-        "agent": "Mudlog Gas Chromatography Ratio & Hydrocarbon Fluid Typing Correlator",
-        "unit": "1 Drilling Tour (12-hr shift)",
-        "beforeHours": 2.5,
+        "agent": "Real-Time Log Quality Control & Re-Run Agent",
+        "unit": "1 Wireline Logging Run",
+        "beforeHours": 2.25,
         "afterHours": 0.25,
-        "savedHours": 2.25,
-        "frictionRemoved": "Manual Spreadsheet Gas Ratio Math & Fluid Typing"
+        "savedHours": 2.0,
+        "frictionRemoved": "3:00 AM Manual Plot Scrolling & Repeat Overlay Tracing"
       },
       {
-        "agent": "Intermediate Casing Shoe & Core Point Trigger Sieve",
-        "unit": "1 Casing Seat / Coring Run",
+        "agent": "Radio-Silence Field Ticket & Explosives Tally Capture Agent",
+        "unit": "1 Post-Job Ticket Cycle",
+        "beforeHours": 0.75,
+        "afterHours": 0.05,
+        "savedHours": 0.7,
+        "frictionRemoved": "End-of-Tour Manual SAP Keying from Handwritten Paper"
+      },
+      {
+        "agent": "Wireline Calibration Traceability & Tool Readiness Verification Agent",
+        "unit": "1 Job (Pre-Job & Post-Job)",
         "beforeHours": 3.0,
-        "afterHours": 0.3,
-        "savedHours": 2.7,
-        "frictionRemoved": "Offset Curve Alignment & High-Anxiety Vigilance Drag"
+        "afterHours": 0.4,
+        "savedHours": 2.6,
+        "frictionRemoved": "Specification Cross-Checking & Paper Certificate Comparison"
       },
       {
-        "agent": "Horizontal Lateral In-Zone Pay & Net Reservoir Contact Auditor",
-        "unit": "1 Lateral Well Section (5,000 ft lateral)",
-        "beforeHours": 4.0,
-        "afterHours": 0.5,
-        "savedHours": 3.5,
-        "frictionRemoved": "Trajectory Geometry Math & Pay Tally Cross-Checking"
-      },
-      {
-        "agent": "Real-Time WITSML Telemetry Stream Quality & Sensor Dropout Sieve",
-        "unit": "1 Drilling Tour (12-hr shift)",
+        "agent": "Cable Depth Control, Stretch Correction & Depth-Tie Reconciliation Agent",
+        "unit": "1 Wireline Logging Run",
         "beforeHours": 2.0,
-        "afterHours": 0.2,
-        "savedHours": 1.8,
-        "frictionRemoved": "Telemetry Packet Auditing & Flatline Detection Drag"
+        "afterHours": 0.3,
+        "savedHours": 1.7,
+        "frictionRemoved": "Chart-Lookup Stretch Correction & Depth-Tie Arithmetic"
       },
       {
-        "agent": "Daily Geological Report (DGR) & End-of-Well Composite Log Synthesizer",
-        "unit": "1 Daily Reporting Cycle",
-        "beforeHours": 2.5,
-        "afterHours": 0.3,
-        "savedHours": 2.2,
-        "frictionRemoved": "Multi-Source Data Splicing & DGR PDF Formatting Drag"
+        "agent": "Sealed Source & Explosives Custody Chain Reconciliation Agent",
+        "unit": "1 Job (Source / Explosives Movement)",
+        "beforeHours": 1.5,
+        "afterHours": 0.25,
+        "savedHours": 1.25,
+        "frictionRemoved": "Manual Custody Paperwork & Serial Transcription"
+      },
+      {
+        "agent": "Downhole Tool Failure Triage & Serial Run-History Agent",
+        "unit": "1 Tool Failure Event",
+        "beforeHours": 2.25,
+        "afterHours": 0.35,
+        "savedHours": 1.9,
+        "frictionRemoved": "Diagnosis from Memory & Failure Report Assembly"
       }
     ],
     "total": {
-      "unit": "Per 12-Hour Tour / Daily Reporting Cycle",
-      "beforeHours": 22.5,
-      "afterHours": 2.55,
-      "savedHours": 19.95,
-      "frictionRemoved": "88.7% reduction in operational geoscience surveillance drag",
+      "unit": "Per Wireline Logging Run / Post-Job Cycle",
+      "beforeHours": 11.75,
+      "afterHours": 1.6,
+      "savedHours": 10.15,
+      "frictionRemoved": "86.4% reduction in wireline field operations administrative and verification drag",
       "label": "Total Operational Cycle Drag Reduction"
     }
   },
   "citations": [
     {
-      "key": "[AAPG-Wellsite]",
-      "citation": "AAPG, Sample Examination Manual & Wellsite Geologist Field Procedures, Methods in Exploration No. 10, 2018",
-      "locator": "store.aapg.org",
-      "type": "Industry Manual",
-      "supports": "Drill cuttings examination, lithology description conventions, and casing point picking"
+      "key": "[API-RP66]",
+      "citation": "American Petroleum Institute, Recommended Practice for Exploration and Production Wireline Operations",
+      "locator": "api.org",
+      "type": "Industry Recommended Practice",
+      "supports": "Rig-up and pressure control discipline, calibration procedure, tool failure reporting"
     },
     {
-      "key": "[SPE-Geosteering]",
-      "citation": "Society of Petroleum Engineers, Principles and Best Practices of Wellbore Geosteering, SPE-187214-MS, 2017",
-      "locator": "DOI: 10.2118/187214-MS",
-      "type": "Technical Paper",
-      "supports": "Real-time type log correlation math, apparent bed dip calculation, and fault crossing diagnostics"
+      "key": "[API-RP67]",
+      "citation": "American Petroleum Institute, Oilfield Explosives Safety, RP 67",
+      "locator": "api.org",
+      "type": "Industry Recommended Practice",
+      "supports": "Radio silence / HERO protocol, gun arming sequence, charge and detonator accountability"
     },
     {
-      "key": "[SPWLA-LWD-RT]",
-      "citation": "SPWLA, Real-Time LWD Data Quality Control and Azimuthal Logging Best Practices, 2019",
+      "key": "[SPWLA-LQC]",
+      "citation": "SPWLA, Wireline and LWD Log Quality Control Guidelines",
       "locator": "spwla.org",
       "type": "Technical Standard",
-      "supports": "Azimuthal LWD sensor integration, telemetry quality screening, and boundary distance"
+      "supports": "Repeat-section agreement threshold, curve validity criteria, depth control tolerance"
     },
     {
-      "key": "[WITSML-Data]",
-      "citation": "Energistics Consortium, WITSML Real-Time Drilling Standards Specification, v2.0, 2020",
-      "locator": "energistics.org",
+      "key": "[CWLS-LAS]",
+      "citation": "Canadian Well Logging Society, Log ASCII Standard (LAS) 2.0 / 3.0 Specification",
+      "locator": "cwls.org",
       "type": "Data Exchange Standard",
-      "supports": "Real-time WITSML streaming telemetry schemas and mudlogging data exchange protocols"
+      "supports": "Deliverable curve format, header requirements and null conventions"
     },
     {
-      "key": "[Pixler-GasRatios]",
-      "citation": "Pixler, B.O., Formation Evaluation by Analysis of Hydrocarbon Ratios in Mud Logging Gas, SPE-2254, 2019",
+      "key": "[AERB-Source]",
+      "citation": "Atomic Energy Regulatory Board / IAEA, SSR-6 Regulations for the Safe Transport of Radioactive Material",
+      "locator": "aerb.gov.in / iaea.org",
+      "type": "Regulatory Standard",
+      "supports": "Sealed source custody chain, transport documentation, dose recording and inventory returns"
+    },
+    {
+      "key": "[SPE-177439]",
+      "citation": "Modernizing Oilfield Service Ticketing: Eliminating Administrative Friction and Billing Disputes, SPE-177439-MS",
       "locator": "OnePetro",
-      "type": "Technical Classic",
-      "supports": "Hydrocarbon gas ratio formulation (C1/C2 to C1/C5) for fluid typing and kick detection"
+      "type": "Technical Paper",
+      "supports": "Field ticket clerical error rate (22%), dispute reduction and billing cycle latency"
     },
     {
-      "key": "[PPDM-WhatIsAWell]",
-      "citation": "PPDM Association, Well Identification, Directional Surveying, and Wellbore Hierarchy Standards, 2020",
-      "locator": "ppdm.org",
-      "type": "Technical Standard",
-      "supports": "Directional survey stations, parent-child wellbore lineage, and formation top reporting"
+      "key": "[SPE-214478]",
+      "citation": "Wellsite Log Quality Control Under Operational Time Pressure, SPE-214478",
+      "locator": "OnePetro",
+      "type": "Technical Paper",
+      "supports": "Re-run economics and the cost asymmetry between downhole and post-POOH defect detection"
     }
   ],
   "negativeSearch": {
-    "searched": "Rogii StarSteer documentation, SLB Petrel Geosteering manuals, and OnePetro for \"autonomous continuous calculation of formation bed dip from streaming WITSML feeds using dynamic time warping without manual curve clicking\".",
-    "result": "Negative Search, 2026-09. Existing commercial geosteering packages provide interactive visual tie tools; none autonomously calculate apparent bed dip and output distance-to-boundary projections from raw streaming WITSML feeds without continuous manual human mouse-drag alignment."
+    "searched": "SLB MAXWELL, Halliburton InSite and Warrior acquisition platform documentation for \"automated wellsite computation of SPWLA repeat-section agreement and per-curve quality verdict issued before pull-out-of-hole\".",
+    "result": "Negative Search, 2026-09. Acquisition platforms record, plot and export curves faithfully and provide interactive QC displays, but none autonomously adjudicate curve validity against named SPWLA acceptance criteria and return a costed re-run recommendation while the tool remains downhole. The judgement is left entirely to a fatigued human reading plots inside the decision window."
   },
-  "line": "\"In horizontal lateral drilling, failing to catch a two-degree downward formation dip for twenty minutes means you just drilled five hundred feet of useless hole into a hard abrasive limestone floor—an operations geologist cannot spend ten minutes doing geometric trigonometry on paper while the bit is turning at two hundred feet an hour.\"",
+  "line": "\"The acquisition system will plot you a cycle-skipped sonic just as beautifully as a good one. It records; it does not have an opinion. The only person with an opinion is a man who has been awake for twenty hours, and he has about an hour before the interval is cased over and the measurement is gone for the life of the well.\"",
   "openQuestions": []
 };

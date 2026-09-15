@@ -54,7 +54,7 @@ window.PERSONA_DETAIL["P21"] = {
       },
       {
         "task": "Real-Time Geosteering Directional Bit Placement in Live Drilling Wellbores",
-        "owner": "Operations Geologist (P24) / Directional Driller"
+        "owner": "Operations Geologist (wellsite) / Directional Driller"
       },
       {
         "task": "Detailed Well Trajectory Torque & Drag and Casing Program Mechanical Design",

@@ -717,33 +717,33 @@
   },
   {
     "id": "P24",
-    "title": "Operations Geologist",
+    "title": "Well Logging Engineer",
     "person": "Tom Brennan",
     "segment": "Wells & Rig Operations",
     "segmentLong": "Upstream — Wells & Live Drilling Operations",
     "tier": "Extended",
     "core20": false,
     "aliases": [
-      "Wellsite Geologist",
-      "Geosteering Specialist",
-      "Rig Operations Geoscientist",
-      "Real-Time Stratigraphic Surveillance Lead"
+      "Wireline Field Engineer",
+      "Logging Engineer",
+      "Field Engineer (Wireline & Perforating)",
+      "Cased-Hole Logging Specialist",
+      "Logging Unit Operator"
     ],
     "avatar": "avatars/P24_persona.jpg",
     "thumb": "avatars/thumbs/P24_thumb.jpg",
-    "initials": "OG",
-    "agentFocus": "Real-Time Geosteering & Wellsite Stratigraphic Surveillance Squad (7 Agents)",
-    "governingStandards": "AAPG; SPE Geosteering",
-    "agentCount": 7,
-    "savedHours": 19.95,
+    "initials": "WL",
+    "agentFocus": "Wireline Log Quality Control & Field Operations Custody Squad (6 Agents)",
+    "governingStandards": "API RP 66; API RP 67; SPWLA LQC",
+    "agentCount": 6,
+    "savedHours": 10.15,
     "agentNames": [
-      "Real-Time LWD Stratigraphic Correlation & Dynamic Bed-Dip Sieve",
-      "Structural Fault Crossing & Stratigraphic Throw Triage Sieve",
-      "Mudlog Gas Chromatography Ratio & Hydrocarbon Fluid Typing Correlator",
-      "Intermediate Casing Shoe & Core Point Trigger Sieve",
-      "Horizontal Lateral In-Zone Pay & Net Reservoir Contact Auditor",
-      "Real-Time WITSML Telemetry Stream Quality & Sensor Dropout Sieve",
-      "Daily Geological Report (DGR) & End-of-Well Composite Log Synthesizer"
+      "Real-Time Log Quality Control & Re-Run Agent",
+      "Radio-Silence Field Ticket & Explosives Tally Capture Agent",
+      "Wireline Calibration Traceability & Tool Readiness Verification Agent",
+      "Cable Depth Control, Stretch Correction & Depth-Tie Reconciliation Agent",
+      "Sealed Source & Explosives Custody Chain Reconciliation Agent",
+      "Downhole Tool Failure Triage & Serial Run-History Agent"
     ]
   },
   {
