@@ -101,6 +101,7 @@
 | **A13** | Formulate contingency plans for lost circulation, stuck pipe, and kicks | `[IOGP-476 §4]` | well | B1 | Periodic | hours | recall | Covered in Agent 1 / Agent 6 |
 | **A14** | Coordinate statutory government drilling permit filings (e.g., DGH/BSEE) | Practitioner | well | B1 | Periodic | hours | assembly | Covered in Agent 6 |
 | **A15** | Daily technical phone call with rig Company Man to troubleshoot anomalies | Practitioner | well | B3 | Daily | hours | judgment | `❌` (Human Lead) |
+| **A16** | Schedule offshore rig relocations against forecast marine weather windows | `[DNV-ST-N001]` | field | B1 | Campaign | days | consistency | **Agent 8: Offshore Rig Move & Weather Routing Agent** |
 
 ### Action Analysis (Two-Liners)
 
@@ -138,6 +139,10 @@
 * **A15 · Daily Rig Consultation (B3, Practitioner)**:
   * *Today*: Operational check-in between office engineer and rig-site Company Man to discuss 24-hour progress, mud weight adjustments, and upcoming casing runs.
   * *Agent Candidate*: `❌ No`. Real-time collaborative decision-making between two certified human operational authorities.
+* **A16 · Offshore Rig Relocation & Marine Weather Window Scheduling (B1, `[DNV-ST-N001]`)**:
+  * *Today*: Moving a jack-up between wells needs a certified, unbreached 48 to 72-hour weather window covering pull-out, tow, approach and pin-down, and a tug of sufficient bollard pull free in the same window. A basin with 35 rigs and 12 to 16 high-bollard-pull AHTS vessels is mathematically over-constrained, so the schedule is negotiated across four departments over 8 to 12 days of phone calls against a coarse global forecast that is already four to six hours stale.
+  * *Failure Mode*: The schedule is built on a forecast nobody can defend and a vessel pool nobody holds a complete view of, so it fails in two directions. It fails safe too often — rigs sit on standby waiting for a window that a better forecast would have shown was already open, and CAG Report No. 12 of 2021 records jack-ups delayed up to 26 days per move in the pre-monsoon season. It also fails unsafe: one unforecast swell event during spudcan extraction or pin-down, and a single vessel breakdown cascades cancellations across the whole basin.
+  * *Agent*: **→ Agent 8 (Offshore Rig Move & Weather Routing Agent)**.
 
 ---
 
@@ -152,9 +157,10 @@
 ├───────────────────────────────────┼───────────────────────────────────┼────────────────────────────────┤
 │ 4. Cementing Displacement Agent   │ 5. AFE Time-Cost Modeling Agent   │ 6. Drilling Program Assembly   │
 │    (ECD & Free-Fall U-Tubing)     │    (Time-Depth Curve & Spread Cost│    (150-Page Prognosis Author) │
-├───────────────────────────────────┴───────────────────────────────────┴────────────────────────────────┤
-│ 7. Post-Well NPT Failure Lookback Agent (Non-Productive Time Root-Cause Recalibration)                 │
-└────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+├───────────────────────────────────┼───────────────────────────────────────────────────────────────────┤
+│ 7. Post-Well NPT Lookback Agent   │ 8. Offshore Rig Move & Weather Routing Agent                      │
+│    (NPT Root-Cause Recalibration) │    (Forecast Window + Tug Pool Constraint Solver)                 │
+└───────────────────────────────────┴───────────────────────────────────────────────────────────────────┘
 ```
 
 ### Agent 1: Offset Well Drilling Hazard Archaeology Agent
@@ -227,6 +233,16 @@
   * **Stops At**: Modifying corporate historical drilling performance databases without engineering consensus.
 * **Failure Modes & Safety Envelopes**: If an unclassified downtime interval exceeds 24 hours in the DDR logs, the agent flags `[Uncategorized Major NPT: Contractor Incident Report Required]`.
 
+### Agent 8: Offshore Rig Move & Weather Routing Agent
+* **In One Line**: Solves the basin's rig relocation schedule as one constrained problem rather than thirty-five separate phone negotiations — matching each move to a forecast marine weather window that satisfies the operational sea-state limits end to end, against the tugs actually available in that window — and compiles the evidence dossier the Marine Warranty Surveyor needs to approve it.
+* **Friction Solved**: Eliminates ~23.0 hours per rig relocation of manual cross-departmental scheduling, forecast reconciliation and warranty dossier assembly. *(Assumption: back-solved from the spec's own two published figures — a residual engineering lead time of 2 hours at a documented 92% reduction implies a ~25 hour baseline. Stated as engineer hours of hands-on planning, not the 8–12 elapsed days the coordination is spread across.)*
+* **The Specification**:
+  * **Reads**: GraphCast ensemble forecasts refreshed on a six-hour cycle, regional bathymetry for the shelf, the current well programme and expected release date for every rig in the fleet, the AHTS charter pool with bollard pull ratings and existing commitments, each rig's own operational limits for tow and pin-down, spudcan and seabed survey records for the target location, and the applicable marine warranty standard.
+  * **Does**: Converts the forecast into per-phase feasibility — pull-out, tow transit, approach, and pin-down each carry their own significant wave height and period limits, and pin-down is the binding one at $H_s \le 0.8\text{–}1.0\text{ m}$. Searches for contiguous 48 to 72-hour windows that hold across every phase with the contingency margin the warranty standard requires, never by averaging a forecast across a move. Then solves the fleet assignment as a constraint problem over rigs, windows and tugs jointly, because a window without a vessel is not a window. Re-solves on every forecast cycle and on any live disruption — a well finishing early, a tug losing a turbocharger — and reports what the change costs rather than silently re-planning.
+  * **Returns**: A fleet move schedule with each assignment traced to the specific forecast cycle and constraint set that justified it, a warranty dossier per move carrying the 72-hour forecast and the phase-by-phase margin evidence, and an explicit list of the moves that have no feasible window in the horizon.
+  * **Stops At**: Authorising a rig move, issuing or accepting Marine Warranty Surveyor approval, chartering a vessel, or commanding any rig or tug. It proposes a schedule and shows its evidence; the surveyor and the offshore installation manager keep the go/no-go.
+* **Failure Modes & Safety Envelopes**: Where the forecast ensemble disagrees across members at the decision boundary, the agent does not take the mean — it reports the spread and declines to call the window, on the principle that an uncertain window and a bad window carry the same consequence at pin-down. It will not schedule a move whose feasibility depends on a forecast beyond the model's validated horizon. Where the seabed record shows a hard layer over soft clay at the target, it raises `[Punch-Through Risk: Spudcan Penetration Analysis Required]` and holds the assignment out of the solution until a geotechnical sign-off is attached, because no weather window makes that move safe.
+
 ---
 
 ## 5 · Per-Unit Before / After Value Model
@@ -242,7 +258,8 @@
 | **5. AFE Time-Cost Modeling Agent** | 1 Exploration/Development Well AFE | 5.00 hours | 0.50 hours | **4.50 hours saved** | Time-Depth Spreadsheet Building Drag |
 | **6. Drilling Program Assembly Agent** | 1 Complete Technical Well Program (150 p)| 14.00 hours | 2.00 hours | **12.00 hours saved** | Multi-Document Copy-Paste Formatting Drag |
 | **7. Post-Well NPT Failure Lookback** | 1 Post-Well Engineering Lookback | 4.00 hours | 0.50 hours | **3.50 hours saved** | Planned vs. Actual Variance Collation Drag |
-| **Total Squad Impact per Well Design** | **1 Complete Well Engineering Program** | **43.50 hours** | **5.50 hours** | **38.00 hours saved** | **Eliminates 87% of Well Planning Data Assembly Drag** |
+| **8. Offshore Rig Move & Weather Routing**| 1 Offshore Rig Relocation | 25.00 hours | 2.00 hours | **23.00 hours saved** | Cross-Department Move Coordination Drag |
+| **Total Squad Impact per Well Design** | **1 Complete Well Engineering Program** | **68.50 hours** | **7.50 hours** | **61.00 hours saved** | **Eliminates 89% of Well Planning Data Assembly Drag** |
 
 ---
 

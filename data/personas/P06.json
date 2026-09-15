@@ -223,9 +223,9 @@
       "owner": "agent",
       "agentLabel": "Agent 7: PRMS Reserves Audit & Migration Agent",
       "label": "PRMS Reserves Migration & Audit Reconciliation (B1, [PRMS-2018 §1])",
-      "today": "Handled in Petex MBAL and Kappa Saphir. The engineer selects reservoir drive models, matches Bourdet derivatives, and fits analytical aquifer models.",
+      "today": "Engineers spend 3 to 4 weeks every year reconciling technical production revisions, economic revisions, and PUD-to-PDP migrations for external auditors.",
       "failureMode": "Mathematical reconciliation errors trigger audit flags from third-party reserves evaluators (e.g., Ryder Scott, DeGolyer and MacNaughton).",
-      "agentNote": "❌ No. Core thermodynamic and mathematical interpretation craft. The monolith handles the math; the human provides the geological context."
+      "agentNote": "→ Agent 7 (PRMS Reserves Audit & Migration Agent)."
     },
     {
       "code": "A08",
@@ -238,7 +238,10 @@
       "friction": "judgment",
       "agentRef": null,
       "owner": "monolith",
-      "agentLabel": "❌ (Monolith MBAL)"
+      "agentLabel": "❌ (Monolith MBAL)",
+      "label": "Material Balance & PTA Interpretation (B2, [SPE-Reservoir §3], [Kappa-Dynamic §4])",
+      "today": "Handled in Petex MBAL and Kappa Saphir. The engineer selects reservoir drive models, matches Bourdet derivatives, and fits analytical aquifer models.",
+      "agentNote": "❌ No. Core thermodynamic and mathematical interpretation craft. The monolith handles the math; the human provides the geological context."
     },
     {
       "code": "A09",
@@ -251,7 +254,10 @@
       "friction": "judgment",
       "agentRef": null,
       "owner": "monolith",
-      "agentLabel": "❌ (Monolith Saphir)"
+      "agentLabel": "❌ (Monolith Saphir)",
+      "label": "Material Balance & PTA Interpretation (B2, [SPE-Reservoir §3], [Kappa-Dynamic §4])",
+      "today": "Handled in Petex MBAL and Kappa Saphir. The engineer selects reservoir drive models, matches Bourdet derivatives, and fits analytical aquifer models.",
+      "agentNote": "❌ No. Core thermodynamic and mathematical interpretation craft. The monolith handles the math; the human provides the geological context."
     },
     {
       "code": "A10",

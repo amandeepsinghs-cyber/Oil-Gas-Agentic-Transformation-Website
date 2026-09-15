@@ -143,7 +143,11 @@ window.PERSONA_DETAIL["P29"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Rolling 14-Day Schedule & Real-Time Tank Ullage Sieve (B1, [AFPM-Logistics], [API-Std-2350])",
+      "today": "Scheduler manually downloads ATG tank levels, refinery unit run plans, and pipeline nomination sheets into personal Excel workbooks to compute tank level trajectories.",
+      "failureMode": "Manual calculation errors or stale tank data fail to spot an impending tank-top condition until hours before the high-high alarm trips, forcing emergency unit rate cutbacks.",
+      "agentNote": "→ See §4 (Agent 1: Refinery Tankage Dynamic Ullage & Tank-Top/Bottom Bottleneck Sieve)."
     },
     {
       "code": "A02",
@@ -156,7 +160,11 @@ window.PERSONA_DETAIL["P29"] = {
       "friction": "volume",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Rolling 14-Day Schedule & Real-Time Tank Ullage Sieve (B1, [AFPM-Logistics], [API-Std-2350])",
+      "today": "Scheduler manually downloads ATG tank levels, refinery unit run plans, and pipeline nomination sheets into personal Excel workbooks to compute tank level trajectories.",
+      "failureMode": "Manual calculation errors or stale tank data fail to spot an impending tank-top condition until hours before the high-high alarm trips, forcing emergency unit rate cutbacks.",
+      "agentNote": "→ See §4 (Agent 1: Refinery Tankage Dynamic Ullage & Tank-Top/Bottom Bottleneck Sieve)."
     },
     {
       "code": "A03",
@@ -169,7 +177,11 @@ window.PERSONA_DETAIL["P29"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Marine AIS Tracking, Berth Optimization & Demurrage Sieve (B1, [OCIMF-Marine])",
+      "today": "Scheduler tracks vessel positions via commercial AIS websites, manually logging Notice of Readiness (NOR) timestamps and calculating charter-party laytime hours in spreadsheets.",
+      "failureMode": "Ships anchor in the roadstead while berths sit idle due to poorly sequenced loading schedules, accumulating tens of thousands of dollars per day in unnecessary demurrage penalties.",
+      "agentNote": "→ See §4 (Agent 2: Marine Vessel AIS Tracking, Berth Sequencing & Demurrage Minimizer)."
     },
     {
       "code": "A04",
@@ -182,7 +194,11 @@ window.PERSONA_DETAIL["P29"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Marine AIS Tracking, Berth Optimization & Demurrage Sieve (B1, [OCIMF-Marine])",
+      "today": "Scheduler tracks vessel positions via commercial AIS websites, manually logging Notice of Readiness (NOR) timestamps and calculating charter-party laytime hours in spreadsheets.",
+      "failureMode": "Ships anchor in the roadstead while berths sit idle due to poorly sequenced loading schedules, accumulating tens of thousands of dollars per day in unnecessary demurrage penalties.",
+      "agentNote": "→ See §4 (Agent 2: Marine Vessel AIS Tracking, Berth Sequencing & Demurrage Minimizer)."
     },
     {
       "code": "A05",
@@ -195,7 +211,11 @@ window.PERSONA_DETAIL["P29"] = {
       "friction": "judgment",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Multi-Service Swing Tank & Heel Compatibility Sieve (B1, [AFPM-Logistics], [API-MPMS-Ch12])",
+      "today": "When a finished gasoline pipeline batch is delayed, the scheduler manually searches the tank farm for an idle swing tank, calculating heel dilution ratios on paper.",
+      "failureMode": "Schedulers overlook contamination risks from the previous tank heel (e.g., diesel flash point ruined by residual gasoline heels), triggering catastrophic product downgrades.",
+      "agentNote": "→ See §4 (Agent 3: Multi-Service Swing Tank Allocation & Chemical Heel Compatibility Sieve)."
     },
     {
       "code": "A06",
@@ -208,7 +228,11 @@ window.PERSONA_DETAIL["P29"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Multi-Service Swing Tank & Heel Compatibility Sieve (B1, [AFPM-Logistics], [API-MPMS-Ch12])",
+      "today": "When a finished gasoline pipeline batch is delayed, the scheduler manually searches the tank farm for an idle swing tank, calculating heel dilution ratios on paper.",
+      "failureMode": "Schedulers overlook contamination risks from the previous tank heel (e.g., diesel flash point ruined by residual gasoline heels), triggering catastrophic product downgrades.",
+      "agentNote": "→ See §4 (Agent 3: Multi-Service Swing Tank Allocation & Chemical Heel Compatibility Sieve)."
     },
     {
       "code": "A07",
@@ -221,7 +245,11 @@ window.PERSONA_DETAIL["P29"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "CDU Crude Blend Diet & Settling Time Sieve (B1, [AFPM-Logistics])",
+      "today": "Scheduler reviews incoming crude shipments, calculating volumetric blend ratios from crude tanks to supply the CDU with targeted API gravity and sulfur.",
+      "failureMode": "Feeding un-settled crude (<24 hours settling) slugs free water and bottom sediment into the desalter, causing electrical grid arcing and furnace tube coking.",
+      "agentNote": "→ See §4 (Agent 4: Crude Distillation Unit (CDU) Feed Blend Diet & Receipt Allocation Sieve)."
     },
     {
       "code": "A08",
@@ -234,7 +262,11 @@ window.PERSONA_DETAIL["P29"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "CDU Crude Blend Diet & Settling Time Sieve (B1, [AFPM-Logistics])",
+      "today": "Scheduler reviews incoming crude shipments, calculating volumetric blend ratios from crude tanks to supply the CDU with targeted API gravity and sulfur.",
+      "failureMode": "Feeding un-settled crude (<24 hours settling) slugs free water and bottom sediment into the desalter, causing electrical grid arcing and furnace tube coking.",
+      "agentNote": "→ See §4 (Agent 4: Crude Distillation Unit (CDU) Feed Blend Diet & Receipt Allocation Sieve)."
     },
     {
       "code": "A09",
@@ -247,7 +279,11 @@ window.PERSONA_DETAIL["P29"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Pipeline Batch Cycle & Interface Transmix Sieve (B1, [FERC-Tariffs])",
+      "today": "Scheduler reviews pipeline pumping slips and batch cycle schedules, manually estimating arrival times and calculating interface transmix cut volumes between adjacent fuels.",
+      "failureMode": "Inaccurate transmix cutting downgrades thousands of barrels of premium gasoline into cheap transmix slop, wasting refining margin.",
+      "agentNote": "→ See §4 (Agent 5: Cross-Country Pipeline Batch Cycle Nomination & Interface Transmix Sieve)."
     },
     {
       "code": "A10",
@@ -260,7 +296,11 @@ window.PERSONA_DETAIL["P29"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Pipeline Batch Cycle & Interface Transmix Sieve (B1, [FERC-Tariffs])",
+      "today": "Scheduler reviews pipeline pumping slips and batch cycle schedules, manually estimating arrival times and calculating interface transmix cut volumes between adjacent fuels.",
+      "failureMode": "Inaccurate transmix cutting downgrades thousands of barrels of premium gasoline into cheap transmix slop, wasting refining margin.",
+      "agentNote": "→ See §4 (Agent 5: Cross-Country Pipeline Batch Cycle Nomination & Interface Transmix Sieve)."
     },
     {
       "code": "A11",

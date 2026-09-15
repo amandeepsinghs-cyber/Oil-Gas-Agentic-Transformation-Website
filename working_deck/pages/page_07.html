@@ -21,11 +21,14 @@
   The original is untouched and still opens. Compare them side by side.
 
   ── WHAT THE BOARD SAYS ──────────────────────────────────────────────────────
-  33 personas x 15 operational actions = 495 cells. Two dimensions, read at
-  the same time:
+  33 personas, 498 operational actions. NOT a matrix: every persona owns its
+  own action list and each row is sorted by priority independently, so column N
+  means nothing across rows -- P03's eighth square is A13, P04's is A08. Rows
+  are therefore ragged by design, and a persona carrying a 16th action is not
+  an error. Two dimensions, read at the same time:
 
     FILL   = who implements the step, as three distinct textures
-             blue tint    agent prepares, human decides   334 (67%)
+             blue tint    agent prepares, human decides   337 (68%)
              grey hatch   the incumbent system runs it     86 (17%)
              dashed+dot   human, end to end                75 (15%)
 
@@ -49,13 +52,15 @@
 
   ── WHY THERE IS NO MONEY ON A CELL ──────────────────────────────────────────
   The original printed "Rs 35 Cr / yr" on all 300 cells. That figure is not
-  derivable: value rows are per AGENT (7 a persona), cells are per ACTION (15 a
-  persona), and only 57 of 495 actions carry a hard agentRef. Dividing a
-  persona total 15 ways would be invention dressed as arithmetic.
+  derivable: value rows are per AGENT (7-8 a persona), cells are per ACTION
+  (15-16 a persona), and only a minority of actions carry a hard agentRef.
+  Dividing a persona total evenly would be invention dressed as arithmetic.
 
   Money therefore sits on the ROW, where it is real -- recomputed here from
   data/value_model.js with the same formulas dossier.html uses, and summing to
-  the same Rs 2,641 Cr/yr estate figure.
+  the estate figure the head strip prints. That figure is generated, so it is
+  deliberately NOT restated as a literal here -- a number written into a
+  comment is a number that goes stale, and this one did.
 
   ── BRAND ────────────────────────────────────────────────────────────────────
   Palette is the official Google Cloud brand set, verified against the Y26
@@ -1328,17 +1333,23 @@
 
     <aside class="drawer" id="drawer" aria-live="polite">
       <div class="dw-hint">
-        <b>Hover any square</b> to read the workflow here. Click to pin it while
-        you talk.<br><br>
-        Each row is one role. Its 15 squares are the 15 workflows that role
-        implements, ordered left to right: what an agent prepares, then what
-        the existing system already runs, then what stays human end to end.
-      </p>
-      <p>
-        Every square carries its id — <b>P02W03</b> — the persona, then the
-        <b>workflow</b> itself. Agents are numbered separately
-        (<b>OG-P02-A04</b>); the two do not correspond, and the panel names
-        both.
+        <p>
+          <b>Hover any square</b> to read the workflow here. Click to pin it
+          while you talk.
+        </p>
+        <p>
+          Each row is one role, and its squares are that role's own workflows —
+          rows are not a shared grid, so column three of one row and column
+          three of another are unrelated. Each row is ordered left to right by
+          what an agent prepares, then what the existing system already runs,
+          then what stays human end to end.
+        </p>
+        <p>
+          Every square carries its id — <b>P02W03</b> — the persona, then the
+          <b>workflow</b> itself. Agents are numbered separately
+          (<b>OG-P02-A04</b>); the two do not correspond, and the panel names
+          both.
+        </p>
       </div>
     </aside>
   </div>
@@ -1355,7 +1366,7 @@
       <!-- The build-priority reasoning used to be buried in here. It now has
            its own block under the board, so this is back to what a footnote
            is for: the two caveats a finance reader will ask about. -->
-      <b>Google Cloud.</b> All 232 agents stop at a human decision — none can
+      <b>Google Cloud.</b> Every agent stops at a human decision — none can
       sign, authorise or operate. Row values are annual across the four levers
       (productivity, uptime, integrity, recovery) and are gross figures on
       stated assumptions.
@@ -1400,6 +1411,9 @@
   var risk    = DATA.reduce(function (s, r) { return s + (r.value ? r.value.risk  : 0); }, 0);
   var recov   = DATA.reduce(function (s, r) { return s + (r.value ? (r.value.recov || 0) : 0); }, 0);
   var agents  = DATA.reduce(function (s, r) { return s + (r.agentCount || 0); }, 0);
+  /* Counted off the rows, not read from META -- the headline should describe
+     the board that is actually on screen. */
+  var cellTotal = DATA.reduce(function (s, r) { return s + r.actions.length; }, 0);
 
   var ow0 = META.owners || { agentic: 0, system: 0, human: 0 };
   var pr0 = META.prios  || { first: 0, next: 0 };
@@ -1420,18 +1434,27 @@
     ["Integrity",      crs(risk)  + " · " + pctOf(risk),  "", "lv-integ"],
     ["Recovery",       crs(recov) + " · " + pctOf(recov), "", "lv-recov"],
     ["Agents",         String(agents), "", ""],
-    ["Agent prepares", String(ow0.agentic) + " of 495 workflows", "", ""]
+    ["Agent prepares", String(ow0.agentic) + " of " + cellTotal + " workflows", "", ""]
   ].map(function (c) {
     return '<div class="est-cell ' + (c[3] || "") + '"><div class="est-k">' + esc(c[0]) +
            '</div><div class="est-v ' + c[2] + '">' + esc(c[1]) + "</div></div>";
   }).join("");
+
+  /* The kicker used to carry these three numbers as literal text, which is how
+     it came to read "495 workflows · 232 agents" against a board rendering 498
+     and 235. It is now written from the same values the strip below uses. */
+  var kicker = document.querySelector(".page-head .kicker");
+  if (kicker) {
+    kicker.textContent = "Workforce & workflow map · " + DATA.length + " roles · " +
+                         cellTotal + " workflows · " + agents + " agents";
+  }
 
   /* ── legend ────────────────────────────────────────────────────────── */
   var pr = META.prios || {}, ow = META.owners || {};
   legend.innerHTML =
     '<div class="lg-group"><span class="lg-title">Who implements it</span>' +
       lg("own-agentic", "Agent prepares, human decides", ow.agentic,
-         "an agent does the assembly; all 232 agents stop at a human decision") +
+         "an agent does the assembly; all " + agents + " agents stop at a human decision") +
       lg("own-system",  "Existing system runs it", ow.system,
          "the incumbent monolith already does this properly") +
       lg("own-human",   "Human, end to end", ow.human,
@@ -1498,7 +1521,7 @@
       var on = (filter === "all" || g === filter);
       row.classList.toggle("is-hidden", !on);
       if (on) {
-        shown++; cells += 15;
+        shown++; cells += row.querySelectorAll(".bcell").length;
         cr += Number(row.dataset.cr || 0);
       }
     });
@@ -1605,12 +1628,23 @@
   /* ── board ─────────────────────────────────────────────────────────── */
   var html = [];
 
+  /* Rows are ragged: every persona owns its own action list, and a persona
+     that has earned a 16th action is not an error. So the axis label is
+     derived rather than asserted -- it collapses to a single number if the
+     estate ever becomes uniform again, and widens on its own if it does not. */
+  var rowLens = DATA.map(function (r) { return r.actions.length; });
+  var minLen  = Math.min.apply(null, rowLens);
+  var maxLen  = Math.max.apply(null, rowLens);
+  var axisLabel = (minLen === maxLen ? String(minLen)
+                                     : minLen + "\u2013" + maxLen) +
+                  " workflows per role";
+
   // column header
   html.push(
     '<div class="bhead">' +
       '<div class="rowlabel"><span>Workforce</span><span>Value / yr</span></div>' +
       '<div class="colaxis">' +
-        "<span>15 workflows per role</span>" +
+        "<span>" + esc(axisLabel) + "</span>" +
         '<span class="flow"></span>' +
         "<span>agent prepares \u00b7 system runs \u00b7 human holds</span>" +
       "</div>" +
@@ -1698,7 +1732,7 @@
       "</div>" +
       '<div class="lg-group">' +
         '<span class="lg-note">Role totals are exact. A role\u2019s value is ' +
-        "split across its 15 workflows by criticality, so individual squares " +
+        "split across its workflows by criticality, so individual squares " +
         "are modelled, not measured." +
         "</span>" +
       "</div>";
@@ -1992,7 +2026,7 @@
            measured per-workflow figure. */
         (view === "value" && cellCr[ri] != null
           ? '<span class="tag" title="A share of this role\u2019s annual value, ' +
-            'apportioned across its 15 workflows by criticality. Modelled, ' +
+            'apportioned across its workflows by criticality. Modelled, ' +
             'not measured.">' + crCell(cellCr[ri][ci]) + " \u00b7 modelled</span>"
           : "") +
         (a.freq ? '<span class="tag">' + esc(a.freq) + "</span>" : "") +

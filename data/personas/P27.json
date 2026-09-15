@@ -146,7 +146,11 @@
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Multi-Year ILI Run Alignment & Corrosion Growth Rate (CGR) Sieve (B1, [ASME-B31-8S §6], [API-1160 §7])",
+      "today": "Engineer opens two 150,000-row vendor spreadsheets (e.g., 2018 MFL vs. 2024 UT); manually aligns mismatched girth weld numbers across odometer slip to match individual corrosion features.",
+      "failureMode": "Mismatched weld joints lead to calculating false corrosion growth rates—either underestimating active pitting until a rupture occurs or spending $50k excavating pristine pipe.",
+      "agentNote": "→ See §4 (Agent 1: ILI Run-to-Run Girth Weld Alignment & Corrosion Growth Rate (CGR) Sieve)."
     },
     {
       "code": "A02",
@@ -159,7 +163,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Multi-Year ILI Run Alignment & Corrosion Growth Rate (CGR) Sieve (B1, [ASME-B31-8S §6], [API-1160 §7])",
+      "today": "Engineer opens two 150,000-row vendor spreadsheets (e.g., 2018 MFL vs. 2024 UT); manually aligns mismatched girth weld numbers across odometer slip to match individual corrosion features.",
+      "failureMode": "Mismatched weld joints lead to calculating false corrosion growth rates—either underestimating active pitting until a rupture occurs or spending $50k excavating pristine pipe.",
+      "agentNote": "→ See §4 (Agent 1: ILI Run-to-Run Girth Weld Alignment & Corrosion Growth Rate (CGR) Sieve)."
     },
     {
       "code": "A03",
@@ -191,9 +199,9 @@
       "owner": "none",
       "agentLabel": "✔✔",
       "label": "Mechanical Dent, Gouge & Coincident Defect Triage (B1, [ASME-B31-8S §7])",
-      "today": "Engineer manually plots Close Interval Potential Survey (CIPS on/off) voltages, looking for segments more positive than -850 mV, and cross-references DCVG coating holiday indications.",
-      "failureMode": "Failing to correlate disbonded tape coating with low CP potentials allows microbial and external corrosion to accelerate unmitigated behind protective coating shields.",
-      "agentNote": "→ See §4 (Agent 4: Cathodic Protection CIPS, DCVG & Coating Shielding Sieve)."
+      "today": "Federal regulations mandate immediate repair of any mechanical dent coincident with corrosion or cracking; engineer manually compares geometry caliper pig tables with MFL metal-loss logs.",
+      "failureMode": "Overlooking a 3% bottom-third dent coincident with external corrosion allows cyclic pressure fatigue to initiate micro-cracks, culminating in catastrophic pipeline unzipping.",
+      "agentNote": "→ See §4 (Agent 3: Pipeline Mechanical Dent, Gouge & Coincident Metal-Loss Sieve)."
     },
     {
       "code": "A05",
@@ -206,7 +214,11 @@
       "friction": "volume",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Cathodic Protection CIPS, DCVG & Coating Shielding Sieve (B1, [NACE-SP0169])",
+      "today": "Engineer manually plots Close Interval Potential Survey (CIPS on/off) voltages, looking for segments more positive than -850 mV, and cross-references DCVG coating holiday indications.",
+      "failureMode": "Failing to correlate disbonded tape coating with low CP potentials allows microbial and external corrosion to accelerate unmitigated behind protective coating shields.",
+      "agentNote": "→ See §4 (Agent 4: Cathodic Protection CIPS, DCVG & Coating Shielding Sieve)."
     },
     {
       "code": "A06",
@@ -219,7 +231,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Cathodic Protection CIPS, DCVG & Coating Shielding Sieve (B1, [NACE-SP0169])",
+      "today": "Engineer manually plots Close Interval Potential Survey (CIPS on/off) voltages, looking for segments more positive than -850 mV, and cross-references DCVG coating holiday indications.",
+      "failureMode": "Failing to correlate disbonded tape coating with low CP potentials allows microbial and external corrosion to accelerate unmitigated behind protective coating shields.",
+      "agentNote": "→ See §4 (Agent 4: Cathodic Protection CIPS, DCVG & Coating Shielding Sieve)."
     },
     {
       "code": "A07",
@@ -234,9 +250,9 @@
       "owner": "none",
       "agentLabel": "✔✔",
       "label": "Internal Corrosion, Water Dropout & MIC Threat Correlator (B1, [API-1160 §6])",
-      "today": "Engineer spends weeks compiling excavation repair packages, cross-referencing GPS coordinates, landowner parcel boundaries, depth of cover, and applying statutory repair clocks (Immediate / 60-Day / 180-Day).",
-      "failureMode": "Missing statutory regulatory repair clocks triggers immediate non-compliance civil penalties ($200k+/day) and government consent decree enforcement.",
-      "agentNote": "→ See §4 (Agent 6: Prioritized Field Excavation Dig Repair Manifest & NDE Sieve)."
+      "today": "Engineer reviews pipeline topographic inclination profiles and multi-phase flow rates, attempting to identify un-swept low spots where produced water drops out and stagnant bacteria flourish.",
+      "failureMode": "Unnoticed water pooling in sag bends induces severe microbial pitting rates (>1.5 mm/year), causing pinhole leaks and massive environmental crude contamination.",
+      "agentNote": "→ See §4 (Agent 5: Internal Corrosion, Water Dropout & MIC Threat Correlator)."
     },
     {
       "code": "A08",
@@ -249,7 +265,11 @@
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Prioritized Field Excavation Dig Repair Manifest & NDE Sieve (B1, [DOT-49CFR192-195], [API-1163 §7])",
+      "today": "Engineer spends weeks compiling excavation repair packages, cross-referencing GPS coordinates, landowner parcel boundaries, depth of cover, and applying statutory repair clocks (Immediate / 60-Day / 180-Day).",
+      "failureMode": "Missing statutory regulatory repair clocks triggers immediate non-compliance civil penalties ($200k+/day) and government consent decree enforcement.",
+      "agentNote": "→ See §4 (Agent 6: Prioritized Field Excavation Dig Repair Manifest & NDE Sieve)."
     },
     {
       "code": "A09",
@@ -262,7 +282,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Prioritized Field Excavation Dig Repair Manifest & NDE Sieve (B1, [DOT-49CFR192-195], [API-1163 §7])",
+      "today": "Engineer spends weeks compiling excavation repair packages, cross-referencing GPS coordinates, landowner parcel boundaries, depth of cover, and applying statutory repair clocks (Immediate / 60-Day / 180-Day).",
+      "failureMode": "Missing statutory regulatory repair clocks triggers immediate non-compliance civil penalties ($200k+/day) and government consent decree enforcement.",
+      "agentNote": "→ See §4 (Agent 6: Prioritized Field Excavation Dig Repair Manifest & NDE Sieve)."
     },
     {
       "code": "A10",

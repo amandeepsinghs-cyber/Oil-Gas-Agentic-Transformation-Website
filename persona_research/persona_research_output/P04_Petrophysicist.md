@@ -101,6 +101,7 @@
 | **A13** | Formulate net-pay reservoir cutoffs ($\phi, S_w, V_{sh}$) with Asset Team | `[SPWLA §6.1]` | well | B3 | Periodic | hours | judgment | `❌` (Human Lead) |
 | **A14** | Invert Nuclear Magnetic Resonance (NMR) $T_2$ pore size distributions | `[SPWLA §7.1]` | well | B2 | Event | hours | execution | `❌` (Monolith Techlog NMR)|
 | **A15** | Integrate Formation Micro-Imager (FMI) resistive borehole images | `[SPWLA §9.1]` | well | B2 | Event | days | judgment | Cross-functional (See P21) |
+| **A16** | Digitize scanned raster well logs and mudlogs into CWLS LAS curves | `[SPWLA §1.4]` | estate | B1 | Campaign | days | volume | **Agent 8: Raster Log Vectorization & LAS Digitization Agent** |
 
 ### Action Analysis (Two-Liners)
 
@@ -135,6 +136,10 @@
 * **A11 · Water Saturation ($S_w$) Solving (B2, `[SPWLA §5.1]`)**:
   * *Today*: Solved natively by Techlog Quanti.Elan or Geolog Multimin. The specialist defines the mineralogical model and saturation exponents ($m, n, a, R_w$).
   * *Agent Candidate*: `❌ No`. The core scientific calculation is fully mature in incumbent monoliths. An agent should never replace the specialist's geological judgment.
+* **A16 · Scanned Raster Log & Mudlog Digitization (B1, `[SPWLA §1.4]`)**:
+  * *Today*: Decades of borehole records survive only as raster — flat scanned PDFs, TIFF plots and digitized microfiche. Techlog, Petrel and Compass cannot parse a picture, so the interval is invisible to every planning tool the asset owns. Recovering one log means manual line tracing against the track grid, curve by curve, at two to four days per log; most archives are therefore never digitized at all and simply sit dark.
+  * *Failure Mode*: The knowledge exists and cannot be reached. A 2004 offset well three kilometres away recorded a gas kick at 3,250 m, written into a mudlog remark that was scanned and never indexed. The infill well is planned blind to it, the bit penetrates the same pocket, and the outcome is a kick, a pack-off, or weeks of fishing. Hand tracing carries its own quiet failure: a logarithmic resistivity track read as linear yields curve values wrong by an order of magnitude that still look plausible on a plot.
+  * *Agent*: **→ Agent 8 (Raster Log Vectorization & LAS Digitization Agent)**.
 
 ---
 
@@ -149,9 +154,10 @@
 ├───────────────────────────────────┼───────────────────────────────────┼────────────────────────────────┤
 │ 4. Core-to-Log Depth Shift Agent  │ 5. Regional Log Normalizer        │ 6. Wireline Calibration Audit  │
 │    (Core Gamma vs Log Alignment)  │    (Multi-Well Histogram Shift)   │    (Tool Repeatability Checks) │
-├───────────────────────────────────┴───────────────────────────────────┴────────────────────────────────┤
-│ 7. Composite Petrophysical Dossier Agent (Net Pay, Cutoffs & Certified Composite Export)               │
-└────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+├───────────────────────────────────┼───────────────────────────────────────────────────────────────────┤
+│ 7. Composite Dossier Agent        │ 8. Raster Log Vectorization & LAS Digitization Agent              │
+│    (Net Pay, Cutoffs & Export)    │    (Scanned Raster → CWLS LAS + Mudlog Hazard Scout)              │
+└───────────────────────────────────┴───────────────────────────────────────────────────────────────────┘
 ```
 
 ### Agent 1: Curve Mnemonic Standardization & Header Hygiene Agent
@@ -224,6 +230,16 @@
   * **Stops At**: Modifying petrophysical cutoffs or changing officially booked reserves.
 * **Failure Modes & Safety Envelopes**: If computed net pay deviates by $>15\%$ from pre-drill prognosis, the agent highlights the delta: `[Reserves Variance Alert: Net Pay Exceeds Pre-Drill Prognosis by >15%]`.
 
+### Agent 8: Raster Log Vectorization & LAS Digitization Agent
+* **In One Line**: Converts scanned raster well logs and mudlogs — flat PDFs, TIFFs, microfiche scans — into depth-registered CWLS LAS curves by detecting the track grid, recovering each track's own scale, and tracing curves apart by stroke and colour, then indexes every OCR'd mudlog hazard remark against its depth so a planner can find it.
+* **Friction Solved**: Eliminates ~15.0 hours per scanned log set of manual line tracing, axis calibration and track-by-track transcription. *(Assumption: the conservative end of the documented 2–4 day manual digitization range, less one hour of specialist verification against the source raster.)*
+* **The Specification**:
+  * **Reads**: Scanned raster logs and mudlogs (PDF, TIFF, high-resolution image, microfiche scan), the plot's own header block and track legend, depth tick annotations, and the well master registry entry for the UWI.
+  * **Does**: Deskews and rectifies the scan, then extracts horizontal depth gridlines and vertical decade gridlines to build a pixel-to-depth and pixel-to-value transform that absorbs paper stretch and scanner distortion. Reads each track's scale from the grid itself rather than assuming one — logarithmic 0.2–2000 $\Omega\cdot\text{m}$ resistivity is distinguished from linear 0–150 GAPI gamma ray by decade spacing, not by track position. Separates overlapping curves within a track by stroke style, colour channel and continuous contour tracking under a physics prior that a log curve cannot step discontinuously without a rock transition. Emits CWLS LAS 2.0/3.0 with `-999.25` nulls, and OCRs unstructured mudlog remarks (*"connection gas 120 units at 3,252 m"*, *"lost circulation 40 bbl/hr at 3,280 m"*) into depth-tagged and geo-tagged hazard records.
+  * **Returns**: A `[UWI]_digitized.las` curve set carrying a per-curve confidence score and the traced pixel path that produced it, plus a depth-indexed hazard register for the mudlog remarks, both written alongside — never over — the source raster.
+  * **Stops At**: Emitting a curve whose track scale could not be read from the grid, interpolating across a region of the plot obscured by a stamp, fold or tear, or presenting a traced curve as a measured one — every output curve is marked as raster-derived in the `~CURVE` description.
+* **Failure Modes & Safety Envelopes**: Curves tracing below 0.90 confidence, and any interval where two curves of the same colour and stroke cross, are routed to an amber review queue with the pixel path overlaid on the source image for one-glance specialist adjudication. Where the header block is illegible and the depth datum cannot be established, the agent refuses the whole log rather than guess a reference: `[Datum Unreadable: Depth Registration Cannot Be Established]`. A hazard remark whose depth cannot be resolved is still written to the register, flagged `[Depth Unresolved]`, on the reasoning that a planner who knows a hazard exists somewhere in the well is better served than one who never sees it.
+
 ---
 
 ## 5 · Per-Unit Before / After Value Model
@@ -239,7 +255,8 @@
 | **5. Regional Multi-Well Normalizer** | 1 Field Normalization Study (30 wells) | 8.00 hours | 1.00 hours | **7.00 hours saved** | Multi-Well Histogram & CDF Sifting Drag |
 | **6. Wireline Tool Calibration Audit** | 1 Wireline Logging Campaign | 2.00 hours | 0.25 hours | **1.75 hours saved** | Certificate Review & Repeat Section Drag |
 | **7. Composite Petrophysical Dossier** | 1 Certified Well Interpretation Package | 2.50 hours | 0.25 hours | **2.25 hours saved** | Tabular Net-Pay Summary Assembly Drag |
-| **Total Squad Impact per Well Study** | **1 Complete Well Evaluation Dataset** | **26.00 hours** | **3.00 hours** | **23.00 hours saved** | **Eliminates 88% of Routine Data Hygiene Drag** |
+| **8. Raster Log Vectorization & LAS** | 1 Scanned Legacy Log Set (raster) | 16.00 hours | 1.00 hours | **15.00 hours saved** | Manual Line Tracing & Axis Calibration Drag |
+| **Total Squad Impact per Well Study** | **1 Complete Well Evaluation Dataset** | **42.00 hours** | **4.00 hours** | **38.00 hours saved** | **Eliminates 90% of Routine Data Hygiene Drag** |
 
 ---
 

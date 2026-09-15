@@ -142,7 +142,11 @@
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Real-Time LWD Type-Log Correlation & Dynamic Bed-Dip Calculation (B1, [SPE-Geosteering §3, §4])",
+      "today": "Geologist manually clicks and shifts LWD curves over offset pilot-hole type logs in StarSteer every stand of pipe, trying to hand-estimate apparent bed dip (α).",
+      "failureMode": "When ROP exceeds 200 ft/hr, the geologist falls behind; an undetected 2^circ formation dip drop directs the bit out of pay into abrasive floor dolomite, wearing out the bit and losing 400 ft of pay.",
+      "agentNote": "→ See §4 (Agent 1: Real-Time LWD Stratigraphic Correlation & Dynamic Bed-Dip Sieve)."
     },
     {
       "code": "A02",
@@ -155,7 +159,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Real-Time LWD Type-Log Correlation & Dynamic Bed-Dip Calculation (B1, [SPE-Geosteering §3, §4])",
+      "today": "Geologist manually clicks and shifts LWD curves over offset pilot-hole type logs in StarSteer every stand of pipe, trying to hand-estimate apparent bed dip (α).",
+      "failureMode": "When ROP exceeds 200 ft/hr, the geologist falls behind; an undetected 2^circ formation dip drop directs the bit out of pay into abrasive floor dolomite, wearing out the bit and losing 400 ft of pay.",
+      "agentNote": "→ See §4 (Agent 1: Real-Time LWD Stratigraphic Correlation & Dynamic Bed-Dip Sieve)."
     },
     {
       "code": "A03",
@@ -170,9 +178,8 @@
       "owner": "human",
       "agentLabel": "❌ (Human Geosteerer & DD)",
       "label": "Real-Time Directional Steering Target Commands (B3, [SPE-Geosteering §5])",
-      "today": "Geologist monitors cuttings, ROP, and LWD markers approaching an overpressured target or coring point, manually comparing current TVD against pre-drill prognosis horizons.",
-      "agentNote": "→ See §4 (Agent 4: Intermediate Casing Shoe & Core Point Trigger Sieve).",
-      "failureMode": "Setting intermediate casing 20 ft too high leaves an unstable swelling shale un-cased; setting it 20 ft too deep penetrates an overpressured gas reservoir with under-weighted mud."
+      "today": "Geologist calls the Directional Driller on the rig floor intercom, instructing: \"Hold 89.2^circ inclination and steer 0.5^circ up, formation is dipping up at 1.5^circ.\"",
+      "agentNote": "❌ No. Direct operational steering command requiring licensed human professional accountability and mechanical rig awareness."
     },
     {
       "code": "A04",
@@ -185,7 +192,11 @@
       "friction": "recall",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Sub-Seismic Fault Detection & Throw Triage (B1, [SPE-Geosteering §6])",
+      "today": "Geologist notices a sudden drilling break (ROP spike) and abrupt LWD gamma jump, scrambling to determine whether the well crossed a normal fault (missing section) or reverse fault (repeated section).",
+      "failureMode": "Guessing fault throw magnitude incorrectly leads to steering up when the downthrown block actually dropped, driving the bit deep into the underlying water-bearing sand.",
+      "agentNote": "→ See §4 (Agent 2: Structural Fault Crossing & Stratigraphic Throw Triage Sieve)."
     },
     {
       "code": "A05",
@@ -198,7 +209,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Sub-Seismic Fault Detection & Throw Triage (B1, [SPE-Geosteering §6])",
+      "today": "Geologist notices a sudden drilling break (ROP spike) and abrupt LWD gamma jump, scrambling to determine whether the well crossed a normal fault (missing section) or reverse fault (repeated section).",
+      "failureMode": "Guessing fault throw magnitude incorrectly leads to steering up when the downthrown block actually dropped, driving the bit deep into the underlying water-bearing sand.",
+      "agentNote": "→ See §4 (Agent 2: Structural Fault Crossing & Stratigraphic Throw Triage Sieve)."
     },
     {
       "code": "A06",
@@ -211,7 +226,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Mudlog Gas Chromatography & Hydrocarbon Fluid Typing Triage (B1, [Pixler-GasRatios])",
+      "today": "Geologist reviews raw total gas curves and FID chromatograph readings (C1 to C5), manually calculating Pixler (C1/C2) and Whorton gas wetness ratios to evaluate hydrocarbon phase transitions.",
+      "failureMode": "Failing to recognize an upward trend in light gas (C1) and collapsing wetness ratios delays kick detection, risking a major well control influx while drilling underbalanced.",
+      "agentNote": "→ See §4 (Agent 3: Mudlog Gas Chromatography Ratio & Hydrocarbon Fluid Typing Correlator)."
     },
     {
       "code": "A07",
@@ -224,7 +243,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Mudlog Gas Chromatography & Hydrocarbon Fluid Typing Triage (B1, [Pixler-GasRatios])",
+      "today": "Geologist reviews raw total gas curves and FID chromatograph readings (C1 to C5), manually calculating Pixler (C1/C2) and Whorton gas wetness ratios to evaluate hydrocarbon phase transitions.",
+      "failureMode": "Failing to recognize an upward trend in light gas (C1) and collapsing wetness ratios delays kick detection, risking a major well control influx while drilling underbalanced.",
+      "agentNote": "→ See §4 (Agent 3: Mudlog Gas Chromatography Ratio & Hydrocarbon Fluid Typing Correlator)."
     },
     {
       "code": "A08",
@@ -237,7 +260,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Intermediate Casing Shoe & Core Point Trigger Sieve (B1, [AAPG-Wellsite §4, §5])",
+      "today": "Geologist monitors cuttings, ROP, and LWD markers approaching an overpressured target or coring point, manually comparing current TVD against pre-drill prognosis horizons.",
+      "failureMode": "Setting intermediate casing 20 ft too high leaves an unstable swelling shale un-cased; setting it 20 ft too deep penetrates an overpressured gas reservoir with under-weighted mud.",
+      "agentNote": "→ See §4 (Agent 4: Intermediate Casing Shoe & Core Point Trigger Sieve)."
     },
     {
       "code": "A09",
@@ -250,7 +277,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Intermediate Casing Shoe & Core Point Trigger Sieve (B1, [AAPG-Wellsite §4, §5])",
+      "today": "Geologist monitors cuttings, ROP, and LWD markers approaching an overpressured target or coring point, manually comparing current TVD against pre-drill prognosis horizons.",
+      "failureMode": "Setting intermediate casing 20 ft too high leaves an unstable swelling shale un-cased; setting it 20 ft too deep penetrates an overpressured gas reservoir with under-weighted mud.",
+      "agentNote": "→ See §4 (Agent 4: Intermediate Casing Shoe & Core Point Trigger Sieve)."
     },
     {
       "code": "A10",
@@ -315,9 +346,8 @@
       "owner": "none",
       "agentLabel": "❌ (Field Wellsite Geo)",
       "label": "Physical Cuttings Examination Under Microscope (B3, [AAPG-Wellsite §2])",
-      "today": "Geologist spends 2 to 3 hours every morning consolidating 24-hour drilling footage, bit records, gas readings, lithology descriptions, and survey stations into a static PDF DGR and updating the master strip log.",
-      "agentNote": "→ See §4 (Agent 7: Daily Geological Report (DGR) & End-of-Well Composite Log Synthesizer).",
-      "failureMode": "Manual data transcription introduces discrepancies between the DGR and official directional survey records, misleading asset managers during morning operational briefings."
+      "today": "Wellsite geologist collects washed cuttings from shaker screens, inspects grain size, sorting, roundness, and mineralogy under binocular microscope, and tests hydrocarbon cut with solvent.",
+      "agentNote": "❌ No. Physical hands-on wellsite lab craft requiring tactile and optical inspection of physical rock fragments."
     },
     {
       "code": "A14",
@@ -330,7 +360,11 @@
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Daily Geological Report (DGR) & Composite Strip Log Compilation (B1, Practitioner)",
+      "today": "Geologist spends 2 to 3 hours every morning consolidating 24-hour drilling footage, bit records, gas readings, lithology descriptions, and survey stations into a static PDF DGR and updating the master strip log.",
+      "failureMode": "Manual data transcription introduces discrepancies between the DGR and official directional survey records, misleading asset managers during morning operational briefings.",
+      "agentNote": "→ See §4 (Agent 7: Daily Geological Report (DGR) & End-of-Well Composite Log Synthesizer)."
     },
     {
       "code": "A15",
@@ -343,7 +377,11 @@
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Daily Geological Report (DGR) & Composite Strip Log Compilation (B1, Practitioner)",
+      "today": "Geologist spends 2 to 3 hours every morning consolidating 24-hour drilling footage, bit records, gas readings, lithology descriptions, and survey stations into a static PDF DGR and updating the master strip log.",
+      "failureMode": "Manual data transcription introduces discrepancies between the DGR and official directional survey records, misleading asset managers during morning operational briefings.",
+      "agentNote": "→ See §4 (Agent 7: Daily Geological Report (DGR) & End-of-Well Composite Log Synthesizer)."
     }
   ],
   "agents": [

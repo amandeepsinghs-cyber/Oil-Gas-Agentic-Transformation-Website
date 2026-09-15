@@ -144,7 +144,11 @@ window.PERSONA_DETAIL["P31"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Mechanical Blind Manifest & P&ID Cross-Checking (B1, [OSHA-1910-119])",
+      "today": "Planner sits with highlighters over 200 paper P&ID drawings, manually tracing process lines, bypasses, and utility tie-ins to compile the master blind isolation list.",
+      "failureMode": "A missed blind on a fuel gas purge line or caustic wash connection leaves a live path into an open vessel, leading to fatal toxic gas inhalation or flash explosion during entry.",
+      "agentNote": "→ See §4 (Agent 1: P&ID Mechanical Isolation Blind Manifest & De-Isolation Sieve)."
     },
     {
       "code": "A02",
@@ -157,7 +161,11 @@ window.PERSONA_DETAIL["P31"] = {
       "friction": "traceability",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Mechanical Blind Manifest & P&ID Cross-Checking (B1, [OSHA-1910-119])",
+      "today": "Planner sits with highlighters over 200 paper P&ID drawings, manually tracing process lines, bypasses, and utility tie-ins to compile the master blind isolation list.",
+      "failureMode": "A missed blind on a fuel gas purge line or caustic wash connection leaves a live path into an open vessel, leading to fatal toxic gas inhalation or flash explosion during entry.",
+      "agentNote": "→ See §4 (Agent 1: P&ID Mechanical Isolation Blind Manifest & De-Isolation Sieve)."
     },
     {
       "code": "A03",
@@ -170,7 +178,11 @@ window.PERSONA_DETAIL["P31"] = {
       "friction": "volume",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Shift Progress Splicing & Critical Path Float Triage (B1, [AACE-21R-98])",
+      "today": "Twice every 24 hours (shift changeover), planner collects hundreds of grease-stained paper tear-sheets from craft foremen and manually keys percent completes into Primavera P6.",
+      "failureMode": "4-hour data entry lags mean the critical path shifts mid-shift without the planning team realizing it, wasting dozens of contractor crews working on non-critical tasks.",
+      "agentNote": "→ See §4 (Agent 2: Primavera P6 Real-Time Shift Progress & Critical Path Float Sieve)."
     },
     {
       "code": "A04",
@@ -183,7 +195,11 @@ window.PERSONA_DETAIL["P31"] = {
       "friction": "volume",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Shift Progress Splicing & Critical Path Float Triage (B1, [AACE-21R-98])",
+      "today": "Twice every 24 hours (shift changeover), planner collects hundreds of grease-stained paper tear-sheets from craft foremen and manually keys percent completes into Primavera P6.",
+      "failureMode": "4-hour data entry lags mean the critical path shifts mid-shift without the planning team realizing it, wasting dozens of contractor crews working on non-critical tasks.",
+      "agentNote": "→ See §4 (Agent 2: Primavera P6 Real-Time Shift Progress & Critical Path Float Sieve)."
     },
     {
       "code": "A05",
@@ -196,7 +212,11 @@ window.PERSONA_DETAIL["P31"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Emergent Discovery Work Triaging & BOM Reservation (B1, [AACE-42R-08])",
+      "today": "When a distillation column is unbolted and severe tray collapse is discovered, planner frantically drafts a new work package, checks warehouse bins for spare alloy metallurgy, and builds tasks.",
+      "failureMode": "Craftsmen sit idle for 8 hours waiting for work packages and materials; overall plant startup milestone slips by 36 hours.",
+      "agentNote": "→ See §4 (Agent 3: Emergent Discovery Work Package Rapid-Formulation Sieve)."
     },
     {
       "code": "A06",
@@ -209,7 +229,11 @@ window.PERSONA_DETAIL["P31"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Emergent Discovery Work Triaging & BOM Reservation (B1, [AACE-42R-08])",
+      "today": "When a distillation column is unbolted and severe tray collapse is discovered, planner frantically drafts a new work package, checks warehouse bins for spare alloy metallurgy, and builds tasks.",
+      "failureMode": "Craftsmen sit idle for 8 hours waiting for work packages and materials; overall plant startup milestone slips by 36 hours.",
+      "agentNote": "→ See §4 (Agent 3: Emergent Discovery Work Package Rapid-Formulation Sieve)."
     },
     {
       "code": "A07",

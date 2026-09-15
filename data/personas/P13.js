@@ -142,7 +142,11 @@ window.PERSONA_DETAIL["P13"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Cooldown Tracking & No-Touch Time (B1, [Sloan-Hydrates §4], [API-RP-17A §6])",
+      "today": "When subsea wells trip, the engineer manually pulls subsea tree and flowline P/T sensors from the PI Historian and hand-plots them against the PVTSim hydrate curve.",
+      "failureMode": "Delayed manual calculations cause operators to miss the critical \"No-Touch\" window, failing to bullhead methanol before the flowline reaches the hydrate zone.",
+      "agentNote": "→ See §4 (Agent 1: Subsea Flowline Cooldown & Hydrate \"No-Touch Time\" Sieve)."
     },
     {
       "code": "A02",
@@ -155,7 +159,11 @@ window.PERSONA_DETAIL["P13"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Cooldown Tracking & No-Touch Time (B1, [Sloan-Hydrates §4], [API-RP-17A §6])",
+      "today": "When subsea wells trip, the engineer manually pulls subsea tree and flowline P/T sensors from the PI Historian and hand-plots them against the PVTSim hydrate curve.",
+      "failureMode": "Delayed manual calculations cause operators to miss the critical \"No-Touch\" window, failing to bullhead methanol before the flowline reaches the hydrate zone.",
+      "agentNote": "→ See §4 (Agent 1: Subsea Flowline Cooldown & Hydrate \"No-Touch Time\" Sieve)."
     },
     {
       "code": "A03",

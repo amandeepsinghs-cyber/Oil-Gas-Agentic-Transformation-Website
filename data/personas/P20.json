@@ -138,7 +138,11 @@
       "friction": "volume",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Daily Vibration Spectral Harmonic Screening (B1, [ISO-10816 §3], [Mobius-Vibration §4])",
+      "today": "Engineer spends 1.5 to 2 hours every morning clicking through hundreds of vibration points in System 1, checking whether rising trends reflect 1× unbalance, 2× misalignment, or process cavitation.",
+      "failureMode": "High-frequency demodulation spikes go unnoticed amidst alarm floods; an overhung process pump suffers sudden fatigue failure, shedding its impeller.",
+      "agentNote": "→ See §4 (Agent 1: Dynamic Vibration Harmonic & Phase Triage Sieve)."
     },
     {
       "code": "A02",
@@ -236,7 +240,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔"
+      "agentLabel": "✔",
+      "label": "Daily Vibration Spectral Harmonic Screening (B1, [ISO-10816 §3], [Mobius-Vibration §4])",
+      "today": "Engineer spends 1.5 to 2 hours every morning clicking through hundreds of vibration points in System 1, checking whether rising trends reflect 1× unbalance, 2× misalignment, or process cavitation.",
+      "failureMode": "High-frequency demodulation spikes go unnoticed amidst alarm floods; an overhung process pump suffers sudden fatigue failure, shedding its impeller.",
+      "agentNote": "→ See §4 (Agent 1: Dynamic Vibration Harmonic & Phase Triage Sieve)."
     },
     {
       "code": "A08",
@@ -251,9 +259,9 @@
       "owner": "none",
       "agentLabel": "❌ (System 1)",
       "label": "Bearing Fault Frequency Calculation (B2, [Mobius-Vibration §5])",
-      "today": "Millwrights use dial indicators and laser alignment brackets to align pump shafts within 0.002 inches and inspect disassembled impellers on the maintenance workshop bench.",
-      "failureMode": "Hands-on precision craft tradesmanship and physical visual inspection.",
-      "agentNote": "❌ No. Physical millwright tradecraft."
+      "today": "Solved natively inside Bently Nevada System 1 or Emerson AMS. The software overlays kinematic bearing markers (BPFO, BPFI) over the spectrum based on bearing part numbers.",
+      "failureMode": "Standard mathematical signal processing; the commercial software already performs the kinematics.",
+      "agentNote": "❌ No. Monolith condition monitoring domain."
     },
     {
       "code": "A09",
@@ -266,7 +274,11 @@
       "friction": "physical",
       "agentRef": null,
       "owner": "human",
-      "agentLabel": "❌ (Human Eng)"
+      "agentLabel": "❌ (Human Eng)",
+      "label": "Physical Teardown & Laser Shaft Alignment (B3, [API-610 §8], [ISO-10816 §2])",
+      "today": "Millwrights use dial indicators and laser alignment brackets to align pump shafts within 0.002 inches and inspect disassembled impellers on the maintenance workshop bench.",
+      "failureMode": "Hands-on precision craft tradesmanship and physical visual inspection.",
+      "agentNote": "❌ No. Physical millwright tradecraft."
     },
     {
       "code": "A10",
@@ -279,7 +291,11 @@
       "friction": "physical",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Millwright)"
+      "agentLabel": "❌ (Millwright)",
+      "label": "Physical Teardown & Laser Shaft Alignment (B3, [API-610 §8], [ISO-10816 §2])",
+      "today": "Millwrights use dial indicators and laser alignment brackets to align pump shafts within 0.002 inches and inspect disassembled impellers on the maintenance workshop bench.",
+      "failureMode": "Hands-on precision craft tradesmanship and physical visual inspection.",
+      "agentNote": "❌ No. Physical millwright tradecraft."
     },
     {
       "code": "A11",

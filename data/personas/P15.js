@@ -163,9 +163,9 @@ window.PERSONA_DETAIL["P15"] = {
       "owner": "none",
       "agentLabel": "✔✔",
       "label": "Joint ISGOTT Safety Checklist Execution (B1, [OCIMF-ISGOTT §26])",
-      "today": "Terminal mooring hands catch lines on quick-release hooks; maintenance techs physically connect the hydraulic loading arms to the ship manifold.",
+      "today": "Terminal superintendent and ship cargo officer walk the jetty with a 12-page paper checklist, hand-checking 60+ safety items (inert gas levels, smoking rules, electrical bonding).",
       "failureMode": "Repetitive \"pencil-whipping\" of paper checklists causes overlooked safety hazards, such as active shore vapor valves remaining closed during loading.",
-      "agentNote": "❌ No. Heavy mechanical and marine physical operation requiring dockside rigging crews."
+      "agentNote": "→ See §4 (Agent 2: ISGOTT Ship-Shore Pre-Transfer Safety Verification Agent)."
     },
     {
       "code": "A03",
@@ -178,7 +178,10 @@ window.PERSONA_DETAIL["P15"] = {
       "friction": "physical",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Dock Crew)"
+      "agentLabel": "❌ (Dock Crew)",
+      "label": "Physical Mooring & Loading Arm Coupling (B3, [OCIMF-MTMSA §4])",
+      "today": "Terminal mooring hands catch lines on quick-release hooks; maintenance techs physically connect the hydraulic loading arms to the ship manifold.",
+      "agentNote": "❌ No. Heavy mechanical and marine physical operation requiring dockside rigging crews."
     },
     {
       "code": "A04",
@@ -191,7 +194,10 @@ window.PERSONA_DETAIL["P15"] = {
       "friction": "physical",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Dock Crew)"
+      "agentLabel": "❌ (Dock Crew)",
+      "label": "Physical Mooring & Loading Arm Coupling (B3, [OCIMF-MTMSA §4])",
+      "today": "Terminal mooring hands catch lines on quick-release hooks; maintenance techs physically connect the hydraulic loading arms to the ship manifold.",
+      "agentNote": "❌ No. Heavy mechanical and marine physical operation requiring dockside rigging crews."
     },
     {
       "code": "A05",
@@ -287,9 +293,9 @@ window.PERSONA_DETAIL["P15"] = {
       "owner": "none",
       "agentLabel": "✔✔",
       "label": "Vessel Experience Factor (VEF) Calculation (B1, [API-MPMS-Ch17])",
-      "today": "Physical tugboat towing, harbor piloting, and dockside spill containment boom deployment.",
+      "today": "Sifting through past 10–20 voyage paper records to extract historical loaded vs. arrival volumes and manually calculating the VEF multiplier.",
       "failureMode": "Inaccurate VEF application causes false cargo loss claims or accepts short-loaded cargoes without financial adjustment.",
-      "agentNote": "❌ No. Physical marine operations."
+      "agentNote": "→ See §4 (Agent 3: Tanker Vessel Experience Factor & Calibration Audit Agent)."
     },
     {
       "code": "A11",
@@ -302,7 +308,10 @@ window.PERSONA_DETAIL["P15"] = {
       "friction": "physical",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Pilot/Tugs)"
+      "agentLabel": "❌ (Pilot/Tugs)",
+      "label": "Physical Harbor Operations & Boom Inspections (B3, [OCIMF-MTMSA §6], [OCIMF-MTMSA §8])",
+      "today": "Physical tugboat towing, harbor piloting, and dockside spill containment boom deployment.",
+      "agentNote": "❌ No. Physical marine operations."
     },
     {
       "code": "A12",
@@ -315,7 +324,10 @@ window.PERSONA_DETAIL["P15"] = {
       "friction": "physical",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Field Crew)"
+      "agentLabel": "❌ (Field Crew)",
+      "label": "Physical Harbor Operations & Boom Inspections (B3, [OCIMF-MTMSA §6], [OCIMF-MTMSA §8])",
+      "today": "Physical tugboat towing, harbor piloting, and dockside spill containment boom deployment.",
+      "agentNote": "❌ No. Physical marine operations."
     },
     {
       "code": "A13",

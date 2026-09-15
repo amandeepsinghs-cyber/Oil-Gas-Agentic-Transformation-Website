@@ -101,6 +101,7 @@
 | **A13** | Scrape open regulatory national data repositories for competitor well filings| Practitioner | portfolio| B1 | Weekly | hours | assembly | Covered in Agent 1 / Agent 4 |
 | **A14** | Present drillable prospect dossier to executive Peer Review Committee | Practitioner | well | B3 | Event | hours | judgment | `❌` (Human Lead) |
 | **A15** | Audit well surface and bottom-hole coordinate datums against EPSG | `[PPDM-Standards]`| estate | B1 | Daily | hours | consistency | Cross-functional (See P23) |
+| **A16** | Synthesize the statutory Well Completion Report from post-drill source records | `[AAPG-M89 §11]` | well | B1 | Event | weeks | assembly | **Agent 8: Well Completion Report Synthesis Agent** |
 
 ### Action Analysis (Two-Liners)
 
@@ -138,6 +139,10 @@
 * **A14 · Executive Prospect Peer Review (B3, Practitioner)**:
   * *Today*: Geologist defends the trap geometry, seal capacity, and volumetric reserves in front of the exploration VP and Chief Geologist.
   * *Agent Candidate*: `❌ No`. Pure human professional accountability and strategic capital allocation.
+* **A16 · Statutory Well Completion Report Synthesis (B1, `[AAPG-M89 §11]`)**:
+  * *Today*: Every completed well owes the regulator a Final Geological & Completion Report — formation tops, hydrocarbon shows, petrophysical cutoffs, DST results, bit and hydraulics records, thirty-odd figures — inside a 30 to 90 day statutory window. The geologist assembles it by hand from a dozen disconnected systems, cutting and pasting across three to four weeks and 60 to 100 engineer hours per well, snipping and captioning each figure individually.
+  * *Failure Mode*: The report is the permanent record of the well, and it drifts from the well. A top transcribed from a superseded interpretation, a cutoff carried over from the previous report's template, a figure captioned with the wrong depth scale — each survives review because nobody re-derives the number from source. That report is then the input every later regional study trusts. Where the backlog wins instead, the filing misses the statutory window and the asset takes a fine and an audit.
+  * *Agent*: **→ Agent 8 (Well Completion Report Synthesis Agent)**.
 
 ---
 
@@ -152,9 +157,10 @@
 ├───────────────────────────────────┼───────────────────────────────────┼────────────────────────────────┤
 │ 4. DST Recovery & Fluid Agent     │ 5. Geochemical Source Rock Agent  │ 6. Volumetric & Risking Sieve  │
 │    (ISIP/FSIP & Recovery Volumes) │    (Pyrolysis Rock-Eval & Ro)     │    (Monte Carlo Parameter QA)  │
-├───────────────────────────────────┴───────────────────────────────────┴────────────────────────────────┤
-│ 7. Post-Drill Lookback Recalibration Agent (Prognosis vs Actual Tops Velocity Sieve)                   │
-└────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+├───────────────────────────────────┼───────────────────────────────────────────────────────────────────┤
+│ 7. Post-Drill Lookback Agent      │ 8. Well Completion Report Synthesis Agent                         │
+│    (Prognosis vs Actual Tops)     │    (Statutory WCR from Source Records, Never Templates)           │
+└───────────────────────────────────┴───────────────────────────────────────────────────────────────────┘
 ```
 
 ### Agent 1: Legacy Well Scout Card & Stratigraphic Tops Archaeology Agent
@@ -227,6 +233,16 @@
   * **Stops At**: Overwriting regional interpretation grids without peer review committee consensus.
 * **Failure Modes & Safety Envelopes**: If depth error exceeds 50 meters, the agent flags `[Major Prognosis Bust: Fault Encountered or Velocity Anomaly Unaccounted For]`.
 
+### Agent 8: Well Completion Report Synthesis Agent
+* **In One Line**: Assembles the statutory Final Geological & Completion Report by pulling every figure and table from the system of record that owns it — tops from the final interpretation, shows from the mudlog, cutoffs from the petrophysical dossier, recoveries from the DST register — and binds a provenance link to each one, so the geologist reviews a document in which no number was retyped.
+* **Friction Solved**: Eliminates ~54.0 hours per completed well of manual cross-system compilation, figure snipping and captioning, and boilerplate drafting. *(Assumption: the conservative end of the documented 60–100 engineer hour range, less the upper end of the 4–6 hour geologist review the agent still requires.)*
+* **The Specification**:
+  * **Reads**: Final formation tops and the interpretation version that produced them, mudlog show and gas chromatography records, the petrophysical evaluation dossier and its cutoff table, DST pressure and recovery records, the drilling bit and hydraulics log, the deviation survey, the regulator's current report template for the jurisdiction (DGH, NSTA, BSEE, NOPTA), and the pre-approved regional stratigraphy boilerplate in the enterprise knowledge base.
+  * **Does**: Maps the regulator's required sections onto the source systems that own each one, then populates the report by reference rather than by transcription — every top, cutoff, pressure and volume carries a link to the record and the version it was drawn from. Crops, scales, captions and depth-labels figures from their source plots. Composes the narrative sections from approved boilerplate, leaving the interpretive passages the regulator expects a named geologist to write as explicitly empty, marked drafts. Cross-checks the assembled report against itself: a top quoted in the summary must equal the top in the tops table.
+  * **Returns**: A complete draft WCR in the regulator's required layout, plus a provenance appendix listing every field, its source system, and its record version, plus an exception list of the fields the agent could not source and the interpretive sections it declined to write.
+  * **Stops At**: Filing anything with a regulator, writing interpretive geological argument, reconciling two sources that disagree, or substituting a prior report's value where the current source is silent — a missing field is reported as missing and never inherited from the template.
+* **Failure Modes & Safety Envelopes**: Where two source systems give different values for the same quantity, the agent does not choose. It writes both, cites both, and raises `[Source Conflict: Formation Top Disagrees Between Interpretation and Tops Register]` — the disagreement is itself the finding, and it is usually the reason the old hand-built reports were wrong. Where the statutory deadline is inside 14 days and required fields remain unsourced, it escalates rather than shipping a partial draft quietly.
+
 ---
 
 ## 5 · Per-Unit Before / After Value Model
@@ -242,7 +258,8 @@
 | **5. Geochemical Source Rock Agent** | 1 Regional Pyrolysis Lab Report (40 samples)| 3.00 hours | 0.50 hours | **2.50 hours saved** | Tabular Pyrolysis Data Keying Drag |
 | **6. Volumetric & Risking Sieve Agent**| 1 Exploration Prospect Volumetric Package | 2.50 hours | 0.50 hours | **2.00 hours saved** | Monte Carlo Distribution Auditing Drag |
 | **7. Post-Drill Lookback Agent** | 1 Post-Drill Well Review Dossier | 3.00 hours | 0.50 hours | **2.50 hours saved** | Prognosis vs. Actual Delta Collation Drag |
-| **Total Squad Impact per Study** | **1 Regional Exploration Prospect Study** | **30.00 hours** | **4.00 hours** | **26.00 hours saved** | **Eliminates 87% of Data Archaeology Overhead** |
+| **8. Well Completion Report Synthesis**| 1 Statutory Well Completion Report | 60.00 hours | 6.00 hours | **54.00 hours saved** | Cross-System Report Compilation Drag |
+| **Total Squad Impact per Study** | **1 Regional Exploration Prospect Study** | **90.00 hours** | **10.00 hours** | **80.00 hours saved** | **Eliminates 89% of Data Archaeology Overhead** |
 
 ---
 

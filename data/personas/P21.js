@@ -209,9 +209,9 @@ window.PERSONA_DETAIL["P21"] = {
       "owner": "none",
       "agentLabel": "✔✔",
       "label": "Directional Semi-Variogram Modeling (B1, [Pyrcz-Geostats §4])",
-      "today": "Executed inside Petrel or RMS geostatistical engines (Sequential Indicator Simulation, Sequential Gaussian Simulation) using high-performance algorithms.",
-      "failureMode": "High-density numerical random field generation; maturely automated inside commercial geoscience platforms.",
-      "agentNote": "❌ No. Monolith geostatistical compute core."
+      "today": "Geologist manually adjusts major/minor range and nugget sliders in Petrel to visually fit theoretical variogram curves to noisy experimental data points.",
+      "failureMode": "Arbitrary variogram choices distort spatial correlation lengths, generating unrealistic sand-body connectivity or patchy noise.",
+      "agentNote": "→ See §4 (Agent 3: Geostatistical Directional Semi-Variogram Fitting Sieve)."
     },
     {
       "code": "A06",
@@ -224,7 +224,11 @@ window.PERSONA_DETAIL["P21"] = {
       "friction": "judgment",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Petrel)"
+      "agentLabel": "❌ (Petrel)",
+      "label": "Facies & Petrophysical Property Simulation (B2, [Pyrcz-Geostats §5, §6])",
+      "today": "Executed inside Petrel or RMS geostatistical engines (Sequential Indicator Simulation, Sequential Gaussian Simulation) using high-performance algorithms.",
+      "failureMode": "High-density numerical random field generation; maturely automated inside commercial geoscience platforms.",
+      "agentNote": "❌ No. Monolith geostatistical compute core."
     },
     {
       "code": "A07",
@@ -237,7 +241,11 @@ window.PERSONA_DETAIL["P21"] = {
       "friction": "judgment",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Petrel)"
+      "agentLabel": "❌ (Petrel)",
+      "label": "Facies & Petrophysical Property Simulation (B2, [Pyrcz-Geostats §5, §6])",
+      "today": "Executed inside Petrel or RMS geostatistical engines (Sequential Indicator Simulation, Sequential Gaussian Simulation) using high-performance algorithms.",
+      "failureMode": "High-density numerical random field generation; maturely automated inside commercial geoscience platforms.",
+      "agentNote": "❌ No. Monolith geostatistical compute core."
     },
     {
       "code": "A08",

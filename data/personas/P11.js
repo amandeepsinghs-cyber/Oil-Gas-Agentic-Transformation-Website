@@ -345,8 +345,8 @@ window.PERSONA_DETAIL["P11"] = {
       "owner": "none",
       "agentLabel": "✔",
       "label": "Control Valve Stiction Diagnostic (B1, [API-RP-14C §4])",
-      "today": "Face-to-face console handover discussion and physical platform muster station accounting.",
-      "agentNote": "❌ No. Physical safety operations."
+      "today": "Pumping level controller hunts continuously because valve stem packing is tight; CRO switches loop to manual.",
+      "agentNote": "✔ Integrated. Handled within Agent 5 for compressor anti-surge valves and Agent 4 for dump valves."
     },
     {
       "code": "A14",
@@ -359,7 +359,10 @@ window.PERSONA_DETAIL["P11"] = {
       "friction": "judgment",
       "agentRef": null,
       "owner": "human",
-      "agentLabel": "❌ (Human)"
+      "agentLabel": "❌ (Human)",
+      "label": "Verbal Handover & Muster Drill Response (B3, [UK-HSE-HSG48], [OPITO-9004 §3])",
+      "today": "Face-to-face console handover discussion and physical platform muster station accounting.",
+      "agentNote": "❌ No. Physical safety operations."
     },
     {
       "code": "A15",
@@ -372,7 +375,10 @@ window.PERSONA_DETAIL["P11"] = {
       "friction": "physical",
       "agentRef": null,
       "owner": "human",
-      "agentLabel": "❌ (Human/Safety)"
+      "agentLabel": "❌ (Human/Safety)",
+      "label": "Verbal Handover & Muster Drill Response (B3, [UK-HSE-HSG48], [OPITO-9004 §3])",
+      "today": "Face-to-face console handover discussion and physical platform muster station accounting.",
+      "agentNote": "❌ No. Physical safety operations."
     }
   ],
   "agents": [

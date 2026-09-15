@@ -145,9 +145,9 @@
       "owner": "none",
       "agentLabel": "✔✔",
       "label": "Dynamic Route Prioritization (B1, [PetroLMI-Pumper])",
-      "today": "Pumper climbs the metal tank stairway, drops a steel tape with Kolor Kut paste, cuts the oil/water interface, and checks packing rings for oil seepage.",
+      "today": "Pumper drives the exact same 60-mile loop every single morning; dead wells or nearly overflowing tanks scheduled at the end of the route sit unattended for 7 hours.",
       "failureMode": "Massive deferred oil production (>50 ext bopd per tripped well) and preventable tank battery overflows that breach secondary containment.",
-      "agentNote": "❌ No. Core physical field operation requiring tactile human interaction and hazardous location presence."
+      "agentNote": "→ See §4 (Agent 1: Dynamic Field Route & Exception Triage Agent)."
     },
     {
       "code": "A02",
@@ -160,7 +160,10 @@
       "friction": "physical",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Field Pumper)"
+      "agentLabel": "❌ (Field Pumper)",
+      "label": "Physical Tank Gauging & Stuffing Box Inspection (B3, [API-MPMS-Ch3], [HSSC-NOS §2])",
+      "today": "Pumper climbs the metal tank stairway, drops a steel tape with Kolor Kut paste, cuts the oil/water interface, and checks packing rings for oil seepage.",
+      "agentNote": "❌ No. Core physical field operation requiring tactile human interaction and hazardous location presence."
     },
     {
       "code": "A03",
@@ -190,7 +193,10 @@
       "friction": "physical",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Field Pumper)"
+      "agentLabel": "❌ (Field Pumper)",
+      "label": "Physical Tank Gauging & Stuffing Box Inspection (B3, [API-MPMS-Ch3], [HSSC-NOS §2])",
+      "today": "Pumper climbs the metal tank stairway, drops a steel tape with Kolor Kut paste, cuts the oil/water interface, and checks packing rings for oil seepage.",
+      "agentNote": "❌ No. Core physical field operation requiring tactile human interaction and hazardous location presence."
     },
     {
       "code": "A05",
@@ -255,9 +261,9 @@
       "owner": "none",
       "agentLabel": "✔✔",
       "label": "Separator Dump Valve & Meter Proving Audit (B1, [HSSC-NOS §5])",
-      "today": "Pumper changes sheave belts, greases saddle bearings with a hand grease gun, and restarts electric motor panels.",
+      "today": "Pumper watches the mechanical trunnion arm on the dump valve flick up and down; gas carry-under or leaking valve trim is noticed only when oil tanks gas-lock.",
       "failureMode": "Leaking liquid dump valves allow high-pressure gas to blow into atmospheric stock tanks, creating explosive vapor hazards and unmetered gas loss.",
-      "agentNote": "❌ No. Pure mechanical field maintenance."
+      "agentNote": "→ See §4 (Agent 5: Production Separator Dump Valve & Meter Proving Audit Agent)."
     },
     {
       "code": "A09",
@@ -270,7 +276,10 @@
       "friction": "physical",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Field Pumper)"
+      "agentLabel": "❌ (Field Pumper)",
+      "label": "Pumping Unit Mechanical Servicing (B3, [HSSC-NOS §2], [HSSC-NOS §5])",
+      "today": "Pumper changes sheave belts, greases saddle bearings with a hand grease gun, and restarts electric motor panels.",
+      "agentNote": "❌ No. Pure mechanical field maintenance."
     },
     {
       "code": "A10",
@@ -313,7 +322,10 @@
       "friction": "physical",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Field Pumper)"
+      "agentLabel": "❌ (Field Pumper)",
+      "label": "Pumping Unit Mechanical Servicing (B3, [HSSC-NOS §2], [HSSC-NOS §5])",
+      "today": "Pumper changes sheave belts, greases saddle bearings with a hand grease gun, and restarts electric motor panels.",
+      "agentNote": "❌ No. Pure mechanical field maintenance."
     },
     {
       "code": "A13",

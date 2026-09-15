@@ -36,7 +36,12 @@ ROSTER_FILE = RESEARCH_DIR / "HOLISTIC_PERSONA_LIST.md"
 OUT_JSON = REPO / "data" / "persona_research.json"
 OUT_JS = REPO / "data" / "persona_research.js"
 
-EXPECTED_ACTIONS = 15
+# The board renders each persona's actions as its own flex row, sorted by
+# priority -- column N means nothing across roles (P03 col 8 is A13, P04 col 8
+# is A08). So rows may be ragged, and a persona that has earned a 16th action
+# is not an error. What IS an error is a persona that lost one, so this is a
+# floor rather than an equality.
+MIN_ACTIONS = 15
 
 # Portraits are named by research id -- P04 -> personas/avatars/P04_persona.jpg.
 # There is deliberately no lookup table: the filename IS the id, so nothing can
@@ -419,12 +424,25 @@ def parse_actions(block: str) -> tuple[list[dict], dict]:
     detail: dict[str, dict] = {}
     analysis = section_like(sections(block, 3), "action analysis")
     if analysis:
-        current = None
+        # A bullet may speak for more than one action -- "A01 & A02 · Real-Time
+        # LWD Correlation" is one paragraph covering two rows, and 58 of the 392
+        # bullets in the corpus are written that way. Matching only "A01 ·" left
+        # `current` pointing at the PREVIOUS action, so the shared bullet's
+        # Today/Failure/Agent lines were silently pasted onto the wrong cell
+        # while both of its own cells went blank. The cursor is therefore a
+        # LIST of codes, and every code in the header receives the same body.
+        current: list[str] = []
         for ln in analysis.split("\n"):
-            top = re.match(r"^\s*\*\s+\*\*(A\d+)\s*·\s*(.+?)\*\*\s*:?\s*$", ln)
+            top = re.match(
+                r"^\s*\*\s+\*\*(A\d+(?:\s*(?:&|and|,|/|\+)\s*A\d+)*)"
+                r"\s*·\s*(.+?)\*\*\s*:?\s*$",
+                ln,
+            )
             if top:
-                current = top.group(1)
-                detail[current] = {"label": clean(top.group(2))}
+                current = re.findall(r"A\d+", top.group(1))
+                label = clean(top.group(2))
+                for code in current:
+                    detail[code] = {"label": label}
                 continue
             if current:
                 sub = re.match(r"^\s+\*\s+\*(Today|Failure Mode|Agent|Agent Candidate)\*\s*:?\s*(.*)", ln)
@@ -435,7 +453,9 @@ def parse_actions(block: str) -> tuple[list[dict], dict]:
                         "Agent": "agentNote",
                         "Agent Candidate": "agentNote",
                     }[sub.group(1)]
-                    detail[current][key] = clean(sub.group(2))
+                    value = clean(sub.group(2))
+                    for code in current:
+                        detail[code][key] = value
 
     actions = []
     for table in find_tables(block):
@@ -714,8 +734,8 @@ def validate(rec: dict) -> list[str]:
 
     if not rec["title"]:
         problems.append(f"{pid}: missing title")
-    if len(rec["actions"]) != EXPECTED_ACTIONS:
-        problems.append(f"{pid}: {len(rec['actions'])} actions, expected {EXPECTED_ACTIONS}")
+    if len(rec["actions"]) < MIN_ACTIONS:
+        problems.append(f"{pid}: {len(rec['actions'])} actions, expected at least {MIN_ACTIONS}")
     if not rec["agents"]:
         problems.append(f"{pid}: no agents parsed")
 

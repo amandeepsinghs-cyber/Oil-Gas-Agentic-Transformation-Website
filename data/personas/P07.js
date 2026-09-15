@@ -228,9 +228,9 @@ window.PERSONA_DETAIL["P07"] = {
       "owner": "agent",
       "agentLabel": "Agent 7: Post-Well NPT Failure Lookback Agent",
       "label": "Post-Well Review & NPT Failure Lookback (B1, [SPE-Drilling §9])",
-      "today": "Maturely handled inside Landmark StressCheck and WELLPLAN. The engineer inputs load cases (green cement, evacuation, gas kick) and reviews safety factor margins.",
+      "today": "Lookbacks are conducted weeks after rig release, manually categorizing non-productive time (NPT) codes from OpenWells without systematic root-cause capture.",
       "failureMode": "The same drilling errors (e.g., bit balling in reactive gumbo shale) are repeated on the next well in the drilling campaign.",
-      "agentNote": "❌ No. Core mechanical engineering calculation. The monolith handles the structural math; human judgment validates the risk envelope."
+      "agentNote": "→ Agent 7 (Post-Well NPT Failure Lookback Agent)."
     },
     {
       "code": "A08",
@@ -243,7 +243,10 @@ window.PERSONA_DETAIL["P07"] = {
       "friction": "judgment",
       "agentRef": null,
       "owner": "monolith",
-      "agentLabel": "❌ (Monolith StressCheck)"
+      "agentLabel": "❌ (Monolith StressCheck)",
+      "label": "Casing Stress Analysis & Torque/Drag (B2, [API-Spec-5CT], [SPE-Drilling §4])",
+      "today": "Maturely handled inside Landmark StressCheck and WELLPLAN. The engineer inputs load cases (green cement, evacuation, gas kick) and reviews safety factor margins.",
+      "agentNote": "❌ No. Core mechanical engineering calculation. The monolith handles the structural math; human judgment validates the risk envelope."
     },
     {
       "code": "A09",
@@ -256,7 +259,10 @@ window.PERSONA_DETAIL["P07"] = {
       "friction": "judgment",
       "agentRef": null,
       "owner": "monolith",
-      "agentLabel": "❌ (Monolith WELLPLAN)"
+      "agentLabel": "❌ (Monolith WELLPLAN)",
+      "label": "Casing Stress Analysis & Torque/Drag (B2, [API-Spec-5CT], [SPE-Drilling §4])",
+      "today": "Maturely handled inside Landmark StressCheck and WELLPLAN. The engineer inputs load cases (green cement, evacuation, gas kick) and reviews safety factor margins.",
+      "agentNote": "❌ No. Core mechanical engineering calculation. The monolith handles the structural math; human judgment validates the risk envelope."
     },
     {
       "code": "A10",
@@ -338,6 +344,23 @@ window.PERSONA_DETAIL["P07"] = {
       "label": "Daily Rig Consultation (B3, Practitioner)",
       "today": "Operational check-in between office engineer and rig-site Company Man to discuss 24-hour progress, mud weight adjustments, and upcoming casing runs.",
       "agentNote": "❌ No. Real-time collaborative decision-making between two certified human operational authorities."
+    },
+    {
+      "code": "A16",
+      "action": "Schedule offshore rig relocations against forecast marine weather windows",
+      "source": "[DNV-ST-N001]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Campaign",
+      "time": "days",
+      "friction": "consistency",
+      "agentRef": 8,
+      "owner": "agent",
+      "agentLabel": "Agent 8: Offshore Rig Move & Weather Routing Agent",
+      "label": "Offshore Rig Relocation & Marine Weather Window Scheduling (B1, [DNV-ST-N001])",
+      "today": "Moving a jack-up between wells needs a certified, unbreached 48 to 72-hour weather window covering pull-out, tow, approach and pin-down, and a tug of sufficient bollard pull free in the same window. A basin with 35 rigs and 12 to 16 high-bollard-pull AHTS vessels is mathematically over-constrained, so the schedule is negotiated across four departments over 8 to 12 days of phone calls against a coarse global forecast that is already four to six hours stale.",
+      "failureMode": "The schedule is built on a forecast nobody can defend and a vessel pool nobody holds a complete view of, so it fails in two directions. It fails safe too often — rigs sit on standby waiting for a window that a better forecast would have shown was already open, and CAG Report No. 12 of 2021 records jack-ups delayed up to 26 days per move in the pre-monsoon season. It also fails unsafe: one unforecast swell event during spudcan extraction or pin-down, and a single vessel breakdown cascades cancellations across the whole basin.",
+      "agentNote": "→ Agent 8 (Offshore Rig Move & Weather Routing Agent)."
     }
   ],
   "agents": [
@@ -424,6 +447,18 @@ window.PERSONA_DETAIL["P07"] = {
       "stopsAt": "Modifying corporate historical drilling performance databases without engineering consensus.",
       "failureModes": "If an unclassified downtime interval exceeds 24 hours in the DDR logs, the agent flags [Uncategorized Major NPT: Contractor Incident Report Required].",
       "agentId": "OG-P07-A07"
+    },
+    {
+      "n": 8,
+      "name": "Offshore Rig Move & Weather Routing Agent",
+      "oneLine": "Solves the basin's rig relocation schedule as one constrained problem rather than thirty-five separate phone negotiations — matching each move to a forecast marine weather window that satisfies the operational sea-state limits end to end, against the tugs actually available in that window — and compiles the evidence dossier the Marine Warranty Surveyor needs to approve it.",
+      "frictionSolved": "Eliminates ~23.0 hours per rig relocation of manual cross-departmental scheduling, forecast reconciliation and warranty dossier assembly. (Assumption: back-solved from the spec's own two published figures — a residual engineering lead time of 2 hours at a documented 92% reduction implies a ~25 hour baseline. Stated as engineer hours of hands-on planning, not the 8–12 elapsed days the coordination is spread across.)",
+      "reads": "GraphCast ensemble forecasts refreshed on a six-hour cycle, regional bathymetry for the shelf, the current well programme and expected release date for every rig in the fleet, the AHTS charter pool with bollard pull ratings and existing commitments, each rig's own operational limits for tow and pin-down, spudcan and seabed survey records for the target location, and the applicable marine warranty standard.",
+      "does": "Converts the forecast into per-phase feasibility — pull-out, tow transit, approach, and pin-down each carry their own significant wave height and period limits, and pin-down is the binding one at Hs ≤0.8–1.0 m. Searches for contiguous 48 to 72-hour windows that hold across every phase with the contingency margin the warranty standard requires, never by averaging a forecast across a move. Then solves the fleet assignment as a constraint problem over rigs, windows and tugs jointly, because a window without a vessel is not a window. Re-solves on every forecast cycle and on any live disruption — a well finishing early, a tug losing a turbocharger — and reports what the change costs rather than silently re-planning.",
+      "returns": "A fleet move schedule with each assignment traced to the specific forecast cycle and constraint set that justified it, a warranty dossier per move carrying the 72-hour forecast and the phase-by-phase margin evidence, and an explicit list of the moves that have no feasible window in the horizon.",
+      "stopsAt": "Authorising a rig move, issuing or accepting Marine Warranty Surveyor approval, chartering a vessel, or commanding any rig or tug. It proposes a schedule and shows its evidence; the surveyor and the offshore installation manager keep the go/no-go.",
+      "failureModes": "Where the forecast ensemble disagrees across members at the decision boundary, the agent does not take the mean — it reports the spread and declines to call the window, on the principle that an uncertain window and a bad window carry the same consequence at pin-down. It will not schedule a move whose feasibility depends on a forecast beyond the model's validated horizon. Where the seabed record shows a hard layer over soft clay at the target, it raises [Punch-Through Risk: Spudcan Penetration Analysis Required] and holds the assignment out of the solution until a geotechnical sign-off is attached, because no weather window makes that move safe.",
+      "agentId": "OG-P07-A08"
     }
   ],
   "valueModel": {
@@ -484,14 +519,22 @@ window.PERSONA_DETAIL["P07"] = {
         "afterHours": 0.5,
         "savedHours": 3.5,
         "frictionRemoved": "Planned vs. Actual Variance Collation Drag"
+      },
+      {
+        "agent": "8. Offshore Rig Move & Weather Routing",
+        "unit": "1 Offshore Rig Relocation",
+        "beforeHours": 25.0,
+        "afterHours": 2.0,
+        "savedHours": 23.0,
+        "frictionRemoved": "Cross-Department Move Coordination Drag"
       }
     ],
     "total": {
       "unit": "1 Complete Well Engineering Program",
-      "beforeHours": 43.5,
-      "afterHours": 5.5,
-      "savedHours": 38.0,
-      "frictionRemoved": "Eliminates 87% of Well Planning Data Assembly Drag",
+      "beforeHours": 68.5,
+      "afterHours": 7.5,
+      "savedHours": 61.0,
+      "frictionRemoved": "Eliminates 89% of Well Planning Data Assembly Drag",
       "label": "Total Squad Impact per Well Design"
     }
   },

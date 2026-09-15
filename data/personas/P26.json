@@ -138,7 +138,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Amine Circulation & Contactor Foaming Early-Warning Sieve (B1, [Kohl-Nielsen §2], [GPSA-DataBook §21])",
+      "today": "Engineer reviews morning chromatography logs; manually computes whether amine circulation (gpm) is adequate to sweeten acid gas without running excessive reboiler fuel gas.",
+      "failureMode": "Operating with unoptimized circulation burns $300k/year in excess fuel gas, while missing liquid hydrocarbon carryover triggers massive column foaming, vomiting amine downstream.",
+      "agentNote": "→ See §4 (Agent 1: Amine Acid Gas Sweetening & Contactor Foaming Early-Warning Sieve)."
     },
     {
       "code": "A02",
@@ -151,7 +155,11 @@
       "friction": "volume",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Amine Circulation & Contactor Foaming Early-Warning Sieve (B1, [Kohl-Nielsen §2], [GPSA-DataBook §21])",
+      "today": "Engineer reviews morning chromatography logs; manually computes whether amine circulation (gpm) is adequate to sweeten acid gas without running excessive reboiler fuel gas.",
+      "failureMode": "Operating with unoptimized circulation burns $300k/year in excess fuel gas, while missing liquid hydrocarbon carryover triggers massive column foaming, vomiting amine downstream.",
+      "agentNote": "→ See §4 (Agent 1: Amine Acid Gas Sweetening & Contactor Foaming Early-Warning Sieve)."
     },
     {
       "code": "A03",
@@ -164,7 +172,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Molecular Sieve Regeneration & Cryogenic Freeze-Up Sieve (B1, [GPSA-DataBook §20])",
+      "today": "Sieve beds switch on rigid fixed timers (e.g., 8-hour cycles); engineer manually inspects heating/cooling temperature plateau charts to verify desiccant water desorption.",
+      "failureMode": "Incomplete regeneration allows trace moisture (>0.1 ppmv) into the -100^circC cold box, forming hydrate ice plugs that crack brazed aluminum heat exchangers ($2M repair).",
+      "agentNote": "→ See §4 (Agent 2: Molecular Sieve Dehydration Bed Dynamic Regeneration Sieve)."
     },
     {
       "code": "A04",
@@ -177,7 +189,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Molecular Sieve Regeneration & Cryogenic Freeze-Up Sieve (B1, [GPSA-DataBook §20])",
+      "today": "Sieve beds switch on rigid fixed timers (e.g., 8-hour cycles); engineer manually inspects heating/cooling temperature plateau charts to verify desiccant water desorption.",
+      "failureMode": "Incomplete regeneration allows trace moisture (>0.1 ppmv) into the -100^circC cold box, forming hydrate ice plugs that crack brazed aluminum heat exchangers ($2M repair).",
+      "agentNote": "→ See §4 (Agent 2: Molecular Sieve Dehydration Bed Dynamic Regeneration Sieve)."
     },
     {
       "code": "A05",
@@ -209,9 +225,8 @@
       "owner": "none",
       "agentLabel": "❌ (ProMax / HYSYS)",
       "label": "Demethanizer Ethane Recovery vs. Rejection Optimization (B2, [GPSA-DataBook §16])",
-      "today": "Engineer reviews lab chromatography samples of propane, butane, and natural gasoline, manually trimming tower reflux ratios and reboiler steam to maintain product specifications.",
-      "agentNote": "→ See §4 (Agent 4: NGL Fractionation Column Tray Hydraulics & Product Specification Sieve).",
-      "failureMode": "Over-purifying propane gives away high-value ethane/butane, while under-purifying breaches HD-5 vapor pressure limits, triggering steep refinery price penalties."
+      "today": "Maturely simulated inside BRE ProMax or Aspen HYSYS. Solves multi-component thermodynamic equilibria and column tray profiles to evaluate commercial ethane margins.",
+      "agentNote": "❌ No. Heavyweight thermodynamic simulation monolith. Human economist and engineer set the operating mode."
     },
     {
       "code": "A07",
@@ -224,7 +239,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Fractionation Column Tray Hydraulics & Product Cut-Point Sieve (B1, [ASTM-D4814-HD5], [GPSA-DataBook §16])",
+      "today": "Engineer reviews lab chromatography samples of propane, butane, and natural gasoline, manually trimming tower reflux ratios and reboiler steam to maintain product specifications.",
+      "failureMode": "Over-purifying propane gives away high-value ethane/butane, while under-purifying breaches HD-5 vapor pressure limits, triggering steep refinery price penalties.",
+      "agentNote": "→ See §4 (Agent 4: NGL Fractionation Column Tray Hydraulics & Product Specification Sieve)."
     },
     {
       "code": "A08",
@@ -237,7 +256,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Fractionation Column Tray Hydraulics & Product Cut-Point Sieve (B1, [ASTM-D4814-HD5], [GPSA-DataBook §16])",
+      "today": "Engineer reviews lab chromatography samples of propane, butane, and natural gasoline, manually trimming tower reflux ratios and reboiler steam to maintain product specifications.",
+      "failureMode": "Over-purifying propane gives away high-value ethane/butane, while under-purifying breaches HD-5 vapor pressure limits, triggering steep refinery price penalties.",
+      "agentNote": "→ See §4 (Agent 4: NGL Fractionation Column Tray Hydraulics & Product Specification Sieve)."
     },
     {
       "code": "A09",
@@ -252,9 +275,9 @@
       "owner": "none",
       "agentLabel": "✔✔",
       "label": "Claus Sulfur Recovery Unit (SRU) Stoichiometric Air-Demand Sieve (B1, [GPSA-DataBook §22])",
-      "today": "Engineer reviews hot oil heater efficiency, steam boiler fuel consumption, cooling tower approach delta, and flare header purge gas rates against API RP 521 relieving scenarios.",
-      "failureMode": "Flare header backpressure exceeds design limits during a compressor trip, creating overpressure risks in operating process vessels.",
-      "agentNote": "→ See §4 (Agent 7: Gas Plant Utility Network & Flare Header Capacity Auditor)."
+      "today": "Engineer evaluates tail gas analyzer readings, trying to maintain the strict 2:1 H2S / SO2 stoichiometric ratio entering the catalytic converter beds.",
+      "failureMode": "Air demand drift shifts the ratio; excess air causes sulfur dioxide pollution exceedances, while deficient air allows unreacted H2S into the incinerator, violating environmental permits.",
+      "agentNote": "→ See §4 (Agent 5: Claus Sulfur Recovery Unit (SRU) Stoichiometric Air-Demand Sieve)."
     },
     {
       "code": "A10",
@@ -267,7 +290,11 @@
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "NGL Component Mass Balance & Plant Shrinkage Sieve (B1, [GPA-2145], [GPA-2172])",
+      "today": "Specialist spends 3 to 4 hours every morning reconciling raw inlet gas volume, sales gas pipeline delivery, trucked/pipelined liquid NGLs, and flare volumes on a component basis.",
+      "failureMode": "Unreconciled measurement errors conceal massive gas leakage, incorrect shrinkage billing to upstream producers, or miscalibrated custody transfer meters.",
+      "agentNote": "→ See §4 (Agent 6: Gas Plant Hydrocarbon Component Mass Balance & Shrinkage Sieve)."
     },
     {
       "code": "A11",
@@ -280,7 +307,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "NGL Component Mass Balance & Plant Shrinkage Sieve (B1, [GPA-2145], [GPA-2172])",
+      "today": "Specialist spends 3 to 4 hours every morning reconciling raw inlet gas volume, sales gas pipeline delivery, trucked/pipelined liquid NGLs, and flare volumes on a component basis.",
+      "failureMode": "Unreconciled measurement errors conceal massive gas leakage, incorrect shrinkage billing to upstream producers, or miscalibrated custody transfer meters.",
+      "agentNote": "→ See §4 (Agent 6: Gas Plant Hydrocarbon Component Mass Balance & Shrinkage Sieve)."
     },
     {
       "code": "A12",
@@ -293,7 +324,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Utility Balance & Flare Header Relief Capacity Sieve (B1, [API-RP-520-521])",
+      "today": "Engineer reviews hot oil heater efficiency, steam boiler fuel consumption, cooling tower approach delta, and flare header purge gas rates against API RP 521 relieving scenarios.",
+      "failureMode": "Flare header backpressure exceeds design limits during a compressor trip, creating overpressure risks in operating process vessels.",
+      "agentNote": "→ See §4 (Agent 7: Gas Plant Utility Network & Flare Header Capacity Auditor)."
     },
     {
       "code": "A13",
@@ -306,7 +341,11 @@
       "friction": "judgment",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Utility Balance & Flare Header Relief Capacity Sieve (B1, [API-RP-520-521])",
+      "today": "Engineer reviews hot oil heater efficiency, steam boiler fuel consumption, cooling tower approach delta, and flare header purge gas rates against API RP 521 relieving scenarios.",
+      "failureMode": "Flare header backpressure exceeds design limits during a compressor trip, creating overpressure risks in operating process vessels.",
+      "agentNote": "→ See §4 (Agent 7: Gas Plant Utility Network & Flare Header Capacity Auditor)."
     },
     {
       "code": "A14",

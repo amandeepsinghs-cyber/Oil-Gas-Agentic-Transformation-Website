@@ -147,7 +147,11 @@ window.PERSONA_DETAIL["P28"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Gasoline Recipe Formulation & Dynamic Octane Trim (B1, [ASTM-D4814], [Ethyl-RT70])",
+      "today": "Coordinator extracts component assays from LIMS, solves a recipe in Aspen Blending with a +0.5 RON safety cushion, and manually trims reformate or alkylate valves during pumping.",
+      "failureMode": "Conservative safety cushions cause massive quality giveaway (0.50 to1.50 per barrel on high-octane blendstocks); conversely, an uncorrected analyzer drift produces an off-spec batch.",
+      "agentNote": "→ See §4 (Agent 1: Gasoline Octane & RVP Non-Linear Recipe Optimizer & Giveaway Sieve)."
     },
     {
       "code": "A02",
@@ -160,7 +164,11 @@ window.PERSONA_DETAIL["P28"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Gasoline Recipe Formulation & Dynamic Octane Trim (B1, [ASTM-D4814], [Ethyl-RT70])",
+      "today": "Coordinator extracts component assays from LIMS, solves a recipe in Aspen Blending with a +0.5 RON safety cushion, and manually trims reformate or alkylate valves during pumping.",
+      "failureMode": "Conservative safety cushions cause massive quality giveaway (0.50 to1.50 per barrel on high-octane blendstocks); conversely, an uncorrected analyzer drift produces an off-spec batch.",
+      "agentNote": "→ See §4 (Agent 1: Gasoline Octane & RVP Non-Linear Recipe Optimizer & Giveaway Sieve)."
     },
     {
       "code": "A03",
@@ -175,9 +183,9 @@ window.PERSONA_DETAIL["P28"] = {
       "owner": "none",
       "agentLabel": "✔✔",
       "label": "Online Analyzer Drift & LIMS Bias Auto-Trim (B1, [API-MPMS-Ch8])",
-      "today": "Coordinator assumes uniform tank properties, but heavy reformate or cat naphtha stratifies vertically in 100,000-barrel storage tanks, causing feed properties to change mid-blend.",
-      "failureMode": "Sudden unexpected property step-changes overwhelm the blend controller, causing sudden off-spec spikes in the finished product header.",
-      "agentNote": "→ See §4 (Agent 3: Component Tank Stratification, Linepack & Heel Quality Sieve)."
+      "today": "When the online NIR reads 91.3 RON but the laboratory CFR knock engine grab sample comes back at 90.7 RON, the coordinator manually calculates the bias offset and keys it into the DCS.",
+      "failureMode": "45-minute lab turnaround delays cause the blend to run with erroneous bias for hours, either failing certification or unnecessarily dumping high-value blendstocks.",
+      "agentNote": "→ See §4 (Agent 2: Online Analyzer Drift, LIMS Bias Reconciliation & Auto-Trim Sieve)."
     },
     {
       "code": "A04",
@@ -190,7 +198,11 @@ window.PERSONA_DETAIL["P28"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Tank Heel & Component Stratification Audit (B1, [API-MPMS-Ch8])",
+      "today": "Coordinator assumes uniform tank properties, but heavy reformate or cat naphtha stratifies vertically in 100,000-barrel storage tanks, causing feed properties to change mid-blend.",
+      "failureMode": "Sudden unexpected property step-changes overwhelm the blend controller, causing sudden off-spec spikes in the finished product header.",
+      "agentNote": "→ See §4 (Agent 3: Component Tank Stratification, Linepack & Heel Quality Sieve)."
     },
     {
       "code": "A05",
@@ -203,7 +215,11 @@ window.PERSONA_DETAIL["P28"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Tank Heel & Component Stratification Audit (B1, [API-MPMS-Ch8])",
+      "today": "Coordinator assumes uniform tank properties, but heavy reformate or cat naphtha stratifies vertically in 100,000-barrel storage tanks, causing feed properties to change mid-blend.",
+      "failureMode": "Sudden unexpected property step-changes overwhelm the blend controller, causing sudden off-spec spikes in the finished product header.",
+      "agentNote": "→ See §4 (Agent 3: Component Tank Stratification, Linepack & Heel Quality Sieve)."
     },
     {
       "code": "A06",
@@ -235,9 +251,8 @@ window.PERSONA_DETAIL["P28"] = {
       "owner": "monolith",
       "agentLabel": "❌ (DCS / APC Monolith)",
       "label": "In-Line Blend Manifold Control (B2, Vendor Tech)",
-      "today": "Coordinator blends straight-run gasoil, light cycle oil, and hydrocracker diesel, manually balancing flash point against cold filter plugging point (CFPP) and cetane index.",
-      "agentNote": "→ See §4 (Agent 5: Middle Distillates, Diesel & Jet A-1 Cold Flow Property Sieve).",
-      "failureMode": "Under-dosing cold flow improver (CFI) causes diesel fuel gelling in winter transport; over-dosing wastes expensive chemical additives."
+      "today": "Dedicated DCS / APC multivariable predictive controllers (e.g., Foxboro BOSS, Honeywell Profit Blend) modulate physical flow control valves on the manifold.",
+      "agentNote": "❌ No. Core DCS / APC monolith control execution domain."
     },
     {
       "code": "A08",
@@ -250,7 +265,11 @@ window.PERSONA_DETAIL["P28"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Middle Distillates, Diesel & Jet A-1 Cold Flow Sieve (B1, [ASTM-D975], [ASTM-D1655])",
+      "today": "Coordinator blends straight-run gasoil, light cycle oil, and hydrocracker diesel, manually balancing flash point against cold filter plugging point (CFPP) and cetane index.",
+      "failureMode": "Under-dosing cold flow improver (CFI) causes diesel fuel gelling in winter transport; over-dosing wastes expensive chemical additives.",
+      "agentNote": "→ See §4 (Agent 5: Middle Distillates, Diesel & Jet A-1 Cold Flow Property Sieve)."
     },
     {
       "code": "A09",
@@ -263,7 +282,11 @@ window.PERSONA_DETAIL["P28"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Middle Distillates, Diesel & Jet A-1 Cold Flow Sieve (B1, [ASTM-D975], [ASTM-D1655])",
+      "today": "Coordinator blends straight-run gasoil, light cycle oil, and hydrocracker diesel, manually balancing flash point against cold filter plugging point (CFPP) and cetane index.",
+      "failureMode": "Under-dosing cold flow improver (CFI) causes diesel fuel gelling in winter transport; over-dosing wastes expensive chemical additives.",
+      "agentNote": "→ See §4 (Agent 5: Middle Distillates, Diesel & Jet A-1 Cold Flow Property Sieve)."
     },
     {
       "code": "A10",
@@ -295,9 +318,8 @@ window.PERSONA_DETAIL["P28"] = {
       "owner": "none",
       "agentLabel": "❌ (QC Lab Chemist)",
       "label": "Physical CFR Knock Engine Rating Test (B3, [ASTM-D4814])",
-      "today": "Coordinator spends 1 to 2 hours per batch manually pulling LIMS lab results, cross-checking sulfur, benzene, and distillation parameters against statutory specs, and signing the CoA.",
-      "agentNote": "→ See §4 (Agent 7: Certificate of Analysis (CoA) & Statutory Environmental Compliance Auditor).",
-      "failureMode": "Typographical transcription errors on export documentation delay ship departure, incurring heavy vessel demurrage charges."
+      "today": "Certified laboratory chemist operates single-cylinder variable-compression CFR engines to determine physical RON/MON via detonation intensity meters.",
+      "agentNote": "❌ No. Pure physical laboratory analytical testing."
     },
     {
       "code": "A12",
@@ -310,7 +332,11 @@ window.PERSONA_DETAIL["P28"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Certificate of Analysis (CoA) & Statutory Regulatory Audit (B1, [EPA-40CFR-1090])",
+      "today": "Coordinator spends 1 to 2 hours per batch manually pulling LIMS lab results, cross-checking sulfur, benzene, and distillation parameters against statutory specs, and signing the CoA.",
+      "failureMode": "Typographical transcription errors on export documentation delay ship departure, incurring heavy vessel demurrage charges.",
+      "agentNote": "→ See §4 (Agent 7: Certificate of Analysis (CoA) & Statutory Environmental Compliance Auditor)."
     },
     {
       "code": "A13",
@@ -323,7 +349,11 @@ window.PERSONA_DETAIL["P28"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Certificate of Analysis (CoA) & Statutory Regulatory Audit (B1, [EPA-40CFR-1090])",
+      "today": "Coordinator spends 1 to 2 hours per batch manually pulling LIMS lab results, cross-checking sulfur, benzene, and distillation parameters against statutory specs, and signing the CoA.",
+      "failureMode": "Typographical transcription errors on export documentation delay ship departure, incurring heavy vessel demurrage charges.",
+      "agentNote": "→ See §4 (Agent 7: Certificate of Analysis (CoA) & Statutory Environmental Compliance Auditor)."
     },
     {
       "code": "A14",

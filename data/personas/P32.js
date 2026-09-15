@@ -144,7 +144,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 1"
+      "agentLabel": "✔✔ Agent 1",
+      "label": "5-Point Calibration Math & Tolerance Evaluation (B1, [ISA-CCST])",
+      "today": "Technician applies 0%, 25%, 50%, 75%, 100% input pressures with a pneumatic hand pump, reads the mA output on a digital meter, and manually calculates whether span error, linearity, or hysteresis exceeds ±0.1% of span on paper forms.",
+      "failureMode": "Field arithmetic mistakes or transcription errors lead technicians to leave out-of-tolerance transmitters in service, corrupting unit material balances, column pressure profiles, and custody transfer billing.",
+      "agentNote": "→ See §4 (Agent 1: Transmitter 5-Point Calibration Error & Tolerance Sieve)."
     },
     {
       "code": "A02",
@@ -157,7 +161,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "volume",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 1"
+      "agentLabel": "✔✔ Agent 1",
+      "label": "5-Point Calibration Math & Tolerance Evaluation (B1, [ISA-CCST])",
+      "today": "Technician applies 0%, 25%, 50%, 75%, 100% input pressures with a pneumatic hand pump, reads the mA output on a digital meter, and manually calculates whether span error, linearity, or hysteresis exceeds ±0.1% of span on paper forms.",
+      "failureMode": "Field arithmetic mistakes or transcription errors lead technicians to leave out-of-tolerance transmitters in service, corrupting unit material balances, column pressure profiles, and custody transfer billing.",
+      "agentNote": "→ See §4 (Agent 1: Transmitter 5-Point Calibration Error & Tolerance Sieve)."
     },
     {
       "code": "A03",
@@ -170,7 +178,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 2"
+      "agentLabel": "✔✔ Agent 2",
+      "label": "IEC 61511 SIF Proof-Testing & Statutory Audit Packs (B1, [IEC-61511 §16])",
+      "today": "Technician executes a safety loop trip, measures valve stroke closure time with a handheld stopwatch, logs solenoid dropout voltage, fills out paper proof-test templates, and manually files records in three-ring safety binders.",
+      "failureMode": "Incomplete, missing, or improperly calculated proof-test records invalidate the facility's Safety Integrity Level (SIL) validation, exposing the asset to catastrophic unmitigated safety hazards and major regulatory shutdown penalties.",
+      "agentNote": "→ See §4 (Agent 2: IEC 61511 Safety Instrumented Function Proof-Test Sieve)."
     },
     {
       "code": "A04",
@@ -183,7 +195,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 2"
+      "agentLabel": "✔✔ Agent 2",
+      "label": "IEC 61511 SIF Proof-Testing & Statutory Audit Packs (B1, [IEC-61511 §16])",
+      "today": "Technician executes a safety loop trip, measures valve stroke closure time with a handheld stopwatch, logs solenoid dropout voltage, fills out paper proof-test templates, and manually files records in three-ring safety binders.",
+      "failureMode": "Incomplete, missing, or improperly calculated proof-test records invalidate the facility's Safety Integrity Level (SIL) validation, exposing the asset to catastrophic unmitigated safety hazards and major regulatory shutdown penalties.",
+      "agentNote": "→ See §4 (Agent 2: IEC 61511 Safety Instrumented Function Proof-Test Sieve)."
     },
     {
       "code": "A05",
@@ -196,7 +212,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 3"
+      "agentLabel": "✔✔ Agent 3",
+      "label": "Smart Control Valve Diagnostic Signature Analysis (B1, [ISA-CCST])",
+      "today": "Technician pulls dynamic scan curves from digital valve positioners (Fisher FIELDVUE ValveLink, Masoneilan ValVue) and manually eyeballs actuator pressure vs. travel graphs to guess whether packing friction is rising or bench set springs have sagged.",
+      "failureMode": "Subtle valve stem galling, packing overtightening, or diaphragm weeping goes unnoticed until the valve binds during an urgent plant upset, causing a severe unit trip.",
+      "agentNote": "→ See §4 (Agent 3: Smart Control Valve Dynamic Signature & Packing Friction Sieve)."
     },
     {
       "code": "A06",
@@ -209,7 +229,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "judgment",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 3"
+      "agentLabel": "✔✔ Agent 3",
+      "label": "Smart Control Valve Diagnostic Signature Analysis (B1, [ISA-CCST])",
+      "today": "Technician pulls dynamic scan curves from digital valve positioners (Fisher FIELDVUE ValveLink, Masoneilan ValVue) and manually eyeballs actuator pressure vs. travel graphs to guess whether packing friction is rising or bench set springs have sagged.",
+      "failureMode": "Subtle valve stem galling, packing overtightening, or diaphragm weeping goes unnoticed until the valve binds during an urgent plant upset, causing a severe unit trip.",
+      "agentNote": "→ See §4 (Agent 3: Smart Control Valve Dynamic Signature & Packing Friction Sieve)."
     },
     {
       "code": "A07",
@@ -222,7 +246,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 4"
+      "agentLabel": "✔✔ Agent 4",
+      "label": "4-20mA HART & Foundation Fieldbus Signal Loop Diagnostics (B1, [API-RP-552])",
+      "today": "Technician uses a portable digital multimeter and oscilloscope to troubleshoot erratic signal loops, manually calculating loop impedance, power supply drops, and fieldbus noise floor across complex marshaling cabinets.",
+      "failureMode": "Intermittent ground loops, water-ingress resistive shunts, or fieldbus signal reflection remain undiagnosed until an entire multi-drop fieldbus trunk drops offline, blindfolding the control room.",
+      "agentNote": "→ See §4 (Agent 4: 4-20mA HART / Foundation Fieldbus Signal Loop Diagnostic Sieve)."
     },
     {
       "code": "A08",
@@ -235,7 +263,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 4"
+      "agentLabel": "✔✔ Agent 4",
+      "label": "4-20mA HART & Foundation Fieldbus Signal Loop Diagnostics (B1, [API-RP-552])",
+      "today": "Technician uses a portable digital multimeter and oscilloscope to troubleshoot erratic signal loops, manually calculating loop impedance, power supply drops, and fieldbus noise floor across complex marshaling cabinets.",
+      "failureMode": "Intermittent ground loops, water-ingress resistive shunts, or fieldbus signal reflection remain undiagnosed until an entire multi-drop fieldbus trunk drops offline, blindfolding the control room.",
+      "agentNote": "→ See §4 (Agent 4: 4-20mA HART / Foundation Fieldbus Signal Loop Diagnostic Sieve)."
     },
     {
       "code": "A09",
@@ -248,7 +280,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 5"
+      "agentLabel": "✔✔ Agent 5",
+      "label": "Toxic & Flammable Gas Detector Bump-Test & Span Drift Triage (B1, [API-RP-551])",
+      "today": "Technician applies certified calibration test gas canisters to field heads, waits for T90 response, records raw ppm or %LEL readings on paper clipboards, and manually cross-references past bump tests to spot sensor poisoning.",
+      "failureMode": "Depleted electrochemical H2S cells or silicon-poisoned catalytic bead LEL sensors pass a rushed single-point bump test while suffering severe response lag, leaving the plant unprotected against catastrophic toxic gas clouds.",
+      "agentNote": "→ See §4 (Agent 5: Toxic / Flammable Gas Detector Bump-Test & Sensor Span Sieve)."
     },
     {
       "code": "A10",
@@ -261,7 +297,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "judgment",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 5"
+      "agentLabel": "✔✔ Agent 5",
+      "label": "Toxic & Flammable Gas Detector Bump-Test & Span Drift Triage (B1, [API-RP-551])",
+      "today": "Technician applies certified calibration test gas canisters to field heads, waits for T90 response, records raw ppm or %LEL readings on paper clipboards, and manually cross-references past bump tests to spot sensor poisoning.",
+      "failureMode": "Depleted electrochemical H2S cells or silicon-poisoned catalytic bead LEL sensors pass a rushed single-point bump test while suffering severe response lag, leaving the plant unprotected against catastrophic toxic gas clouds.",
+      "agentNote": "→ See §4 (Agent 5: Toxic / Flammable Gas Detector Bump-Test & Sensor Span Sieve)."
     },
     {
       "code": "A11",
@@ -274,7 +314,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 6"
+      "agentLabel": "✔✔ Agent 6",
+      "label": "Instrument Impulse Line Plugging & Winterization Audit (B1, [API-RP-552])",
+      "today": "Technician manually shakes impulse lines, checks electric heat tracing thermostat lights, and performs manual 3-valve or 5-valve manifold zero-checks when DP transmitters exhibit sluggish response.",
+      "failureMode": "Undetected paraffin/hydrate blockages or frozen impulse legs lead to artificial pressure hold-ups, causing operators to over-pressurize vessels or overfill separators under false level readings.",
+      "agentNote": "→ See §4 (Agent 6: Instrument Impulse Line Plugging & Winterization Freeze-Up Sieve)."
     },
     {
       "code": "A12",
@@ -287,7 +331,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "judgment",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 6"
+      "agentLabel": "✔✔ Agent 6",
+      "label": "Instrument Impulse Line Plugging & Winterization Audit (B1, [API-RP-552])",
+      "today": "Technician manually shakes impulse lines, checks electric heat tracing thermostat lights, and performs manual 3-valve or 5-valve manifold zero-checks when DP transmitters exhibit sluggish response.",
+      "failureMode": "Undetected paraffin/hydrate blockages or frozen impulse legs lead to artificial pressure hold-ups, causing operators to over-pressurize vessels or overfill separators under false level readings.",
+      "agentNote": "→ See §4 (Agent 6: Instrument Impulse Line Plugging & Winterization Freeze-Up Sieve)."
     },
     {
       "code": "A13",
@@ -300,7 +348,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 7"
+      "agentLabel": "✔✔ Agent 7",
+      "label": "Master Tag, P&ID & Loop Diagram Reconciliation (B1, [ISA-RP60-6])",
+      "today": "Technician manually traces wiring from field transmitter junction boxes through marshaling cabinets to DCS I/O terminals, comparing AutoCAD loop sheets against DCS configuration tables line-by-line.",
+      "failureMode": "Discrepancies between field tag plates, loop sheets, and DCS database addresses result in wrong-instrument cross-wiring, false alarms, and costly commissioning delays during turnarounds.",
+      "agentNote": "→ See §4 (Agent 7: Instrument Master Tag, P&ID & Loop Diagram Reconciliation Synthesizer)."
     },
     {
       "code": "A14",
@@ -313,7 +365,11 @@ window.PERSONA_DETAIL["P32"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 7"
+      "agentLabel": "✔✔ Agent 7",
+      "label": "Master Tag, P&ID & Loop Diagram Reconciliation (B1, [ISA-RP60-6])",
+      "today": "Technician manually traces wiring from field transmitter junction boxes through marshaling cabinets to DCS I/O terminals, comparing AutoCAD loop sheets against DCS configuration tables line-by-line.",
+      "failureMode": "Discrepancies between field tag plates, loop sheets, and DCS database addresses result in wrong-instrument cross-wiring, false alarms, and costly commissioning delays during turnarounds.",
+      "agentNote": "→ See §4 (Agent 7: Instrument Master Tag, P&ID & Loop Diagram Reconciliation Synthesizer)."
     },
     {
       "code": "A15",

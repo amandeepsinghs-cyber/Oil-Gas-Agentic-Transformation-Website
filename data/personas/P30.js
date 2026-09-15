@@ -155,7 +155,11 @@ window.PERSONA_DETAIL["P30"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "NDT Thickness Data Scrubbing & Corrosion Rate Reconciliation (B1, [API-570 §5, §7])",
+      "today": "Engineer receives dozens of 15,000-row spreadsheets from third-party NDT vendors; manually filters out false readings (e.g., thickness suddenly reading thicker than nominal due to paint layers), aligns CML IDs, and computes corrosion rates.",
+      "failureMode": "Bad data entry conceals rapid localized thinning; un-flagged CML points hit retirement thickness undetected, causing catastrophic in-service hydrocarbon blowouts.",
+      "agentNote": "→ See §4 (Agent 1: Ultrasonic Thickness (UT) CML Measurement Noise & Corrosion Rate Sieve)."
     },
     {
       "code": "A02",
@@ -168,7 +172,11 @@ window.PERSONA_DETAIL["P30"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "NDT Thickness Data Scrubbing & Corrosion Rate Reconciliation (B1, [API-570 §5, §7])",
+      "today": "Engineer receives dozens of 15,000-row spreadsheets from third-party NDT vendors; manually filters out false readings (e.g., thickness suddenly reading thicker than nominal due to paint layers), aligns CML IDs, and computes corrosion rates.",
+      "failureMode": "Bad data entry conceals rapid localized thinning; un-flagged CML points hit retirement thickness undetected, causing catastrophic in-service hydrocarbon blowouts.",
+      "agentNote": "→ See §4 (Agent 1: Ultrasonic Thickness (UT) CML Measurement Noise & Corrosion Rate Sieve)."
     },
     {
       "code": "A03",
@@ -181,7 +189,11 @@ window.PERSONA_DETAIL["P30"] = {
       "friction": "volume",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Minimum Wall Thickness (tmin) & Remaining Life Sieve (B1, [ASME-SecVIII], [API-574])",
+      "today": "Engineer extracts vessel design pressures, allowable stresses (S), joint efficiencies (E), and pipe diameters from paper U-1A forms to calculate tmin and remaining operational life.",
+      "failureMode": "Manual math errors miscalculate remaining life, leading to either premature multi-million-dollar piping replacement or operating beyond retirement thickness until a burst occurs.",
+      "agentNote": "→ See §4 (Agent 2: ASME Section VIII & API 574 Minimum Retirement Thickness (tmin) Sieve)."
     },
     {
       "code": "A04",
@@ -194,7 +206,11 @@ window.PERSONA_DETAIL["P30"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Minimum Wall Thickness (tmin) & Remaining Life Sieve (B1, [ASME-SecVIII], [API-574])",
+      "today": "Engineer extracts vessel design pressures, allowable stresses (S), joint efficiencies (E), and pipe diameters from paper U-1A forms to calculate tmin and remaining operational life.",
+      "failureMode": "Manual math errors miscalculate remaining life, leading to either premature multi-million-dollar piping replacement or operating beyond retirement thickness until a burst occurs.",
+      "agentNote": "→ See §4 (Agent 2: ASME Section VIII & API 574 Minimum Retirement Thickness (tmin) Sieve)."
     },
     {
       "code": "A05",
@@ -207,7 +223,11 @@ window.PERSONA_DETAIL["P30"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "API RP 571 Damage Mechanism & IOW Excursion Sieve (B1, [API-RP-571])",
+      "today": "Engineer manually checks operating temperatures and fluid chemistries (TAN, sulfur, velocity) against metallurgy to determine whether piping is vulnerable to sulfidation or naphthenic acid.",
+      "failureMode": "Unnoticed operating temperature excursions above Integrity Operating Windows (IOWs) accelerate corrosion rates tenfold, eating through steel within months.",
+      "agentNote": "→ See §4 (Agent 3: API RP 571 Damage Mechanism & Operating Envelope (IOW) Sieve)."
     },
     {
       "code": "A06",
@@ -220,7 +240,11 @@ window.PERSONA_DETAIL["P30"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "API RP 571 Damage Mechanism & IOW Excursion Sieve (B1, [API-RP-571])",
+      "today": "Engineer manually checks operating temperatures and fluid chemistries (TAN, sulfur, velocity) against metallurgy to determine whether piping is vulnerable to sulfidation or naphthenic acid.",
+      "failureMode": "Unnoticed operating temperature excursions above Integrity Operating Windows (IOWs) accelerate corrosion rates tenfold, eating through steel within months.",
+      "agentNote": "→ See §4 (Agent 3: API RP 571 Damage Mechanism & Operating Envelope (IOW) Sieve)."
     },
     {
       "code": "A07",
@@ -235,9 +259,9 @@ window.PERSONA_DETAIL["P30"] = {
       "owner": "none",
       "agentLabel": "✔✔",
       "label": "CUI Vulnerability & Insulation Stripping Prioritization (B1, [API-RP-571])",
-      "today": "Specialist reviews magnetic flux leakage (MFL) floor scan logs and optical perimeter settlement readings, calculating bottom plate minimum remaining thickness (MRT) for the next inspection interval.",
-      "failureMode": "Inaccurate floor plate corrosion projections cause tank bottom punctures, releasing hundreds of thousands of gallons of toxic hydrocarbons into the groundwater.",
-      "agentNote": "→ See §4 (Agent 5: API 653 Atmospheric Storage Tank Bottom MFL & Settlement Sieve)."
+      "today": "Engineer manually cross-references piping line lists, operating temperatures (-4^circC to 175^circC), and insulation cladding condition to decide which lines to scaffold and strip.",
+      "failureMode": "Schedulers order expensive scaffolding for healthy lines while overlooking severely corroded lines hidden under wet insulation, risking pipe wall puncture.",
+      "agentNote": "→ See §4 (Agent 4: Corrosion Under Insulation (CUI) & Atmospheric Vulnerability Sieve)."
     },
     {
       "code": "A08",
@@ -250,7 +274,11 @@ window.PERSONA_DETAIL["P30"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Storage Tank Floor MFL & Settlement Sieve (B1, [API-653 §5, §6])",
+      "today": "Specialist reviews magnetic flux leakage (MFL) floor scan logs and optical perimeter settlement readings, calculating bottom plate minimum remaining thickness (MRT) for the next inspection interval.",
+      "failureMode": "Inaccurate floor plate corrosion projections cause tank bottom punctures, releasing hundreds of thousands of gallons of toxic hydrocarbons into the groundwater.",
+      "agentNote": "→ See §4 (Agent 5: API 653 Atmospheric Storage Tank Bottom MFL & Settlement Sieve)."
     },
     {
       "code": "A09",
@@ -263,7 +291,11 @@ window.PERSONA_DETAIL["P30"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Storage Tank Floor MFL & Settlement Sieve (B1, [API-653 §5, §6])",
+      "today": "Specialist reviews magnetic flux leakage (MFL) floor scan logs and optical perimeter settlement readings, calculating bottom plate minimum remaining thickness (MRT) for the next inspection interval.",
+      "failureMode": "Inaccurate floor plate corrosion projections cause tank bottom punctures, releasing hundreds of thousands of gallons of toxic hydrocarbons into the groundwater.",
+      "agentNote": "→ See §4 (Agent 5: API 653 Atmospheric Storage Tank Bottom MFL & Settlement Sieve)."
     },
     {
       "code": "A10",
@@ -295,9 +327,8 @@ window.PERSONA_DETAIL["P30"] = {
       "owner": "monolith",
       "agentLabel": "❌ (APM Monolith)",
       "label": "Risk-Based Inspection (RBI) Modeling (B2, [API-RP-580])",
-      "today": "Engineer collates NDE radiographs, post-weld heat treatment (PWHT) charts, and pressure relief valve (PRV) bench test pop certificates to demonstrate OSHA PSM mechanical integrity compliance.",
-      "agentNote": "→ See §4 (Agent 7: Statutory Mechanical Integrity Compliance & API Repair Dossier Synthesizer).",
-      "failureMode": "Incomplete or disorganized inspection records fail government regulatory audits, resulting in severe civil fines or plant operational shutdowns."
+      "today": "Enterprise APM platforms (e.g., Meridium, PCMS) execute quantitative probability and consequence calculations to generate asset risk matrices.",
+      "agentNote": "❌ No. Core enterprise APM calculation domain."
     },
     {
       "code": "A12",
@@ -310,7 +341,11 @@ window.PERSONA_DETAIL["P30"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Statutory Mechanical Integrity Compliance & Quality Dossier (B1, [ASME-SecVIII], [API-576])",
+      "today": "Engineer collates NDE radiographs, post-weld heat treatment (PWHT) charts, and pressure relief valve (PRV) bench test pop certificates to demonstrate OSHA PSM mechanical integrity compliance.",
+      "failureMode": "Incomplete or disorganized inspection records fail government regulatory audits, resulting in severe civil fines or plant operational shutdowns.",
+      "agentNote": "→ See §4 (Agent 7: Statutory Mechanical Integrity Compliance & API Repair Dossier Synthesizer)."
     },
     {
       "code": "A13",
@@ -323,7 +358,11 @@ window.PERSONA_DETAIL["P30"] = {
       "friction": "traceability",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Statutory Mechanical Integrity Compliance & Quality Dossier (B1, [ASME-SecVIII], [API-576])",
+      "today": "Engineer collates NDE radiographs, post-weld heat treatment (PWHT) charts, and pressure relief valve (PRV) bench test pop certificates to demonstrate OSHA PSM mechanical integrity compliance.",
+      "failureMode": "Incomplete or disorganized inspection records fail government regulatory audits, resulting in severe civil fines or plant operational shutdowns.",
+      "agentNote": "→ See §4 (Agent 7: Statutory Mechanical Integrity Compliance & API Repair Dossier Synthesizer)."
     },
     {
       "code": "A14",

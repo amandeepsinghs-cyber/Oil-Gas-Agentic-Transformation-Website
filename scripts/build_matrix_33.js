@@ -217,6 +217,25 @@ function coverageFor(p, act) {
     if (m) hit = byN(m[1]);
   }
 
+  /* "Covered in Agent 3", "Covered in Agent 1 / Agent 6" -- how the corpus
+     says an action is folded into a squadmate instead of getting its own
+     agent. The anchored pattern above cannot see these because the number
+     does not lead, and the branch above reads agentNote rather than the
+     label, so 13 actions across 9 personas resolved to nothing and rendered
+     as "the research does not name an agent" on cells where it plainly does.
+
+     Guarded on the label carrying no refusal marker, so "No, see Agent 3"
+     and "\u274C (Monolith WELLPLAN)" still fall through to the branches below.
+     Where the label names two ("Agent 1 / Agent 6") the first is taken --
+     the action row keeps the full label, so the pair is still visible. */
+  if (!hit && !refused && act.agentLabel) {
+    const label = String(act.agentLabel);
+    if (!/[\u274C\u2717\u2718]/.test(label) && !/^\s*No[.,\s]/i.test(label)) {
+      const m = /Agent\s+(\d+)/i.exec(label);
+      if (m) hit = byN(m[1]);
+    }
+  }
+
   if (refused) {
     return {
       coverage: "human",
@@ -403,7 +422,10 @@ const banner =
      generator: scripts/build_matrix_33.js
      built:     ${new Date().toISOString()}
 
-   ${rows.length} personas x 15 operational actions = ${cellCount} cells.
+   ${rows.length} personas, ${cellCount} operational actions in total.
+   Rows are ragged by design: each persona carries at least 15 actions, and
+   some carry more. Column N is not comparable across rows -- every row is
+   sorted by priority independently.
    status: critical ${tally.critical} · friction ${tally.friction} · baseline ${tally.baseline}
    estate: Rs ${Math.round(estate)} Cr/yr across the three savings
 

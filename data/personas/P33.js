@@ -152,7 +152,11 @@ window.PERSONA_DETAIL["P33"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 1"
+      "agentLabel": "✔✔ Agent 1",
+      "label": "OGI Leak Survey Reconciliation & 15-Day Statutory Clock (B1, [EPA-NSPS-OOOO], [EPA-Method-21])",
+      "today": "Environmental lead receives video logs from contract OGI thermographers, manually keys leaking component IDs into Excel, generates maintenance work requests in SAP PM, and chases maintenance foremen daily to verify repairs.",
+      "failureMode": "A leaking valve packing work order gets lost in the maintenance backlog; on Day 16 the leak remains un-repaired without a valid legal Delay of Repair, triggering statutory non-compliance fines of up to 55,000 per day per component.",
+      "agentNote": "→ See §4 (Agent 1: LDAR Method 21 & OGI Fugitive Leak Compliance Sieve)."
     },
     {
       "code": "A02",
@@ -165,7 +169,11 @@ window.PERSONA_DETAIL["P33"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 1"
+      "agentLabel": "✔✔ Agent 1",
+      "label": "OGI Leak Survey Reconciliation & 15-Day Statutory Clock (B1, [EPA-NSPS-OOOO], [EPA-Method-21])",
+      "today": "Environmental lead receives video logs from contract OGI thermographers, manually keys leaking component IDs into Excel, generates maintenance work requests in SAP PM, and chases maintenance foremen daily to verify repairs.",
+      "failureMode": "A leaking valve packing work order gets lost in the maintenance backlog; on Day 16 the leak remains un-repaired without a valid legal Delay of Repair, triggering statutory non-compliance fines of up to 55,000 per day per component.",
+      "agentNote": "→ See §4 (Agent 1: LDAR Method 21 & OGI Fugitive Leak Compliance Sieve)."
     },
     {
       "code": "A03",
@@ -178,7 +186,11 @@ window.PERSONA_DETAIL["P33"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 7"
+      "agentLabel": "✔✔ Agent 7",
+      "label": "Corporate Scope 1/2 GHG Inventory & Carbon Accounting (B1, [EPA-Subpart-W])",
+      "today": "Specialist gathers annual fuel gas billing meter sheets, pneumatic device counts, compressor rod packing run hours, and tank flash gas simulation models to assemble federal Subpart W greenhouse gas inventories.",
+      "failureMode": "Inconsistent activity data or double-counted fuel gas streams lead to distorted greenhouse gas filings, exposing the company to public activist lawsuits, SEC climate audit scrutiny, and carbon tax penalties.",
+      "agentNote": "→ See §4 (Agent 7: Corporate Scope 1/2 GHG Inventory & Carbon Accounting Synthesizer)."
     },
     {
       "code": "A04",
@@ -191,7 +203,11 @@ window.PERSONA_DETAIL["P33"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 2"
+      "agentLabel": "✔✔ Agent 2",
+      "label": "Flare Combustion Efficiency & Unlit Venting Triage (B1, [API-GHG-Compendium], [EPA-Subpart-W])",
+      "today": "Specialist pulls hourly flare gas ultrasonic meter rates, gas chromatograph heating values, steam assist rates, and pilot thermocouples into macro spreadsheets to calculate methane slip and destruction efficiency.",
+      "failureMode": "Unmeasured steam assist ratios or unlit pilot burners result in poor destruction efficiency (DRE < 98%), causing massive unburned methane clouds to vent directly to atmosphere unrecorded.",
+      "agentNote": "→ See §4 (Agent 2: EPA Subpart W & Quad O Methane Flaring & Combustion Efficiency Sieve)."
     },
     {
       "code": "A05",
@@ -204,7 +220,11 @@ window.PERSONA_DETAIL["P33"] = {
       "friction": "traceability",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 1"
+      "agentLabel": "✔✔ Agent 1",
+      "label": "OGI Leak Survey Reconciliation & 15-Day Statutory Clock (B1, [EPA-NSPS-OOOO], [EPA-Method-21])",
+      "today": "Environmental lead receives video logs from contract OGI thermographers, manually keys leaking component IDs into Excel, generates maintenance work requests in SAP PM, and chases maintenance foremen daily to verify repairs.",
+      "failureMode": "A leaking valve packing work order gets lost in the maintenance backlog; on Day 16 the leak remains un-repaired without a valid legal Delay of Repair, triggering statutory non-compliance fines of up to 55,000 per day per component.",
+      "agentNote": "→ See §4 (Agent 1: LDAR Method 21 & OGI Fugitive Leak Compliance Sieve)."
     },
     {
       "code": "A06",
@@ -253,9 +273,9 @@ window.PERSONA_DETAIL["P33"] = {
       "owner": "none",
       "agentLabel": "✔✔ Agent 5",
       "label": "SPCC Secondary Containment & Stormwater Audit (B1, [EPA-SPCC-Part112])",
-      "today": "Certified technicians physically walk pipe racks and wellheads carrying handheld flame ionization detectors (FID) or FLIR optical gas imaging cameras.",
-      "failureMode": "Inconsistent activity data or double-counted fuel gas streams lead to distorted greenhouse gas filings, exposing the company to public activist lawsuits, SEC climate audit scrutiny, and carbon tax penalties.",
-      "agentNote": "❌ No. Pure physical field inspection trade."
+      "today": "Specialist reviews physical tank farm secondary containment inspection forms, verifying that dike walls retain 110% of largest tank capacity and that storm drainage valves remain locked closed.",
+      "failureMode": "Unrecorded drainage of oil-sheened rainwater from tank berms or un-repaired cracks in containment walls violate SPCC rules, risking catastrophic environmental contamination during a tank overflow.",
+      "agentNote": "→ See §4 (Agent 5: SPCC Secondary Containment & Stormwater Runoff Sieve)."
     },
     {
       "code": "A09",
@@ -268,7 +288,11 @@ window.PERSONA_DETAIL["P33"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 6"
+      "agentLabel": "✔✔ Agent 6",
+      "label": "Title V Air Permit Excursion & Deviation Sieve (B1, Permit Rules)",
+      "today": "Specialist manually compiles quarterly and semi-annual Title V deviation reports by cross-referencing DCS process alarm journals, heater firing rates, thermal oxidizer temperatures, and cooling tower VOC stripping logs.",
+      "failureMode": "Unreported operational parameter excursions (e.g., thermal oxidizer temp dropping below 1400^circF for 15 minutes) fail to be reported within mandatory 24-hour or 10-day state statutory notification windows, triggering strict liability violations.",
+      "agentNote": "→ See §4 (Agent 6: Air Quality Title V Operating Permit Excursion & Deviation Sieve)."
     },
     {
       "code": "A10",
@@ -281,7 +305,10 @@ window.PERSONA_DETAIL["P33"] = {
       "friction": "physical",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Field Tech)"
+      "agentLabel": "❌ (Field Tech)",
+      "label": "Physical Sniffer Probe Calibration & Field OGI Camera Inspection (B3, [EPA-Method-21], [EPA-NSPS-OOOO])",
+      "today": "Certified technicians physically walk pipe racks and wellheads carrying handheld flame ionization detectors (FID) or FLIR optical gas imaging cameras.",
+      "agentNote": "❌ No. Pure physical field inspection trade."
     },
     {
       "code": "A11",
@@ -294,7 +321,10 @@ window.PERSONA_DETAIL["P33"] = {
       "friction": "physical",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Field Tech)"
+      "agentLabel": "❌ (Field Tech)",
+      "label": "Physical Sniffer Probe Calibration & Field OGI Camera Inspection (B3, [EPA-Method-21], [EPA-NSPS-OOOO])",
+      "today": "Certified technicians physically walk pipe racks and wellheads carrying handheld flame ionization detectors (FID) or FLIR optical gas imaging cameras.",
+      "agentNote": "❌ No. Pure physical field inspection trade."
     },
     {
       "code": "A12",
@@ -307,7 +337,11 @@ window.PERSONA_DETAIL["P33"] = {
       "friction": "volume",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 7"
+      "agentLabel": "✔✔ Agent 7",
+      "label": "Corporate Scope 1/2 GHG Inventory & Carbon Accounting (B1, [EPA-Subpart-W])",
+      "today": "Specialist gathers annual fuel gas billing meter sheets, pneumatic device counts, compressor rod packing run hours, and tank flash gas simulation models to assemble federal Subpart W greenhouse gas inventories.",
+      "failureMode": "Inconsistent activity data or double-counted fuel gas streams lead to distorted greenhouse gas filings, exposing the company to public activist lawsuits, SEC climate audit scrutiny, and carbon tax penalties.",
+      "agentNote": "→ See §4 (Agent 7: Corporate Scope 1/2 GHG Inventory & Carbon Accounting Synthesizer)."
     },
     {
       "code": "A13",
@@ -320,7 +354,11 @@ window.PERSONA_DETAIL["P33"] = {
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 2"
+      "agentLabel": "✔✔ Agent 2",
+      "label": "Flare Combustion Efficiency & Unlit Venting Triage (B1, [API-GHG-Compendium], [EPA-Subpart-W])",
+      "today": "Specialist pulls hourly flare gas ultrasonic meter rates, gas chromatograph heating values, steam assist rates, and pilot thermocouples into macro spreadsheets to calculate methane slip and destruction efficiency.",
+      "failureMode": "Unmeasured steam assist ratios or unlit pilot burners result in poor destruction efficiency (DRE < 98%), causing massive unburned methane clouds to vent directly to atmosphere unrecorded.",
+      "agentNote": "→ See §4 (Agent 2: EPA Subpart W & Quad O Methane Flaring & Combustion Efficiency Sieve)."
     },
     {
       "code": "A14",
@@ -349,7 +387,11 @@ window.PERSONA_DETAIL["P33"] = {
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔ Agent 6"
+      "agentLabel": "✔✔ Agent 6",
+      "label": "Title V Air Permit Excursion & Deviation Sieve (B1, Permit Rules)",
+      "today": "Specialist manually compiles quarterly and semi-annual Title V deviation reports by cross-referencing DCS process alarm journals, heater firing rates, thermal oxidizer temperatures, and cooling tower VOC stripping logs.",
+      "failureMode": "Unreported operational parameter excursions (e.g., thermal oxidizer temp dropping below 1400^circF for 15 minutes) fail to be reported within mandatory 24-hour or 10-day state statutory notification windows, triggering strict liability violations.",
+      "agentNote": "→ See §4 (Agent 6: Air Quality Title V Operating Permit Excursion & Deviation Sieve)."
     }
   ],
   "agents": [

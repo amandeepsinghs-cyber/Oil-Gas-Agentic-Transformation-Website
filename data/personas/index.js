@@ -114,8 +114,8 @@ window.PERSONA_INDEX = [
     "initials": "P",
     "agentFocus": "Well Log Splice & Normalization Agent",
     "governingStandards": "SPWLA 2022; SPE FE Matrix",
-    "agentCount": 7,
-    "savedHours": 23.0,
+    "agentCount": 8,
+    "savedHours": 38.0,
     "agentNames": [
       "Curve Mnemonic Standardization & Header Hygiene Agent",
       "Multi-Run Log Splicing & Depth Match Agent",
@@ -123,7 +123,8 @@ window.PERSONA_INDEX = [
       "Core-to-Log Depth Shift & Poroperm Integration Agent",
       "Multi-Well Regional Log Baseline Normalization Agent",
       "Wireline Service Contractor Calibration & Quality Audit Agent",
-      "Composite Petrophysical Evaluation Dossier Agent"
+      "Composite Petrophysical Evaluation Dossier Agent",
+      "Raster Log Vectorization & LAS Digitization Agent"
     ]
   },
   {
@@ -146,8 +147,8 @@ window.PERSONA_INDEX = [
     "initials": "PG",
     "agentFocus": "Legacy Well Stratigraphic Archaeology Agent",
     "governingStandards": "AAPG; SPE Subsurface",
-    "agentCount": 7,
-    "savedHours": 26.0,
+    "agentCount": 8,
+    "savedHours": 80.0,
     "agentNames": [
       "Legacy Well Scout Card & Stratigraphic Tops Archaeology Agent",
       "Mudlog Hydrocarbon Show & Gas Ratio Extractor Agent",
@@ -155,7 +156,8 @@ window.PERSONA_INDEX = [
       "Drill Stem Test (DST) Recovery & Fluid Sieve Agent",
       "Geochemical Source Rock Maturity & TOC Profiling Agent",
       "Prospect Volumetric Monte Carlo & Risking (Pg) Consistency Agent",
-      "Post-Drill Lookback & Stratigraphic Prognosis Recalibration Agent"
+      "Post-Drill Lookback & Stratigraphic Prognosis Recalibration Agent",
+      "Well Completion Report Synthesis Agent"
     ]
   },
   {
@@ -206,8 +208,8 @@ window.PERSONA_INDEX = [
     "initials": "DE",
     "agentFocus": "Offset Well Hazard & Bit Selection Agent",
     "governingStandards": "SPE Drilling; API Spec 5CT / 10A",
-    "agentCount": 7,
-    "savedHours": 38.0,
+    "agentCount": 8,
+    "savedHours": 61.0,
     "agentNames": [
       "Offset Well Drilling Hazard Archaeology Agent",
       "Pore-Pressure / Fracture-Gradient (PPFG) Casing Seat Sieve Agent",
@@ -215,7 +217,8 @@ window.PERSONA_INDEX = [
       "Primary Cementing Hydraulics & Free-Fall Displacement Agent",
       "Authorisation for Expenditure (AFE) Time & Cost Modeling Agent",
       "Technical Drilling Program Document Assembly Agent",
-      "Post-Well NPT Failure Lookback & Recalibration Agent"
+      "Post-Well NPT Failure Lookback & Recalibration Agent",
+      "Offshore Rig Move & Weather Routing Agent"
     ]
   },
   {

@@ -345,8 +345,8 @@ window.PERSONA_DETAIL["P14"] = {
       "owner": "none",
       "agentLabel": "❌ (Synergi SPS)",
       "label": "Transient Water Hammer Hydraulic Modeling (B2, [API-RP-1130 §4])",
-      "today": "Statutory biological alertness checks and verbal communication with local fire/police dispatchers during incidents.",
-      "agentNote": "❌ No. Human physical and regulatory emergency coordination."
+      "today": "Numerical modeling inside DNV Synergi or Stoner SPS.",
+      "agentNote": "❌ No. Monolith transient hydraulic simulation."
     },
     {
       "code": "A14",
@@ -359,7 +359,10 @@ window.PERSONA_DETAIL["P14"] = {
       "friction": "judgment",
       "agentRef": null,
       "owner": "human",
-      "agentLabel": "❌ (Human)"
+      "agentLabel": "❌ (Human)",
+      "label": "Fatigue Self-Assessment & Emergency Response Calls (B3, [DOT-CRM §195.446], [DOT-CRM §195.402])",
+      "today": "Statutory biological alertness checks and verbal communication with local fire/police dispatchers during incidents.",
+      "agentNote": "❌ No. Human physical and regulatory emergency coordination."
     },
     {
       "code": "A15",
@@ -372,7 +375,10 @@ window.PERSONA_DETAIL["P14"] = {
       "friction": "physical",
       "agentRef": null,
       "owner": "human",
-      "agentLabel": "❌ (Human/First Resp)"
+      "agentLabel": "❌ (Human/First Resp)",
+      "label": "Fatigue Self-Assessment & Emergency Response Calls (B3, [DOT-CRM §195.446], [DOT-CRM §195.402])",
+      "today": "Statutory biological alertness checks and verbal communication with local fire/police dispatchers during incidents.",
+      "agentNote": "❌ No. Human physical and regulatory emergency coordination."
     }
   ],
   "agents": [

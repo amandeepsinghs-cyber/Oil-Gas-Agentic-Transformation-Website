@@ -300,8 +300,8 @@ window.PERSONA_DETAIL["P12"] = {
       "owner": "none",
       "agentLabel": "❌ (P19 Process Safety)",
       "label": "Management of Change (MOC) Review (B2, [SPE-Facilities §5])",
-      "today": "Physical inspection in the module or fabrication yard verifying flange alignments, torque marks, and redline P&IDs.",
-      "agentNote": "❌ No. Physical field engineering execution."
+      "today": "Formal process safety workflow evaluating hazards associated with facility piping and equipment changes.",
+      "agentNote": "❌ No. Owned directly by P19 Process Safety Engineer."
     },
     {
       "code": "A11",
@@ -314,7 +314,10 @@ window.PERSONA_DETAIL["P12"] = {
       "friction": "physical",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Field Eng)"
+      "agentLabel": "❌ (Field Eng)",
+      "label": "Physical Hydrotest & Piping Walkdowns (B3, [API-RP-14E §5], [SPE-Facilities §5])",
+      "today": "Physical inspection in the module or fabrication yard verifying flange alignments, torque marks, and redline P&IDs.",
+      "agentNote": "❌ No. Physical field engineering execution."
     },
     {
       "code": "A12",
@@ -375,7 +378,10 @@ window.PERSONA_DETAIL["P12"] = {
       "friction": "physical",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "❌ (Field Eng)"
+      "agentLabel": "❌ (Field Eng)",
+      "label": "Physical Hydrotest & Piping Walkdowns (B3, [API-RP-14E §5], [SPE-Facilities §5])",
+      "today": "Physical inspection in the module or fabrication yard verifying flange alignments, torque marks, and redline P&IDs.",
+      "agentNote": "❌ No. Physical field engineering execution."
     }
   ],
   "agents": [

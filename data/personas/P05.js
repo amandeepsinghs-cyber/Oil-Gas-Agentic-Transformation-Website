@@ -343,6 +343,23 @@ window.PERSONA_DETAIL["P05"] = {
       "agentRef": null,
       "owner": "cross-functional",
       "agentLabel": "Cross-functional (See P23)"
+    },
+    {
+      "code": "A16",
+      "action": "Synthesize the statutory Well Completion Report from post-drill source records",
+      "source": "[AAPG-M89 §11]",
+      "scope": "well",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "weeks",
+      "friction": "assembly",
+      "agentRef": 8,
+      "owner": "agent",
+      "agentLabel": "Agent 8: Well Completion Report Synthesis Agent",
+      "label": "Statutory Well Completion Report Synthesis (B1, [AAPG-M89 §11])",
+      "today": "Every completed well owes the regulator a Final Geological & Completion Report — formation tops, hydrocarbon shows, petrophysical cutoffs, DST results, bit and hydraulics records, thirty-odd figures — inside a 30 to 90 day statutory window. The geologist assembles it by hand from a dozen disconnected systems, cutting and pasting across three to four weeks and 60 to 100 engineer hours per well, snipping and captioning each figure individually.",
+      "failureMode": "The report is the permanent record of the well, and it drifts from the well. A top transcribed from a superseded interpretation, a cutoff carried over from the previous report's template, a figure captioned with the wrong depth scale — each survives review because nobody re-derives the number from source. That report is then the input every later regional study trusts. Where the backlog wins instead, the filing misses the statutory window and the asset takes a fine and an audit.",
+      "agentNote": "→ Agent 8 (Well Completion Report Synthesis Agent)."
     }
   ],
   "agents": [
@@ -429,6 +446,18 @@ window.PERSONA_DETAIL["P05"] = {
       "stopsAt": "Overwriting regional interpretation grids without peer review committee consensus.",
       "failureModes": "If depth error exceeds 50 meters, the agent flags [Major Prognosis Bust: Fault Encountered or Velocity Anomaly Unaccounted For].",
       "agentId": "OG-P05-A07"
+    },
+    {
+      "n": 8,
+      "name": "Well Completion Report Synthesis Agent",
+      "oneLine": "Assembles the statutory Final Geological & Completion Report by pulling every figure and table from the system of record that owns it — tops from the final interpretation, shows from the mudlog, cutoffs from the petrophysical dossier, recoveries from the DST register — and binds a provenance link to each one, so the geologist reviews a document in which no number was retyped.",
+      "frictionSolved": "Eliminates ~54.0 hours per completed well of manual cross-system compilation, figure snipping and captioning, and boilerplate drafting. (Assumption: the conservative end of the documented 60–100 engineer hour range, less the upper end of the 4–6 hour geologist review the agent still requires.)",
+      "reads": "Final formation tops and the interpretation version that produced them, mudlog show and gas chromatography records, the petrophysical evaluation dossier and its cutoff table, DST pressure and recovery records, the drilling bit and hydraulics log, the deviation survey, the regulator's current report template for the jurisdiction (DGH, NSTA, BSEE, NOPTA), and the pre-approved regional stratigraphy boilerplate in the enterprise knowledge base.",
+      "does": "Maps the regulator's required sections onto the source systems that own each one, then populates the report by reference rather than by transcription — every top, cutoff, pressure and volume carries a link to the record and the version it was drawn from. Crops, scales, captions and depth-labels figures from their source plots. Composes the narrative sections from approved boilerplate, leaving the interpretive passages the regulator expects a named geologist to write as explicitly empty, marked drafts. Cross-checks the assembled report against itself: a top quoted in the summary must equal the top in the tops table.",
+      "returns": "A complete draft WCR in the regulator's required layout, plus a provenance appendix listing every field, its source system, and its record version, plus an exception list of the fields the agent could not source and the interpretive sections it declined to write.",
+      "stopsAt": "Filing anything with a regulator, writing interpretive geological argument, reconciling two sources that disagree, or substituting a prior report's value where the current source is silent — a missing field is reported as missing and never inherited from the template.",
+      "failureModes": "Where two source systems give different values for the same quantity, the agent does not choose. It writes both, cites both, and raises [Source Conflict: Formation Top Disagrees Between Interpretation and Tops Register] — the disagreement is itself the finding, and it is usually the reason the old hand-built reports were wrong. Where the statutory deadline is inside 14 days and required fields remain unsourced, it escalates rather than shipping a partial draft quietly.",
+      "agentId": "OG-P05-A08"
     }
   ],
   "valueModel": {
@@ -489,14 +518,22 @@ window.PERSONA_DETAIL["P05"] = {
         "afterHours": 0.5,
         "savedHours": 2.5,
         "frictionRemoved": "Prognosis vs. Actual Delta Collation Drag"
+      },
+      {
+        "agent": "8. Well Completion Report Synthesis",
+        "unit": "1 Statutory Well Completion Report",
+        "beforeHours": 60.0,
+        "afterHours": 6.0,
+        "savedHours": 54.0,
+        "frictionRemoved": "Cross-System Report Compilation Drag"
       }
     ],
     "total": {
       "unit": "1 Regional Exploration Prospect Study",
-      "beforeHours": 30.0,
-      "afterHours": 4.0,
-      "savedHours": 26.0,
-      "frictionRemoved": "Eliminates 87% of Data Archaeology Overhead",
+      "beforeHours": 90.0,
+      "afterHours": 10.0,
+      "savedHours": 80.0,
+      "frictionRemoved": "Eliminates 89% of Data Archaeology Overhead",
       "label": "Total Squad Impact per Study"
     }
   },

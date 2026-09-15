@@ -94,8 +94,17 @@ def main() -> int:
     check("dossier row links",
           len(re.findall(r'dossier\.html\?p=P\d\d"', html)), len(data))
 
-    # the estate figure is stated, once
-    check("estate figure present", "2,641" in html, True)
+    # The estate figure, read out of the generated data rather than frozen
+    # here. This was the literal "2,641" and had silently gone false-green:
+    # the only "2,641" left in the file was an explanatory HTML comment, which
+    # --dump-dom returns, so the check passed while the board rendered a
+    # different number. Anchoring on the money cell means a comment can never
+    # satisfy it again.
+    # (en-IN grouping only diverges from Python's at 6 digits; the estate is 4.)
+    estate = f"\u20b9{meta['estateCr']:,} Cr"
+    check("estate figure on the money cell",
+          bool(re.search(r'class="est-v is-money"\s*>' + re.escape(estate) + r'<', html)),
+          True)
 
     # detail panel, agent case
     print(f"\ndetail · agent-held  ?p=P01&a=3")

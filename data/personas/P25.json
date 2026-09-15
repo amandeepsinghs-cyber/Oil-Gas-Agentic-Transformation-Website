@@ -147,7 +147,11 @@
       "friction": "volume",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Dyno Card Surveillance Screening & Fluid Pound Triage (B1, [Gibbs-Dyno §3], [API-RP-11L §4])",
+      "today": "Specialist opens XSPOC every morning, clicking through 250+ pump dyno cards to manually distinguish full barrel fillage from severe fluid pound, gas interference, or parted rods.",
+      "failureMode": "Visual fatigue causes the specialist to overlook severe fluid pound; violent rod impact continues hammering the pump for weeks, buckling the barrel and snapping the rod string.",
+      "agentNote": "→ See §4 (Agent 1: Sucker Rod Dynamometer Card Geometric Classifier & Fluid Pound Sieve)."
     },
     {
       "code": "A02",
@@ -160,7 +164,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Dyno Card Surveillance Screening & Fluid Pound Triage (B1, [Gibbs-Dyno §3], [API-RP-11L §4])",
+      "today": "Specialist opens XSPOC every morning, clicking through 250+ pump dyno cards to manually distinguish full barrel fillage from severe fluid pound, gas interference, or parted rods.",
+      "failureMode": "Visual fatigue causes the specialist to overlook severe fluid pound; violent rod impact continues hammering the pump for weeks, buckling the barrel and snapping the rod string.",
+      "agentNote": "→ See §4 (Agent 1: Sucker Rod Dynamometer Card Geometric Classifier & Fluid Pound Sieve)."
     },
     {
       "code": "A03",
@@ -175,9 +183,8 @@
       "owner": "none",
       "agentLabel": "❌ (XSPOC Engine)",
       "label": "Gibbs 1D Wave Equation Solution (B2, [Gibbs-Dyno §2])",
-      "today": "When an ESP trips on motor underload, the engineer manually pulls high-frequency motor current charts and discharge pressure trends to distinguish pump-off from gas locking or a sheared shaft.",
-      "agentNote": "→ See §4 (Agent 2: ESP Electrical Telemetry, Thermal Runaway & Underload Trip Diagnostic Sieve).",
-      "failureMode": "Field pumpers restart an underloaded ESP prematurely without investigating gas locking, repeatedly shocking the motor windings and precipitating a $150k motor burnout."
+      "today": "High-speed numerical finite-difference solver embedded natively inside XSPOC or ForeSite that computes the downhole pump card from surface polished rod transducers.",
+      "agentNote": "❌ No. Core deterministic wave equation solver. Monolith owns the math; the agent's job is classifying the resulting downhole card shape."
     },
     {
       "code": "A04",
@@ -190,7 +197,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "ESP Telemetry Screening & Electrical Trip Diagnosis (B1, [API-RP-11S §4, §5])",
+      "today": "When an ESP trips on motor underload, the engineer manually pulls high-frequency motor current charts and discharge pressure trends to distinguish pump-off from gas locking or a sheared shaft.",
+      "failureMode": "Field pumpers restart an underloaded ESP prematurely without investigating gas locking, repeatedly shocking the motor windings and precipitating a $150k motor burnout.",
+      "agentNote": "→ See §4 (Agent 2: ESP Electrical Telemetry, Thermal Runaway & Underload Trip Diagnostic Sieve)."
     },
     {
       "code": "A05",
@@ -203,7 +214,11 @@
       "friction": "consistency",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "ESP Telemetry Screening & Electrical Trip Diagnosis (B1, [API-RP-11S §4, §5])",
+      "today": "When an ESP trips on motor underload, the engineer manually pulls high-frequency motor current charts and discharge pressure trends to distinguish pump-off from gas locking or a sheared shaft.",
+      "failureMode": "Field pumpers restart an underloaded ESP prematurely without investigating gas locking, repeatedly shocking the motor windings and precipitating a $150k motor burnout.",
+      "agentNote": "→ See §4 (Agent 2: ESP Electrical Telemetry, Thermal Runaway & Underload Trip Diagnostic Sieve)."
     },
     {
       "code": "A06",
@@ -302,9 +317,8 @@
       "owner": "none",
       "agentLabel": "❌ (Specialist Teardown)",
       "label": "Physical Pump Teardown Inspection in Workshop (B3, [API-RP-11S §8])",
-      "today": "Specialist extracts historical pull tickets from SAP PM, matches them with scanned PDF teardown reports, and spends days updating run-life Weibull curves and drafting new replacement pump specifications.",
-      "agentNote": "→ See §4 (Agent 7: Artificial Lift Workover Scope & Teardown Failure Taxonomy Synthesizer).",
-      "failureMode": "Failing to synthesize failure trends leads to replacing a failed pump with the exact same metallurgy or pump stage design, guaranteeing another failure within 90 days."
+      "today": "Specialist walks into the vendor teardown facility, examining pitted pump impellers, scored tungsten carbide bearings, and eroded diffuser bowls under workshop lighting.",
+      "agentNote": "❌ No. Pure hands-on physical forensic inspection of mechanical hardware components."
     },
     {
       "code": "A12",
@@ -317,7 +331,11 @@
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Artificial Lift MTBF Tracking & Workover Redesign Dossier (B1, [API-RP-11S §7])",
+      "today": "Specialist extracts historical pull tickets from SAP PM, matches them with scanned PDF teardown reports, and spends days updating run-life Weibull curves and drafting new replacement pump specifications.",
+      "failureMode": "Failing to synthesize failure trends leads to replacing a failed pump with the exact same metallurgy or pump stage design, guaranteeing another failure within 90 days.",
+      "agentNote": "→ See §4 (Agent 7: Artificial Lift Workover Scope & Teardown Failure Taxonomy Synthesizer)."
     },
     {
       "code": "A13",
@@ -330,7 +348,11 @@
       "friction": "assembly",
       "agentRef": null,
       "owner": "none",
-      "agentLabel": "✔✔"
+      "agentLabel": "✔✔",
+      "label": "Artificial Lift MTBF Tracking & Workover Redesign Dossier (B1, [API-RP-11S §7])",
+      "today": "Specialist extracts historical pull tickets from SAP PM, matches them with scanned PDF teardown reports, and spends days updating run-life Weibull curves and drafting new replacement pump specifications.",
+      "failureMode": "Failing to synthesize failure trends leads to replacing a failed pump with the exact same metallurgy or pump stage design, guaranteeing another failure within 90 days.",
+      "agentNote": "→ See §4 (Agent 7: Artificial Lift Workover Scope & Teardown Failure Taxonomy Synthesizer)."
     },
     {
       "code": "A14",

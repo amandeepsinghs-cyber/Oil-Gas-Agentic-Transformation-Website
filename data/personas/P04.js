@@ -338,6 +338,23 @@ window.PERSONA_DETAIL["P04"] = {
       "agentRef": null,
       "owner": "cross-functional",
       "agentLabel": "Cross-functional (See P21)"
+    },
+    {
+      "code": "A16",
+      "action": "Digitize scanned raster well logs and mudlogs into CWLS LAS curves",
+      "source": "[SPWLA §1.4]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Campaign",
+      "time": "days",
+      "friction": "volume",
+      "agentRef": 8,
+      "owner": "agent",
+      "agentLabel": "Agent 8: Raster Log Vectorization & LAS Digitization Agent",
+      "label": "Scanned Raster Log & Mudlog Digitization (B1, [SPWLA §1.4])",
+      "today": "Decades of borehole records survive only as raster — flat scanned PDFs, TIFF plots and digitized microfiche. Techlog, Petrel and Compass cannot parse a picture, so the interval is invisible to every planning tool the asset owns. Recovering one log means manual line tracing against the track grid, curve by curve, at two to four days per log; most archives are therefore never digitized at all and simply sit dark.",
+      "failureMode": "The knowledge exists and cannot be reached. A 2004 offset well three kilometres away recorded a gas kick at 3,250 m, written into a mudlog remark that was scanned and never indexed. The infill well is planned blind to it, the bit penetrates the same pocket, and the outcome is a kick, a pack-off, or weeks of fishing. Hand tracing carries its own quiet failure: a logarithmic resistivity track read as linear yields curve values wrong by an order of magnitude that still look plausible on a plot.",
+      "agentNote": "→ Agent 8 (Raster Log Vectorization & LAS Digitization Agent)."
     }
   ],
   "agents": [
@@ -424,6 +441,18 @@ window.PERSONA_DETAIL["P04"] = {
       "stopsAt": "Modifying petrophysical cutoffs or changing officially booked reserves.",
       "failureModes": "If computed net pay deviates by >15% from pre-drill prognosis, the agent highlights the delta: [Reserves Variance Alert: Net Pay Exceeds Pre-Drill Prognosis by >15%].",
       "agentId": "OG-P04-A07"
+    },
+    {
+      "n": 8,
+      "name": "Raster Log Vectorization & LAS Digitization Agent",
+      "oneLine": "Converts scanned raster well logs and mudlogs — flat PDFs, TIFFs, microfiche scans — into depth-registered CWLS LAS curves by detecting the track grid, recovering each track's own scale, and tracing curves apart by stroke and colour, then indexes every OCR'd mudlog hazard remark against its depth so a planner can find it.",
+      "frictionSolved": "Eliminates ~15.0 hours per scanned log set of manual line tracing, axis calibration and track-by-track transcription. (Assumption: the conservative end of the documented 2–4 day manual digitization range, less one hour of specialist verification against the source raster.)",
+      "reads": "Scanned raster logs and mudlogs (PDF, TIFF, high-resolution image, microfiche scan), the plot's own header block and track legend, depth tick annotations, and the well master registry entry for the UWI.",
+      "does": "Deskews and rectifies the scan, then extracts horizontal depth gridlines and vertical decade gridlines to build a pixel-to-depth and pixel-to-value transform that absorbs paper stretch and scanner distortion. Reads each track's scale from the grid itself rather than assuming one — logarithmic 0.2–2000 Omega·m resistivity is distinguished from linear 0–150 GAPI gamma ray by decade spacing, not by track position. Separates overlapping curves within a track by stroke style, colour channel and continuous contour tracking under a physics prior that a log curve cannot step discontinuously without a rock transition. Emits CWLS LAS 2.0/3.0 with -999.25 nulls, and OCRs unstructured mudlog remarks (\"connection gas 120 units at 3,252 m\", \"lost circulation 40 bbl/hr at 3,280 m\") into depth-tagged and geo-tagged hazard records.",
+      "returns": "A [UWI]_digitized.las curve set carrying a per-curve confidence score and the traced pixel path that produced it, plus a depth-indexed hazard register for the mudlog remarks, both written alongside — never over — the source raster.",
+      "stopsAt": "Emitting a curve whose track scale could not be read from the grid, interpolating across a region of the plot obscured by a stamp, fold or tear, or presenting a traced curve as a measured one — every output curve is marked as raster-derived in the ~CURVE description.",
+      "failureModes": "Curves tracing below 0.90 confidence, and any interval where two curves of the same colour and stroke cross, are routed to an amber review queue with the pixel path overlaid on the source image for one-glance specialist adjudication. Where the header block is illegible and the depth datum cannot be established, the agent refuses the whole log rather than guess a reference: [Datum Unreadable: Depth Registration Cannot Be Established]. A hazard remark whose depth cannot be resolved is still written to the register, flagged [Depth Unresolved], on the reasoning that a planner who knows a hazard exists somewhere in the well is better served than one who never sees it.",
+      "agentId": "OG-P04-A08"
     }
   ],
   "valueModel": {
@@ -484,14 +513,22 @@ window.PERSONA_DETAIL["P04"] = {
         "afterHours": 0.25,
         "savedHours": 2.25,
         "frictionRemoved": "Tabular Net-Pay Summary Assembly Drag"
+      },
+      {
+        "agent": "8. Raster Log Vectorization & LAS",
+        "unit": "1 Scanned Legacy Log Set (raster)",
+        "beforeHours": 16.0,
+        "afterHours": 1.0,
+        "savedHours": 15.0,
+        "frictionRemoved": "Manual Line Tracing & Axis Calibration Drag"
       }
     ],
     "total": {
       "unit": "1 Complete Well Evaluation Dataset",
-      "beforeHours": 26.0,
-      "afterHours": 3.0,
-      "savedHours": 23.0,
-      "frictionRemoved": "Eliminates 88% of Routine Data Hygiene Drag",
+      "beforeHours": 42.0,
+      "afterHours": 4.0,
+      "savedHours": 38.0,
+      "frictionRemoved": "Eliminates 90% of Routine Data Hygiene Drag",
       "label": "Total Squad Impact per Well Study"
     }
   },
