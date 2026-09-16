@@ -294,6 +294,40 @@
   .est-v { font-size: var(--fs-20); font-weight: 600; letter-spacing: -0.01em; }
   .est-v.is-money { color: var(--green-ink); }
 
+  /* The lever definitions, last thing on the page. Not board-facing: this is
+     the presenter's own reference for the moment someone asks how Uptime
+     differs from Integrity, so it is placed where it costs the slide nothing.
+
+     flex-basis:100% forces its own row inside .page-foot, which is otherwise a
+     two-up flex of lockup and footnote -- without it this becomes a third
+     column and squeezes both. One step smaller and dimmer than .foot-note,
+     because that footnote is a caveat the audience may need and this is a
+     gloss only the speaker needs. */
+  .est-def {
+    flex-basis: 100%;
+    margin: 4px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-size: var(--fs-10);
+    line-height: 1.65;
+    color: var(--dim-ink);
+    opacity: 0.92;
+  }
+  .est-def b { font-weight: 600; }
+  /* One definition per line. These were inline while the block sat under the
+     estate strip at 104ch, where two fitted per row. At full footer width they
+     ran together -- "...cost per barrel Uptime production not lost..." -- and
+     with no separator between them the eye had nothing to break on. Stacked,
+     each line opens with its coloured lever name, which is what makes this
+     scannable at the moment it is actually wanted: mid-sentence, when someone
+     has just asked what Integrity means. */
+  .est-def .ld-item { display: block; }
+  .est-def .ld-prod  { color: var(--g-blue); }
+  .est-def .ld-up    { color: var(--g-green); }
+  .est-def .ld-integ { color: var(--g-purple); }
+  .est-def .ld-recov { color: var(--g-cyan); }
+  .est-def .ld-sep { opacity: 0.45; padding: 0 3px; }
+
   /* ═══ CONTROLS ═════════════════════════════════════════════════════════ */
   .controls {
     position: sticky; top: 0; z-index: 40;
@@ -1371,10 +1405,28 @@
       (productivity, uptime, integrity, recovery) and are gross figures on
       stated assumptions.
     </p>
+    <!-- What the four levers actually mean, rendered from VALUE_LEVERS in
+         data/value_model.js.
+
+         This sat under the estate strip first, on the reasoning that a reader
+         meeting four money figures should be told what separates them. In
+         practice it is not board-facing content: nobody in the room reads a
+         definition off a slide. It is the presenter's own line, wanted to hand
+         when someone asks how Uptime differs from Integrity — so it belongs
+         last, where it is available without competing with anything.
+
+         Typed nowhere: the strings come from the same file the arithmetic
+         does, so the board, the drawer and the dossier cannot drift apart. -->
+    <p class="est-def" id="est-def"></p>
   </footer>
 
 </div>
 
+<!-- VALUE_LEVERS lives here: the canonical name, one-line definition and
+     operator metric for each of the four. It was previously defined and never
+     read, so both this board and the dossier retyped the strings and had begun
+     to drift apart. Loaded first so the definitions line can render from it. -->
+<script src="../../data/value_model.js"></script>
 <script src="../data/matrix_33.js"></script>
 <script>
 (function () {
@@ -1439,6 +1491,47 @@
     return '<div class="est-cell ' + (c[3] || "") + '"><div class="est-k">' + esc(c[0]) +
            '</div><div class="est-v ' + c[2] + '">' + esc(c[1]) + "</div></div>";
   }).join("");
+
+  /* ── what the four levers mean ──────────────────────────────────────────
+     The strip above states four money figures and names them. A reader who
+     cannot separate Uptime from Integrity reads four numbers and one blur,
+     so the distinction is spelled out once, here, at caption size.
+
+     Read from VALUE_LEVERS rather than typed, for the same reason every other
+     count on this board is computed: a definition that is retyped is one that
+     will disagree with the dossier within two edits. If the value model fails
+     to load, the line is omitted rather than half-stated. */
+  var HUE = { productivity: "ld-prod", uptime: "ld-up",
+              integrity: "ld-integ", recovery: "ld-recov" };
+
+  /* These strings are written as sentences in the value model ("NPT %...",
+     "Opex, cost..."), and here they run on from the lever name, so the lead
+     capital has to go. Blanket toLowerCase() cannot do it: it renders NPT as
+     "npt", and an operator reads that as a typo. Fold the first word only when
+     it is not an acronym. */
+  function lead(s) {
+    var first = s.split(" ")[0].replace(/[^A-Za-z]/g, "");
+    if (first.length > 1 && first === first.toUpperCase()) return s;
+    return s.charAt(0).toLowerCase() + s.slice(1);
+  }
+
+  var defEl = document.getElementById("est-def");
+  var LV = window.VALUE_LEVERS;
+  if (defEl && LV && LV.order) {
+    /* No separator between items. They were pipe-delimited while this was one
+       running line, but each definition is long enough to take a row of its
+       own, which left the pipes dangling in the right margin like artefacts.
+       The bold coloured lever name opens each one clearly enough. */
+    defEl.innerHTML = LV.order.map(function (k) {
+      var L = LV[k];
+      if (!L) return "";
+      return '<span class="ld-item">' +
+               '<b class="' + (HUE[k] || "") + '">' + esc(L.label) + "</b> " +
+               esc(lead(L.counts)) +
+               ' <span class="ld-sep">·</span> ' + esc(lead(L.metric)) +
+             "</span> ";
+    }).filter(Boolean).join("");
+  }
 
   /* The kicker used to carry these three numbers as literal text, which is how
      it came to read "495 workflows · 232 agents" against a board rendering 498
@@ -1895,13 +1988,28 @@
 
   /* Productivity / Uptime / Integrity / Recovery -- the canonical four, named
      once in data/value_model.js as VALUE_LEVERS. The keys here are the value
-     model's internal term names, which is why they read human/asset/risk. */
+     model's internal term names, which is why they read human/asset/risk.
+
+     These labels and one-liners used to be typed out again right here, and had
+     already drifted: Uptime read "throughput held" on this page against "not
+     lost" in the model. They are now pulled from VALUE_LEVERS, so the drawer,
+     the definitions line under the estate strip and the dossier all say the
+     same thing. The literals survive only as a fallback for the case where the
+     value model has not loaded -- a drawer with no captions is worse than a
+     drawer with slightly stale ones. */
   var LEVERS = [
-    { k: "human", label: "Productivity", sub: "expert hours redeployed" },
-    { k: "asset", label: "Uptime",       sub: "production and throughput held" },
-    { k: "risk",  label: "Integrity",    sub: "expected loss avoided" },
-    { k: "recov", label: "Recovery",     sub: "barrels found and recovered" }
-  ];
+    { k: "human", vk: "productivity", label: "Productivity", sub: "expert hours redeployed" },
+    { k: "asset", vk: "uptime",       label: "Uptime",       sub: "production and throughput held" },
+    { k: "risk",  vk: "integrity",    label: "Integrity",    sub: "expected loss avoided" },
+    { k: "recov", vk: "recovery",     label: "Recovery",     sub: "barrels found and recovered" }
+  ].map(function (L) {
+    var src = window.VALUE_LEVERS && window.VALUE_LEVERS[L.vk];
+    if (src) {
+      L.label = src.label;
+      L.sub   = src.counts.charAt(0).toLowerCase() + src.counts.slice(1);
+    }
+    return L;
+  });
 
   function leverStrip(r) {
     var v = r.value;

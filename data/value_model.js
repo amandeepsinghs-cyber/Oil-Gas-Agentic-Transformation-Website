@@ -105,7 +105,7 @@
 
     uptime: {
       label:   "Uptime",
-      counts:  "Production and throughput not lost",
+      counts:  "Production not lost to waiting \u2014 the asset is fit, but idle",
       metric:  "NPT %, on-stream factor",
       unit:    "INR",
       term:    "ASSET_CAPITAL",
@@ -115,7 +115,7 @@
 
     integrity: {
       label:   "Integrity",
-      counts:  "Expected loss avoided before it occurs",
+      counts:  "Expected loss avoided before a barrier fails",
       metric:  "Process safety events, loss of primary containment",
       unit:    "INR",
       term:    "ASSET_RISK",
