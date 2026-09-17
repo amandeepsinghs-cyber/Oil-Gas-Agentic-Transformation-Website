@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cairn Oil & Gas // Strategic Opportunity Terrain</title>
+  <link rel="stylesheet" href="assets/aurora.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    :root {
+      --font-display: 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'Google Sans Mono', 'Roboto Mono', monospace;
+    }
+    body {
+      font-family: var(--font-display);
+      margin: 0;
+      padding: 32px 24px;
+      background: #06090e;
+      color: #cbd5e1;
+      min-height: 100vh;
+      box-sizing: border-box;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    html.theme-light body {
+      background: #f8fafc;
+      color: #1e293b;
+    }
+    .slide-wrapper {
+      max-width: 1440px;
+      margin: 0 auto;
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(12px);
+    }
+    html.theme-light .slide-wrapper {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+    }
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    html.theme-light .top-header {
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .badge-cairn {
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
+    }
+    html.theme-light .badge-cairn {
+      background: #e0f2fe;
+      border: 1px solid #38bdf8;
+      color: #0369a1;
+    }
+    .theme-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .theme-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+    }
+    html.theme-light .theme-btn {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      color: #334155;
+    }
+    .title-main {
+      font-size: 28px;
+      font-weight: 800;
+      color: #f8fafc;
+      margin: 8px 0 4px 0;
+      letter-spacing: -0.5px;
+    }
+    html.theme-light .title-main {
+      color: #0f172a;
+    }
+    .title-sub {
+      font-size: 14px;
+      color: #94a3b8;
+      margin: 0;
+    }
+    html.theme-light .title-sub {
+      color: #64748b;
+    }
+    
+    /* Layout Grid */
+    .grid-canvas {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 1024px) {
+      .grid-canvas { grid-template-columns: 1fr; }
+    }
+
+    /* Left Card: Operating Reality */
+    .operating-card {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    html.theme-light .operating-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+    }
+
+    .pillar-box {
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 12px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .pillar-box:hover {
+      transform: translateY(-2px);
+    }
+    .pillar-ident {
+      background: rgba(56, 189, 248, 0.07);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+    }
+    html.theme-light .pillar-ident {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+    }
+    .pillar-exploit {
+      background: rgba(129, 140, 248, 0.07);
+      border: 1px solid rgba(129, 140, 248, 0.3);
+    }
+    html.theme-light .pillar-exploit {
+      background: #f5f3ff;
+      border: 1px solid #ddd6fe;
+    }
+
+    /* Horizontal Seam Boxes */
+    .seam-box {
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-top: 10px;
+    }
+    .seam-realtime {
+      background: rgba(245, 158, 11, 0.08);
+      border-left: 4px solid #f59e0b;
+      border-top: 1px solid rgba(245, 158, 11, 0.2);
+      border-right: 1px solid rgba(245, 158, 11, 0.2);
+      border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+    }
+    html.theme-light .seam-realtime {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      border-color: #fef3c7;
+    }
+    .seam-darkdata {
+      background: rgba(239, 68, 68, 0.08);
+      border-left: 4px solid #ef4444;
+      border-top: 1px solid rgba(239, 68, 68, 0.2);
+      border-right: 1px solid rgba(239, 68, 68, 0.2);
+      border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+    }
+    html.theme-light .seam-darkdata {
+      background: #fef2f2;
+      border-left: 4px solid #ef4444;
+      border-color: #fee2e2;
+    }
+
+    /* Right Card: 2x2 Matrix */
+    .matrix-card {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    html.theme-light .matrix-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+    }
+    .matrix-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .quad-box {
+      border-radius: 10px;
+      padding: 16px;
+      min-height: 145px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .quad-box:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(0,0,0,0.3);
+    }
+    .quad-quickwin {
+      background: rgba(16, 185, 129, 0.12);
+      border: 1.5px solid #10b981;
+    }
+    html.theme-light .quad-quickwin {
+      background: #ecfdf5;
+      border: 1.5px solid #059669;
+    }
+    .quad-strategic {
+      background: rgba(56, 189, 248, 0.08);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+    }
+    html.theme-light .quad-strategic {
+      background: #f0f9ff;
+      border: 1px solid #0284c7;
+    }
+    .quad-foundational {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px dashed rgba(255, 255, 255, 0.12);
+    }
+    html.theme-light .quad-foundational {
+      background: #f1f5f9;
+      border: 1px dashed #cbd5e1;
+    }
+    .quad-heavy {
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px dashed rgba(255, 255, 255, 0.06);
+    }
+    html.theme-light .quad-heavy {
+      background: #f8fafc;
+      border: 1px dashed #e2e8f0;
+    }
+
+    /* Footer Banner */
+    .flightpath-banner {
+      margin-top: 20px;
+      background: rgba(16, 185, 129, 0.08);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 8px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    html.theme-light .flightpath-banner {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slide-wrapper">
+  <!-- Top Header -->
+  <div class="top-header">
+    <div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+        <span class="badge badge-cairn">CAIRN OIL & GAS // VEDANTA</span>
+        <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #94a3b8; letter-spacing: 1px;">
+          STRATEGIC OPPORTUNITY TERRAIN
+        </span>
+      </div>
+      <h1 class="title-main">
+        The Dual Operating Reality <span style="background: linear-gradient(135deg, #38bdf8, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">× Opportunity Matrix</span>
+      </h1>
+      <p class="title-sub">
+        Solving the two horizontal data seams unlocks both Subsurface Exploration and Rig-Floor Operations without operational risk.
+      </p>
+    </div>
+    <div>
+      <button class="theme-btn" onclick="toggleTheme()">🌓 Toggle Light / Dark</button>
+    </div>
+  </div>
+
+  <!-- Grid Canvas (Left: Thinking, Right: Matrix) -->
+  <div class="grid-canvas">
+    
+    <!-- LEFT PANEL: The Operating Reality -->
+    <div class="operating-card">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #38bdf8; letter-spacing: 1px;">
+            01 // THE BUSINESS ENGINE (YOUR THINKING)
+          </span>
+          <span style="font-family: var(--font-mono); font-size: 11px; color: #94a3b8;">VERTICAL VALUE ENGINES</span>
+        </div>
+
+        <!-- The Two Vertical Pillars -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+          <div class="pillar-box pillar-ident">
+            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #38bdf8; margin-bottom: 4px;">PILLAR 1</div>
+            <div style="font-size: 15px; font-weight: 700; color: #f8fafc; margin-bottom: 6px;" class="theme-text">Resource Identification</div>
+            <div style="font-size: 12px; color: #94a3b8; line-height: 1.45;">
+              <b>Exploration & Appraisal:</b> Finding bypassed oil in mature fields, high-confidence well placement, and rapid prospect screening for OALP blocks.
+            </div>
+            <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 10px; color: #38bdf8; font-weight: 600;">
+              Goal: Accrete Reserves (RRR)
+            </div>
+          </div>
+
+          <div class="pillar-box pillar-exploit">
+            <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #818cf8; margin-bottom: 4px;">PILLAR 2</div>
+            <div style="font-size: 15px; font-weight: 700; color: #f8fafc; margin-bottom: 6px;" class="theme-text">Resource Exploitation</div>
+            <div style="font-size: 12px; color: #94a3b8; line-height: 1.45;">
+              <b>Development & Live Operations:</b> Real-time drilling optimization, rig NPT prevention, ESP lift efficiency, and surface facility throughput.
+            </div>
+            <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 10px; color: #818cf8; font-weight: 600;">
+              Goal: Lowest $/bbl & Maximum Uptime
+            </div>
+          </div>
+        </div>
+
+        <!-- The Two Horizontal Foundation Layers -->
+        <div style="margin-top: 14px;">
+          <div style="font-family: var(--font-mono); font-size: 10px; font-weight: 700; color: #cbd5e1; margin-bottom: 6px; letter-spacing: 0.5px;">
+            SHARED CROSS-CUTTING BOTTLENECKS (BOTH ENGINES RELY ON THESE):
+          </div>
+
+          <!-- Seam 1 -->
+          <div class="seam-box seam-realtime">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 12px; font-weight: 700; color: #f59e0b;">Seam 1: Right Info at the Right Time (Real-Time Ops)</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; color: #f59e0b; font-weight: 600;">DECISION VELOCITY</span>
+            </div>
+            <div style="font-size: 11px; color: #94a3b8; margin-top: 3px; line-height: 1.4;">
+              Cross-discipline communication lag between rig floor, RTOC, and office engineers. A 4-hour delay in log correlation leads to costly drilling standby or stuck pipe.
+            </div>
+          </div>
+
+          <!-- Seam 2 -->
+          <div class="seam-box seam-darkdata">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 12px; font-weight: 700; color: #ef4444;">Seam 2: Data Preparation & Dark Archives (Foundation)</span>
+              <span style="font-family: var(--font-mono); font-size: 10px; color: #ef4444; font-weight: 600;">DATA FRICTION</span>
+            </div>
+            <div style="font-size: 11px; color: #94a3b8; margin-top: 3px; line-height: 1.4;">
+              Decades of scanned PDFs, vintage wireline TIFFs, and completion reports trapped in unindexed vaults. Highly skilled engineers spend 70% of time preparing data rather than engineering.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 11px; color: #64748b; font-family: var(--font-mono);">
+        *Key insight: You cannot optimize the top engines without automating the bottom data plumbing.
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL: 2x2 Matrix (Value vs Friction) -->
+    <div class="matrix-card">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #10b981; letter-spacing: 1px;">
+            02 // THE OPPORTUNITY MATRIX (VALUE × FRICTION)
+          </span>
+          <span style="font-family: var(--font-mono); font-size: 11px; color: #94a3b8;">WHERE TO START</span>
+        </div>
+
+        <!-- 2x2 Grid Structure -->
+        <div class="matrix-grid">
+          
+          <!-- Quad 2: High Value, Low Friction (THE SWEET SPOT) -->
+          <div class="quad-box quad-quickwin" onclick="highlightAction('quickwin')">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #10b981;">QUICK WINS</span>
+                <span style="background: #10b981; color: #022c22; font-size: 9px; font-weight: 800; padding: 2px 7px; border-radius: 10px;">FOOT IN THE DOOR</span>
+              </div>
+              <div style="font-size: 13px; font-weight: 700; color: #f8fafc; margin-bottom: 6px;" class="theme-text">Dark Data to Structured Assets</div>
+              <ul style="font-size: 11px; color: #94a3b8; padding-left: 14px; margin: 0; line-height: 1.45;">
+                <li><b>Scanned Logs ➔ LAS/BigQuery</b> (2.1s ingestion)</li>
+                <li><b>20-Yr Offset Hazard Archaeology</b> (Auto-mine DDRs)</li>
+                <li><b>Automated DPR & Compliance</b> (Zero manual entry)</li>
+              </ul>
+            </div>
+            <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 10px; color: #10b981; font-weight: 700;">
+              High Value · Low Friction (Deploy in Weeks)
+            </div>
+          </div>
+
+          <!-- Quad 1: High Value, Higher Friction (THE STRATEGIC PRIZE) -->
+          <div class="quad-box quad-strategic" onclick="highlightAction('strategic')">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: #38bdf8;">STRATEGIC PRIZE</span>
+                <span style="border: 1px solid #38bdf8; color: #38bdf8; font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 10px;">CORE MULTIPLIER</span>
+              </div>
+              <div style="font-size: 13px; font-weight: 700; color: #f8fafc; margin-bottom: 6px;" class="theme-text">Autonomous Real-Time Ops</div>
+              <ul style="font-size: 11px; color: #94a3b8; padding-left: 14px; margin: 0; line-height: 1.45;">
+                <li><b>RTOC Drilling Hazard Sentinel</b> (Stop stuck pipe)</li>
+                <li><b>Bypassed Pay Re-evaluation</b> (Subsurface upside)</li>
+                <li><b>Centimeter-Perfect Casing Seat</b> (0 NPT)</li>
+              </ul>
+            </div>
+            <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 10px; color: #38bdf8; font-weight: 700;">
+              High Value · Moderate Friction (Needs Ingestion Base)
+            </div>
+          </div>
+
+          <!-- Quad 3: Low Value, Low Friction -->
+          <div class="quad-box quad-foundational">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #94a3b8; margin-bottom: 4px;">FOUNDATIONAL</div>
+              <div style="font-size: 12px; font-weight: 600; color: #e2e8f0; margin-bottom: 4px;" class="theme-text">Standard Knowledge Search</div>
+              <div style="font-size: 11px; color: #64748b; line-height: 1.4;">
+                Internal document retrieval, standard operating procedure Q&A, and shift notes search. Helpful, but doesn't move executive metrics.
+              </div>
+            </div>
+            <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 10px; color: #64748b;">
+              Low Value · Low Friction
+            </div>
+          </div>
+
+          <!-- Quad 4: Low Value, High Friction -->
+          <div class="quad-box quad-heavy">
+            <div>
+              <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #64748b; margin-bottom: 4px;">AVOID / DE-PRIORITIZE</div>
+              <div style="font-size: 12px; font-weight: 600; color: #94a3b8; margin-bottom: 4px;">Monolithic Overhauls</div>
+              <div style="font-size: 11px; color: #475569; line-height: 1.4;">
+                Multi-year rip-and-replace data warehousing or autonomous closed-loop reservoir models that take years before delivering value.
+              </div>
+            </div>
+            <div style="margin-top: 8px; font-family: var(--font-mono); font-size: 10px; color: #475569;">
+              Low Immediate Value · High Friction
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="margin-top: 16px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 11px; color: #64748b; font-family: var(--font-mono);">
+        *Cairn recommendation: Enter via Quad 2 (Quick Wins), then expand into Quad 1 (Strategic Real-Time).
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Flightpath Banner -->
+  <div class="flightpath-banner">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <span style="background: #10b981; color: #022c22; font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 4px; font-family: var(--font-mono);">
+        THE STRATEGIC FLIGHTPATH
+      </span>
+      <span style="font-size: 13px; color: #e2e8f0; font-weight: 600;" class="theme-text">
+        Phase 1: Ingest Dark Data & Automate Reporting (Days 1–30) ➔ Phase 2: Live RTOC Hazard & Subsurface Pay Sentinel (Days 30–90)
+      </span>
+    </div>
+    <div style="font-size: 12px; color: #10b981; font-weight: 700; font-family: var(--font-mono);">
+      EARN THE RIGHT TO TOUCH LIVE OPERATIONS
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    if (html.classList.contains('theme-dark')) {
+      html.classList.remove('theme-dark');
+      html.classList.add('theme-light');
+      document.querySelectorAll('.theme-text').forEach(el => el.style.color = '#0f172a');
+    } else {
+      html.classList.remove('theme-light');
+      html.classList.add('theme-dark');
+      document.querySelectorAll('.theme-text').forEach(el => el.style.color = '#f8fafc');
+    }
+  }
+
+  function highlightAction(quad) {
+    if (quad === 'quickwin') {
+      alert("Quick Win Selected: Demonstrates instant ROI using Scanned Logs to LAS Agent on legacy Rajasthan & Cambay data archives.");
+    } else if (quad === 'strategic') {
+      alert("Strategic Prize: Real-Time RTOC Drilling Sentinel preventing stuck-pipe & casing depth mismatch on live rigs.");
+    }
+  }
+</script>
+
+</body>
+</html>
