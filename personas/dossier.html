@@ -1035,6 +1035,12 @@
   var GEMINI_ENTERPRISE_URL = window.GEMINI_ENTERPRISE_URL ||
     "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05?hl=en_US";
 
+  /* Deployed agent deep-links in Gemini Enterprise */
+  var DEPLOYED_AGENT_URLS = {
+    "OG-P04-A08": "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/10364749965176844252/session/-?mods=",
+    "OG-P04-A02": "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/16397021713347413121/session/-?mods="
+  };
+
   /* ── The value model ───────────────────────────────────────────────────
      Two earlier attempts are worth recording so nobody rebuilds them.
 
@@ -1486,16 +1492,24 @@
               ? '<div class="guard"><span class="guard-key">Safety envelope</span>' +
                 '<span class="guard-val">' + esc(a.failureModes) + "</span></div>"
               : "") +
-            '<div class="agent-foot">' +
-              '<a class="ge-launch" href="' + esc(GEMINI_ENTERPRISE_URL) + '" ' +
-                 'target="_blank" rel="noopener noreferrer" ' +
-                 'title="Opens the Gemini Enterprise workspace this estate is published into">' +
-                '<img class="ge-mark" src="../assets/media/gemini_enterprise_logo.svg" alt="Gemini Enterprise">' +
-                '<span class="ge-cta">See this agent</span>' +
-                '<span class="ge-arrow" aria-hidden="true">&#8599;</span>' +
-              "</a>" +
-              '<span class="ge-note">Opens the workspace today; becomes a direct link to this agent once the squad is deployed.</span>' +
-            "</div>" +
+            (function () {
+              var targetUrl = a.geUrl || (a.agentId && DEPLOYED_AGENT_URLS[a.agentId]) || GEMINI_ENTERPRISE_URL;
+              var isLive = !!(a.geUrl || (a.agentId && DEPLOYED_AGENT_URLS[a.agentId]));
+              return '<div class="agent-foot">' +
+                '<a class="ge-launch" href="' + esc(targetUrl) + '" ' +
+                   'target="_blank" rel="noopener noreferrer" ' +
+                   'title="' + esc(isLive ? 'Opens this agent directly in Gemini Enterprise' : 'Opens the Gemini Enterprise workspace this estate is published into') + '">' +
+                  '<img class="ge-mark" src="../assets/media/gemini_enterprise_logo.svg" alt="Gemini Enterprise">' +
+                  '<span class="ge-cta">See this agent</span>' +
+                  '<span class="ge-arrow" aria-hidden="true">&#8599;</span>' +
+                '</a>' +
+                '<span class="ge-note">' +
+                  (isLive
+                    ? 'Opens this agent directly in Gemini Enterprise.'
+                    : 'Opens the workspace today; becomes a direct link to this agent once the squad is deployed.') +
+                '</span>' +
+              '</div>';
+            })() +
           "</div>" +
         "</div>" +
       "</article>"

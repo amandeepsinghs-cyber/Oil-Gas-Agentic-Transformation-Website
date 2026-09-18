@@ -452,7 +452,8 @@ window.PERSONA_DETAIL["P04"] = {
       "returns": "A [UWI]_digitized.las curve set carrying a per-curve confidence score and the traced pixel path that produced it, plus a depth-indexed hazard register for the mudlog remarks, both written alongside — never over — the source raster.",
       "stopsAt": "Emitting a curve whose track scale could not be read from the grid, interpolating across a region of the plot obscured by a stamp, fold or tear, or presenting a traced curve as a measured one — every output curve is marked as raster-derived in the ~CURVE description.",
       "failureModes": "Curves tracing below 0.90 confidence, and any interval where two curves of the same colour and stroke cross, are routed to an amber review queue with the pixel path overlaid on the source image for one-glance specialist adjudication. Where the header block is illegible and the depth datum cannot be established, the agent refuses the whole log rather than guess a reference: [Datum Unreadable: Depth Registration Cannot Be Established]. A hazard remark whose depth cannot be resolved is still written to the register, flagged [Depth Unresolved], on the reasoning that a planner who knows a hazard exists somewhere in the well is better served than one who never sees it.",
-      "agentId": "OG-P04-A08"
+      "agentId": "OG-P04-A08",
+      "geUrl": "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/10364749965176844252/session/-?mods="
     }
   ],
   "valueModel": {

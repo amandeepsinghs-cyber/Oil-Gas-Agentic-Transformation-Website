@@ -727,7 +727,13 @@
        before the deck is shown -- it is deliberately the only place the URL
        appears. Overridable from the host page via window.GEMINI_ENTERPRISE_URL. */
     var GEMINI_ENTERPRISE_URL = window.GEMINI_ENTERPRISE_URL ||
-      "https://geminienterprise.google.com/";
+      "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05?hl=en_US";
+
+    /* Deployed agent deep-links in Gemini Enterprise */
+    var DEPLOYED_AGENT_URLS = {
+      "OG-P04-A08": "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/10364749965176844252/session/-?mods=",
+      "OG-P04-A02": "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/16397021713347413121/session/-?mods="
+    };
 
     /* ------------------------------------------------------------------ */
     /* Helpers                                                             */
@@ -914,8 +920,10 @@
 
       var showId = a.agentRegistryId && !(opts && opts.hideId);
 
+      var linkUrl = a.geUrl || (a.agentId && DEPLOYED_AGENT_URLS[a.agentId]) || GEMINI_ENTERPRISE_URL;
+
       return '<div class="launch-row">' +
-          '<a class="launch-chip chip-gemini" href="' + esc(GEMINI_ENTERPRISE_URL) + '" ' +
+          '<a class="launch-chip chip-gemini" href="' + esc(linkUrl) + '" ' +
              'target="_blank" rel="noopener noreferrer" title="' + esc(title) + '">' +
             "\u2726 Open in Gemini Enterprise" +
           '</a>' +

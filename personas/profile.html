@@ -865,6 +865,12 @@
   var GEMINI_ENTERPRISE_URL = window.GEMINI_ENTERPRISE_URL ||
     "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05?hl=en_US";
 
+  /* Deployed agent deep-links in Gemini Enterprise */
+  var DEPLOYED_AGENT_URLS = {
+    "OG-P04-A08": "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/10364749965176844252/session/-?mods=",
+    "OG-P04-A02": "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/16397021713347413121/session/-?mods="
+  };
+
   /* Deck rows A–T predate the research. Keep their deep links working:
      page_08's chessboard links out as ?role=<letter>. Three rows (E mud
      chemist, F directional drilling, R reforming) have no dossier, and
@@ -1035,9 +1041,9 @@
             : "") +
           hoursLine +
           '<div class="agent-foot">' +
-            '<a class="ge-launch" href="' + esc(GEMINI_ENTERPRISE_URL) + '" ' +
+            '<a class="ge-launch" href="' + esc(a.geUrl || (a.agentId && DEPLOYED_AGENT_URLS[a.agentId]) || GEMINI_ENTERPRISE_URL) + '" ' +
                'target="_blank" rel="noopener noreferrer" ' +
-               'title="Opens the Gemini Enterprise workspace this estate is published into">' +
+               'title="' + esc((a.geUrl || (a.agentId && DEPLOYED_AGENT_URLS[a.agentId])) ? 'Opens this agent directly in Gemini Enterprise' : 'Opens the Gemini Enterprise workspace this estate is published into') + '">' +
               '<img class="ge-mark" src="../assets/media/gemini_enterprise_logo.svg" alt="Gemini Enterprise">' +
               '<span class="ge-cta">See this agent</span>' +
               '<span class="ge-arrow" aria-hidden="true">↗</span>' +
