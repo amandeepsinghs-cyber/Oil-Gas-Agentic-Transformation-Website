@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where People Meet the Agent | From Personas to Production</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/aurora.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    .jenga-card {
+      background: var(--surface-sunk);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+    .jenga-card-fragile {
+      border-top: 3px solid var(--border-strong);
+    }
+    .jenga-card-fragile:hover {
+      border-color: var(--text-dim);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(18,19,23,.10);
+    }
+    .jenga-card-fortified {
+      border-top: 3px solid var(--g-blue);
+      background: var(--surface);
+    }
+    .jenga-card-fortified:hover {
+      border-color: var(--g-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(49,134,255,.16);
+    }
+    .jenga-img-box {
+      position: relative;
+      width: 100%;
+      height: 390px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--canvas);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .jenga-img-box img {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .jenga-card:hover .jenga-img-box img {
+      transform: scale(1.02);
+    }
+    .jenga-img-light {
+      display: none !important;
+    }
+    .jenga-img-dark {
+      display: block !important;
+    }
+    .theme-light .jenga-img-dark {
+      display: none !important;
+    }
+    .theme-light .jenga-img-light {
+      display: block !important;
+    }
+  </style>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('deck-theme') || 'light';
+      if (saved === 'dark') {
+        document.documentElement.classList.add('theme-dark');
+      }
+    })();
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('theme-dark');
+      if (document.body) document.body.classList.toggle('theme-dark', isDark);
+      localStorage.setItem('deck-theme', isDark ? 'dark' : 'light');
+      updateThemeButtons(!isDark);
+    }
+    function updateThemeButtons(isLight) {
+      document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+        btn.innerHTML = isLight 
+          ? '<span style="font-size: 13px; line-height: 1;">🌙</span><span>Dark Mode</span>' 
+          : '<span style="font-size: 13px; line-height: 1;">☀️</span><span>Light Mode</span>';
+        btn.setAttribute('title', isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const isLight = !document.documentElement.classList.contains('theme-dark');
+      updateThemeButtons(isLight);
+    });
+  </script>
+
+  <style>
+    /* aurora: light is native, so the *_light image of each pair is the
+       default and the dark twin is the opt-in. The rules these replace live
+       in styles.css under .theme-light, which this page no longer sets. */
+    [class*="-img-dark"]  { display: none  !important; }
+    [class*="-img-light"] { display: block !important; }
+    html.theme-dark [class*="-img-dark"]  { display: block !important; }
+    html.theme-dark [class*="-img-light"] { display: none  !important; }
+  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Google+Sans+Text:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../assets/build.css">
+</head>
+<body style="background: var(--canvas); color: var(--text-muted); font-family: var(--font-display); margin: 0; padding: 0; overflow-x: hidden;">
+
+  <!-- Single-Page Executive Top Navigation Bar -->
+  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(248, 249, 252, 0.85); border-bottom: 1px solid var(--border-subtle); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
+    <a href="../../index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
+      <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
+      <div style="width: 1px; height: 20px; background: var(--surface-sunk);"></div>
+      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text); letter-spacing: 1.5px; text-transform: uppercase;">BUILD 02 // SURFACE</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: 16px;">
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Light Mode">
+        <span style="font-size: 13px; line-height: 1;">☀️</span>
+        <span>Light Mode</span>
+      </button>
+      <a href="page_01_build.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;">2 / 8</span>
+      <a href="page_03_architecture.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
+      <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
+        All Slides ↗
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Viewport -->
+  <main id="viewport-scaler" style="padding-top: 60px;">
+<section class="bx sf">
+<style>
+  .sf-grid { display: grid; grid-template-columns: 370px minmax(0, 1fr); gap: 22px; align-items: stretch; }
+  /* left: the agent and its four surfaces */
+  .sf-core { display: flex; align-items: center; gap: 12px; background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 18px; padding: 12px 14px; box-shadow: var(--shadow-sm); }
+  .sf-core .ag { width: 44px; height: 44px; border-radius: 13px; border: 2px solid var(--g-blue); display: flex; align-items: center; justify-content: center; font: 600 15px var(--font-display); color: var(--blue-ink); flex: none; }
+  .sf-core b { display: block; font: 600 16px var(--font-display); color: var(--text); }
+  .sf-core small { font: 500 11.5px var(--font-mono); color: var(--text-muted); }
+  .sf-core img.av { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; margin-left: auto; }
+  .sf-list { position: relative; margin-top: 10px; padding-left: 26px; display: flex; flex-direction: column; gap: 10px; }
+  .sf-list::before { content: ""; position: absolute; left: 10px; top: -10px; bottom: 44px; width: 2px; background: var(--border-subtle); }
+  .sf-s { position: relative; text-align: left; background: var(--surface); border: 1.5px solid var(--border-subtle); border-radius: 16px; padding: 12px 14px; cursor: pointer; display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: center; font: inherit; color: inherit; transition: border-color .25s, box-shadow .25s, transform .25s; }
+  .sf-s::before { content: ""; position: absolute; left: -17px; top: 50%; width: 16px; height: 2px; background: var(--border-subtle); transition: background .25s; }
+  .sf-s::after { content: ""; position: absolute; left: -21px; top: calc(50% - 5px); width: 10px; height: 10px; border-radius: 50%; background: var(--surface); border: 2px solid var(--border-strong); transition: all .25s; }
+  .sf-s img { width: 34px; height: 34px; }
+  .sf-s .n { font: 500 10.5px var(--font-mono); letter-spacing: 1.2px; color: var(--text-dim); }
+  .sf-s b { display: block; font: 600 15.5px var(--font-display); color: var(--text); margin: 1px 0 2px; }
+  .sf-s p { margin: 0; font-size: 12.5px; line-height: 1.4; color: var(--text-muted); }
+  .sf-s:hover { border-color: var(--border-strong); }
+  .sf-s.on { border-color: var(--sc); box-shadow: 0 10px 28px rgba(18,19,23,.10); transform: translateX(4px); }
+  .sf-s.on::before { background: var(--sc); } .sf-s.on::after { background: var(--sc); border-color: var(--sc); box-shadow: 0 0 0 5px color-mix(in srgb, var(--sc) 20%, transparent); }
+  .sf-s.on .n { color: var(--st); }
+  /* right: the stage */
+  .sf-stage { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 20px; box-shadow: var(--shadow-md); overflow: hidden; display: flex; flex-direction: column; min-height: 486px; }
+  .sf-bar { display: flex; align-items: center; gap: 8px; padding: 11px 16px; border-bottom: 1px solid var(--border-subtle); }
+  .sf-bar .dots { display: flex; gap: 5px; } .sf-bar .dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--border-strong); }
+  .sf-bar .t { font: 500 13px var(--font-display); color: var(--text-muted); }
+  .sf-bar .rt { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; font: 500 11.5px var(--font-mono); color: var(--text-muted); }
+  .sf-bar .rt img { width: 18px; height: 18px; }
+  .sf-body { position: relative; flex: 1; padding: 18px 20px; }
+  .sf-v { display: none; height: 100%; } .sf-v.on { display: block; animation: sfIn .45s ease; }
+  @keyframes sfIn { from { opacity: 0; transform: translateY(8px); } }
+  .rv { opacity: 0; transform: translateY(6px); transition: opacity .45s, transform .45s; } .rv.in { opacity: 1; transform: none; }
+  /* shared handover card */
+  .ho { border: 1px solid var(--border-subtle); border-radius: 14px; padding: 12px 14px; background: var(--surface); }
+  .ho .hd { display: flex; align-items: center; gap: 8px; font: 600 14px var(--font-display); color: var(--text); margin-bottom: 6px; }
+  .ho .hd .ag { width: 24px; height: 24px; border-radius: 7px; border: 2px solid var(--g-blue); display: inline-flex; align-items: center; justify-content: center; font: 600 10px var(--font-display); color: var(--blue-ink); }
+  .ho .hd small { margin-left: auto; font: 500 11px var(--font-mono); color: var(--text-dim); }
+  .ho ol { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.5; color: var(--text); } .ho li { margin: 1px 0; }
+  .ho .src { margin-top: 8px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .ho .src span { font: 500 10.5px var(--font-mono); color: var(--blue-ink); border: 1px solid var(--border-subtle); border-radius: 999px; padding: 2px 8px; }
+  .ho .act { margin-top: 10px; display: flex; gap: 8px; }
+  .btn { font: 500 12.5px var(--font-display); border-radius: 999px; padding: 6px 14px; border: 1px solid var(--border-subtle); color: var(--text); background: var(--surface); }
+  .btn.p { background: var(--g-blue); border-color: var(--g-blue); color: #FFF; }
+  /* 1 · Gemini Enterprise chat */
+  .ge { display: grid; grid-template-columns: 150px 1fr; gap: 18px; height: 100%; }
+  .ge-rail { background: var(--surface-sunk); border-radius: 14px; padding: 12px 10px; font: 500 12.5px var(--font-display); color: var(--text-muted); }
+  .ge-rail div { padding: 7px 10px; border-radius: 999px; } .ge-rail .on { background: rgba(49,134,255,.14); color: var(--blue-ink); }
+  .ge-rail .l { font: 500 10px var(--font-mono); letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); margin-top: 12px; padding: 4px 10px; }
+  .msg-u { display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .msg-u span { background: var(--surface-sunk); border-radius: 16px 16px 4px 16px; padding: 9px 14px; font-size: 13.5px; color: var(--text); }
+  .msg-u img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; }
+  .msg-a { display: grid; grid-template-columns: 30px 1fr; gap: 10px; }
+  .msg-a > img { width: 26px; height: 26px; margin-top: 4px; }
+  /* 2 · custom app cockpit */
+  .ck { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 16px; height: 100%; }
+  .ck-h { font: 600 14px var(--font-display); color: var(--text); display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .ck-h small { font: 500 11px var(--font-mono); color: var(--text-dim); }
+  .ck-tr { border: 1px solid var(--border-subtle); border-radius: 12px; padding: 8px 10px; margin-bottom: 10px; }
+  .ck-tr .lb { display: flex; justify-content: space-between; font: 500 11px var(--font-mono); color: var(--text-muted); }
+  .ck-tr svg { width: 100%; height: 62px; display: block; }
+  .ck-tr polyline { fill: none; stroke-width: 2; vector-effect: non-scaling-stroke; }
+  .ck-al { font-size: 12.5px; } .ck-al div { display: flex; align-items: center; gap: 8px; padding: 5px 0; border-bottom: 1px dashed var(--border-subtle); color: var(--text); }
+  .ck-al i { width: 8px; height: 8px; border-radius: 50%; flex: none; } .ck-al small { margin-left: auto; font: 500 11px var(--font-mono); color: var(--text-dim); }
+  /* 3 · inside an existing system */
+  .ex { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 0; height: calc(100% + 36px); margin: -18px -20px; }
+  .ex-l { padding: 14px 18px; background: var(--canvas); }
+  .ex-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .ex-top b { font: 600 14px var(--font-display); color: var(--text); } .ex-top small { font: 500 11px var(--font-mono); color: var(--text-dim); }
+  .ex-top .btn { margin-left: auto; display: inline-flex; align-items: center; gap: 6px; border-color: var(--g-blue); color: var(--blue-ink); transition: box-shadow .3s; }
+  .ex-top .btn img { width: 14px; height: 14px; } .ex-top .btn.hot { box-shadow: 0 0 0 4px rgba(49,134,255,.25); }
+  .ex table { width: 100%; border-collapse: collapse; font-size: 12px; background: var(--surface); border: 1px solid var(--border-subtle); }
+  .ex th { text-align: left; font: 500 10.5px var(--font-mono); letter-spacing: .6px; text-transform: uppercase; color: var(--text-dim); padding: 7px 8px; border-bottom: 1px solid var(--border-subtle); background: var(--surface-sunk); }
+  .ex td { padding: 7px 8px; border-bottom: 1px solid var(--border-subtle); color: var(--text); white-space: nowrap; }
+  .ex tr.mk td { background: rgba(49,134,255,.08); }
+  .ex-r { border-left: 1px solid var(--border-subtle); padding: 14px 16px; background: var(--surface); transform: translateX(100%); transition: transform .5s cubic-bezier(.2,.8,.2,1); }
+  .ex-r.in { transform: none; }
+  .ex-r .k { font: 500 10.5px var(--font-mono); letter-spacing: 1px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 8px; }
+  /* 4 · inside processes (no screen) */
+  .bg-flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin: 6px 0 16px; position: relative; }
+  .bg-st { position: relative; border: 1.5px solid var(--border-subtle); border-radius: 14px; padding: 12px; text-align: center; transition: border-color .3s, box-shadow .3s; background: var(--surface); }
+  .bg-st .tm { font: 500 11px var(--font-mono); color: var(--text-dim); }
+  .bg-st b { display: block; font: 600 13.5px var(--font-display); color: var(--text); margin: 4px 0 2px; }
+  .bg-st small { font-size: 11.5px; color: var(--text-muted); line-height: 1.35; display: block; }
+  .bg-st.on { border-color: var(--g-yellow); box-shadow: 0 0 0 4px rgba(254,199,0,.18); }
+  .bg-st.done { border-color: var(--g-green); }
+  .bg-st:not(:last-child)::after { content: "→"; position: absolute; right: -10px; top: 50%; transform: translate(50%, -50%); color: var(--text-dim); font-size: 14px; }
+  .bg-out { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+  .bg-note { font-size: 13.5px; line-height: 1.5; color: var(--text-muted); }
+  .bg-note b { color: var(--text); font-weight: 500; }
+  .inbox { border: 1px solid var(--border-subtle); border-radius: 14px; overflow: hidden; }
+  .inbox .ih { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: var(--surface-sunk); font: 500 12px var(--font-display); color: var(--text-muted); }
+  .inbox .ih img { width: 22px; height: 22px; border-radius: 50%; }
+  .inbox .it { padding: 10px 12px; font-size: 13px; color: var(--text); }
+  .inbox .it b { font-weight: 600; } .inbox .it small { display: block; color: var(--text-muted); margin-top: 2px; }
+  /* constant strip */
+  .sf-same { margin-top: 16px; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 18px; align-items: center; background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 18px; padding: 12px 18px; box-shadow: var(--shadow-sm); position: relative; }
+  .sf-same::before { content: ""; position: absolute; left: 0; top: 12px; bottom: 12px; width: 3px; border-radius: 2px; background: var(--gemini-spark); }
+  .sf-same .k { font: 600 14px var(--font-display); color: var(--text); white-space: nowrap; }
+  .sf-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .sf-chips span { display: inline-flex; align-items: center; gap: 6px; font: 500 12px var(--font-display); color: var(--text); background: var(--surface-sunk); border-radius: 999px; padding: 5px 11px 5px 7px; }
+  .sf-chips img { width: 18px; height: 18px; }
+  .sf-log { font: 500 11.5px var(--font-mono); color: var(--text-muted); white-space: nowrap; }
+  .sf-log b { color: var(--green-ink); font-weight: 500; } .sf-log em { font-style: normal; color: var(--blue-ink); }
+  .sf-arch { margin-top: 10px; font-size: 12.5px; color: var(--text-dim); } .sf-arch a { color: var(--blue-ink); text-decoration: none; }
+  @media (max-width: 1150px) { .sf-grid { grid-template-columns: 1fr; } .sf-same { grid-template-columns: 1fr; } }
+</style>
+<!-- Speaker notes: "Where the agent RUNS is the Architecture page (Agent Engine, Cloud Run, GKE, on-prem). This page is
+     about where people MEET it. One governed agent, built once in Gemini Enterprise, shows up in four places, so people
+     don't change how they work. Same agent ID, same Model Armor checks, same audit trail on every surface."
+     Embedding in third-party systems (ERP / maintenance) is via API or an embedded panel; confirm the integration pattern
+     for the client's specific systems before presenting. -->
+<div class="bx-in">
+  <div class="bx-kick"><i></i>From personas to production · Where people meet the agent</div>
+  <h1>Build once. The agent goes to the work, not the other way round.</h1>
+  <p class="bx-sub">One governed agent, four surfaces: <b>the Gemini Enterprise front door, purpose-built apps, the systems people already use, and quietly inside processes</b>. Same agent, same controls, same audit trail — nobody has to change how they work.</p>
+  <div class="sf-grid">
+    <div>
+      <div class="sf-core"><span class="ag">U3</span><div><b>Unit 3 Handover Agent</b><small>OG-P45-A01 · built once, no-code</small></div><img class="av" src="../../personas/avatars/thumbs/P45_thumb.jpg" alt="Grace Liu" title="Grace Liu · Shift Supervisor"></div>
+      <div class="sf-list" id="sfList"></div>
+    </div>
+    <div class="sf-stage">
+      <div class="sf-bar"><span class="dots"><i></i><i></i><i></i></span><span class="t" id="sfTitle"></span><span class="rt" id="sfRt"></span></div>
+      <div class="sf-body">
+        <!-- 1 · Gemini Enterprise -->
+        <div class="sf-v" id="sv-ge"><div class="ge">
+          <div class="ge-rail"><div>New chat</div><div class="on">Agents</div><div>Notebooks</div><div class="l">My agents</div><div class="on">Unit 3 Handover</div><div>Permit Checker</div><div>Deep Research</div></div>
+          <div>
+            <div class="msg-u rv"><span>Draft my Unit 3 handover for the 18:00 shift.</span><img src="../../personas/avatars/thumbs/P45_thumb.jpg" alt=""></div>
+            <div class="msg-a rv"><img src="../../assets/media/models/gemini-color.svg" alt=""><div class="ho" data-ho></div></div>
+          </div>
+        </div></div>
+        <!-- 2 · custom app -->
+        <div class="sf-v" id="sv-app"><div class="ck">
+          <div>
+            <div class="ck-h">Unit 3 · FCC control-room cockpit <small>live</small></div>
+            <div class="ck-tr rv"><div class="lb"><span>P-301A vibration, mm/s</span><span style="color:var(--amber-ink)">7.1 ↑</span></div>
+              <svg viewBox="0 0 100 40" preserveAspectRatio="none"><polyline points="0,32 10,31 20,30 30,31 40,28 50,27 60,24 70,22 80,19 90,17 100,14" stroke="var(--g-yellow)"/><line x1="0" x2="100" y1="8" y2="8" stroke="var(--g-red)" stroke-dasharray="3 3" stroke-width="1" vector-effect="non-scaling-stroke"/></svg></div>
+            <div class="ck-tr rv"><div class="lb"><span>Throughput, kbpd</span><span>41.8 · on plan</span></div>
+              <svg viewBox="0 0 100 40" preserveAspectRatio="none"><polyline points="0,20 10,19 20,21 30,20 40,19 50,20 60,21 70,20 80,19 90,20 100,20" stroke="var(--g-blue)"/></svg></div>
+            <div class="ck-al rv"><div><i style="background:var(--g-red)"></i>LAH-3102 reflux drum high · shelved<small>4 h 10 m</small></div><div><i style="background:var(--g-yellow)"></i>TI-3315 bad PV · tech called<small>4 h 40 m</small></div><div><i style="background:var(--g-green)"></i>PTW-2291 hot work on E-305<small>to 14:00</small></div></div>
+          </div>
+          <div class="ho rv" data-ho data-app></div>
+        </div></div>
+        <!-- 3 · existing system -->
+        <div class="sf-v" id="sv-sys"><div class="ex">
+          <div class="ex-l">
+            <div class="ex-top"><b>Maintenance · Work orders</b><small>Plant 03 · your existing system</small><span class="btn" id="sfDraft"><img src="../../assets/media/models/gemini-color.svg" alt="">Draft handover</span></div>
+            <table><thead><tr><th>Order</th><th>Equipment</th><th>Description</th><th>Status</th></tr></thead><tbody>
+              <tr class="mk"><td>4100873</td><td>P-301A</td><td>High vibration, inspect bearing</td><td>Open</td></tr>
+              <tr><td>4100861</td><td>E-305</td><td>Tube bundle clean, hot work</td><td>In progress</td></tr>
+              <tr class="mk"><td>4100855</td><td>TI-3315</td><td>Thermocouple bad PV</td><td>Assigned</td></tr>
+              <tr><td>4100840</td><td>V-302</td><td>Level glass replacement</td><td>Planned</td></tr>
+              <tr><td>4100833</td><td>C-301</td><td>Lube oil sample</td><td>Done</td></tr>
+              <tr><td>4100829</td><td>P-305B</td><td>Seal flush check</td><td>Done</td></tr>
+            </tbody></table>
+          </div>
+          <div class="ex-r" id="sfPanel"><div class="k">Agent panel · inside this screen</div><div class="ho" data-ho></div></div>
+        </div></div>
+        <!-- 4 · inside processes -->
+        <div class="sf-v" id="sv-bg">
+          <div class="bg-flow" id="sfFlow">
+            <div class="bg-st"><span class="tm">17:30</span><b>Schedule fires</b><small>every shift change</small></div>
+            <div class="bg-st"><span class="tm">17:30</span><b>Reads</b><small>shift log, DCS alarms, permits, work orders</small></div>
+            <div class="bg-st"><span class="tm">17:31</span><b>Drafts</b><small>five-line handover, flags 2 risks</small></div>
+            <div class="bg-st"><span class="tm">17:31</span><b>Checks</b><small>Model Armor, policy, evaluation</small></div>
+            <div class="bg-st"><span class="tm">17:32</span><b>Hands over</b><small>to Grace for approval</small></div>
+          </div>
+          <div class="bg-out">
+            <div><div class="bg-note rv"><b>No screen, no prompt.</b> The agent runs on a schedule or an event — a shift change, an alarm, a lab result — prepares the work, and hands it to a person to approve. The plant is never touched by the agent.</div><div class="ho rv" data-ho style="margin-top:12px"></div></div>
+            <div class="inbox rv"><div class="ih"><img src="../../personas/avatars/thumbs/P45_thumb.jpg" alt="">Grace Liu · inbox · 17:32</div>
+              <div class="it"><b>Unit 3 handover ready for review</b><small>Drafted by OG-P45-A01 · 2 risks flagged · approve to send to the 18:00 shift</small>
+                <div class="act" style="margin-top:8px"><span class="btn p">Approve</span><span class="btn">Edit</span></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sf-same">
+    <span class="k">Same agent on every surface</span>
+    <div class="sf-chips">
+      <span><img src="../../assets/media/gcp/Agents.svg" alt="">One registry entry</span>
+      <span><img src="../../assets/media/gcp/VertexAI.svg" alt="">Agent Engine</span>
+      <span><img src="../../assets/media/gcp/SecurityCommandCenter.svg" alt="">Model Armor</span>
+      <span><img src="../../assets/media/gcp/SecurityIdentity.svg" alt="">Grace's permissions</span>
+      <span><img src="../../assets/media/gcp/Observability.svg" alt="">One audit log</span>
+    </div>
+    <span class="sf-log" id="sfLog"></span>
+  </div>
+  <div class="sf-arch">Where the agent runs — Google Cloud, on-prem or air-gapped — is on the <a href="page_03_architecture.html">Architecture</a> page. This page is where people meet it.</div>
+</div>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var RM = matchMedia("(prefers-reduced-motion: reduce)").matches, G = "../../assets/media/gcp/", M = "../../assets/media/models/";
+  var HO = ["P-301A vibration up to 7.1 mm/s; P-301B on standby. Work order 4100873 raised.",
+            "LAH-3102 (reflux drum) shelved 4 h; TI-3315 bad PV, instrument tech called.",
+            "Hot-work permit PTW-2291 on E-305 open to 14:00; isolation verified.",
+            "Throughput 41.8 kbpd, on plan; cut points on target.",
+            "Watch: reflux drum level and P-301A. Call maintenance above 9 mm/s."];
+  var S = [
+    { k: "ge", n: "01", t: "Gemini Enterprise", p: "The front door: ask for it by name, in chat, with your company's data.", img: M + "gemini-color.svg", c: "var(--g-blue)", tc: "var(--blue-ink)",
+      title: "Gemini Enterprise · Unit 3 Handover", rt: ["Agents.svg", "published to Gemini Enterprise"], surface: "gemini_enterprise", act: ["Copy", "Send to shift"] },
+    { k: "app", n: "02", t: "Custom applications", p: "Built into a purpose-made app, such as a control-room cockpit, where chat is not enough.", img: G + "CloudRun.svg", c: "var(--g-purple)", tc: "var(--purple-ink)",
+      title: "Unit 3 cockpit · custom app", rt: ["CloudRun.svg", "app on Cloud Run"], surface: "cockpit_app", act: ["Approve", "Edit"] },
+    { k: "sys", n: "03", t: "Inside existing systems", p: "A button and panel inside the screens people already use: maintenance, ERP, historian, lab.", img: G + "Apigee.svg", c: "var(--g-green)", tc: "var(--green-ink)",
+      title: "Maintenance system · work orders", rt: ["Apigee.svg", "via API"], surface: "maintenance_panel", act: ["Insert into log", "Edit"] },
+    { k: "bg", n: "04", t: "Inside your processes", p: "No screen at all: runs on a schedule or event, prepares the work, hands it to a person.", img: G + "IntegrationServices.svg", c: "var(--g-yellow)", tc: "var(--amber-ink)",
+      title: "Background · runs at every shift change", rt: ["IntegrationServices.svg", "event and schedule triggers"], surface: "scheduled_1730", act: null }
+  ];
+  $("sfList").innerHTML = S.map(function (s) {
+    return '<button class="sf-s" data-k="' + s.k + '" style="--sc:' + s.c + ';--st:' + s.tc + '"><img src="' + s.img + '" alt=""><span><span class="n">' + s.n + '</span><b>' + s.t + '</b><p>' + s.p + '</p></span></button>';
+  }).join("");
+  function ho(act) {
+    return '<div class="hd"><span class="ag">U3</span>Unit 3 handover · 18:00 shift<small>OG-P45-A01</small></div><ol>' + HO.map(function (l) { return "<li>" + l + "</li>"; }).join("") + '</ol>' +
+      '<div class="src"><span>Shift log</span><span>DCS alarms</span><span>Permits</span><span>Work orders</span></div>' +
+      (act ? '<div class="act"><span class="btn p">' + act[0] + '</span><span class="btn">' + act[1] + '</span></div>' : "");
+  }
+  var timers = [];
+  function T(fn, ms) { timers.push(setTimeout(fn, RM ? 0 : ms)); }
+  function show(k) {
+    timers.forEach(clearTimeout); timers = [];
+    var s = S.filter(function (x) { return x.k === k; })[0];
+    document.querySelectorAll(".sf-s").forEach(function (b) { b.classList.toggle("on", b.dataset.k === k); });
+    document.querySelectorAll(".sf-v").forEach(function (v) { v.classList.toggle("on", v.id === "sv-" + k); });
+    $("sfTitle").textContent = s.title; $("sfRt").innerHTML = '<img src="' + G + s.rt[0] + '" alt="">' + s.rt[1];
+    var v = $("sv-" + k);
+    v.querySelectorAll("[data-ho]").forEach(function (h) { h.innerHTML = ho(s.act); });
+    var rv = v.querySelectorAll(".rv"); rv.forEach(function (e) { e.classList.remove("in"); });
+    rv.forEach(function (e, i) { T(function () { e.classList.add("in"); }, 250 + i * 450); });
+    if (k === "sys") { $("sfPanel").classList.remove("in"); $("sfDraft").classList.remove("hot");
+      T(function () { $("sfDraft").classList.add("hot"); }, 600); T(function () { $("sfDraft").classList.remove("hot"); $("sfPanel").classList.add("in"); }, 1400); }
+    if (k === "bg") { var st = $("sfFlow").children; [].forEach.call(st, function (e) { e.classList.remove("on", "done"); });
+      [].forEach.call(st, function (e, i) { T(function () { if (i) st[i - 1].classList.replace("on", "done"); e.classList.add("on"); }, 300 + i * 700); });
+      T(function () { st[st.length - 1].classList.replace("on", "done"); }, 300 + st.length * 700); }
+    $("sfLog").innerHTML = '17:32:04 agent=OG-P45-A01 surface=<em>' + s.surface + '</em> user=g.liu <b>✓ logged</b>';
+  }
+  document.querySelectorAll(".sf-s").forEach(function (b) { b.addEventListener("click", function () { show(b.dataset.k); }); });
+  show("ge");
+})();
+</script>
+</section>
+</main>
+
+  <!-- Floating Page Dock -->
+  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(18,19,23,.14); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+    <a href="page_01_build.html" style="background: var(--surface-sunk); border: 1px solid var(--border); color: var(--text-muted); width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none;">
+      ◀
+    </a>
+    <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: var(--text-muted); white-space: nowrap;">
+      BUILD 02 // SURFACE
+    </div>
+    <a href="page_03_architecture.html" style="background: var(--g-blue); border: none; color: #FFF; padding: 7px 16px; border-radius: 20px; font-family: var(--font-display); font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+      <span>Next Page</span>
+      <span>▶</span>
+    </a>
+  </aside>
+
+</body>
+</html>

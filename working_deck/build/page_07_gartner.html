@@ -3,10 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Recognized as a Leader in the 2026 Gartner Magic Quadrant for Enterprise AI Assistants</title>
+  <title>Why Google: The Full AI Stack | From Personas to Production</title>
   <link rel="stylesheet" href="../../assets/styles.css">
   <link rel="stylesheet" href="../../assets/aurora.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    .jenga-card {
+      background: var(--surface-sunk);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+    .jenga-card-fragile {
+      border-top: 3px solid var(--border-strong);
+    }
+    .jenga-card-fragile:hover {
+      border-color: var(--text-dim);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(18,19,23,.10);
+    }
+    .jenga-card-fortified {
+      border-top: 3px solid var(--g-blue);
+      background: var(--surface);
+    }
+    .jenga-card-fortified:hover {
+      border-color: var(--g-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(49,134,255,.16);
+    }
+    .jenga-img-box {
+      position: relative;
+      width: 100%;
+      height: 390px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--canvas);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .jenga-img-box img {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .jenga-card:hover .jenga-img-box img {
+      transform: scale(1.02);
+    }
+    .jenga-img-light {
+      display: none !important;
+    }
+    .jenga-img-dark {
+      display: block !important;
+    }
+    .theme-light .jenga-img-dark {
+      display: none !important;
+    }
+    .theme-light .jenga-img-light {
+      display: block !important;
+    }
+  </style>
   <script>
     (function() {
       const saved = localStorage.getItem('deck-theme') || 'light';
@@ -33,159 +97,147 @@
       updateThemeButtons(isLight);
     });
   </script>
+
   <style>
-    body {
-      background: #FFFFFF !important;
-      color: #111827;
-      font-family: var(--font-display);
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-    }
-    .executive-top-nav {
-      backdrop-filter: blur(20px);
-      background: rgba(255, 255, 255, 0.92) !important;
-      border-bottom: 1px solid #E5E7EB !important;
-      padding: 14px max(24px, 4vw);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .slide-stage {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 76px max(24px, 4vw) 55px;
-      background: #FFFFFF !important;
-      box-sizing: border-box;
-      position: relative;
-    }
-    .editorial-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      width: 100%;
-      position: relative;
-      z-index: 2;
-    }
-    .header-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 18px;
-      flex-wrap: wrap;
-      gap: 16px;
-    }
-    .gartner-hero-frame {
-      background: transparent;
-      border: none;
-      box-shadow: none;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 860px;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    .gartner-hero-img {
-      width: auto;
-      height: auto;
-      max-height: min(63vh, 600px);
-      max-width: 100%;
-      object-fit: contain;
-      display: block;
-    }
-    .floating-dock {
-      background: rgba(255, 255, 255, 0.92) !important;
-      border: 1px solid #E5E7EB !important;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
-    }
+    /* aurora: light is native, so the *_light image of each pair is the
+       default and the dark twin is the opt-in. The rules these replace live
+       in styles.css under .theme-light, which this page no longer sets. */
+    [class*="-img-dark"]  { display: none  !important; }
+    [class*="-img-light"] { display: block !important; }
+    html.theme-dark [class*="-img-dark"]  { display: block !important; }
+    html.theme-dark [class*="-img-light"] { display: none  !important; }
   </style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Google+Sans+Text:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../assets/build.css">
 </head>
-<body>
+<body style="background: var(--canvas); color: var(--text-muted); font-family: var(--font-display); margin: 0; padding: 0; overflow-x: hidden;">
 
   <!-- Single-Page Executive Top Navigation Bar -->
-  <header class="executive-top-nav">
+  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(248, 249, 252, 0.85); border-bottom: 1px solid var(--border-subtle); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
     <a href="../../index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
       <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
-      <div style="width: 1px; height: 20px; background: #E5E7EB;"></div>
-      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: #111827; letter-spacing: 1.5px; text-transform: uppercase;">BUILD 07 // LEADERSHIP</span>
+      <div style="width: 1px; height: 20px; background: var(--surface-sunk);"></div>
+      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text); letter-spacing: 1.5px; text-transform: uppercase;">BUILD 07 // LEADERSHIP</span>
     </a>
     <nav style="display: flex; align-items: center; gap: 16px;">
       <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Light Mode">
         <span style="font-size: 13px; line-height: 1;">☀️</span>
         <span>Light Mode</span>
       </button>
-      <a href="page_06_resilience.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: #4B5563; text-decoration: none; padding: 4px 10px; border-radius: 6px; background: #F3F4F6; transition: color 0.2s;">← Prev Page</a>
+      <a href="page_06_resilience.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
       <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;">7 / 8</span>
-      <a href="page_08_100_days.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--blue-ink); text-decoration: none; padding: 4px 12px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
-      <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #111827; background: #F3F4F6; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px; border: 1px solid #E5E7EB;">
+      <a href="page_08_100_days.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
+      <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
         All Slides ↗
       </a>
     </nav>
   </header>
 
   <!-- Main Viewport -->
-  <main id="viewport-scaler">
-    <section class="slide-stage" id="stage-08">
-      <div class="editorial-container">
-
-        <!-- Header Lockup: Left-Aligned Headline -->
-        <div style="margin-bottom: 30px;">
-          <!-- Top Eyebrow Kicker -->
-          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
-            <span class="kicker-bar" style="width: 24px; height: 3px; background: var(--gemini-spark); border-radius: 2px;"></span>
-            <span style="color: var(--blue-ink); font-family: var(--font-display); font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">
-              MARKET LEADERSHIP
-            </span>
-            <span style="color: #9CA3AF;">//</span>
-            <span style="color: #6B7280; font-family: var(--font-mono); font-size: 13px; font-weight: 700; letter-spacing: 0.5px;">
-              INDEPENDENT ANALYST EVALUATION
-            </span>
-          </div>
-
-          <!-- Proper Headline: Left-Aligned, Solid Black, Full Title without TM/R -->
-          <h1 style="font-family: var(--font-display); font-size: clamp(24px, 2.5vw, 36px); font-weight: 800; line-height: 1.2; letter-spacing: -0.8px; color: #111827; margin: 0; max-width: 1000px;">
-            Google recognized as a Leader in the 2026 Gartner Magic Quadrant for Enterprise AI Assistants
-          </h1>
+  <main id="viewport-scaler" style="padding-top: 60px;">
+<section class="bx ld">
+<style>
+  .ld-grid { display: grid; grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr); gap: 20px; align-items: stretch; }
+  /* left: the official six-layer animation on a flat Grey 1200 panel */
+  .ld-stack { position: relative; background: var(--g-grey-1200); border-radius: 22px; padding: 22px 26px 18px; color: #E3E3E3; overflow: hidden; }
+  .ld-stack .k { font: 500 11px var(--font-mono); letter-spacing: 1.4px; text-transform: uppercase; color: #9AA0A6; display: flex; align-items: center; gap: 10px; }
+  .ld-stack .k i { width: 22px; height: 3px; border-radius: 2px; background: var(--gemini-spark); }
+  .ld-stack h2 { margin: 8px 0 0; font: 500 22px/1.3 var(--font-display); color: #FFF; max-width: 640px; }
+  .ld-stack h2 b { font-weight: 600; color: #8AB4F8; }
+  .ld-body { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 12px; margin-top: 8px; }
+  .ld-vid { position: relative; width: 270px; height: 497px; }
+  .ld-vid video, .ld-vid img { width: 100%; height: 100%; display: block; mix-blend-mode: screen; }
+  .ld-labels { position: relative; height: 497px; }
+  .ld-l { position: absolute; left: 0; right: 0; transform: translateY(-50%); display: grid; grid-template-columns: 46px 1fr; align-items: center; gap: 10px; opacity: 0; transition: opacity .5s, transform .5s; }
+  .ld-l.in { opacity: 1; }
+  .ld-l::before { content: ""; height: 1px; background: linear-gradient(90deg, rgba(138,180,248,0), rgba(138,180,248,.55)); }
+  .ld-l .t { border-left: 2px solid rgba(255,255,255,.14); padding: 3px 0 3px 12px; transition: border-color .25s; }
+  .ld-l b { display: block; font: 600 15.5px var(--font-display); color: #FFF; }
+  .ld-l small { display: block; font-size: 12.5px; line-height: 1.4; color: #BDC1C6; }
+  .ld-l a { font: 500 10.5px var(--font-mono); color: #8AB4F8; text-decoration: none; margin-right: 8px; }
+  .ld-l a:hover { text-decoration: underline; }
+  .ld-l:hover .t { border-color: #8AB4F8; }
+  .ld-tag { position: absolute; right: 22px; top: 22px; font: 500 11px var(--font-mono); color: #9AA0A6; border: 1px solid rgba(255,255,255,.16); border-radius: 999px; padding: 4px 10px; }
+  /* right: Gartner */
+  .ld-mq { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 22px; box-shadow: var(--shadow-sm); padding: 22px 24px 16px; display: flex; flex-direction: column; }
+  .ld-mq .k { font: 500 11px var(--font-mono); letter-spacing: 1.4px; text-transform: uppercase; color: var(--text-dim); display: flex; align-items: center; gap: 10px; }
+  .ld-mq .k img { height: 18px; width: auto; margin-left: auto; }
+  .ld-mq h2 { margin: 8px 0 0; font: 500 22px/1.3 var(--font-display); color: var(--text); }
+  .ld-mq h2 b { font-weight: 600; color: var(--blue-ink); }
+  .ld-mq figure { margin: 10px 0 0; flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; }
+  .ld-mq figure img { max-height: 462px; max-width: 100%; width: auto; display: block; }
+  .ld-cite { margin-top: 8px; font-size: 11.5px; line-height: 1.45; color: var(--text-muted); }
+  .ld-disc { margin-top: 12px; font-size: 10px; line-height: 1.45; color: var(--text-dim); }
+  @media (max-width: 1150px) { .ld-grid { grid-template-columns: 1fr; } }
+</style>
+<!-- Speaker notes (from the official "AI layers" slide): "To move AI into production across your entire enterprise, you need to
+     remove the friction of integration. That is why Google Cloud is the only provider to deliver a complete, first-party AI
+     stack: researched, engineered and deployed entirely in-house. Spanning six layers from the silicon up to the agents and
+     applications, we co-design every component to work as one system." Then: "And independent analysts agree: Gartner named
+     Google a Leader in the 2026 Magic Quadrant for Enterprise AI Assistants."
+     Animation: official Google Cloud "AI layers" asset (AI layers.pptx), cropped to the stack and re-encoded as MP4; art unchanged.
+     Gartner: image and citation unchanged; the full disclaimer must stay on the page. -->
+<div class="bx-in">
+  <div class="bx-kick"><i></i>From personas to production · Why Google</div>
+  <h1>Google Cloud is the only provider to offer first-party solutions across the entire AI stack.</h1>
+  <p class="bx-sub">And independent analysts agree: <b>Google is a Leader in the 2026 Gartner® Magic Quadrant™ for Enterprise AI Assistants.</b></p>
+  <div class="ld-grid">
+    <div class="ld-stack">
+      <div class="k"><i></i>Six layers · all first-party</div>
+      <div class="ld-body">
+        <div class="ld-vid" id="ldVid">
+          <video id="ldVideo" muted playsinline preload="auto" poster="../../assets/media/brand/ai_stack_layers_poster.png" aria-label="The six layers of the Google Cloud AI stack">
+            <source src="../../assets/media/brand/ai_stack_layers.webm" type="video/webm">
+            <source src="../../assets/media/brand/ai_stack_layers.mp4" type="video/mp4">
+          </video>
         </div>
-
-        <!-- Big, Center-Aligned Cropped Gartner Quadrant Hero Frame -->
-        <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
-          <div class="gartner-hero-frame">
-            <img src="../../assets/media/gartner/image7_cropped.png" 
-                 alt="Google recognized as a Leader in the 2026 Gartner Magic Quadrant for Enterprise AI Assistants" 
-                 class="gartner-hero-img"
-                 loading="eager">
-          </div>
-        </div>
-
+        <div class="ld-labels" id="ldLabels"></div>
       </div>
-    </section>
-  </main>
-
-  <!-- Bottom-Right Gartner Brand Badge (Brand Compliant Placement) -->
-  <div style="position: fixed; bottom: 28px; right: max(24px, 4vw); z-index: 999; display: flex; align-items: center; gap: 8px;">
-    <img src="../../assets/media/gartner/image13.png" alt="Gartner" style="height: 28px; width: auto; opacity: 0.95;">
+    </div>
+    <div class="ld-mq">
+      <div class="k">Leader · 2026 Gartner® Magic Quadrant™<img src="../../assets/media/gartner/image13.png" alt="Gartner"></div>
+      <figure><img src="../../assets/media/gartner/image7_cropped.png" alt="2026 Gartner Magic Quadrant for Enterprise AI Assistants, with Google in the Leaders quadrant"></figure>
+      <div class="ld-cite">Gartner, Magic Quadrant for Enterprise AI Assistants, Max Goss, Jason Wong, Olga Martí, Justin Tung, Cory Decker, 2 September 2026.</div>
+    </div>
   </div>
-
-  <!-- Bottom-Left Report Citation -->
-  <div style="position: fixed; bottom: 32px; left: max(24px, 4vw); z-index: 999; font-family: var(--font-mono); font-size: 11px; color: #9CA3AF; letter-spacing: 0.3px;">
-    Gartner Magic Quadrant for Enterprise AI Assistants &middot; Sep 2026
-  </div>
+  <div class="ld-disc">Gartner does not endorse any vendor, product or service depicted in its research publications, and does not advise technology users to select only those vendors with the highest ratings or other designation. Gartner research publications consist of the opinions of Gartner's research organization and should not be construed as statements of fact. Gartner disclaims all warranties, expressed or implied, with respect to this research, including any warranties of merchantability or fitness for a particular purpose. This graphic was published by Gartner, Inc. as part of a larger research document and should be evaluated in the context of the entire document. The Gartner document is available upon request from Google. GARTNER is a registered trademark and service mark of Gartner, Inc. and/or its affiliates in the U.S. and internationally, and MAGIC QUADRANT is a registered trademark of Gartner, Inc. and/or its affiliates and are used herein with permission. All rights reserved.</div>
+</div>
+<script>
+(function () {
+  /* Label rows line up with the plates of the official animation (percent of the cropped frame height). */
+  var L = [
+    [11.7, "Agents & Applications", "Gemini Enterprise and ready-made agents, where people work.", [["Build", "page_01_build.html"], ["Surface", "page_02_surface.html"]]],
+    [26.2, "Agent Platform", "Build, scale, govern and optimise agents.", [["Build", "page_01_build.html"], ["Architecture", "page_03_architecture.html"]]],
+    [41.3, "Agentic Defense", "Zero-trust protection across the AI lifecycle, from code to cloud.", [["Govern", "page_05_govern.html"]]],
+    [56.8, "Agentic Data Cloud", "Grounds agents in trusted, real-time business context.", [["Architecture", "page_03_architecture.html"]]],
+    [70.9, "Research & Frontier Models", "Google DeepMind's Gemini, plus open and third-party choice.", [["Models", "page_04_models.html"]]],
+    [86.9, "AI Hypercomputer", "Purpose-built infrastructure on TPUs and GPUs.", [["Architecture", "page_03_architecture.html"]]]
+  ];
+  var box = document.getElementById("ldLabels");
+  box.innerHTML = L.map(function (l) {
+    return '<div class="ld-l" style="top:' + l[0] + '%"><div class="t"><b>' + l[1] + '</b><small>' + l[2] + '</small>' +
+      l[3].map(function (a) { return '<a href="' + a[1] + '">→ ' + a[0] + '</a>'; }).join("") + '</div></div>';
+  }).join("");
+  var rows = box.querySelectorAll(".ld-l"), v = document.getElementById("ldVideo");
+  var RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function reveal(step) { rows.forEach(function (r, i) { setTimeout(function () { r.classList.add("in"); }, i * step); }); }
+  if (RM) { reveal(0); return; }
+  /* Play the build once, then keep looping the idle part so the stack stays alive without rebuilding. */
+  v.addEventListener("ended", function () { v.currentTime = 1.6; v.play(); });
+  v.addEventListener("playing", function once() { v.removeEventListener("playing", once); reveal(170); });
+  var p = v.play(); if (p && p.catch) p.catch(function () { reveal(0); });
+  setTimeout(function () { if (!rows[0].classList.contains("in")) reveal(0); }, 2500);
+})();
+</script>
+</section>
+</main>
 
   <!-- Floating Page Dock -->
-  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; border-radius: 30px; backdrop-filter: blur(12px); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
-    <a href="page_06_resilience.html" style="background: #F3F4F6; border: 1px solid #E5E7EB; color: #4B5563; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none;">
+  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(18,19,23,.14); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+    <a href="page_06_resilience.html" style="background: var(--surface-sunk); border: 1px solid var(--border); color: var(--text-muted); width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none;">
       ◀
     </a>
-    <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: #4B5563; white-space: nowrap;">
+    <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: var(--text-muted); white-space: nowrap;">
       BUILD 07 // LEADERSHIP
     </div>
     <a href="page_08_100_days.html" style="background: var(--g-blue); border: none; color: #FFF; padding: 7px 16px; border-radius: 20px; font-family: var(--font-display); font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;">
@@ -194,26 +246,5 @@
     </a>
   </aside>
 
-  <!-- Interactive Scripts -->
-  <script>
-    function toggleFullscreen() {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
-      } else {
-        document.exitFullscreen();
-      }
-    }
-
-    // Keyboard navigation
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') {
-        window.location.href = 'page_06_resilience.html';
-      } else if (e.key === 'ArrowRight' || e.key === ' ') {
-        window.location.href = 'page_08_100_days.html';
-      } else if (e.key.toLowerCase() === 'f') {
-        toggleFullscreen();
-      }
-    });
-  </script>
 </body>
 </html>
