@@ -1331,6 +1331,18 @@
   .chips .chip-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; width: 100%; }
   .chips .chip-row-sub { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border-strong, #DADCE0); }
   .chips .domain-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
+  .ge-launch {
+    display: inline-flex; align-items: center; gap: 12px;
+    padding: 9px 14px; border: 1px solid transparent; border-radius: 10px;
+    background: var(--g-grey-1200, #121317); text-decoration: none;
+    transition: box-shadow 150ms ease, transform 150ms ease, background 150ms ease;
+  }
+  .ge-launch:hover { background: #1D1F26; box-shadow: 0 6px 18px rgba(18,19,23,.18); transform: translateY(-1px); }
+  .ge-mark  { height: 14px; width: auto; flex: none; display: block; }
+  .ge-cta   { font-size: var(--fs-12, 12px); font-weight: 600; color: #FFFFFF; white-space: nowrap; }
+  .ge-arrow { font-size: 14px; color: #FFFFFF; flex: none; }
+  html.theme-dark .ge-launch { background: #1D1F26; border-color: rgba(255, 255, 255, 0.14); }
+  html.theme-dark .ge-launch:hover { background: #262932; }
 </style>
 </head>
 
@@ -2191,6 +2203,30 @@
            "</div>";
   }
 
+  /* Same launcher as the persona dossier: the official white Gemini
+     Enterprise wordmark on a Grey 1200 surface. Opens the agent directly
+     where it is deployed, otherwise the workspace the estate is published
+     into -- and the tooltip says which. Keep these two constants in step
+     with personas/dossier.html. */
+  var GEMINI_ENTERPRISE_URL = window.GEMINI_ENTERPRISE_URL ||
+    "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05?hl=en_US";
+  var DEPLOYED_AGENT_URLS = {
+    "OG-P04-A08": "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/10364749965176844252/session/-?mods=",
+    "OG-P04-A02": "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/16397021713347413121/session/-?mods="
+  };
+  function geLaunch(r, a) {
+    var id = a.agentN ? "OG-" + r.id + "-A" + (a.agentN < 10 ? "0" : "") + a.agentN : "";
+    var live = !!(id && DEPLOYED_AGENT_URLS[id]);
+    var url = live ? DEPLOYED_AGENT_URLS[id] : GEMINI_ENTERPRISE_URL;
+    return '<a class="ge-launch" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer" title="' +
+           (live ? "Opens this agent directly in Gemini Enterprise"
+                 : "Opens the Gemini Enterprise workspace this estate is published into") + '">' +
+             '<img class="ge-mark" src="../assets/media/gemini_enterprise_logo.svg" alt="Gemini Enterprise">' +
+             '<span class="ge-cta">Open this agent</span>' +
+             '<span class="ge-arrow" aria-hidden="true">&#8599;</span>' +
+           "</a>";
+  }
+
   function showCell(ri, ci, btn, pin) {
     var r = DATA[ri], a = r.actions[ci];
 
@@ -2285,8 +2321,7 @@
       "</div>" +
 
       '<div class="d-foot">' +
-        '<a class="btn-ge" href="../personas/dossier.html?p=' + esc(r.id) +
-          (a.agentN ? "&a=" + a.agentN : "") + '">Open in Gemini Enterprise</a>' +
+        geLaunch(r, a) +
         '<a class="btn-ghost" href="../personas/dossier.html?p=' + esc(r.id) +
           '">Full persona dossier \u2192</a>' +
         (a.source ? '<span class="d-src">' + esc(a.source) + "</span>" : "") +
