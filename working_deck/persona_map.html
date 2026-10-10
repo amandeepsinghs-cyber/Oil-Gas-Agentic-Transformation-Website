@@ -1343,6 +1343,11 @@
   .ge-arrow { font-size: 14px; color: #FFFFFF; flex: none; }
   html.theme-dark .ge-launch { background: #1D1F26; border-color: rgba(255, 255, 255, 0.14); }
   html.theme-dark .ge-launch:hover { background: #262932; }
+  /* Board column header: darker and bolder than the default dim ink so the
+     two axes read at presenting distance. --text follows the theme. */
+  .bhead .rowlabel, .colaxis { color: var(--text-muted, #3C4043); font-weight: 700; }
+  html:not(.theme-dark) .bhead .rowlabel, html:not(.theme-dark) .colaxis { color: #3C4043; }
+  .colaxis .flow { background: #9AA0A6; }
 </style>
 </head>
 
