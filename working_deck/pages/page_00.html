@@ -326,7 +326,7 @@
         localStorage.setItem('deck-domain', key);
       } catch (e) {}
       /* journey numbering: 00 here, then the track, the persona map and the 8 Build pages */
-      document.querySelectorAll('[data-jcount]').forEach(function (el) { el.textContent = '00 / ' + (key === 'downstream' ? 15 : 14); });
+      document.querySelectorAll('[data-jcount]').forEach(function (el) { el.textContent = '00 / 14'; });
     }
 
     // Auto-initialize selected domain from storage

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FCC Agentic Optimisation (Live Demo) | Sovereign Agentic Transformation</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/aurora.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    .demo-stage-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: stretch;
+    }
+    .plot-container {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 16px 40px rgba(18,19,23,.12);
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .plot-frame {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #0D1117;
+      border: 1px solid var(--border-subtle);
+      position: relative;
+    }
+    .plot-img {
+      max-height: 480px;
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      border-radius: 6px;
+      transition: transform 0.3s ease;
+    }
+    .plot-frame:hover .plot-img {
+      transform: scale(1.02);
+    }
+    .demo-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--g-blue);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0;
+      width: 100%;
+      box-sizing: border-box;
+      transition: all 0.25s ease;
+    }
+    .demo-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .gemini-btn {
+      background: var(--gemini-spark);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 14.5px;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 24px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-md);
+      transition: all 0.2s ease;
+    }
+    .gemini-btn:hover {
+      transform: scale(1.03);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+  </style>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('deck-theme') || 'light';
+      if (saved === 'dark') {
+        document.documentElement.classList.add('theme-dark');
+      }
+    })();
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('theme-dark');
+      if (document.body) document.body.classList.toggle('theme-dark', isDark);
+      localStorage.setItem('deck-theme', isDark ? 'dark' : 'light');
+      updateThemeButtons(!isDark);
+    }
+    function updateThemeButtons(isLight) {
+      document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+        btn.innerHTML = isLight 
+          ? '<span style="font-size: 13px; line-height: 1;">🌙</span><span>Dark Mode</span>' 
+          : '<span style="font-size: 13px; line-height: 1;">☀️</span><span>Light Mode</span>';
+        btn.setAttribute('title', isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const isLight = !document.documentElement.classList.contains('theme-dark');
+      updateThemeButtons(isLight);
+    });
+  </script>
+</head>
+<body style="background: var(--canvas); color: var(--text-muted); font-family: var(--font-display); margin: 0; padding: 0; overflow-x: hidden;">
+
+  <!-- Single-Page Executive Top Navigation Bar -->
+  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(248, 249, 252, 0.85); border-bottom: 1px solid var(--border-subtle); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
+    <a href="../../index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
+      <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
+      <div style="width: 1px; height: 20px; background: var(--surface-sunk);"></div>
+      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text); letter-spacing: 1.5px; text-transform: uppercase;">STAGE 05 // FCC AGENTIC OPTIMISATION</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: 16px;">
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Light Mode">
+        <span style="font-size: 13px; line-height: 1;">☀️</span>
+        <span>Light Mode</span>
+      </button>
+      <a href="04_plug_is_an_agent.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;">05 / 14</span>
+      <a href="06_persona_map.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--blue-ink); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
+      <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
+        All Slides ↗
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Viewport -->
+  <main id="viewport-scaler" style="padding-top: 60px;">
+    <section class="slide narrative-stage" id="stage-05" style="min-height: calc(100vh - 60px); display: flex; flex-direction: column; justify-content: flex-start; padding: 22px max(24px, 4vw) 96px; position: relative; background: var(--canvas); box-sizing: border-box;">
+<style>
+  .fc-wrap { max-width: 1440px; margin: 0 auto; width: 100%; }
+  .fc-kick { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .fc-kick .bar { width: 24px; height: 3px; border-radius: 2px; background: var(--gemini-spark); }
+  .fc-kick .a { color: var(--green-ink); font: 800 13px var(--font-display); letter-spacing: 2px; text-transform: uppercase; }
+  .fc-kick .b { color: var(--text-muted); font: 700 13px var(--font-mono); letter-spacing: .5px; }
+  .fc-h1 { font: 800 clamp(28px, 2.9vw, 42px)/1.12 var(--font-display); letter-spacing: -1px; color: var(--text); margin: 0 0 8px; max-width: 1180px; }
+  .fc-sub { font-size: 16px; line-height: 1.5; color: var(--text-muted); margin: 0 0 16px; max-width: 1120px; }
+  .fc-sub b { color: var(--text); font-weight: 600; }
+  /* the oil route */
+  .fc-route { position: relative; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; margin-bottom: 10px; }
+  .fc-route::before { content: ""; position: absolute; left: 3%; right: 3%; top: 21px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, #3186FF, #4B31E3); opacity: .25; }
+  .fc-oil { position: absolute; top: 16px; width: 13px; height: 13px; border-radius: 50%; background: #121317; box-shadow: 0 0 0 4px rgba(49,134,255,.22); transition: left .7s cubic-bezier(.4,0,.2,1); z-index: 2; }
+  .fc-stop { position: relative; z-index: 1; background: none; border: 0; padding: 0; cursor: pointer; text-align: center; font: inherit; color: inherit; }
+  .fc-stop .dot { width: 30px; height: 30px; margin: 7px auto 8px; border-radius: 50%; background: var(--surface); border: 2px solid var(--border-strong); display: flex; align-items: center; justify-content: center; font: 700 11.5px var(--font-mono); color: var(--text-muted); transition: all .25s; }
+  .fc-stop b { display: block; font: 700 13.5px var(--font-display); color: var(--text); }
+  .fc-stop small { display: block; font-size: 11.5px; color: var(--text-dim); margin-top: 1px; }
+  .fc-stop:hover .dot { border-color: var(--g-blue); }
+  .fc-stop.on .dot { background: var(--g-blue); border-color: var(--g-blue); color: #FFF; box-shadow: 0 0 0 6px rgba(49,134,255,.18); }
+  .fc-stop.on b { color: var(--blue-ink); }
+  /* stage: snapshot + decision */
+  .fc-stage { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 16px; align-items: stretch; }
+  .fc-shot { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 16px; box-shadow: 0 16px 40px rgba(18,19,23,.10); overflow: hidden; display: flex; flex-direction: column; }
+  .fc-bar { display: flex; align-items: center; gap: 8px; padding: 9px 14px; border-bottom: 1px solid var(--border-subtle); }
+  .fc-bar .dots { display: flex; gap: 5px; } .fc-bar .dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--border-strong); }
+  .fc-bar .t { font: 500 12.5px var(--font-mono); color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .fc-bar a { margin-left: auto; font: 700 12px var(--font-display); color: var(--blue-ink); text-decoration: none; white-space: nowrap; }
+  .fc-frame { position: relative; aspect-ratio: 2.1 / 1; overflow: hidden; background: #F8F9FC; }
+  .fc-cam { position: absolute; left: 0; top: 0; transform-origin: 0 0; transition: transform 1s cubic-bezier(.45,0,.2,1); }
+  .fc-cam img { display: block; }
+  .fc-spot { position: absolute; border: 2.5px solid #3186FF; border-radius: 12px; box-shadow: 0 0 0 9999px rgba(18,19,23,.42); transition: all 1s cubic-bezier(.45,0,.2,1); pointer-events: none; }
+  .fc-spot.off { box-shadow: 0 0 0 9999px rgba(18,19,23,0); border-color: transparent; }
+  .fc-card { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 16px; box-shadow: var(--shadow-sm); padding: 18px 20px; display: flex; flex-direction: column; gap: 12px; }
+  .fc-card .unit { display: flex; align-items: center; gap: 10px; font: 700 11.5px var(--font-mono); letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-muted); }
+  .fc-tag { margin-left: auto; font: 700 10.5px var(--font-mono); letter-spacing: .8px; border-radius: 999px; padding: 3px 10px; border: 1px solid; }
+  .fc-tag.live { color: var(--green-ink); border-color: var(--g-green); background: rgba(0,175,87,.08); }
+  .fc-tag.scripted { color: var(--amber-ink); border-color: var(--g-yellow); background: rgba(254,199,0,.10); }
+  .fc-tag.watch { color: var(--purple-ink); border-color: var(--g-purple); background: rgba(75,49,227,.07); }
+  .fc-q { font: 600 20px/1.3 var(--font-display); color: var(--text); margin: 0; }
+  .fc-q::before { content: "\201C"; color: var(--text-dim); } .fc-q::after { content: "\201D"; color: var(--text-dim); }
+  .fc-today { font-size: 13.5px; line-height: 1.5; color: var(--text-muted); }
+  .fc-today b { color: var(--red-ink); font-weight: 600; }
+  .fc-move { border-left: 3px solid var(--g-blue); background: rgba(49,134,255,.06); border-radius: 0 10px 10px 0; padding: 10px 14px; }
+  .fc-move .k { font: 700 10.5px var(--font-mono); letter-spacing: 1px; text-transform: uppercase; color: var(--blue-ink); }
+  .fc-move .v { font: 700 16.5px/1.35 var(--font-display); color: var(--text); margin-top: 3px; }
+  .fc-move .w { font-size: 12.5px; color: var(--text-muted); margin-top: 4px; }
+  .fc-next { font-size: 13px; line-height: 1.45; color: var(--text-muted); }
+  .fc-next b { color: var(--text); font-weight: 600; }
+  .fc-launch { margin-top: auto; display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border-subtle); padding-top: 12px; }
+  .fc-launch img { width: 30px; height: 30px; }
+  .fc-launch div { font: 700 14px var(--font-display); color: var(--text); } .fc-launch small { display: block; font: 500 11px var(--font-mono); color: var(--text-dim); }
+  .fc-btn { margin-left: auto; background: var(--gemini-spark); color: #FFF; font: 700 13.5px var(--font-display); padding: 10px 18px; border-radius: 22px; text-decoration: none; white-space: nowrap; box-shadow: var(--shadow-md); }
+  /* proof strip */
+  .fc-proof { margin-top: 12px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .fc-p { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 12px 14px; }
+  .fc-p .n { font: 800 19px var(--font-display); color: var(--text); letter-spacing: -.3px; }
+  .fc-p .n s { text-decoration: none; color: var(--text-dim); font-weight: 600; }
+  .fc-p p { margin: 3px 0 0; font-size: 12.5px; line-height: 1.4; color: var(--text-muted); }
+  .fc-p.hold { border-color: var(--g-yellow); background: rgba(254,199,0,.06); }
+  .fc-foot { margin-top: 10px; font-size: 11px; color: var(--text-dim); }
+  @media (max-width: 1150px) { .fc-stage, .fc-proof { grid-template-columns: 1fr; } .fc-route { grid-template-columns: repeat(4, 1fr); } .fc-route::before, .fc-oil { display: none; } }
+</style>
+<!-- Speaker notes: "The FCC is the refinery's money-maker: it cracks heavy gas oil nobody can sell into petrol, diesel and
+     LPG. The crude changes every day or two, the six units are one connected loop, and quality comes back from the lab
+     every 8 hours. Follow the oil: at every stop there is one decision an operator makes half-blind today."
+     Honesty rules (from the FCC presenter pack): simulated data only (Santander et al. 2022 FCC-Fractionator simulator);
+     status tags say which outcomes are live models and which are scripted; it advises only - no write path to the DCS;
+     never quote a saving as our claim. Open the live app ~10 minutes early (Cloud Run scales to zero; Google sign-in). -->
+<div class="fc-wrap">
+  <div class="fc-kick"><span class="bar"></span><span class="a">Live agent demo</span><span style="color:var(--text-dim)">//</span><span class="b">FCC AGENTIC OPTIMISATION</span></div>
+  <h1 class="fc-h1">Follow the oil. <span class="au-display-grad">One explained decision at every stop.</span></h1>
+  <p class="fc-sub">The FCC turns heavy gas oil nobody can sell into petrol, diesel and LPG. The crude changes every day or two and the lab reports every eight hours, so <b>six connected units are steered half-blind</b>. Agents watch every minute, explain each move and its knock-on effect — and an operator approves.</p>
+
+  <div class="fc-route" id="fcRoute"><span class="fc-oil" id="fcOil"></span></div>
+
+  <div class="fc-stage">
+    <div class="fc-shot">
+      <div class="fc-bar"><span class="dots"><i></i><i></i><i></i></span><span class="t" id="fcTitle">FCC Decision Cockpit · Refinery Digital Twin</span><a href="https://fcc-cockpit-1099437687941.us-central1.run.app" target="_blank" rel="noopener noreferrer">Open live ↗</a></div>
+      <div class="fc-frame" id="fcFrame"><div class="fc-cam" id="fcCam"><img id="fcImg" src="../../assets/media/evidence/fcc_cockpit_overview.png" alt="FCC Decision Cockpit snapshot"><span class="fc-spot" id="fcSpot"></span></div></div>
+    </div>
+    <div class="fc-card">
+      <div class="unit"><span id="fcUnit">U4 · Main fractionator</span><span class="fc-tag" id="fcTag">LIVE MODEL</span></div>
+      <p class="fc-q" id="fcQ"></p>
+      <div class="fc-today" id="fcToday"></div>
+      <div class="fc-move"><div class="k">The agent advises</div><div class="v" id="fcMove"></div><div class="w" id="fcWhy"></div></div>
+      <div class="fc-next" id="fcNext"></div>
+      <div class="fc-launch"><img src="../../assets/media/brand/gemini_spark_fullcolor_768.png" alt=""><div>Launch the live FCC cockpit<small>Cloud Run · Google sign-in · Ask Gemini inside</small></div>
+        <a class="fc-btn" href="https://fcc-cockpit-1099437687941.us-central1.run.app" target="_blank" rel="noopener noreferrer">Launch demo ↗</a></div>
+    </div>
+  </div>
+
+  <div class="fc-proof">
+    <div class="fc-p"><div class="n"><s>8 h</s> → every minute</div><p>Product quality estimated by four models, including a physics-informed one — not waited for from the lab.</p></div>
+    <div class="fc-p"><div class="n">14 min</div><p>To name a crude switch and re-weight the models for the new feed (15 of 15 held-out switches caught).</p></div>
+    <div class="fc-p hold"><div class="n">“Not yet”</div><p>When the models disagree by more than 14 °F, it holds the move and asks for a lab sample instead of guessing.</p></div>
+    <div class="fc-p"><div class="n">0 writes</div><p>Advisory only: no path to the DCS. A person accepts, holds or declines, and every decision is recorded.</p></div>
+  </div>
+  <div class="fc-foot">Demo on simulated data from a peer-reviewed FCC simulator (Santander et al., 2022). Tags show which outcomes come from live models and which are scripted for the demo.</div>
+</div>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var IMG = { ov: ["../../assets/media/evidence/fcc_cockpit_overview.png", 1920, 1080, "FCC Decision Cockpit · Refinery Digital Twin"],
+              fr: ["../../assets/media/evidence/fcc_cockpit_fractionator.png", 1440, 1600, "FCC Decision Cockpit · U4 Main fractionator workbench"] };
+  /* rect = [x, y, w, h] in screenshot pixels; null = whole screen */
+  var S = [
+    { n: "1", b: "Feed arrives", s: "which feed?", img: "ov", r: [362, 120, 880, 80], unit: "Feed · crude slate", tag: "scripted",
+      q: "Which feed is this, and has the switch finished?",
+      today: "Today the crude family is <b>declared, not detected</b> — settings stay tuned for yesterday's feed until someone notices.",
+      move: "Light crude family detected at 07:37 · switch 100 % complete", why: "Novelty check and physics weight reset for the new feed.",
+      next: "<b>If nothing is done:</b> every unit downstream runs on the wrong assumptions." },
+    { n: "2", b: "Furnace", s: "preheat", img: "ov", r: [368, 298, 290, 252], unit: "U1 · Feed furnace", tag: "scripted",
+      q: "What preheat for this feed?",
+      today: "Today preheat is <b>left at the old set point</b> until the lab confirms the feed changed.",
+      move: "Raise preheat +1.5 °F (616.0 → 617.5)", why: "Gain measured on 52 step tests; heavier feed needs more heat.",
+      next: "<b>Knock-on:</b> heavier feed means more coke, and catalyst circulation shifts in the riser." },
+    { n: "3", b: "Riser", s: "move or watch", img: "ov", r: [716, 298, 305, 252], unit: "U2 · Riser reactor", tag: "watch",
+      q: "Move now, or watch?",
+      today: "Today a small drift in conversion <b>triggers a reflex move</b>, or none at all.",
+      move: "Watch — conversion +0.5 %, inside its band. No move yet.", why: "The agent says when not to act, not just when to.",
+      next: "<b>Knock-on:</b> cracking severity sets the coke the regenerator has to burn." },
+    { n: "4", b: "Regenerator", s: "air", img: "ov", r: [1066, 298, 305, 252], unit: "U3 · Regenerator", tag: "scripted",
+      q: "How much air?",
+      today: "Today air is <b>trimmed by feel</b> against afterburn alarms.",
+      move: "Trim air −0.03 lb/s (2.65 → 2.62)", why: "Keeps coke burn and afterburn inside metallurgical limits.",
+      next: "<b>Knock-on:</b> regenerated catalyst temperature feeds straight back into the riser." },
+    { n: "5", b: "Fractionator", s: "cut point", img: "fr", r: [1080, 930, 348, 670], unit: "U4 · Main fractionator", tag: "live",
+      q: "Where do I cut, and can I trust the number?",
+      today: "Today the cut point is set on a lab result that is <b>four hours away</b> — so operators run conservatively and give away product.",
+      move: "Lower heavy-naphtha cut point −5.0 °F (530.3 → 525.3) · chance on spec 90 % → > 99 %", why: "Four models agree inside the 14 °F trust gate, so it is allowed to advise.",
+      next: "<b>Knock-on:</b> where the cut sits decides how much lands in petrol, diesel and slurry." },
+    { n: "6", b: "Gas plant", s: "overhead", img: "ov", r: [716, 584, 655, 254], unit: "U5 · Gas plant & U6 · Stabiliser", tag: "scripted",
+      q: "What overhead temperature?",
+      today: "Today condenser fouling shows up as <b>lost C5 and an LPG split off target</b>, hours later.",
+      move: "Raise overhead set point +1.5 °F (245.9 → 247.4) · back inside duty 31 % → 98 %", why: "Turns a fouling signal into the move operators actually make.",
+      next: "<b>Knock-on:</b> sets how much C5 stays in petrol and how the LPG split lands." },
+    { n: "7", b: "Whole unit", s: "one view", img: "ov", r: [355, 205, 1420, 640], unit: "FCC complex · all six units", tag: "scripted",
+      q: "What did one crude switch do to all six units?",
+      today: "Today each console optimises <b>its own unit</b>; the consequence on the next one arrives two to three hours later.",
+      move: "Four decisions and one watch item — each shown with its effect on the next unit", why: "The DCS handles the seconds; the agents coordinate the hours.",
+      next: "<b>This is the difference</b> between optimising a console and optimising the FCC." }
+  ];
+  var TAG = { live: "LIVE MODEL", scripted: "SCRIPTED OUTCOME", watch: "WATCH ONLY" };
+  var route = $("fcRoute");
+  S.forEach(function (st, i) {
+    var b = document.createElement("button"); b.className = "fc-stop"; b.dataset.i = i;
+    b.innerHTML = '<span class="dot">' + st.n + '</span><b>' + st.b + '</b><small>' + st.s + '</small>';
+    route.appendChild(b);
+  });
+  var cur = 4, img = $("fcImg");
+  function cam() {
+    var st = S[cur], I = IMG[st.img], F = $("fcFrame"), W = F.clientWidth, H = F.clientHeight;
+    var r = st.r || [0, 0, I[1], I[2]], pad = st.r ? 1.25 : 1;
+    var s = st.r ? Math.min(W / (r[2] * pad), H / (r[3] * pad)) : Math.min(W / I[1], H / I[2]);
+    var tx = W / 2 - (r[0] + r[2] / 2) * s, ty = H / 2 - (r[1] + r[3] / 2) * s;
+    tx = Math.min(0, Math.max(W - I[1] * s, tx)); ty = Math.min(0, Math.max(H - I[2] * s, ty));
+    if (I[1] * s < W) tx = (W - I[1] * s) / 2; if (I[2] * s < H) ty = (H - I[2] * s) / 2;
+    $("fcCam").style.transform = "translate(" + tx + "px," + ty + "px) scale(" + s + ")";
+    var sp = $("fcSpot");
+    if (st.r) { sp.className = "fc-spot"; sp.style.left = r[0] + "px"; sp.style.top = r[1] + "px"; sp.style.width = r[2] + "px"; sp.style.height = r[3] + "px"; sp.style.borderWidth = (2.5 / s) + "px"; sp.style.borderRadius = (12 / s) + "px"; }
+    else { sp.className = "fc-spot off"; }
+  }
+  function show(i) {
+    cur = i; var st = S[i], I = IMG[st.img];
+    route.querySelectorAll(".fc-stop").forEach(function (b, k) { b.classList.toggle("on", k === i); });
+    var btn = route.querySelectorAll(".fc-stop")[i], dot = btn.querySelector(".dot");
+    $("fcOil").style.left = (btn.offsetLeft + dot.offsetLeft + dot.offsetWidth / 2 - 6.5) + "px";
+    if (img.getAttribute("src") !== I[0]) { img.src = I[0]; }
+    img.style.width = I[1] + "px"; img.style.height = I[2] + "px";
+    $("fcTitle").textContent = I[3];
+    $("fcUnit").textContent = st.unit; var t = $("fcTag"); t.className = "fc-tag " + st.tag; t.textContent = TAG[st.tag];
+    $("fcQ").textContent = st.q; $("fcToday").innerHTML = st.today; $("fcMove").textContent = st.move; $("fcWhy").textContent = st.why; $("fcNext").innerHTML = st.next;
+    cam();
+  }
+  route.addEventListener("click", function (e) { var b = e.target.closest(".fc-stop"); if (b) show(+b.dataset.i); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowDown") { show((cur + 1) % S.length); e.preventDefault(); }
+    if (e.key === "ArrowUp") { show((cur + S.length - 1) % S.length); e.preventDefault(); }
+  });
+  addEventListener("resize", cam);
+  show(4);
+})();
+</script>
+    </section>
+  </main>
+
+  <!-- Floating Page Dock -->
+  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: var(--surface-sunk); border: 1px solid var(--border-hairline); border-radius: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(18,19,23,.14); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+    <a href="04_plug_is_an_agent.html" style="background: var(--surface-sunk); border: 1px solid var(--border); color: var(--text-muted); width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none;">
+      ◀
+    </a>
+    <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: var(--text-muted); white-space: nowrap;">
+      PAGE 05 // FCC AGENTIC OPTIMISATION
+    </div>
+    <a href="06_persona_map.html" style="background: var(--g-blue); border: none; color: #FFF; padding: 7px 16px; border-radius: 20px; font-family: var(--font-display); font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+      <span>Next Page</span>
+      <span>▶</span>
+    </a>
+  </aside>
+
+</body>
+</html>

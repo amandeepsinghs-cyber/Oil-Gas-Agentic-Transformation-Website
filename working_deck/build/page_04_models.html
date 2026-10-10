@@ -288,7 +288,7 @@
    so their running number depends on the track picked on the main page (deck-domain). */
 (function () {
   var d = ""; try { d = (localStorage.getItem("deck-domain") || "").toLowerCase(); } catch (e) {}
-  var off = d === "downstream" ? 7 : 6, tot = off + 8;
+  var off = 6, tot = off + 8;
   document.querySelectorAll("[data-bnum]").forEach(function (el) {
     var n = off + parseInt(el.getAttribute("data-bnum"), 10);
     el.textContent = (n < 10 ? "0" : "") + n + " / " + tot;
