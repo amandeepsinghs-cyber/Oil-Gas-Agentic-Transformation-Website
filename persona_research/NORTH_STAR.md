@@ -46,6 +46,8 @@ lands in exactly one of three places:
 | **The existing system** | the incumbent monolith already runs it properly | 86 / 495 (17%) |
 | **The human workforce** | irreducibly human — authority, life-safety, physical presence | 75 / 495 (15%) |
 
+*(Note: These figures reflect the 33-persona baseline; live estate figures come from `working_deck/data/matrix.js` META.)*
+
 > **Gemini Enterprise is used by humans.** An agent is deployed to a person,
 > not to a pump. The value may land on the asset — 43% of it does — but it is
 > realised through the worker whose workflow changed. A view of the estate

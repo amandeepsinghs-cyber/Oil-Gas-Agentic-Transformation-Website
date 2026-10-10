@@ -19,6 +19,17 @@
   "avatar": "avatars/P01_persona.jpg",
   "thumb": "avatars/thumbs/P01_thumb.jpg",
   "initials": "WS",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Wells & Rig"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Wellsite Supervisor (\"Company Man\") represents the operating oil company’s ultimate on-site authority, carrying personal responsibility for personnel safety, statutory well control, and operational expenditure burning 50,000 to1,500,000 per day. While enterprise drilling reporting monoliths like Halliburton Landmark OpenWells and Peloton WellView provide relational databases for morning reports, they operate as completely manual data silos that consume 3 to 4 hours of the supervisor's shift in repetitive transcription and cross-checking. Every morning, between 04:00 and 07:00, the supervisor must manually transcribe contractor tour sheets into 15-minute operational time codes, audit third-party service invoices to verify whether rental tools were downhole or on standby, check paper pipe tallies against driller depth, verify circular analog BOP pressure charts against API RP 53 hold times, and resolve supply truck delivery mismatches. Rather than a single \"drilling assistant,\" the Company Man requires a federated squad of 7 hyper-specialized agents—each tackling one discrete, research-backed operational gap. Across a typical drilling tour, this agent squad returns ~10.25 hours of focused operational supervision time per well tour day, eliminating contractor invoice over-billing, preventing drill pipe tally depth errors, and guaranteeing statutory well control compliance.",
   "confidence": {
     "Persona": "Wellsite Supervisor (P01)",

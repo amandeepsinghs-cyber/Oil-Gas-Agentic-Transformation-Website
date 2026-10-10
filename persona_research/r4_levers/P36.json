@@ -1,0 +1,18 @@
+{
+  "id": "P36",
+  "seats": 85,
+  "assetCapital": null,
+  "assetRisk": {
+    "scenario": "Fiscal measurement dispute or misallocation arbitration",
+    "unitsPerYear": 450,
+    "unitLabel": "fiscal metering stations",
+    "frequency": 0.03,
+    "consequence": 80000000,
+    "alpha": 0.35,
+    "beta": 0.40,
+    "source": "~450 major custody transfer stations across gas grid interconnects, gas plants, and downstream refinery/terminal receipt skids. Consequence (~₹8 Cr) covers multi-month retroactive true-up adjustments, expert determination, arbitration costs, and contractual imbalance penalties. High alpha and beta because custody dispute prevention is overwhelmingly an audit-trail, calibration-tracking, and calculation integrity problem."
+  },
+  "recovery": null,
+  "rationale": "P36 Measurement Engineer spans midstream gas transmission (55%) and downstream refining/distribution (45%). Headcount of 85 seats is sized across ~16,000 km of gas transmission grid (~40 seats in regional measurement bases) and downstream operations (~45 seats across 11 refineries and ~120 marketing installations). Asset Capital is strictly null because measurement engineers do not sit on the critical path of physical asset throughput (gas and liquids flow uninterrupted, and duty/standby meter skids prevent outages). Asset Risk models major fiscal custody disputes and misallocation arbitration across 450 fiscal metering stations at ₹8 Cr average consequence with alpha*beta held to 0.14 (avoided risk of ₹15.12 Cr/yr). Resource Recovery is null as the role operates downstream of the reservoir.",
+  "caveats": "Dispute consequences can surge during high gas price volatility or winter demand peaks when shipper imbalances carry steep financial surcharges. Dual-stream metering configurations ensure zero physical critical-path deferment, reinforcing the zero asset capital basis."
+}

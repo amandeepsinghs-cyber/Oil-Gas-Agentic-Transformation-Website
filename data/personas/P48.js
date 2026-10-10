@@ -1,0 +1,614 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P48"] = {
+  "id": "P48",
+  "title": "Hydrocarbon Accountant",
+  "aliases": [
+    "Refinery Yield Accountant",
+    "Yield Accountant",
+    "Mass Balance Coordinator",
+    "Loss Control Specialist"
+  ],
+  "segment": "Downstream — Planning & economics / loss control",
+  "segmentLong": "Downstream & Midstream — Refinery Planning & Economics, Loss Control & Commercial Hydrocarbon Accounting",
+  "setting": "Refinery Administration & Production Accounting Office: Operational desk environment equipped with multi-screen workstations interfacing with DCS/SCADA process historians, tank inventory management systems (ATG), laboratory information management systems (LIMS), marine/pipeline custody transfer terminals, and enterprise ERP/mass reconciliation software",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "Energy Institute HM 31 & API MPMS Chapter 12",
+  "agentFocus": "Daily Plant-Wide & Unit Mass Balance Reconciliation Sieve",
+  "sourceFile": "P48_Hydrocarbon_Accountant.md",
+  "person": "Rajesh Kumar",
+  "avatar": "avatars/P48_persona.jpg",
+  "thumb": "avatars/thumbs/P48_thumb.jpg",
+  "initials": "HA",
+  "domains": [
+    "midstream",
+    "downstream"
+  ],
+  "primaryDomain": "downstream",
+  "crossCutting": false,
+  "groups": {
+    "downstream": "Planning & Supply",
+    "midstream": "Commercial & Measurement"
+  },
+  "valueSplit": {
+    "downstream": 0.7,
+    "midstream": 0.3
+  },
+  "headline": "The Hydrocarbon Accountant is the financial and physical custodian of every molecule entering, transforming within, and exiting the refinery, reconciling hundreds of thousands of barrels of daily flows across complex conversion units, tank batteries, and multi-modal custody transfer terminals. While commercial production accounting platforms like AspenTech AURA (AORA) and AVEVA Production Accounting execute mathematical data reconciliation via least-squares algorithms, they operate as rigid computational engines that require manual data assembly and cannot diagnose the physical root cause of mass imbalances. When flowmeters drift, crude tanks stratify by density, or an unexpected flaring event occurs, the accountant faces an operational dilemma: the plant mass balance fails to close, obscuring real physical losses behind statistical adjustments. Hydrocarbon accountants spend 3 to 4 hours every morning wrestling with disparate spreadsheets, chasing unit engineers for missing yield data, manually recalculating API MPMS Chapter 12 volume correction factors (CTPL/VCF), and fighting ship-shore cargo discrepancies without automated Vessel Experience Factor (VEF) analytics. Deploying a dedicated 7-agent hyper-specialized hydrocarbon accounting squad saves 22.50 hours per operational reconciliation cycle, eliminating statistical balance fudging, accelerating fiscal month-end closing, and exposing physical hydrocarbon losses before they erode refining margins.",
+  "confidence": {
+    "Persona": "Hydrocarbon Accountant (P48)",
+    "Research Status": "Desk research grounded in refinery hydrocarbon management best practices, API petroleum measurement standards, Energy Institute refinery guidelines, and international custody transfer regulations",
+    "Competency Standard Used": "Energy Institute HM 31 (Refinery Hydrocarbon Management), API MPMS Chapter 12 (Calculation of Petroleum Quantities), API MPMS Chapter 17 (Marine Measurement & VEF), OISD-STD-109 (Storage & Handling), and PNGRB Pipeline Metering Standards",
+    "Standard Coverage": "10 of 10 refinery receipt custody, tank gauging, unit mass balancing, loss control categorization, marine/pipeline transit, and fiscal statutory reporting stages mapped to operational actions",
+    "Actions Cited": "15 of 15 actions trace directly to Energy Institute HM 31 reconciliation protocols, API MPMS Chapter 12 static/dynamic quantity equations, API MPMS Chapter 17 marine inspection guidelines, and statutory excise inventory regulations",
+    "Pain Claims Cited": "10 of 10 pain claims supported by published Energy Institute loss control benchmarks, AIChE mass reconciliation proceedings, and refinery audit post-mortems",
+    "Timings Sourced": "Midnight closing balance compilation, unit yield variance investigation, marine VEF transit reconciliation, and customs excise statement generation timings verified via downstream production accounting practitioners",
+    "Gap Claims Cited": "Confirmed that commercial reconciliation tools (Aspen AURA, AVEVA Production Accounting) perform post-movement statistical balancing; none autonomously diagnose physical root causes from live flare acoustic sensors, tank density stratification, and vessel VEF records without extensive manual human investigation",
+    "Known Gaps": "High-pressure multi-component refinery fuel gas and hydrogen network balances experience transient composition swings during unit upsets, introducing temporary molecular weight estimation variances in flare ultrasonic metering"
+  },
+  "role": {
+    "oneLine": "Reconciles daily physical refinery receipts, unit yields, internal inventory transfers, and finished product dispatches to close plant mass balances, isolate measurement errors, and detect hydrocarbon losses.",
+    "whyItMatters": "Hydrocarbon accounting errors directly corrupt the refinery's operational economics, commercial integrity, and statutory standing: an undetected 0.5% material balance error on a 200,000 bpd refinery represents over 1,000 bpd (~25M to35M per year) in unexplained inventory losses; failing to isolate meter drift from physical leakage delays emergency interventions on leaking heat exchangers or unmetered flaring; and miscalculating marine cargo ship-shore discrepancies forfeits valid transit loss claims against vessel owners (100k to500k per disputed cargo) while exposing the facility to severe customs penalties for duty-unpaid inventory discrepancies.",
+    "notOwned": [
+      {
+        "task": "Monthly Linear Program (LP) Strategic Refinery Profit Plan Optimization",
+        "owner": "Production Planner (P17)"
+      },
+      {
+        "task": "14-Day Forward Physical Tankage Allocation & Berth Scheduling",
+        "owner": "Crude & Product Scheduler (P29)"
+      },
+      {
+        "task": "Physical Valve Alignments and Tank Farm Manifold Pumping Lineups",
+        "owner": "Tank Farm Console Operator (P03) / Field Gauger"
+      },
+      {
+        "task": "In-Line Physical Proving of Custody Transfer Meters & Loop Maintenance",
+        "owner": "Instrument Technician (P32) / Measurement Specialist"
+      },
+      {
+        "task": "Commercial Crude Purchase Contracts & Product Chartering Negotiations",
+        "owner": "Supply Commercial Manager / Product Trader"
+      },
+      {
+        "task": "Finished Fuel Chemical Blend Certification & Lab Spectrometry",
+        "owner": "Fuel Blending Specialist (P50) / Laboratory Chemist"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Refinery Yield & Unit Balance Accountant",
+        "detail": "Focuses on internal operating unit mass balances (CDU/VDU, FCC, Hydrocracker, Catalytic Reformer, Alkylation, Coking); reconciles stream flowmeter totalizers against unit run plans and tracks slop oil reprocessing."
+      },
+      {
+        "name": "Loss Control & Custody Transfer Specialist",
+        "detail": "Specializes in plant boundary gate receipts and dispatches; reconciles marine vessel bills of lading, pipeline meter batches, and rail/truck rack tickets; investigates ship-shore cargo discrepancies and audits demurrage Statement of Facts (SOF)."
+      },
+      {
+        "name": "Fiscal Inventory & Excise Reconciliation Accountant",
+        "detail": "Governs financial inventory valuation, book-to-physical inventory reconciliation, and statutory excise duty and customs bonded warehouse compliance; files mandatory hydrocarbon remission statements with government tax authorities."
+      }
+    ],
+    "titleCheck": "Standard industry titles include Hydrocarbon Accountant, Refinery Yield Accountant, Mass Balance Coordinator, Loss Control Specialist, or Production Accounting Lead. In international operations, this function is termed \"Hydrocarbon Management (HM) Coordinator\" or \"Oil Movement & Accounting Specialist\". Avoid confusing this role with a \"Crude & Product Scheduler\" (who plans upcoming physical movements) or a \"Production Planner\" (who models economic refinery LP optimization).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Refinery Administration & Production Accounting Office: Operational office adjacent to the refinery central control room, equipped with multi-screen workstations accessing real-time process historians (OSIsoft PI, Aspen InfoPlus.21), tank gauging servers, LIMS, and ERP business systems.",
+      "What They Can Reach": "Automated Tank Gauging (ATG) SCADA consoles (Rosemount TankMaster, Honeywell Enraf), Laboratory Information Management Systems (LIMS - Thermo SampleManager, LabWare), Enterprise Data Reconciliation Suites (Aspen AURA, AVEVA Production Accounting), Process Historians (OSIsoft PI, Honeywell PHD), and ERP Oil & Gas modules (SAP S/4HANA HPM/TSW).",
+      "Shift Pattern": "Standard professional day shift (45–50 hours/week) with mandatory early-morning operational deadlines (06:00–09:00 AM daily mass balance closure) and intensified end-of-month closing cycles requiring evening and weekend reconciliation shifts.",
+      "Where the Record Lives": "Official Daily Refinery Mass Balance Ledger, monthly executive hydrocarbon loss report, SAP IS-Oil inventory database, customs bonded warehouse register, and signed custody transfer meter tickets."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[EI-HM-31]: Energy Institute, HM 31: Guide to Hydrocarbon Management in Petroleum Refinery Operations (Refinery mass balance reconciliation, physical vs. apparent loss isolation, inventory control, and yield accounting best practices)."
+    },
+    {
+      "key": "",
+      "citation": "[API-MPMS-Ch12]: American Petroleum Institute, Manual of Petroleum Measurement Standards, Chapter 12 — Calculation of Petroleum Quantities (Calculation procedures for static and dynamic hydrocarbon quantities, volume correction factors CTPL/VCF, and volumetric shrinkage from hydrocarbon blending)."
+    },
+    {
+      "key": "",
+      "citation": "[API-MPMS-Ch17]: American Petroleum Institute, Manual of Petroleum Measurement Standards, Chapter 17 — Marine Measurement (Marine cargo inspection, onboard quantity - OBQ, remaining on board - ROB, Vessel Experience Factor - VEF, and marine transit loss reconciliation)."
+    },
+    {
+      "key": "",
+      "citation": "[OISD-STD-109]: Oil Industry Safety Directorate (India), OISD-STD-109: Process Design and Operating Philosophies on Hydrocarbon Storage and Handling and OISD-GDN-178: Guidelines for Inspection of Mass Flow Meters (Custody transfer mass metering and tank inventory control)."
+    },
+    {
+      "key": "",
+      "citation": "[PNGRB-MTR]: Petroleum and Natural Gas Regulatory Board, Technical Standards and Specifications for Liquid Petroleum Pipeline Custody Transfer Metering & Batch Allocation (Pipeline interface transmix reconciliation and batch proration tariffs)."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "AspenTech AURA / AORA",
+      "module": "Operations Reconciliation & Accounting",
+      "solves": "Simulates plant-wide mass balances, gross error detection using least-squares algorithms, and inventory movements across refinery conversion units.",
+      "gap": "Brittle reconciliation engine. Relies on static linear reconciliation models that fail when unmetered process streams, flare header fluctuations, or severe flowmeter drift occur; requires manual operator intervention to flag bad meters and cannot autonomously cross-reference lab density assays with dynamic tank inventory stratifications."
+    },
+    {
+      "product": "AVEVA Production Accounting",
+      "module": "Refinery Material Balance & Loss Accounting",
+      "solves": "Delivers heat and material balancing around major refinery conversion units (CDU, FCC, Hydrocracker) and identifies unaccounted-for losses (UAF) across operating nodes.",
+      "gap": "Isolated plant-level calculation. Accurately balances units with reconciled mass flows, but possesses zero integration with commercial marine charter-party demurrage statements, vessel VEF records, or customs excise duty ledgers, stranding cross-commercial loss investigations."
+    },
+    {
+      "product": "Honeywell Forge Yield Accounting",
+      "module": "Hydrocarbon Data Reconciliation & Movement Tracking",
+      "solves": "Aggregates real-time DCS flow totalizers, tank levels, and movement events to generate daily refinery yield balance reports.",
+      "gap": "Historical data aggregator. Records movement transactions and computes closing balances, but lacks agentic causal diagnosis; unable to differentiate physical hydrocarbon transit loss from marine calibration trim or temperature stratification errors without manual engineering investigation."
+    },
+    {
+      "product": "SAP S/4HANA Oil & Gas (HPM / TSW)",
+      "module": "Hydrocarbon Management & Inventory Valuation",
+      "solves": "Records commercial crude purchases, finished product sales, inventory valuation, and excise tax accounting ledgers.",
+      "gap": "Commercial transaction ledger. Serves as the fiscal system of record for financial balance sheets, but has zero visibility into real-time process unit mass balances, flare meter mass rates, or tank density stratifications, leaving physical-to-financial reconciliation to error-prone manual spreadsheets."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Ingest midnight ATG tank inventories, stream flowmeters, and LIMS densities to compile raw plant mass balance",
+      "source": "[EI-HM-31]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3–4 hrs",
+      "friction": "assembly",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: Daily Plant-Wide & Unit Mass Balance Reconciliation Sieve",
+      "label": "Midnight ATG Tank Gauging, Stream Totalizers & LIMS Densities (B1, [EI-HM-31])",
+      "today": "Hydrocarbon accountant exports 24:00 midnight tank gauge levels, DCS mass flow integrators, and LIMS density sheets into multiple personal spreadsheets, manually adjusting for temperature and water cuts.",
+      "failureMode": "Manual transcription errors or stale density samples distort opening and closing inventory figures, creating artificial volume imbalances that trigger false alarms or hide genuine tank leakages.",
+      "agentNote": "→ See §4 (Agent 1: Daily Plant-Wide & Unit Mass Balance Reconciliation Sieve)."
+    },
+    {
+      "code": "A02",
+      "action": "Reconcile marine cargo bills of lading against shore tank gauges using Vessel Experience Factor (VEF)",
+      "source": "[API-MPMS-Ch17]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "3–4 hrs",
+      "friction": "consistency",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "Agent 2: Marine Custody Transfer & Vessel Experience Factor Transit Loss Sieve",
+      "label": "Marine Cargo Bill of Lading & Vessel Experience Factor Transit Reconciliation (B1, [API-MPMS-Ch17])",
+      "today": "Accountant receives marine surveyor discharge reports, cross-referencing shore tank receipts against bill of lading volumes and manually hunting through paper files for the vessel's historical VEF factors.",
+      "failureMode": "Failing to apply a verified VEF masks cargo theft or onboard clingage as normal shore tank measurement variance, forfeiting legitimate shortage claims worth hundreds of thousands of dollars.",
+      "agentNote": "→ See §4 (Agent 2: Marine Custody Transfer & Vessel Experience Factor Transit Loss Sieve)."
+    },
+    {
+      "code": "A03",
+      "action": "Reconcile pipeline custody-transfer batch meter tickets, prover run factors, and linepack changes",
+      "source": "[API-MPMS-Ch12]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "assembly",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Pipeline Custody Transfer & Dynamic Batch Interface Reconciliation Sieve",
+      "label": "Pipeline Custody Batch Meter Tickets & Linepack Reconciliation (B1, [API-MPMS-Ch12])",
+      "today": "Specialist reviews custody transfer meter run tickets and prover calibration factors, estimating pipeline linepack displacement and interface transmix cuts in spreadsheets.",
+      "failureMode": "Unreconciled meter factor drift on custody meters allows cumulative volume slip, creating systematic commercial imbalances and disputed batch reconciliation billing with pipeline operators.",
+      "agentNote": "→ See §4 (Agent 3: Pipeline Custody Transfer & Dynamic Batch Interface Reconciliation Sieve)."
+    },
+    {
+      "code": "A04",
+      "action": "Compare daily process conversion unit yields against Linear Program (LP) planning yield models",
+      "source": "[EI-HM-31]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3–4 hrs",
+      "friction": "synthesis",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: Unit Yield vs. Linear Program Plan Variance & Slop Degradation Sieve",
+      "label": "Conversion Unit Yield Variance vs. LP Planning Model (B1, [EI-HM-31])",
+      "today": "Accountant calculates daily unit yields (CDU, FCC, Hydrocracker) from DCS flow totals, comparing them against the monthly planning LP baseline and emailing unit process engineers when yields diverge.",
+      "failureMode": "Unexplained yield shifts are dismissed as normal meter error, failing to detect catalyst deactivation, leaking heat exchanger bypasses, or valuable naphtha escaping into the fuel gas system.",
+      "agentNote": "→ See §4 (Agent 4: Unit Yield vs. Linear Program Plan Variance & Slop Degradation Sieve)."
+    },
+    {
+      "code": "A05",
+      "action": "Quantify refinery flare header ultrasonic meters, tank venting emissions, and effluent losses per HM 31",
+      "source": "[EI-HM-31]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "assembly",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "Agent 5: Refinery Loss Control & Flare/Evaporation Unaccounted-for Sieve",
+      "label": "Refinery Flare, Tank Venting & Unaccounted-for (UAF) Loss Quantification (B1, [EI-HM-31])",
+      "today": "Accountant gathers flare ultrasonic meter logs, AP-42 storage tank evaporation estimates, and sewer oil-in-water lab reports to construct the refinery monthly loss control ledger.",
+      "failureMode": "Inability to separate physical hydrocarbon losses (flaring, evaporation) from measurement error leads management to accept 1.0% refinery loss as normal background noise, losing millions in unrecovered hydrocarbons.",
+      "agentNote": "→ See §4 (Agent 5: Refinery Loss Control & Flare/Evaporation Unaccounted-for Sieve)."
+    },
+    {
+      "code": "A06",
+      "action": "Audit marine charter-party Statement of Facts (SOF), Notice of Readiness (NOR), and demurrage claims",
+      "source": "[API-MPMS-Ch17]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "3–4 hrs",
+      "friction": "traceability",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: Marine Demurrage Statement of Facts & Laytime Audit Sieve",
+      "label": "Marine Demurrage Statement of Facts & Laytime Clock Audit (B1, [API-MPMS-Ch17])",
+      "today": "Demurrage analyst reconstructs vessel berthing events from Statement of Facts (SOF) sheets, calculating laytime hours, weather deductions, and demurrage liabilities in complex spreadsheets.",
+      "failureMode": "Overlooking charter-party laytime suspension clauses (e.g., deballasting delays, ship pump failures, bad weather) results in paying unwarranted shipowner demurrage claims (30k to80k per day).",
+      "agentNote": "→ See §4 (Agent 6: Marine Demurrage Statement of Facts & Laytime Audit Sieve)."
+    },
+    {
+      "code": "A07",
+      "action": "Compile certified monthly refinery hydrocarbon balance sheets for statutory excise duty and customs compliance",
+      "source": "[OISD-STD-109]",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "4–5 hrs",
+      "friction": "assembly",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "Agent 7: Statutory Hydrocarbon Customs & Fiscal Excise Reconciliation Synthesizer",
+      "label": "Statutory Customs Bonded Warehouse & Fiscal Excise Reconciliation (B1, [OISD-STD-109])",
+      "today": "Accountant aggregates monthly throughput, bonded crude imports, domestic sales dispatches, and refinery fuel consumption to draft statutory tax and customs declarations.",
+      "failureMode": "Arithmetic discrepancies between physical mass balance reports and ERP fiscal books trigger formal customs audits, substantial regulatory fines, and denial of statutory excise duty remissions.",
+      "agentNote": "→ See §4 (Agent 7: Statutory Hydrocarbon Customs & Fiscal Excise Reconciliation Synthesizer)."
+    },
+    {
+      "code": "A08",
+      "action": "Calculate gross observed volume to net standard volume conversions via API MPMS Chapter 12 CTPL/VCF tables",
+      "source": "[API-MPMS-Ch12]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Daily",
+      "time": "1–2 hrs",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith: SCADA ATG / Flow Computer)",
+      "label": "Automated Volume Correction Factor (CTPL/VCF) Calculations (B2, [API-MPMS-Ch12])",
+      "today": "Flow computers and SCADA ATG software continuously execute standard API MPMS Chapter 12 equations to convert gross observed volume (GOV) to net standard volume (NSV) at 15°C / 60°F.",
+      "failureMode": "Outdated temperature transmitters or corrupted pressure compensation curves produce skewed standard volume outputs.",
+      "agentNote": "❌ No. Core supervisory flow computer and ATG SCADA domain."
+    },
+    {
+      "code": "A09",
+      "action": "Execute continuous flow pulse accumulation and mass totalization across plant supervisory DCS flow nodes",
+      "source": "[API-MPMS-Ch12]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Real-Time",
+      "time": "15 mins",
+      "friction": "volume",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith: Supervisory DCS)",
+      "label": "DCS Flow Totalization & Pulse Accumulation (B2, [API-MPMS-Ch12])",
+      "today": "Supervisory DCS systems continuously scan flow transmitters, integrate mass flow rates, and accumulate totalizer pulses across battery limit meters.",
+      "failureMode": "Signal dropout or transmitter saturation causes unrecorded flow bypasses.",
+      "agentNote": "❌ No. Core supervisory control and data acquisition monolith domain."
+    },
+    {
+      "code": "A10",
+      "action": "Perform automated truck rack custody transfer ticket generation and Bill of Lading printing via terminal automation",
+      "source": "[OISD-STD-109]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Real-Time",
+      "time": "15 mins",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith: Terminal Automation System)",
+      "label": "Terminal Automation Rack Dispatch & BOL Printing (B2, [OISD-STD-109])",
+      "today": "Terminal Automation Systems (TAS) execute truck bay preset meters, driver smartcard validation, and bill of lading (BOL) transaction printing.",
+      "failureMode": "Bay meter calibration drift causes product giveaway during road tanker dispatches.",
+      "agentNote": "❌ No. Core terminal execution hardware and automation domain."
+    },
+    {
+      "code": "A11",
+      "action": "Post finalized financial hydrocarbon inventory journal vouchers and monthly product sales into ERP general ledger",
+      "source": "Commercial Rules",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Monthly",
+      "time": "1–2 hrs",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith: ERP Financial Accounting)",
+      "label": "ERP Financial Inventory Journal Entry Posting (B2, Commercial Rules)",
+      "today": "ERP software (SAP S/4HANA Finance) posts monthly inventory valuation adjustments, vendor purchase vouchers, and customer product billing entries.",
+      "failureMode": "Data entry lag or wrong material code mapping creates ledger reconciliation discrepancies.",
+      "agentNote": "❌ No. Core enterprise resource planning financial domain."
+    },
+    {
+      "code": "A12",
+      "action": "Execute physical manual tank dipping, temperature verification, and water-cut paste gauging for calibration auditing",
+      "source": "[EI-HM-31]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Periodic",
+      "time": "2–3 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Physical: Field Gauger)",
+      "label": "Physical Tank Dipping & Manual Water-Cut Pasting (B3, [EI-HM-31])",
+      "today": "Field tank farm gaugers climb storage tanks with steel ullage tapes and water-finding paste to verify radar gauge accuracy and detect bottom water buildup.",
+      "failureMode": "Tank shell thermal expansion or inaccurate tape tension causes manual dipping errors.",
+      "agentNote": "❌ No. Pure physical manual operation on tank farm assets."
+    },
+    {
+      "code": "A13",
+      "action": "Execute physical proving loop calibration runs and master-meter verification on custody transfer meters",
+      "source": "[PNGRB-MTR]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Periodic",
+      "time": "3–4 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Physical: Metering Technician)",
+      "label": "In-Line Proving Loop Calibration of Fiscal Meters (B3, [PNGRB-MTR])",
+      "today": "Metering technicians operate on-site bidirectional pipe provers or compact master meters to determine physical meter factors for fiscal custody flowmeters.",
+      "failureMode": "Temperature shifts during proving runs invalidate meter factor repeatability.",
+      "agentNote": "❌ No. Pure physical instrumentation testing and calibration execution."
+    },
+    {
+      "code": "A14",
+      "action": "Execute laboratory manual hydrometer density, pycnometer verification, and Karl Fischer water titration assays",
+      "source": "[ISO-4267]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "1–2 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Physical: Laboratory Chemist)",
+      "label": "Laboratory Hydrometer Density & Karl Fischer Water Testing (B3, [ISO-4267])",
+      "today": "Quality control laboratory chemists perform manual hydrometer tests, oscillating U-tube density measurements, and Karl Fischer titration to determine water content.",
+      "failureMode": "Improper sample homogenization produces unrepresentative density and water-cut figures.",
+      "agentNote": "❌ No. Pure physical laboratory analytical testing."
+    },
+    {
+      "code": "A15",
+      "action": "Negotiate commercial charter-party demurrage settlements and approve contested cargo loss write-offs",
+      "source": "Commercial Rules",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "1–2 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human: Commercial Supply VP)",
+      "label": "Commercial Demurrage Settlement & Dispute Negotiation (B3, Commercial Rules)",
+      "today": "Commercial Supply Vice President and legal counsel negotiate disputed charter-party demurrage claims and approve contested cargo shortage write-offs.",
+      "failureMode": "Settling without adequate operational evidence forces the enterprise to absorb unrecoverable commercial losses.",
+      "agentNote": "❌ No. Pure executive, commercial, and legal negotiation."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Daily Plant-Wide & Unit Mass Balance Reconciliation Sieve",
+      "oneLine": "Ingests automated tank gauging (ATG), DCS stream flowmeters, and LIMS laboratory density assays at the 24:00 midnight closing boundary to close plant-wide and unit-level mass balances, isolating measurement imbalances before statistical data reconciliation.",
+      "frictionSolved": "Eliminates 3.60 hours daily of high-stress multi-system spreadsheet data extraction and manual mass balancing, preventing unverified meter drift from distorting daily production metrics.",
+      "reads": "Automated Tank Gauging (ATG) 24:00 midnight snapshots (gross observed volume, net standard volume, water bottoms from Rosemount/Honeywell Enraf), DCS flow totalizers (Honeywell Experion, Yokogawa Centum, OSIsoft PI), LIMS laboratory density and API gravity assays, and unit rundown routing logs.",
+      "does": "1. Aggregates gross volume and density telemetry across all atmospheric, floating-roof, and pressurized storage tanks, converting volumes to mass (metric tons) per API MPMS Chapter 12; 2. Ingests stream flowmeter accumulations across battery limits, applying pressure and temperature compensation factors to raw orifice, vortex, and Coriolis meter readings; 3. Solves node-level mass balances across process units and tank farm manifolds, calculating gross volume and mass balance residuals; 4. Executes statistical gross error screening (Chi-square and normalized residual testing per Energy Institute HM 31) to isolate faulty or drifting flowmeters prior to executing reconciliation algorithms.",
+      "returns": "Daily Plant-Wide Hydrocarbon Mass Balance Manifest complete with node residual heat maps, flagged gross measurement errors, and reconciled stream mass flows.",
+      "stopsAt": "Overriding physical meter calibration constants or manually forcing zero-residual closures on unresolved physical discrepancies.",
+      "failureModes": "If a process unit mass balance discrepancy exceeds 1.5% of daily throughput (~1,500 metric tons/day on a major conversion unit) without an identified meter malfunction, the agent halts auto-reconciliation and flags [Material Balance Anomaly: Physical Containment / Unmetered Flaring Audit Required].",
+      "agentId": "OG-P48-A01"
+    },
+    {
+      "n": 2,
+      "name": "Marine Custody Transfer & Vessel Experience Factor Transit Loss Sieve",
+      "oneLine": "Correlates marine bill of lading (BOL), shore tank receipt gauging, vessel Ullage Reports, and historical Vessel Experience Factors (VEF) to isolate physical marine transit losses from apparent measurement and temperature shrinkage variances.",
+      "frictionSolved": "Eliminates 3.15 hours per marine cargo campaign of manual ship-shore difference calculations, ullage table cross-referencing, and cargo loss dispute compilation.",
+      "reads": "Commercial Bill of Lading (BOL), certified marine surveyor Ullage Reports (Onboard Quantity - OBQ, Remaining On Board - ROB, vessel tank temperatures and free water), shore tank active gauging before/after discharge, and vessel historical qualifying voyage records (VEF-Loading and VEF-Discharge archives per API MPMS Chapter 17.9).",
+      "does": "1. Calculates Vessel Experience Factor (VEF) using the last 5 to 20 qualifying voyages per API MPMS Chapter 17 Section 9, filtering out voyages with vessel lightering or structural alterations; 2. Applies VEF to vessel arrival and departure quantities to calculate vessel adjusted loaded and discharged volumes; 3. Compares VEF-adjusted vessel quantities against shore tank net standard volumes (NSV) at 15°C / 60°F per API MPMS Chapter 12; 4. Categorizes ship-shore discrepancies into apparent measurement variance (temperature layering, vessel trim/list corrections, clingage) and physical transit loss (unpumpable ROB, sea valve leakage, vapor venting).",
+      "returns": "Marine Custody Transfer Transit Loss Dossier detailing ship-shore reconciliation tables, VEF calculation sheets, apparent-vs-physical loss breakdowns, and substantiated cargo shortage claim packages.",
+      "stopsAt": "Formally submitting legal financial indemnity claims to shipowners or cargo underwriters.",
+      "failureModes": "If unadjusted ship-to-shore discrepancy exceeds 0.3% of total cargo volume (or >1,500 barrels on a Suezmax parcel), the agent triggers an immediate alert: [Excess Transit Shortage: Mandatory Joint Surveyor OBQ/ROB Re-Check Mandated].",
+      "agentId": "OG-P48-A02"
+    },
+    {
+      "n": 3,
+      "name": "Pipeline Custody Transfer & Dynamic Batch Interface Reconciliation Sieve",
+      "oneLine": "Reconciles pipeline custody-transfer meter tickets, prover loop calibration factors, pipeline linepack changes, and interface transmix cuts against refinery receipt and delivery manifolds.",
+      "frictionSolved": "Eliminates 2.70 hours daily of cross-system meter ticket verification, linepack estimation, and interface downgrade accounting.",
+      "reads": "Pipeline fiscal custody-transfer flow computer tickets (start/stop gross observed volumes, flow-weighted temperature, pressure, density), on-site prover loop calibration run sheets (Meter Factors - MF), pipeline transit linepack telemetry, and receipt tank swing records.",
+      "does": "1. Audits dynamic custody-transfer meter tickets against proving run logs, verifying that Meter Factors (MF) comply with API MPMS Chapter 12 repeatability limits (<= 0.05% deviation); 2. Calculates net standard volume (NSV) per API MPMS Chapter 12.2 and volumetric blending shrinkage per Chapter 12.3 during pipeline receipts of light condensate into heavy crude; 3. Tracks multi-product pipeline interface transmix parcels, quantifying downgrade volumes from turbulent mixing during linepack displacement; 4. Reconciles pipeline batch receipts and deliveries against terminal storage tank receipts, identifying localized meter slippage or line leaks.",
+      "returns": "Pipeline Custody Reconciliation & Batch Variance Dossier containing proving factor audit tables, shrinkage calculations, transmix volume allocations, and shipper ticket sign-off summaries.",
+      "stopsAt": "Adjusting custody transfer flow computer meter factors or overriding contractual pipeline proration allocations.",
+      "failureModes": "If pipeline receipt balance discrepancy exceeds 0.25% across a scheduled batch transfer, the agent flags an immediate warning: [Custody Batch Imbalance: Investigate Manifold Valve Passing or Meter Prover Shift].",
+      "agentId": "OG-P48-A03"
+    },
+    {
+      "n": 4,
+      "name": "Unit Yield vs. Linear Program Plan Variance & Slop Degradation Sieve",
+      "oneLine": "Compares daily operating unit yields against planning Linear Program (LP) baseline yield vectors and historical crude assay cuts, isolating unmetered flaring, slop oil recycle downgrades, and catalyst coking losses.",
+      "frictionSolved": "Eliminates 3.15 hours daily of manual yield variance investigations across process units, bridging the operational gap between plant engineers and refinery commercial planners.",
+      "reads": "Process unit feed and product stream mass flows (CDU/VDU cut yields, FCC gasoline/LPG/slurry yields, Hydrocracker middle distillate yields, Reformer hydrogen/reformate yields), daily LP target yield vectors from the production planning model, and crude assay laboratory distillation curves.",
+      "does": "1. Calculates daily mass yield percentages for all major conversion units; 2. Compares actual unit yields against monthly LP planned vectors and crude assay True Boiling Point (TBP) expectations; 3. Quantifies yield loss mechanisms, isolating catalyst selectivity degradation, excessive coking, sub-optimal column cut-point stripping, and unmetered light-ends routing to the fuel gas system; 4. Tracks internal slop oil generation and reprocessing loops, calculating the net financial margin destruction from downgrading high-value refined products into reprocessing slop.",
+      "returns": "Refinery Unit Yield & LP Gap Diagnostic Dashboard highlighting yield variance anomalies, cut-point drift indicators, slop downgrade costs, and recommended LP yield vector tuning parameters.",
+      "stopsAt": "Modifying DCS unit operating setpoints or updating official LP planning model vectors.",
+      "failureModes": "If a major conversion unit exhibits an unexplained yield deficit >2.0 wt% with normal feed properties, the agent outputs [Unit Yield Anomaly: Potential Heat Exchanger Internal Cross-Contamination or Unmetered Flaring].",
+      "agentId": "OG-P48-A04"
+    },
+    {
+      "n": 5,
+      "name": "Refinery Loss Control & Flare/Evaporation Unaccounted-for Sieve",
+      "oneLine": "Audits refinery flare ultrasonic flowmeters, storage tank roof vapor emissions, desalter effluent oil entrainment, and furnace fuel gas combustion to classify and allocate total refinery unaccounted-for (UAF) losses into physical vs. apparent categories per Energy Institute HM 31.",
+      "frictionSolved": "Eliminates 2.70 hours daily of fragmented emissions tracking, manual flare data integration, and loss categorization across refinery offsites.",
+      "reads": "Flare stack optical and ultrasonic mass flowmeters, flare gas chromatographic composition streams, storage tank floating-roof seal inspection logs, API-42 evaporation loss models, desalter effluent water laboratory oil-in-water (OIW) assays, and furnace fuel gas calorific totalizers.",
+      "does": "1. Integrates continuous flare mass flow and molecular weight telemetry to compute daily flared hydrocarbon metric tons; 2. Calculates atmospheric storage tank breathing and working evaporative losses using EPA AP-42 and Energy Institute HM 31 tank loss algorithms; 3. Quantifies hydrocarbon sewer losses, desalter effluent water oil carryover, and furnace fuel gas unaccounted consumption; 4. Deconstructs total refinery material balance imbalance into verified physical losses (flaring, evaporation, effluent, coke burn) versus apparent losses (meter bias, temperature correction errors, water bottom gauging inaccuracies).",
+      "returns": "Daily Refinery Loss Control & UAF Decomposition Report featuring classified loss waterfall charts, flare event mass logs, and environmental emission accounting summaries.",
+      "stopsAt": "Authorizing environmental emission compliance exemptions or altering statutory flare logs.",
+      "failureModes": "If unaccounted-for physical flaring or sewer loss exceeds statutory environmental thresholds (>10 metric tons/day unmetered release), the agent issues an escalated alert: [Excessive Hydrocarbon Loss Alert: Environmental Regulatory Threshold Approaching].",
+      "agentId": "OG-P48-A05"
+    },
+    {
+      "n": 6,
+      "name": "Marine Demurrage Statement of Facts & Laytime Audit Sieve",
+      "oneLine": "Ingests maritime Notice of Readiness (NOR), Statement of Facts (SOF), dock pumping logs, and charter-party contracts to reconstruct precise laytime chronologies, audit shipowner demurrage invoices, and deduct non-charterer operational delays.",
+      "frictionSolved": "Eliminates 3.15 hours per marine cargo campaign of manual laytime spreadsheet reconciliation, charter-party clause interpretation, and commercial demurrage dispute defense.",
+      "reads": "Marine Notice of Readiness (NOR) timestamps, terminal and vessel Statement of Facts (SOF), hourly dock pumping logs (flow rates, manifold backpressure), terminal berth logbooks, local port authority tidal/weather records, and commercial charter-party contracts (ASBATANKVOY, BPVOY4, standard tanker charter terms, demurrage daily rates).",
+      "does": "1. Reconstructs second-by-second laytime chronologies: establishes official NOR tendering validity, 6-hour NOR notice expiration, berth all-fast timestamps, hose connection, and cargo pump start/stop events; 2. Identifies and quantifies contractual laytime exceptions and exclusions (e.g., bad weather, night navigation bans, pilot strikes, vessel deballasting delays, ship's pump breakdowns, shore valve maintenance); 3. Audits shore pumping performance against charter-party minimum pumping warranty (e.g., maintain 100 psi manifold pressure or discharge within 24 hours); 4. Compiles audited laytime calculations and produces counter-statements to refute invalid shipowner demurrage invoices.",
+      "returns": "Marine Demurrage Laytime Audit Dossier complete with itemized time bar timelines, verified allowable laytime hours, excluded delay categories, and defensible demurrage counter-claim invoices.",
+      "stopsAt": "Executing legal demurrage cash settlements or entering binding commercial arbitration.",
+      "failureModes": "If a shipowner demurrage invoice fails to submit supporting documents within contractual time-bar limits (e.g., 60-day or 90-day time bar under standard charter terms), the agent flags an immediate rejection advisory: [Time-Bar Breach: Demurrage Claim Contractually Barred and Rejected].",
+      "agentId": "OG-P48-A06"
+    },
+    {
+      "n": 7,
+      "name": "Statutory Hydrocarbon Customs & Fiscal Excise Reconciliation Synthesizer",
+      "oneLine": "Aggregates certified monthly mass balances, customs bonded crude import registers, domestic excise duty clearances, and duty-exempt refinery fuel consumption into statutory reconciliation packages compliant with national excise, customs, and tax regulations.",
+      "frictionSolved": "Eliminates 4.05 hours per monthly closing cycle of tedious cross-referencing between ERP financial books, physical plant inventories, and customs bonded warehouse registers.",
+      "reads": "Monthly reconciled refinery mass balances, customs bonded crude import declarations (bills of entry, customs officer out-of-charge orders), domestic excise clearance certificates, duty-exempt refinery self-consumption fuel logs, and SAP S/4HANA financial inventory ledgers.",
+      "does": "1. Reconciles raw feedstock imports against bonded storage tank receipts and processing allocations; 2. Audits internal refinery fuel oil and fuel gas consumption eligible for statutory excise tax remissions and exemptions; 3. Verifies that refinery operational loss percentages remain within statutory excise tolerance limits (typically <= 0.5% to 1.0% depending on regulatory jurisdiction); 4. Formulates statutory monthly hydrocarbon reconciliation statements, customs bonded warehouse stock registers, and fiscal duty clearance filings.",
+      "returns": "Statutory Hydrocarbon Customs & Fiscal Excise Compliance Dossier complete with certified physical balance sheets, duty remission schedules, and auditable tax compliance archives.",
+      "stopsAt": "Legally signing statutory government tax returns or paying fiscal excise levies.",
+      "failureModes": "If monthly unaccounted-for refinery loss exceeds the statutory excise duty remission ceiling (>1.0% of total throughput), the agent triggers a mandatory fiscal warning: [Statutory Loss Excursion: Tax Remission Disallowance Exposure — Audit Dossier Required].",
+      "agentId": "OG-P48-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never multiply into speculative enterprise rupee or dollar totals. The operating refinery provides its own crude capacity, tank count, and demurrage rate multipliers.",
+    "rows": [
+      {
+        "agent": "Daily Plant-Wide & Unit Mass Balance Sieve",
+        "unit": "1 Daily Refinery Closing Cycle (all units & tank batteries)",
+        "beforeHours": 4.0,
+        "afterHours": 0.4,
+        "savedHours": 3.6,
+        "frictionRemoved": "Multi-System Data Assembly & Stream Reconciliation Drag"
+      },
+      {
+        "agent": "Marine Custody Transfer & VEF Transit Loss Sieve",
+        "unit": "1 Marine Tanker Cargo Discharge (Suezmax/Aframax parcel)",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "Ship-Shore Measurement Sifting & VEF Calculation Math"
+      },
+      {
+        "agent": "Pipeline Custody & Batch Interface Sieve",
+        "unit": "1 Multi-Product Pipeline Batch Receipt/Delivery Cycle",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Prover Factor Auditing & Transmix Shrinkage Math"
+      },
+      {
+        "agent": "Unit Yield vs. LP Plan Variance Sieve",
+        "unit": "1 Daily Conversion Unit Yield Diagnostic Cycle (CDU/FCC/HCU)",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "Yield Variance Synthesis & Slop Downgrade Investigation"
+      },
+      {
+        "agent": "Refinery Loss Control & Flare/UAF Sieve",
+        "unit": "1 Daily Refinery Loss Control & Emissions Tracking Cycle",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Flare Mass Integration & AP-42 Evaporation Math"
+      },
+      {
+        "agent": "Marine Demurrage SOF & Laytime Sieve",
+        "unit": "1 Marine Charter-Party Demurrage Claim Audit",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "Statement of Facts Timeline Reconstruction & Laytime Math"
+      },
+      {
+        "agent": "Statutory Customs & Fiscal Excise Synthesizer",
+        "unit": "1 Monthly Fiscal & Customs Bonded Closing Cycle",
+        "beforeHours": 4.5,
+        "afterHours": 0.45,
+        "savedHours": 4.05,
+        "frictionRemoved": "Statutory Customs Ledger Cross-Checking & Tax Assembly"
+      }
+    ],
+    "total": {
+      "unit": "Per Daily / Monthly Accounting & Reconciliation Cycle",
+      "beforeHours": 25.0,
+      "afterHours": 2.5,
+      "savedHours": 22.5,
+      "frictionRemoved": "90.0% reduction in hydrocarbon accounting drag",
+      "label": "Total Operational Accounting Drag Reduction"
+    }
+  },
+  "citations": [
+    {
+      "key": "[EI-HM-31]",
+      "citation": "Energy Institute, HM 31: Guide to Hydrocarbon Management in Petroleum Refinery Operations, 2nd Edition, 2020",
+      "locator": "energyinst.org",
+      "type": "Industry Standard",
+      "supports": "Refinery mass balance, gross error detection, physical vs. apparent loss classification, and yield reconciliation"
+    },
+    {
+      "key": "[API-MPMS-Ch12]",
+      "citation": "American Petroleum Institute, Manual of Petroleum Measurement Standards, Chapter 12 — Calculation of Petroleum Quantities (Section 1: Static Petroleum Quantities; Section 2: Dynamic Measurement; Section 3: Blending Shrinkage), 2021",
+      "locator": "api.org",
+      "type": "Recommended Practice",
+      "supports": "Temperature and pressure volume correction factors (CTPL/VCF), net standard volume calculations, and blending shrinkage"
+    },
+    {
+      "key": "[API-MPMS-Ch17]",
+      "citation": "American Petroleum Institute, Manual of Petroleum Measurement Standards, Chapter 17 — Marine Measurement (Section 1: Guidelines for Marine Cargo Inspection; Section 9: Vessel Experience Factor - VEF), 2022",
+      "locator": "api.org",
+      "type": "Recommended Practice",
+      "supports": "Vessel Experience Factor (VEF) calculation, OBQ/ROB cargo inspection, and marine custody transfer transit loss reconciliation"
+    },
+    {
+      "key": "[OISD-STD-109]",
+      "citation": "Oil Industry Safety Directorate, OISD-STD-109: Process Design and Operating Philosophies on Hydrocarbon Storage and Handling, and OISD-GDN-178: Guidelines for Inspection of Mass Flow Meters, 2021",
+      "locator": "oisd.gov.in",
+      "type": "Technical Standard",
+      "supports": "Custody transfer mass metering, terminal storage handling, and statutory inventory loss limits"
+    },
+    {
+      "key": "[PNGRB-MTR]",
+      "citation": "Petroleum and Natural Gas Regulatory Board, Technical Standards and Specifications including Safety Standards for Petroleum and Liquid Hydrocarbons Pipelines & Metering, G.S.R. 729(E), 2020",
+      "locator": "pngrb.gov.in",
+      "type": "Regulatory Standard",
+      "supports": "Pipeline custody transfer flow proving loops, batch nomination proration, and interface transmix reconciliation"
+    },
+    {
+      "key": "[ISO-4267]",
+      "citation": "International Organization for Standardization, ISO 4267-2: Petroleum and liquid petroleum products — Calculation of oil quantities — Part 2: Dynamic measurement, 2020",
+      "locator": "iso.org",
+      "type": "International Standard",
+      "supports": "Dynamic custody transfer measurement algorithms, meter proving correction, and fiscal meter ticketing"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "AspenTech (AURA / AORA), AVEVA Production Accounting, Honeywell Forge, and downstream conference proceedings for \"autonomous dynamic reconciliation of marine custody transfer meter tickets against bill of lading integrating real-time Vessel Experience Factor (VEF) and tank temperature stratification without manual spreadsheet cross-checking\".",
+    "result": "Negative Search, 2026-09. Commercial yield accounting suites perform post-closing least-squares data reconciliation on plant-boundary meters; none autonomously correlate offshore vessel ullage reports, VEF qualifying voyage archives, and shore tank radar stratification to isolate physical marine transit loss from apparent volumetric shrinkage during custody transfer closure."
+  },
+  "line": "\"A refinery processing two hundred thousand barrels a day that carries a half-percent unaccounted-for loss is quietly bleeding twenty million dollars a year into the balance sheet; if you cannot prove whether that loss is physical hydrocarbon burning in the flare or an uncalibrated orifice plate on the crude feed, you are managing accounting fiction instead of refining margin.\"",
+  "openQuestions": []
+};

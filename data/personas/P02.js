@@ -23,6 +23,17 @@ window.PERSONA_DETAIL["P02"] = {
   "avatar": "avatars/P02_persona.jpg",
   "thumb": "avatars/thumbs/P02_thumb.jpg",
   "initials": "WI",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Wells & Rig"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Well Integrity Engineer manages the two-barrier technical envelope preventing pressurized subsurface hydrocarbons from leaking into freshwater aquifers, venting into surface cellars, or catastrophically breaching casing strings. While Well Integrity Management Systems (WIMS) like Vysus eWIMS and Wood Group Nexus-i store static barrier schematics, they leave the daily dynamic reality of casing pressure surveillance stranded across spreadsheets and manual field test reports. In an operator managing 800 to 2,000 active producing and shut-in wells, thousands of individual Annulus A, B, and C pressure streams fluctuate continuously with ambient temperature and production rates. Engineers spend hundreds of hours manually filtering out benign weather cycles from genuine Sustained Casing Pressure (SCP), hand-calculating Maximum Allowable Annular Surface Pressure (MAASP) from outdated completion records, and interpreting paper bleed-off diagnostic test logs. Rather than a single surveillance dashboard, the Well Integrity Engineer requires a federated squad of 8 hyper-specialized agents—each automating one discrete, research-backed barrier verification workflow. Across a typical asset portfolio, this squad saves ~18.5 hours per comprehensive well integrity diagnostic cycle, preventing unwarranted 500k workovers while catching dangerous tubing and casing leaks before burst limits are breached.",
   "confidence": {
     "Persona": "Well Integrity Engineer (P02)",

@@ -19,6 +19,17 @@
   "avatar": "avatars/P28_persona.jpg",
   "thumb": "avatars/thumbs/P28_thumb.jpg",
   "initials": "BC",
+  "domains": [
+    "downstream"
+  ],
+  "primaryDomain": "downstream",
+  "crossCutting": false,
+  "groups": {
+    "downstream": "Quality & Blending"
+  },
+  "valueSplit": {
+    "downstream": 1.0
+  },
   "headline": "The Blending Coordinator transforms volatile refinery intermediate streams into high-value, commercially certified transportation fuels (gasoline, ultra-low sulfur diesel, and aviation jet fuel) that strictly satisfy legal, commercial, and environmental specifications. While advanced multi-variable blend controllers like Honeywell Profit Blend and Schneider Electric Foxboro BOSS execute real-time flow ratio control on physical blend manifolds, they operate as blind linear optimizers when online analyzers drift or intermediate component tanks stratify. Because near-infrared (NIR) spectrometers, on-line Reid Vapor Pressure (RVP) analyzers, and process knock engines experience calibration drift and 20-to-40 minute sample transport lags, blending coordinators live in constant anxiety over producing an off-spec finished batch (which costs hundreds of thousands of dollars in re-pumping, tankage lockup, and remediation). Under time pressure, coordinators defensively over-inject expensive, high-octane virgin blendstocks (alkylate, reformate, isomerate) to create a conservative \"safety cushion.\" An unmonitored +0.5 RON giveaway burns $500k to $1.5M of premium refinery molecules every month. Deploying a dedicated 7-agent hyper-specialized blending squad saves 25.25 hours per operational blending campaign, eliminating quality giveaway, predicting tank stratification step-changes, and automating statutory Certificate of Analysis (CoA) generation.",
   "confidence": {
     "Persona": "Blending Coordinator (P28)",
@@ -29,7 +40,7 @@
     "Pain Claims Cited": "10 of 10 pain claims supported by published AFPM (American Fuel & Petrochemical Manufacturers) papers, AIChE fuels blending proceedings, and refinery operations post-mortems",
     "Timings Sourced": "Batch recipe optimization, online analyzer drift reconciliation, tank stratification tracking, and off-spec remediation timings verified via senior fuels blending coordinators and offsites superintendents",
     "Gap Claims Cited": "Confirmed that commercial DCS blend controllers (Honeywell Profit Blend, Foxboro BOSS) track DCS setpoints blindly; none autonomously reconcile online analyzer drift with offline LIMS laboratory grab samples to trim non-linear giveaways without human manual bias entry",
-    "Known Gaps": "Non-linear octane blending equations (Ethyl RT-70, Chevron models) exhibit localized prediction scatter when blending high concentrations of renewable oxygenates (ethanol >15 vol% or bio-butanol)"
+    "Known Gaps": "Non-linear octane blending equations (Ethyl RT-70, a major operator's blending models) exhibit localized prediction scatter when blending high concentrations of renewable oxygenates (ethanol >15 vol% or bio-butanol)"
   },
   "role": {
     "oneLine": "Governs the recipe formulation, real-time in-line manifold blending, and final property certification of commercial transportation fuels (gasoline, diesel, jet A-1), balancing strict statutory environmental and contractual specifications against the minimization of high-cost component giveaway.",
@@ -387,10 +398,10 @@
     {
       "n": 1,
       "name": "Gasoline Octane & RVP Non-Linear Recipe Optimizer & Giveaway Sieve",
-      "oneLine": "Formulates multi-component gasoline blend recipes using non-linear octane interaction models (Ethyl RT-70, Chevron method) and dynamic RVP blending curves, driving finished fuel directly to specification while targeting <0.1 RON giveaway.",
+      "oneLine": "Formulates multi-component gasoline blend recipes using non-linear octane interaction models (Ethyl RT-70, a major operator's non-linear method) and dynamic RVP blending curves, driving finished fuel directly to specification while targeting <0.1 RON giveaway.",
       "frictionSolved": "Eliminates 4.05 hours per batch of manual spreadsheet recalculation, conservative over-formulation, and high-octane component waste.",
       "reads": "Intermediate component tank inventories and assays (FCC naphtha, alkylate, reformate, isomerate, butane, ethanol), component unit costs, and finished gasoline specification limits (RON, MON, AKI, RVP, benzene, sulfur, distillation T10, T50, T90).",
-      "does": "1. Implements Ethyl RT-70 and Chevron non-linear octane blending equations, accounting for olefin-aromatic and paraffin-aromatic antagonistic interaction coefficients; 2. Computes Reid Vapor Pressure (RVP) using non-linear blending index methods; 3. Calculates the optimal economic blend recipe that satisfies all physical and statutory constraints at minimum cost; 4. Eliminates defensive safety cushions, targeting finished octane at tariff + 0.08 RON rather than standard industry + 0.50 RON; 5. Formulates real-time recipe trim adjustments based on in-line analyzer feedback during active pumping.",
+      "does": "1. Implements Ethyl RT-70 and a major operator's non-linear octane blending equations, accounting for olefin-aromatic and paraffin-aromatic antagonistic interaction coefficients; 2. Computes Reid Vapor Pressure (RVP) using non-linear blending index methods; 3. Calculates the optimal economic blend recipe that satisfies all physical and statutory constraints at minimum cost; 4. Eliminates defensive safety cushions, targeting finished octane at tariff + 0.08 RON rather than standard industry + 0.50 RON; 5. Formulates real-time recipe trim adjustments based on in-line analyzer feedback during active pumping.",
       "returns": "Optimized Blend Recipe Package for DCS ratio controllers, complete with property trajectory forecasts, component cost-savings summaries, and giveaway metrics.",
       "stopsAt": "Overriding DCS ratio controller valve outputs or altering pipeline export pressure limits.",
       "failureModes": "If non-linear octane modeling predicts a property delta exceeding ±0.4 RON from linear blending without physical component explanation, the agent flags [Non-Linear Model Discrepancy: Conservative Recipe Hold].",

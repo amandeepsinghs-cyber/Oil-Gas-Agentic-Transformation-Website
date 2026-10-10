@@ -20,6 +20,23 @@
   "avatar": "avatars/P31_persona.jpg",
   "thumb": "avatars/thumbs/P31_thumb.jpg",
   "initials": "TP",
+  "domains": [
+    "upstream",
+    "midstream",
+    "downstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": true,
+  "groups": {
+    "upstream": "Cross-Cutting",
+    "midstream": "Cross-Cutting",
+    "downstream": "Cross-Cutting"
+  },
+  "valueSplit": {
+    "upstream": 0.25,
+    "midstream": 0.1,
+    "downstream": 0.65
+  },
   "headline": "The Turnaround Planner orchestrates the high-stakes, multi-million-dollar plant shutdowns (TARs) where thousands of critical maintenance tasks, catalyst changeouts, and vessel overhauls must be compressed into an unforgiving 30-to-45 day window. While enterprise scheduling tools like Oracle Primavera P6 and SAP PM / PS (Project Systems) store complex 15,000-activity critical-path networks, they are completely detached from the chaotic reality of live field execution. During an active turnaround, a single day of schedule delay costs an operating refinery, petrochemical complex, or LNG train between 1,000,000 and3,000,000 in lost gross margin and contractor burn rates. Planners are overwhelmed by manual administrative drag: tracing complex piping and instrumentation diagrams (P&IDs) to compile positive isolation blind lists, manually verifying hundreds of physical blind swings before vessel confined-space permits can be authorized, and manually re-leveling scarce contractor craft labor (certified welders, pipefitters, boilermakers) when \"discovery work\" (severe tray collapse or shell cracking found after opening a tower) suddenly explodes into the schedule. Deploying a dedicated 7-agent hyper-specialized turnaround squad saves 59.85 hours across major turnaround planning and execution cycles, protecting the critical path from schedule slip, eliminating blind isolation omissions, and accelerating unit restarts.",
   "confidence": {
     "Persona": "Turnaround Planner (P31)",

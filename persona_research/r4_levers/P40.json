@@ -1,0 +1,28 @@
+{
+  "id": "P40",
+  "seats": 60,
+  "assetCapital": {
+    "form": "time",
+    "asset": "Marine jetty berths",
+    "units": 12,
+    "unitLabel": "berths",
+    "hoursPerYear": 8760,
+    "share": 0.005,
+    "ratePerHour": 180000,
+    "basis": "0.5% of marine berth calendar time recovered through streamlined pre-transfer protocols, cryogenic cooldown modeling, and faster custody reconciliation (~44 h/berth/yr)",
+    "source": "~12 dedicated marine berths across LNG regas, coastal LPG, crude SPM, and refined product jetties; blended berth idle opportunity cost and tanker demurrage ~₹1.8 L/hour (~US$50k/day). Recovers under 30 minutes of berth occupancy per vessel call across ~1,200 annual calls, well below the 1% cap."
+  },
+  "assetRisk": {
+    "scenario": "Marine cargo transfer spill or loading arm release",
+    "unitsPerYear": 1200,
+    "unitLabel": "vessel calls",
+    "frequency": 0.0008,
+    "consequence": 350000000,
+    "alpha": 0.30,
+    "beta": 0.35,
+    "source": "~1,200 vessel transfers a year; frequency reflects loss of primary containment from loading arm overextension, surge pressure, or checklist failure (~1 event per 1,250 transfers). Consequence covers Tier-1/2 spill response, environmental remediation, berth downtime, and port penalties. Alpha reflects the operational/procedural causal share; beta reflects agent checklist, cooldown, and envelope surveillance efficacy."
+  },
+  "recovery": null,
+  "rationale": "Loading Masters govern the physical ship-shore interface across ~12 marine berths handling ~1,200 vessel calls/year across the combined midstream and downstream estate. Headcount of 60 reflects 24/7 continuous coverage on 4-panel rotating 12-hour shifts (4 staff/berth + 1 relief/lead). The role directly gates berth occupancy during connection, cooldown, transfer, and custody reconciliation, recovering 0.5% of berth calendar time (~₹9.5 Cr/yr) without double counting P15's commercial scheduling demurrage. The asset risk scenario covers catastrophic transfer spills or loading arm mechanical parting, with alpha*beta kept conservative at 10.5% (~₹3.5 Cr/yr expected loss avoided). Resource recovery is null as the role operates downstream of extraction and does not alter recoverable reserves.",
+  "caveats": "Berth time savings are strictly confined to alongside operations (pre-transfer checklist, cryogenic chilling curves, and custody reconciliation) and do not encroach upon commercial demurrage or anchorage waiting time owned by P15. Metocean abort thresholds and physical arm coupling remain under human command authority."
+}

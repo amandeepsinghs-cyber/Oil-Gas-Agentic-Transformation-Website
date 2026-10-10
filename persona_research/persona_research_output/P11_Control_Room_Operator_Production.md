@@ -80,7 +80,7 @@
 | **Emerson DeltaV / Yokogawa Centum VP** | DCS Operator Console | Real-time closed-loop PID control, graphical vessel mimics, process interlocks, and automated ESD trip matrices. | **Zero context retention.** Displays real-time flow and pressure values; cannot explain *why* a liquid surge occurred or automatically cross-reference which field well caused the slug. |
 | **Matrikon / Honeywell DynAMo** | Alarm Management | Logs alarm frequencies, tracks nuisance chattering alarms, and calculates ISA-18.2 alarm-rate KPIs. | Acts as an engineering auditing tool after the fact. Does not help the operator in the middle of a 200-alarm surge to isolate the initiating root alarm from downstream cascading alarms. |
 | **Hexagon j5 / Yokogawa jLog** | Electronic Shift Handover | Web-based structured logbook forms for entering shift notes, standing bypasses, and ongoing maintenance activities. | **100% manual transcription.** The exhausted CRO must remember, summarize, and manually type shift events while answering field radio calls at the end of a 12-hour tour. |
-| **AspenTech DMCplus / Shell PACE** | Advanced Process Control (APC) | Multivariable predictive control that optimizes steady-state throughput within constraint envelopes. | Optimizes continuous stable operation; drops offline into manual during major platform upsets, leaving the CRO completely unassisted during trips. |
+| **AspenTech DMCplus / Commercial APC** | Advanced Process Control (APC) | Multivariable predictive control that optimizes steady-state throughput within constraint envelopes. | Optimizes continuous stable operation; drops offline into manual during major platform upsets, leaving the CRO completely unassisted during trips. |
 
 ---
 

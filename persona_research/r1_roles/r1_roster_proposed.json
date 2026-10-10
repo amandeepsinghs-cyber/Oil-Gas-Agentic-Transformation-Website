@@ -1,0 +1,533 @@
+[
+  {
+    "id": "P36",
+    "title": "Measurement Engineer",
+    "domains": [
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "midstream",
+    "subSegment": "Measurement & custody transfer",
+    "absorbs": "Gas Measurement Specialist/Engineer, Measurement Analyst",
+    "person": "Lars Eriksen",
+    "oneLine": "Ensures accuracy, auditability, and regulatory compliance of fiscal metering, automatic tank gauging, and volume correction calculations across storage facilities and transfer custody points.",
+    "anchor": "API MPMS / AGA Reports",
+    "anchorCitation": "API Manual of Petroleum Measurement Standards (MPMS Chapters 2, 3, 5, 11, 12, and 21) and American Gas Association Reports (AGA Nos. 3, 7, 9, 11) governing hydrocarbon measurement, meter proving, tank calibration, volume correction, and electronic flow measurement data integrity.",
+    "anchorUrl": "https://www.api.org/products-and-services/standards/standards-notebook/measurement",
+    "aliases": [
+      "Hydrocarbon Measurement Engineer",
+      "Custody Transfer Specialist",
+      "Fiscal Metering Engineer"
+    ],
+    "exampleAgentableWork": [
+      "Validating meter factor linearity and repeatability from pipe prover and compact prover runs against API MPMS Chapter 12 tolerance criteria.",
+      "Reconciling daily bulk terminal gross-to-net volumes using API MPMS Chapter 11 temperature/pressure volume correction factors (CTL/CPL) and tank strapping tables to identify inventory loss/gain anomalies.",
+      "Auditing electronic flow measurement (EFM) and gas chromatograph configuration logs against API MPMS Chapter 21.1 / AGA Report No. 9 to detect unlogged orifice plate changes or heating value discrepancies.",
+      "Compiling contractual custody transfer discrepancy audit packages with uncertainty analysis for joint venture partners and pipeline shippers."
+    ]
+  },
+  {
+    "id": "P37",
+    "title": "SCADA Engineer",
+    "domains": [
+      "midstream"
+    ],
+    "primaryDomain": "midstream",
+    "subSegment": "Transmission & network control",
+    "absorbs": "—",
+    "person": "Aisha Bello",
+    "oneLine": "Designs, maintains, and secures pipeline telemetry systems, remote terminal units (RTUs), alarm management systems, and human-machine interface (HMI) displays.",
+    "anchor": "API RP 1167 / API Std 1164 / ISA-18.2",
+    "anchorCitation": "API Recommended Practice 1167 ('Pipeline SCADA Alarm Management'), API Standard 1164 ('Pipeline Control Systems Security'), and ANSI/ISA-18.2 / IEC 62682 ('Management of Alarm Systems for the Process Industries')",
+    "anchorUrl": "https://www.api.org/oil-and-natural-gas/health-and-safety/pipeline-and-refinery-safety/pipeline-safety/control-room-management",
+    "aliases": [
+      "Pipeline SCADA Engineer",
+      "Pipeline Automation Engineer",
+      "Control Systems Engineer (Midstream)"
+    ],
+    "exampleAgentableWork": [
+      "Analyze SCADA alarm logs to detect chattering, fleeting, and stale alarms, generating rationalization metrics and prioritized suppression recommendations per API RP 1167 / ISA-18.2.",
+      "Generate structured Management of Change (MOC) documentation and automated point-to-point database validation scripts for newly commissioned RTUs and PLCs.",
+      "Monitor remote telemetry health logs to identify intermittent polling latency, communication packet drops, and radio/VSAT failover events across transmission corridors.",
+      "Audit SCADA access permissions, firewall rules, and firmware vulnerability databases against API Std 1164 cybersecurity compliance benchmarks."
+    ]
+  },
+  {
+    "id": "P38",
+    "title": "Compressor Station Operator",
+    "domains": [
+      "midstream"
+    ],
+    "primaryDomain": "midstream",
+    "subSegment": "Compression & pumping",
+    "absorbs": "Compression Technician",
+    "person": "Carlos Mendoza",
+    "oneLine": "Operates, monitors, and optimizes compressor and mainline pump station units, auxiliary process systems, and station safety controls.",
+    "anchor": "ASME B31Q (Pipeline Personnel Qualification) / API RP 1161 (Recommended Practice for Pipeline Operator Qualification)",
+    "anchorCitation": "ASME B31Q Nonmandatory Appendix A (Task 0441: Compressor Start-Up and Shutdown; Task 0451: Pump Start-Up and Shutdown; Task 1361: Station Emergency Shutdown System) & API RP 1161 Task Profiles",
+    "anchorUrl": "https://www.asme.org/codes-standards/find-codes-standards/b31q-pipeline-personnel-qualification",
+    "aliases": [
+      "Compressor Station Operator",
+      "Pump Station Operator",
+      "Gas Compressor Operator"
+    ],
+    "exampleAgentableWork": [
+      "Pre-calculating unit compression ratio, polytropic head, and distance to surge across varying suction pressure, ambient temperature, and gas composition to recommend optimal driver load and recycle valve settings.",
+      "Synthesizing hourly station telemetry (bearing temperatures, vibration levels, scrubber differential pressures, filter-separator delta-P) into structured shift handover logs and anomaly alerts.",
+      "Quantifying vented natural gas volumes during unit depressurization, startup/shutdown sequences, or packing leakage using station volume geometry and blowdown pressure curves for environmental compliance reporting.",
+      "Drafting equipment isolation procedures, lockout/tagout (LOTO) boundaries, and safety checklists for planned maintenance on compressor skids and pump trains."
+    ]
+  },
+  {
+    "id": "P39",
+    "title": "Corrosion Engineer",
+    "domains": [
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "midstream",
+    "subSegment": "Pipeline integrity & corrosion",
+    "absorbs": "Corrosion Technician",
+    "person": "Meera Pillai",
+    "oneLine": "Designs, evaluates, and optimizes external cathodic protection systems, protective coatings, and internal chemical inhibition programs to prevent pipeline material degradation.",
+    "anchor": "AMPP SP0169 / AMPP SP0208",
+    "anchorCitation": "AMPP SP0169 'Control of External Corrosion on Underground or Submerged Metallic Piping Systems' and AMPP SP0208 'Internal Corrosion Direct Assessment Methodology for Liquid Petroleum Pipelines'",
+    "anchorUrl": "https://www.ampp.org/standards/ampp-sp0169",
+    "aliases": [
+      "Cathodic Protection Engineer",
+      "Pipeline Corrosion Specialist",
+      "Corrosion Prevention Engineer"
+    ],
+    "exampleAgentableWork": [
+      "Evaluate annual test-station surveys and Close Interval Survey (CIS) potential profiles against the -850 mV CSE polarized criterion to pinpoint under-protected pipe segments and coating degradation.",
+      "Simulate alternating current (AC) and direct current (DC) stray interference profiles along pipeline corridors co-located with high-voltage power transmission lines to size mitigation grounding grids.",
+      "Reconcile chemical inhibitor and biocide dosing regimes against fluid analysis, water-draw chemistry, and weight-loss coupon / electrical resistance (ER) probe corrosion rate logs.",
+      "Draft engineering design packages and bills-of-materials for Impressed Current Cathodic Protection (ICCP) groundbeds and deep anode well replacements."
+    ]
+  },
+  {
+    "id": "P40",
+    "title": "Loading Master",
+    "domains": [
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "midstream",
+    "subSegment": "LNG & marine terminals",
+    "absorbs": "Marine Loading Master, Marine Assurance (vetting), Cargo Surveyor",
+    "person": "Erik Johansson",
+    "oneLine": "Manages ship-shore transfer safety, cargo transfer planning, loading arm operations, and operational custody transfer execution during tanker and gas carrier berthing.",
+    "anchor": "ISGOTT 6th Ed. / OCIMF MTMSA Element 8 / SIGTTO / USCG 33 CFR 156 & 127",
+    "anchorCitation": "International Safety Guide for Oil Tankers and Terminals (ISGOTT 6th Edition, Chapters 21 & 26: Cargo Transfer Operations and Ship/Shore Safety Checklist); OCIMF Marine Terminal Management and Self Assessment (MTMSA Element 8); SIGTTO Liquefied Gas Handling Principles on Ships and in Terminals; USCG 33 CFR 156.120 / 33 CFR 127.301.",
+    "anchorUrl": "https://www.ocimf.org/publications/books/isgott-6th-edition",
+    "aliases": [
+      "Marine Loading Master",
+      "Terminal Representative",
+      "Person in Charge Marine Transfer"
+    ],
+    "exampleAgentableWork": [
+      "Compile pre-arrival vessel declaration data and terminal berth physical constraints into a verified Ship/Shore Safety Checklist (SSCL) and pre-transfer conference protocol.",
+      "Calculate cryogenic line cooldown rates, maximum flow ramp-up schedules, and boil-off gas (BOG) return balances based on manifold pressures and tank equilibrium conditions.",
+      "Reconcile real-time cargo transfer flow logs, arm operating envelope limits, and manifold pressure trends to produce transfer timesheets, delay records, and demurrage logs.",
+      "Generate automated emergency shutdown (ESD-1 and ESD-2) testing sequences and weather abort checklists based on live meteocean forecast data."
+    ]
+  },
+  {
+    "id": "P41",
+    "title": "Gas Storage Engineer",
+    "domains": [
+      "midstream"
+    ],
+    "primaryDomain": "midstream",
+    "subSegment": "Storage",
+    "absorbs": "Cavern Engineer",
+    "person": "Fatima Zahra",
+    "oneLine": "Manages underground natural gas storage capacity, inventory reconciliation, cyclic deliverability modeling, and integrity compliance for depleted reservoirs and aquifers.",
+    "anchor": "API RP 1171 / PHMSA 49 CFR Part 192.12",
+    "anchorCitation": "API Recommended Practice 1171 ('Functional Integrity of Natural Gas Storage in Depleted Hydrocarbon Reservoirs and Aquifer Reservoirs', 2nd Edition) and federal safety regulations under 49 CFR § 192.12 mandating underground natural gas storage integrity management programs (SIMP).",
+    "anchorUrl": "https://www.api.org/oil-and-natural-gas/health-and-safety/pipeline-and-underground-storage/underground-natural-gas-storage",
+    "aliases": [
+      "Underground Storage Engineer",
+      "Gas Storage Reservoir Engineer",
+      "UGS Integrity Engineer"
+    ],
+    "exampleAgentableWork": [
+      "Automating material balance calculations (p/Z surveys) to verify storage pore volume and reconcile working gas versus cushion (base) gas inventory.",
+      "Generating multi-well deliverability and pressure-drawdown curves to forecast daily peak withdrawal capacity for pipeline commercial dispatch.",
+      "Correlating annual mechanical integrity log data (noise/temperature, casing inspection, and cement evaluation logs) against API RP 1171 threat matrices to prioritize well intervention workovers.",
+      "Drafting regulatory compliance reports tracking observation well pressure anomalies and fluid contacts against reservoir containment thresholds."
+    ]
+  },
+  {
+    "id": "P42",
+    "title": "Gas Scheduler",
+    "domains": [
+      "midstream"
+    ],
+    "primaryDomain": "midstream",
+    "subSegment": "Commercial: nominations & balancing",
+    "absorbs": "Gas Balancing Analyst",
+    "person": "Michael O'Connor",
+    "oneLine": "Manages daily and intraday natural gas nominations, confirmations, pipeline capacity bookings, and physical pathing across pipeline Electronic Bulletin Boards to match supply with market demand.",
+    "anchor": "North American Energy Standards Board (NAESB) / Federal Energy Regulatory Commission (FERC)",
+    "anchorCitation": "NAESB Wholesale Gas Quadrant (WGQ) Standard 1.3.2 (Nomination Timeline & Cycles), codified in US federal regulation at 18 CFR § 284.12; aligned with ENTSOG Capacity Allocation Mechanisms (Regulation EU 2017/459) and PNGRB Access Code Regulations",
+    "anchorUrl": "https://www.naesb.org/wgq.asp",
+    "aliases": [
+      "Natural Gas Scheduler",
+      "Pipeline Scheduler",
+      "Gas Transportation Scheduler",
+      "Gas Logistics Specialist"
+    ],
+    "exampleAgentableWork": [
+      "Parsing daily trade capture feeds and customer dispatch notices to assemble nomination schedules aligned with standardized nomination cycle timelines.",
+      "Evaluating pipeline Electronic Bulletin Board capacity cut notices during operational constraints and calculating re-routing options across secondary delivery points.",
+      "Cross-validating upstream supplier nominations against downstream interconnect confirmations and Maximum Daily Quantity (MDQ) entitlements prior to cycle confirmation deadlines.",
+      "Analyzing physical telemetry variances against scheduled flows to prepare intraday re-nomination adjustments and prevent pipeline penalty triggers."
+    ]
+  },
+  {
+    "id": "P43",
+    "title": "Gas Contracts Analyst",
+    "domains": [
+      "midstream"
+    ],
+    "primaryDomain": "midstream",
+    "subSegment": "Commercial: contracts & capacity",
+    "absorbs": "—",
+    "person": "Sofia Rossi",
+    "oneLine": "Administers gas transportation, storage, and gathering agreements, enforces tariff compliance, coordinates capacity release bidding, and prepares mandatory regulatory filings.",
+    "anchor": "North American Energy Standards Board (NAESB) / Federal Energy Regulatory Commission (FERC)",
+    "anchorCitation": "NAESB WGQ Standard 6.3.1 (Base Contract for Sale and Purchase of Natural Gas) and Quadrant 5 (Capacity Release Standards); FERC 18 CFR Part 284 (Open Access Transportation, Form 549B Index of Customers, and Capacity Release Regulations)",
+    "anchorUrl": "https://www.ferc.gov/natural-gas/open-access-regulations",
+    "aliases": [
+      "Gas Contracts Administrator",
+      "Transportation Contracts Specialist",
+      "Midstream Commercial Analyst",
+      "Capacity Contracts Analyst"
+    ],
+    "exampleAgentableWork": [
+      "Ingesting executed transportation, storage, and gathering service agreements to extract commercial terms, capacity rights, and billing parameters into enterprise contract systems.",
+      "Evaluating secondary market capacity release postings and incoming bids against tariff bidding windows, creditworthiness thresholds, and recall conditions.",
+      "Auditing proposed shipper nomination paths and volume requests against contractual firm capacity entitlements (MDQ/MHQ) and pipeline tariff schedules.",
+      "Compiling regulatory compliance reports, such as quarterly index of customer filings and discount rate disclosures, by synthesizing active transportation contract portfolios."
+    ]
+  },
+  {
+    "id": "P44",
+    "title": "Gas Distribution Engineer",
+    "domains": [
+      "midstream"
+    ],
+    "primaryDomain": "midstream",
+    "subSegment": "Gas distribution networks",
+    "absorbs": "Distribution Integrity Engineer",
+    "person": "Vikram Rao",
+    "oneLine": "Designs, models, and sizes local natural gas distribution networks, district regulator stations, and customer connections to ensure adequate capacity, pressure, and code compliance.",
+    "anchor": "American Society of Mechanical Engineers (ASME) / Petroleum and Natural Gas Regulatory Board (PNGRB) / Institution of Gas Engineers and Managers (IGEM)",
+    "anchorCitation": "ASME B31.8 (Gas Transmission and Distribution Piping Systems, Chapter VIII) & PNGRB T4S Regulations (Technical Standards and Specifications including Safety Standards for City Gas Distribution Networks) & IGEM/TD/3 (Steel and PE Pipelines for Gas Distribution)",
+    "anchorUrl": "https://www.asme.org/codes-standards/find-codes-standards/b31-8-gas-transmission-distribution-piping-systems",
+    "aliases": [
+      "Distribution Planning Engineer",
+      "Gas Network Engineer",
+      "City Gas Distribution Engineer"
+    ],
+    "exampleAgentableWork": [
+      "Running steady-state hydraulic network simulations to evaluate pressure margins and bottleneck risks for proposed commercial and residential main extensions.",
+      "Calculating maximum allowable operating pressure (MAOP), design factor deratings, and required pipe wall thicknesses for steel and medium-density polyethylene (MDPE) mains per ASME B31.8 and local safety codes.",
+      "Sizing district regulator stations (DRS), service regulators, and overpressure protection relief valves based on peak winter design-day flow requirements.",
+      "Drafting technical design packages, bill of quantities (BOQ), and material requisitions for pipeline reinforcement and relocation projects."
+    ]
+  },
+  {
+    "id": "P45",
+    "title": "Shift Supervisor",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "subSegment": "Refinery operations",
+    "absorbs": "—",
+    "person": "Grace Liu",
+    "oneLine": "Directs 24/7 operating crews across primary and secondary process units, governing safe operating envelopes, permit-to-work authorizations, emergency responses, and shift-to-shift handovers.",
+    "anchor": "OISD-STD-154 / OISD-STD-105",
+    "anchorCitation": "OISD-STD-154 ('Safety Aspects in Functional Training') mandates competency standards and safety qualifications for supervisory personnel directing continuous refinery processing units, shift handover discipline, and emergency isolation; complemented by OISD-STD-105 ('Work Permit System') for authorizing high-risk permits-to-work.",
+    "anchorUrl": "https://www.oisd.gov.in/standards",
+    "aliases": [
+      "Operations Supervisor",
+      "Shift Superintendent",
+      "Shift Team Leader"
+    ],
+    "exampleAgentableWork": [
+      "Reconciling end-of-shift DCS operational logs, unit throughput tallies, and chemical injection rates against daily production targets and shift handover notes.",
+      "Cross-checking active and pending Permit-to-Work (PTW) applications across primary and secondary units to detect SIMOPS conflicts, blind list mismatches, and overlapping isolation boundaries.",
+      "Drafting preliminary shift incident and near-miss event logs following unexpected unit upsets, relief valve lifts, or flaring excursions against Safe Operating Limit (SOL) baselines.",
+      "Generating shift equipment status exception briefs prior to shift exchange, flagging bypassed safety interlocks, tagged-out relief valves, and unspared critical machinery."
+    ]
+  },
+  {
+    "id": "P46",
+    "title": "Process Control Engineer",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "subSegment": "Process & technology engineering",
+    "absorbs": "—",
+    "person": "Omar Haddad",
+    "oneLine": "Designs, tunes, and sustains regulatory control loops, multivariable predictive control (MPC) applications, and real-time process optimization schemes to maximize refinery throughput and stability within safe limits.",
+    "anchor": "API RP 554 (Process Control Systems) & ISA-106 / ISA-18.2",
+    "anchorCitation": "American Petroleum Institute (API) RP 554 Parts 1-3 ('Process Control Systems') and International Society of Automation (ISA) standards ISA-106 ('Procedural Automation for Continuous Process Operations') and ISA-18.2 ('Management of Alarm Systems for the Process Industries'), alongside the ISA Certified Automation Professional (CAP) framework.",
+    "anchorUrl": "https://www.api.org/standards",
+    "aliases": [
+      "Advanced Process Control Engineer",
+      "APC Engineer",
+      "Process Automation Engineer",
+      "Control Systems Engineer"
+    ],
+    "exampleAgentableWork": [
+      "Multivariable predictive control (MPC) model health tracking: Reconcile dynamic step-test data and model-predicted vs. actual process variables across multi-unit constraint envelopes to highlight declining controller uptime, model mismatch, and constraint saturation.",
+      "Base-layer PID control loop tuning and oscillation diagnostics: Analyze high-frequency DCS time-series data to detect hunting, stiction, or sluggish tuning in regulatory loops, generating recommended PID parameter adjustments.",
+      "Soft sensor and inferential quality estimator calibration: Perform automated regression and statistical validation between continuous DCS inferentials (e.g., 95% cut point, Reid Vapor Pressure) and scheduled laboratory ASTM test results, drafting bias-update and drift alerts.",
+      "Alarm rationalization and flood analysis: Screen historical DCS event and alarm journals against ISA-18.2 / EEMUA 191 KPIs to identify chattering, stale, and duplicate alarms and draft alarm change management documentation."
+    ]
+  },
+  {
+    "id": "P47",
+    "title": "Energy & Utilities Engineer",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "subSegment": "Utilities & energy",
+    "absorbs": "Energy Engineer, Utilities Board Operator",
+    "person": "Ingrid Larsen",
+    "oneLine": "Engineers, balances, and optimizes site utility production and distribution networks including multi-tier steam headers, boiler feed water, fuel gas, industrial gases, and hydrogen systems.",
+    "anchor": "ASME PTC 4 / IChemE Energy & Resource Efficiency Standard",
+    "anchorCitation": "ASME PTC 4 (Fired Steam Generators Performance Test Code) and Institution of Chemical Engineers (IChemE) Energy & Resource Efficiency Good Practice Guidelines",
+    "anchorUrl": "https://www.asme.org/codes-standards/find-codes-standards/ptc-4-fired-steam-generators",
+    "aliases": [
+      "Utilities Process Engineer",
+      "Plant Utilities Engineer",
+      "Offsites & Utilities Engineer",
+      "Cogeneration Engineer"
+    ],
+    "exampleAgentableWork": [
+      "Reconciling multi-pressure steam header balances (HP/MP/LP) across production boilers, letdown stations, and process consumers to detect vent losses and thermal inefficiencies.",
+      "Calculating fired boiler and heat recovery steam generator (HRSG) thermal efficiency per ASME PTC 4 from flue gas oxygen, stack temperature, and fuel gas heating values.",
+      "Modeling refinery fuel gas (RFG) blending drums to track Wobbe index, heating value, and sulfur content to stabilize burner firing across furnace networks.",
+      "Reconciling site-wide hydrogen network distribution across hydrogen generation units, reformer off-gas streams, and hydroprocessing consumer units to minimize flaring and purge losses."
+    ]
+  },
+  {
+    "id": "P48",
+    "title": "Hydrocarbon Accountant",
+    "domains": [
+      "downstream",
+      "midstream"
+    ],
+    "primaryDomain": "downstream",
+    "subSegment": "Planning & economics / loss control",
+    "absorbs": "Loss Control Specialist, Demurrage Analyst",
+    "person": "Rajesh Kumar",
+    "oneLine": "Reconciles daily physical refinery receipts, unit yields, internal inventory transfers, and finished product dispatches to close plant mass balances and detect hydrocarbon losses.",
+    "anchor": "Energy Institute HM 31 & API MPMS Chapter 12",
+    "anchorCitation": "Energy Institute HM 31: Guide to hydrocarbon management in petroleum refinery operations; API Manual of Petroleum Measurement Standards (MPMS) Chapter 12: Calculation of Petroleum Quantities and Chapter 17: Marine Measurement.",
+    "anchorUrl": "https://publishing.energyinst.org/topics/hydrocarbon-management/hm-31-guide-to-hydrocarbon-management-in-petroleum-refinery-operations",
+    "aliases": [
+      "Refinery Yield Accountant",
+      "Yield Accountant",
+      "Mass Balance Coordinator",
+      "Loss Control Specialist"
+    ],
+    "exampleAgentableWork": [
+      "Assembling daily plant-wide and unit-level mass balances by aggregating tank radar gauging, stream flowmeters, and laboratory density measurements.",
+      "Reconciling custody-transfer meter tickets against bills of lading, pipeline transfer batches, and marine Vessel Experience Factors (VEF) to isolate physical transit losses from apparent measurement variances.",
+      "Investigating unit yield variances against theoretical Linear Programming (LP) yield vectors to flag meter drift, unmetered flaring, or equipment leakage.",
+      "Drafting monthly refinery loss control reports and statutory hydrocarbon excise/customs inventory reconciliation statements."
+    ]
+  },
+  {
+    "id": "P49",
+    "title": "Distribution Planner",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "subSegment": "Distribution: pipelines, terminals & depots",
+    "absorbs": "Distribution Dispatcher",
+    "person": "Amara Nwosu",
+    "oneLine": "Balances regional product supply and demand by coordinating refinery bulk off-takes, terminal inventory allocations, pipeline batch nominations, and secondary distribution.",
+    "anchor": "Energy Institute HM 32 & AFPM Supply Chain Guidelines",
+    "anchorCitation": "Energy Institute HM 32: Guide to hydrocarbon management at petroleum product marketing and distribution terminals; AFPM (American Fuel & Petrochemical Manufacturers) Downstream Supply Chain and Logistics Technical Guidelines.",
+    "anchorUrl": "https://publishing.energyinst.org/topics/hydrocarbon-management/hm-32-guide-to-hydrocarbon-management-at-petroleum-product-marketing-and-distribution-terminals",
+    "aliases": [
+      "Product Supply Planner",
+      "Downstream Supply Coordinator",
+      "Distribution Planner",
+      "Fuels Supply Planner"
+    ],
+    "exampleAgentableWork": [
+      "Calculating multi-terminal stock depletion rates and projected run-out dates based on regional distribution demand forecasts and secondary delivery cycles.",
+      "Generating pipeline nomination schedules and multi-product batch cycles connecting refineries with regional distribution terminals.",
+      "Simulating contingency rerouting scenarios and inventory balancing actions across regional hubs during refinery unit upsets or pipeline outages.",
+      "Drafting exchange reconciliation statements and borrow/loan balance adjustments with commercial counterparties."
+    ]
+  },
+  {
+    "id": "P50",
+    "title": "Quality Control Chemist",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "subSegment": "Blending & product quality / laboratory",
+    "absorbs": "Laboratory Manager, Product Quality Coordinator",
+    "person": "Elif Demir",
+    "oneLine": "Conducts physical and chemical testing, instrument calibration, and statistical quality control on petroleum streams and products to verify specification compliance.",
+    "anchor": "ISO/IEC 17025:2017 & ASTM D6299",
+    "anchorCitation": "ISO/IEC 17025:2017 (Clause 6.2 - Personnel Competence) and ASTM D6299-24 (Statistical Quality Assurance and Control Charting Techniques)",
+    "anchorUrl": "https://www.astm.org/d6299-24.html",
+    "aliases": [
+      "QC Chemist",
+      "Laboratory Chemist",
+      "Petroleum Chemist",
+      "Analytical Chemist"
+    ],
+    "exampleAgentableWork": [
+      "Analyze multi-parameter laboratory assay datasets (distillation curves, sulfur, RVP, flash point, viscosity) against ASTM specification limits to identify borderline or non-compliant results.",
+      "Evaluate ASTM D6299 statistical quality control (SQC) control charts to identify instrument drift, standard deviation shifts, and systematic bias across gas chromatographs and analytical instruments.",
+      "Draft Out-of-Specification (OOS) investigation dossiers comparing duplicate analyses, calibration check standards, and sample integrity data to distinguish testing errors from operational upsets.",
+      "Compile instrument verification logs and calibration records formatted to ISO/IEC 17025 traceability requirements for upcoming quality audits."
+    ]
+  },
+  {
+    "id": "P51",
+    "title": "Oil Movement Controller",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "subSegment": "Offsites, tank farms & oil movement",
+    "absorbs": "—",
+    "person": "Tomás García",
+    "oneLine": "Monitors and coordinates tank farm storage, pipeline receipts, transfer line-ups, and overfill prevention from the central control console.",
+    "anchor": "API Standard 2350 / API Standard 2610 / OISD-STD-108",
+    "anchorCitation": "American Petroleum Institute (API) Standard 2350 (5th Edition, 2020) 'Overfill Prevention for Storage Tanks in Petroleum Facilities' and API Standard 2610 'Design, Construction, Operation, Maintenance, and Inspection of Terminal and Tank Facilities'",
+    "anchorUrl": "https://www.api.org/standards",
+    "aliases": [
+      "Oil Movements Operator",
+      "OM&S Console Operator",
+      "Tank Farm Console Operator"
+    ],
+    "exampleAgentableWork": [
+      "Calculating tank available capacity, filling rates, and API 2350 safe response time (SRT) windows prior to initiating liquid transfers",
+      "Validating line-up valve alignments and manifold routing integrity against hydraulic limits to prevent cross-contamination and pressure surges",
+      "Generating transfer execution logs and reconciling automated tank gauging (ATG) readings across shift handovers",
+      "Drafting sequence plans for tank rundown switches and intermediate component transfers based on unit production schedules"
+    ]
+  },
+  {
+    "id": "P52",
+    "title": "Polymer Process Engineer",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "subSegment": "Petrochemicals",
+    "absorbs": "Petrochemical Process Engineer (to P16), Petchem Planner (to P17)",
+    "person": "Yuki Tanaka",
+    "oneLine": "Optimizes polymerization reactor kinetics, catalyst dosing, grade transition trajectories, and extrusion/pelletizing systems to ensure resin properties meet technical customer specifications.",
+    "anchor": "Society of Plastics Engineers (SPE) & Cogent Skills National Occupational Standards",
+    "anchorCitation": "Society of Plastics Engineers (SPE) Professional Body of Knowledge & Cogent Skills NOS for Chemical and Polymer Processing (COGSCIENT-04 / COGPPO-05)",
+    "anchorUrl": "https://www.4spe.org",
+    "aliases": [
+      "Polymer Engineer",
+      "Polymerization Engineer",
+      "Resin Process Engineer"
+    ],
+    "exampleAgentableWork": [
+      "Simulating polymer grade transition trajectories to calculate optimal hydrogen-to-monomer ratios, comonomer feeds, and bed temperatures to minimize off-spec transition tonnage.",
+      "Reconciling reactor monomer mass balances and catalyst productivity rates against laboratory Melt Flow Index (MFI), density, and molecular weight distribution data.",
+      "Analyzing extruder operating logs (barrel temperature zones, screw RPM, melt pressure, specific energy) to diagnose root causes of pellet gel defects and shear degradation.",
+      "Drafting resin quality disposition reports and formulation adjustments for antioxidant, slip, and UV stabilizer masterbatch dosing."
+    ]
+  },
+  {
+    "id": "P53",
+    "title": "Retail Territory Manager",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "subSegment": "Marketing & retail fuels",
+    "absorbs": "—",
+    "person": "David Mensah",
+    "oneLine": "Oversees multi-site retail fuel networks, managing forecourt operational compliance, wetstock reconciliation, and dealer performance.",
+    "anchor": "American Petroleum Institute (API) / Petroleum Equipment Institute (PEI)",
+    "anchorCitation": "API RP 1621 (Bulk Liquid Stock Control at Retail Outlets); PEI RP100",
+    "anchorUrl": "https://www.api.org/products-and-services/standards",
+    "aliases": [
+      "Retail Operations Specialist",
+      "Territory Manager - Retail",
+      "Forecourt Operations Manager"
+    ],
+    "exampleAgentableWork": [
+      "Reconciling daily automated tank gauge (ATG) and dip readings against point-of-sale sales data using API RP 1621 variance thresholds to detect meter drift or underground leaks.",
+      "Drafting replenishment dispatch schedules based on live tank ullage, delivery transit times, and sales velocity to prevent forecourt run-outs.",
+      "Compiling forecourt environmental, health, and safety audit scorecards and corrective action plans from site inspection logs.",
+      "Validating retail pricing execution and margin realization across dealer-operated and company-owned retail networks."
+    ]
+  },
+  {
+    "id": "P54",
+    "title": "LPG Plant Manager",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "subSegment": "Marketing: LPG bottling",
+    "absorbs": "—",
+    "person": "Kavya Sharma",
+    "oneLine": "Directs pressurized LPG bottling plant operations, overseeing carousel filling precision, statutory cylinder recertification, and process safety.",
+    "anchor": "Oil Industry Safety Directorate (OISD) / National Fire Protection Association (NFPA)",
+    "anchorCitation": "OISD-STD-144 (LPG Bottling Plant Operations and Safety); NFPA 58 (Liquefied Petroleum Gas Code)",
+    "anchorUrl": "https://www.oisd.gov.in",
+    "aliases": [
+      "LPG Bottling Superintendent",
+      "LPG Operations Engineer",
+      "LPG Plant Superintendent"
+    ],
+    "exampleAgentableWork": [
+      "Reconciling daily plant mass balance across bulk liquid receipts, electronic carousel filling weights, check-weigher rejects, and vapor recovery returns.",
+      "Formulating batch campaigns for statutory cylinder degassing, hydrotesting, tare-weight verification, and valve replacement compliance.",
+      "Analyzing automated leak-detection (water bath and electronic sniffer) reject logs to isolate and diagnose drifting carousel filling heads.",
+      "Compiling statutory safety filings and emergency response audit dossiers required under pressure vessel and LPG handling standards."
+    ]
+  },
+  {
+    "id": "P55",
+    "title": "Aviation Fuelling Supervisor",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "subSegment": "Marketing: aviation fuel",
+    "absorbs": "—",
+    "person": "James Whitaker",
+    "oneLine": "Directs airport fuel storage, hydrant systems, and into-plane fueling operations under international aviation fuel quality standards.",
+    "anchor": "Joint Inspection Group (JIG) / Energy Institute (EI)",
+    "anchorCitation": "JIG 1 (Into-Plane Fuelling Services); JIG 2 (Airport Depots and Hydrants); EI/JIG 1530",
+    "anchorUrl": "https://www.jig.org/standards/",
+    "aliases": [
+      "Aviation Fuel Officer",
+      "Into-Plane Fuelling Supervisor",
+      "Airport Depot Supervisor"
+    ],
+    "exampleAgentableWork": [
+      "Validating refinery Certificates of Analysis (CoA) and recertification test logs against ASTM D1655 and DEF STAN 91-91 criteria before airport tank release.",
+      "Calculating flow-rate-corrected differential pressure curves across filter-water separators to forecast element change-out schedules under EI/JIG 1530.",
+      "Reconciling into-plane fuel delivery tickets, meter prover factors, and temperature-density corrections against flight dispatch receipts.",
+      "Compiling daily apron quality control dossiers, water-sensor test logs, and deadman response-time compliance records for aviation audits."
+    ]
+  }
+]

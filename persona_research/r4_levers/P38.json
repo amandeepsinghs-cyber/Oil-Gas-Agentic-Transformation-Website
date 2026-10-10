@@ -1,0 +1,28 @@
+{
+  "id": "P38",
+  "seats": 100,
+  "assetCapital": {
+    "form": "time",
+    "asset": "Mainline gas compressor trains",
+    "units": 36,
+    "unitLabel": "compressor trains",
+    "hoursPerYear": 8760,
+    "share": 0.002,
+    "ratePerHour": 80000,
+    "basis": "0.20% of machine availability recovered (~17.5 h/train/yr)",
+    "source": "~36 mainline gas compressor trains across ~16,000 km transmission network (averaging 3 trains across ~12 stations); ₹80,000/machine-hour reflects gated pipeline transmission tariff (~₹81/MMBTU unified tariff) and driver fuel/shrinkage costs during recycle or delayed startup."
+  },
+  "assetRisk": {
+    "scenario": "Compressor surge wreck or liquid carryover incident",
+    "unitsPerYear": 36,
+    "unitLabel": "compressor trains",
+    "frequency": 0.02,
+    "consequence": 150000000,
+    "alpha": 0.35,
+    "beta": 0.35,
+    "source": "~36 mainline compressor trains; frequency reflects ~1 catastrophic surge or scrubber liquid carryover wreck per 50 machine-years. ₹15 Cr consequence covers rotor/impeller bundle replacement, dry gas seal destruction, and emergency station outage. Alpha reflects operational causation (operating point drift, gas composition shifts, scrubber level neglect); beta reflects agent early warning."
+  },
+  "recovery": null,
+  "rationale": "P38 Compressor Station Operator operates the critical rotating compression machinery and pumping skids maintaining transmission pressure across a ~16,000 km gas network and liquid pipeline assets. Sized at 100 seats for continuous 4-panel 24/7 coverage across ~12 gas compressor stations, ~9 LPG pump stations, and ~5-7 processing plant compression sections. Asset capital captures 0.20% of machine calendar hours recovered (~17.5 h/train/yr) via dynamic anti-surge margin optimization, pre-start purge sequencing, and early condition triage, priced conservatively at ₹80,000/machine-hour (reflecting gated capacity and driver fuel/shrinkage). Asset risk captures avoided catastrophic surge damage and scrubber liquid carryover wrecks across 36 compressor trains (1 event per 50 machine-years at ₹15 Cr consequence), with alpha (0.35) and beta (0.35) yielding 12.25% attribution. Resource recovery is strictly null in accordance with value model architecture prohibiting joint integrity and recovery claims, as midstream transmission roles do not influence subsurface hydrocarbon in-place recovery.",
+  "caveats": "Assumes standard N+1 compressor train station redundancy where trip prevention primarily protects fuel efficiency, capacity headroom, and linepack stability rather than causing immediate total line shutdown. Value model excludes double-counting with centralized Pipeline Controllers (P14, overall linepack/dispatch) and Instrument Technicians (P32, SIF proof testing)."
+}

@@ -25,6 +25,20 @@ window.PERSONA_DETAIL["P15"] = {
   "avatar": "avatars/P15_persona.jpg",
   "thumb": "avatars/thumbs/P15_thumb.jpg",
   "initials": "TS",
+  "domains": [
+    "midstream",
+    "downstream"
+  ],
+  "primaryDomain": "midstream",
+  "crossCutting": false,
+  "groups": {
+    "midstream": "Terminals & Marine",
+    "downstream": "Offsites & Distribution"
+  },
+  "valueSplit": {
+    "midstream": 0.5,
+    "downstream": 0.5
+  },
   "headline": "The Terminal Superintendent governs the physical gateway between land-based hydrocarbon infrastructure and global maritime commerce, directing the safe, high-rate transfer of millions of barrels of crude oil and refined fuels into ocean-going tankers. While Terminal Automation Systems (TAS) execute loading arm sequences and digital radar gauges measure shore tank heights, custody transfer reconciliation remains an intense, high-stakes battle of manual paper spreadsheets. When loading a 2-million-barrel Very Large Crude Carrier (VLCC), a discrepancy of just 0.15% between shore custody meter prover tickets and the tanker Chief Mate's ullage report represents 250,000–350,000 in disputed cargo value. Terminal superintendents, chief mates, and independent cargo surveyors spend 4 to 6 hours hand-calculating API MPMS Chapter 11.1 Volume Correction Factors (VCF), vessel trim corrections, and basic sediment and water (BS&W) deductions while tanker demurrage penalties (50k–120k/day) tick away. A hyper-specialized agent squad eliminates 14.15 hours per vessel cargo turnaround across custody transfer reconciliation, ISGOTT safety checklists, VEF factor auditing, loading hydraulics, ballast water compliance, demurrage statement of facts, and shift reporting.",
   "confidence": {
     "Persona": "Terminal Superintendent (P15)",

@@ -23,6 +23,17 @@ window.PERSONA_DETAIL["P08"] = {
   "avatar": "avatars/P08_persona.jpg",
   "thumb": "avatars/thumbs/P08_thumb.jpg",
   "initials": "CE",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Wells & Rig"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Completions Engineer connects the reservoir formation to the surface facility, designing the downhole plumbing (tubing, packers, safety valves, sand screens, and fracture stimulations) that allows hydrocarbons to flow safely over decades. While physics engines like Landmark WellCat and SLB WellFlo handle tubular thermal stress and nodal inflow hydraulics, they provide zero automation for historical wellbore mechanical clearance verification and schematic drift. Before dispatching an expensive wireline, coiled tubing, or workover toolstring downhole, the completions engineer spends 4 to 8 hours digging through legacy paper completion tallies, well schematics, and scale mill logs to verify internal diameter (ID) restrictions and seating nipple profiles. Rather than an unfeasible \"AI frac engineer,\" the Completions Engineer requires a federated squad of 7 hyper-specialized agents—each tackling one discrete, research-backed mechanical clearance, schematic drift, metallurgy qualification, perforating design, or fishing contingency workflow. Across a typical completion or workover project, this squad returns ~25.0 hours of high-value completion design time per well intervention plan, preventing stuck-tool fishing disasters that cost 300,000 to1,500,000 in rig time and protecting downhole barrier envelopes.",
   "confidence": {
     "Persona": "Completions Engineer (P08)",

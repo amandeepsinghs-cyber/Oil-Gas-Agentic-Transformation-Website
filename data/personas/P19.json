@@ -20,6 +20,23 @@
   "avatar": "avatars/P19_persona.jpg",
   "thumb": "avatars/thumbs/P19_thumb.jpg",
   "initials": "PS",
+  "domains": [
+    "upstream",
+    "midstream",
+    "downstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": true,
+  "groups": {
+    "upstream": "Cross-Cutting",
+    "midstream": "Cross-Cutting",
+    "downstream": "Cross-Cutting"
+  },
+  "valueSplit": {
+    "upstream": 0.4,
+    "midstream": 0.1,
+    "downstream": 0.5
+  },
   "headline": "The Process Safety Engineer is the technical guardian against catastrophic major-accident hazards (fires, explosions, and toxic releases), safeguarding the facility's multi-layered barrier envelope across its operational lifecycle. While enterprise compliance tools like Sphera Essential, Enablon, and Sphera PHA-Pro provide electronic approval workflows for Management of Change (MOC) and store Process Hazard Analysis (PHA) tables, they act as passive administrative silos that verify zero technical engineering content. A Process Safety Engineer reviewing 15 to 25 weekly MOC packages must manually cross-reference redline Piping & Instrumentation Diagrams (P&IDs), pressure relief valve (PSV) sizing calculations, electrical area classifications, and historical HAZOP action logs to ensure that an unreviewed piping tweak does not bypass a primary safety barrier. An integrated squad of 7 hyper-specialized micro-agents pre-screens MOC packages, audits P&ID redlines against Process Safety Information (PSI), monitors cumulative Safety Critical Element (SCE) barrier impairments, verifies physical closure of HAZOP actions, classifies API RP 754 Tier 1/2 releases, validates PSV design bases, and synthesizes Pre-Startup Safety Review (PSSR) packs—saving 99.75 engineering safety governance hours per monthly cycle and closing the administrative blind spots that historically trigger major industrial disasters (Texas City, Piper Alpha, Longford).",
   "confidence": {
     "Persona": "Process Safety Engineer (P19)",
@@ -34,7 +51,7 @@
   },
   "role": {
     "oneLine": "Establishes, audits, and enforces the facility's Risk-Based Process Safety (RBPS) framework (Management of Change, Process Hazard Analysis, Safety Critical Elements, and Incident Investigation) to prevent catastrophic loss of primary containment of hazardous hydrocarbons and toxic chemicals.",
-    "whyItMatters": "A failure in process safety governance leads directly to multi-fatality industrial explosions (e.g., BP Texas City disaster killing 15 workers), total offshore asset destruction (Piper Alpha, 167 fatalities), toxic vapor releases imperiling surrounding communities (Bhopal), or billions of dollars in asset replacement and environmental remediation costs.",
+    "whyItMatters": "A failure in process safety governance leads directly to multi-fatality industrial explosions (e.g., the 2005 Texas City refinery explosion killing 15 workers), total offshore asset destruction (Piper Alpha, 167 fatalities), toxic vapor releases imperiling surrounding communities (Bhopal), or billions of dollars in asset replacement and environmental remediation costs.",
     "notOwned": [
       {
         "task": "Slips, Trips, Falls, Scaffolding, and Personal PPE Enforcement (Occupational HSE)",
@@ -566,7 +583,7 @@
     },
     {
       "key": "[CSB-TexasCity]",
-      "citation": "US CSB, BP Texas City Disaster Final Investigation Report, 2007",
+      "citation": "US CSB, Texas City Refinery Explosion Final Investigation Report, 2007",
       "locator": "csb.gov/investigations",
       "type": "Disaster Case Study",
       "supports": "Catastrophic MOC, PSSR, and safety critical instrument failure"

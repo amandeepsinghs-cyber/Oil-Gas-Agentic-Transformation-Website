@@ -18,6 +18,17 @@
   "avatar": "avatars/P09_persona.jpg",
   "thumb": "avatars/thumbs/P09_thumb.jpg",
   "initials": "PE",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Field & Facilities"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Production Engineer is the operational guardian of the producing field, responsible for maximizing economic hydrocarbon extraction while protecting the mechanical integrity of wellbores, artificial lift systems, and surface gathering infrastructure. While analytical monoliths like Petroleum Experts (Prosper / GAP), SLB (PIPESIM), and Baker Hughes / Weatherford (ForeSite / LOWIS) execute rigorous multiphase flow hydraulics and downhole nodal inflow/outflow mathematics, their models sit critically stale across producing assets. In an average 300-well onshore or offshore asset, fewer than 15% of well nodal models match live flowing conditions because manual parameter recalibration takes 2 to 3 hours per well. Production engineers spend up to 60% of their day wrestling administrative friction: manually extracting SCADA pressure historians, reconciling erratic test separator metering tickets, tracking chemical pump tote runouts, and untangling field allocation balance errors. A hyper-specialized agent squad eliminates 17.90 hours per surveillance cycle across daily morning triage, nodal screening, allocation audits, chemical tracking, and workover candidate ranking.",
   "confidence": {
     "Persona": "Production Engineer (P09)",

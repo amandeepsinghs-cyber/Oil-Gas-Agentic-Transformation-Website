@@ -1,0 +1,28 @@
+{
+  "id": "P41",
+  "seats": 14,
+  "assetCapital": {
+    "form": "time",
+    "asset": "Underground gas storage facilities",
+    "units": 3,
+    "unitLabel": "facilities",
+    "hoursPerYear": 8760,
+    "share": 0.002,
+    "ratePerHour": 350000,
+    "basis": "0.20% of facility calendar hours recovered by compressing seasonal turnover shut-in testing and un-throttling peak withdrawal deliverability (~17.5 h/facility/yr)",
+    "source": "~3 underground gas storage and strategic cavern facilities across the transmission grid; ₹3.5 L/facility-hour reflects gated peak withdrawal and transmission capacity tariffs (~170,000 SCM/h at blended tariff and balancing margin). Seasonal turnover shut-in tests typically take 3-7 days per cycle; automated Horner stabilization picking and nodal deliverability modeling recover critical-path operating hours."
+  },
+  "assetRisk": {
+    "scenario": "Storage well barrier leak or subsurface containment failure",
+    "unitsPerYear": 160,
+    "unitLabel": "storage wells",
+    "frequency": 0.015,
+    "consequence": 60000000,
+    "alpha": 0.30,
+    "beta": 0.40,
+    "source": "~160 injection/withdrawal and observation wells across 3 storage facilities. Consequence covers high-pressure snubbing workover, remedial casing squeeze/liner, barrier restoration, and localized venting mitigation under API RP 1171 / SIMP guidelines (~₹6 Cr per event). High beta because early detection via multi-finger caliper correlation and observation well pressure trending directly resolves the information barrier."
+  },
+  "recovery": null,
+  "rationale": "Sized for a national gas transmission network (~4,800 staff, ~16,000 km pipeline, ~120-130 MMSCMD throughput). Storage infrastructure spans 3 operational or strategic storage assets (depleted fields/caverns), requiring 14 dedicated engineering seats (~3 per asset + corporate dispatch/SIMP leads; ~0.29% of headcount). Asset Capital recovers 0.20% of calendar hours (17.5 h/yr) during seasonal shut-in turnover and peak withdrawal delivery. Asset Risk prevents subsurface well barrier failures across 160 storage wells under cyclic fatigue (alpha*beta = 0.12, below 0.18 limit). Resource Recovery is null as the role operates downstream of production and cannot carry both Integrity and Recovery.",
+  "caveats": "If an operator maintains the strict interpretation from value_model.js that no physical asset waits on offline subsurface interpretation (identical to P02 Well Integrity and P27 Pipeline Integrity), assetCapital can be set to null without affecting model coherence, anchoring total value exclusively in Human Capital (₹3.15 Cr) and Asset Risk (₹1.73 Cr)."
+}

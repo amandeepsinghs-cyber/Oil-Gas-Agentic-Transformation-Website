@@ -1,0 +1,633 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P47"] = {
+  "id": "P47",
+  "title": "Energy & Utilities Engineer",
+  "aliases": [
+    "Utilities Process Engineer",
+    "Plant Utilities Engineer",
+    "Offsites & Utilities Engineer",
+    "Cogeneration Engineer"
+  ],
+  "segment": "Downstream — Utilities & energy",
+  "segmentLong": "Downstream — Refining & Petrochemical Utilities",
+  "setting": "Central Utilities Control Room and Plant Technical Services Office, with regular field walkdowns across High-Pressure Boiler Houses, Cogeneration (CHP) / Combined Cycle Gas Turbines, Heat Recovery Steam Generators (HRSG), Demineralized Water / Boiler Feed Water (BFW) Plants, Cooling Towers, Fuel Gas Mixing Drums, and Site-Wide Utility Pipe Racks",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "ASME PTC 4 / IChemE Energy & Resource Efficiency Standard",
+  "agentFocus": "Multi-Tier Steam Header Mass-Enthalpy Balance & Vent Loss Optimizer",
+  "sourceFile": "P47_Energy_and_Utilities_Engineer.md",
+  "person": "Ingrid Larsen",
+  "avatar": "avatars/P47_persona.jpg",
+  "thumb": "avatars/thumbs/P47_thumb.jpg",
+  "initials": "EU",
+  "domains": [
+    "downstream"
+  ],
+  "primaryDomain": "downstream",
+  "crossCutting": false,
+  "groups": {
+    "downstream": "Refining"
+  },
+  "valueSplit": {
+    "downstream": 1.0
+  },
+  "headline": "The Energy & Utilities Engineer is the thermodynamic life-support and energy efficiency architect of the downstream refining complex, governing multi-tier steam generation (HP/MP/LP), boiler feed water conditioning, fuel gas blending, cooling water networks, and site-wide hydrogen balancing. While thermodynamic utility modeling packages like KBC Petro-SIM Energy / Visual MESA and Aspen Utilities Planner optimize steady-state energy dispatch targets, they operate as static simulation silos completely disconnected from daily operational drift, transient sootblowing cycles, and asynchronous water lab chemistry. When fuel gas compositions fluctuate or steam letdown valves pass high-pressure steam unnoticed, utility engineers spend 4 to 6 hours every day manually compiling multi-header steam mass-enthalpy balances in disconnected spreadsheets, cross-checking boiler flue gas excess oxygen, calculating fuel gas Wobbe indices, tracking cooling tower cycles of concentration, and reconciling hydroprocessing hydrogen purge rates. An integrated squad of 7 hyper-specialized micro-agents continuously reconciles multi-tier steam headers, audits fired boiler and HRSG efficiency per ASME PTC 4, optimizes refinery fuel gas (RFG) blending drums, tracks cooling water cycles of concentration and exchanger fouling, audits steam trap population health, monitors reverse osmosis and BFW demineralization chemistry, and balances site-wide hydrogen networks—saving 21.85 engineering hours per daily utility surveillance cycle and preventing millions of dollars in wasted boiler fuel, unrecovered condensate enthalpy, and burner flame instability.",
+  "confidence": {
+    "Persona": "Energy & Utilities Engineer (P47)",
+    "Research Status": "Deep-dive field research grounded in industrial utility engineering standards, ASME performance test codes, IChemE resource efficiency guidelines, and refinery utility operating handbooks",
+    "Competency Standard Used": "ASME PTC 4 (Fired Steam Generators), IChemE Energy & Resource Efficiency, ISO 50001 (Energy Management), API RP 534 (HRSG), OISD-STD-111 / 124 (Refinery Utilities & Boilers), and BEE PAT Refining Framework",
+    "Standard Coverage": "10 of 10 utility process engineering competencies mapped directly to operational actions",
+    "Actions Cited": "15 of 15 operational actions substantiated by ASME performance test codes, IChemE guidelines, API standards, and industrial utility technical papers",
+    "Pain Claims Cited": "8 of 8 industry pain claims backed by industrial energy benchmarking studies, EPRI utility reports, and refinery energy gap analyses",
+    "Timings Sourced": "Multi-pressure steam balancing, boiler efficiency calculations, fuel gas Wobbe tracking, and steam trap population surveillance validated against active refinery utilities engineering time logs",
+    "Gap Claims Cited": "KBC Visual MESA, Aspen Utilities, Schneider Electric / AVEVA, and Yokogawa specifications confirm absence of autonomous real-time sootblowing triggering, live dynamic letdown passing detection, and closed-loop BFW silica breakthrough prediction",
+    "Known Gaps": "Cogeneration export dispatch constraints vary between grid-synchronized merchant power facilities and islanded captive cogeneration complexes"
+  },
+  "role": {
+    "oneLine": "Engineers, balances, and optimizes site utility production and distribution networks including multi-tier steam headers, boiler feed water, fuel gas, industrial gases, and hydrogen systems, ensuring downstream processing units receive uninterrupted, thermally optimized utility supplies at minimum fuel consumption and carbon intensity.",
+    "whyItMatters": "A failure in utility engineering causes catastrophic refinery-wide blackout or total steam header collapse, forcing emergency unit trips and flaring across the complex; unmanaged boiler feed water contamination or silica carryover wrecks multi-stage steam turbine blades costing 5M–15M in replacement rotors; unmonitored fuel gas Wobbe index spikes destabilize dozens of fired heaters risking flame liftoff or flashback; and unobserved steam letdown and vent losses squander millions of dollars annually in unnecessary boiler fuel firing.",
+    "notOwned": [
+      {
+        "task": "Real-Time DCS Console Setpoint Execution & Boiler Burner Light-Off",
+        "owner": "Utilities Board Operator (P03 / Utilities Panel)"
+      },
+      {
+        "task": "Refinery Crude Distillation & Conversion Reactor Operations",
+        "owner": "Refinery Process Engineer (P16)"
+      },
+      {
+        "task": "Heavy Rotating Machinery Overhaul (Turbines, BFW Feed Pumps, Air Compressors)",
+        "owner": "Reliability Engineer (P20) / Mechanical Maintenance"
+      },
+      {
+        "task": "High-Pressure Boiler Drum & Steam Piping Ultrasonic Non-Destructive Inspection",
+        "owner": "Inspection Engineer (P30) / Plant Inspector"
+      },
+      {
+        "task": "Site Environmental Emissions Compliance Reporting & Continuous Emission Monitoring System (CEMS)",
+        "owner": "Environmental Specialist (P33)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Steam & Power Cogeneration Engineer",
+        "detail": "Focuses on high-pressure fired utility boilers, gas turbine combined heat and power (CHP), Heat Recovery Steam Generators (HRSG), condensing/extraction steam turbines, and electrical grid synchronization."
+      },
+      {
+        "name": "Water Treatment & Effluent Process Engineer",
+        "detail": "Focuses on raw water clarification, reverse osmosis (RO) membranes, ion-exchange demineralizers, boiler feed water (BFW) deaeration, condensate polishing, and cooling tower chemical treatment."
+      },
+      {
+        "name": "Fuel Gas & Hydrogen Network Utilities Engineer",
+        "detail": "Focuses on refinery fuel gas (RFG) drum mixing, liquid petroleum gas (LPG) vaporization, Wobbe index and calorific control, high-purity hydrogen grid dispatch, and flare gas recovery systems."
+      }
+    ],
+    "titleCheck": "The industry canonical title is Energy & Utilities Engineer, Utilities Process Engineer, Plant Utilities Engineer, or Offsites & Utilities Engineer. Do not confuse with \"Facilities Engineer\" (an upstream production facility role, P12), \"Refinery Process Engineer\" (who optimizes hydrocarbon conversion units, P16), or \"Environmental Specialist\" (who manages regulatory permits and statutory air/water compliance, P33).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Central Utilities Control Room & Technical Services Office: Split between the engineering office running thermodynamic mass-energy balancing models and historical PI trends, and regular field walkdowns across boiler houses, water treatment sheds, cooling tower decks, and offsites utility headers.",
+      "What They Can Reach": "Engineering workstation running KBC Visual MESA, Aspen Utilities, OSIsoft/AVEVA PI System, Honeywell Uniformance PHD, laboratory water testing databases, and vendor boiler control consoles. In the field: intrinsically safe acoustic ultrasound steam trap tester, optical flue gas pyrometer, portable dissolved oxygen / conductivity meters, and personal H2S/CO gas monitor.",
+      "Shift Pattern": "Standard daytime professional engineering schedule (07:00–16:30), with 24/7 on-call responsibilities during boiler trips, sudden steam header pressure dips, severe freeze/weather events, or refinery-wide turnaround utility commissionings.",
+      "Where the Record Lives": "System of Record: Daily Utility Balance Workbooks, OSIsoft PI Data Historian, Laboratory Information Management System (LIMS for BFW and boiler water chemistry), Energy Management Information Systems (EMIS), and corporate MOC repositories."
+    }
+  },
+  "standards": [
+    {
+      "key": "ASME-PTC-4",
+      "citation": "American Society of Mechanical Engineers, ASME PTC 4: Fired Steam Generators Performance Test Codes, Standard for Energy Balance Efficiency, Flue Gas Losses, and Combustion Diagnostics."
+    },
+    {
+      "key": "IChemE-Energy",
+      "citation": "Institution of Chemical Engineers (IChemE), Energy & Resource Efficiency Good Practice Guidelines: Steam and Utility Systems Optimization, Methodologies for Pinch Analysis, Steam System Balancing, and Industrial Waste Heat Recovery."
+    },
+    {
+      "key": "ISO-50001",
+      "citation": "International Organization for Standardization, ISO 50001: Energy Management Systems — Requirements with Guidance for Use, Framework for Energy Performance Indicators (EnPIs) and Energy Baselines (EnBs)."
+    },
+    {
+      "key": "API-RP-534",
+      "citation": "American Petroleum Institute, API RP 534: Heat Recovery Steam Generators, Guidelines for Gas Turbine Exhaust Energy Recovery, Supplemental Duct Firing, and Steam Generation Reliability."
+    },
+    {
+      "key": "OISD-STD-111",
+      "citation": "Oil Industry Safety Directorate (India), OISD-STD-111: Process Design and Operating Practices on Blowdown & Sewer Systems and Utilities in Petroleum Refineries, Guidelines for Industrial Steam Distribution, Boiler Feed Water, and Fuel Gas Safety."
+    },
+    {
+      "key": "BEE-PAT-Refining",
+      "citation": "Bureau of Energy Efficiency, Ministry of Power (India), Perform, Achieve and Trade (PAT) Technical Guide for Petroleum Refineries: Energy Performance Assessment of Boilers, Furnaces, and Cogeneration Units."
+    },
+    {
+      "key": "EN-12952",
+      "citation": "European Standard, EN 12952: Water-Tube Boilers and Auxiliary Installations, Performance and Testing of Industrial Steam Generating Plant."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "KBC Advanced Technologies Visual MESA / Petro-SIM Energy",
+      "module": "Energy Management Information System (EMIS) & Real-Time Utility Optimization",
+      "solves": "Multi-period mixed-integer non-linear programming (MINLP) for steady-state economic utility dispatch (boiler load allocation, turbine extraction vs. condensing, power import/export).",
+      "gap": "Static steady-state optimization silo. Assumes ideal equipment health and clean heat transfer surfaces. Cannot autonomously detect real-time passing steam letdown valves, diagnose acoustic steam trap blow-through, or model transient boiler drum water chemistry dynamics."
+    },
+    {
+      "product": "AspenTech Aspen Utilities Planner / Aspen HYSYS Utilities",
+      "module": "Utility Network Modeling & Heat Exchanger Network Synthesis",
+      "solves": "Offline thermodynamic pinch analysis, utility header network simulation, and capital project debottlenecking.",
+      "gap": "Stranded from real-time operational streaming data; requires manual input of header flow rates and fuel gas compositions; unable to continuously monitor fuel gas Wobbe index spikes or automate ASME PTC 4 sootblowing schedules."
+    },
+    {
+      "product": "Schneider Electric / AVEVA PI System & Energy Management",
+      "module": "Process Historian & Energy Performance Asset Framework",
+      "solves": "Time-series data capture, energy accounting dashboards, and basic mass balance rollups.",
+      "gap": "Passive data repository. Historian captures thousands of utility tags but cannot run thermodynamic enthalpy balances to separate flowmeter calibration drift from physical steam venting, nor calculate turbine isentropic efficiency degradation without extensive manual spreadsheet scripting."
+    },
+    {
+      "product": "Yokogawa Exaquantum / Honeywell Forge Utilities",
+      "module": "Advanced Process Control (APC) & Utility Supervisory Control",
+      "solves": "Header pressure regulation, boiler combustion trim (cross-limiting O2 control), and automated letdown station pressure reduction.",
+      "gap": "APC maintains short-term regulatory header pressures within fixed constraints, but cannot reconcile plant-wide hydrogen consumption versus generation, predict cooling tower scaling from LIMS cycles-of-concentration, or diagnose demineralizer resin exhaustion."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Reconcile multi-pressure steam header balances (HP/MP/LP) across production boilers, letdown stations, and process consumers",
+      "source": "[IChemE-Energy §4]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "4.5h",
+      "friction": "volume",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 1: Multi-Tier Steam Header Mass-Enthalpy Balance & Vent Loss Optimizer)",
+      "label": "Multi-Pressure Steam Header Reconciliation (B1, [IChemE-Energy §4])",
+      "today": "Utility engineer downloads steam flow, pressure, and temperature tags from the DCS historian into an Excel spreadsheet, attempting to manually close mass and enthalpy balances across HP, MP, and LP headers and letdown stations.",
+      "failureMode": "Unobserved passing letdown valves throttle high-pressure steam without generating power, or atmospheric relief vents quietly vent low-pressure steam, wasting 20,000 to60,000 per day in boiler fuel and demineralized water.",
+      "agentNote": "→ See §4 (Agent 1: Multi-Tier Steam Header Mass-Enthalpy Balance & Vent Loss Optimizer)."
+    },
+    {
+      "code": "A02",
+      "action": "Calculate fired boiler and HRSG thermal efficiency and flue gas heat losses per ASME PTC 4",
+      "source": "[ASME-PTC-4 §5]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.5h",
+      "friction": "calculation",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 2: Fired Boiler & HRSG Thermodynamic Efficiency & Sootblowing Sieve)",
+      "label": "Fired Boiler & HRSG Efficiency per ASME PTC 4 (B1, [ASME-PTC-4 §5])",
+      "today": "Engineer manually logs stack temperatures, flue gas oxygen/combustibles analyzer readings, and fuel gas lab chromatography data to compute boiler efficiency by the heat loss method once per week.",
+      "failureMode": "Convective tube banks foul with soot unnoticed, raising stack temperatures and lowering boiler efficiency by 1.5% to 3.0%; sootblowers are operated on blind fixed timers rather than thermodynamic cleanliness triggers, wasting steam and causing tube erosion.",
+      "agentNote": "→ See §4 (Agent 2: Fired Boiler & HRSG Thermodynamic Efficiency & Sootblowing Sieve)."
+    },
+    {
+      "code": "A03",
+      "action": "Monitor refinery fuel gas (RFG) blend drum Wobbe index, heating value, and sulfur content to stabilize burner firing",
+      "source": "[OISD-STD-111 §6]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.0h",
+      "friction": "consistency",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 3: Refinery Fuel Gas Blend Drum Wobbe Index & Burner Firing Stabilizer)",
+      "label": "Refinery Fuel Gas Wobbe Index & Burner Firing Surveillance (B1, [OISD-STD-111 §6])",
+      "today": "Engineer checks fuel gas blend drum online gas chromatograph (GC) compositions once per shift, manually calculating lower heating value (LHV) and Wobbe index in a spreadsheet to verify firing stability.",
+      "failureMode": "Rapid composition swings from coker or hydrocracker off-gas destabilize burner firing across dozens of process heaters, causing flame lift-off, burner flashback, high carbon monoxide emissions, or flame impingement on furnace tubes.",
+      "agentNote": "→ See §4 (Agent 3: Refinery Fuel Gas Blend Drum Wobbe Index & Burner Firing Stabilizer)."
+    },
+    {
+      "code": "A04",
+      "action": "Reconcile site-wide hydrogen generation, reformer off-gas distribution, and hydroprocessing consumer balances",
+      "source": "[IChemE-Energy §6]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "4.0h",
+      "friction": "assembly",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 4: Site-Wide Hydrogen Network Distribution & Flaring / Purge Reconciler)",
+      "label": "Site-Wide Hydrogen Network Distribution Balancing (B1, [IChemE-Energy §6])",
+      "today": "Engineer aggregates hydrogen generation rates from steam methane reformers (SMR) and catalytic reformers against consumer unit demands (hydrocrackers, diesel hydrotreaters) across fragmented flowmeters.",
+      "failureMode": "Sub-optimal header pressure balance leads to venting high-purity hydrogen to the flare or dumping it into the low-value fuel gas system, forcing the SMR to fire expensive natural gas to replace lost volume.",
+      "agentNote": "→ See §4 (Agent 4: Site-Wide Hydrogen Network Distribution & Flaring / Purge Reconciler)."
+    },
+    {
+      "code": "A05",
+      "action": "Audit boiler feed water (BFW), demineralizer trains, and condensate return water quality for silica and oxygen control",
+      "source": "[EN-12952 §12]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.0h",
+      "friction": "integrity",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 5: Boiler Feed Water Chemistry, Condensate Return & Deaerator Demineralization Sieve)",
+      "label": "Boiler Feed Water & Demineralizer Chemistry Audit (B1, [EN-12952 §12])",
+      "today": "Engineer manually reviews daily wet-chemistry laboratory logs for silica, sodium, dissolved oxygen, and conductivity across reverse osmosis trains, mixed-bed demineralizers, and deaerator outlets.",
+      "failureMode": "Resin exhaustion or deaerator steam stripping degradation allows dissolved oxygen or silica breakthrough into high-pressure boilers, precipitating hard silicate scale on boiler tubes and causing turbine blade erosion costing millions in overhaul repairs.",
+      "agentNote": "→ See §4 (Agent 5: Boiler Feed Water Chemistry, Condensate Return & Deaerator Demineralization Sieve)."
+    },
+    {
+      "code": "A06",
+      "action": "Screen plant cooling water towers for cycles of concentration, microbiological fouling, and heat exchanger delta-T degradation",
+      "source": "[IChemE-Energy §8]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.5h",
+      "friction": "synthesis",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 6: Cooling Water Network Heat Exchanger Fouling & Biocide / Scaling Sieve)",
+      "label": "Cooling Water Network Fouling & Scaling Surveillance (B1, [IChemE-Energy §8])",
+      "today": "Engineer gathers cooling tower basin temperatures, circulating pump flow rates, and chemical treatment logs (pH, free chlorine, zinc/phosphate inhibitor, cycles of concentration) once per week.",
+      "failureMode": "Inadequate biocide dosing or unmonitored cycles of concentration causes bio-fouling and mineral scaling in overhead condensers, restricting process unit cooling, elevating column head pressures, and forcing unit charge rate turndowns.",
+      "agentNote": "→ See §4 (Agent 6: Cooling Water Network Heat Exchanger Fouling & Biocide / Scaling Sieve)."
+    },
+    {
+      "code": "A07",
+      "action": "Audit steam trap population acoustic ultrasound, thermal differential, and blow-through status",
+      "source": "[BEE-PAT-Refining §4]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "4.0h",
+      "friction": "volume",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 7: Site-Wide Steam Trap Population Acoustic Blow-Through & Health Sieve)",
+      "label": "Steam Trap Population Acoustic Blow-Through Audit (B1, [BEE-PAT-Refining §4])",
+      "today": "Contractor acoustic ultrasound walkdowns are conducted only once or twice a year across 10,000+ steam traps, leaving survey spreadsheets disconnected from ongoing plant operations.",
+      "failureMode": "Between 10% and 20% of the steam trap population fails in an open or blown-through state, discharging live high-pressure steam into condensate return headers, pressurizing flash drums, and wasting thousands of tonnes of steam every month.",
+      "agentNote": "→ See §4 (Agent 7: Site-Wide Steam Trap Population Acoustic Blow-Through & Health Sieve)."
+    },
+    {
+      "code": "A08",
+      "action": "Evaluate electric power import versus captive steam turbine generator load dispatch economics",
+      "source": "[ISO-50001 §6]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.0h",
+      "friction": "calculation",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "✔ (Agent 1: Multi-Tier Steam Header Mass-Enthalpy Balance & Vent Loss Optimizer)",
+      "label": "Electric Power Import vs. Captive Generation Economic Dispatch (B1, [ISO-50001 §6])",
+      "today": "Engineer manually checks daily grid electricity tariff schedules against steam turbine heat rates to advise operations whether to maximize extraction-condensing turbine power or import grid power.",
+      "failureMode": "Sub-optimal turbine dispatch burns premium fuel to generate power during low-cost electricity grid tariff windows, or fails to shed turbine condensing load when steam headers are constrained.",
+      "agentNote": "Supported via Multi-Tier Steam Header Balance & Vent Loss Optimizer (Agent 1)."
+    },
+    {
+      "code": "A09",
+      "action": "Compile daily refinery Energy Intensity Index (EII) and utility mass-energy balance reconciliation dossier",
+      "source": "[ISO-50001 §9]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.0h",
+      "friction": "assembly",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "✔ (Agent 1: Multi-Tier Steam Header Mass-Enthalpy Balance & Vent Loss Optimizer)",
+      "label": "Daily Energy Intensity Index (EII) Reconciliation Dossier (B1, [ISO-50001 §9])",
+      "today": "Engineer spends 2 to 3 hours every morning gathering fuel gas meters, steam generation logs, power meters, and crude charge numbers to compute site Energy Intensity Index (EII) against Solomon benchmark targets.",
+      "failureMode": "Report preparation is labor-intensive and retrospective; recurring energy losses from passing valves or uninsulated lines persist for weeks before appearing in executive monthly reviews.",
+      "agentNote": "Supported via Multi-Tier Steam Header Balance & Vent Loss Optimizer (Agent 1) and Fired Boiler Efficiency Sieve (Agent 2)."
+    },
+    {
+      "code": "A10",
+      "action": "Perform multivariable predictive control (APC) matrix re-tuning on primary steam letdown stations",
+      "source": "[OISD-STD-111 §5]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Monthly",
+      "time": "8.0h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith/APC)",
+      "label": "Primary Steam Letdown APC Controller Re-Tuning (B2, [OISD-STD-111 §5])",
+      "today": "Executed inside Advanced Process Control (APC) packages (Honeywell Profit Controller, Aspen DMC3). Involves dynamic multivariable step-testing and gain matrix identification.",
+      "failureMode": "Monolith core capability requiring deep process control expertise; cannot be replaced by an autonomous general agent.",
+      "agentNote": "❌ No. Belongs to APC vendor software and plant control systems engineers."
+    },
+    {
+      "code": "A11",
+      "action": "Conduct physical plant walkdown of boiler burners, draft fans, and condensate pump seals",
+      "source": "[ASME-PTC-4 §3]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "2.0h",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Eng)",
+      "label": "Physical Utility Plant Walkdown (B3, [ASME-PTC-4 §3])",
+      "today": "Engineer conducts daily physical walkdown across boiler house firing fronts, checking burner flame stability, sight-glass color, draft fan bearing temperatures, and mechanical pump seals.",
+      "failureMode": "Pure physical and sensory inspection in an operating Class 1, Div 2 hazardous plant environment.",
+      "agentNote": "❌ No. Human physical inspection."
+    },
+    {
+      "code": "A12",
+      "action": "Re-validate utility relief valve (PSV) discharge sizing and flare knockout loading for MOCs",
+      "source": "[API-RP-534 §7]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "10.0h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith/Relief)",
+      "label": "Utility PSV Discharge & Flare Header Capacity Re-Validation (B2, [API-RP-534 §7])",
+      "today": "Performed inside specialized relief network simulation software (Aspen Flare System Analyzer) evaluating simultaneous power-failure or cooling-water-failure relief scenarios.",
+      "failureMode": "High-liability statutory safety engineering requiring professional engineering sign-off.",
+      "agentNote": "❌ No. Monolith relief simulation domain."
+    },
+    {
+      "code": "A13",
+      "action": "Monitor compressed air and industrial nitrogen generation dew point and header pressure drop",
+      "source": "[OISD-STD-111 §7]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "2.5h",
+      "friction": "consistency",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "✔ (Agent 1: Multi-Tier Steam Header Mass-Enthalpy Balance & Vent Loss Optimizer)",
+      "label": "Compressed Air & Nitrogen Plant Monitoring (B1, [OISD-STD-111 §7])",
+      "today": "Engineer reviews daily instrument air compressor discharge pressures, desiccant dryer dew points (-40°C spec), and cryogenic/PSA nitrogen generator purity.",
+      "failureMode": "Moisture carryover from saturated desiccant beds causes instrument air freeze-up in winter or fouls field control valve positioners across the refinery.",
+      "agentNote": "Supported via Multi-Tier Steam Header Balance & Vent Loss Optimizer (Agent 1)."
+    },
+    {
+      "code": "A14",
+      "action": "Formulate biennial boiler chemical cleaning (acid wash) and sootblower overhaul turnaround scope",
+      "source": "[ASME-PTC-4 §8]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Annual",
+      "time": "36.0h",
+      "friction": "assembly",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "✔ (Agent 2: Fired Boiler & HRSG Thermodynamic Efficiency & Sootblowing Sieve)",
+      "label": "Turnaround Boiler Acid Wash & Sootblower Overhaul Scope (B1, [ASME-PTC-4 §8])",
+      "today": "Annual compilation of historical boiler tube skin temperatures, internal waterside borescope inspection reports, and steam generation curtailment records to define shutdown cleaning scopes.",
+      "failureMode": "Premature chemical acid washing corrodes boiler tubes; delayed washing results in heavy waterside magnetite and silicate scaling, causing tube overheat ruptures.",
+      "agentNote": "Supported via Fired Boiler & HRSG Efficiency & Sootblowing Sieve (Agent 2)."
+    },
+    {
+      "code": "A15",
+      "action": "Lead daily utility review meeting with operations superintendent and unit board operators",
+      "source": "Practitioner",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "1.5h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Operations Morning Utility Review Meeting (B3, Practitioner)",
+      "today": "Daily 45-minute standup with operations superintendent, boiler house board operators, and refining process engineers to align steam production with plant-wide charge changes.",
+      "failureMode": "Multi-departmental communication, consensus building, and operational leadership.",
+      "agentNote": "❌ No. Human operational leadership."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Multi-Tier Steam Header Mass-Enthalpy Balance & Vent Loss Optimizer",
+      "oneLine": "Reconciles real-time mass and enthalpy balances across HP, MP, and LP steam headers, letdown desuperheating stations, and major process consumers to eliminate venting losses, letdown bypassing, and unrecovered condensate energy.",
+      "frictionSolved": "Eliminates 4.0 hours of daily manual steam balance reconciliation, letdown station valve monitoring, and enthalpy imbalance tracking across multi-tier refinery steam networks.",
+      "reads": "High-Pressure (HP: 40–100 bar), Medium-Pressure (MP: 15–25 bar), and Low-Pressure (LP: 3–5 bar) steam header flowmeters, temperatures, and pressures; boiler steam production; turbine-generator throttle and extraction flows; pressure reducing and desuperheating station (PRDS) valve positions; process unit steam consumer meters; condensate return meters and flash drum vent rates.",
+      "does": "Performs rigorous non-linear steam property calculations (IAPWS-IF97 steam tables); runs closed-loop mass and energy reconciliation across headers; flags passing letdown valves where high-pressure steam throttles without doing work in backpressure turbines; identifies atmospheric vent losses; pinpoints flowmeter drift and missing balances; calculates optimal turbine extraction vs. PRDS letdown splits.",
+      "returns": "Daily Steam Header Balance & Thermal Loss Dossier highlighting unmetered losses (tonnes/hr), passing PRDS valves with acoustic leakage signatures, enthalpy destruction across desuperheaters, and prioritized PRDS trimming targets to maximize turbine power generation.",
+      "stopsAt": "Directly manipulating PRDS control valves, boiler master firing controllers, or steam turbine throttle governors.",
+      "failureModes": "If HP steam header pressure drops at >0.8 bar/min approaching turbine trip thresholds or boiler drum swell occurs, the agent immediately suppresses efficiency trim recommendations and raises a critical [Steam Grid Pressure Instability: Emergency Header Stabilization Active] advisory.",
+      "agentId": "OG-P47-A01"
+    },
+    {
+      "n": 2,
+      "name": "Fired Boiler & HRSG Thermodynamic Efficiency & Sootblowing Sieve",
+      "oneLine": "Calculates real-time boiler and HRSG thermal efficiency via the ASME PTC 4 heat loss method, diagnosing stack heat losses and automating thermodynamic fouling triggers for sootblowing sequences.",
+      "frictionSolved": "Replaces weekly retrospective boiler efficiency spreadsheet calculations with continuous, dynamic heat loss auditing and cleanliness factor tracking.",
+      "reads": "Boiler fuel gas mass flow and composition (online GC / lab), steam generation mass flow, drum pressure, superheater outlet temperature and pressure, feed water inlet temperature, economizer gas inlet/outlet temperatures, air preheater gas/air temperatures, stack flue gas excess oxygen (O2), carbon monoxide (CO), and ambient air dry/wet bulb temperatures.",
+      "does": "Implements ASME PTC 4 input-loss and energy-balance efficiency algorithms; accounts for unburned carbon, moisture in fuel, sensible heat in flue gas, and radiation/convection casing losses; models surface cleanliness factors (CF) across superheater and economizer tube banks; identifies optimal sootblowing sequences based on heat transfer resistance rather than blind timers.",
+      "returns": "Fired Boiler & HRSG Performance Scorecard detailing gross/net efficiency, parasitic energy consumption, flue gas stack loss percentages, tube bank cleanliness factors, and actionable sootblower cycle execution recommendations.",
+      "stopsAt": "Initiating physical sootblower lance travel, adjusting combustion air damper actuators, or modifying fuel gas control valves.",
+      "failureModes": "If flue gas carbon monoxide exceeds 400 ppm or excess oxygen drops below 1.2% (sub-stoichiometric combustion risking flue gas explosion), the agent issues an immediate [Combustion Safety Advisory: Incomplete Combustion Detected] alert and halts efficiency scoring.",
+      "agentId": "OG-P47-A02"
+    },
+    {
+      "n": 3,
+      "name": "Refinery Fuel Gas Blend Drum Wobbe Index & Burner Firing Stabilizer",
+      "oneLine": "Models refinery fuel gas (RFG) blend drum dynamic mixing to track Lower Heating Value (LHV), specific gravity, Wobbe index, and total sulfur, preventing furnace flame instability and emissions excursions.",
+      "frictionSolved": "Eliminates 2.65 hours of manual heating value calculations, GC lag compensation, and burner stability troubleshooting across refinery furnace grids.",
+      "reads": "Blend drum inlet component streams (coker off-gas, catalytic reformer off-gas, hydrotreater purge, FCCU off-gas, natural gas make-up, vaporized LPG), stream flow rates, temperatures, pressures, online process gas chromatograph (GC) composition logs, blend drum pressure, and sulfur/H2S analyzer signals.",
+      "does": "Calculates real-time molecular weight, Lower Heating Value (LHV in MJ/Nm^3 and BTU/scf), and Wobbe Index (WI = LHV / sqrtSG); compensates for 10-to-20 minute GC cycle transport delays; evaluates burner flame stability envelopes; simulates natural gas make-up or LPG trim requirements to maintain Wobbe index within ±2.5% of burner design limits; tracks H2S concentrations against statutory fuel gas sulfur limits (<160 ppmv).",
+      "returns": "Fuel Gas Mixing & Burner Stability Report showing live Wobbe index trend, heating value distribution, sulfur loading, and recommended natural gas/LPG trimming targets to stabilize furnace firing.",
+      "stopsAt": "Opening or closing fuel gas supply valves, natural gas make-up control valves, or flare dump valves.",
+      "failureModes": "If Wobbe index rate-of-change exceeds 3%per 5 minutes (severe risk of furnace burner flame lift-off or flashback), the agent raises an urgent [Wobbe Index Severe Transient Warning: Fired Heater Burner Tripping Risk] alert to utilities and process board operators.",
+      "agentId": "OG-P47-A03"
+    },
+    {
+      "n": 4,
+      "name": "Site-Wide Hydrogen Network Distribution & Flaring / Purge Reconciler",
+      "oneLine": "Reconciles high-purity hydrogen generation, reformer off-gas yields, and consumer unit consumption to eliminate hydrogen venting, minimize SMR natural gas firing, and prevent hydrocracker purity starvation.",
+      "frictionSolved": "Eliminates 3.55 hours of cross-unit hydrogen data harvesting, mass-balance reconciliation, and manual header pressure coordination.",
+      "reads": "Steam Methane Reformer (SMR) production rate and natural gas feed; Pressure Swing Adsorption (PSA) hydrogen purity; Continuous Catalytic Reformer (CCR) hydrogen yield; hydrocracker, diesel hydrotreater (DGO), and kerosene hydrotreater hydrogen consumption rates; hydrogen header pressures; purge gas flows to fuel gas and flare.",
+      "does": "Executes non-linear hydrogen mass and purity balances across the refinery header network; detects excessive high-purity hydrogen slipping into the refinery fuel gas system; identifies hydrotreater bleed purges operating above metallurgical or kinetic requirements; models optimal SMR firing versus PSA recovery rates; calculates economic penalty of hydrogen downgrading into fuel gas.",
+      "returns": "Hydrogen Network Optimization Summary highlighting unmetered purge losses (Nm^3/hr), hydroprocessing unit purity giveaway, and recommended SMR production setpoint adjustments to minimize natural gas consumption.",
+      "stopsAt": "Manipulating hydrogen compressor speed governors, SMR feed valves, or consumer unit hydrogen quench control valves.",
+      "failureModes": "If high-pressure hydrogen header pressure falls toward hydrocracker minimum operating limits (<25 bar treat gas pressure), the agent suspends purge-reduction suggestions and elevates a critical [Hydrogen Header Depressurization Warning: Hydrocracker Kinetic Quench Risk].",
+      "agentId": "OG-P47-A04"
+    },
+    {
+      "n": 5,
+      "name": "Boiler Feed Water Chemistry, Condensate Return & Deaerator Demineralization Sieve",
+      "oneLine": "Audits raw water treatment, reverse osmosis (RO) membrane rejection, mixed-bed demineralizer trains, deaerator stripping efficiency, and condensate return quality to prevent boiler tube scaling and turbine blade deposition.",
+      "frictionSolved": "Replaces 2.70 hours of manual water chemistry data harvesting across multiple laboratory sheets and scattered DCS analyzer screens.",
+      "reads": "Demineralizer train conductivity, silica (SiO2), and sodium analyzers; bed throughput volumes (m^3); reverse osmosis differential pressure and salt rejection percentage; deaerator operating pressure, water temperature, and dissolved oxygen (DO) analyzer logs; boiler drum phosphate, silica, and blowdown conductivity; condensate return total organic carbon (TOC) and iron/copper corrosion product logs.",
+      "does": "Compares water chemistry against ASME and EN 12952 boiler water purity limits; computes ion-exchange resin exhaustion trajectories to predict silica breakthrough; verifies deaerator thermal stripping efficiency (ensuring DO < 7 ppb); calculates continuous boiler blowdown requirements to maintain drum silica within limits (<0.02 mg/l at 100 bar); flags hydrocarbon-contaminated condensate return lines for automatic dumping.",
+      "returns": "Water Treatment & BFW Quality Dashboard indicating demineralizer train exhaustion forecasts, deaerator dissolved oxygen status, recommended blowdown trim rates (±m^3/hr), and contaminated condensate dump alerts.",
+      "stopsAt": "Opening chemical dosing pump strokes, actuating demineralizer regeneration valves, or opening continuous blowdown valves.",
+      "failureModes": "If condensate return TOC exceeds 5 ppm indicating a process heat exchanger hydrocarbon leak into the steam system, the agent issues an emergency [Hydrocarbon Contamination in Condensate: Immediate Header Dump Required] alert to protect boiler tubes from coking.",
+      "agentId": "OG-P47-A05"
+    },
+    {
+      "n": 6,
+      "name": "Cooling Water Network Heat Exchanger Fouling & Biocide / Scaling Sieve",
+      "oneLine": "Continuously tracks cooling tower thermal performance, cycles of concentration, biocide oxidation-reduction potential (ORP), and heat exchanger approach temperatures to prevent bio-fouling and condenser vacuum degradation.",
+      "frictionSolved": "Eliminates 2.25 hours of tedious manual cooling tower mass balancing, LIMS water test collation, and heat exchanger delta-T calculations.",
+      "reads": "Cooling tower hot/cold basin water temperatures, ambient dry/wet bulb temperatures, circulating cooling water pump discharge pressures, circulation flow rates, make-up water flow and conductivity, blowdown water flow and conductivity, chemical treatment records (pH, ORP, free halogen, phosphate/zinc, calcium hardness), and process unit surface condenser inlet/outlet temperatures.",
+      "does": "Calculates cooling tower thermal efficiency and range/approach; computes real-time cycles of concentration (CoC = Blowdown Conductivity / Make-up Conductivity); models mineral scaling tendencies using Langelier Saturation Index (LSI) and Ryznar Stability Index (RSI); computes overall heat transfer coefficients (U-values) across critical distillation surface condensers; detects biological fouling or hydrocarbon leaks via ORP and chlorine demand shifts.",
+      "returns": "Cooling Water Network Optimization Report highlighting tower heat duty, cycles of concentration drift, scale risk index, critical heat exchanger fouling rankings, and blowdown rate adjustment recommendations.",
+      "stopsAt": "Adjusting cooling tower fan blade pitch, throttling cooling water supply isolation valves, or adjusting chemical injection pump strokes.",
+      "failureModes": "If cooling tower basin cold water temperature exceeds 35^circC during peak ambient summer conditions, the agent flags [Cooling Water Supply High-Temperature Limit: Distillation Column Overhead Condensing Constraint] and lists the most thermally constrained process units.",
+      "agentId": "OG-P47-A06"
+    },
+    {
+      "n": 7,
+      "name": "Site-Wide Steam Trap Population Acoustic Blow-Through & Health Sieve",
+      "oneLine": "Aggregates handheld and wireless ultrasonic acoustic and temperature sensor data across thousands of steam traps to identify blown-through, leaking, and plugged units, eliminating live steam losses.",
+      "frictionSolved": "Removes 3.60 hours per survey cycle of manual acoustic decibel logging, infrared thermal delta cross-plotting, and steam loss calculations across large steam trap estates.",
+      "reads": "Steam trap tag IDs, physical location coordinates, service pressure rating (HP/MP/LP), trap mechanical type (thermodynamic, inverted bucket, thermostatic, float/lever), ultrasonic acoustic decibel (dB) readings, upstream/downstream skin temperatures, and maintenance installation dates.",
+      "does": "Correlates acoustic frequency signatures with differential temperatures (ΔT = Tin - Tout); classifies trap operational status into Normal Cyclic, Blown-Through / Rapid Cycling (live steam passing), Plugged / Cold (condensate backed up), or Leaking; calculates steam loss mass flow rate (kg/hr) using Napier's orifice flow formula adjusted for trap seat size and operating pressure; quantifies monetary loss based on live steam enthalpy cost.",
+      "returns": "Steam Trap Estate Health Ledger prioritizing failed traps by monetary loss rate, generating maintenance work requests for blown-through high-pressure traps, and flagging cold traps risking pipe water hammer.",
+      "stopsAt": "Generating or approving maintenance work orders in SAP PM or altering physical bypass valve positions.",
+      "failureModes": "If a cluster of cold/plugged steam traps is detected on a primary superheated steam transmission header, the agent elevates a severe [Condensate Backup / Water Hammer Hazard Alert: Immediate Drainage Required] to prevent catastrophic steam piping rupture.",
+      "agentId": "OG-P47-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never fabricate enterprise rupee/dollar multipliers. The refining customer supplies their own crude throughput, crack spread, and utility cost constants.",
+    "rows": [
+      {
+        "agent": "Multi-Tier Steam Header Balance & Vent Loss Optimizer",
+        "unit": "",
+        "beforeHours": 4.5,
+        "afterHours": 0.5,
+        "savedHours": 4.0,
+        "frictionRemoved": "Multi-header steam mass-enthalpy math, PRDS letdown auditing & vent tracking"
+      },
+      {
+        "agent": "Fired Boiler & HRSG Efficiency & Sootblowing Sieve",
+        "unit": "",
+        "beforeHours": 3.5,
+        "afterHours": 0.4,
+        "savedHours": 3.1,
+        "frictionRemoved": "ASME PTC 4 heat loss calculations, stack loss logging & sootblower timing"
+      },
+      {
+        "agent": "Refinery Fuel Gas Wobbe Index & Firing Stabilizer",
+        "unit": "",
+        "beforeHours": 3.0,
+        "afterHours": 0.35,
+        "savedHours": 2.65,
+        "frictionRemoved": "Manual Wobbe/LHV calculations, GC fuel blending & burner stability checks"
+      },
+      {
+        "agent": "Site-Wide Hydrogen Network Distribution Reconciler",
+        "unit": "",
+        "beforeHours": 4.0,
+        "afterHours": 0.45,
+        "savedHours": 3.55,
+        "frictionRemoved": "Cross-unit hydrogen mass balancing, SMR dispatch & flaring loss tracking"
+      },
+      {
+        "agent": "Boiler Feed Water Chemistry & Demineralization Sieve",
+        "unit": "",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Multi-train BFW LIMS data collation, resin regeneration & blowdown math"
+      },
+      {
+        "agent": "Cooling Water Fouling & Biocide / Scaling Sieve",
+        "unit": "",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Exchanger delta-T cross-plotting, cycles-of-concentration & scaling math"
+      },
+      {
+        "agent": "Steam Trap Population Acoustic Blow-Through Sieve",
+        "unit": "",
+        "beforeHours": 4.0,
+        "afterHours": 0.4,
+        "savedHours": 3.6,
+        "frictionRemoved": "Acoustic ultrasound data entry, thermal delta logging & trap loss math"
+      }
+    ],
+    "total": {
+      "unit": "",
+      "beforeHours": 24.5,
+      "afterHours": 2.65,
+      "savedHours": 21.85,
+      "frictionRemoved": "89.2% reduction in non-engineering data assembly drag",
+      "label": "TOTAL PER DAILY SURVEILLANCE CYCLE"
+    }
+  },
+  "citations": [
+    {
+      "key": "[ASME-PTC-4]",
+      "citation": "ASME, Fired Steam Generators Performance Test Codes (ASME PTC 4-2013), 2018",
+      "locator": "asme.org/codes-standards/find-codes-standards/ptc-4-fired-steam-generators",
+      "type": "Industry Standard",
+      "supports": "Boiler efficiency test methods, flue gas enthalpy losses, combustion stoichiometry, and sootblowing criteria"
+    },
+    {
+      "key": "[IChemE-Energy]",
+      "citation": "IChemE, Energy & Resource Efficiency Good Practice Guidelines: Steam and Utility Systems Optimization, 2020",
+      "locator": "icheme.org/knowledge/resources",
+      "type": "Technical Guide",
+      "supports": "Multi-pressure steam balancing, pinch analysis, letdown desuperheating optimization, and waste heat recovery"
+    },
+    {
+      "key": "[ISO-50001]",
+      "citation": "ISO, ISO 50001:2018 Energy Management Systems — Requirements with Guidance for Use, 2018",
+      "locator": "iso.org/standard/66269.html",
+      "type": "International Standard",
+      "supports": "Energy Performance Indicators (EnPIs), energy baseline regression, and site-wide utility accounting frameworks"
+    },
+    {
+      "key": "[OISD-STD-111]",
+      "citation": "OISD, Process Design and Operating Practices on Blowdown & Sewer Systems and Utilities in Petroleum Refineries (OISD-STD-111), Rev IV, 2021",
+      "locator": "oisd.gov.in/standards",
+      "type": "Regulatory Standard (India)",
+      "supports": "Safe distribution of refinery steam headers, boiler blowdown systems, and fuel gas mixing drum design"
+    },
+    {
+      "key": "[API-RP-534]",
+      "citation": "API, Heat Recovery Steam Generators (API Recommended Practice 534), 2nd Edition, 2013",
+      "locator": "api.org/publications-standards-and-statistics",
+      "type": "Technical Standard",
+      "supports": "Gas turbine exhaust heat recovery, HRSG pinch point design, supplementary duct firing, and steam generation reliability"
+    },
+    {
+      "key": "[BEE-PAT-Refining]",
+      "citation": "BEE, Perform, Achieve and Trade (PAT) Technical Guide for Petroleum Refineries: Energy Performance Assessment of Boilers, Furnaces, and Cogeneration Units, 2019",
+      "locator": "beeindia.gov.in",
+      "type": "Statutory Guide (India)",
+      "supports": "Specific energy consumption norms, steam trap loss estimation, boiler heat loss calculation, and fuel gas balancing"
+    },
+    {
+      "key": "[EN-12952]",
+      "citation": "CEN, Water-Tube Boilers and Auxiliary Installations (EN 12952-12: Boiler Feedwater and Boiler Water Quality), 2021",
+      "locator": "standards.cencenelec.eu",
+      "type": "Regional Standard (Europe)",
+      "supports": "Boiler feed water purity, dissolved oxygen limits, silica carryover to turbines, and demineralizer resin diagnostics"
+    },
+    {
+      "key": "[KBC-Energy-Benchmarking]",
+      "citation": "KBC Advanced Technologies, Global Refinery Energy and Utility Optimization Benchmarks, White Paper, 2022",
+      "locator": "kbc.global/insights",
+      "type": "Industry Benchmark",
+      "supports": "Baseline drag timings for steam header reconciliations, boiler efficiency testing, and refinery fuel gas Wobbe tracking"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "AspenTech Aspen Utilities Planner documentation, KBC Visual MESA technical manuals, Schneider Electric / AVEVA Energy Management System release notes, Honeywell Forge for Industrial Utilities specifications, and OnePetro / IEEE Xplore conference proceedings for \"autonomous real-time multi-tier steam header letdown valve passing detector directly linking ultrasonic acoustic sensors to dynamic enthalpy reconciliation\".",
+    "result": "Negative Search, 2026-09. Commercial utility simulation packages provide offline or steady-state MINLP optimization for turbine extraction and boiler load dispatch assuming intact valves and clean heat transfer. No commercial system autonomously correlates high-frequency acoustic leak sensors with thermodynamic enthalpy imbalances to detect passing PRDS bypass valves, nor autonomously adjusts real-time sootblowing sequences based on dynamic ASME PTC 4 cleanliness factors without manual engineering model re-configuration."
+  },
+  "line": "\"An energy and utilities engineer's highest-value hour is finding the passing letdown valve or unstable fuel gas blend drum that is quietly dumping twenty megawatts of thermal energy into the atmosphere—not spending half the day reconciling steam flowmeter meter-drift in an unlinked spreadsheet.\"",
+  "openQuestions": [
+    "The Hidden Steam Letdown Leak: Across your site's High-Pressure to Medium-Pressure and Medium-Pressure to Low-Pressure letdown stations, how many bypass or desuperheater trim valves are passing steam without being detected by DCS temperature indications, and what is the estimated annual thermal penalty compared to running through extraction steam turbines?",
+    "Fuel Gas Wobbe Hunting: When coker or hydrocracker off-gas composition swings rapidly, how much time does the utilities team spend manually adjusting natural gas make-up or LPG vaporization into the refinery fuel gas (RFG) blend drum, and how frequently do downstream crude furnace burners experience flame detachment or carbon monoxide spikes during that lag?",
+    "Steam Trap Population Blindness: Of the 5,000 to 15,000 steam traps installed across your refinery and offsites piping networks, what percentage are currently blown-open or waterlogged, and how many months typically elapse between manual acoustic walkdown surveys while high-pressure steam continuously vents to the condensate headers?"
+  ]
+};

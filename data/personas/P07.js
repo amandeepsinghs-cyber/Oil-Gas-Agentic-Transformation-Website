@@ -23,6 +23,17 @@ window.PERSONA_DETAIL["P07"] = {
   "avatar": "avatars/P07_persona.jpg",
   "thumb": "avatars/thumbs/P07_thumb.jpg",
   "initials": "DE",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Wells & Rig"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Drilling Engineer designs the architectural blueprint of the well, selecting casing seat depths, drilling fluid weights, and trajectory paths to reach subsurface targets safely at minimum cost. While engineering monoliths like Landmark WELLPLAN, COMPASS, and StressCheck execute mature mechanical algorithms for torque, drag, hydraulics, and casing stress, they provide zero automation for offset well hazard archaeology and data preparation. Before designing a new well, a drilling engineer must manually sift through 15 to 25 historical offset well completion files, mud records, bit run sheets, and Daily Drilling Reports (DDRs) to identify historical trouble zones (lost circulation, stuck pipe, ballooning, overpressured shale). Rather than an ungrounded \"AI well planner,\" the Drilling Engineer requires a federated squad of 7 hyper-specialized agents—each tackling one discrete, research-backed offset hazard, casing seat, bit benchmark, cementing displacement, or AFE cost modeling workflow. Across a complete well design project, this squad returns ~28.0 hours of high-value engineering design time per well program, eliminating downhole hazard blind spots, optimizing drill bit selection, and preventing multi-million-dollar rig-floor Non-Productive Time (NPT).",
   "confidence": {
     "Persona": "Drilling Engineer (P07)",

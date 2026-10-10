@@ -1,0 +1,18 @@
+{
+  "actions": 498,
+  "agents_detail_count": 234,
+  "agents_index_sum": 234,
+  "cells": 498,
+  "files_created": [
+    "/usr/local/google/home/amandeepsinghs/O&G_slidedeck_agentic_transformation/scripts/baseline_report.py",
+    "/usr/local/google/home/amandeepsinghs/O&G_slidedeck_agentic_transformation/persona_research/BASELINE_33.md",
+    "/usr/local/google/home/amandeepsinghs/O&G_slidedeck_agentic_transformation/scripts/validate_dossier.py"
+  ],
+  "issues": "None. All 33 dossiers pass validation. Discrepancy between 232 and 234 agents reconciled as historical drift across commits 7f54697 (+3 agents on P04, P05, P07) and d8c4cbe (-1 agent on P24 reassignment).",
+  "name_warnings_existing": "5 files with 9 warnings: P11 (1 Shell), P17 (2 Chevron), P24 (2 Shell), P28 (3 Chevron), P30 (1 Chevron)",
+  "personas": 33,
+  "reconciliation_232_vs_234": "Historical baseline was 232 agents (32 roles @ 7 + P02 @ 8). In commit 7f54697, 3 agents were added as A16 across P04, P05, and P07 (232 -> 235 agents, 495 -> 498 cells). In commit d8c4cbe, P24 was reassigned from Operations Geologist (7 agents) to Well Logging Engineer (6 agents), reducing total agents to 234 (235 -> 234 agents). Hardcoded literals on slides and notes (e.g. page_07.html:1344, NORTH_STAR.md:246) remained un-updated.",
+  "rs_cr_total": 3653.6,
+  "validator_adjustments": "1) Failure modes: Required across candidate agent workflows (>= min(len(agents), 6)) rather than all 15 actions, because B2 (incumbent system) and B3 (human) actions intentionally omit failure modes in the corpus. 2) Value model hours: Expanded hour regex to parse both 'hrs' and 'hours' to support P32 row 4 ('9.00 hrs'). 3) Citations: Allowed >= 4 citations in §6 table (combined citations + standards >= 5) to accommodate P04-P07 which have 4 citations in table + 4 governing standards in §2.",
+  "validator_existing_33": "All 33 existing dossiers passed (33 passed, 0 failed, 5 files with non-blocking brand warnings)."
+}

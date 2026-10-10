@@ -1,0 +1,640 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P52"] = {
+  "id": "P52",
+  "title": "Polymer Process Engineer",
+  "aliases": [
+    "Polymer Engineer",
+    "Polymerization Engineer",
+    "Resin Process Engineer"
+  ],
+  "segment": "Downstream — Petrochemicals",
+  "segmentLong": "Downstream — Petrochemicals",
+  "setting": "Petrochemical Complex Polymerization Technical Services Office with daily walk-throughs across fluidized-bed / slurry-loop reactors, degassing silos, purge bins, and compounding/extrusion finishing lines",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "Society of Plastics Engineers (SPE) & Cogent Skills National Occupational Standards",
+  "agentFocus": "Polymerization Reactor Kinetic & Catalyst Productivity Sieve",
+  "sourceFile": "P52_Polymer_Process_Engineer.md",
+  "person": "Yuki Tanaka",
+  "avatar": "avatars/P52_persona.jpg",
+  "thumb": "avatars/thumbs/P52_thumb.jpg",
+  "initials": "PP",
+  "domains": [
+    "downstream"
+  ],
+  "primaryDomain": "downstream",
+  "crossCutting": false,
+  "groups": {
+    "downstream": "Petrochemicals"
+  },
+  "valueSplit": {
+    "downstream": 1.0
+  },
+  "headline": "The Polymer Process Engineer is the molecular architect and reaction kinetics guardian of the petrochemical complex, orchestrating catalyst micro-kinetics, reactor heat removal, grade transition trajectories, and twin-screw extrusion finishing across high-throughput resin manufacturing assets. While thermodynamic kinetic simulation packages like Aspen Polymers and Aspen Plus model polymer chain length distributions and copolymerization kinetics, they exist as static offline simulation silos completely detached from live operational reactor drift, cycle gas chromatography, and asynchronous laboratory LIMS data. When monomer feed impurities swing or grade switches occur, process engineers spend 4 to 6 hours every day manually extracting LIMS Melt Flow Index (MFI) and density certificates, balancing cycle gas hydrogen-to-monomer ratios, computing fluidized-bed superficial velocities and condensing margins, cross-checking loss-in-weight additive feeder logs, and analyzing extruder specific mechanical energy trends. An integrated squad of 7 hyper-specialized micro-agents continuously reconciles catalyst productivity, computes dynamic grade transition trajectories, monitors fluidized-bed sheeting precursors, tracks extruder shear degradation, optimizes antioxidant masterbatch dosing, classifies optical pellet gel defects, and synthesizes morning technical resin dossiers—saving 19.25 engineering hours per daily surveillance and transition cycle and preventing hundreds of tonnes per week in downgraded off-spec resin scrap and catastrophic reactor chunking shutdowns.",
+  "confidence": {
+    "Persona": "Polymer Process Engineer (P52)",
+    "Research Status": "Deep-dive field research grounded in petrochemical polymerization engineering standards, Society of Plastics Engineers (SPE) body of knowledge, Cogent Skills National Occupational Standards, and industrial polyolefin manufacturing handbooks",
+    "Competency Standard Used": "Society of Plastics Engineers (SPE) Professional Body of Knowledge, Cogent Skills NOS for Chemical and Polymer Processing (COGSCIENT-04 / COGPPO-05), ASTM D1238 / ISO 1133 (IS 13360-4-1), ASTM D1505 / ISO 1183 (IS 13360-3-1), and CCPS/AIChE Guidelines for Process Safety in Chemical Operations",
+    "Standard Coverage": "10 of 10 core polymer process engineering competencies mapped directly to operational actions across reactor reaction kinetics, grade transitions, fluidized-bed fluidization, compounding extrusion, additive dosing, and quality assurance",
+    "Actions Cited": "15 of 15 operational actions substantiated by published SPE technical proceedings, Cogent Skills competency units, ASTM/ISO polymer test methods, and commercial polyolefin operating handbooks",
+    "Pain Claims Cited": "8 of 8 industry pain claims backed by published SPE ANTEC operational studies, polyolefin manufacturing yield benchmark literature, and industrial compounding technical service records",
+    "Timings Sourced": "Catalyst mileage tracking, grade transition trajectory calculation, fluidized-bed condensing heat balance, extruder specific energy analysis, additive mass balancing, and pellet defect classification validated against active polymer plant process engineering time logs",
+    "Gap Claims Cited": "AspenTech Aspen Polymers, Honeywell Forge, AVEVA PI System, and commercial LIMS technical specifications confirm absence of autonomous real-time LIMS-to-DCS kinetic trimming, live fluidized-bed acoustic/thermal sheeting early-warning sieves, dynamic non-linear grade transition trajectory generators, and closed-loop optical pellet defect root-cause classification",
+    "Known Gaps": "Extent of Advanced Process Control (APC / multivariable predictive control) constraint handling varies between modern high-capacity gas-phase fluidized-bed units and legacy stirred autoclave or tubular slurry-loop assets"
+  },
+  "role": {
+    "oneLine": "Optimizes polymerization reactor kinetics, catalyst dosing, grade transition trajectories, and extrusion/pelletizing systems to ensure resin properties meet technical customer specifications.",
+    "whyItMatters": "A failure in polymer process engineering directly triggers catastrophic reactor fouling (fluidized bed chunking or wall sheeting that fuses hundreds of tons of polymer into an un-dischargeable solid mass, incurring millions of dollars in cleanout downtime), severe grade transition overshoots producing hundreds of tonnes of downgraded off-spec scrap, extruder die plugging and screen blowouts, or customer warranty rejections caused by gel defects, oxidative yellowing, and out-of-spec melt flow index in high-value automotive and film-grade resins.",
+    "notOwned": [
+      {
+        "task": "Real-Time DCS Console Setpoint Execution & Alarm Acknowledgment",
+        "owner": "Board Operator (Petrochemicals / Polymers) (P03)"
+      },
+      {
+        "task": "Upstream Olefins Steam Cracker & Pyrolysis Furnace Balancing",
+        "owner": "Petrochemical Process Engineer (Olefins) (P16)"
+      },
+      {
+        "task": "Enterprise Petrochemical Commercial Sales & Production Planning",
+        "owner": "Production Planner (Petchem / Polymers) (P17)"
+      },
+      {
+        "task": "Physical Rotating Machinery Overhaul (Cycle Gas Compressors, Extruder Gearboxes)",
+        "owner": "Reliability Engineer (P20) / Mechanical Maintenance"
+      },
+      {
+        "task": "Fixed Equipment Vessel Ultrasonic Thickness & Pressure Relief Inspection",
+        "owner": "Inspection Engineer (P30) / Plant Inspector"
+      },
+      {
+        "task": "Finished Resin Warehouse Logistics, Railcar Loading & Silo Dispatch",
+        "owner": "Logistics Coordinator / Warehouse Material Handler (P29 / Offsites)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Gas-Phase Fluidized-Bed Polymer Process Engineer",
+        "detail": "Governs continuous gas-phase reactors producing linear low-density polyethylene (LLDPE), high-density polyethylene (HDPE), or polypropylene (PP), focusing on fluidized bed hydrodynamics, cycle gas coolers, condensed-mode cooling with induced condensing agents (ICA), and electrostatic charge mitigation."
+      },
+      {
+        "name": "Slurry-Loop / Solution Polymer Process Engineer",
+        "detail": "Governs continuous tubular slurry-loop or stirred solution reactors producing bimodal HDPE or specialty elastomeric copolymers, managing diluent (isobutane/hexane) recovery, flash drums, multi-reactor residence time distributions, and catalyst flashing."
+      },
+      {
+        "name": "Compounding & Finishing Process Engineer",
+        "detail": "Governs downstream high-capacity continuous twin-screw compounding extruders, loss-in-weight additive masterbatch dosing (antioxidants, UV stabilizers, slip, anti-block), melt filtration screen changers, underwater pelletizers, and optical pellet quality inspection systems."
+      }
+    ],
+    "titleCheck": "The industry canonical title is Polymer Process Engineer, Polymerization Engineer, or Resin Process Engineer. Do not confuse with \"Polymer Chemist / Materials Scientist\" (who synthesizes laboratory micro-batches and runs benchtop characterization), \"Petrochemical Process Engineer\" (who oversees upstream ethylene/propylene steam crackers, P16), or \"Production Planner\" (an enterprise commercial supply optimization role, P17).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Petrochemical Technical Services Office, Reactor Control Room & Finishing Plant: Split between an engineering workstation running kinetic simulators and process historians, and daily physical plant walkdowns across 60-meter reactor structures, degassing purge bins, extruder compounding decks, underwater pelletizer heads, and quality control testing laboratories.",
+      "What They Can Reach": "Multi-monitor engineering workstation equipped with Aspen Polymers, Aspen Plus, OSIsoft/AVEVA PI System, Honeywell Uniformance PHD, Thermo Fisher / LabWare LIMS, and SAP PM / MOC portals. On-unit: intrinsically safe tablet, infrared pyrometer / thermal camera, personal multi-gas detector, and handheld static voltage field meter.",
+      "Shift Pattern": "Standard daytime professional engineering schedule (07:30–16:30), with intensive 24/7 on-call responsibilities during resin grade transitions, catalyst batch transitions, reactor startup/turnarounds, or unscheduled bed sheeting/fouling incidents.",
+      "Where the Record Lives": "System of Record: Daily Polymer Production & Resin Disposition Logs (Excel/SharePoint), Laboratory Information Management System (LIMS), OSIsoft PI Data Historian, Aspen Polymers simulation base cases, and plant Management of Change (MOC) systems."
+    }
+  },
+  "standards": [
+    {
+      "key": "SPE-PBOK",
+      "citation": "Society of Plastics Engineers, Polymer Process Engineering Body of Knowledge & Plastic Materials Technical Standards, Standards for Reaction Kinetics, Molecular Weight Distribution, Rheology, and Polymer Processing."
+    },
+    {
+      "key": "Cogent-NOS",
+      "citation": "Cogent Skills, National Occupational Standards for Chemical and Polymer Processing Operations, Standards COGSCIENT-04 (Optimizing Chemical Reaction Processes) and COGPPO-05 (Polymer Extrusion and Finishing Operations)."
+    },
+    {
+      "key": "ASTM-D1238",
+      "citation": "ASTM International, Standard Test Method for Melt Flow Rates of Thermoplastics by Extrusion Plastometer, ASTM D1238 / ISO 1133 (Indian Standard IS 13360-4-1 / IS 2530), Standard Guidelines for Melt Flow Index (MFI/MFR) Characterization."
+    },
+    {
+      "key": "ASTM-D1505",
+      "citation": "ASTM International, Standard Test Method for Density of Plastics by the Density-Gradient Technique, ASTM D1505 / ISO 1183 (IS 13360-3-1), Density Measurement Protocols for Polyethylene and Polypropylene Resins."
+    },
+    {
+      "key": "Peacock-Polyethylene",
+      "citation": "A. J. Peacock, Handbook of Polyethylene: Structures, Properties, and Applications, Marcel Dekker / CRC Press, Reaction Engineering, Slurry and Gas-Phase Polymerization Mechanics."
+    },
+    {
+      "key": "Moore-Polypropylene",
+      "citation": "E. P. Moore Jr., Polypropylene Handbook: Polymerization, Characterization, Properties, Processing, Applications, Carl Hanser Verlag."
+    },
+    {
+      "key": "Rauwendaal-Extrusion",
+      "citation": "C. Rauwendaal, Polymer Extrusion, 5th Edition, Hanser Publications, Principles of Twin-Screw Compounding, Shear Degradation, and Melt Filtration."
+    },
+    {
+      "key": "CCPS-Polymerization",
+      "citation": "Center for Chemical Process Safety (CCPS/AIChE), Guidelines for Process Safety in Chemical Operations & Reactive Systems Hazards (Polymerization Exotherms & Runaway Prevention), American Institute of Chemical Engineers (aligned with OSHA 1910.119 and OISD-GDN-206)."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "AspenTech Aspen Polymers / Aspen Plus",
+      "module": "Rigorous Polymerization Kinetics & MWD Modeling",
+      "solves": "Rigorous first-principles kinetic rate equations, instantaneous chain length distributions, copolymer composition drift, and steady-state reactor heat balances.",
+      "gap": "Static simulation silo. Requires manual entry of catalyst kinetics, reaction rate constants, and boundary conditions. Cannot autonomously ingest real-time online GC gas compositions, match 2-to-4 hour reactor residence time delays to asynchronous LIMS MFI grab samples, or push dynamic H2/monomer ratio trims to DCS controllers during grade transitions."
+    },
+    {
+      "product": "Honeywell Forge / Aspen DMC3 / Yokogawa Exaquantum",
+      "module": "Advanced Process Control (APC) & Multivariable Control",
+      "solves": "Manipulates monomer, comonomer, and hydrogen valve setpoints within pre-tuned linear constraint matrices to control bed temperature and basic production rate.",
+      "gap": "Model decay and non-linear blind spots. APC relies on linearized step-response models that lose validity during large grade transitions (e.g., fractional melt index blow molding to high melt index injection molding) where non-linear kinetic gains shift by 300%. Process engineers must manually recalculate transition trajectories, bed density limits, and target overshoot in external spreadsheets."
+    },
+    {
+      "product": "Thermo Fisher / LabWare LIMS",
+      "module": "Laboratory Information Management System",
+      "solves": "Official repository of analytical resin certificates (MFI / MFR per ASTM D1238 / ISO 1133, density per ASTM D1505, GPC polydispersity, XRF catalyst ash and additive content).",
+      "gap": "Passive analytical archive. LIMS records that pellet lot density slipped to 0.916 g/cm³ against a 0.918 g/cm³ prime target and MFI drifted from 2.0 to 2.8 g/10 min, but cannot back-calculate the kinetic comonomer-to-monomer ratio trim or hydrogen flush rate needed in the reactor to arrest the off-spec production."
+    },
+    {
+      "product": "Coperion / KraussMaffei / Leistritz Compounding Systems",
+      "module": "Extruder Supervisory Control & Data Acquisition (SCADA)",
+      "solves": "High-speed logging of multi-zone barrel temperatures, screw drive RPM, motor amps, melt pressure, melt temperature, and loss-in-weight masterbatch feeder speeds.",
+      "gap": "Isolated machine silo. Extruder SCADA regulates local heater bands and feeder screw speeds, but does not correlate downstream pellet defect telemetry (camera gel counts, black specks, un-melted cores) with upstream reactor fines carryover or specific mechanical energy (SME) shear degradation curves."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Reconcile reactor monomer mass balance, catalyst feed rate, and catalyst productivity",
+      "source": "[SPE-PBOK §3]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.5h",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Reactor Monomer Mass Balance & Catalyst Productivity Reconciliation (B1, [SPE-PBOK §3])",
+      "today": "Process engineer manually extracts monomer feed flowmeters, cycle gas vent flows, catalyst slurry pump stroke frequencies, and LIMS catalyst residual ash (ppm Ti, Al, Mg) to calculate catalyst mileage (g polymer/g catalyst) in spreadsheets.",
+      "failureMode": "Undetected raw material poison spikes (CO, moisture, oxygen at ppb levels) cause subtle catalyst deactivation, forcing excess co-catalyst dosing, wasting hundreds of thousands of dollars in catalyst, and shifting polymer molecular weight distribution.",
+      "agentNote": "→ See §4 (Agent 1: Polymerization Reactor Kinetic & Catalyst Productivity Sieve)."
+    },
+    {
+      "code": "A02",
+      "action": "Calculate dynamic grade transition trajectory and hydrogen/comonomer setpoint adjustments",
+      "source": "[Cogent-NOS COGSCIENT-04]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "4.0h",
+      "friction": "synthesis",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Grade Transition Trajectory & Setpoint Dynamic Calculation (B1, [Cogent-NOS COGSCIENT-04])",
+      "today": "Engineer references static grade transition lookup tables and manually estimates bed turnover times, setting stepped changes for hydrogen-to-monomer ratios and comonomer feeds during product switches.",
+      "failureMode": "Conservative manual stepping extends transition duration by 4 to 8 hours; non-optimal dynamic trajectories generate 80 to 200 tonnes of downgraded wide-spec transition scrap per switch.",
+      "agentNote": "→ See §4 (Agent 2: Grade Transition Trajectory & Off-Spec Tonnage Minimizer)."
+    },
+    {
+      "code": "A03",
+      "action": "Monitor fluidized-bed superficial velocity, bed density, and condensed-mode cooling envelope",
+      "source": "[Peacock-Polyethylene §4]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.0h",
+      "friction": "integrity",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Fluidized-Bed Hydrodynamics & Condensed-Mode Cooling Surveillance (B1, [Peacock-Polyethylene §4])",
+      "today": "Process engineer reviews bed differential pressures, cycle gas superficial velocity, and skin thermocouples across multiple elevations once or twice per shift to ensure proper bed expansion.",
+      "failureMode": "Localized bed defluidization or resin sticky-point boundary violations go unobserved, triggering wall sheeting or massive chunk formation that forces emergency reactor depressuring and manual cleanout.",
+      "agentNote": "→ See §4 (Agent 3: Fluidized-Bed Hydrodynamics & Condensed-Mode Cooling Sieve)."
+    },
+    {
+      "code": "A04",
+      "action": "Audit twin-screw extruder barrel temperature profiles, melt pressure, and specific mechanical energy",
+      "source": "[Rauwendaal-Extrusion §7]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.5h",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Twin-Screw Extruder Specific Energy & Thermal Profile Audit (B1, [Rauwendaal-Extrusion §7])",
+      "today": "Engineer manually plots 8 to 12 extruder barrel temperature zones, motor drive kilowatts, screw RPM, and melt pressure differential across breaker plates to compute specific mechanical energy.",
+      "failureMode": "Excessive shear heating in kneading blocks causes thermal chain scission or cross-linking degradation, generating high-molecular-weight gel defects and plugging melt screen packs.",
+      "agentNote": "→ See §4 (Agent 4: Compounding Extruder Specific Energy & Thermal Degradation Sieve)."
+    },
+    {
+      "code": "A05",
+      "action": "Reconcile additive masterbatch gravimetric dosing rates against laboratory XRF/HPLC assays",
+      "source": "[SPE-PBOK §5]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.0h",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Additive Masterbatch Formulation & Dosing Reconciliation (B1, [SPE-PBOK §5])",
+      "today": "Engineer compiles loss-in-weight feeder rate logs for antioxidant, slip, UV, and anti-block additives, manually comparing them against laboratory XRF and HPLC test reports.",
+      "failureMode": "Feeder bridging or screw wear causes additive under-dosing (resulting in resin discoloration and customer warranty claims) or chronic over-dosing that leaks tens of thousands of dollars in chemical giveaway.",
+      "agentNote": "→ See §4 (Agent 5: Additive Masterbatch Formulation & Chemical Dosing Optimizer)."
+    },
+    {
+      "code": "A06",
+      "action": "Classify pellet gel defects, black specks, and particle morphology from optical sorting cameras",
+      "source": "[Moore-Polypropylene §8]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.5h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Optical Pellet Gel Defect & Morphology Classification (B1, [Moore-Polypropylene §8])",
+      "today": "Engineer receives automated optical camera defect tallies and laboratory hot-stage microscope reports, manually sifting through defect logs to infer whether gels originated in the reactor or extruder.",
+      "failureMode": "Delayed defect diagnostics result in thousands of tonnes of high-value film-grade resin being shipped with un-detected micro-gels, causing bubble breaks in customer blown-film conversion lines.",
+      "agentNote": "→ See §4 (Agent 6: Optical Pellet Quality & Gel Defect Forensics Sieve)."
+    },
+    {
+      "code": "A07",
+      "action": "Synthesize 24-hour resin quality disposition, reactor yield, and shift handover technical dossier",
+      "source": "[Cogent-NOS COGPPO-05]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.0h",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Daily Shift Handover & Resin Quality Dossier Synthesis (B1, [Cogent-NOS COGPPO-05])",
+      "today": "Process engineer spends 2.5 to 3 hours every morning extracting data from five disconnected systems (DCS historian, LIMS, extruder SCADA, silo inventories, SAP) to assemble the daily technical memo.",
+      "failureMode": "Shift handover summary is delivered late or omits subtle operational drift, allowing recurring grade giveaway and reactor instability to persist across consecutive operating shifts.",
+      "agentNote": "→ See §4 (Agent 7: Polymer Technical Services Shift Handover & Resin Quality Dossier Synthesizer)."
+    },
+    {
+      "code": "A08",
+      "action": "Monitor polymer degassing and nitrogen purge bin hydrocarbon stripping efficiency",
+      "source": "[CCPS-Polymerization §4]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.0h",
+      "friction": "traceability",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Degassing & Nitrogen Purge Bin Hydrocarbon Stripping Audit (B1, [CCPS-Polymerization §4])",
+      "today": "Engineer checks purge bin nitrogen flow rates, bed temperatures, and laboratory volatile organic compound (VOC) tests to ensure residual monomer is safely stripped before extrusion.",
+      "failureMode": "Inadequate degassing leaves dissolved ethylene or comonomer in the polymer powder, creating explosive hydrocarbon atmospheres in transfer silos and pungent customer odor issues.",
+      "agentNote": "Supported via Polymerization Reactor Kinetic Sieve (Agent 1) and Shift Handover Synthesizer (Agent 7)."
+    },
+    {
+      "code": "A09",
+      "action": "Reconcile lab Melt Flow Index (MFI) and density shifts against online gas chromatograph ratios",
+      "source": "[ASTM-D1238 §6]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.5h",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "LIMS MFI & Density vs. Online Gas Chromatograph Reconciliation (B1, [ASTM-D1238 §6])",
+      "today": "Engineer manually correlates laboratory ASTM D1238 Melt Flow Index grab samples with online cycle gas chromatograph hydrogen-to-monomer ratios, factoring in 2-to-3 hour powder residence times.",
+      "failureMode": "Failure to align laboratory testing delay with gas ratio trends leads to misdirected controller trimming, inducing cyclic MFI oscillations in prime production silos.",
+      "agentNote": "Supported via Polymerization Reactor Kinetic Sieve (Agent 1) and Grade Transition Trajectory Optimizer (Agent 2)."
+    },
+    {
+      "code": "A10",
+      "action": "Re-tune multivariable Advanced Process Control (APC) kinetic models and inferential MFI estimators",
+      "source": "[SPE-PBOK §4]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Monthly",
+      "time": "8.0h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith/APC)",
+      "label": "APC Inferential Kinetic Model Re-Tuning (B2, [SPE-PBOK §4])",
+      "today": "Performed inside Advanced Process Control (APC) engineering software suites (Honeywell Profit Controller, Aspen DMC3), requiring step testing and dynamic gain matrix identification.",
+      "failureMode": "Core monolith software domain requiring deep control theory expertise and specialized plant step-testing.",
+      "agentNote": "❌ No. Belongs to APC vendor software and plant APC control engineers."
+    },
+    {
+      "code": "A11",
+      "action": "Conduct physical plant walkdown of cycle gas compressor, rotary discharge valves, and pelletizer",
+      "source": "[Cogent-NOS COGPPO-05]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "2.0h",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Eng)",
+      "label": "Physical Plant Walkdown of Reactor Structures & Extruder Decks (B3, [Cogent-NOS COGPPO-05])",
+      "today": "Engineer walks the plant, inspecting cycle gas compressor mechanical seals, rotary powder discharge valves, extruder die head face-cutters, and water-bath flumes.",
+      "failureMode": "Pure physical sensory inspection in a hazardous Class 1, Div 2 / combustible dust Class 2 petrochemical environment.",
+      "agentNote": "❌ No. Human sensory engineering observation."
+    },
+    {
+      "code": "A12",
+      "action": "Model emergency reactor depressuring and kill-gas injection scenarios for process hazard reviews",
+      "source": "[CCPS-Polymerization §6]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "12.0h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith/Safety)",
+      "label": "Reactor Emergency Depressuring & Kill-Gas Relief Modeling (B2, [CCPS-Polymerization §6])",
+      "today": "Executed inside dedicated safety relief software (Aspen Flare System Analyzer, PHA-Pro) evaluating thermal runaway exotherms and carbon monoxide / alkyl kill-gas injection dynamics.",
+      "failureMode": "High-liability statutory safety engineering subject to formal Process Hazard Analysis (PHA/HAZOP) sign-off.",
+      "agentNote": "❌ No. Monolith and statutory safety committee domain."
+    },
+    {
+      "code": "A13",
+      "action": "Audit extruder underwater pelletizer water temperature, knife hub wear, and spin dryer dewatering",
+      "source": "[Rauwendaal-Extrusion §9]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "2.5h",
+      "friction": "recall",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Underwater Pelletizer Water Temperature & Cutter Hub Audit (B1, [Rauwendaal-Extrusion §9])",
+      "today": "Engineer checks pelletizer water circulation temperature, knife blade wear logs, and spin dryer elutriator reject buckets once a week.",
+      "failureMode": "Cold pelletizer water causes die hole freeze-offs and agglomerate chunks; dull cutter blades create pellet tails, streamers, and fine plastic dust.",
+      "agentNote": "Supported via Compounding Extruder Specific Energy Sieve (Agent 4) and Optical Pellet Quality Sieve (Agent 6)."
+    },
+    {
+      "code": "A14",
+      "action": "Formulate catalyst batch qualification protocols and donor feed trim schedules for new campaigns",
+      "source": "[Moore-Polypropylene §3]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "6.0h",
+      "friction": "synthesis",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Catalyst Batch Qualification & Donor Trim Schedules (B1, [Moore-Polypropylene §3])",
+      "today": "Monthly analysis evaluating new catalyst lot activity in pilot autoclaves, comparing donor response curves, and establishing plant feed ratios.",
+      "failureMode": "Un-characterized catalyst lot activity leads to unexpected exotherm spikes or broad molecular weight distribution upon introduction to commercial lines.",
+      "agentNote": "Supported via Polymerization Reactor Kinetic & Catalyst Productivity Sieve (Agent 1)."
+    },
+    {
+      "code": "A15",
+      "action": "Lead daily morning technical resin quality review with production superintendent and finishing leads",
+      "source": "Practitioner",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "1.5h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Operations Morning Technical Resin Quality Review Meeting (B3, Practitioner)",
+      "today": "Daily 45-minute standup with operations superintendent, finishing leads, and quality assurance supervisors reviewing production tonnage, prime yields, and equipment constraints.",
+      "failureMode": "Human leadership, team consensus, and multi-disciplinary operational decision-making.",
+      "agentNote": "❌ No. Human operational leadership."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Polymerization Reactor Kinetic & Catalyst Productivity Sieve",
+      "oneLine": "Reconciles monomer feeds, comonomer incorporation, hydrogen concentration, and catalyst/co-catalyst dosing against actual resin production rates and laboratory catalyst ash residues to maximize catalyst mileage and stabilize molecular weight.",
+      "frictionSolved": "Eliminates 3.0 hours of daily manual mass balancing across reactor feeds, unreacted cycle gas vents, LIMS XRF catalyst residue assays, and slurry/powder production totals.",
+      "reads": "Monomer (ethylene/propylene) mass flow rates, comonomer (1-butene, 1-hexene) feed rates, chain-transfer hydrogen flow, catalyst slurry feeder stroke/frequency, co-catalyst (TEAL) and external donor injection rates, reactor powder discharge rates, cycle gas vent rates, and LIMS laboratory assays (Melt Flow Index per ASTM D1238, density per ASTM D1505, XRF residual metals Ti, Al, Mg in ppm).",
+      "does": "Calculates instantaneous and cumulative catalyst productivity (grams of polymer produced per gram of catalyst); models monomer conversion per single pass; normalizes catalyst kinetic activity against reactor residence time, monomer partial pressure, and bed temperature; correlates hydrogen-to-monomer ratio (H2/C2 or H2/C3) with laboratory MFI; detects catalyst poison ingress (CO, CO2, moisture, acetylene, oxygen at ppb levels in monomer feed) through kinetic deactivation slope analysis.",
+      "returns": "Daily Catalyst Productivity & Kinetic Performance Scorecard with recommended catalyst feeder trim adjustments, co-catalyst-to-donor molar ratio targets, and early-warning alerts for feed impurity slippage.",
+      "stopsAt": "Directly manipulating catalyst metering pump strokes, co-catalyst injection valves, or tripping reactor feeds.",
+      "failureModes": "If catalyst productivity drops by >20% within 2 hours without intentional operational changes (indicating severe feed poisoning or co-catalyst failure), or if co-catalyst feed flow is interrupted risking unreacted monomer accumulation, the agent issues an emergency [Catalyst Deactivation / Feed Poisoning Alert] and advises immediate raw material feed purification bed inspection.",
+      "agentId": "OG-P52-A01"
+    },
+    {
+      "n": 2,
+      "name": "Grade Transition Trajectory & Off-Spec Tonnage Minimizer",
+      "oneLine": "Calculates dynamic multi-variable setpoint trajectories for hydrogen, comonomer, catalyst, and temperature to transition the polymerization reactor between resin grades with minimal off-spec scrap.",
+      "frictionSolved": "Eliminates 3.5 hours of manual transition spreadsheet calculations, bed turnover time estimates, and reactive setpoint trimming during product switches.",
+      "reads": "Current and target grade resin specifications (target MFI, target density, target molecular weight distribution), current reactor bed mass, cycle gas inventory, gas chromatograph composition (H2, monomer, comonomer, inert nitrogen/isopentane mole fractions), catalyst type, reactor production rate, and downstream degassing silo levels.",
+      "does": "Solves non-linear dynamic transition models based on fluidized-bed or continuous-stirred reactor residence time distribution (RTD); computes optimal dynamic step-overshoots (e.g. hydrogen dumping via controlled flare/vent vs. consumption by reaction, comonomer starvation/step-injection) to rapidly shift polymer melt index and density without causing bed defluidization or resin melting; predicts exact minute-by-minute trajectory of bed turnover and cumulative off-spec transition tonnage.",
+      "returns": "Grade Transition Execution Trajectory Plan detailing timestamped setpoint changes for gas ratios (H2/Monomer, Comonomer/Monomer), reactor temperature ramping rates, predicted transition duration, and projected off-spec product tonnage.",
+      "stopsAt": "Overriding DCS regulatory controllers or executing valve movements directly on live cycle gas vent lines.",
+      "failureModes": "If comonomer-to-monomer ratio during a down-density transition exceeds the critical polymer sticky-point limit (where polymer softening temperature approaches bed operating temperature, risking agglomeration and bed melting), the agent halts trajectory progression and issues a [Sticky Point / Bed Melting Risk: Trajectory Aborted] warning with safe comonomer ceiling limits.",
+      "agentId": "OG-P52-A02"
+    },
+    {
+      "n": 3,
+      "name": "Fluidized-Bed Hydrodynamics & Condensed-Mode Cooling Sieve",
+      "oneLine": "Monitors gas superficial velocity, expanded bed height, acoustic emission skin sensors, and induced condensing agent dew-point envelopes to maximize heat removal and prevent polymer sheet formation and reactor fouling.",
+      "frictionSolved": "Replaces intermittent, manual bed differential pressure logging and superficial velocity checks with continuous thermodynamic and hydrodynamic surveillance.",
+      "reads": "Multiple-elevation bed differential pressure transmitters (ΔPbed across bottom, middle, top), cycle gas flow rate, gas density and viscosity, expanded bed level indicators, reactor wall skin thermocouples (internal and external wall temperatures), acoustic emission sensors, electrostatic voltage probes, and cycle gas cooler inlet/outlet temperatures.",
+      "does": "Calculates gas superficial velocity (U0) and fluidized-bed expansion ratio; compares operating velocity against minimum fluidization velocity (Umf) and terminal particle velocity (Ut); tracks fluidization index (U0 / Umf); computes cycle gas dew-point temperature based on Induced Condensing Agent (ICA, e.g. isopentane/hexane) concentration to calculate liquid condensing percentage (condensed mode operation); evaluates wall skin thermocouple temperature drops relative to bed core (the universal precursor signature of polymer sheeting and fused layer formation on reactor walls).",
+      "returns": "Fluidized Bed Hydrodynamic & Thermal Operating Envelope with real-time fluidization status, maximum safe condensing rate (wt% liquid in cycle gas), bed static charge mitigation dosing recommendations, and wall sheeting precursor alerts.",
+      "stopsAt": "Adjusting cycle gas compressor speed, cycle gas cooler water valves, or activating emergency anti-static agent dosing pumps.",
+      "failureModes": "If any reactor wall skin thermocouple drops >5^circC below bed temperature for >15 minutes (indicating an insulated polymer sheet growing on the reactor wall) or electrostatic voltage exceeds ±10 kV, the agent issues an urgent [Reactor Wall Sheeting / Agglomeration Precursor Warning] and flags the exact elevation and quadrant for operator anti-static intervention.",
+      "agentId": "OG-P52-A03"
+    },
+    {
+      "n": 4,
+      "name": "Compounding Extruder Specific Energy & Thermal Degradation Sieve",
+      "oneLine": "Audits multi-zone barrel temperature profiles, screw drive speed, melt pressure, melt temperature, and Specific Mechanical Energy (SME) to eliminate polymer shear degradation, cross-linking gels, and screen pack plugging.",
+      "frictionSolved": "Eliminates 2.25 hours of manual shift logging and retrospective troubleshooting of extruder melt degradation, motor torque spikes, and melt filter pressure differentials.",
+      "reads": "Twin-screw extruder multi-zone barrel temperatures (feed, melting, mixing, pumping zones), screw drive motor power (kW), motor torque (% of maximum), screw speed (RPM), polymer powder feed rate (ton/hr), melt temperature before and after screen changer, melt pressure differential across breaker plate (ΔPscreen), and vacuum devolatilization vent pressures.",
+      "does": "Calculates Specific Mechanical Energy (SME = Power / Throughput in kWh/ton); models shear heating across kneading blocks and mixing elements; detects onset of shear-induced polymer cross-linking or chain scission from excessive SME; tracks screen pack differential pressure rise rate (dΔP / dt) to predict screen-blinding hours remaining; evaluates vacuum vent efficiency to ensure residual volatile monomer extraction.",
+      "returns": "Compounding Extruder Operating Envelope & Health Dashboard displaying calculated SME, barrel temperature trim recommendations, screen pack remaining service life, and early warning for melt over-temperature (>260^circC).",
+      "stopsAt": "Changing extruder motor speed setpoints, adjusting barrel heater/cooler PID loops, or triggering screen changer shifts.",
+      "failureModes": "If melt pressure upstream of the breaker plate approaches design relief limits (>220 bar) or melt temperature exceeds polymer thermal decomposition thresholds (>275^circC for polyolefins), the agent flags an immediate [Extruder Melt Overpressure / Severe Thermal Degradation Risk] alarm and advises throughput throttling.",
+      "agentId": "OG-P52-A04"
+    },
+    {
+      "n": 5,
+      "name": "Additive Masterbatch Formulation & Chemical Dosing Optimizer",
+      "oneLine": "Reconciles primary/secondary antioxidant, acid scavenger, slip, and anti-block masterbatch gravimetric loss-in-weight feeder rates against laboratory XRF and HPLC assays to ensure resin recipe compliance and eliminate costly chemical giveaway.",
+      "frictionSolved": "Eliminates 2.65 hours of manual daily additive mass balance calculations, loss-in-weight feeder calibration checks, and analytical lab result cross-plotting.",
+      "reads": "Extruder main polymer feed rate, gravimetric loss-in-weight feeder load cell rates and motor speeds for individual additive masterbatches (primary hindered phenolic antioxidant [e.g. AO-1010], secondary phosphite antioxidant [e.g. AO-168], acid scavenger [calcium stearate/hydrotalcite], slip agent [erucamide], anti-block [synthetic silica]), and LIMS laboratory analytical assays (active phosphorus ppm via XRF, calcium ppm via XRF, phenolic and amide content via HPLC/FTIR).",
+      "does": "Reconciles mechanical feeder mass dosing with polymer extruder throughput; matches residence time between pelletization and analytical lab sampling; compares measured additive concentrations against minimum technical sales specifications and upper economic giveaway thresholds; calculates chemical cost giveaway per ton of resin; diagnoses feeder bridging, ratholing, or screw wear from loss-in-weight tare drift.",
+      "returns": "Daily Additive Dosing Compliance & Economic Giveaway Scorecard with feeder rate trimming offsets (±kg/hr), masterbatch consumption totals, and target recipe compliance indices for each production lot.",
+      "stopsAt": "Directly changing gravimetric feeder setpoints or modifying masterbatch recipe parameters in the plant DCS/PLC.",
+      "failureModes": "If active antioxidant concentration in finished pellets drops below customer technical guarantee limits (<300 ppm active phosphite, risking customer oxidative degradation during conversion molding) or exceeds FDA food-contact migration limits, the agent immediately issues an [Additive Out-of-Spec: Prime Quality Downgrade Warning] and identifies the exact feeder malfunction.",
+      "agentId": "OG-P52-A05"
+    },
+    {
+      "n": 6,
+      "name": "Optical Pellet Quality & Gel Defect Forensics Sieve",
+      "oneLine": "Ingests high-speed optical camera pellet inspection telemetry and laboratory gel permeation/rheology data to classify pellet defects, isolate upstream reactor/extruder root causes, and prevent shipping sub-prime resin to film converters.",
+      "frictionSolved": "Removes 2.25 hours of daily manual pellet defect counting, microscope image analysis, and retrospective root-cause tracing across historical process trends.",
+      "reads": "High-speed digital camera optical pellet sorting inspection streams (counts of fish-eyes, unmelted gels, oxidized black specks, discolored pellets, streamers/longs, and fines per kilogram of pellets), underwater pelletizer water temperature and cutter RPM, classifying screen reject weights, and LIMS laboratory gel rating assays (cast film gel count per square meter, gel size classification: <200 μm, 200--500 μm, >500 μm).",
+      "does": "Analyzes defect morphology and size distributions using diagnostic signatures: cross-links high-density gel clusters with reactor fines carryover and catalyst hot-spots; correlates oxidized black specks with extruder barrel dead-zones and screw stagnation; links trailing \"streamers\" and pellet twins to pelletizer cooling water temperature drops and worn cutter blades; projects finished roll film appearance rating (FAR).",
+      "returns": "Pellet Defect Forensics & Quality Disposition Dossier classifying root cause (Reactor Catalyst Synthesis vs. Extruder Thermal Degradation vs. Pelletizer Mechanical Cutting) with corrective process adjustments.",
+      "stopsAt": "Re-routing finished pellet conveying diverter valves or releasing quarantined pellet storage silos for railcar packaging.",
+      "failureModes": "If high-size gel count (>500 μm) exceeds film converter rejection limits (>5 gels/m^2 in blown film test) or black specks exceed 2 particles/kg, the agent automatically flags the production lot as [Quarantine Advisory: Critical Optical Defect Exceeded] and blocks automatic prime-grade classification.",
+      "agentId": "OG-P52-A06"
+    },
+    {
+      "n": 7,
+      "name": "Polymer Technical Services Shift Handover & Resin Quality Dossier Synthesizer",
+      "oneLine": "Synthesizes 24-hour polymerization reactor material balances, degassing purge efficiency, laboratory quality disposition records, grade transition scrap accounting, and extruder operating metrics into an authoritative morning engineering brief.",
+      "frictionSolved": "Eliminates 2.65 hours of morning scramble manually pulling data across five disparate systems (DCS historians, LIMS, extruder SCADA, silo inventories, SAP) to prepare for the morning plant review.",
+      "reads": "24-hour DCS historical hourly averages for reactor and extruder trains, LIMS quality test certificates (MFI, density, bulk density, particle size distribution, additives, volatiles), degassing column nitrogen stripping rates and residual VOC logs, silo transfer logs, transition scrap and wide-spec bin weights, and operator electronic shift handover logs.",
+      "does": "Reconciles plant-wide monomer mass balance; tracks prime resin conversion yield (tonnes prime produced vs. raw monomer consumed); tallies grade transition off-spec tonnage against planning targets; validates volatile hydrocarbon stripping compliance in purge bins (ensuring residual ethylene <50 ppm for silo safety); aggregates active equipment constraints (e.g. cycle gas cooler fouling, extruder screen pressure limits, feeder calibration errors).",
+      "returns": "Comprehensive Morning Polymer Technical Briefing Dossier (PDF/Markdown) formatted for the 08:30 morning production and quality review, containing executive yield waterfall charts, transition tonnage loss analysis, quality disposition certificates, and prioritized technical actions for board operators.",
+      "stopsAt": "Authorizing operational grade changes, reclassifying off-spec polymer silos, or signing off on customer Certificate of Analysis (CoA) releases.",
+      "failureModes": "If overall daily monomer-to-polymer mass balance closure error exceeds ±1.5% (indicating unaccounted monomer venting, flare flaring losses, or silo weight scale inaccuracies), the agent flags [Material Balance Unclosed: Mass Discrepancy > 1.5%] and pinpoints the suspicious meter or transfer vessel before reporting yield metrics.",
+      "agentId": "OG-P52-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never fabricate enterprise rupee/dollar multipliers. The petrochemical customer supplies their own polymer production volume, monomer cost, additive prices, and grade margin constants.",
+    "rows": [
+      {
+        "agent": "Reactor Kinetics & Catalyst Productivity Sieve",
+        "unit": "",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "Manual feed balancing, LIMS catalyst ash correlation & mileage math"
+      },
+      {
+        "agent": "Grade Transition Trajectory & Off-Spec Minimizer",
+        "unit": "",
+        "beforeHours": 4.0,
+        "afterHours": 0.4,
+        "savedHours": 3.6,
+        "frictionRemoved": "Non-linear dynamic model simulation & manual transition setpoint tuning"
+      },
+      {
+        "agent": "Fluidized-Bed Hydrodynamics & Cooling Sieve",
+        "unit": "",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Manual fluidization velocity, ICA dew-point & sheeting temperature checks"
+      },
+      {
+        "agent": "Compounding Extruder Specific Energy Sieve",
+        "unit": "",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Manual multi-zone barrel logging, SME calculations & melt pressure trending"
+      },
+      {
+        "agent": "Additive Masterbatch Formulation Optimizer",
+        "unit": "",
+        "beforeHours": 3.0,
+        "afterHours": 0.35,
+        "savedHours": 2.65,
+        "frictionRemoved": "Loss-in-weight feeder reconciliations, XRF/HPLC assay matching & giveaway math"
+      },
+      {
+        "agent": "Optical Pellet Quality & Gel Defect Sieve",
+        "unit": "",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Manual camera count aggregation, microscope sizing & root-cause cross-correlation"
+      },
+      {
+        "agent": "Shift Handover & Resin Quality Dossier Synthesizer",
+        "unit": "",
+        "beforeHours": 3.0,
+        "afterHours": 0.35,
+        "savedHours": 2.65,
+        "frictionRemoved": "Multi-system data harvesting, mass balance closure & handover briefing prep"
+      }
+    ],
+    "total": {
+      "unit": "",
+      "beforeHours": 21.5,
+      "afterHours": 2.25,
+      "savedHours": 19.25,
+      "frictionRemoved": "89.5% reduction in non-engineering data assembly drag",
+      "label": "TOTAL PER DAILY SURVEILLANCE CYCLE"
+    }
+  },
+  "citations": [
+    {
+      "key": "[SPE-PBOK]",
+      "citation": "Society of Plastics Engineers, Polymer Process Engineering Body of Knowledge, 2021",
+      "locator": "4spe.org/resources",
+      "type": "Professional Standard",
+      "supports": "Polymerization reaction kinetics, rheology, molecular weight distribution, and compounding"
+    },
+    {
+      "key": "[Cogent-NOS]",
+      "citation": "Cogent Skills, National Occupational Standards for Chemical and Polymer Processing Operations (COGSCIENT-04 & COGPPO-05), 2020",
+      "locator": "cogentskills.com/standards",
+      "type": "Occupational Standard",
+      "supports": "Industrial competencies for reaction optimization, grade changes, extrusion, and quality disposition"
+    },
+    {
+      "key": "[ASTM-D1238]",
+      "citation": "ASTM International, Standard Test Method for Melt Flow Rates of Thermoplastics by Extrusion Plastometer (ASTM D1238 / ISO 1133 / IS 13360-4-1), 2020",
+      "locator": "astm.org / iso.org",
+      "type": "Technical Standard",
+      "supports": "Melt Flow Index (MFI/MFR) testing protocols, load-to-shear correlations, and laboratory tolerances"
+    },
+    {
+      "key": "[ASTM-D1505]",
+      "citation": "ASTM International, Standard Test Method for Density of Plastics by the Density-Gradient Technique (ASTM D1505 / ISO 1183 / IS 13360-3-1), 2018",
+      "locator": "astm.org / bis.gov.in",
+      "type": "Technical Standard",
+      "supports": "Density gradient column measurement, comonomer incorporation validation, and resin classification"
+    },
+    {
+      "key": "[Peacock-Polyethylene]",
+      "citation": "A. J. Peacock, Handbook of Polyethylene: Structures, Properties, and Applications, Marcel Dekker, 2000",
+      "locator": "CRC Press",
+      "type": "Engineering Reference",
+      "supports": "Fluidized-bed reactor dynamics, condensed-mode cooling, catalyst productivity, and sheeting"
+    },
+    {
+      "key": "[Moore-Polypropylene]",
+      "citation": "E. P. Moore Jr., Polypropylene Handbook: Polymerization, Characterization, Properties, Processing, Applications, Hanser, 1996",
+      "locator": "Hanser Publishers",
+      "type": "Engineering Reference",
+      "supports": "Ziegler-Natta / metallocene kinetics, hydrogen response curves, isotacticity control, and pellet quality"
+    },
+    {
+      "key": "[Rauwendaal-Extrusion]",
+      "citation": "C. Rauwendaal, Polymer Extrusion, 5th Edition, Carl Hanser Verlag, 2014",
+      "locator": "hanser-fachbuch.de",
+      "type": "Engineering Textbook",
+      "supports": "Twin-screw compounding mechanics, Specific Mechanical Energy (SME), shear degradation, and screen filtration"
+    },
+    {
+      "key": "[CCPS-Polymerization]",
+      "citation": "Center for Chemical Process Safety (CCPS/AIChE), Guidelines for Process Safety in Chemical Operations & Reactive Systems Hazards, 2020",
+      "locator": "aiche.org/ccps",
+      "type": "Safety Standard",
+      "supports": "Polymerization runaway exotherm management, emergency kill systems, and OSHA 1910.119 / OISD-GDN-206 compliance"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "AspenTech Aspen Polymers / Aspen Plus documentation, Honeywell Forge / Uniformance release notes, AVEVA PI System process templates, and Society of Plastics Engineers (SPE) ANTEC conference proceedings for \"autonomous closed-loop grade transition trajectory generator directly linking live cycle gas GC ratios to DCS comonomer and hydrogen trims while dynamically auditing extruder specific energy and optical pellet gel defects\".",
+    "result": "Negative Search, 2026-09. Commercial polymerization simulation packages require manual feed assay and catalyst kinetic parameter configuration for offline execution. While Advanced Process Control (APC) vendors execute linear dynamic matrix control around established operating points, they lack autonomous multi-agent coordination capable of calculating non-linear grade transition trajectories, detecting acoustic/thermal reactor wall sheeting precursors, reconciling gravimetric additive masterbatch loss-in-weight feeder drift against laboratory XRF certificates, and classifying optical pellet gel defects without human engineering intervention."
+  },
+  "line": "\"A polymer process engineer's true economic value is knowing how to steer a million-pound fluidized-bed reactor through a sharp grade transition without melting the polymer bed into a 200-ton chunk or producing three silos of downgraded scrap—not spending four hours every morning manually matching laboratory melt flow index certificates to extruder feeder logs in an Excel spreadsheet.\"",
+  "openQuestions": [
+    "The Grade Transition Scrap Seam: During a major resin grade transition (such as shifting from a fractional-melt blow molding grade to a high-flow injection molding grade), how many tonnes of wide-spec or off-spec polymer are generated before laboratory LIMS certificates confirm on-spec MFI and density, and what is the net economic downgrading penalty per transition event?",
+    "Reactor Wall Sheeting Blindness: How often are localized bed defluidization, static voltage accumulation, or polymer wall sheeting events detected only after temperature excursions cause cycle gas flow restriction or chunk formation forcing a reactor shutdown, rather than through early-warning thermal skin thermocouple and acoustic sensor signatures?",
+    "Additive Giveaway vs. Customer Liability: What is the monthly economic cost of over-dosing expensive hindered phenol and phosphite antioxidant masterbatches to avoid customer oxidation warranty claims, and how frequently do mechanical loss-in-weight feeder bridging or calibration drifts go undetected until post-production laboratory XRF testing?"
+  ]
+};

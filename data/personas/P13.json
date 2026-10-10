@@ -18,6 +18,20 @@
   "avatar": "avatars/P13_persona.jpg",
   "thumb": "avatars/thumbs/P13_thumb.jpg",
   "initials": "FA",
+  "domains": [
+    "upstream",
+    "midstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Field & Facilities",
+    "midstream": "Pipelines & Network"
+  },
+  "valueSplit": {
+    "upstream": 0.85,
+    "midstream": 0.15
+  },
   "headline": "The Flow Assurance Engineer guarantees that multiphase reservoir fluids travel safely from deepwater subsea wellheads to host processing platforms without freezing into solid gas hydrates, plugging with wax, or destroying surface piping through severe liquid slugging. While transient multiphase simulation monoliths like SLB OLGA and Kongsberg LedaFlow solve the complex hydrodynamic and thermodynamic Navier-Stokes equations, they are slow, offline desktop tools that cannot respond dynamically during live platform upsets. When an unexpected subsea flowline shutdown occurs, the engineer has a strict, finite \"cooldown window\" (typically 8 to 24 hours) before cold seabed temperatures (4°C) push high-pressure gas into the hydrate formation zone, creating concrete-hard solid plugs that cost 10M–50M+ to remediate. Flow assurance engineers spend hours manually extracting SCADA pressure-temperature trends, checking static PVTSim hydrate dissociation curves in project folders, and calculating chemical inhibitor volumes in Excel. A hyper-specialized agent squad eliminates 23.90 hours per flow assurance operational cycle across live cooldown monitoring, dynamic inhibitor dosing, slug prediction, wax deposition modeling, subsea chemical valve tracking, asphaltene screening, and depressurization blowdown planning.",
   "confidence": {
     "Persona": "Flow Assurance Engineer (P13)",

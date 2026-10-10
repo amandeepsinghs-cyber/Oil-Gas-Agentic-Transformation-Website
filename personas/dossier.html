@@ -205,7 +205,7 @@
   /* ── Roster: filter chips over a scrolling face strip ─────────────
      33 roles in a flat strip is five screens of blind dragging. The filter
      defaults to the open persona's own segment, so you land among peers with
-     nothing to scroll; "All 33" stays one click away. */
+     nothing to scroll; the "All" chip stays one click away. */
 
   .roster {
     position: sticky; top: 56px; z-index: 50;
@@ -216,6 +216,12 @@
   }
 
   .roster-in { max-width: var(--wrap); margin: 0 auto; padding: 0 max(20px, 2.5vw); }
+
+  .domain-row {
+    display: flex; align-items: center; flex-wrap: wrap; gap: 7px;
+    margin-bottom: 8px; padding-bottom: 8px;
+    border-bottom: 1px dashed var(--border);
+  }
 
   .filter-row {
     display: flex; align-items: center; flex-wrap: wrap; gap: 7px;
@@ -331,6 +337,7 @@
     letter-spacing: -0.01em; color: var(--green-ink);
   }
   .figure-sub { font-size: var(--fs-11); color: var(--text-dim); line-height: 1.35; }
+  .figure-shared { font-size: var(--fs-11); color: var(--text-dim); line-height: 1.35; margin-top: 3px; }
 
   .idhead { grid-column: 2; min-width: 0; }
 
@@ -949,7 +956,7 @@
 <!-- ===================== Masthead ===================== -->
 <header class="masthead">
   <div class="masthead-in">
-    <a class="mast-brand" href="../working_deck/pages/page_07.html">
+    <a class="mast-brand" href="../working_deck/persona_map.html">
       <img class="mast-logo" src="../assets/media/wip/image25.png" alt="Google Cloud">
       <span class="mast-div"></span>
       <span class="mast-kicker">Persona Deep Dive // Workforce &amp; Workflow Record</span>
@@ -957,8 +964,8 @@
     <span class="mast-spacer"></span>
     <nav class="mast-nav">
       <button class="mast-btn" id="theme-btn" type="button">Dark</button>
-      <a class="mast-btn" id="back-board" href="../working_deck/pages/page_07.html">&larr; Back to Chessboard</a>
-      <span class="mast-count" id="counter">— / 33</span>
+      <a class="mast-btn" id="back-board" href="../working_deck/persona_map.html">&larr; Back to Persona Map</a>
+      <span class="mast-count" id="counter">&mdash;</span>
       <a class="mast-cta" href="../index.html">All Slides &#8599;</a>
     </nav>
   </div>
@@ -977,6 +984,7 @@
 <!-- ===================== Roster ===================== -->
 <div class="roster">
   <div class="roster-in">
+    <div class="domain-row" id="domain-row"></div>
     <div class="filter-row" id="filter-row"></div>
     <div class="strip" id="strip"></div>
   </div>
@@ -990,6 +998,7 @@
 <!-- Every rupee multiplier on this page lives in one sourced sheet, loaded
      first so a caller can override it before anything renders. -->
 <script src="../data/value_model.js"></script>
+<script src="../data/persona_registry.js"></script>
 <script src="../data/personas/index.js"></script>
 <script>
 (function () {
@@ -1002,6 +1011,10 @@
      Detail arrives via an injected <script> rather than fetch() on purpose:
      parts of this deck are opened straight from disk, and fetch() is blocked
      by CORS on file:// while a script tag is not. */
+  var REG          = window.PERSONA_REGISTRY || { domains: {}, domainOrder: [], groupOrder: {}, personas: {} };
+  var DOMAIN_ORDER = REG.domainOrder && REG.domainOrder.length ? REG.domainOrder : ["upstream", "midstream", "downstream"];
+  var DOMAIN_LABEL = REG.domains || { upstream: "Upstream", midstream: "Midstream", downstream: "Downstream" };
+
   var DATA   = window.PERSONA_INDEX || [];
   var DETAIL = (window.PERSONA_DETAIL = window.PERSONA_DETAIL || {});
   var BY_ID  = DATA.reduce(function (acc, p) { acc[p.id] = p; return acc; }, {});
@@ -1023,10 +1036,29 @@
 
   var rootEl   = document.getElementById("root");
   var stripEl  = document.getElementById("strip");
+  var domainEl = document.getElementById("domain-row");
   var filterEl = document.getElementById("filter-row");
   var countEl  = document.getElementById("counter");
   var backEl   = document.getElementById("back-board");
   var pendingOpenAgent = null;          // ?a=<n>, applied on first paint only
+
+  function resolveDomain() {
+    var q = new URLSearchParams(window.location.search);
+    var d = (q.get("domain") || "").toLowerCase();
+    if (DOMAIN_ORDER.indexOf(d) >= 0 || d === "all") return d;
+    var stored = "";
+    try { stored = (localStorage.getItem("deck-domain") || localStorage.getItem("selected-domain") || "").toLowerCase(); } catch (e) {}
+    if (DOMAIN_ORDER.indexOf(stored) >= 0) return stored;
+    return "all";
+  }
+  var activeDomain = resolveDomain();
+
+  function getDomainPersonas() {
+    if (activeDomain === "all") return DATA;
+    return DATA.filter(function (p) {
+      return (p.domains || []).indexOf(activeDomain) >= 0;
+    });
+  }
 
   /* The one Gemini Enterprise workspace this estate is published into -- the
      same address slide 06 already links to. It is a workspace, not a per-agent
@@ -1072,7 +1104,7 @@
     rate:      VM.rate      || 2500,   // INR per loaded technical-staff hour
     yearHours: VM.yearHours || 1800,   // productive hours per person per year
     onTask:    VM.onTask    != null ? VM.onTask : 0.50,
-    scale:     VM.scale     || "combined ONGC + IOCL scale"
+    scale:     VM.scale     || "national-operator scale"
   };
 
   var SEATS  = window.VALUE_SEATS   || {};
@@ -1278,6 +1310,14 @@
   ];
 
   function groupOf(p) {
+    if (!p) return "Other";
+    if (activeDomain !== "all") {
+      var g = (p.groups && p.groups[activeDomain]) ||
+              (REG.personas && REG.personas[p.id] && REG.personas[p.id].groups && REG.personas[p.id].groups[activeDomain]);
+      if (g) return g;
+      if (p.crossCutting) return "Cross-Cutting";
+      return p.segment || "Other";
+    }
     var s = p.segment || "";
     if (s.indexOf("Cross-Cutting") === 0) return "Cross-Cutting";
     if (s.indexOf("Midstream") === 0) return "Midstream";
@@ -1302,15 +1342,41 @@
     return '<span class="' + monoCls + '">' + esc(p.initials) + "</span>";
   }
 
+  function renderDomainTabs() {
+    if (!domainEl) return;
+    var keys = DOMAIN_ORDER.concat(["all"]);
+    domainEl.innerHTML = keys.map(function (k) {
+      var label = k === "all" ? "Full value chain" : (DOMAIN_LABEL[k] || k);
+      var count = k === "all"
+        ? DATA.length
+        : DATA.filter(function (p) { return (p.domains || []).indexOf(k) >= 0; }).length;
+      var isActive = (k === activeDomain);
+      return '<button class="fchip' + (isActive ? " active" : "") + '" type="button" data-domain="' + esc(k) + '">' +
+             esc(label) + ' <span class="fn">' + count + "</span></button>";
+    }).join("");
+  }
+
   function renderFilters() {
+    var domList = getDomainPersonas();
     var counts = {};
-    DATA.forEach(function (p) { var g = groupOf(p); counts[g] = (counts[g] || 0) + 1; });
+    domList.forEach(function (p) { var g = groupOf(p); counts[g] = (counts[g] || 0) + 1; });
 
     var chips = '<button class="fchip' + (filter === null ? " active" : "") +
-                '" type="button" data-group="">All <span class="fn">' + DATA.length + "</span></button>";
+                '" type="button" data-group="">All <span class="fn">' + domList.length + "</span></button>";
 
-    GROUPS.concat(counts.Other ? ["Other"] : []).forEach(function (g) {
+    var groupList = (activeDomain !== "all" && REG.groupOrder && REG.groupOrder[activeDomain])
+      ? REG.groupOrder[activeDomain]
+      : GROUPS;
+
+    groupList.forEach(function (g) {
       if (!counts[g]) return;
+      chips += '<button class="fchip' + (filter === g ? " active" : "") +
+               '" type="button" data-group="' + esc(g) + '">' + esc(g) +
+               ' <span class="fn">' + counts[g] + "</span></button>";
+    });
+
+    Object.keys(counts).forEach(function (g) {
+      if (groupList.indexOf(g) >= 0) return;
       chips += '<button class="fchip' + (filter === g ? " active" : "") +
                '" type="button" data-group="' + esc(g) + '">' + esc(g) +
                ' <span class="fn">' + counts[g] + "</span></button>";
@@ -1322,7 +1388,8 @@
   }
 
   function renderStrip() {
-    var shown = DATA.filter(function (p) {
+    var domList = getDomainPersonas();
+    var shown = domList.filter(function (p) {
       if (query) return matches(p, query);     // search overrides the filter
       return filter === null || groupOf(p) === filter;
     });
@@ -1333,12 +1400,13 @@
     }
 
     stripEl.innerHTML = shown.map(function (p) {
+      var subtitle = p.person ? p.title : (activeDomain !== "all" ? groupOf(p) : p.segment);
       return '<button class="chip' + (p.id === current ? " active" : "") +
              '" type="button" data-id="' + esc(p.id) + '">' +
                thumbNode(p, "chip-thumb", "chip-mono") +
                '<span class="chip-text">' +
                  '<span class="chip-name">' + esc(p.person || p.title) + "</span>" +
-                 '<span class="chip-role">' + esc(p.person ? p.title : p.segment) + "</span>" +
+                 '<span class="chip-role">' + esc(subtitle) + "</span>" +
                "</span>" +
              "</button>";
     }).join("");
@@ -1977,21 +2045,17 @@
     }
     current = id;
 
-    var idx = DATA.findIndex(function (p) { return p.id === id; });
-    countEl.textContent = (idx >= 0 ? String(idx + 1).padStart(2, "0") : "\u2014") + " / " + DATA.length;
+    var domList = getDomainPersonas();
+    var idx = domList.findIndex(function (p) { return p.id === id; });
+    countEl.textContent = (idx >= 0 ? String(idx + 1).padStart(2, "0") : "\u2014") + " / " + domList.length;
 
-    /* Every one of the 33 personas is on the board now, so the old
-       RESEARCH_TO_DECK_ROW indirection is dead here. It mapped research ids to
-       the PREVIOUS board's twenty rows, which were lettered A-T; the new board
-       is keyed P01-P33 and has no #row-E to jump to. Sixteen roles used to get
-       no link at all.
-
-       ?p= rather than #row= because the board's deep-link handler activates
-       and scrolls to the row, where a bare anchor only scrolls. */
-    backEl.href = "../working_deck/pages/page_07.html?p=" + encodeURIComponent(id);
-    backEl.title = "Show " + id + " on the board";
+    var backQuery = "?p=" + encodeURIComponent(id);
+    if (activeDomain && activeDomain !== "all") backQuery += "&domain=" + encodeURIComponent(activeDomain);
+    backEl.href = "../working_deck/persona_map.html" + backQuery;
+    backEl.title = "Show " + id + " on the persona map";
 
     if (filter !== null && groupOf(BY_ID[id]) !== filter) filter = groupOf(BY_ID[id]);
+    renderDomainTabs();
     renderFilters();
     renderStrip();
 
@@ -2063,6 +2127,24 @@
        next to the unit of work it was measured against. */
     var squadINR = squad && squad.inr ? inr(squad.inr) : null;
 
+    var vs = p.valueSplit || (BY_ID[p.id] && BY_ID[p.id].valueSplit) || (REG.personas && REG.personas[p.id] && REG.personas[p.id].valueSplit) || {};
+    var vsKeys = Object.keys(vs);
+    var sharedLine = "";
+    if (vsKeys.length > 1) {
+      vsKeys.sort(function (a, b) {
+        var ia = DOMAIN_ORDER.indexOf(a), ib = DOMAIN_ORDER.indexOf(b);
+        return (ia >= 0 ? ia : 99) - (ib >= 0 ? ib : 99);
+      });
+      var parts = vsKeys.map(function (k) {
+        var dLabel = DOMAIN_LABEL[k] || (k.charAt(0).toUpperCase() + k.slice(1));
+        var pct = Math.round((vs[k] || 0) * 100);
+        return esc(dLabel) + " " + pct + "%";
+      });
+      sharedLine = '<div class="figure-shared">' +
+                   "Shared across " + parts.join(" \u00b7 ") +
+                   "</div>";
+    }
+
     var figure = (squadINR || savedTotal)
       ? '<div class="figure">' +
           '<div class="figure-key">' + (squadINR ? "Annual value" : "Saved per cycle") + "</div>" +
@@ -2077,6 +2159,7 @@
               : esc(total.unit ? "per " + total.unit.replace(/^1\s+/, "") : "per cycle") +
                 (total.derived ? " (computed)" : "")) +
           "</div>" +
+          sharedLine +
         "</div>"
       : "";
 
@@ -2170,9 +2253,49 @@
     var btn = e.target.closest(".chip");
     if (!btn) return;
     var id = btn.getAttribute("data-id");
-    history.pushState({ id: id }, "", "?p=" + id);
+    var sp = new URLSearchParams(window.location.search);
+    sp.set("p", id);
+    if (activeDomain && activeDomain !== "all") sp.set("domain", activeDomain);
+    else sp.delete("domain");
+    history.pushState({ id: id, domain: activeDomain }, "", "?" + sp.toString());
     renderPersona(id);
   });
+
+  if (domainEl) {
+    domainEl.addEventListener("click", function (e) {
+      var btn = e.target.closest(".fchip");
+      if (!btn) return;
+      var dom = btn.getAttribute("data-domain");
+      if (!dom || dom === activeDomain) return;
+      activeDomain = dom;
+      try {
+        if (activeDomain === "all") {
+          localStorage.removeItem("deck-domain");
+        } else {
+          localStorage.setItem("deck-domain", activeDomain);
+        }
+      } catch (err) {}
+
+      var domList = getDomainPersonas();
+      var found = domList.some(function (p) { return p.id === current; });
+      if (!found && domList.length > 0) {
+        current = domList[0].id;
+      }
+      filter = null;
+      query = "";
+      var searchInput = document.getElementById("search");
+      if (searchInput) searchInput.value = "";
+
+      var sp = new URLSearchParams(window.location.search);
+      sp.set("p", current);
+      if (activeDomain !== "all") sp.set("domain", activeDomain);
+      else sp.delete("domain");
+      history.pushState({ id: current, domain: activeDomain }, "", "?" + sp.toString());
+
+      renderDomainTabs();
+      renderPersona(current);
+    });
+  }
 
   filterEl.addEventListener("click", function (e) {
     var btn = e.target.closest(".fchip");
@@ -2201,7 +2324,14 @@
     head.setAttribute("aria-expanded", open ? "true" : "false");
   });
 
-  window.addEventListener("popstate", function () { renderPersona(resolveId()); });
+  window.addEventListener("popstate", function () {
+    var nextDomain = resolveDomain();
+    if (nextDomain !== activeDomain) {
+      activeDomain = nextDomain;
+      renderDomainTabs();
+    }
+    renderPersona(resolveId());
+  });
 
   document.getElementById("theme-btn").addEventListener("click", function () {
     var dark = document.documentElement.classList.toggle("theme-dark");
@@ -2235,7 +2365,20 @@
     if (want) pendingOpenAgent = String(Number(want));
 
     var first = resolveId();
-    filter = groupOf(BY_ID[first]);      // land among peers, not in all 33
+    var domList = getDomainPersonas();
+    var hasFirst = domList.some(function (p) { return p.id === first; });
+    var qParams = new URLSearchParams(location.search);
+    if (!qParams.get("domain") && !hasFirst) {
+      var pObj = BY_ID[first];
+      if (pObj && pObj.domains && pObj.domains.length > 0 && activeDomain !== "all") {
+        activeDomain = "all";
+      }
+      domList = getDomainPersonas();
+    } else if (!hasFirst && domList.length > 0) {
+      first = domList[0].id;
+    }
+    filter = groupOf(BY_ID[first]);      // land among peers
+    renderDomainTabs();
     renderPersona(first);
   }
 })();

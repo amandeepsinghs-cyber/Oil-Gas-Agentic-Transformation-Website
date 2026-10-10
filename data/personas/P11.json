@@ -20,6 +20,17 @@
   "avatar": "avatars/P11_persona.jpg",
   "thumb": "avatars/thumbs/P11_thumb.jpg",
   "initials": "CR",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Field & Facilities"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Production Control Room Operator acts as the operational nerve center for offshore production platforms and central gathering facilities, balancing multi-well inflow against facility separation limits while safeguarding emergency shutdown barriers. While modern Distributed Control Systems (Emerson DeltaV, Yokogawa Centum VP, Honeywell Experion) execute closed-loop PID control and alarm historians record millions of raw events, they fail to contextualize causal alarm cascades during production upsets. When an unexpected liquid slug hits the primary separator or an export compressor trips, the CRO is bombarded with 150–250 alarms in 5 minutes, obscuring the initiating failure and causing uncoordinated flare trips, compressor damage, or full platform emergency shutdowns (300k–1.5M in deferred production per event). Furthermore, during shift rotations, exhausted CROs spend up to 1.5 hours manually assembling handover notes, frequently omitting active safety interlock overrides or controllers left in manual. A hyper-specialized agent squad eliminates 8.35 hours per operational cycle across shift handover synthesis, alarm flood root-cause sieving, safety bypass tracking, slug prediction, compressor envelope monitoring, water compliance, and flare accounting.",
   "confidence": {
     "Persona": "Control Room Operator (Production) (P11)",
@@ -121,7 +132,7 @@
       "gap": "100% manual transcription. The exhausted CRO must remember, summarize, and manually type shift events while answering field radio calls at the end of a 12-hour tour."
     },
     {
-      "product": "AspenTech DMCplus / Shell PACE",
+      "product": "AspenTech DMCplus / Commercial APC",
       "module": "Advanced Process Control (APC)",
       "solves": "Multivariable predictive control that optimizes steady-state throughput within constraint envelopes.",
       "gap": "Optimizes continuous stable operation; drops offline into manual during major platform upsets, leaving the CRO completely unassisted during trips."

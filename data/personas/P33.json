@@ -20,6 +20,23 @@
   "avatar": "avatars/P33_persona.jpg",
   "thumb": "avatars/thumbs/P33_thumb.jpg",
   "initials": "ES",
+  "domains": [
+    "upstream",
+    "midstream",
+    "downstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": true,
+  "groups": {
+    "upstream": "Cross-Cutting",
+    "midstream": "Cross-Cutting",
+    "downstream": "Cross-Cutting"
+  },
+  "valueSplit": {
+    "upstream": 0.4,
+    "midstream": 0.1,
+    "downstream": 0.5
+  },
   "headline": "The Environmental Specialist protects the operating asset from catastrophic regulatory shutdowns, multi-million-dollar statutory fines, and public environmental consent decrees by enforcing compliance across air emissions, fugitive methane, flaring, and wastewater discharge. While enterprise Environment, Health & Safety (EHS) platforms like Sphera Essential Suite, Wolters Kluwer Enablon, and Trihydro LeakDAS log environmental records, they are completely disconnected from daily field maintenance and live process control reality, leaving massive statutory compliance seams stranded across spreadsheets and email chains. Under statutory environmental regulations (Clean Air Act, EPA NSPS OOOOa/b/c, Subpart W, Clean Water Act NPDES) and international guidelines, every fugitive methane leak detected during Optical Gas Imaging (OGI) or EPA Method 21 surveys must be mechanically repaired within rigid statutory deadlines—first attempt within 5 calendar days, final verified repair within 15 calendar days—or formally justified under stringent Delay of Repair (DOR) legal criteria. In a facility with over 50,000 tagged components and dozens of combustion stacks, specialists spend hundreds of hours manually cross-referencing OGI camera video logs, SAP maintenance work orders, CEMS daily calibration drift sheets, and wastewater lab assays. A single missed 15-day repair window triggers severe federal violations and statutory civil penalties exceeding 55,000 per day per leak. Deploying a hyper-specialized 7-agent squad that autonomously reconciles OGI leak survey manifests with CMMS work orders, tracks statutory repair countdowns, evaluates flare combustion efficiency, audits CEMS drift, verifies wastewater outfalls, and compiles certified greenhouse gas and Title V deviation dossiers saves 81.55 hours per comprehensive reporting and audit cycle, guaranteeing zero missed statutory repair deadlines and total audit-readiness.",
   "confidence": {
     "Persona": "Environmental Specialist (P33)",

@@ -25,6 +25,17 @@ window.PERSONA_DETAIL["P10"] = {
   "avatar": "avatars/P10_persona.jpg",
   "thumb": "avatars/thumbs/P10_thumb.jpg",
   "initials": "LO",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Field & Facilities"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Lease Operator is the physical eyes, ears, and first line of operational defence on the producing asset, driving remote dirt roads to ensure wellheads, beam pumps, separators, and tank batteries operate safely without leaking. While mobile field apps like Peloton FieldView and Quorum eField provide digital data entry forms on rugged tablets, they act as passive, dumb data sinks that offer zero operational prioritization. A pumper responsible for 50 wells drives a static, unoptimized 100-mile loop every day, often discovering a high-rate well that tripped off at 21:00 the previous night only late the next afternoon—incurring 18 hours of avoidable deferment. Pumpers spend up to 2.5 hours every day climbing tanks, squinting at greasy dial gauges, scribbling numbers onto greasy notebooks, and manually typing them into tablets inside hot pickup trucks. A hyper-specialized agent squad eliminates 8.45 hours per operational cycle across dynamic route optimization, gauge OCR pre-fill, truck haul ticket verification, chemical pump calibration, and shift reporting.",
   "confidence": {
     "Persona": "Lease Operator (P10)",

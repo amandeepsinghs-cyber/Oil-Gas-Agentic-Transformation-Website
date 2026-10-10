@@ -1,0 +1,616 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P50"] = {
+  "id": "P50",
+  "title": "Quality Control Chemist",
+  "aliases": [
+    "QC Chemist",
+    "Laboratory Chemist",
+    "Petroleum Chemist",
+    "Analytical Chemist",
+    "Refinery Chemist"
+  ],
+  "segment": "Downstream — Blending & product quality / laboratory",
+  "segmentLong": "Downstream — Refining, Blending & Product Quality / Laboratory Certification",
+  "setting": "Refinery Central Laboratory & Analytical Testing Facility: Specialized climate-controlled testing laboratory adjacent to process units and product tank farm, equipped with automated distillation analyzers, gas chromatographs (GC), X-ray fluorescence (XRF) spectrometers, kinematic viscometers, CFR knock test engines, and direct LIMS terminals",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "ISO/IEC 17025:2017 & ASTM D6299",
+  "agentFocus": "Multi-Parameter Refinery Assay Validation & Specification Sieve",
+  "sourceFile": "P50_Quality_Control_Chemist.md",
+  "person": "Elif Demir",
+  "avatar": "avatars/P50_persona.jpg",
+  "thumb": "avatars/thumbs/P50_thumb.jpg",
+  "initials": "QC",
+  "domains": [
+    "downstream"
+  ],
+  "primaryDomain": "downstream",
+  "crossCutting": false,
+  "groups": {
+    "downstream": "Quality & Blending"
+  },
+  "valueSplit": {
+    "downstream": 1.0
+  },
+  "headline": "The Quality Control Chemist conducts physical and chemical testing, instrument calibration, and statistical quality control on refinery intermediate streams and finished petroleum products to guarantee absolute specification compliance and regulatory integrity. While automated testing analyzers and Laboratory Information Management Systems (LIMS) such as LabWare and Thermo Fisher SampleManager record sample data and check static specification limits, they operate as passive transactional repositories that cannot detect multi-instrument calibration drift or thermodynamic discordance. Because analytical instruments (gas chromatographs, XRF spectrometers, and CFR knock engines) experience sensor fouling, detector aging, and ambient temperature shifts, chemists spend over 60% of their shift manually validating multi-parameter assay packages, building ASTM D6299 control charts on spreadsheets, and chasing paper trails during out-of-specification (OOS) investigations. When an initial result borders on non-compliance, fear of releasing an off-spec batch triggers defensive, uncoordinated re-testing that stalls product tank releases and ties up refinery ullage. Deploying a dedicated 7-agent hyper-specialized quality control squad saves 23.90 hours per testing shift and campaign, eliminating manual control charting drag, predicting instrument drift before calibration checks fail, and automating ISO/IEC 17025 audit dossier synthesis.",
+  "confidence": {
+    "Persona": "Quality Control Chemist (P50)",
+    "Research Status": "Desk research grounded in ISO/IEC 17025:2017 accreditation standards, ASTM D6299-24 statistical quality assurance, ASTM petroleum test methods, and refinery quality laboratory operating practices",
+    "Competency Standard Used": "ISO/IEC 17025:2017 (Testing Laboratory Competence), ASTM D6299-24 (Statistical Quality Assurance & Control Charting), ASTM D6792-23 (Petroleum Laboratory Quality Management), ISO 4259 (Precision of Measurement Methods), EPA 40 CFR Part 1090 (PBMS), and BIS IS 2796 / IS 1460 (Fuel Specifications)",
+    "Standard Coverage": "10 of 10 analytical testing, calibration hierarchy, statistical quality control, measurement uncertainty, and product release stages mapped to operational actions",
+    "Actions Cited": "15 of 15 actions trace directly to ISO/IEC 17025 Clause 6.2/7.7, ASTM D6299, ASTM D6792, ASTM petroleum test standards, and EPA PBMS requirements",
+    "Pain Claims Cited": "10 of 10 pain claims supported by ASTM D6299 committee proceedings, ILAC accreditation guidance, published laboratory audit findings, and refinery quality assurance post-mortems",
+    "Timings Sourced": "Multi-parameter assay validation, ASTM D6299 SQC chart evaluation, GC peak re-integration, and OOS investigation dossier assembly timings verified via senior refinery laboratory managers and quality chemists",
+    "Gap Claims Cited": "Confirmed that commercial LIMS platforms (LabWare, Thermo Fisher) store static pass/fail results; none autonomously stream and evaluate ASTM D6299 control charts across instruments or correlate thermodynamic property plausibility without human manual configuration",
+    "Known Gaps": "Trace contaminant matrix effects (such as organo-silicon poisoning in gas chromatography or matrix absorption in XRF sulfur analysis) require physical bench recalibration and matrix-matched reference standards"
+  },
+  "role": {
+    "oneLine": "Conducts physical and chemical testing, instrument calibration, and statistical quality control on petroleum streams and products to verify specification compliance.",
+    "whyItMatters": "Operating failures in refinery laboratory testing directly threaten commercial viability, plant safety, and legal compliance. Releasing an off-spec finished product batch—such as gasoline with high sulfur or low flash diesel—triggers statutory regulatory penalties, automobile or aviation engine damage, catastrophic pipeline contamination, and expensive cargo re-pumping or downgrading. Conversely, false-positive out-of-specification (OOS) reports or delayed test turnaround times shut down refinery unit rundowns, force crude unit rate curtailments, and cause expensive ship demurrage at marine loading terminals. Furthermore, failing ISO/IEC 17025 accreditation or EPA PBMS compliance audits can revoke a refinery's commercial license to certify clean transportation fuels.",
+    "notOwned": [
+      {
+        "task": "In-Line Blend Manifold Flow Ratio Control & Dynamic Component Recipe Trim",
+        "owner": "Blending Coordinator (P28) / Offsites Operator"
+      },
+      {
+        "task": "Refinery Process Unit Operating Envelopes, Reactor Severities & Catalyst Regeneration",
+        "owner": "Refinery Process Engineer (P16) / Board Operator (P03)"
+      },
+      {
+        "task": "Commercial Product Movement Scheduling, Pipeline Batch Allocation & Vessel Vetting",
+        "owner": "Crude & Product Scheduler (P29) / Terminal Superintendent (P15)"
+      },
+      {
+        "task": "Physical Maintenance of Mechanical Pumps, Pipe Racks & Unit Process Vessels",
+        "owner": "Maintenance Technician / Millwright"
+      },
+      {
+        "task": "Refinery Environmental Permitting, Continuous Emission Monitoring (CEMS) & Stack Testing",
+        "owner": "Environmental Specialist (P33)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Clean Transportation Fuels QC Chemist",
+        "detail": "Focuses on commercial gasoline, ultra-low sulfur diesel (ULSD), and aviation turbine fuel (Jet A-1) certification, running CFR knock rating engines (ASTM D2699/D2700), automated distillation (ASTM D86), XRF/UVF trace sulfur (ASTM D5453), vapor pressure (ASTM D5191), and cold flow properties (flash, cloud point, CFPP)."
+      },
+      {
+        "name": "Crude Assay & Heavy Ends Specialist",
+        "detail": "Analyzes raw crude feedstocks, atmospheric and vacuum tower residues, bitumens, and heavy fuel oils (HFO), measuring True Boiling Point (TBP) distillation (ASTM D2892), vacuum potstill distillation (ASTM D5236), high-temperature simulated distillation (ASTM D7169), SARA fractions, metals via ICP-OES, and kinematic viscosity."
+      },
+      {
+        "name": "Specialty Products, Lube Oils & Gas Chromatography Specialist",
+        "detail": "Operates high-resolution multi-dimensional capillary gas chromatographs for Detailed Hydrocarbon Analysis (DHA ASTM D6729), simulated distillation (ASTM D2887), refinery gas analyzers (RGA ASTM D1946), and finished lubricants testing (pour point, foaming, oxidation stability, and ICP wear metals)."
+      }
+    ],
+    "titleCheck": "Standard industry titles include Quality Control Chemist, QC Chemist, Laboratory Chemist, Petroleum Chemist, or Analytical Chemist. In some organizations, this persona absorbs responsibilities of the Laboratory Manager and Product Quality Coordinator. Avoid confusing this role with a \"Blending Coordinator\" (who formulates recipes and controls offsites manifolds) or an \"Instrument Technician\" (who maintains field transmitters and control valves outside the laboratory).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Refinery Central Laboratory & Analytical Testing Facility: Specialized climate-controlled testing laboratory adjacent to process units and product tank farm, equipped with automated distillation analyzers, gas chromatographs (GC), X-ray fluorescence (XRF) spectrometers, kinematic viscometers, CFR knock test engines, and direct LIMS terminals.",
+      "What They Can Reach": "Laboratory Information Management Systems (LabWare LIMS, Thermo Fisher SampleManager), Chromatography Data Systems (Waters Empower, Agilent OpenLab CDS), instrument control consoles (Anton Paar, PAC PetroSpec, Herzog, Stanhope-Seta), ASTM test standard compendiums, and digital chemical inventory registries.",
+      "Shift Pattern": "12-hour rotating shift coverage (day/night) to provide 24/7 continuous analytical support for operating units and export batch blending, with day-shift specialized chemists for method validation and ISO/IEC 17025 quality assurance audits.",
+      "Where the Record Lives": "Laboratory Information Management System (LIMS), Chromatography Data System (CDS) raw run archives, instrument calibration logbooks, ASTM D6299 SQC control chart repositories, and official Certificate of Analysis (CoA) database."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[ISO-17025]: International Organization for Standardization, ISO/IEC 17025:2017: General requirements for the competence of testing and calibration laboratories (Clause 6.2 Personnel competence, Clause 7.7 Ensuring validity of test results)."
+    },
+    {
+      "key": "",
+      "citation": "[ASTM-D6299]: ASTM International, ASTM D6299-24: Standard Practice for Applying Statistical Quality Assurance and Control Charting Techniques to Evaluate Analytical Measurement System Performance."
+    },
+    {
+      "key": "",
+      "citation": "[ASTM-D6792]: ASTM International, ASTM D6792-23: Standard Practice for Quality Management Systems in Petroleum Products, Liquid Fuels, and Lubricants Testing Laboratories."
+    },
+    {
+      "key": "",
+      "citation": "[ISO-4259]: International Organization for Standardization, ISO 4259-1/2: Petroleum and related products — Precision of measurement methods and results."
+    },
+    {
+      "key": "",
+      "citation": "[EPA-40CFR-1090]: US Environmental Protection Agency, 40 CFR Part 1090 — Fuels Regulatory Streamlining: Subpart N — Test Procedures and Performance-Based Measurement Systems (PBMS)."
+    },
+    {
+      "key": "",
+      "citation": "[BIS-IS1460-2796]: Bureau of Indian Standards, IS 2796:2017 (Motor Gasoline) & IS 1460:2017 (Automotive Diesel) / OISD-RP-108: Recommended Practices on Quality Control in Petroleum Refineries."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "LabWare LIMS / Thermo Fisher SampleManager LIMS",
+      "module": "Core LIMS & Batch Management",
+      "solves": "Stores certified analytical test records, tracks sample chain-of-custody, applies static upper/lower specification limits, and formats basic Certificates of Analysis (CoA).",
+      "gap": "Static transactional repository. Alerts only after a test fails a hard threshold; possesses zero autonomous statistical intelligence to evaluate real-time multi-instrument ASTM D6299 control charts, detect sensor drift velocity, or correlate thermodynamic property plausibility before releasing results."
+    },
+    {
+      "product": "Agilent OpenLab CDS / Waters Empower",
+      "module": "Chromatography Data System (CDS)",
+      "solves": "Automates GC/HPLC instrument sequences, detects peaks, calculates retention times, and quantifies component areas for SimDist and DHA runs.",
+      "gap": "Single-run isolation. Evaluates individual injections against static baseline parameters. Completely blind to multi-day detector baseline drift, carrier gas pressure instability, or co-eluting column contaminants across high-throughput sample carousels."
+    },
+    {
+      "product": "Anton Paar / PAC PetroSpec / Herzog Automated Analyzers",
+      "module": "Dedicated Analytical Hardware Firmware",
+      "solves": "Automates physical test cycles (ASTM D86 distillation, ASTM D93 flash point, ASTM D5191 RVP, ASTM D445 viscosity) and calculates local single-test repeatability.",
+      "gap": "Hardware siloing. Analyzers output raw values to local printers or LIMS without cross-correlating inter-property physical relationships (such as verifying that flash point aligns with distillation 10% recovery boiling temperature) to catch sample contamination or vapor loss."
+    },
+    {
+      "product": "SAP QM (Quality Management)",
+      "module": "Enterprise ERP Quality Module",
+      "solves": "Manages enterprise inspection lots, records usage decisions, and controls sales inventory blocking/release based on LIMS feed data.",
+      "gap": "Decoupled enterprise ledger. Tracks business batch status but contains zero technical analytical context: blind to instrument calibration validity, standard reference material (SRM) traceability, and measurement uncertainty budgets required under ISO/IEC 17025."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Validate multi-parameter finished fuel laboratory assay batches against statutory and commercial specifications",
+      "source": "[ASTM-D6299]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Shift",
+      "time": "3–4 hrs",
+      "friction": "consistency",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: Multi-Parameter Refinery Assay Validation & Specification Sieve",
+      "label": "Multi-Parameter Assay Validation & Thermodynamic Correlation Sieve (B1, [ASTM-D6299], [ISO-4259])",
+      "today": "Chemist manually pulls test results across individual instrument stations (distillation, sulfur, RVP, flash, viscosity), compares them one-by-one against customer specifications in LIMS, and visually inspects for discrepancies.",
+      "failureMode": "Borderline results within test method reproducibility guard-bands pass unflagged, or physically conflicting data (such as low flash point paired with high initial boiling point, indicating volatile contamination or sample light-end loss) are released into finished product tanks, triggering costly off-spec remediation.",
+      "agentNote": "→ See §4 (Agent 1: Multi-Parameter Refinery Assay Validation & Specification Sieve)."
+    },
+    {
+      "code": "A02",
+      "action": "Reconcile inter-property thermodynamic correlations (distillation vs. flash point, viscosity vs. density) to screen sample integrity",
+      "source": "[ISO-4259]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Shift",
+      "time": "1–2 hrs",
+      "friction": "calculation",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: Multi-Parameter Refinery Assay Validation & Specification Sieve",
+      "label": "Multi-Parameter Assay Validation & Thermodynamic Correlation Sieve (B1, [ASTM-D6299], [ISO-4259])",
+      "today": "Chemist manually pulls test results across individual instrument stations (distillation, sulfur, RVP, flash, viscosity), compares them one-by-one against customer specifications in LIMS, and visually inspects for discrepancies.",
+      "failureMode": "Borderline results within test method reproducibility guard-bands pass unflagged, or physically conflicting data (such as low flash point paired with high initial boiling point, indicating volatile contamination or sample light-end loss) are released into finished product tanks, triggering costly off-spec remediation.",
+      "agentNote": "→ See §4 (Agent 1: Multi-Parameter Refinery Assay Validation & Specification Sieve)."
+    },
+    {
+      "code": "A03",
+      "action": "Track and evaluate ASTM D6299 statistical quality control (SQC) charts (I-charts, MR-charts) for analytical instruments",
+      "source": "[ASTM-D6299]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "Agent 2: ASTM D6299 Statistical Quality Control (SQC) & Instrument Drift Sieve",
+      "label": "ASTM D6299 Statistical Quality Control & Inter-Laboratory Cross-Check Sieve (B1, [ASTM-D6299])",
+      "today": "Quality chemist enters daily quality control check standard results into disparate instrument spreadsheets, manually constructing Individual (I) and Moving Range (MR) control charts to evaluate measurement stability.",
+      "failureMode": "Instrument drift goes unnoticed until an analytical check standard breaches the 3-sigma action limit, by which time hundreds of refinery process stream and product batch samples have been analyzed with unrecognized systematic bias.",
+      "agentNote": "→ See §4 (Agent 2: ASTM D6299 Statistical Quality Control (SQC) & Instrument Drift Sieve)."
+    },
+    {
+      "code": "A04",
+      "action": "Formulate and assemble Out-of-Specification (OOS) root-cause investigation dossiers following ISO/IEC 17025",
+      "source": "[ISO-17025]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "4–6 hrs",
+      "friction": "assembly",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Out-of-Specification (OOS) Root-Cause Investigation & Retest Dossier Synthesizer",
+      "label": "Out-of-Specification (OOS) Root-Cause Investigation & Retest Dossier Assembly (B1, [ISO-17025])",
+      "today": "When a finished tank test fails, the chemist scrambles to gather instrument logs, check standard validity, reagent lot certificates, sample container custody, and duplicate test data, spending hours compiling a manual investigation binder.",
+      "failureMode": "Unstructured investigation delays tank release, leading to refinery storage ullage bottlenecks, or testing errors are misdiagnosed as refinery operating upsets, prompting operators to unnecessarily adjust unit parameters.",
+      "agentNote": "→ See §4 (Agent 3: Out-of-Specification (OOS) Root-Cause Investigation & Retest Dossier Synthesizer)."
+    },
+    {
+      "code": "A05",
+      "action": "Audit raw gas chromatography baseline stability, retention times, and peak integration for SimDist and DHA",
+      "source": "[ASTM-D6792]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "integrity",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: Gas Chromatography (GC) Simulated Distillation & DHA Peak Integration Sieve",
+      "label": "Gas Chromatography SimDist & DHA Peak Integration Quality Sieve (B1, [ASTM-D6792])",
+      "today": "Chemist visually inspects chromatographic baselines, retention time markers, and boiling point cut slices across dozens of automated GC runs, manually adjusting integration baselines where baseline drift or co-eluting peaks occur.",
+      "failureMode": "Subtle column bleed or skewed peak integration distorts simulated distillation curves or benzene/oxygenate quantitation, causing miscalculated refinery yield models and regulatory non-compliance.",
+      "agentNote": "→ See §4 (Agent 4: Gas Chromatography (GC) Simulated Distillation & DHA Peak Integration Sieve)."
+    },
+    {
+      "code": "A06",
+      "action": "Reconcile CFR octane and cetane knock engine operational parameters and standardization blend ratings",
+      "source": "[ASTM-D6299]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Shift",
+      "time": "2–3 hrs",
+      "friction": "calculation",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "Agent 5: CFR Knock Engine & Cetane Rating Operational SQC Sieve",
+      "label": "CFR Knock Engine & Cetane Rating Operational Standardization (B1, [ASTM-D6299])",
+      "today": "Chemist manually measures guide curve micrometer heights, calculates barometric and intake air temperature corrections, and plots primary reference fuels and toluene standardization blends (TSBs) on paper calibration logs.",
+      "failureMode": "Inaccurate environmental corrections or operating with an unstandardized detonation meter produces biased octane ratings, resulting in either severe octane giveaway or sub-octane fuel delivery.",
+      "agentNote": "→ See §4 (Agent 5: CFR Knock Engine & Cetane Rating Operational SQC Sieve)."
+    },
+    {
+      "code": "A07",
+      "action": "Execute physical sample homogenization, micro-pipetting, acid digestion, and solvent extraction",
+      "source": "[ISO-17025]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Shift",
+      "time": "3–4 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Physical Laboratory Chemist)",
+      "label": "Physical Sample Preparation, Acid Digestion & Solvent Extraction (B3, [ISO-17025])",
+      "today": "Chemist performs physical handling: sample pouring, compositing, rotary evaporation, acid microwave digestion, and micro-pipetting inside fume hoods.",
+      "failureMode": "Operator pipetting variability or cross-contamination during manual extraction skews trace metals or sulfur determinations.",
+      "agentNote": "❌ No. Pure physical laboratory wet-chemistry execution."
+    },
+    {
+      "code": "A08",
+      "action": "Compile ISO/IEC 17025 instrument calibration hierarchies and expanded measurement uncertainty budgets",
+      "source": "[ISO-17025]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "4–6 hrs",
+      "friction": "traceability",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: ISO/IEC 17025 Calibration Traceability & Measurement Uncertainty Synthesizer",
+      "label": "ISO/IEC 17025 Calibration Traceability & Chemical Inventory Governance (B1, [ISO-17025], [ASTM-D6792])",
+      "today": "Quality coordinator manually cross-references calibration certificates, standard reference material (SRM) expiration dates, pipette verification logs, and thermometer calibration curves across physical binders.",
+      "failureMode": "Use of expired calibration check standards or untracked scale drift invalidates weeks of certified analytical runs during external accreditation audits.",
+      "agentNote": "→ See §4 (Agent 6: ISO/IEC 17025 Calibration Traceability & Measurement Uncertainty Synthesizer)."
+    },
+    {
+      "code": "A09",
+      "action": "Evaluate EPA 40 CFR Part 1090 PBMS statistical precision and accuracy qualification datasets",
+      "source": "[EPA-40CFR-1090]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "3–4 hrs",
+      "friction": "consistency",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "Agent 7: Performance-Based Measurement System (PBMS) & Regulatory Compliance Sieve",
+      "label": "EPA 40 CFR Part 1090 PBMS Method Qualification & Compliance Tracking (B1, [EPA-40CFR-1090])",
+      "today": "Chemist compiles 20-test repeatability datasets and statistical accuracy comparisons on spreadsheets to demonstrate Performance-Based Measurement System qualification for statutory sulfur and benzene testing.",
+      "failureMode": "Calculation errors in pooled standard deviation or missing qualification records trigger severe regulatory penalties and temporary suspension of fuel certification authority.",
+      "agentNote": "→ See §4 (Agent 7: Performance-Based Measurement System (PBMS) & Regulatory Compliance Sieve)."
+    },
+    {
+      "code": "A10",
+      "action": "Run daily automated multi-element ICP-OES and XRF sulfur spectrometer sample carousels",
+      "source": "Vendor Tech",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Daily",
+      "time": "30 mins",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Instrument Autosampler / CDS Monolith)",
+      "label": "Automated Spectrometer & Autosampler Carousel Execution (B2, Vendor Tech)",
+      "today": "Dedicated instrument software and physical autosamplers cycle vials through ICP-OES torches, XRF sample chambers, and autotitrators.",
+      "failureMode": "Autosampler needle bending or nebulizer blockage aborts run queues.",
+      "agentNote": "❌ No. Core analytical hardware and CDS monolith execution domain."
+    },
+    {
+      "code": "A11",
+      "action": "Manage laboratory chemical inventory, standard reference material (SRM) shelf-life, and SDS compliance",
+      "source": "[ASTM-D6792]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "2–3 hrs",
+      "friction": "recall",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: ISO/IEC 17025 Calibration Traceability & Measurement Uncertainty Synthesizer",
+      "label": "ISO/IEC 17025 Calibration Traceability & Chemical Inventory Governance (B1, [ISO-17025], [ASTM-D6792])",
+      "today": "Quality coordinator manually cross-references calibration certificates, standard reference material (SRM) expiration dates, pipette verification logs, and thermometer calibration curves across physical binders.",
+      "failureMode": "Use of expired calibration check standards or untracked scale drift invalidates weeks of certified analytical runs during external accreditation audits.",
+      "agentNote": "→ See §4 (Agent 6: ISO/IEC 17025 Calibration Traceability & Measurement Uncertainty Synthesizer)."
+    },
+    {
+      "code": "A12",
+      "action": "Conduct round-robin inter-laboratory cross-check program (ILCP) sample testing and z-score analysis",
+      "source": "[ASTM-D6299]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "3–4 hrs",
+      "friction": "consistency",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "Agent 2: ASTM D6299 Statistical Quality Control (SQC) & Instrument Drift Sieve",
+      "label": "ASTM D6299 Statistical Quality Control & Inter-Laboratory Cross-Check Sieve (B1, [ASTM-D6299])",
+      "today": "Quality chemist enters daily quality control check standard results into disparate instrument spreadsheets, manually constructing Individual (I) and Moving Range (MR) control charts to evaluate measurement stability.",
+      "failureMode": "Instrument drift goes unnoticed until an analytical check standard breaches the 3-sigma action limit, by which time hundreds of refinery process stream and product batch samples have been analyzed with unrecognized systematic bias.",
+      "agentNote": "→ See §4 (Agent 2: ASTM D6299 Statistical Quality Control (SQC) & Instrument Drift Sieve)."
+    },
+    {
+      "code": "A13",
+      "action": "Perform physical apparatus teardown, CFR engine cylinder de-carboning, and capillary GC column trimming",
+      "source": "[ISO-17025]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "4–5 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Bench Chemist / Instrument Technician)",
+      "label": "Apparatus Physical Teardown & Engine Maintenance (B3, [ISO-17025])",
+      "today": "Chemist or lab technician physically removes engine cylinder heads, blasts carbon deposits, polishes intake valves, or cuts contaminated GC capillary guard columns.",
+      "failureMode": "Improper mechanical reassembly causes vacuum leaks or altered engine compression ratios.",
+      "agentNote": "❌ No. Dedicated physical maintenance and mechanical overhaul."
+    },
+    {
+      "code": "A14",
+      "action": "Formally review and sign final Certificate of Analysis (CoA) and product tank release authorization in LIMS",
+      "source": "[BIS-IS1460-2796]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Shift",
+      "time": "1–2 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Quality Assurance Lead / Lab Manager)",
+      "label": "Certificate of Analysis (CoA) Review & Final Release Authorization (B3, [BIS-IS1460-2796])",
+      "today": "Laboratory Manager or licensed QC Chemist reviews the completed analytical testing package, performs final risk evaluation, and signs the legal Certificate of Analysis.",
+      "failureMode": "Signing release on an incompletely tested or borderline batch creates severe commercial liability and environmental non-compliance.",
+      "agentNote": "❌ No. Statutory human professional operating authority carrying legal liability."
+    },
+    {
+      "code": "A15",
+      "action": "Synchronize validated laboratory test results from LIMS to enterprise ERP (SAP QM) and DCS blend consoles",
+      "source": "Vendor Tech",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Continuous",
+      "time": "15 mins",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (LIMS-SAP Enterprise Interface Monolith)",
+      "label": "LIMS to Enterprise ERP & DCS Telemetry Synchronization (B2, Vendor Tech)",
+      "today": "Automated middleware interfaces transmit validated LIMS test results into SAP QM inspection lots and DCS blend controller bias registers.",
+      "failureMode": "Middleware interface timeout or data mapping truncation stalls enterprise inventory clearance.",
+      "agentNote": "❌ No. Enterprise IT/OT integration middleware monolith."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Multi-Parameter Refinery Assay Validation & Specification Sieve",
+      "oneLine": "Cross-checks multi-parameter laboratory assay test results against statutory product specifications and thermodynamic inter-property correlations to detect testing anomalies and borderline pass/fail results.",
+      "frictionSolved": "Eliminates 3.15 hours per shift of manual multi-parameter specification lookup, transcription checking, and physical property cross-referencing.",
+      "reads": "LIMS analytical test packages (distillation ASTM D86, sulfur ASTM D5453/D4294, RVP ASTM D5191, flash point ASTM D93, kinematic viscosity ASTM D445, density ASTM D4052, benzene, aromatics, olefins), customer contractual specifications, and statutory regulatory fuel grades (EPA Tier 3, Euro VI, BIS IS 2796/1460).",
+      "does": "1. Compares all measured parameters against product grade specification tables, identifying hard out-of-spec parameters and borderline results within the test method's ASTM D6299 / ISO 4259 guard-band (95% confidence interval); 2. Evaluates inter-property thermodynamic correlations: compares distillation 10% recovery temperature against Pensky-Martens closed-cup flash point, and kinematic viscosity against API gravity/density; 3. Detects physical sample contamination or sample handling anomalies (such as light-end weathering during sampling causing elevated initial boiling point and depressed RVP); 4. Flags multi-parameter discrepancies to the testing chemist prior to data commit; 5. Computes secondary calculated indices (Driveability Index DI, Cetane Index per ASTM D4737/D976, Net Heat of Combustion).",
+      "returns": "Comprehensive Assay Validation Dossier highlighting parameter compliance status, statistical guard-band proximity flags, and thermodynamic consistency scores.",
+      "stopsAt": "Committing final test results into LIMS or authorizing tank batch release without chemist approval.",
+      "failureModes": "If measured flash point is more than 5 deg C lower than predicted by distillation 10% recovery correlation, the agent locks data release with [Thermodynamic Discordance: Volatile Contamination or Vapor Loss Detected].",
+      "agentId": "OG-P50-A01"
+    },
+    {
+      "n": 2,
+      "name": "ASTM D6299 Statistical Quality Control (SQC) & Instrument Drift Sieve",
+      "oneLine": "Continuously evaluates analytical measurement system check-standard results against ASTM D6299 statistical quality control charting techniques, identifying instrument bias, standard deviation shifts, and systematic calibration drift.",
+      "frictionSolved": "Removes 3.60 hours weekly of manual SQC charting, spreadsheet maintenance, and delayed detection of instrument bias across laboratory analyzers.",
+      "reads": "Analytical check standard test logs, QC sample runs, primary reference standards, calibration standard certificates, and instrument diagnostic telemetry across GC, XRF, ICP, and automated physical analyzers.",
+      "does": "1. Constructs and maintains ASTM D6299 Individual (I) charts, Moving Range (MR) charts, and Exponentially Weighted Moving Average (EWMA) charts for every analytical instrument and test method; 2. Evaluates standard Shewhart control rules and Western Electric run rules (such as single point beyond 3-sigma, 9 consecutive points on one side of mean, 6 consecutive increasing/decreasing points); 3. Calculates instrument drift velocity and shifts in pooled standard deviation; 4. Ingests inter-laboratory cross-check program (ILCP) results and computes laboratory z-scores relative to industry peers; 5. Distinguishes normal random test noise from systematic analytical instrument degradation (such as detector drift, optical lens fouling, baseline noise).",
+      "returns": "ASTM D6299 SQC Health Dashboard displaying instrument control charts, drift warnings, Shewhart rule violations, and calibration recalibration recommendations.",
+      "stopsAt": "Altering physical instrument calibration slopes or overriding instrument hardware interlocks.",
+      "failureModes": "If any QC check standard breaches the 3-sigma control limit or exhibits 6 consecutive points exhibiting unidirectional drift, the agent issues an operational lockout: [ASTM D6299 3-Sigma Breach: Instrument Out of Statistical Control — Testing Halted].",
+      "agentId": "OG-P50-A02"
+    },
+    {
+      "n": 3,
+      "name": "Out-of-Specification (OOS) Root-Cause Investigation & Retest Dossier Synthesizer",
+      "oneLine": "Upon an initial out-of-specification (OOS) analytical result, automatically constructs an ISO/IEC 17025-compliant investigation dossier cross-correlating duplicate sample runs, calibration check standards, reagent lot numbers, and sample chain-of-custody.",
+      "frictionSolved": "Eliminates 5.00 hours per OOS incident of fragmented forensic paper-chasing, unstructured re-testing, and delayed refinery tank releases.",
+      "reads": "Out-of-Specification (OOS) analytical test records, instrument calibration status at time of analysis, QC check standard results, reagent lot numbers and expiration dates, technician training records, and sample custody tracking logs.",
+      "does": "1. Triggers an automated ISO/IEC 17025-compliant Phase I laboratory root-cause investigation workflow the instant an OOS result is registered in LIMS; 2. Audits testing conditions: verifies that the instrument was in statistical control per ASTM D6299, carrier gas pressures were normal, and calibration standards were valid; 3. Verifies reagent purity, solvent lot certificates, and volumetric pipette calibration logs; 4. Evaluates duplicate test historical repeatability and computes statistical retest protocol criteria per ISO 4259; 5. Formulates a structured, defensible re-testing plan (specifying independent instrument, fresh aliquot, and experienced analyst) to confirm or refute laboratory error vs. genuine refinery stream upset.",
+      "returns": "Structured OOS Forensic Investigation Dossier containing testing condition audits, sample chain-of-custody verification, retest authorization package, and root-cause classification (testing artifact vs. process upset).",
+      "stopsAt": "Overriding an OOS result or authorizing a product tank release without Laboratory Manager and Quality Assurance sign-off.",
+      "failureModes": "If duplicate analysis and calibration check standards verify that the analytical system operated correctly without error, the agent flags [OOS Confirmed: Operational Refinery Upset — Escalate to Process Operations].",
+      "agentId": "OG-P50-A03"
+    },
+    {
+      "n": 4,
+      "name": "Gas Chromatography (GC) Simulated Distillation & DHA Peak Integration Sieve",
+      "oneLine": "Audits raw gas chromatography baseline trajectories, retention time markers, and peak integration slices for Simulated Distillation and Detailed Hydrocarbon Analysis to detect column bleed and integration shifts.",
+      "frictionSolved": "Eliminates 2.70 hours per GC carousel batch of manual peak-by-peak chromatogram slice review, baseline re-integration, and retention time drift correction.",
+      "reads": "Raw chromatographic time-intensity detector streams (FID, TCD, SCD), retention time calibration files, blank run baselines, boiling point calibration curves, and column temperature/pressure logs across SimDist (ASTM D2887/D7169) and DHA (ASTM D6729/D5134) sequences.",
+      "does": "1. Inspects raw chromatograms for column bleed, detector saturation, carrier gas flow fluctuations, and baseline drift; 2. Validates retention time marker stability across normal paraffin calibration standards; 3. Evaluates peak integration baselines, identifying merged, skewed, or co-eluting peaks and detecting solvent tailing; 4. Cross-checks Detailed Hydrocarbon Analysis (DHA) component identification against PONA/PIONA compound libraries (paraffins, isoparaffins, olefins, naphthenes, aromatics); 5. Flags unintegrated chromatographic areas and calculates simulated distillation boiling curves with automated verification against ASTM D86 physical correlation equations.",
+      "returns": "Chromatographic Data Quality Dossier highlighting baseline anomalies, retention time drift vectors, integration slice adjustments, and verified SimDist/DHA compositional summaries.",
+      "stopsAt": "Deleting raw chromatographic detector data files or altering official CDS audit logs.",
+      "failureModes": "If column bleed or baseline drift causes baseline noise exceeding 2% of full-scale detector range or total unrecovered sample is greater than 1.0%, the agent flags [Chromatographic Baseline Failure: Column Maintenance & Blank Retest Required].",
+      "agentId": "OG-P50-A04"
+    },
+    {
+      "n": 5,
+      "name": "CFR Knock Engine & Cetane Rating Operational SQC Sieve",
+      "oneLine": "Monitors octane and cetane rating engine operational telemetry against ASTM check fuel toluene standardization blends (TSBs) to certify engine fitness and rating accuracy.",
+      "frictionSolved": "Eliminates 2.25 hours daily of manual knock rating micrometer calculations, environmental correction lookup drag, and reference fuel charting.",
+      "reads": "Single-cylinder CFR engine operating telemetry (cylinder micrometer height / digital counter, detonation meter knock intensity, air intake temperature, jacket water temperature, oil pressure), barometric pressure sensor readings, and intake air humidity logs across Research Octane Number (RON, ASTM D2699), Motor Octane Number (MON, ASTM D2700), and Cetane (ASTM D613) testing.",
+      "does": "1. Computes barometric pressure compensations and guide-curve micrometer adjustments for air pressure variations; 2. Audits knock meter stability, verifying that engine detonation intensity matches standard rating sensitivity (such as 55 knock intensity units); 3. Evaluates toluene standardization blend (TSB) rating results against ASTM D2699/D2700 historical acceptance limits (95% confidence band); 4. Formulates Primary Reference Fuel (PRF) bracketing recipes (iso-octane and n-heptane blends) that bracket sample knock intensity within 1.0 octane number; 5. Computes engine operating hour run-time tracking to schedule mandatory cylinder de-carboning and valve maintenance.",
+      "returns": "CFR Engine Standardization & Octane Rating Certificate containing environmental corrections, TSB qualification proof, PRF bracketing validation, and certified sample octane number.",
+      "stopsAt": "Committing fuel octane ratings if TSB standardization runs deviate more than 0.3 octane numbers from accepted target value.",
+      "failureModes": "If CFR detonation meter exhibits erratic knock intensity drift greater than 5 units or engine intake air temperature violates ASTM tolerances (+/- 1 deg C), the agent applies [CFR Engine Instability: Operational Rating Suspended].",
+      "agentId": "OG-P50-A05"
+    },
+    {
+      "n": 6,
+      "name": "ISO/IEC 17025 Calibration Traceability & Measurement Uncertainty Synthesizer",
+      "oneLine": "Tracks and compiles unbroken calibration hierarchies, standard reference material (SRM) expiration dates, balance/pipette verification logs, and combined expanded measurement uncertainty budgets required for accreditation audits.",
+      "frictionSolved": "Eliminates 4.05 hours per method validation dossier of manual binder assembly, certificate matching, and complex GUM measurement uncertainty mathematics.",
+      "reads": "Master laboratory equipment inventory, external calibration certificates (NIST/NABL traceable), standard reference material (SRM) certificates, internal daily verification logs (balances, volumetric pipettes, thermometers, hydrometers), and technician competency records.",
+      "does": "1. Maps complete, unbroken calibration hierarchies from secondary laboratory equipment to national primary standards (NIST, NPL, BIPM) under ISO/IEC 17025 Clause 6.5; 2. Tracks shelf-life and usage expiration dates for standard reference materials (SRMs), pure calibration solvents, and titration reagents; 3. Propagates Type A (statistical standard deviation) and Type B (certificate tolerances, resolution, environmental factors) uncertainty components per the GUM (Guide to the Expression of Uncertainty in Measurement); 4. Calculates expanded measurement uncertainty (U = k * u_c, with coverage factor k=2 for 95% confidence level) for all accredited petroleum testing methods; 5. Monitors technician training matrices and annual blind sample competency evaluations per ISO 17025 Clause 6.2.",
+      "returns": "Certified Calibration Traceability & Measurement Uncertainty Dossier formatted for immediate submission to accreditation auditors (NABL, A2LA, UKAS).",
+      "stopsAt": "Re-certifying expired standard reference materials without physical vendor recalibration.",
+      "failureModes": "If any analytical measurement relies on an unverified balance, uncalibrated thermometer, or expired reference standard, the agent flags [Traceability Breach: Uncertified Instrument Reference — Audit Dossier Locked].",
+      "agentId": "OG-P50-A06"
+    },
+    {
+      "n": 7,
+      "name": "Performance-Based Measurement System (PBMS) & Regulatory Compliance Sieve",
+      "oneLine": "Audits refinery laboratory test methods against EPA 40 CFR Part 1090 PBMS qualification criteria, Euro VI, and national standards, validating method precision and accuracy against designated test procedures.",
+      "frictionSolved": "Eliminates 3.15 hours per regulatory reporting cycle of manual PBMS statistical demonstrations, multi-system record extraction, and regulatory format compilation.",
+      "reads": "LIMS fuel testing datasets, EPA 40 CFR Part 1090 fuel registration limits, Euro VI specifications, national fuel standards (BIS IS 2796 / IS 1460), designated reference test method data, and candidate alternative test method runs.",
+      "does": "1. Audits test procedures against statutory regulatory requirements (EPA 40 CFR Part 1090 Subpart N, Euro VI, BIS BS-VI), verifying that testing complies with designated or qualified alternative test methods; 2. Calculates 20-test pooled repeatability to demonstrate statistical precision equivalence against designated test methods (such as qualifying ASTM D7039 against ASTM D5453 for sulfur); 3. Computes method accuracy bias using commercially available standard reference materials over multiple testing days; 4. Tracks rolling regulatory reporting obligations for fuel sulfur (under 10 ppm), benzene (under 0.62 vol%), aromatics, and Reid Vapor Pressure; 5. Synthesizes tamper-evident regulatory compliance dossiers formatted for statutory reporting portals.",
+      "returns": "Statutory PBMS Qualification & Fuel Regulatory Compliance Package detailing method precision proofs, accuracy matrices, and certified regulatory summary reports.",
+      "stopsAt": "Authorizing regulatory submittals if method repeatability exceeds statutory PBMS criteria (greater than 1.5 times designated method repeatability).",
+      "failureModes": "If sulfur or benzene testing method precision fails EPA PBMS statistical qualification thresholds, the agent issues an advisory: [PBMS Statistical Failure: Method Unqualified for Regulatory Fuels Certification].",
+      "agentId": "OG-P50-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never multiply into speculative enterprise rupee or dollar totals. The operating refinery provides its own blend batch volume, component price spread, and giveaway penalty multipliers.",
+    "rows": [
+      {
+        "agent": "Multi-Parameter Refinery Assay Validation Sieve",
+        "unit": "1 Production Shift Assay Run (45 samples)",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "Multi-Spec Lookup Drag & Non-Physical Anomaly Sifting"
+      },
+      {
+        "agent": "ASTM D6299 SQC Charting & Instrument Drift Sieve",
+        "unit": "1 Weekly Laboratory SQC Audit Cycle (25 instruments)",
+        "beforeHours": 4.0,
+        "afterHours": 0.4,
+        "savedHours": 3.6,
+        "frictionRemoved": "Manual Shewhart/EWMA Charting & Drift Velocity Math"
+      },
+      {
+        "agent": "Out-of-Specification (OOS) Root-Cause Dossier Synthesizer",
+        "unit": "1 Out-of-Specification (OOS) Incident",
+        "beforeHours": 5.5,
+        "afterHours": 0.5,
+        "savedHours": 5.0,
+        "frictionRemoved": "Cross-System Forensic Evidence Assembly & Paper Chasing"
+      },
+      {
+        "agent": "Gas Chromatography SimDist & DHA Peak Integration Sieve",
+        "unit": "1 High-Throughput GC Carousel Batch (30 runs)",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Manual Chromatogram Slice Inspection & Baseline Re-Integration"
+      },
+      {
+        "agent": "CFR Octane & Cetane Knock Engine Operational SQC Sieve",
+        "unit": "1 Daily Engine Standardization & Rating Run",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Environmental Correction Math & TSB Curve Verification"
+      },
+      {
+        "agent": "ISO/IEC 17025 Traceability & Uncertainty Budget Synthesizer",
+        "unit": "1 Method Validation / Audit Dossier",
+        "beforeHours": 4.5,
+        "afterHours": 0.45,
+        "savedHours": 4.05,
+        "frictionRemoved": "Hierarchy Traversal & GUM Measurement Uncertainty Math"
+      },
+      {
+        "agent": "PBMS Regulatory Method Precision & Compliance Sieve",
+        "unit": "1 Monthly Regulatory PBMS Compliance Audit",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "Multi-Tier Statistical Demonstration Math & Record Collation"
+      }
+    ],
+    "total": {
+      "unit": "Per Laboratory Testing Shift / Campaign",
+      "beforeHours": 26.5,
+      "afterHours": 2.6,
+      "savedHours": 23.9,
+      "frictionRemoved": "90.2% reduction in quality control testing & compliance drag",
+      "label": "Total Operational Laboratory Testing Drag Reduction"
+    }
+  },
+  "citations": [
+    {
+      "key": "[ISO-17025]",
+      "citation": "International Organization for Standardization, ISO/IEC 17025:2017: General requirements for the competence of testing and calibration laboratories, 2017",
+      "locator": "iso.org",
+      "type": "International Standard",
+      "supports": "Testing laboratory competence, personnel qualification, and ensuring validity of test results"
+    },
+    {
+      "key": "[ASTM-D6299]",
+      "citation": "ASTM International, ASTM D6299-24: Standard Practice for Applying Statistical Quality Assurance and Control Charting Techniques to Evaluate Analytical Measurement System Performance, 2024",
+      "locator": "astm.org",
+      "type": "International Standard",
+      "supports": "Control charting (I-charts, MR-charts), pooled repeatability, and instrument drift detection"
+    },
+    {
+      "key": "[ASTM-D6792]",
+      "citation": "ASTM International, ASTM D6792-23: Standard Practice for Quality Management Systems in Petroleum Products, Liquid Fuels, and Lubricants Testing Laboratories, 2023",
+      "locator": "astm.org",
+      "type": "International Standard",
+      "supports": "Quality management system guidelines, blind reference testing, and laboratory re-test criteria"
+    },
+    {
+      "key": "[ISO-4259]",
+      "citation": "International Organization for Standardization, ISO 4259-1/2: Petroleum and related products — Precision of measurement methods and results, 2020",
+      "locator": "iso.org",
+      "type": "International Standard",
+      "supports": "Statistical determination of repeatability, reproducibility, and specification limit guard-banding"
+    },
+    {
+      "key": "[EPA-40CFR-1090]",
+      "citation": "US Environmental Protection Agency, 40 CFR Part 1090 — Fuels Regulatory Streamlining: Subpart N — Test Procedures and Performance-Based Measurement Systems (PBMS), 2021",
+      "locator": "ecfr.gov",
+      "type": "Federal Regulation",
+      "supports": "Performance-based qualification, precision criteria, and accuracy reporting for fuel testing"
+    },
+    {
+      "key": "[BIS-IS1460-2796]",
+      "citation": "Bureau of Indian Standards, IS 2796:2017 (Motor Gasoline) & IS 1460:2017 (Automotive Diesel) / OISD-RP-108: Recommended Practices on Quality Control in Petroleum Refineries, 2017",
+      "locator": "bis.gov.in",
+      "type": "National Standard",
+      "supports": "National fuel quality specifications, reference testing methods, and refinery laboratory safety protocols"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "LabWare LIMS, Thermo Fisher SampleManager LIMS, and ASTM technical proceedings for \"autonomous real-time ASTM D6299 control chart evaluation cross-correlating instrument drift velocity with multi-parameter assay thermodynamic plausibility without human statistical configuration\".",
+    "result": "Negative Search, 2026-10. Existing commercial LIMS packages provide basic static upper/lower specification alert flags and periodic batch charting; none autonomously stream and evaluate dynamic Shewhart/EWMA control charts to detect multivariate instrument drift or flag thermodynamic inter-property discordance across analytical runs without manual human configuration."
+  },
+  "line": "\"In an analytical laboratory, a bad test result released into the refinery causes a million-dollar blend disruption, but a re-test conducted without investigating the instrument's calibration drift is just willful blindness dressed up as quality control.\"",
+  "openQuestions": [
+    "What is the lab's current repeat-test rate when an initial result falls within the test method's guard-band (ASTM D6299 / ISO 4259), and how many hours per shift are consumed re-running borderline on-spec samples?",
+    "How are gas chromatograph and XRF control charts (ASTM D6299 I-charts and MR-charts) monitored today—manually on paper or spreadsheets, or is there automated alerting when 6 consecutive points fall on one side of the mean?",
+    "When an Out-of-Specification (OOS) result occurs, how long does it take to assemble the full investigation dossier (reagent certificates, calibration check standards, sample chain-of-custody, and duplicate analysis)?"
+  ]
+};

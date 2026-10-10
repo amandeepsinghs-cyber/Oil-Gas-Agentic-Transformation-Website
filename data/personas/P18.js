@@ -24,6 +24,17 @@ window.PERSONA_DETAIL["P18"] = {
   "avatar": "avatars/P18_persona.jpg",
   "thumb": "avatars/thumbs/P18_thumb.jpg",
   "initials": "G",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Subsurface"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Geophysicist illuminates the deep subsurface using acoustic and elastic wave reflection, transforming gigabytes of raw seismic echoes into calibrated 3D structural frameworks and quantitative reservoir fluid models. While industry geoscience interpretation platforms like SLB Petrel Geophysics, Halliburton Landmark DecisionSpace, and IHS Kingdom provide automated horizon autotrackers and structural modeling engines, they require exhaustive manual data preparation, checkshot velocity editing, and point-and-click synthetic seismogram stretching. In complex exploration basins with multi-vintage 2D/3D seismic and legacy wells, geophysicists spend up to 70% of their study time resolving elevation datum conflicts (Kelly Bushing vs. Seismic Reference Datum), filtering noisy checkshot interval velocity spikes, correlating wavelets for well-to-seismic ties, aligning survey misties, and calculating layer velocity functions. An integrated squad of 7 hyper-specialized micro-agents autonomously cleans borehole velocity surveys, cross-correlates synthetic well-ties, models depth-conversion uncertainty, harmonizes vintage seismic surveys, screens AVO fluid anomalies, and calculates fault gouge juxtaposition—saving 72.00 hours per prospect evaluation and preventing catastrophic depth conversion errors that result in multi-million-dollar dry holes.",
   "confidence": {
     "Persona": "Geophysicist (P18)",

@@ -1,0 +1,1817 @@
+[
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Gas Controller",
+          "Liquid Pipeline Controller",
+          "Console Operator (Midstream)"
+        ],
+        "anchor": "API RP 1168 / 49 CFR Part 192.631 & Part 195.446",
+        "anchorCitation": "API Recommended Practice 1168 ('Pipeline Control Room Management'), 2nd Edition; and U.S. DOT PHMSA 49 CFR § 192.631 / § 195.446 ('Control Room Management')",
+        "anchorUrl": "https://www.api.org/oil-and-natural-gas/health-and-safety/pipeline-and-refinery-safety/pipeline-safety/control-room-management",
+        "exampleAgentableWork": [
+          "Compile shift handover summaries synthesizing operational setpoint adjustments, abnormal operating conditions (AOCs), and active alarm overrides.",
+          "Cross-reference live hydraulic alarm patterns against emergency operating procedures to draft immediate triage checklists.",
+          "Reconcile hourly throughput and linepack balance deviations between scheduled nominations and live SCADA deliveries."
+        ],
+        "knowledgeWorkVerdict": "High — continuous situational evaluation, abnormal operating condition (AOC) verification, alarm diagnosis, shift handover reconciliation, and regulatory compliance logging.",
+        "oneLine": "Monitors and operates transmission pipeline networks via SCADA consoles, adjusting pressure, flow, and pump/compressor setpoints to maintain safe transport within operating limits.",
+        "overlapPct": 95,
+        "overlapsWith": "P14 Pipeline Controller",
+        "reason": "Directly matches existing persona P14 Pipeline Controller (>=70% overlap). Real-time console authority resides with the human controller, while agentic AI supports alarm triage, AOC verification, and shift logging.",
+        "recommendation": "merge",
+        "title": "Pipeline Controller",
+        "whereTheWorkHappens": "Centralized pipeline control room console"
+      },
+      {
+        "aliases": [
+          "Hydraulic Modeling Engineer",
+          "Pipeline Operations Engineer",
+          "Network Planning Engineer"
+        ],
+        "anchor": "ASME B31.4 / ASME B31.8 / API RP 1149",
+        "anchorCitation": "ASME B31.4 ('Pipeline Transportation Systems for Liquids and Slurries') Section 401/404; ASME B31.8 ('Gas Transmission and Distribution Piping Systems') Section 841; and API RP 1149 ('Pipeline Variable Uncertainties and Their Effects on Leak Detectability')",
+        "anchorUrl": "https://www.asme.org/codes-standards/find-codes-standards/b31-4-pipeline-transportation-systems-liquids-slurries",
+        "exampleAgentableWork": [
+          "Execute transient surge simulations for emergency shutdown (ESD) valve closures and pump trips to verify peak pressures remain within 110% of MOP per ASME B31.4.",
+          "Formulate daily linepack and hydraulic pressure profile projections incorporating weather forecasts, downstream demand pulls, and scheduled compressor maintenance.",
+          "Calculate optimal Drag Reducing Agent (DRA) injection rates and pumping power distributions to maximize batch throughput while minimizing energy costs.",
+          "Calibrate hydraulic friction factor parameters and heat transfer coefficients in Computational Pipeline Monitoring (CPM) models against SCADA historian telemetry."
+        ],
+        "knowledgeWorkVerdict": "Very High — heavily analytical and computational work focused on fluid dynamics simulations, transient surge analysis, drag-reducing agent (DRA) dosage modeling, and capacity optimization.",
+        "oneLine": "Performs steady-state and transient hydraulic modeling to optimize transmission throughput, evaluate pressure surges, ensure MAOP compliance, and tune leak detection models.",
+        "overlapPct": 15,
+        "overlapsWith": "none",
+        "reason": "Distinct midstream engineering discipline responsible for fluid dynamics, surge protection, and transmission network capacity analysis; not covered by upstream multiphase flow assurance (P13) or real-time console control (P14).",
+        "recommendation": "keep",
+        "title": "Pipeline Hydraulic Engineer",
+        "whereTheWorkHappens": "Central technical engineering office or pipeline control support center"
+      },
+      {
+        "aliases": [
+          "Pipeline SCADA Engineer",
+          "Pipeline Automation Engineer",
+          "Control Systems Engineer (Midstream)"
+        ],
+        "anchor": "API RP 1167 / API Std 1164 / ISA-18.2",
+        "anchorCitation": "API Recommended Practice 1167 ('Pipeline SCADA Alarm Management'), API Standard 1164 ('Pipeline Control Systems Security'), and ANSI/ISA-18.2 / IEC 62682 ('Management of Alarm Systems for the Process Industries')",
+        "anchorUrl": "https://www.api.org/oil-and-natural-gas/health-and-safety/pipeline-and-refinery-safety/pipeline-safety/control-room-management",
+        "exampleAgentableWork": [
+          "Analyze SCADA alarm logs to detect chattering, fleeting, and stale alarms, generating rationalization metrics and prioritized suppression recommendations per API RP 1167 / ISA-18.2.",
+          "Generate structured Management of Change (MOC) documentation and automated point-to-point database validation scripts for newly commissioned RTUs and PLCs.",
+          "Monitor remote telemetry health logs to identify intermittent polling latency, communication packet drops, and radio/VSAT failover events across transmission corridors.",
+          "Audit SCADA access permissions, firewall rules, and firmware vulnerability databases against API Std 1164 cybersecurity compliance benchmarks."
+        ],
+        "knowledgeWorkVerdict": "Very High — digital systems architecture, alarm rationalization analysis, communication protocol validation, telemetry health diagnostics, and cyber compliance audits.",
+        "oneLine": "Designs, maintains, and secures pipeline telemetry systems, remote terminal units (RTUs), alarm management systems, and human-machine interface (HMI) displays.",
+        "overlapPct": 10,
+        "overlapsWith": "none",
+        "reason": "Essential digital systems role bridging pipeline operations and operational technology; distinct from physical field instrument maintenance (P32) and console monitoring (P14).",
+        "recommendation": "keep",
+        "title": "SCADA Engineer",
+        "whereTheWorkHappens": "Pipeline control center back-office and operational technology server rooms"
+      },
+      {
+        "aliases": [
+          "Flow Measurement Specialist",
+          "Gas Measurement Engineer",
+          "Custody Transfer Specialist"
+        ],
+        "anchor": "API MPMS Chapter 21 / AGA Report Nos. 3, 8, 9, 11",
+        "anchorCitation": "API Manual of Petroleum Measurement Standards (MPMS) Chapter 21 ('Flow Measurement Using Electronic Metering Systems' Sections 21.1 and 21.2) and American Gas Association (AGA) Reports No. 3 (Orifice), No. 8 (Compressibility), No. 9 (Ultrasonic), and No. 11 (Coriolis)",
+        "anchorUrl": "https://www.api.org/products-and-services/standards/manual-of-petroleum-measurement-standards",
+        "exampleAgentableWork": [
+          "Reconcile daily lost and unaccounted for (LAUF) mass and volumetric balances across pipeline segments and receipt/delivery meter stations.",
+          "Audit electronic flow measurement (EFM) configuration change logs and historical audit trails against API MPMS Chapter 21 security requirements.",
+          "Perform statistical trend analysis on meter proving reports and meter factors (MF) to detect meter slippage, drift, or erosion in ultrasonic and Coriolis skids.",
+          "Validate gas chromatograph (GC) compositional analyses and calculate AGA-8 compressibility factors and gross heating value (BTU/SCF) adjustments for billing reconciliations."
+        ],
+        "knowledgeWorkVerdict": "Very High — heavily focused on mathematical fluid property calculations, custody transfer audit trail verification, meter factor trend analysis, and lost-and-unaccounted-for reconciliations.",
+        "oneLine": "Validates, reconciles, and audits custody transfer volume, mass, and energy calculations across electronic flow measurement systems, metering skids, and gas chromatographs.",
+        "overlapPct": 15,
+        "overlapsWith": "none",
+        "reason": "Specialized midstream discipline governing fiscal and regulatory hydrocarbon measurement integrity; distinct from field instrumentation technicians (P32) or commercial schedulers (P29).",
+        "recommendation": "keep",
+        "title": "Measurement Engineer",
+        "whereTheWorkHappens": "Measurement accounting office, meter proving facilities, and pipeline interconnect stations"
+      }
+    ],
+    "domain": "midstream",
+    "notes": "Identified 4 well-recognized candidate roles in gas & liquids transmission / network control. Pipeline Controller merges into existing persona P14 (95% overlap). The other three candidates (Pipeline Hydraulic Engineer, SCADA Engineer, Measurement Engineer) represent distinct, highly agentable engineering and analytical disciplines that should be kept. Adjacent specialisms such as computational pipeline monitoring (CPM) and leak detection analysis are consolidated under Pipeline Hydraulic Engineer per Rule 5.",
+    "subSegment": "Gas & liquids transmission / network control"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Compressor Station Operator",
+          "Pump Station Operator",
+          "Gas Compressor Operator"
+        ],
+        "anchor": "ASME B31Q (Pipeline Personnel Qualification) / API RP 1161 (Recommended Practice for Pipeline Operator Qualification)",
+        "anchorCitation": "ASME B31Q Nonmandatory Appendix A (Task 0441: Compressor Start-Up and Shutdown; Task 0451: Pump Start-Up and Shutdown; Task 1361: Station Emergency Shutdown System) & API RP 1161 Task Profiles",
+        "anchorUrl": "https://www.asme.org/codes-standards/find-codes-standards/b31q-pipeline-personnel-qualification",
+        "exampleAgentableWork": [
+          "Pre-calculating unit compression ratio, polytropic head, and distance to surge across varying suction pressure, ambient temperature, and gas composition to recommend optimal driver load and recycle valve settings.",
+          "Synthesizing hourly station telemetry (bearing temperatures, vibration levels, scrubber differential pressures, filter-separator delta-P) into structured shift handover logs and anomaly alerts.",
+          "Quantifying vented natural gas volumes during unit depressurization, startup/shutdown sequences, or packing leakage using station volume geometry and blowdown pressure curves for environmental compliance reporting.",
+          "Drafting equipment isolation procedures, lockout/tagout (LOTO) boundaries, and safety checklists for planned maintenance on compressor skids and pump trains."
+        ],
+        "knowledgeWorkVerdict": "High. Performs daily operational parameter calculations (compression ratio, polytropic head, surge margins, fuel/power efficiency), abnormal condition diagnostics, permit-to-work isolation scheduling, and regulatory venting/blowdown event accounting.",
+        "oneLine": "Operates, monitors, and optimizes compressor and mainline pump station units, auxiliary process systems, and station safety controls.",
+        "overlapPct": 25,
+        "overlapsWith": "none",
+        "reason": "Essential frontline operational persona managing midstream station equipment packages; distinct from centralized pipeline controllers (P14) who manage wide-area pipeline network hydraulics, and upstream lease operators (P10) who manage wellpads.",
+        "recommendation": "keep",
+        "title": "Station Operator",
+        "whereTheWorkHappens": "On-site at midstream gas compressor stations, liquid pump stations, and local station control consoles."
+      },
+      {
+        "aliases": [
+          "Machinery Engineer",
+          "Compressor Engineer",
+          "Rotating Machinery Specialist"
+        ],
+        "anchor": "API Standard 617 (Axial and Centrifugal Compressors and Expander-compressors) / API Standard 618 (Reciprocating Compressors for Petroleum, Chemical, and Gas Industry Services) / ASME PTC 10 (Compressors and Exhausters)",
+        "anchorCitation": "API Standard 617 Part 1-4, API Standard 618, and ASME PTC 10 (Performance Test Code on Compressors and Exhausters)",
+        "anchorUrl": "https://www.api.org/products-and-services/standards",
+        "exampleAgentableWork": [
+          "Comparing real-time compressor discharge pressures, temperatures, and driver power against OEM factory performance curves (ASME PTC 10) to quantify impeller fouling, internal recirculation, or driver thermal degradation.",
+          "Synthesizing spectral vibration data (1X, 2X, sub-synchronous harmonics, orbit plots) from continuous monitoring systems to diagnose shaft misalignment, unbalance, bearing wear, or acoustic resonance.",
+          "Reconciling dry gas seal primary vent leakage flow rates, buffer gas dew points, and differential pressure across seal faces to predict seal degradation and project remaining useful life.",
+          "Compiling operational trip sequences, process trend logs, and component inspection data into structured Root Cause Failure Analysis (RCFA) dossiers with engineering corrective action plans."
+        ],
+        "knowledgeWorkVerdict": "Very High. Conducts aerothermal performance modeling, rotor dynamics assessments, vibration spectral analysis (FFT), dry gas seal degradation evaluations, and Root Cause Failure Analyses (RCFA) for machinery trips.",
+        "oneLine": "Diagnoses mechanical and aerodynamic health, calculates performance curves, and specifies maintenance and overhauls for station compressors, turbines, and pumps.",
+        "overlapPct": 45,
+        "overlapsWith": "P20 Reliability Engineer",
+        "reason": "Midstream stations are defined by high-energy rotating machinery; rotating equipment engineering requires specialized thermodynamic, aerodynamic, and dynamic mechanical expertise distinct from general facility reliability engineering (P20).",
+        "recommendation": "keep",
+        "title": "Rotating Equipment Engineer",
+        "whereTheWorkHappens": "Regional midstream engineering offices and on-site at compressor and pumping stations during overhauls, testing, and performance audits."
+      },
+      {
+        "aliases": [
+          "Gas Measurement Specialist",
+          "Custody Transfer Technician",
+          "Metering Technician"
+        ],
+        "anchor": "API Manual of Petroleum Measurement Standards (MPMS) Chapter 14 / Chapter 21 & AGA Reports No. 3, 7, 9, 11",
+        "anchorCitation": "API MPMS Chapter 14.3 (Orifice Metering), Chapter 21.1 (Electronic Gas Measurement), and AGA Report No. 9 (Multipath Ultrasonic Gas Meters)",
+        "anchorUrl": "https://www.api.org/products-and-services/standards",
+        "exampleAgentableWork": [
+          "Validating meter proving run repeatability against API MPMS tolerance criteria, computing updated meter factors, and flagging statistical deviations from baseline proving history.",
+          "Auditing gas chromatograph calibration gas response factors, un-normalized composition totals, and gross heating value (BTU/scf) calculations against AGA/GPA calculation standards.",
+          "Analyzing flow computer log archives, differential pressure anomalies, and transmitter status codes to calculate volume adjustments and backfill estimates during metering outages.",
+          "Structuring dimensional micrometer check data and visual inspection observations of orifice plates and meter tubes into regulatory custody compliance records."
+        ],
+        "knowledgeWorkVerdict": "High. Verifies meter proving runs, evaluates meter factor stability, checks gas chromatograph calibration gas response, and reconciles flow computer audit logs for custody transfer volume settlement.",
+        "oneLine": "Inspects, calibrates, proves, and audits custody transfer flow meters, flow computers, and analytical equipment at station receipts, deliveries, and interconnects.",
+        "overlapPct": 75,
+        "overlapsWith": "P32 Instrument Technician",
+        "reason": "Overlaps >=70% with P32 Instrument Technician. Custody transfer flow computers, transmitters, and analytical instruments fall within the instrument technician domain; agentic workflows for calibration verification, loop testing, and drift detection align directly with P32.",
+        "recommendation": "merge",
+        "title": "Measurement Technician",
+        "whereTheWorkHappens": "Metering skids, analytical sample shelters, and proving loops at compressor stations, pump stations, and pipeline interconnects."
+      },
+      {
+        "aliases": [
+          "Compressor Mechanic",
+          "Station Millwright",
+          "Machinery Technician"
+        ],
+        "anchor": "ASME B31Q (Pipeline Personnel Qualification) Task 0461 / 0471 / 0481",
+        "anchorCitation": "ASME B31Q Nonmandatory Appendix A (Task 0461: Compressor Preventive Maintenance; Task 0471: Inspect, Test, and Maintain Reciprocating Compressors; Task 0481: Inspect, Test, and Maintain Centrifugal Compressors)",
+        "anchorUrl": "https://www.asme.org/codes-standards/find-codes-standards/b31q-pipeline-personnel-qualification",
+        "exampleAgentableWork": [
+          "Compiling required bill of materials (gaskets, valve rebuild kits, O-rings) and specialty tooling checklists from OEM service manuals for an upcoming unit top-end overhaul.",
+          "Populating pre-formatted digital inspection data sheets with OEM-specified clearance limits (crankpin clearances, piston ring gaps) and torque sequences for field measurements.",
+          "Tracking cumulative engine and compressor running hours against scheduled maintenance threshold matrices to trigger preventive maintenance work orders."
+        ],
+        "knowledgeWorkVerdict": "Low. Predominantly manual, physical mechanical maintenance (wrench time) involving engine teardowns, valve overhauls, cylinder liner replacement, shaft alignments, and seal swaps.",
+        "oneLine": "Executes mechanical overhaul, component replacement, alignment, and physical preventive maintenance on station compressor and pump packages.",
+        "overlapPct": 20,
+        "overlapsWith": "none",
+        "reason": "Drop per Rule 3. The role is dominated by physical wrench time and hands-on mechanical repair, with insufficient preparable knowledge work to justify an independent AI agent persona.",
+        "recommendation": "drop",
+        "title": "Compression Technician",
+        "whereTheWorkHappens": "Mechanical maintenance bays and packaged equipment skids at compressor and pump station facilities."
+      }
+    ],
+    "domain": "midstream",
+    "notes": "Midstream compression and pumping stations are operationally anchored by turbomachinery and high-pressure pumping units. Two core roles should be kept: Station Operator (frontline operations, surge margins, station logs, emissions blowdown tracking) and Rotating Equipment Engineer (aerothermal performance, vibration dynamics, dry gas seal degradation, RCFA). Measurement Technician is recommended to merge into P32 Instrument Technician due to 75% overlap in instrumentation calibration and loop checks. Compression Technician is dropped due to predominantly hands-on mechanical wrench work.",
+    "subSegment": "Compression & pumping stations"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Pipeline IMP Engineer",
+          "Integrity Management Engineer",
+          "Asset Integrity Engineer (Pipelines)"
+        ],
+        "anchor": "ASME B31.8S / API RP 1160",
+        "anchorCitation": "ASME B31.8S 'Managing System Integrity of Gas Pipelines' and API Recommended Practice 1160 'Managing System Integrity for Hazardous Liquid Pipelines'",
+        "anchorUrl": "https://www.asme.org/codes-standards/find-codes-standards/b31-8s-managing-system-integrity-gas-pipelines",
+        "exampleAgentableWork": [
+          "Compute remaining burst pressure and safe operating pressure margins using ASME B31G, Modified B31G, and RSTRENG algorithms across high-density ILI anomaly callouts.",
+          "Reconcile spatio-temporal alignment across historical ILI pigging runs to determine true corrosion growth rates and recalculate mandated reinspection intervals.",
+          "Assemble excavation and direct examination repair work packages integrating GPS coordinates, depth of cover, high-consequence area (HCA) classifications, and foreign utility crossings.",
+          "Draft annual regulatory integrity management program (IMP) compliance filings and auditable performance metric reports conforming to pipeline safety agency mandates."
+        ],
+        "knowledgeWorkVerdict": "Substantial high-value engineering knowledge work: integrates multi-source inline inspection data, performs remaining-strength and burst-pressure calculations, models segment-level risk, prioritizes defect excavation programs, and authors regulatory compliance documentation.",
+        "oneLine": "Directs the pipeline integrity management program (IMP) by evaluating fitness-for-service, modeling failure risks, and scheduling remediation excavations across transmission and gathering systems.",
+        "overlapPct": 100,
+        "overlapsWith": "P27 Pipeline Integrity Engineer",
+        "reason": "Exact 1:1 match with existing persona P27 Pipeline Integrity Engineer in title, scope of authority, and analytical workflow.",
+        "recommendation": "merge",
+        "title": "Pipeline Integrity Engineer",
+        "whereTheWorkHappens": "Midstream technical operating offices and asset integrity engineering teams."
+      },
+      {
+        "aliases": [
+          "Cathodic Protection Engineer",
+          "Pipeline Corrosion Specialist",
+          "Corrosion Prevention Engineer"
+        ],
+        "anchor": "AMPP SP0169 / AMPP SP0208",
+        "anchorCitation": "AMPP SP0169 'Control of External Corrosion on Underground or Submerged Metallic Piping Systems' and AMPP SP0208 'Internal Corrosion Direct Assessment Methodology for Liquid Petroleum Pipelines'",
+        "anchorUrl": "https://www.ampp.org/standards/ampp-sp0169",
+        "exampleAgentableWork": [
+          "Evaluate annual test-station surveys and Close Interval Survey (CIS) potential profiles against the -850 mV CSE polarized criterion to pinpoint under-protected pipe segments and coating degradation.",
+          "Simulate alternating current (AC) and direct current (DC) stray interference profiles along pipeline corridors co-located with high-voltage power transmission lines to size mitigation grounding grids.",
+          "Reconcile chemical inhibitor and biocide dosing regimes against fluid analysis, water-draw chemistry, and weight-loss coupon / electrical resistance (ER) probe corrosion rate logs.",
+          "Draft engineering design packages and bills-of-materials for Impressed Current Cathodic Protection (ICCP) groundbeds and deep anode well replacements."
+        ],
+        "knowledgeWorkVerdict": "Substantial analytical knowledge work: interprets complex electrochemical survey profiles, simulates electromagnetic interference, calculates groundbed and sacrificial anode requirements, and models internal chemical degradation rates. Highly suitable for agentic data preparation.",
+        "oneLine": "Designs, evaluates, and optimizes external cathodic protection systems, protective coatings, and internal chemical inhibition programs to prevent pipeline material degradation.",
+        "overlapPct": 35,
+        "overlapsWith": "none",
+        "reason": "Distinct electrochemical and chemical engineering discipline from P27 Pipeline Integrity Engineer. While integrity engineers consume corrosion metrics to model remaining burst pressure, the Corrosion Engineer independently specifies, monitors, and designs the active cathodic protection (CP), coating, and chemical mitigation barriers.",
+        "recommendation": "keep",
+        "title": "Corrosion Engineer",
+        "whereTheWorkHappens": "Midstream corrosion and asset preservation engineering departments, working between office-based modeling software and regional field operations."
+      },
+      {
+        "aliases": [
+          "In-Line Inspection Analyst",
+          "Pipeline ILI Analyst",
+          "Smart Pigging Data Analyst"
+        ],
+        "anchor": "ANSI/ASNT ILI-PQ / API Standard 1163",
+        "anchorCitation": "ANSI/ASNT ILI-PQ 'In-Line Inspection Personnel Qualification and Certification' and API Standard 1163 'In-Line Inspection Systems Qualification Standard'",
+        "anchorUrl": "https://www.asnt.org/MajorSiteSections/Standards/ANSI_ASNT_ILI_PQ",
+        "exampleAgentableWork": [
+          "Screen and filter multi-channel sensor logs (magnetic flux leakage, ultrasonic wall thickness, and caliper geometry) to discriminate true pipeline metal loss from fabrication flaws and sensor noise.",
+          "Apply defect interaction and clustering criteria to evaluate whether adjacent corrosion pits interact structurally under pipeline integrity codes.",
+          "Calculate defect length, width, and depth metrics against vendor tool tolerance bands and certainty thresholds to generate preliminary anomaly severity tiers.",
+          "Draft standardized pipe tally tables cross-referencing odometer footage, pipeline girth welds, valve markers, and above-ground survey benchmarks."
+        ],
+        "knowledgeWorkVerdict": "Deep technical data-processing and pattern-recognition knowledge work: processes voluminous non-destructive testing (NDT) sensor streams, filters signal noise, classifies features, and generates structured inspection tallies. Strong candidate for agentic workflow acceleration.",
+        "oneLine": "Processes, screens, and interprets complex multi-technology in-line inspection sensor data to detect, characterize, and size pipeline anomalies.",
+        "overlapPct": 40,
+        "overlapsWith": "none",
+        "reason": "Formalized as an independent technical qualification under ANSI/ASNT ILI-PQ (Levels I-III). Distinct from P27 Pipeline Integrity Engineer: the ILI Data Analyst specializes in raw sensor signal interpretation, feature extraction, and tally verification, whereas the integrity engineer consumes the finished tally for fitness-for-service and dig scheduling.",
+        "recommendation": "keep",
+        "title": "ILI Data Analyst",
+        "whereTheWorkHappens": "In-line inspection data processing centers, specialized pipeline integrity technology groups, and inspection service analysis hubs."
+      },
+      {
+        "aliases": [
+          "CP Technician",
+          "Cathodic Protection Tester",
+          "Corrosion Field Technician"
+        ],
+        "anchor": "AMPP CP 1 / CP 2 / 49 CFR § 192.465",
+        "anchorCitation": "AMPP Cathodic Protection Tester / Technologist Certification Criteria and Title 49 CFR § 192.465 'External corrosion control: Monitoring'",
+        "anchorUrl": "https://www.ampp.org/education/certification-programs/cathodic-protection",
+        "exampleAgentableWork": [
+          "Generate daily route driving manifests and field equipment checklists for routine pipeline test-station potential survey rounds.",
+          "Transcribe manual multimeter voltage readings, rectifier DC voltage/amperage outputs, and shunt values into integrity management databases with automated boundary checks.",
+          "Compile equipment calibration records and field test lead maintenance logs ahead of scheduled regulatory compliance audits."
+        ],
+        "knowledgeWorkVerdict": "Predominantly physical manual fieldwork: duties center on driving pipeline rights-of-way, connecting multimeters to test stations, measuring pipe-to-soil potentials with reference half-cells, servicing rectifier hardware, and pulling coupons. Insufficient desktop knowledge work to warrant an executive agentic persona.",
+        "oneLine": "Collects field pipe-to-soil potential measurements, monitors cathodic protection rectifiers, and maintains physical corrosion test stations along pipeline rights-of-way.",
+        "overlapPct": 25,
+        "overlapsWith": "none",
+        "reason": "Fails the knowledge work threshold for standalone executive persona prioritization: the role is primarily hands-on field testing and physical measurement along the pipeline right-of-way. Knowledge tasks are subordinate to physical fieldwork.",
+        "recommendation": "drop",
+        "title": "Corrosion Technician",
+        "whereTheWorkHappens": "Pipeline rights-of-way, valve sites, compressor/meter stations, and field operations trucks."
+      }
+    ],
+    "domain": "midstream",
+    "notes": "Evaluated the midstream pipeline integrity & corrosion sub-segment against authoritative standards (ASME, API, AMPP/NACE, ASNT). Mapped core integrity governance directly to existing persona P27 Pipeline Integrity Engineer (merged). Identified Corrosion Engineer and ILI Data Analyst as distinct, high-impact knowledge roles recommended for retention, while dropping field-dominated technician positions.",
+    "subSegment": "Pipeline integrity & corrosion"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Metering Engineer",
+          "Flow Measurement Engineer",
+          "Fiscal Metering Engineer"
+        ],
+        "anchor": "American Petroleum Institute (API) / International Organization for Standardization (ISO)",
+        "anchorCitation": "API MPMS Chapter 5 (Metering), Chapter 4 (Proving Systems), Chapter 6 (Metering Assemblies), Chapter 14 (Natural Gas Fluids Measurement); ISO 5168:2005 (Measurement of fluid flow - Procedures for the evaluation of uncertainties)",
+        "anchorUrl": "https://www.api.org/products-and-services/standards",
+        "exampleAgentableWork": [
+          "Formulate cumulative measurement uncertainty budgets across primary, secondary, and tertiary instrumentation per ISO 5168 and API MPMS guidelines.",
+          "Validate flow computer calculation algorithms and configuration parameters against API MPMS Chapter 11/12 volume correction factor tables and equations of state.",
+          "Evaluate historical meter factor trends and linearity curves across varying fluid viscosities to detect mechanical wear or flow disturbance before proving failure.",
+          "Prepare technical audit packages and custody transfer compliance documentation for pipeline interconnect agreements and regulatory inspections."
+        ],
+        "knowledgeWorkVerdict": "High cognitive demand; involves complex flow dynamics, thermodynamic calculations, cumulative uncertainty budget modeling, meter proving analysis, and regulatory compliance audit defense.",
+        "oneLine": "Designs, specifies, and audits dynamic and static custody transfer metering systems to ensure flow measurement uncertainty conforms to statutory, commercial, and technical standards.",
+        "overlapPct": 15,
+        "overlapsWith": "none",
+        "reason": "Distinct technical engineering role focused on fiscal metering physics, uncertainty modeling, and standard compliance. Minimal overlap (<15%) with P12 Facilities Engineer (broad plant equipment/piping) and P32 Instrument Technician (field-level loop checks and mechanical maintenance).",
+        "recommendation": "keep",
+        "title": "Measurement Engineer",
+        "whereTheWorkHappens": "Engineering office, technical review sessions, metering skid fabrication audits, and supervisory control / flow computer testing benches."
+      },
+      {
+        "aliases": [
+          "Gas Measurement Analyst",
+          "Liquid Measurement Analyst",
+          "Volume Accounting Analyst",
+          "Hydrocarbon Measurement Analyst"
+        ],
+        "anchor": "American Petroleum Institute (API) / GPA Midstream Association / Council of Petroleum Accountants Societies (COPAS)",
+        "anchorCitation": "API MPMS Chapter 21 (Flow Measurement Using Electronic Metering Systems: Section 21.1 Electronic Gas Measurement, Section 21.2 Electronic Liquid Measurement); GPA Midstream Standard 2145 & 2172; COPAS AG-6 & AG-15",
+        "anchorUrl": "https://www.api.org/products-and-services/standards",
+        "exampleAgentableWork": [
+          "Screen daily electronic flow measurement (EFM) exception logs, isolating missing flow intervals, frozen sensor telemetry, and abnormal differential pressure excursions.",
+          "Estimate missing volumes during meter outages or communication failures using historical baseline regressions compliant with API MPMS Chapter 21 audit rules.",
+          "Reconcile custody transfer run tickets against pipeline receipt/delivery statements and flag discrepancies exceeding contractual tolerance thresholds.",
+          "Calculate daily segment balances, line loss percentages, and unaccounted-for (UAF) gas or liquid volumes to identify systemic measurement anomalies."
+        ],
+        "knowledgeWorkVerdict": "Pure office-based knowledge work; focuses on volumetric reconciliation, data anomaly detection, missing volume estimation, proving report verification, and contractual dispute investigation.",
+        "oneLine": "Validates, reconciles, and edits electronic flow measurement data and custody transfer tickets to produce legally defensible volumetric and energy accounting balances.",
+        "overlapPct": 10,
+        "overlapsWith": "none",
+        "reason": "Core midstream volumetric validation and data integrity role sitting between physical operations and commercial settlement. Negligible overlap (<10%) with P29 Crude & Product Scheduler (pipeline batch nominations/scheduling) and P14 Pipeline Controller (real-time SCADA operations).",
+        "recommendation": "keep",
+        "title": "Measurement Analyst",
+        "whereTheWorkHappens": "Commercial and midstream operations office, utilizing measurement data management platforms, electronic flow measurement databases, and volumetric accounting systems."
+      },
+      {
+        "aliases": [
+          "Loss Control Coordinator",
+          "Hydrocarbon Loss Specialist",
+          "Cargo Loss Analyst",
+          "Measurement Auditor"
+        ],
+        "anchor": "American Petroleum Institute (API) / Energy Institute (EI)",
+        "anchorCitation": "API MPMS Chapter 17 (Marine Measurement: Chapters 17.1, 17.2, 17.4, 17.5, and 17.9 Guidelines for Cargo Analysis and Reconciliation of Liquid Hydrocarbon Cargoes); Energy Institute HM 28, HM 31, and HM 32",
+        "anchorUrl": "https://www.energyinst.org/standards",
+        "exampleAgentableWork": [
+          "Reconcile ship-to-shore custody transfer figures (bill of lading vs. shore tank receipt vs. vessel outturn) and evaluate vessel experience factors (VEF) per API MPMS Chapter 17.",
+          "Conduct root-cause variance analysis on transit volume discrepancies to isolate physical loss (evaporation, line pack hold-up) from measurement bias (temperature stratification, sediment and water cut error).",
+          "Audit independent inspection certificates, prover calibration logs, and laboratory test reports for procedural compliance with API and Energy Institute standards.",
+          "Draft technical and commercial dispute dossiers supporting volume loss claims against shippers, terminal operators, or marine carriers."
+        ],
+        "knowledgeWorkVerdict": "High analytical and investigative knowledge work; focuses on custody transfer voyage reconciliations, physical loss vs. apparent measurement loss investigations, independent inspection reviews, and dispute settlement dossiers.",
+        "oneLine": "Monitors, investigates, and reconciles commercial hydrocarbon quantity discrepancies across custody transfer points, marine vessels, pipelines, and storage terminals.",
+        "overlapPct": 15,
+        "overlapsWith": "none",
+        "reason": "Specialized custody transfer commercial and volume reconciliation role resolving physical vs. apparent losses across custody boundaries. Does not significantly overlap (<15%) with P15 Terminal Superintendent (broad terminal management) or P14 Pipeline Controller.",
+        "recommendation": "keep",
+        "title": "Loss Control Specialist",
+        "whereTheWorkHappens": "Commercial operations office, marine terminal inspection reviews, custody transfer audit desks, and joint-venture reconciliation meetings."
+      },
+      {
+        "aliases": [
+          "Metering Technician",
+          "Field Measurement Specialist",
+          "Measurement & Regulation Technician"
+        ],
+        "anchor": "American Petroleum Institute (API) / International Society of Automation (ISA)",
+        "anchorCitation": "API MPMS Chapter 4 (Proving Systems), Chapter 6 (Metering Assemblies), and Chapter 8 (Sampling); ISA Certified Control Systems Technician (CCST) Body of Knowledge",
+        "anchorUrl": "https://www.isa.org/training-and-certification/isa-certification/ccst",
+        "exampleAgentableWork": [
+          "Review meter proving run data for pulse count repeatability and calculate preliminary meter factors against API MPMS Chapter 4 tolerances.",
+          "Generate step-by-step field calibration procedure checklists and verification sheets for dynamic flow computers and multi-variable transmitters.",
+          "Verify automated composite sampler grab frequencies against flowing line velocity and API MPMS Chapter 8 sampling specifications.",
+          "Draft field inspection reports and deviation notes following physical inspections of primary elements, flow conditioners, and straight-run meter tubes."
+        ],
+        "knowledgeWorkVerdict": "Blend of procedural verification math (proving runs, repeatability calculations) with extensive hands-on manual maintenance (pulling orifice plates, hooking up provers, zeroing transmitters, valve maintenance, sample collection).",
+        "oneLine": "Executes field proving, calibration, testing, and maintenance of flow meters, secondary instrumentation, custody transfer skids, and automatic sampling systems.",
+        "overlapPct": 75,
+        "overlapsWith": "P32 Instrument Technician",
+        "reason": "High overlap (75%) with existing persona P32 Instrument Technician. Both roles share core competencies in sensor calibration, loop checks, transmitter maintenance, and signal verification. In midstream operations, measurement technician duties are commonly executed by specialized instrument technicians.",
+        "recommendation": "merge",
+        "title": "Measurement Technician",
+        "whereTheWorkHappens": "Field metering skids, pipeline compressor and pump stations, LACT units, and field meter calibration test benches."
+      }
+    ],
+    "domain": "midstream",
+    "notes": "Identified 4 industry-recognized midstream roles across measurement & custody transfer: 3 recommended to keep (Measurement Engineer, Measurement Analyst, Loss Control Specialist) as distinct analytical/engineering personas, and 1 recommended to merge (Measurement Technician into P32 Instrument Technician due to 75% overlap in calibration, loop testing, and transmitter servicing).",
+    "subSegment": "Measurement & custody transfer"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Gas Processing Engineer",
+          "Plant Process Engineer",
+          "Gas Treating Engineer"
+        ],
+        "anchor": "GPA Midstream Association / GPSA",
+        "anchorCitation": "GPSA Engineering Data Book (Section 16: Hydrocarbon Recovery, Section 20: Dehydration, Section 21: Hydrocarbon Treating) and GPA Midstream Technical Standards.",
+        "anchorUrl": "https://www.gpamidstream.org",
+        "exampleAgentableWork": [
+          "Run steady-state simulation checks to evaluate column reboiler duty and solvent circulation adjustments against shifts in inlet gas composition.",
+          "Draft management of change (MOC) technical packages, process hazard reviews, and pressure relief valve sizing verifications for process modifications.",
+          "Calculate plant thermal efficiency, residue gas gross heating value, and ethane/propane recovery split curves to isolate unit bottlenecks.",
+          "Generate plant corrosion and degradation rate trend reports using acid gas loading, amine reclaimer residue data, and partial pressure calculations."
+        ],
+        "knowledgeWorkVerdict": "High cognitive intensity involving steady-state thermodynamics, solvent circulation kinetics, equipment rating, debottlenecking, and process safety reviews.",
+        "oneLine": "Monitors, optimizes, and troubleshoots gas sweetening, dehydration, cryogenic NGL recovery, and fractionation trains to maximize yield and ensure process safety.",
+        "overlapPct": 100,
+        "overlapsWith": "P26 Gas Plant Engineer",
+        "reason": "Exact match with existing catalog persona P26 Gas Plant Engineer, which already defines the core engineering, debottlenecking, and thermodynamic simulation scope for midstream gas processing facilities.",
+        "recommendation": "merge",
+        "title": "Gas Plant Engineer",
+        "whereTheWorkHappens": "Facility engineering offices and technical support centers utilizing supervisory data and process simulation models."
+      },
+      {
+        "aliases": [
+          "Gas Processing Operator",
+          "Gas Plant Board Operator",
+          "Cryogenic Plant Operator",
+          "Gas Plant Technician"
+        ],
+        "anchor": "O*NET Standard Occupational Classification / API RP 1161",
+        "anchorCitation": "O*NET-SOC 51-8092.00 (Gas Plant Operators) and API RP 1161 (Recommended Practice for Pipeline Operator Qualification - Covered Tasks for Gas Handling and Processing).",
+        "anchorUrl": "https://www.onetonline.org/link/summary/51-8092.00",
+        "exampleAgentableWork": [
+          "Synthesize control system alarm journals, process boundary excursions, and equipment bypass states to compile structured shift handover logs.",
+          "Generate operating checklists and commissioning purge sequences for restarting amine contactors, molecular sieve dehydration beds, or turboexpanders after maintenance.",
+          "Calculate glycol regeneration reboiler temperatures and stripping gas flow rates required to meet pipeline moisture and water dew point specifications.",
+          "Draft safety isolation work permits and Lockout/Tagout (LOTO) isolation schedules from piping and instrumentation diagrams (P&IDs) for scheduled unit maintenance."
+        ],
+        "knowledgeWorkVerdict": "Substantial operational analysis, alarm triage, shift handover reporting, standard operating procedure synthesis, and permit isolation drafting.",
+        "oneLine": "Controls real-time operations across gas treating, cryogenic extraction, fractionation, and compression systems to maintain safe throughput and product specifications.",
+        "overlapPct": 25,
+        "overlapsWith": "none",
+        "reason": "Primary frontline operating role in midstream gas processing. While sharing general panel operation concepts with downstream refinery board operators (P03, ~25% overlap) and upstream production operators (P11, ~25% overlap), this role governs distinct cryogenic refrigeration, amine acid-gas treating, and fractionation unit operations under midstream operating standards.",
+        "recommendation": "keep",
+        "title": "Gas Plant Operator",
+        "whereTheWorkHappens": "Central control room console and field process units."
+      },
+      {
+        "aliases": [
+          "Gas Measurement Technician",
+          "Measurement Analyst",
+          "Custody Transfer Specialist",
+          "Gas Measurement Engineer"
+        ],
+        "anchor": "American Gas Association (AGA) / American Petroleum Institute (API MPMS)",
+        "anchorCitation": "API MPMS Chapter 14 (Natural Gas Fluids Measurement) & Chapter 21.1 (Electronic Gas Measurement); AGA Report No. 3 (Orifice Metering), Report No. 9 (Ultrasonic), Report No. 11 (Coriolis); GPA Standard 2261 (Gas Chromatography Analysis).",
+        "anchorUrl": "https://www.api.org/products-and-services/standards",
+        "exampleAgentableWork": [
+          "Reconcile daily electronic gas measurement (EGM) hourly flow records against supervisory archives and check meters to detect unmetered bypass, differential pressure freezing, or sensor drift.",
+          "Validate gas chromatograph un-normalized mole percent totals, component response factors, and gross heating value calculations against calibration gas blend certificates.",
+          "Compute plant thermal mass balance, fuel gas consumption, flare volumes, and plant shrinkage percentages for monthly producer allocation statements.",
+          "Draft meter recalibration compliance packages, orifice plate inspection reports, and flow computer configuration change logs per custody transfer standards."
+        ],
+        "knowledgeWorkVerdict": "Rigorous analytical and audit work involving flow equation verification, gas chromatograph calibration checking, lost and unaccounted for (LAUF) reconciliation, and billing adjustments.",
+        "oneLine": "Validates, reconciles, and audits custody-transfer flow measurement and chromatographic gas quality data to ensure accurate volume allocation and contract compliance.",
+        "overlapPct": 25,
+        "overlapsWith": "none",
+        "reason": "Specialized midstream discipline focused on custody transfer measurement integrity, gas chromatography, and volume reconciliation. While instrument loop calibration shares limited craft overlap with general instrumentation technicians (P32 Instrument Technician, ~25% overlap), the role centers on fiscal auditing, fluid flow thermodynamics, and contract accounting.",
+        "recommendation": "keep",
+        "title": "Gas Measurement Specialist",
+        "whereTheWorkHappens": "Measurement analytics office, custody transfer metering skids, and gas quality testing laboratories."
+      },
+      {
+        "aliases": [
+          "Gas Logistics Coordinator",
+          "Midstream Scheduler",
+          "Gas Nomination Specialist"
+        ],
+        "anchor": "North American Energy Standards Board (NAESB)",
+        "anchorCitation": "NAESB Wholesale Gas Quadrant (WGQ) Standards for Nominations, Confirmations, and Electronic Delivery Mechanisms (WGQ Version 3.2).",
+        "anchorUrl": "https://www.naesb.org",
+        "exampleAgentableWork": [
+          "Reconcile plant outlet forecast production against pipeline transportation capacity contracts across standard nomination cycles (Timely, Evening, and Intraday cycles).",
+          "Monitor pipeline electronic bulletin board operational flow orders, capacity curtailments, and maintenance outages to draft volume rerouting plans.",
+          "Calculate cumulative shipper monthly imbalance positions and cash-out settlement figures based on allocated meter volumes versus scheduled quantities.",
+          "Prepare daily residue gas delivery and purity NGL product dispatch schedules coordinating pipeline interconnect flows, railcar rack loading, and storage injection."
+        ],
+        "knowledgeWorkVerdict": "High-paced logistical coordination, volumetric reconciliation, imbalance accounting, and capacity optimization across rigid contractual deadlines.",
+        "oneLine": "Manages physical pipeline nominations, confirmations, and allocations for residue gas and NGL takeaway to balance plant receipts and deliveries across commercial cycles.",
+        "overlapPct": 75,
+        "overlapsWith": "P29 Crude & Product Scheduler",
+        "reason": "Overlaps substantially (>70%) with existing catalog persona P29 Crude & Product Scheduler in fundamental nomination mechanics, transport contract tracking, carrier allocation, and imbalance reconciliation, differing primarily by fluid phase (gas vapor and NGLs vs crude/refined liquid batches) and standard nomination cycles.",
+        "recommendation": "merge",
+        "title": "Gas Scheduler",
+        "whereTheWorkHappens": "Commercial logistics and operations dispatch office."
+      }
+    ],
+    "domain": "midstream",
+    "notes": "Identified 4 industry-standard roles spanning engineering, operations, measurement, and logistics in midstream gas processing. Evaluated overlap against existing catalog personas (P01-P33), identifying 2 net-new roles to keep (Gas Plant Operator and Gas Measurement Specialist) and 2 roles to merge into existing personas (Gas Plant Engineer into P26, and Gas Scheduler into P29).",
+    "subSegment": "Gas processing"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Marine Loading Master",
+          "Terminal Representative",
+          "Person in Charge Marine Transfer"
+        ],
+        "anchor": "ISGOTT 6th Ed. / OCIMF MTMSA Element 8 / SIGTTO / USCG 33 CFR 156 & 127",
+        "anchorCitation": "International Safety Guide for Oil Tankers and Terminals (ISGOTT 6th Edition, Chapters 21 & 26: Cargo Transfer Operations and Ship/Shore Safety Checklist); OCIMF Marine Terminal Management and Self Assessment (MTMSA Element 8); SIGTTO Liquefied Gas Handling Principles on Ships and in Terminals; USCG 33 CFR 156.120 / 33 CFR 127.301.",
+        "anchorUrl": "https://www.ocimf.org/publications/books/isgott-6th-edition",
+        "exampleAgentableWork": [
+          "Compile pre-arrival vessel declaration data and terminal berth physical constraints into a verified Ship/Shore Safety Checklist (SSCL) and pre-transfer conference protocol.",
+          "Calculate cryogenic line cooldown rates, maximum flow ramp-up schedules, and boil-off gas (BOG) return balances based on manifold pressures and tank equilibrium conditions.",
+          "Reconcile real-time cargo transfer flow logs, arm operating envelope limits, and manifold pressure trends to produce transfer timesheets, delay records, and demurrage logs.",
+          "Generate automated emergency shutdown (ESD-1 and ESD-2) testing sequences and weather abort checklists based on live meteocean forecast data."
+        ],
+        "knowledgeWorkVerdict": "Pass — high cognitive, verification, and technical calculation workload. While physical line connection is manual, transfer governance, flow rate modeling, and safety compliance are purely knowledge work.",
+        "oneLine": "Manages ship-shore transfer safety, cargo transfer planning, loading arm operations, and operational custody transfer execution during tanker and gas carrier berthing.",
+        "overlapPct": 25,
+        "overlapsWith": "none",
+        "reason": "Essential frontline marine transfer governance role recognised internationally across hydrocarbon and LNG berths. Distinct from P15 Terminal Superintendent (who oversees facility P&L, site integrity, staffing, and multi-asset compliance). Governed strictly by ISGOTT, SIGTTO, and OCIMF standards.",
+        "recommendation": "keep",
+        "title": "Loading Master",
+        "whereTheWorkHappens": "Marine terminal jetty control room, jetty head, ship-shore conference room, and terminal operations center."
+      },
+      {
+        "aliases": [
+          "Marine Vetting Specialist",
+          "Vetting Superintendent",
+          "Marine Assurance Analyst"
+        ],
+        "anchor": "OCIMF SIRE 2.0 / OCIMF MTMSA / SIGTTO Experience Matrix",
+        "anchorCitation": "Oil Companies International Marine Forum (OCIMF) Ship Inspection Report Programme (SIRE 2.0 Governance and Inspection Framework); OCIMF Marine Terminal Management and Self Assessment (MTMSA); SIGTTO LNG Shipping Suggested Competency Standards & Experience Matrix.",
+        "anchorUrl": "https://www.ocimf.org/programmes/sire-2-0",
+        "exampleAgentableWork": [
+          "Ingest and evaluate OCIMF SIRE 2.0 negative inspection observations against terminal acceptance criteria to identify and flag critical vessel defect risks.",
+          "Verify vessel crew experience matrices against SIGTTO standards (sea time in rank on gas carriers, ship-type experience) prior to issuing marine clearance.",
+          "Cross-reference Port State Control (PSC) inspection records, regional memorandum deficiency trends, and Classification Society conditions of class for vetting dossiers.",
+          "Audit dynamic mooring analysis studies against OCIMF MEG4 guidelines to verify bollard load safety factors and environmental operating limits at berth."
+        ],
+        "knowledgeWorkVerdict": "Pass — purely knowledge- and risk-assessment-driven role with zero manual craft labour. Operates entirely in technical inspection dossiers, compliance frameworks, and clearance protocols.",
+        "oneLine": "Assesses maritime safety, vessel structural integrity, operational history, and crew competence to clear or reject tankers, gas carriers, and marine terminals for cargo operations.",
+        "overlapPct": 5,
+        "overlapsWith": "none",
+        "reason": "Widely recognised governance discipline across energy charterers, trading arms, and marine terminal operators. Evaluates third-party vessels against strict safety criteria prior to terminal arrival. Entirely distinct from upstream, pipeline, and plant engineering personas.",
+        "recommendation": "keep",
+        "title": "Marine Assurance Specialist",
+        "whereTheWorkHappens": "Commercial marine desk, regional marine assurance office, or terminal compliance department."
+      },
+      {
+        "aliases": [
+          "Marine Cargo Surveyor",
+          "Custody Transfer Surveyor",
+          "Marine Measurement Specialist"
+        ],
+        "anchor": "API MPMS Chapter 17 / GIIGNL LNG Custody Transfer Handbook / ISO 8943",
+        "anchorCitation": "American Petroleum Institute Manual of Petroleum Measurement Standards (API MPMS Chapter 17.1 Guidelines for Marine Cargo Inspection, Chapter 17.10.1 Measurement of Cargoes on Board LNG Carriers); GIIGNL LNG Custody Transfer Handbook (7th Edition); ISO 8943 / ISO 6976.",
+        "anchorUrl": "https://giignl.org/lng-custody-transfer-handbook/",
+        "exampleAgentableWork": [
+          "Calculate net transferred thermal energy (MMBtu) from opening and closing CTMS level soundings, trim/list corrections, and GIIGNL revised Klosek-McKinley density formulas.",
+          "Validate gas chromatograph calibration logs and continuous vaporizer sampling records against ISO 10723 and ISO 6976 to verify gross calorific value (GCV) accuracy.",
+          "Cross-reconcile vessel custody figures against terminal shore tank radar gauges and fiscal Coriolis meter runs to determine custody transfer discrepancies.",
+          "Draft formal Letters of Protest (LOP) and Certificate of Quantity and Quality (COQ) documentation accounting for boil-off gas (BOG) heel deductions and vapor balance."
+        ],
+        "knowledgeWorkVerdict": "Pass — intensive calculation, thermodynamic correction, quality audit, and commercial custody reconciliation workload.",
+        "oneLine": "Independently measures, audits, and reconciles physical quantities, composition, and thermal energy content of liquid bulk and LNG shipments during custody transfer.",
+        "overlapPct": 15,
+        "overlapsWith": "none",
+        "reason": "Recognised globally across liquid bulk shipping and LNG trade. Crucial auditor ensuring transactional accuracy for cargo valued in tens of millions of dollars per lifting. Distinct from P30 Inspection Engineer (mechanical integrity/NDT) and P29 Crude & Product Scheduler.",
+        "recommendation": "keep",
+        "title": "Cargo Surveyor",
+        "whereTheWorkHappens": "Ship cargo office, marine terminal custody transfer office, quality testing laboratory, and independent inspection agency office."
+      },
+      {
+        "aliases": [
+          "Cryogenic Process Engineer",
+          "LNG Plant Engineer"
+        ],
+        "anchor": "NFPA 59A / ISO 16903 / GPA Midstream",
+        "anchorCitation": "National Fire Protection Association (NFPA 59A: Standard for the Production, Storage, and Handling of Liquefied Natural Gas); ISO 16903 (Characteristics of LNG influencing design and material selection); GPA Midstream Technical Standards.",
+        "anchorUrl": "https://www.nfpa.org/codes-and-standards/5/9/a/nfpa-59a",
+        "exampleAgentableWork": [
+          "Simulate mixed-refrigerant loop compositions and compressor power curves in process simulation packages to debottleneck liquefaction capacity.",
+          "Analyze boil-off gas (BOG) generation dynamics in cryogenic storage tanks and jetty return lines to balance recondenser and compressor loading.",
+          "Model thermal transient stress curves and cool-down temperature differentials for main cryogenic heat exchangers (MCHE) and vacuum-jacketed transfer lines."
+        ],
+        "knowledgeWorkVerdict": "Pass — deep engineering analysis and optimization, but substantially duplicative with existing persona P26.",
+        "oneLine": "Models, evaluates, and optimizes thermodynamic processes across LNG liquefaction, refrigeration loops, BOG re-liquefaction, and regasification units.",
+        "overlapPct": 80,
+        "overlapsWith": "P26 Gas Plant Engineer",
+        "reason": "While operating in cryogenic temperature regimes (-162°C) at marine terminals, the underlying physics, simulation tools, gas treating (acid gas removal, dehydration), compression, refrigeration loops, and process safety tasks overlap >=70% with P26 Gas Plant Engineer. It should be merged into P26 as an LNG/cryogenic domain specialization rather than kept as an independent persona.",
+        "recommendation": "merge",
+        "title": "LNG Process Engineer",
+        "whereTheWorkHappens": "Terminal engineering building, technical services office, or plant operations center."
+      }
+    ],
+    "domain": "midstream",
+    "notes": "Evaluated candidate roles across LNG and marine terminals against industry competency standards (OCIMF, SIGTTO, ISGOTT, API MPMS, GIIGNL, NFPA). Retained 3 standalone roles (Loading Master, Marine Assurance Specialist, Cargo Surveyor) and merged 1 adjacent specialism (LNG Process Engineer -> P26 Gas Plant Engineer). Terminal managerial scope remains anchored under existing P15 Terminal Superintendent.",
+    "subSegment": "LNG & marine terminals"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Underground Storage Engineer",
+          "Gas Storage Reservoir Engineer",
+          "UGS Integrity Engineer"
+        ],
+        "anchor": "API RP 1171 / PHMSA 49 CFR Part 192.12",
+        "anchorCitation": "API Recommended Practice 1171 ('Functional Integrity of Natural Gas Storage in Depleted Hydrocarbon Reservoirs and Aquifer Reservoirs', 2nd Edition) and federal safety regulations under 49 CFR § 192.12 mandating underground natural gas storage integrity management programs (SIMP).",
+        "anchorUrl": "https://www.api.org/oil-and-natural-gas/health-and-safety/pipeline-and-underground-storage/underground-natural-gas-storage",
+        "exampleAgentableWork": [
+          "Automating material balance calculations (p/Z surveys) to verify storage pore volume and reconcile working gas versus cushion (base) gas inventory.",
+          "Generating multi-well deliverability and pressure-drawdown curves to forecast daily peak withdrawal capacity for pipeline commercial dispatch.",
+          "Correlating annual mechanical integrity log data (noise/temperature, casing inspection, and cement evaluation logs) against API RP 1171 threat matrices to prioritize well intervention workovers.",
+          "Drafting regulatory compliance reports tracking observation well pressure anomalies and fluid contacts against reservoir containment thresholds."
+        ],
+        "knowledgeWorkVerdict": "High knowledge work suitability: Core responsibilities involve numerical deliverability forecasting, cyclic pressure hysteresis modeling, material balance inventory tracking, and risk assessment for storage integrity management.",
+        "oneLine": "Manages underground natural gas storage capacity, inventory reconciliation, cyclic deliverability modeling, and integrity compliance for depleted reservoirs and aquifers.",
+        "overlapPct": 35,
+        "overlapsWith": "none",
+        "reason": "While sharing subsurface principles with P06 Reservoir Engineer, the role is uniquely focused on midstream seasonal injection/withdrawal cycling, working-to-cushion gas inventory accounting, pipeline dispatch response, and specialized storage integrity mandates (API RP 1171/PHMSA). Overlap is approximately 35%, justifying a distinct role.",
+        "recommendation": "keep",
+        "title": "Gas Storage Engineer",
+        "whereTheWorkHappens": "Midstream technical engineering offices and underground storage gas control centers, interfacing with field storage compression stations and pipeline dispatchers."
+      },
+      {
+        "aliases": [
+          "Solution Mining Engineer",
+          "Salt Cavern Storage Engineer",
+          "Cavern Integrity Engineer"
+        ],
+        "anchor": "API RP 1114 / API RP 1115 / SMRI Guidelines",
+        "anchorCitation": "API Recommended Practice 1114 ('Design of Solution-Mined Underground Storage Facilities'), API RP 1115 ('Operation of Solution-Mined Underground Storage Facilities'), API RP 1170 ('Design and Operation of Solution-mined Salt Caverns Used for Natural Gas Storage'), and Solution Mining Research Institute (SMRI) Technical Class Guidelines.",
+        "anchorUrl": "https://www.solutionmining.org",
+        "exampleAgentableWork": [
+          "Evaluating nitrogen-brine interface mechanical integrity test (MIT) pressure trends against API RP 1115 standards to calculate leak rate tolerances and certify cavern tightness.",
+          "Processing wireline sonar caliper surveys to generate 3D cavern volume models, detect asymmetrical leaching or roof slabbing, and quantify usable storage volume.",
+          "Simulating leaching stages (water injection rates, blanket fluid level control, and brine displacement) to optimize cavern geometry and maintain pillar-to-diameter safety margins.",
+          "Modeling cavern thermodynamic response and salt creep convergence under high-frequency injection/withdrawal cycles to update maximum and minimum operating pressure envelopes."
+        ],
+        "knowledgeWorkVerdict": "High knowledge work suitability: Centered on solution mining simulation, wireline sonar caliper interpretation, nitrogen-brine mechanical integrity test calculations, and geomechanical creep modeling.",
+        "oneLine": "Designs, leaches, monitors, and validates the structural integrity and thermodynamic performance of solution-mined salt caverns for strategic petroleum reserves and bulk hydrocarbon storage.",
+        "overlapPct": 20,
+        "overlapsWith": "none",
+        "reason": "Cavern engineering is a specialized geomechanical and solution-mining discipline governed by distinct standards (API RP 1114/1115/1170, SMRI). It possesses less than 20% overlap with upstream drilling or reservoir engineering personas due to its focus on salt dissolution kinetics, sonar geophysics, and cavity thermodynamics.",
+        "recommendation": "keep",
+        "title": "Cavern Engineer",
+        "whereTheWorkHappens": "Engineering offices, cavern solution mining control facilities, and salt dome storage field sites (including strategic petroleum reserves and commercial NGL/gas storage facilities)."
+      },
+      {
+        "aliases": [
+          "Hydrocarbon Measurement Engineer",
+          "Custody Transfer Specialist",
+          "Fiscal Metering Engineer"
+        ],
+        "anchor": "API MPMS / AGA Reports",
+        "anchorCitation": "API Manual of Petroleum Measurement Standards (MPMS Chapters 2, 3, 5, 11, 12, and 21) and American Gas Association Reports (AGA Nos. 3, 7, 9, 11) governing hydrocarbon measurement, meter proving, tank calibration, volume correction, and electronic flow measurement data integrity.",
+        "anchorUrl": "https://www.api.org/products-and-services/standards/standards-notebook/measurement",
+        "exampleAgentableWork": [
+          "Validating meter factor linearity and repeatability from pipe prover and compact prover runs against API MPMS Chapter 12 tolerance criteria.",
+          "Reconciling daily bulk terminal gross-to-net volumes using API MPMS Chapter 11 temperature/pressure volume correction factors (CTL/CPL) and tank strapping tables to identify inventory loss/gain anomalies.",
+          "Auditing electronic flow measurement (EFM) and gas chromatograph configuration logs against API MPMS Chapter 21.1 / AGA Report No. 9 to detect unlogged orifice plate changes or heating value discrepancies.",
+          "Compiling contractual custody transfer discrepancy audit packages with uncertainty analysis for joint venture partners and pipeline shippers."
+        ],
+        "knowledgeWorkVerdict": "High knowledge work suitability: High-intensity analytical, algorithmic, and reconciliatory knowledge work centered on fiscal calculations, meter proving verification, EFM audit trail reviews, and measurement uncertainty budgets.",
+        "oneLine": "Ensures accuracy, auditability, and regulatory compliance of fiscal metering, automatic tank gauging, and volume correction calculations across storage facilities and transfer custody points.",
+        "overlapPct": 30,
+        "overlapsWith": "none",
+        "reason": "Fiscal measurement and hydrocarbon loss control in bulk storage and pipelines is governed by specialized industry standards (API MPMS, AGA). While P32 Instrument Technician handles physical field hardware calibration and loop checks, the Measurement Engineer owns fiscal algorithms, meter proving validity, uncertainty budgets, and custody reconciliation (overlap ~30%).",
+        "recommendation": "keep",
+        "title": "Measurement Engineer",
+        "whereTheWorkHappens": "Midstream terminal operations centers, central measurement technical offices, and storage facility meter skids / prover loops."
+      },
+      {
+        "aliases": [
+          "Terminal Engineer",
+          "Storage Operations Engineer",
+          "Bulk Liquid Terminal Engineer"
+        ],
+        "anchor": "API 2350 / API 2610 / NFPA 30",
+        "anchorCitation": "API Standard 2350 ('Overfill Protection for Storage Tanks in Petroleum Facilities'), API Standard 2610 ('Design, Construction, Operation, Maintenance, and Inspection of Terminal and Tank Facilities'), and NFPA 30 ('Flammable and Combustible Liquids Code').",
+        "anchorUrl": "https://www.api.org/products-and-services/standards",
+        "exampleAgentableWork": [
+          "Calculating response times and level alarm setpoints (critical high, automated overfill prevention system trip levels) in compliance with API 2350.",
+          "Performing hydraulic pump head and surge pressure calculations for inter-tank transfers and marine jetty loading line-ups.",
+          "Evaluating vapor recovery unit (VRU) and thermal oxidizer operating data against environmental permit emission limits during high-rate tank filling."
+        ],
+        "knowledgeWorkVerdict": "Moderate knowledge work suitability: Covers hydraulic throughput calculations, tank line-up validation, vapor recovery sizing, and overfill risk assessments.",
+        "oneLine": "Provides operational engineering support for bulk liquid tank farm hydraulics, blending systems, vapor control, and overfill prevention systems.",
+        "overlapPct": 75,
+        "overlapsWith": "P12 Facilities Engineer",
+        "reason": "Approximately 75% of the core responsibilities—hydraulic modeling, pump and piping sizing, manifold design, vapor recovery, and management of change (MOC)—are already encompassed by P12 Facilities Engineer, while terminal operational management is led by P15 Terminal Superintendent. Recommend merging into P12 Facilities Engineer.",
+        "recommendation": "merge",
+        "title": "Terminal Operations Engineer",
+        "whereTheWorkHappens": "Bulk liquid storage terminals, marine oil terminals, and strategic reserve aboveground tank farms."
+      }
+    ],
+    "domain": "midstream",
+    "notes": "Storage in midstream spans three primary physical archetypes: underground natural gas storage (depleted reservoirs/aquifers), solution-mined salt caverns (crude oil strategic reserves, NGLs, gas), and aboveground tank terminals. The research identifies three distinct, non-overlapping candidate roles for retention (Gas Storage Engineer, Cavern Engineer, Measurement Engineer), while merging generic terminal surface operations engineering into P12 Facilities Engineer. Purely manual roles (e.g. Tank Farm Operator) are excluded due to lack of agent-preparable knowledge work.",
+    "subSegment": "Storage (underground gas storage, tank storage, strategic reserves)"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Natural Gas Scheduler",
+          "Pipeline Scheduler",
+          "Gas Transportation Scheduler",
+          "Gas Logistics Specialist"
+        ],
+        "anchor": "North American Energy Standards Board (NAESB) / Federal Energy Regulatory Commission (FERC)",
+        "anchorCitation": "NAESB Wholesale Gas Quadrant (WGQ) Standard 1.3.2 (Nomination Timeline & Cycles), codified in US federal regulation at 18 CFR § 284.12; aligned with ENTSOG Capacity Allocation Mechanisms (Regulation EU 2017/459) and PNGRB Access Code Regulations",
+        "anchorUrl": "https://www.naesb.org/wgq.asp",
+        "exampleAgentableWork": [
+          "Parsing daily trade capture feeds and customer dispatch notices to assemble nomination schedules aligned with standardized nomination cycle timelines.",
+          "Evaluating pipeline Electronic Bulletin Board capacity cut notices during operational constraints and calculating re-routing options across secondary delivery points.",
+          "Cross-validating upstream supplier nominations against downstream interconnect confirmations and Maximum Daily Quantity (MDQ) entitlements prior to cycle confirmation deadlines.",
+          "Analyzing physical telemetry variances against scheduled flows to prepare intraday re-nomination adjustments and prevent pipeline penalty triggers."
+        ],
+        "knowledgeWorkVerdict": "Entirely knowledge work suitable for AI agents: revolves around rule-governed volumetric calculations, multi-leg pipeline pathing logic, interconnect confirmations, and time-critical scheduling under strict regulatory cycle deadlines.",
+        "oneLine": "Manages daily and intraday natural gas nominations, confirmations, pipeline capacity bookings, and physical pathing across pipeline Electronic Bulletin Boards to match supply with market demand.",
+        "overlapPct": 25,
+        "overlapsWith": "none",
+        "reason": "Primary operational commercial role responsible for day-to-day physical gas logistics and capacity scheduling across midstream pipeline networks. Distinct from crude and liquid product schedulers due to compressible gas physics, Electronic Bulletin Board mechanisms, and strict multi-cycle intraday regulatory timelines.",
+        "recommendation": "keep",
+        "title": "Gas Scheduler",
+        "whereTheWorkHappens": "Midstream commercial operations offices and logistics trading floors, operating pipeline Electronic Bulletin Boards (EBBs), energy trading and risk management (ETRM) platforms, and scheduling software portals."
+      },
+      {
+        "aliases": [
+          "Gas Contracts Administrator",
+          "Transportation Contracts Specialist",
+          "Midstream Commercial Analyst",
+          "Capacity Contracts Analyst"
+        ],
+        "anchor": "North American Energy Standards Board (NAESB) / Federal Energy Regulatory Commission (FERC)",
+        "anchorCitation": "NAESB WGQ Standard 6.3.1 (Base Contract for Sale and Purchase of Natural Gas) and Quadrant 5 (Capacity Release Standards); FERC 18 CFR Part 284 (Open Access Transportation, Form 549B Index of Customers, and Capacity Release Regulations)",
+        "anchorUrl": "https://www.ferc.gov/natural-gas/open-access-regulations",
+        "exampleAgentableWork": [
+          "Ingesting executed transportation, storage, and gathering service agreements to extract commercial terms, capacity rights, and billing parameters into enterprise contract systems.",
+          "Evaluating secondary market capacity release postings and incoming bids against tariff bidding windows, creditworthiness thresholds, and recall conditions.",
+          "Auditing proposed shipper nomination paths and volume requests against contractual firm capacity entitlements (MDQ/MHQ) and pipeline tariff schedules.",
+          "Compiling regulatory compliance reports, such as quarterly index of customer filings and discount rate disclosures, by synthesizing active transportation contract portfolios."
+        ],
+        "knowledgeWorkVerdict": "High agentic potential: heavily focused on structured contract document analysis, tariff interpretation, entitlement verification, capacity release mechanics, and regulatory compliance reporting.",
+        "oneLine": "Administers gas transportation, storage, and gathering agreements, enforces tariff compliance, coordinates capacity release bidding, and prepares mandatory regulatory filings.",
+        "overlapPct": 10,
+        "overlapsWith": "none",
+        "reason": "Critical commercial and regulatory governance role managing the contractual foundations, capacity rights, and tariff rules that dictate allowable pipeline nominations and revenue terms.",
+        "recommendation": "keep",
+        "title": "Gas Contract Analyst",
+        "whereTheWorkHappens": "Midstream commercial and contract administration offices, utilizing Contract Lifecycle Management (CLM) software, ETRM contract modules, and regulatory filing databases."
+      },
+      {
+        "aliases": [
+          "Gas Settlement Analyst",
+          "Volume Allocation Analyst",
+          "Gas Imbalance Analyst",
+          "Volumetric Settlement Analyst"
+        ],
+        "anchor": "Council of Petroleum Accountants Societies (COPAS) / NAESB",
+        "anchorCitation": "COPAS Accounting Guideline AG-15 (Gas Accounting Manual) & Model Form Gas Balancing Agreements; NAESB WGQ Quadrant 2 (Flowing Gas Standards) and Quadrants 3/4 (Invoicing and Balancing), codified at 18 CFR § 284.12",
+        "anchorUrl": "https://copas.org/publications/",
+        "exampleAgentableWork": [
+          "Reconciling daily electronic gas measurement meter volume telemetry against scheduled pipeline nominations to compute net shipper imbalances.",
+          "Applying pipeline tariff cash-out pricing tiers, index market rates, and penalty multipliers to calculate financial settlements for monthly over-deliveries and under-deliveries.",
+          "Administering Operational Balancing Agreement (OBA) accounts between interconnecting midstream operators to track cumulative physical versus scheduled position debts and credits.",
+          "Allocating gathering system fuel consumption, processing plant shrinkage, and unaccounted-for gas (UAF) back to individual producer and shipper contracts."
+        ],
+        "knowledgeWorkVerdict": "Ideal candidate for AI automation and preparation: tasks are quantitatively rigorous, formula-driven reconciliations of volumetric telemetry against contractual matrices, cash-out schedules, and balancing agreements.",
+        "oneLine": "Reconciles physical versus scheduled gas flow variances, administers Operational Balancing Agreements, calculates cash-out settlements, and compiles monthly volumetric allocations.",
+        "overlapPct": 15,
+        "overlapsWith": "none",
+        "reason": "Core reconciliation and financial integrity role ensuring that physical molecule movements align with commercial contracts, mitigating imbalance liabilities, and enabling accurate revenue settlement.",
+        "recommendation": "keep",
+        "title": "Gas Balancing Analyst",
+        "whereTheWorkHappens": "Midstream volumetric accounting and commercial operations offices, leveraging electronic gas measurement (EGM) databases, volumetric allocation engines, and midstream accounting systems."
+      }
+    ],
+    "domain": "midstream",
+    "notes": "The midstream commercial sub-segment for capacity booking, nominations, gas contracts, and balancing is organized across three well-defined operational pillars: daily physical scheduling and nominations (Gas Scheduler), contractual capacity entitlement and regulatory tariff governance (Gas Contract Analyst), and volumetric reconciliation, balancing, and settlements (Gas Balancing Analyst). All three roles represent pure knowledge work governed by established industry standards (NAESB, FERC, COPAS, ENTSOG, PNGRB) and have minimal overlap with existing refinery/crude operations roles.",
+    "subSegment": "Commercial: capacity booking, nominations, gas contracts & balancing"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Distribution Planning Engineer",
+          "Gas Network Engineer",
+          "City Gas Distribution Engineer"
+        ],
+        "anchor": "American Society of Mechanical Engineers (ASME) / Petroleum and Natural Gas Regulatory Board (PNGRB) / Institution of Gas Engineers and Managers (IGEM)",
+        "anchorCitation": "ASME B31.8 (Gas Transmission and Distribution Piping Systems, Chapter VIII) & PNGRB T4S Regulations (Technical Standards and Specifications including Safety Standards for City Gas Distribution Networks) & IGEM/TD/3 (Steel and PE Pipelines for Gas Distribution)",
+        "anchorUrl": "https://www.asme.org/codes-standards/find-codes-standards/b31-8-gas-transmission-distribution-piping-systems",
+        "exampleAgentableWork": [
+          "Running steady-state hydraulic network simulations to evaluate pressure margins and bottleneck risks for proposed commercial and residential main extensions.",
+          "Calculating maximum allowable operating pressure (MAOP), design factor deratings, and required pipe wall thicknesses for steel and medium-density polyethylene (MDPE) mains per ASME B31.8 and local safety codes.",
+          "Sizing district regulator stations (DRS), service regulators, and overpressure protection relief valves based on peak winter design-day flow requirements.",
+          "Drafting technical design packages, bill of quantities (BOQ), and material requisitions for pipeline reinforcement and relocation projects."
+        ],
+        "knowledgeWorkVerdict": "High cognitive and technical content: performs steady-state and transient hydraulic network simulations, calculates pipe wall thicknesses and pressure drops, evaluates design-day peak capacity under varying heating degree days (HDD), and compiles engineering work packages.",
+        "oneLine": "Designs, models, and sizes local natural gas distribution networks, district regulator stations, and customer connections to ensure adequate capacity, pressure, and code compliance.",
+        "overlapPct": 0.15,
+        "overlapsWith": "none",
+        "reason": "Distinct engineering discipline focused on low- and medium-pressure urban gas reticulation, customer load modeling, and city gate/district regulator stations. Unlike P12 (Facilities Engineer) or P13 (Flow Assurance Engineer), this role designs meshed utility distribution networks with plastic/steel piping systems.",
+        "recommendation": "keep",
+        "title": "Gas Distribution Engineer",
+        "whereTheWorkHappens": "Engineering office of a gas utility or local distribution company (LDC), using hydraulic simulation software, GIS platforms, and CAD."
+      },
+      {
+        "aliases": [
+          "DIMP Engineer",
+          "Integrity Management Engineer",
+          "Distribution Asset Integrity Specialist"
+        ],
+        "anchor": "U.S. Department of Transportation Pipeline and Hazardous Materials Safety Administration (PHMSA) / Gas Piping Technology Committee (GPTC) / American Gas Association (AGA)",
+        "anchorCitation": "49 CFR Part 192 Subpart P (Gas Distribution Pipeline Integrity Management - DIMP) & ANSI/GPTC Z380.1 (Guide for Gas Transmission, Distribution, and Gathering Piping Systems, Appendix G-192-8)",
+        "anchorUrl": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-I/subchapter-D/part-192/subpart-P",
+        "exampleAgentableWork": [
+          "Compiling and categorizing historical leak repair records (Grade 1, 2, and 3) to identify spatial clusters and accelerated failure trends across vintage pipe materials.",
+          "Executing semi-quantitative risk-ranking models to score distribution mains and service lines based on failure probability, soil characteristics, and proximity to buildings.",
+          "Drafting annual DIMP program effectiveness reviews and regulatory compliance reports detailing leak causes, third-party damage rates, and mitigation milestones.",
+          "Prioritizing multi-year pipe replacement campaigns targeting legacy cast iron, bare steel, and early-generation plastic (e.g., vintage polymer) piping."
+        ],
+        "knowledgeWorkVerdict": "Substantial analytical knowledge work: integrates geographic and operational data to evaluate threats (excavation damage, material degradation, vintage plastics, corrosion), executes relative risk scoring algorithms, and plans long-term capital replacement programs.",
+        "oneLine": "Develops and maintains the Distribution Integrity Management Program (DIMP) to identify system threats, rank asset risks, and prioritize remediation across aging distribution mains and services.",
+        "overlapPct": 0.45,
+        "overlapsWith": "none",
+        "reason": "While sharing high-level integrity principles with P27 (Pipeline Integrity Engineer), distribution integrity is fundamentally different. Distribution networks are predominantly unpiggable, low-pressure networks composed of polyethylene and legacy materials where integrity management centers on statistical leak analysis, excavation damage prevention, and DIMP risk ranking under 49 CFR Part 192 Subpart P rather than in-line inspection (ILI/smart pigging) and fracture mechanics under Subpart O.",
+        "recommendation": "keep",
+        "title": "Distribution Integrity Engineer",
+        "whereTheWorkHappens": "Asset management or integrity engineering office at a gas utility, analyzing GIS, work management, and leak history databases."
+      },
+      {
+        "aliases": [
+          "Gas Control Operator",
+          "Gas Dispatcher",
+          "System Operations Controller"
+        ],
+        "anchor": "U.S. Department of Transportation PHMSA / American Petroleum Institute (API) / American Gas Association (AGA)",
+        "anchorCitation": "49 CFR Part 192.631 (Control Room Management - CRM) & API RP 1168 (Pipeline Control Room Management)",
+        "anchorUrl": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-I/subchapter-D/part-192/section-192.631",
+        "exampleAgentableWork": [
+          "Reconciling hourly customer consumption profiles against upstream pipeline gate station nominations to manage system linepack and avoid balancing penalties.",
+          "Drafting shift handover logs documenting system abnormalities, active regulator setpoint overrides, odorant injection levels, and pending maintenance isolations.",
+          "Synthesizing telemetry trends and low-pressure alarm bursts to formulate immediate network isolation and field response dispatch plans during suspected major main breaks.",
+          "Performing daily alarm rationalization reviews to flag nuisance or stale alarms and ensure compliance with Control Room Management (CRM) alarm audit standards."
+        ],
+        "knowledgeWorkVerdict": "Real-time supervisory control and operational decision-making: analyzes SCADA telemetry, balances hourly demand against pipeline nominations, coordinates emergency isolations, and logs compliance events under strict control room management rules.",
+        "oneLine": "Monitors and operates local distribution network SCADA systems 24/7 to manage linepack, control district regulator pressures, ensure proper odorization, and coordinate leak response dispatches.",
+        "overlapPct": 0.8,
+        "overlapsWith": "P14 Pipeline Controller",
+        "reason": "Overlaps >=70% with P14 (Pipeline Controller). Both operate 24/7 SCADA consoles, manage hydraulic alarms, regulate pressures, balance supply and demand, and operate under identical Control Room Management (CRM) statutory requirements (49 CFR 192.631 / API RP 1168). Local distribution nuances (odorization, district regulator stations) can be subsumed into P14.",
+        "recommendation": "merge",
+        "title": "Gas Controller",
+        "whereTheWorkHappens": "Centralized gas control center / control room of a local gas distribution company."
+      },
+      {
+        "aliases": [
+          "Measurement Engineer",
+          "Gas Flow Measurement Engineer",
+          "Custody Transfer Measurement Specialist"
+        ],
+        "anchor": "American Gas Association (AGA) / American Petroleum Institute (API) / American Society of Mechanical Engineers (ASME)",
+        "anchorCitation": "AGA Report No. 3 (API 14.3 / Orifice Metering), AGA Report No. 8 (Compressibility Factors of Natural Gas), AGA Report No. 9 (Multipath Ultrasonic Meters), AGA Report No. 11 (Coriolis Meters), and ASME MFC Standards",
+        "anchorUrl": "https://www.aga.org/research-policy/resource-library/aga-reports/",
+        "exampleAgentableWork": [
+          "Auditing electronic flow computer (EFC) configuration parameters and gas composition inputs against gas chromatograph lab analyses to ensure compliance with AGA Report No. 8 compressibility calculations.",
+          "Performing monthly Unaccounted-For Gas (UAG/UFG) volumetric and energy balance reconciliations between city gate custody receipts and aggregated consumer meter billing data.",
+          "Sizing ultrasonic, rotary, and Coriolis metering runs and differential pressure transmitters for industrial customer meter and regulation (M&R) stations.",
+          "Reviewing meter proving reports, sonic nozzle calibrations, and field transmitter calibration certificates to identify measurement drift and quantify fiscal exposure."
+        ],
+        "knowledgeWorkVerdict": "High analytical and technical rigor: applies fluid thermodynamic equations (supercompressibility, real gas laws), sizes primary and secondary metering elements, validates electronic flow computer calculations, and reconciles system-wide volumetric loss.",
+        "oneLine": "Specifies, calibrates, and verifies custody transfer and large customer metering systems, flow computers, and analytical instrumentation to ensure fiscal measurement accuracy and minimize unaccounted-for gas.",
+        "overlapPct": 0.2,
+        "overlapsWith": "none",
+        "reason": "Dedicated technical role focused on thermodynamic custody transfer standards, flow computer algorithms, and fiscal loss (UFG) reconciliation. It does not overlap >=70% with P12 (Facilities Engineer) or P32 (Instrument Technician), as technicians handle physical sensor loop checks and field wiring rather than fluid mechanics, AGA report calculations, and system-wide fiscal reconciliations.",
+        "recommendation": "keep",
+        "title": "Gas Measurement Engineer",
+        "whereTheWorkHappens": "Measurement engineering office and field test benches at gas distribution utilities, working with SCADA, flow computer configuration software, and lab test data."
+      }
+    ],
+    "domain": "midstream",
+    "notes": "Analysis covers Gas Distribution Networks (City / Local Distribution Companies - LDCs). Four core roles represent the technical lifecycle: network design & expansion (Gas Distribution Engineer), risk & asset life management (Distribution Integrity Engineer), real-time operations (Gas Controller), and fiscal custody transfer / measurement (Gas Measurement Engineer). Gas Controller is recommended for merge into P14 Pipeline Controller due to >=70% operational and regulatory overlap under Control Room Management (CRM) rules. Purely physical/field trades (e.g., leak survey technicians, plastic pipe fusion joiners, meter installers) were excluded per selection rule 3. All roles are anchored in authoritative standards (ASME, AGA, API, PHMSA 49 CFR Part 192, PNGRB, IGEM) and completely free of company or brand names.",
+    "subSegment": "Gas distribution networks (city / local distribution)"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Operations Supervisor",
+          "Shift Superintendent",
+          "Shift Team Leader"
+        ],
+        "anchor": "OISD-STD-154 / OISD-STD-105",
+        "anchorCitation": "OISD-STD-154 ('Safety Aspects in Functional Training') mandates competency standards and safety qualifications for supervisory personnel directing continuous refinery processing units, shift handover discipline, and emergency isolation; complemented by OISD-STD-105 ('Work Permit System') for authorizing high-risk permits-to-work.",
+        "anchorUrl": "https://www.oisd.gov.in/standards",
+        "exampleAgentableWork": [
+          "Reconciling end-of-shift DCS operational logs, unit throughput tallies, and chemical injection rates against daily production targets and shift handover notes.",
+          "Cross-checking active and pending Permit-to-Work (PTW) applications across primary and secondary units to detect SIMOPS conflicts, blind list mismatches, and overlapping isolation boundaries.",
+          "Drafting preliminary shift incident and near-miss event logs following unexpected unit upsets, relief valve lifts, or flaring excursions against Safe Operating Limit (SOL) baselines.",
+          "Generating shift equipment status exception briefs prior to shift exchange, flagging bypassed safety interlocks, tagged-out relief valves, and unspared critical machinery."
+        ],
+        "knowledgeWorkVerdict": "High; substantial cognitive work in operational logbook reconciliation, Safe Operating Limit (SOL) excursion analysis, PTW simultaneous operations (SIMOPS) deconfliction, and shift handover discrepancy reviews.",
+        "oneLine": "Directs 24/7 operating crews across primary and secondary process units, governing safe operating envelopes, permit-to-work authorizations, emergency responses, and shift-to-shift handovers.",
+        "overlapPct": 0.35,
+        "overlapsWith": "none",
+        "reason": "Essential frontline operating authority on rotating shifts. Overlaps only partially (~35%) with P03 Board Operator (console execution only) and P16 Refinery Process Engineer (daytime long-term technical optimization), filling a critical shift leadership gap.",
+        "recommendation": "keep",
+        "title": "Shift Supervisor",
+        "whereTheWorkHappens": "Central Control Room (CCR) supervisory console, plant operational briefing room, and unit shift handover stations."
+      },
+      {
+        "aliases": [
+          "APC Engineer",
+          "Advanced Process Control Engineer",
+          "Systems Control Engineer"
+        ],
+        "anchor": "ANSI/ISA-18.2 / ISA-106",
+        "anchorCitation": "ANSI/ISA-18.2 ('Management of Alarm Systems for the Process Industries') and ISA-106 ('Procedure Automation for Continuous Process Operations') specify engineering lifecycle standards, alarm rationalization requirements, and advanced regulatory control architectures for continuous refining process units.",
+        "anchorUrl": "https://www.isa.org/standards-and-publications/isa-standards",
+        "exampleAgentableWork": [
+          "Screening regulatory PID control loops across crude distillation and hydroprocessing units to detect oscillating, saturated, or sticking valves requiring tuning or maintenance.",
+          "Analyzing alarm flood records and standing alarm frequencies against ANSI/ISA-18.2 KPI benchmarks to prepare alarm rationalization change recommendations.",
+          "Evaluating multivariable predictive controller (MPC) constraint matrices and model gains against historical unit operating data to prepare step-testing protocol briefs.",
+          "Drafting Management of Change (MOC) technical impact assessments for proposed control logic revisions, trip setpoint modifications, or automated procedural state sequences."
+        ],
+        "knowledgeWorkVerdict": "High; highly digital and analytical knowledge work encompassing loop performance diagnostics, MPC matrix tuning, step-test analysis, and alarm flood rationalization.",
+        "oneLine": "Designs, tunes, and sustains multivariable predictive control (MPC/APC) applications, regulatory control loops, and alarm management systems across complex primary and secondary conversion units.",
+        "overlapPct": 0.45,
+        "overlapsWith": "none",
+        "reason": "Distinct technical specialization responsible for dynamic control layers and APC/MPC performance. Overlaps partially (~45%) with P16 Refinery Process Engineer (who focuses on steady-state chemistry, catalysts, and yields) and P32 Instrument Technician (who manages field hardware), making it a viable standalone candidate.",
+        "recommendation": "keep",
+        "title": "Process Control Engineer",
+        "whereTheWorkHappens": "Central control room engineering workstations, plant technical services engineering offices, and DCS/APC simulation consoles."
+      },
+      {
+        "aliases": [
+          "Outside Operator",
+          "Process Operator",
+          "Refinery Field Technician"
+        ],
+        "anchor": "OPITO Global Vocational Qualification 3: Downstream Processing",
+        "anchorCitation": "OPITO Global Vocational Qualification 3: Oil and Gas Processing Operations (Hydrocarbons - Downstream) defines competency units for plant equipment monitoring, line-up verifications, and physical isolation of hydrocarbon processing facilities.",
+        "anchorUrl": "https://www.opito.com/standards",
+        "exampleAgentableWork": [
+          "Compiling field gauge readings and manual round observations against historical baseline ranges to highlight equipment anomalies.",
+          "Cross-referencing lock-out/tag-out (LOTO) energy isolation check sheets against P&IDs and blind list drawings before maintenance turnover.",
+          "Drafting standard pre-startup field alignment checklists following pump or heat exchanger turnaround maintenance."
+        ],
+        "knowledgeWorkVerdict": "Low; work is predominantly hands-on physical execution within battery limits, with minor documentation and checklist execution.",
+        "oneLine": "Executes physical round inspections, manual valve alignments, field sample collections, and mechanical energy isolations across primary and secondary process battery limits.",
+        "overlapPct": 0.3,
+        "overlapsWith": "none",
+        "reason": "The primary job function consists of physical manual tasks (turning handwheels, pulling physical process samples, walking equipment rounds, applying padlocks and car-seals). Purely manual or field-physical roles are dropped per Selection Rule 3.",
+        "recommendation": "drop",
+        "title": "Field Operator",
+        "whereTheWorkHappens": "Unit process battery limits, pump rows, furnace decks, column piperacks, and local field control stations."
+      },
+      {
+        "aliases": [
+          "Refinery Energy Specialist",
+          "Energy Coordinator",
+          "Utilities Energy Engineer"
+        ],
+        "anchor": "API RP 560 / ISO 50001",
+        "anchorCitation": "API RP 560 ('Fired Heaters for General Refinery Service') and ISO 50001 ('Energy Management Systems') govern thermal efficiency metrics, excess air optimization, and continuous energy accounting across process units.",
+        "anchorUrl": "https://www.api.org/standards",
+        "exampleAgentableWork": [
+          "Performing pinch analysis and heat exchanger train fouling rate calculations to schedule preheat train chemical washings.",
+          "Reconciling plant-wide high-pressure, medium-pressure, and low-pressure steam balances to identify steam trap leaks and vent losses.",
+          "Analyzing fired heater stack temperature and flue gas oxygen profiles against API 560 efficiency curves to prepare burner damper trim advisories.",
+          "Benchmarking unit energy consumption against Solomon Energy Intensity Index (EII) targets to draft weekly energy conservation exception reports."
+        ],
+        "knowledgeWorkVerdict": "High; consists of utility modeling, pinch analysis, furnace efficiency calculations, and energy balance reconciliation.",
+        "oneLine": "Optimizes thermal efficiency, steam-power network balancing, fired heater combustion, and energy intensity across refinery primary distillation and secondary conversion trains.",
+        "overlapPct": 0.75,
+        "overlapsWith": "P16 Refinery Process Engineer",
+        "reason": "Overlaps by >=70% with P16 Refinery Process Engineer. In primary and secondary process units, fired heater excess air tuning, heat exchanger fouling tracking, and steam/fuel balance optimization are standard core duties of the unit process engineer.",
+        "recommendation": "merge",
+        "title": "Energy Engineer",
+        "whereTheWorkHappens": "Refinery technical services offices and energy management monitoring dashboards."
+      }
+    ],
+    "domain": "downstream",
+    "notes": "Role discovery for primary and secondary process units in downstream refining. Identified 4 standard candidate roles across operations, automation, field execution, and optimization. Two candidates (Shift Supervisor, Process Control Engineer) are recommended to keep as distinct high-value agentable roles filling operational gaps outside P03 and P16. One candidate (Field Operator) is dropped due to manual/physical primacy per Rule 3, and one candidate (Energy Engineer) is merged into P16 Refinery Process Engineer due to >=70% overlap.",
+    "subSegment": "Refinery operations (primary & secondary process units)"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Advanced Process Control Engineer",
+          "APC Engineer",
+          "Process Automation Engineer",
+          "Control Systems Engineer"
+        ],
+        "anchor": "API RP 554 (Process Control Systems) & ISA-106 / ISA-18.2",
+        "anchorCitation": "American Petroleum Institute (API) RP 554 Parts 1-3 ('Process Control Systems') and International Society of Automation (ISA) standards ISA-106 ('Procedural Automation for Continuous Process Operations') and ISA-18.2 ('Management of Alarm Systems for the Process Industries'), alongside the ISA Certified Automation Professional (CAP) framework.",
+        "anchorUrl": "https://www.api.org/standards",
+        "exampleAgentableWork": [
+          "Multivariable predictive control (MPC) model health tracking: Reconcile dynamic step-test data and model-predicted vs. actual process variables across multi-unit constraint envelopes to highlight declining controller uptime, model mismatch, and constraint saturation.",
+          "Base-layer PID control loop tuning and oscillation diagnostics: Analyze high-frequency DCS time-series data to detect hunting, stiction, or sluggish tuning in regulatory loops, generating recommended PID parameter adjustments.",
+          "Soft sensor and inferential quality estimator calibration: Perform automated regression and statistical validation between continuous DCS inferentials (e.g., 95% cut point, Reid Vapor Pressure) and scheduled laboratory ASTM test results, drafting bias-update and drift alerts.",
+          "Alarm rationalization and flood analysis: Screen historical DCS event and alarm journals against ISA-18.2 / EEMUA 191 KPIs to identify chattering, stale, and duplicate alarms and draft alarm change management documentation."
+        ],
+        "knowledgeWorkVerdict": "High. Highly analytical, non-manual technical work including dynamic system identification, multivariable model tuning, oscillation root-cause diagnosis, soft sensor/inferential regression against lab assays, and alarm philosophy compliance auditing.",
+        "oneLine": "Designs, tunes, and sustains regulatory control loops, multivariable predictive control (MPC) applications, and real-time process optimization schemes to maximize refinery throughput and stability within safe limits.",
+        "overlapPct": 25,
+        "overlapsWith": "none",
+        "reason": "Distinct discipline from unit process engineering (P16) and board operations (P03). Focuses specifically on control algorithm architectures, multivariable predictive constraint handling, DCS regulatory loop dynamics, and automated procedural logic.",
+        "recommendation": "keep",
+        "title": "Process Control Engineer",
+        "whereTheWorkHappens": "Refinery engineering offices, technical control center annexes, distributed control system (DCS) engineering consoles, and automation server suites."
+      },
+      {
+        "aliases": [
+          "Process Engineer",
+          "Unit Process Engineer",
+          "Process Contact Engineer",
+          "Technical Services Engineer"
+        ],
+        "anchor": "IChemE Competence and Commitment Standard & API RP 584",
+        "anchorCitation": "Institution of Chemical Engineers (IChemE) Chartered Chemical Engineer standard (Stage 2/3 Competence & Commitment) and API RP 584 ('Integrity Operating Windows'), supported by API Std 521 ('Pressure-relieving and Depressuring Systems').",
+        "anchorUrl": "https://www.icheme.org/membership/chartered-member/",
+        "exampleAgentableWork": [
+          "Unit daily mass and energy balance reconciliation: Aggregate flow, temperature, and laboratory assay data across distillation, conversion, and treating units to detect measurement biases, unaccounted losses, and yield shifts.",
+          "Integrity Operating Window (IOW) excursion review: Screen real-time unit historian trends against API RP 584 critical operating limits (e.g., column top temperatures, reactor bed delta-Ts, amine wash rates) and draft excursion cause-impact summaries.",
+          "Furnace and heat exchanger fouling monitoring: Calculate normalized heat transfer coefficients (U-values) and furnace thermal efficiencies from operational data to forecast cleaning cycles and decoking intervals.",
+          "Management of Change (MOC) process evaluation preparation: Draft initial process design summaries, hydraulic relief calculations, and hazard evaluation inputs for proposed piping or operating condition modifications."
+        ],
+        "knowledgeWorkVerdict": "High. Core engineering calculations covering mass/energy balances, hydraulic column ratings, heat exchanger U-values, relief valve capacity verifications, and Management of Change (MOC) hazard reviews.",
+        "oneLine": "Monitors unit operating envelopes, material and energy balances, and yields to troubleshoot unit upsets, optimize operating margins, and ensure equipment stays within technical integrity limits.",
+        "overlapPct": 100,
+        "overlapsWith": "P16 Refinery Process Engineer",
+        "reason": "Directly covered by existing persona P16 (Refinery Process Engineer); covers day-to-day unit health monitoring, material and energy balances, hydraulic debottlenecking, operational troubleshooting, and catalyst life tracking for crude distillation, cracking, reforming, and hydroprocessing units.",
+        "recommendation": "merge",
+        "title": "Refinery Process Engineer",
+        "whereTheWorkHappens": "Refinery technical services offices, unit control rooms, and field process units."
+      },
+      {
+        "aliases": [
+          "Refinery Energy Engineer",
+          "Energy Coordinator",
+          "Utilities Process Engineer",
+          "Energy Management Engineer"
+        ],
+        "anchor": "ISO 50001 & API Std 560",
+        "anchorCitation": "International Organization for Standardization (ISO) 50001 ('Energy management systems — Requirements with guidance for use') and API Std 560 ('Fired Heaters for General Refinery Services'), aligned with Association of Energy Engineers (AEE) Certified Energy Manager (CEM) competencies.",
+        "anchorUrl": "https://www.iso.org/standard/66269.html",
+        "exampleAgentableWork": [
+          "Multi-header steam network reconciliation: Balance high, medium, and low-pressure steam generation, letdown, venting, and condensation across all refinery units to identify steam trap losses, condensing turbine inefficiencies, and vent minimization opportunities.",
+          "Fired heater fleet efficiency auditing: Ingest continuous flue gas oxygen, draft, and stack temperature measurements across all refinery process heaters to calculate thermal efficiency per API Std 560 and generate burner air-fuel ratio trimming guidance.",
+          "Refinery fuel gas heating value and Wobbe index monitoring: Reconcile off-gas streams from cracking, reforming, and coking units with makeup fuel gas or LPG to predict fuel header heating values and prevent heater flame instability.",
+          "ISO 50001 Energy Performance Indicator (EnPI) reporting: Compute normalized energy consumption against production throughput and crude gravity baselines, generating variance analysis reports for corporate energy stewardship audits."
+        ],
+        "knowledgeWorkVerdict": "High. Complex site-wide thermodynamics, multi-pressure steam enthalpy balances, fuel gas combustion stoichiometry and Wobbe index monitoring, heat exchanger pinch analysis, and energy baseline regression modeling.",
+        "oneLine": "Optimizes plant-wide utility networks, steam balances, fuel gas systems, and fired heater efficiencies while governing compliance with industrial energy management and decarbonization standards.",
+        "overlapPct": 40,
+        "overlapsWith": "none",
+        "reason": "Sits across individual process units to manage plant-wide energy optimization (representing 50-60% of non-crude cash operating costs). Overlap with P16 (Refinery Process Engineer) is ~40% (site utility integration vs. single-unit chemical engineering) and overlap with P33 (Environmental Specialist) is ~25% (energy thermodynamics vs. environmental compliance).",
+        "recommendation": "keep",
+        "title": "Energy Engineer",
+        "whereTheWorkHappens": "Refinery technical services department, utility control center, and site environmental/energy management offices."
+      },
+      {
+        "aliases": [
+          "Refinery Catalyst Specialist",
+          "Process Technology Specialist",
+          "Catalysis Engineer",
+          "Reactor Performance Specialist"
+        ],
+        "anchor": "AFPM Operating Practices & API RP 584",
+        "anchorCitation": "American Fuel & Petrochemical Manufacturers (AFPM) technical committee standards for catalytic cracking and hydroprocessing, and API RP 584 ('Integrity Operating Windows') for reactor bed temperature and pressure boundaries.",
+        "anchorUrl": "https://www.afpm.org",
+        "exampleAgentableWork": [
+          "Weighted Average Bed Temperature (WABT) normalization: Calculate normalized start-of-run to end-of-run WABT curves adjusted for feed sulfur, hydrogen partial pressure, and space velocity to forecast remaining catalyst cycle life.",
+          "Equilibrium Catalyst (E-cat) metals and activity tracking: Ingest laboratory XRF/ICP analyses of catalyst samples (Ni, V, Fe contaminants, surface area, and microactivity) to optimize fresh catalyst daily makeup rates.",
+          "Reactor pressure drop (dP) profile surveillance: Trend radial and axial differential pressures across catalyst beds to detect bed crusting, particulate fouling, or channel flow, and estimate skimming requirements ahead of turnarounds."
+        ],
+        "knowledgeWorkVerdict": "High. Reaction kinetics calculations, weighted average bed temperature normalization, equilibrium catalyst metals accumulation modeling, and catalyst inventory replenishment scheduling.",
+        "oneLine": "Evaluates heterogeneous catalyst performance, deactivation kinetics, cycle life forecasting, and turnaround change-out specifications across catalytic conversion and treating reactors.",
+        "overlapPct": 75,
+        "overlapsWith": "P16 Refinery Process Engineer",
+        "reason": "Substantial overlap (>=70%) with P16 (Refinery Process Engineer), whose responsibilities already encompass reactor unit optimization, catalyst health tracking, bed delta-P monitoring, and turnaround changeout specifications.",
+        "recommendation": "merge",
+        "title": "Catalyst Specialist",
+        "whereTheWorkHappens": "Refinery technical services offices, licensor review suites, and refinery laboratory facilities."
+      }
+    ],
+    "domain": "downstream",
+    "notes": "Evaluated refinery process and technology engineering roles against existing personas (P01-P33). Found two distinct standalone additions ('Process Control Engineer' and 'Energy Engineer') anchored in API RP 554 / ISA and ISO 50001 / API Std 560 respectively, while core unit engineering and catalyst specialization merge into P16 Refinery Process Engineer.",
+    "subSegment": "Process & technology engineering (refinery)"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Refinery Yield Accountant",
+          "Yield Accountant",
+          "Mass Balance Coordinator",
+          "Loss Control Specialist"
+        ],
+        "anchor": "Energy Institute HM 31 & API MPMS Chapter 12",
+        "anchorCitation": "Energy Institute HM 31: Guide to hydrocarbon management in petroleum refinery operations; API Manual of Petroleum Measurement Standards (MPMS) Chapter 12: Calculation of Petroleum Quantities and Chapter 17: Marine Measurement.",
+        "anchorUrl": "https://publishing.energyinst.org/topics/hydrocarbon-management/hm-31-guide-to-hydrocarbon-management-in-petroleum-refinery-operations",
+        "exampleAgentableWork": [
+          "Assembling daily plant-wide and unit-level mass balances by aggregating tank radar gauging, stream flowmeters, and laboratory density measurements.",
+          "Reconciling custody-transfer meter tickets against bills of lading, pipeline transfer batches, and marine Vessel Experience Factors (VEF) to isolate physical transit losses from apparent measurement variances.",
+          "Investigating unit yield variances against theoretical Linear Programming (LP) yield vectors to flag meter drift, unmetered flaring, or equipment leakage.",
+          "Drafting monthly refinery loss control reports and statutory hydrocarbon excise/customs inventory reconciliation statements."
+        ],
+        "knowledgeWorkVerdict": "High-judgement reconciliation and quantitative auditing role. The role establishes official plant mass balances, identifies apparent versus real hydrocarbon losses, and validates custody-transfer accounting against measurement standards. AI agents can automate cross-system data ingestion, calculate temperature/pressure-corrected volumes, execute reconciliation algorithms, and prepare exception audit workpacks.",
+        "oneLine": "Reconciles daily physical refinery receipts, unit yields, internal inventory transfers, and finished product dispatches to close plant mass balances and detect hydrocarbon losses.",
+        "overlapPct": 15,
+        "overlapsWith": "none",
+        "reason": "Operates distinctly from operational engineers and planners. While process engineers assess unit kinetics and production planners set economic targets, the Hydrocarbon Accountant governs official custody-transfer balances, inventory accounting, and physical loss mitigation. Overlap with existing personas is under 20%.",
+        "recommendation": "keep",
+        "title": "Hydrocarbon Accountant",
+        "whereTheWorkHappens": "Refinery technical administration offices, commercial middle office, and oil movements accounting departments."
+      },
+      {
+        "aliases": [
+          "Product Supply Planner",
+          "Downstream Supply Coordinator",
+          "Distribution Planner",
+          "Fuels Supply Planner"
+        ],
+        "anchor": "Energy Institute HM 32 & AFPM Supply Chain Guidelines",
+        "anchorCitation": "Energy Institute HM 32: Guide to hydrocarbon management at petroleum product marketing and distribution terminals; AFPM (American Fuel & Petrochemical Manufacturers) Downstream Supply Chain and Logistics Technical Guidelines.",
+        "anchorUrl": "https://publishing.energyinst.org/topics/hydrocarbon-management/hm-32-guide-to-hydrocarbon-management-at-petroleum-product-marketing-and-distribution-terminals",
+        "exampleAgentableWork": [
+          "Calculating multi-terminal stock depletion rates and projected run-out dates based on regional distribution demand forecasts and secondary delivery cycles.",
+          "Generating pipeline nomination schedules and multi-product batch cycles connecting refineries with regional distribution terminals.",
+          "Simulating contingency rerouting scenarios and inventory balancing actions across regional hubs during refinery unit upsets or pipeline outages.",
+          "Drafting exchange reconciliation statements and borrow/loan balance adjustments with commercial counterparties."
+        ],
+        "knowledgeWorkVerdict": "Complex multi-echelon logistical and planning knowledge work. The role balances supply-demand across pipeline networks, marine barges, and bulk terminals beyond the refinery fence line. AI agents can track terminal ullage, pipeline cycles, and rack consumption to generate real-time replenishment schedules and flag stockout risks.",
+        "oneLine": "Balances regional product supply and demand by coordinating refinery bulk off-takes, terminal inventory allocations, pipeline batch nominations, and secondary distribution.",
+        "overlapPct": 35,
+        "overlapsWith": "none",
+        "reason": "Distinct from P15 Terminal Superintendent (who has onsite operational/maintenance authority over a specific facility) and P29 Crude & Product Scheduler (who sequences internal refinery tankage and immediate loading arms). The Supply Chain Planner manages macro multi-node regional distribution across the primary logistics network.",
+        "recommendation": "keep",
+        "title": "Supply Chain Planner",
+        "whereTheWorkHappens": "Downstream commercial headquarters, supply chain optimization centers, and logistics control rooms."
+      },
+      {
+        "aliases": [
+          "Marine Demurrage Specialist",
+          "Laytime Analyst",
+          "Commercial Operations Specialist"
+        ],
+        "anchor": "BIMCO Laytime Definitions & ASBA Tanker Charter Standards",
+        "anchorCitation": "BIMCO (Baltic and International Maritime Council) Laytime Definitions for Charter Parties; Association of Ship Brokers & Agents (ASBA) Tanker Voyage Charter Party (ASBATANKVOY); API MPMS Chapter 17.9 / Energy Institute HM 49.",
+        "anchorUrl": "https://www.bimco.org/contracts-and-clauses/bimco-clauses/current/laytime-definitions-for-charter-parties-2013",
+        "exampleAgentableWork": [
+          "Reconstructing marine port call timelines by parsing Statements of Facts (SOF), port logs, Notice of Readiness (NOR) receipts, and terminal pumping logs.",
+          "Auditing demurrage calculations against charterparty clauses to identify valid laytime interruptions (weather, berth congestion, ullaging delays, line clearing).",
+          "Drafting claim packages, rebuttal defenses, and counter-calculations within strict contractual time-bar windows.",
+          "Compiling terminal and dock efficiency metrics to isolate chronic delay drivers and provide commercial feedback for supply scheduling."
+        ],
+        "knowledgeWorkVerdict": "Document-intensive, rule-based legal and operational knowledge work. The role interprets charterparty contracts and operational voyage logs to quantify delay liability and negotiate financial claims. AI agents can ingest unstructured maritime logs, match event timestamps against contractual laytime rules, calculate net financial exposure, and draft formal claim/defense letters.",
+        "oneLine": "Audits, calculates, and negotiates laytime and demurrage claims for waterborne crude imports and refined product marine off-takes.",
+        "overlapPct": 15,
+        "overlapsWith": "none",
+        "reason": "Highly specialized post-fixture and supply-execution role. It does not overlap with operational schedulers (P29) who schedule berths, nor terminal superintendents (P15) who direct dock staff; rather, it handles commercial delay audit, legal charterparty analysis, and claims settlement.",
+        "recommendation": "keep",
+        "title": "Demurrage Analyst",
+        "whereTheWorkHappens": "Commercial supply & trading offices, marine freight operations desks, and downstream finance centers."
+      },
+      {
+        "aliases": [
+          "Planning & Economics Engineer",
+          "Refinery Optimization Analyst",
+          "LP Modeler",
+          "Commercial Optimization Engineer"
+        ],
+        "anchor": "AFPM Automation & Optimization & IChemE Energy Transition Group",
+        "anchorCitation": "American Fuel & Petrochemical Manufacturers (AFPM) Plant Automation & Optimization technical competencies; Institution of Chemical Engineers (IChemE) Oil, Gas & Energy Transition Special Interest Group.",
+        "anchorUrl": "https://www.afpm.org",
+        "exampleAgentableWork": [
+          "Running Linear Programming (LP) sensitivity vectors to determine break-even purchase prices for opportunity crude slates.",
+          "Evaluating incremental processing margins and marginal intermediate stream dispositions across conversion units.",
+          "Backcasting realized monthly refinery operating margins against the original LP economic plan to isolate operational slippage from market variances.",
+          "Updating crude assay libraries and non-linear yield vectors within the refinery planning matrix."
+        ],
+        "knowledgeWorkVerdict": "Quantitative analytical knowledge work centered on mathematical programming, crude assays, and margin valuation. However, its core functions are already largely incorporated within refinery LP production planning personas.",
+        "oneLine": "Evaluates crude purchase economics, unit operating modes, and crack spread margins using Linear Programming models.",
+        "overlapPct": 80,
+        "overlapsWith": "P17 Production Planner (refinery LP)",
+        "reason": "Heavily overlaps with existing persona P17 Production Planner (refinery LP). Both roles center on configuring and solving the refinery LP model, setting monthly operational throughputs, evaluating marginal feedstocks, and optimizing gross margins. Recommend merging into P17.",
+        "recommendation": "merge",
+        "title": "Refinery Economist",
+        "whereTheWorkHappens": "Refinery technical services buildings and commercial optimization centers."
+      }
+    ],
+    "domain": "downstream",
+    "notes": "The sub-segment Planning, scheduling & economics (refinery & supply) already features existing personas P17 Production Planner (refinery LP), P28 Blending Coordinator, and P29 Crude & Product Scheduler. Evaluation identified two essential, unrepresented knowledge-work roles to keep (Hydrocarbon Accountant and Supply Chain Planner), a specialized marine supply claims role (Demurrage Analyst), and confirmed that Refinery Economist merges directly into P17.",
+    "subSegment": "Planning, scheduling & economics (refinery & supply)"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "QC Chemist",
+          "Laboratory Chemist",
+          "Petroleum Chemist",
+          "Analytical Chemist"
+        ],
+        "anchor": "ISO/IEC 17025:2017 & ASTM D6299",
+        "anchorCitation": "ISO/IEC 17025:2017 (Clause 6.2 - Personnel Competence) and ASTM D6299-24 (Statistical Quality Assurance and Control Charting Techniques)",
+        "anchorUrl": "https://www.astm.org/d6299-24.html",
+        "exampleAgentableWork": [
+          "Analyze multi-parameter laboratory assay datasets (distillation curves, sulfur, RVP, flash point, viscosity) against ASTM specification limits to identify borderline or non-compliant results.",
+          "Evaluate ASTM D6299 statistical quality control (SQC) control charts to identify instrument drift, standard deviation shifts, and systematic bias across gas chromatographs and analytical instruments.",
+          "Draft Out-of-Specification (OOS) investigation dossiers comparing duplicate analyses, calibration check standards, and sample integrity data to distinguish testing errors from operational upsets.",
+          "Compile instrument verification logs and calibration records formatted to ISO/IEC 17025 traceability requirements for upcoming quality audits."
+        ],
+        "knowledgeWorkVerdict": "High — heavily analytical data interpretation, ASTM test validation, statistical quality control (SQC) charting, out-of-spec root cause analysis, and audit documentation.",
+        "oneLine": "Conducts physical and chemical testing, instrument calibration, and statistical quality control on petroleum streams and products to verify specification compliance.",
+        "overlapPct": 0,
+        "overlapsWith": "none",
+        "reason": "Primary laboratory technical practitioner ensuring data validity and analytical testing compliance across petroleum operations; no coverage in existing personas P01–P33.",
+        "recommendation": "keep",
+        "title": "Quality Control Chemist",
+        "whereTheWorkHappens": "Refinery or terminal analytical testing laboratory, Laboratory Information Management System (LIMS), and analytical instrument workstations."
+      },
+      {
+        "aliases": [
+          "Lab Manager",
+          "Laboratory Supervisor",
+          "Quality Control Manager",
+          "Laboratory Superintendent"
+        ],
+        "anchor": "ASTM D6792 & ISO/IEC 17025:2017",
+        "anchorCitation": "ASTM D6792-23 (Standard Practice for Quality Management Systems in Petroleum Testing Laboratories) and ISO/IEC 17025:2017 (Clauses 5 & 6)",
+        "anchorUrl": "https://www.astm.org/d6792-23.html",
+        "exampleAgentableWork": [
+          "Evaluate interlaboratory proficiency testing scheme results (e.g., ASTM Interlaboratory Study Program) to compute z-scores and draft corrective action reports for accredited methods.",
+          "Audit daily laboratory sample queues, turnaround times, and equipment availability in LIMS to optimize daily testing throughput aligned with refinery blending priorities.",
+          "Generate comprehensive quality management audit packages reconciling calibration logs, blind sample performance, and staff competency records against ASTM D6792 requirements.",
+          "Draft standard operating procedures (SOPs) and Management of Change (MOC) proposals for adopting updated ASTM/ISO analytical methods and commissioning new analytical instrumentation."
+        ],
+        "knowledgeWorkVerdict": "High — quality management system (QMS) governance, proficiency testing evaluation, audit readiness, sample turnaround optimization, and standard operating procedure authoring.",
+        "oneLine": "Directs laboratory testing operations, quality management system compliance, testing personnel competence, and regulatory accreditation.",
+        "overlapPct": 0,
+        "overlapsWith": "none",
+        "reason": "Holds organizational and regulatory accountability for testing facility accreditation and compliance governance; unrepresented in existing personas P01–P33.",
+        "recommendation": "keep",
+        "title": "Laboratory Manager",
+        "whereTheWorkHappens": "Laboratory administrative offices, Laboratory Information Management System (LIMS), and refinery quality assurance portals."
+      },
+      {
+        "aliases": [
+          "Product Quality Engineer",
+          "Fuel Quality Specialist",
+          "Finished Product Quality Coordinator",
+          "Quality Assurance Coordinator"
+        ],
+        "anchor": "API RP 1640 & Energy Institute EI 1530",
+        "anchorCitation": "API RP 1640 (Product Quality in Light Product Storage and Handling Operations) and Energy Institute EI 1530 (Quality Assurance Requirements for the Manufacture, Storage and Distribution of Aviation Fuels)",
+        "anchorUrl": "https://publishing.energyinst.org/topics/aviation/ei-1530",
+        "exampleAgentableWork": [
+          "Reconcile finished tank composite lab results against contract specifications and seasonal regulatory limits (e.g., ASTM D4814, ASTM D975, DEF STAN 91-091) to draft custody transfer Certificates of Analysis (CoAs).",
+          "Evaluate pipeline interface cut plans and tank receipt sequences to quantify cross-contamination risk (e.g., FAME trace contamination in aviation fuel) per API RP 1640 and EI 1530 standards.",
+          "Formulate corrective remediation plans for off-specification storage tanks, calculating component offset ratios, re-blend volumes, or corrective additive dosages.",
+          "Audit automated fuel additive injection records (corrosion inhibitors, lubricity improvers, static dissipators) against prescribed regulatory tolerances and batch volume logs."
+        ],
+        "knowledgeWorkVerdict": "High — batch certification analysis, specification cross-referencing, contamination risk modeling, off-spec disposition planning, and additive treatment calculations.",
+        "oneLine": "Governs finished petroleum product certification, custody transfer specification compliance, off-spec batch remediation, and contamination safeguards.",
+        "overlapPct": 35,
+        "overlapsWith": "none",
+        "reason": "Acts as the technical quality assurance gatekeeper for product release and custody transfer; distinct from P28 Blending Coordinator which handles physical component recipes and blend execution economics.",
+        "recommendation": "keep",
+        "title": "Product Quality Coordinator",
+        "whereTheWorkHappens": "Refinery technical services office, terminal automation systems, LIMS, and custody transfer commercial interfaces."
+      },
+      {
+        "aliases": [
+          "Blend Optimizer",
+          "In-Line Blending Engineer",
+          "Gasoline Blending Specialist",
+          "Fuel Blending Coordinator"
+        ],
+        "anchor": "API MPMS Chapter 17 & ASTM D4814",
+        "anchorCitation": "API Manual of Petroleum Measurement Standards (MPMS) Chapter 17 and ASTM D4814 (Automotive Spark-Ignition Engine Fuel)",
+        "anchorUrl": "https://www.api.org/oil-and-natural-gas/standards",
+        "exampleAgentableWork": [
+          "Calculate multi-property non-linear blend recipes (octane, RVP, distillation) using LP models to satisfy finished specifications with minimal high-value component giveaway.",
+          "Reconcile intermediate component tank volumes, production run-down rates, and product shipping schedules to generate the weekly blending sequence.",
+          "Analyze real-time inline analyzer feedback during active pipeline blends to compute trim adjustments for component header ratios.",
+          "Prepare digital blend execution sheets specifying tank lineups, pump alignments, additive dosage rates, and in-line sampling intervals for control room operators."
+        ],
+        "knowledgeWorkVerdict": "High — linear/non-linear blend optimization calculations, component inventory reconciliation, blend scheduling, and real-time trim correction.",
+        "oneLine": "Optimizes component blend recipes, schedules blend orders, and manages tank lineups to produce finished fuels meeting commercial specs at minimum giveaway cost.",
+        "overlapPct": 100,
+        "overlapsWith": "P28 Blending Coordinator",
+        "reason": "Direct 100% overlap with existing persona P28 Blending Coordinator, which already covers downstream blend recipe optimization, tank line-up scheduling, and property giveaway minimization.",
+        "recommendation": "merge",
+        "title": "Blending Coordinator",
+        "whereTheWorkHappens": "Refinery control room, blending console, tank farm scheduling office, and refinery planning and optimization suite."
+      }
+    ],
+    "domain": "downstream",
+    "notes": "Role discovery for downstream Blending & product quality / laboratory identified 4 core industry candidates: 3 kept as distinct personas filling critical analytical testing and QA gaps, and 1 merged into existing persona P28 Blending Coordinator.",
+    "subSegment": "Blending & product quality / laboratory"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Oil Movements Operator",
+          "OM&S Console Operator",
+          "Tank Farm Console Operator"
+        ],
+        "anchor": "API Standard 2350 / API Standard 2610 / OISD-STD-108",
+        "anchorCitation": "American Petroleum Institute (API) Standard 2350 (5th Edition, 2020) 'Overfill Prevention for Storage Tanks in Petroleum Facilities' and API Standard 2610 'Design, Construction, Operation, Maintenance, and Inspection of Terminal and Tank Facilities'",
+        "anchorUrl": "https://www.api.org/standards",
+        "exampleAgentableWork": [
+          "Calculating tank available capacity, filling rates, and API 2350 safe response time (SRT) windows prior to initiating liquid transfers",
+          "Validating line-up valve alignments and manifold routing integrity against hydraulic limits to prevent cross-contamination and pressure surges",
+          "Generating transfer execution logs and reconciling automated tank gauging (ATG) readings across shift handovers",
+          "Drafting sequence plans for tank rundown switches and intermediate component transfers based on unit production schedules"
+        ],
+        "knowledgeWorkVerdict": "Substantial preparable knowledge work in line-up verification, hydraulic flow calculations, tank available capacity determination, alarm reaction window assessment, and shift movement logging.",
+        "oneLine": "Monitors and coordinates tank farm storage, pipeline receipts, transfer line-ups, and overfill prevention from the central control console.",
+        "overlapPct": 35,
+        "overlapsWith": "none",
+        "reason": "Distinct console operational role from process unit board operators (P03); focuses on multi-product manifold hydraulics, tank inventory boundaries, custody transfers, and API 2350 overfill protection parameters.",
+        "recommendation": "keep",
+        "title": "Oil Movement Controller",
+        "whereTheWorkHappens": "Central Control Room (CCR) / Offsites & Oil Movements DCS Console"
+      },
+      {
+        "aliases": [
+          "Loading Master",
+          "Terminal Representative",
+          "Marine Terminal Loading Master"
+        ],
+        "anchor": "OCIMF / ICS ISGOTT (6th Edition) / SIGTTO",
+        "anchorCitation": "Oil Companies International Marine Forum (OCIMF) and International Chamber of Shipping (ICS), 'International Safety Guide for Oil Tankers and Terminals' (ISGOTT 6th Edition, 2020), Chapter 21: Ship/Shore Safety Checklist and Section 24: Cargo Transfer Procedures",
+        "anchorUrl": "https://www.ics-shipping.org/resource/isgott-6/",
+        "exampleAgentableWork": [
+          "Pre-populating and verifying the ISGOTT Ship/Shore Safety Checklist (SCL) against terminal operational limits and vessel declarations",
+          "Calculating maximum safe transfer rates, topping-off flow rates, and vapor balancing parameters based on loading arm and vapor return specs",
+          "Comparing ship loading/discharge plans against terminal manifold constraints, pump curves, and draft/mooring limitations",
+          "Reconciling ship vs shore custody measurement figures (ullage, water cuts, VEF) and drafting Letters of Protest (LOP) for out-of-tolerance variances"
+        ],
+        "knowledgeWorkVerdict": "High volume of structured knowledge work in safety checklist verification, transfer hydraulics calculation, cargo compatibility review, and custody difference documentation.",
+        "oneLine": "Manages safety, technical compliance, and custody transfer protocols at the ship-shore interface during tanker cargo loading and discharge.",
+        "overlapPct": 20,
+        "overlapsWith": "none",
+        "reason": "Crucial operational interface role between marine vessel and shore tankage; distinct from executive terminal management (P15 Terminal Superintendent) and control room board operators (P03).",
+        "recommendation": "keep",
+        "title": "Marine Loading Master",
+        "whereTheWorkHappens": "Marine Jetty / Terminal Dock Office and Tanker Cargo Control Room (CCR)"
+      },
+      {
+        "aliases": [
+          "Hydrocarbon Accountant",
+          "Oil Loss Coordinator",
+          "Hydrocarbon Measurement Specialist"
+        ],
+        "anchor": "Energy Institute HM 31 / API MPMS Chapter 12 & 17",
+        "anchorCitation": "Energy Institute HM 31 'Guide to hydrocarbon management in petroleum refinery operations' and API Manual of Petroleum Measurement Standards (MPMS) Chapter 12 (Calculation of Petroleum Quantities) & Chapter 17 (Marine Measurement)",
+        "anchorUrl": "https://publishing.energyinst.org/topics/hydrocarbon-management/hm-31-guide-to-hydrocarbon-management-in-petroleum-refinery-operations",
+        "exampleAgentableWork": [
+          "Reconciling daily and monthly plant mass balances across receipts, storage tanks, unit rundowns, and dispatches to isolate apparent vs physical losses",
+          "Auditing Automated Tank Gauging (ATG) data against physical strapping tables, manual dips, and temperature stratification profiles to detect measurement drift",
+          "Evaluating meter proving logs, calibration factors, and repeatability tolerances per API MPMS standards to validate custody transfer accuracy",
+          "Conducting forensic root-cause analysis on transit loss anomalies and Vessel Experience Factor (VEF) deviations exceeding commercial thresholds"
+        ],
+        "knowledgeWorkVerdict": "Intensive analytical and reconciliatory knowledge work in volume corrections, meter factor auditing, mass balance closure, and discrepancy root-cause analysis.",
+        "oneLine": "Reconciles mass balances, investigates unexplained physical and apparent inventory discrepancies, and audits measurement systems across tankage and custody transfer points.",
+        "overlapPct": 15,
+        "overlapsWith": "none",
+        "reason": "Specialized measurement accounting and loss investigation discipline not covered by planners (P17), schedulers (P29), or terminal leadership (P15).",
+        "recommendation": "keep",
+        "title": "Loss Control Specialist",
+        "whereTheWorkHappens": "Refinery Technical Services / Commercial Measurement Office / Terminal Accounting Center"
+      },
+      {
+        "aliases": [
+          "Finished Product Blender",
+          "In-Line Blending Specialist",
+          "Fuel Blending Coordinator"
+        ],
+        "anchor": "ASTM D4814 / API MPMS / Energy Institute HM Series",
+        "anchorCitation": "ASTM D4814 (Standard Specification for Automotive Spark-Ignition Engine Fuel) and Energy Institute Hydrocarbon Management guidelines on blending quality assurance",
+        "anchorUrl": "https://www.astm.org/d4814-21b.html",
+        "exampleAgentableWork": [
+          "Calculating non-linear property blend recipes (octane, RVP, flash point, viscosity) to minimize component giveaway",
+          "Monitoring real-time near-infrared (NIR) analyzer telemetry and calculating blend trim adjustments during pipeline rundown",
+          "Preparing blend execution packages and component tank allocation orders for control console operators"
+        ],
+        "knowledgeWorkVerdict": "High analytical knowledge work in recipe formulation, property prediction, and blend trim adjustment.",
+        "oneLine": "Optimizes and controls recipe formulations and component ratios for multi-component product blending into finished storage and shipping headers.",
+        "overlapPct": 95,
+        "overlapsWith": "P28 Blending Coordinator",
+        "reason": "Directly overlaps with existing persona P28 Blending Coordinator (>=70% overlap); blending optimization in tank farms is already fully represented.",
+        "recommendation": "merge",
+        "title": "Blending Coordinator",
+        "whereTheWorkHappens": "Blending Control Console / Offsites Technical Operations"
+      }
+    ],
+    "domain": "downstream",
+    "notes": "Evaluation identified 3 distinct, widely recognized roles to keep: Oil Movement Controller (real-time tank farm & offsites console operations, API 2350), Marine Loading Master (ship-shore interface safety & cargo transfer compliance, ISGOTT), and Loss Control Specialist (hydrocarbon measurement accounting and mass balance reconciliation, EI HM 31 / API MPMS). One candidate, Blending Coordinator, was evaluated and recommended for merge into existing persona P28 Blending Coordinator (95% overlap). All roles were verified against international standards and contain high proportions of agent-preparable knowledge work.",
+    "subSegment": "Offsites, tank farms & oil movement"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Utilities Process Engineer",
+          "Plant Utilities Engineer",
+          "Offsites & Utilities Engineer",
+          "Cogeneration Engineer"
+        ],
+        "anchor": "ASME PTC 4 / IChemE Energy & Resource Efficiency Standard",
+        "anchorCitation": "ASME PTC 4 (Fired Steam Generators Performance Test Code) and Institution of Chemical Engineers (IChemE) Energy & Resource Efficiency Good Practice Guidelines",
+        "anchorUrl": "https://www.asme.org/codes-standards/find-codes-standards/ptc-4-fired-steam-generators",
+        "exampleAgentableWork": [
+          "Reconciling multi-pressure steam header balances (HP/MP/LP) across production boilers, letdown stations, and process consumers to detect vent losses and thermal inefficiencies.",
+          "Calculating fired boiler and heat recovery steam generator (HRSG) thermal efficiency per ASME PTC 4 from flue gas oxygen, stack temperature, and fuel gas heating values.",
+          "Modeling refinery fuel gas (RFG) blending drums to track Wobbe index, heating value, and sulfur content to stabilize burner firing across furnace networks.",
+          "Reconciling site-wide hydrogen network distribution across hydrogen generation units, reformer off-gas streams, and hydroprocessing consumer units to minimize flaring and purge losses."
+        ],
+        "knowledgeWorkVerdict": "Core technical knowledge work spanning thermodynamic network modeling, daily steam and fuel gas mass/enthalpy reconciliations, boiler combustion efficiency calculations, and water chemistry trend evaluation.",
+        "oneLine": "Engineers, balances, and optimizes site utility production and distribution networks including multi-tier steam headers, boiler feed water, fuel gas, industrial gases, and hydrogen systems.",
+        "overlapPct": 35,
+        "overlapsWith": "none",
+        "reason": "Shares chemical engineering fundamentals with P16 Refinery Process Engineer (~35% overlap), but focuses on outside battery limits (OSBL) infrastructure grids, multi-pressure steam balancing, water demineralization chemistry, and fuel gas distribution rather than inside battery limits (ISBL) crude fractionation, catalytic reaction yields, and reactor conversion.",
+        "recommendation": "keep",
+        "title": "Utilities Engineer",
+        "whereTheWorkHappens": "Technical services and engineering offices, utility control rooms, and DCS / process historian monitoring stations."
+      },
+      {
+        "aliases": [
+          "Energy Manager",
+          "Site Energy Coordinator",
+          "Energy Efficiency Engineer",
+          "Decarbonization Engineer"
+        ],
+        "anchor": "ISO 50001:2018 / Energy Institute Chartered Energy Manager",
+        "anchorCitation": "ISO 50001:2018 (Energy Management Systems - Requirements with Guidance for Use, Clause 7.2 Competence) and Energy Institute Chartered Energy Manager Competency Standard",
+        "anchorUrl": "https://www.iso.org/standard/66269.html",
+        "exampleAgentableWork": [
+          "Tracking site energy intensity index (EII) and specific energy consumption metrics against historical energy baselines (EnBs) to pinpoint facility-level energy degradation.",
+          "Evaluating heat exchanger network pinch data and automated fouling trends to quantify recoverable waste heat and prioritize exchanger cleaning schedules.",
+          "Compiling ISO 50001 Energy Performance Indicator (EnPI) dashboards, energy variance reports, and auditable management review documentation.",
+          "Optimizing mechanical drive economics by evaluating real-time power grid tariffs against marginal steam costs to recommend dual-driver (steam turbine vs. electric motor) sparing dispatch."
+        ],
+        "knowledgeWorkVerdict": "High-level analytical and governance knowledge work including energy baseline regression modeling, energy performance indicator (EnPI) tracking, pinch analysis for heat integration, and ISO 50001 compliance auditing.",
+        "oneLine": "Manages facility-wide energy management systems, energy intensity benchmarking, thermodynamic pinch analysis, and decarbonization initiatives across all process and utility units.",
+        "overlapPct": 25,
+        "overlapsWith": "none",
+        "reason": "Focuses horizontally across all operating units and utility systems on site-wide energy performance, specific energy consumption (SEC), energy intensity indexing, and EnMS governance, distinct from P16 Refinery Process Engineer's unit-level yield and throughput focus (~25% overlap) and P33 Environmental Specialist's regulatory emissions focus (~20% overlap).",
+        "recommendation": "keep",
+        "title": "Energy Engineer",
+        "whereTheWorkHappens": "Technical services office, operations management meetings, and energy performance review sessions."
+      },
+      {
+        "aliases": [
+          "Utilities Console Operator",
+          "Boiler Board Operator",
+          "Utilities Control Room Operator"
+        ],
+        "anchor": "API RP 755 / CCPS Safe Automation Guidelines",
+        "anchorCitation": "API Recommended Practice 755 (Fatigue Risk Management Systems for Refining Personnel) and Center for Chemical Process Safety (CCPS) Guidelines for Safe Automation of Chemical Processes",
+        "anchorUrl": "https://www.api.org/oil-and-natural-gas/health-and-safety/worker-and-worksite-safety/fatigue-risk-management",
+        "exampleAgentableWork": [
+          "Triaging and rationalizing utility DCS alarms during steam header pressure excursions or sudden boiler trips to prevent cascading site outages.",
+          "Drafting standardized shift handover logs summarizing steam header balances, water treatment inventory, deaerator levels, and standby equipment readiness.",
+          "Executing pre-commissioning procedural checklists for boiler burner management system (BMS) light-off and steam header warm-up sequences."
+        ],
+        "knowledgeWorkVerdict": "Console operational control: real-time alarm triage, DCS regulatory loop adjustments, steam header pressure stabilization, and procedural startup/shutdown execution.",
+        "oneLine": "Monitors and adjusts distributed control systems (DCS) for steam boilers, water treatment plants, cooling water towers, and utility distribution grids.",
+        "overlapPct": 85,
+        "overlapsWith": "P03 Board Operator (Refinery)",
+        "reason": "Overlaps 85% with P03 Board Operator (Refinery). Although stationed at utility console screens (boilers, steam headers, water treatment) rather than hydrocarbon process units, the cognitive workflows, DCS console interaction, alarm triage, shift handover protocols, and console competencies are identical to P03.",
+        "recommendation": "merge",
+        "title": "Utilities Board Operator",
+        "whereTheWorkHappens": "Central utility control room at DCS operator console stations."
+      }
+    ],
+    "domain": "downstream",
+    "notes": "Downstream utilities and energy infrastructure encompasses high-pressure steam generation and distribution, cogeneration/power management, water treatment (BFW, cooling water), industrial gases, refinery fuel gas (RFG), and site-wide hydrogen networks. Two core knowledge roles emerge: the Utilities Engineer (operational infrastructure reliability, network balancing, and equipment thermodynamics) and the Energy Engineer (holistic site energy intensity, ISO 50001 governance, pinch analysis, and decarbonization). Control room operations for utilities are recommended to merge into the existing P03 Board Operator (Refinery) persona due to identical console monitoring and procedural execution paradigms.",
+    "subSegment": "Utilities & energy (steam, power, hydrogen, fuel systems)"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Polymer Engineer",
+          "Polymerization Engineer",
+          "Resin Process Engineer"
+        ],
+        "anchor": "Society of Plastics Engineers (SPE) & Cogent Skills National Occupational Standards",
+        "anchorCitation": "Society of Plastics Engineers (SPE) Professional Body of Knowledge & Cogent Skills NOS for Chemical and Polymer Processing (COGSCIENT-04 / COGPPO-05)",
+        "anchorUrl": "https://www.4spe.org",
+        "exampleAgentableWork": [
+          "Simulating polymer grade transition trajectories to calculate optimal hydrogen-to-monomer ratios, comonomer feeds, and bed temperatures to minimize off-spec transition tonnage.",
+          "Reconciling reactor monomer mass balances and catalyst productivity rates against laboratory Melt Flow Index (MFI), density, and molecular weight distribution data.",
+          "Analyzing extruder operating logs (barrel temperature zones, screw RPM, melt pressure, specific energy) to diagnose root causes of pellet gel defects and shear degradation.",
+          "Drafting resin quality disposition reports and formulation adjustments for antioxidant, slip, and UV stabilizer masterbatch dosing."
+        ],
+        "knowledgeWorkVerdict": "High cognitive knowledge work: reaction kinetics modeling, dynamic grade change scheduling, melt rheology calculations, extruder thermal-shear balancing, and off-spec resin disposition.",
+        "oneLine": "Optimizes polymerization reactor kinetics, catalyst dosing, grade transition trajectories, and extrusion/pelletizing systems to ensure resin properties meet technical customer specifications.",
+        "overlapPct": 25,
+        "overlapsWith": "none",
+        "reason": "Distinct downstream technical discipline specialized in macromolecular reaction engineering, non-Newtonian melt rheology, solids handling, and grade transition optimization. Existing refining personas deal exclusively with liquid and gaseous fuel cuts, with zero coverage of coordination catalysts, polymer morphology, or resin pelletizing.",
+        "recommendation": "keep",
+        "title": "Polymer Process Engineer",
+        "whereTheWorkHappens": "Petrochemical polymer production complexes (gas-phase, slurry loop, or autoclave/tubular units), technical engineering offices, and DCS control rooms."
+      },
+      {
+        "aliases": [
+          "Olefins Process Engineer",
+          "Cracker Process Engineer",
+          "Chemical Process Engineer (Petrochemicals)"
+        ],
+        "anchor": "AIChE Ethylene Producers' Committee (EPC) & IChemE",
+        "anchorCitation": "AIChE Ethylene Producers' Committee (EPC) Technical Guidelines & IChemE Chartered Chemical Engineer Competency Standards",
+        "anchorUrl": "https://www.aiche.org/community/sites/committees/ethylene-producers",
+        "exampleAgentableWork": [
+          "Profiling cracking furnace tube skin temperatures and coil outlet temperatures (COT) to calculate coking rates and schedule decoking cycles.",
+          "Monitoring green oil formation and hydrogen-to-acetylene ratios in acetylene hydrogenation reactors to prevent thermal runaway and product off-spec events.",
+          "Calculating heat and material balances across cryogenic chilling trains and demethanizers to identify refrigeration loop bottlenecks.",
+          "Preparing Management of Change (MOC) process engineering packages for furnace burner revamps, quench tower modifications, and fractionation tray replacements."
+        ],
+        "knowledgeWorkVerdict": "High cognitive knowledge work: pyrolysis furnace coil outlet temperature (COT) profiling, decoke cycle forecasting, chilling train heat and material balances, and selective hydrogenation reactor tuning.",
+        "oneLine": "Monitors and optimizes steam cracking furnaces, chilling trains, fractionation columns, and aromatics extraction units to maximize olefins/BTX yields and furnace run-lengths.",
+        "overlapPct": 75,
+        "overlapsWith": "P16 Refinery Process Engineer",
+        "reason": "Overlaps >=70% with P16 Refinery Process Engineer. Both roles carry out identical core chemical engineering workflows: steady-state process simulation, daily unit yield accounting, mass and energy balancing, catalyst deactivation tracking, MOC reviews, and turnaround scoping. Cracking furnaces and fractionation columns represent unit-specific assets rather than an autonomous discipline.",
+        "recommendation": "merge",
+        "title": "Petrochemical Process Engineer",
+        "whereTheWorkHappens": "Petrochemical complex technical offices, cracker battery limits, and unit control centers."
+      },
+      {
+        "aliases": [
+          "Olefins Planner",
+          "Petrochemical LP Planner",
+          "Feedstock & Production Planner"
+        ],
+        "anchor": "AFPM (American Fuel & Petrochemical Manufacturers) & AIChE",
+        "anchorCitation": "AFPM Petrochemical Operational Planning Standards & AIChE Ethylene Producers' Committee Economics Guidelines",
+        "anchorUrl": "https://www.afpm.org",
+        "exampleAgentableWork": [
+          "Running LP sensitivity scenarios to calculate economic breakeven parity between light feeds (ethane/propane) and heavy feeds (naphtha/condensate) under prevailing market crack spreads.",
+          "Reconciling monthly planned versus actual cracker yield vectors and energy consumption figures to recalibrate site LP sub-models.",
+          "Developing optimal derivative allocation schedules balancing internal polymer unit demand against merchant olefins and aromatics sales commitments.",
+          "Generating weekly operating guidance envelopes defining target cracking severities, coil outlet temperatures, and hydrogen balance constraints."
+        ],
+        "knowledgeWorkVerdict": "High cognitive knowledge work: LP model yield calibration, feedstock breakeven parity evaluation, co-product valuation, and downstream derivative allocation scheduling.",
+        "oneLine": "Formulates plant-wide linear programming (LP) models to optimize cracker feedstock selection (ethane/propane/naphtha), operating severity, and derivative product allocations.",
+        "overlapPct": 80,
+        "overlapsWith": "P17 Production Planner (refinery LP)",
+        "reason": "Overlaps >=70% with P17 Production Planner (refinery LP). Both roles apply linear programming (LP) models to optimize feedstock economics, unit throughput margins, and product slates. The analytical methodology, commercial interface, planning cycle cadence, and economic trade-off analysis are functionally identical.",
+        "recommendation": "merge",
+        "title": "Petrochemical Production Planner",
+        "whereTheWorkHappens": "Central petrochemical planning offices, commercial trading interfaces, and supply chain scheduling departments."
+      },
+      {
+        "aliases": [
+          "Petrochemical Console Operator",
+          "DCS Operator (Petrochemicals)",
+          "Panel Operator (Olefins & Polymers)"
+        ],
+        "anchor": "ISA (International Society of Automation) & API RP 754 / AFPM",
+        "anchorCitation": "ISA-18.2 (Management of Alarm Systems for the Process Industries) & API RP 754 / AFPM Advancing Process Safety (APS)",
+        "anchorUrl": "https://www.isa.org/standards-and-publications/isa-standards/isa-standards-committees/isa18",
+        "exampleAgentableWork": [
+          "Compiling structured shift handover logs summarizing alarm rationalization status, controller mode deviations, and ongoing unit rate adjustments over the 12-hour shift.",
+          "Cross-referencing real-time DCS alarm logs against ISA-18.2 alarm rationalization databases to flag nuisance, standing, or chattering alarms for engineering review.",
+          "Pre-populating step-by-step checklist procedures for cracker furnace decoke valve lineups or polymer reactor catalyst cut-in sequences.",
+          "Analyzing transient high-frequency DCS trend data following a compressor trip or quench tower upset to reconstruct the event sequence."
+        ],
+        "knowledgeWorkVerdict": "High procedural and cognitive control work: alarm flood management, standard operating procedure (SOP) execution, advanced process control (APC) loop supervision, and shift log reconciliation.",
+        "oneLine": "Operates central control room distributed control systems (DCS) across cracking, aromatics, or polymerization units to maintain process stability, alarm compliance, and safe setpoints.",
+        "overlapPct": 85,
+        "overlapsWith": "P03 Board Operator (Refinery)",
+        "reason": "Overlaps >=70% with P03 Board Operator (Refinery). Both roles perform console-based process surveillance, control loop intervention, alarm management per ISA-18.2, and emergency upset mitigation from a central control room. Equipment-specific differences (reactors vs. fractionators) do not change the core console operator competencies.",
+        "recommendation": "merge",
+        "title": "Petrochemical Board Operator",
+        "whereTheWorkHappens": "Central control room (CCR) consoles across steam cracker, aromatics extraction, or polymer finishing units."
+      }
+    ],
+    "domain": "downstream",
+    "notes": "Evaluated four primary petrochemical candidate roles across steam crackers, aromatics extraction, and polymer manufacturing. Only 'Polymer Process Engineer' represents a net-new distinct persona (recommendation: keep), due to its unique focus on coordination polymerization kinetics, comonomer distribution, non-Newtonian melt rheology, solids handling, and grade transition optimization. The other three candidate roles ('Petrochemical Process Engineer', 'Petrochemical Production Planner', and 'Petrochemical Board Operator') overlap >=70% with existing refining personas (P16, P17, and P03 respectively) and are recommended for merger.",
+    "subSegment": "Petrochemicals (crackers, aromatics, polymers)"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Custody Transfer Engineer",
+          "Metering Engineer",
+          "Measurement Specialist"
+        ],
+        "anchor": "API MPMS & Energy Institute EI HM 60",
+        "anchorCitation": "API MPMS Chapter 4 (Proving Systems), Chapter 5 (Metering), Chapter 11/ASTM D1250 (Temperature & Pressure Volume Correction Factors), Chapter 12 (Calculation of Petroleum Quantities); Energy Institute EI HM 60 (Guidelines for Auditing Hydrocarbon Measurement Systems)",
+        "anchorUrl": "https://www.api.org/products-and-services/standards",
+        "exampleAgentableWork": [
+          "Analyzing meter proving run repeatability and generating automated meter factor drift control charts per API MPMS Chapters 4 and 12.",
+          "Validating dynamic volume correction factor (CTL/CPL) algorithms and flow computer configuration tables against ASTM D1250 and API MPMS Chapter 11.",
+          "Formulating measurement uncertainty budgets and discrepancy investigation dossiers for pipeline custody transfer handovers.",
+          "Drafting statutory calibration compliance packages and audit filings for terminal rack meters and pipeline custody measurement skids."
+        ],
+        "knowledgeWorkVerdict": "High knowledge intensity; heavily centered on metrological calculation, statistical proving analysis, algorithmic verification, and audit documentation.",
+        "oneLine": "Oversees the calibration, verification, calculation accuracy, and regulatory compliance of fiscal metering systems, provers, and flow computers across product pipelines and marketing terminals.",
+        "overlapPct": 25,
+        "overlapsWith": "none",
+        "reason": "Distinct fiscal measurement discipline; while P32 Instrument Technician executes physical field sensor wiring and calibration, the Measurement Engineer owns fiscal accuracy calculations, meter factor trending, uncertainty models, and regulatory metrology compliance.",
+        "recommendation": "keep",
+        "title": "Measurement Engineer",
+        "whereTheWorkHappens": "Engineering offices, terminal metering skids, pipeline custody transfer stations, and prover test benches."
+      },
+      {
+        "aliases": [
+          "Stock Accountant",
+          "Terminal Inventory Accountant",
+          "Loss Control Specialist"
+        ],
+        "anchor": "Energy Institute EI HM 32 & API MPMS Chapter 17",
+        "anchorCitation": "Energy Institute EI HM 32 (Guide to Hydrocarbon Management at Petroleum Product Marketing and Distribution Terminals); API MPMS Chapter 17 (Marine and Terminal Measurement) and Chapter 12 (Calculation of Petroleum Quantities)",
+        "anchorUrl": "https://www.energyinst.org",
+        "exampleAgentableWork": [
+          "Executing automated daily terminal mass and volumetric reconciliations across pipeline batch receipts, tank static gauges, and truck rack bill-of-lading (BOL) dispatches.",
+          "Investigating loss/gain anomalies to mathematically distinguish apparent losses (meter drift, temperature contraction, vapor loss) from physical losses (leaks, overfills).",
+          "Generating statutory tax, customs, and excise reconciliation statements tracking allowable transit and storage loss tolerances for bonded fuels.",
+          "Reconciling multi-shipper pipeline transmix, interface cuts, and additive dope records against contractual product allocation schedules."
+        ],
+        "knowledgeWorkVerdict": "Very high knowledge intensity; entirely based on mass/volume balancing, thermodynamic loss reconciliation, variance investigation, and regulatory reporting.",
+        "oneLine": "Reconciles physical and book stock balances, investigates loss/gain variances, and prepares tax and excise compliance reports across pipeline batches and terminal inventories.",
+        "overlapPct": 20,
+        "overlapsWith": "none",
+        "reason": "Core downstream reconciliation discipline; distinct from P15 Terminal Superintendent (who directs physical site safety and operations) and P29 Crude & Product Scheduler (who plans forward-looking nominations).",
+        "recommendation": "keep",
+        "title": "Hydrocarbon Accountant",
+        "whereTheWorkHappens": "Terminal administrative offices, corporate distribution accounting desks, and commercial operations centers."
+      },
+      {
+        "aliases": [
+          "Transport Dispatcher",
+          "Fleet Dispatcher",
+          "Secondary Logistics Dispatcher"
+        ],
+        "anchor": "Energy Institute Good Practice Guidelines for Road Tanker Operations & ADR / 49 CFR Part 177",
+        "anchorCitation": "Energy Institute Guidelines for Petroleum Product Road Tanker Operations; UN ADR (Dangerous Goods by Road) Chapter 8; US 49 CFR Part 177 (Carriage by Public Highway); OISD-GDN-206",
+        "anchorUrl": "https://www.energyinst.org",
+        "exampleAgentableWork": [
+          "Optimizing multi-compartment truck load schedules based on retail station tank ullage projections (vendor-managed inventory) and axle-load limits.",
+          "Screening carrier compliance dossiers, driver hazardous materials endorsements, and vehicle inspection certificates before issuing terminal rack loading bay permits.",
+          "Auditing electronic logging devices (ELDs) and vehicle telematics against Hours of Service (HOS) safety rules and planned delivery routes.",
+          "Reconciling bill-of-lading dispatch quantities with station delivery confirmation receipts to flag in-transit shortages or delivery deviations."
+        ],
+        "knowledgeWorkVerdict": "High knowledge intensity; involves mathematical route optimization, inventory depletion forecasting, dangerous goods regulatory validation, and real-time delivery exception reconciliation.",
+        "oneLine": "Schedules and coordinates secondary road tanker and railcar transport, optimizing depot loading slots, retail station replenishments, and carrier compliance.",
+        "overlapPct": 25,
+        "overlapsWith": "none",
+        "reason": "Distinct secondary logistics discipline; while P29 Crude & Product Scheduler handles bulk primary movements (trunk pipeline cycles and marine vessels), the Distribution Dispatcher manages secondary distribution to retail and commercial end-points.",
+        "recommendation": "keep",
+        "title": "Distribution Dispatcher",
+        "whereTheWorkHappens": "Centralized transport dispatch offices, fleet logistics centers, and terminal transport scheduling desks."
+      },
+      {
+        "aliases": [
+          "Distribution Terminal Operator",
+          "Depot Operator",
+          "Rack Operator"
+        ],
+        "anchor": "API Standard 2610 & OISD-STD-108",
+        "anchorCitation": "API Standard 2610 (Design, Construction, Operation, Maintenance, and Inspection of Terminal and Tank Facilities) and OISD-STD-108 (Storage and Handling of Petroleum Products at Depots and Terminals)",
+        "anchorUrl": "https://www.api.org/products-and-services/standards",
+        "exampleAgentableWork": [
+          "Pre-validating truck loading rack permissive checklists and carrier earthing certificates prior to bay entry.",
+          "Converting physical tank gauge dip measurements and temperature observations into gross standard volumes using tank strapping charts.",
+          "Compiling shift handover summaries of manifold alignments, active tank transfers, and open safe-work permits."
+        ],
+        "knowledgeWorkVerdict": "Low agentable knowledge proportion; daily tasks are heavily dominated by hands-on physical execution (connecting loading arms, manual tank dipping, grounding trucks, pump line-ups) and on-site emergency physical response.",
+        "oneLine": "Executes manual hookups, valve alignments, tank dipping, and safety monitoring for product receipt, storage, and rack loading at distribution terminals.",
+        "overlapPct": 40,
+        "overlapsWith": "none",
+        "reason": "Fails Rule 3 criteria due to predominantly manual, physical field execution and immediate life-safety oversight on the gantry; supervisory and compliance knowledge tasks are already encompassed by P15 Terminal Superintendent.",
+        "recommendation": "drop",
+        "title": "Terminal Operator",
+        "whereTheWorkHappens": "Terminal truck loading gantries, rail loading racks, tank farm valve manifolds, and terminal control booths."
+      }
+    ],
+    "domain": "downstream",
+    "notes": "Identified 3 high-value knowledge-work roles to keep (Measurement Engineer, Hydrocarbon Accountant, Distribution Dispatcher) and evaluated 1 prevalent field role to drop (Terminal Operator) due to predominantly physical execution and safety oversight. All kept roles are distinct from existing personas P01–P33 (<30% overlap).",
+    "subSegment": "Distribution: product pipelines, marketing terminals & depots"
+  },
+  {
+    "candidates": [
+      {
+        "aliases": [
+          "Retail Operations Specialist",
+          "Territory Manager - Retail",
+          "Forecourt Operations Manager"
+        ],
+        "anchor": "American Petroleum Institute (API) / Petroleum Equipment Institute (PEI)",
+        "anchorCitation": "API RP 1621 (Bulk Liquid Stock Control at Retail Outlets); PEI RP100",
+        "anchorUrl": "https://www.api.org/products-and-services/standards",
+        "exampleAgentableWork": [
+          "Reconciling daily automated tank gauge (ATG) and dip readings against point-of-sale sales data using API RP 1621 variance thresholds to detect meter drift or underground leaks.",
+          "Drafting replenishment dispatch schedules based on live tank ullage, delivery transit times, and sales velocity to prevent forecourt run-outs.",
+          "Compiling forecourt environmental, health, and safety audit scorecards and corrective action plans from site inspection logs.",
+          "Validating retail pricing execution and margin realization across dealer-operated and company-owned retail networks."
+        ],
+        "knowledgeWorkVerdict": "High agent suitability. Work centers on numerical inventory reconciliation, variance diagnostics, replenishment forecasting, and regulatory compliance reporting.",
+        "oneLine": "Oversees multi-site retail fuel networks, managing forecourt operational compliance, wetstock reconciliation, and dealer performance.",
+        "overlapPct": 10,
+        "overlapsWith": "none",
+        "reason": "Manages retail station forecourts, underground storage tank inventory, and dealer network compliance. No overlap with upstream, refinery, or bulk pipeline roles.",
+        "recommendation": "keep",
+        "title": "Retail Territory Manager",
+        "whereTheWorkHappens": "Regional marketing offices and retail station forecourts"
+      },
+      {
+        "aliases": [
+          "LPG Bottling Superintendent",
+          "LPG Operations Engineer",
+          "LPG Plant Superintendent"
+        ],
+        "anchor": "Oil Industry Safety Directorate (OISD) / National Fire Protection Association (NFPA)",
+        "anchorCitation": "OISD-STD-144 (LPG Bottling Plant Operations and Safety); NFPA 58 (Liquefied Petroleum Gas Code)",
+        "anchorUrl": "https://www.oisd.gov.in",
+        "exampleAgentableWork": [
+          "Reconciling daily plant mass balance across bulk liquid receipts, electronic carousel filling weights, check-weigher rejects, and vapor recovery returns.",
+          "Formulating batch campaigns for statutory cylinder degassing, hydrotesting, tare-weight verification, and valve replacement compliance.",
+          "Analyzing automated leak-detection (water bath and electronic sniffer) reject logs to isolate and diagnose drifting carousel filling heads.",
+          "Compiling statutory safety filings and emergency response audit dossiers required under pressure vessel and LPG handling standards."
+        ],
+        "knowledgeWorkVerdict": "High agent suitability. Involves continuous mass-balance accounting, statutory testing scheduling, defect pattern analysis, and compliance reporting.",
+        "oneLine": "Directs pressurized LPG bottling plant operations, overseeing carousel filling precision, statutory cylinder recertification, and process safety.",
+        "overlapPct": 25,
+        "overlapsWith": "none",
+        "reason": "Distinct from bulk liquid fuel terminals (P15 Terminal Superintendent). Focuses on pressurized hydrocarbon bottling carousels, packaging tare deductions, and statutory cylinder recertification.",
+        "recommendation": "keep",
+        "title": "LPG Plant Manager",
+        "whereTheWorkHappens": "Pressurized LPG cylinder bottling and distribution plants"
+      },
+      {
+        "aliases": [
+          "Aviation Fuel Officer",
+          "Into-Plane Fuelling Supervisor",
+          "Airport Depot Supervisor"
+        ],
+        "anchor": "Joint Inspection Group (JIG) / Energy Institute (EI)",
+        "anchorCitation": "JIG 1 (Into-Plane Fuelling Services); JIG 2 (Airport Depots and Hydrants); EI/JIG 1530",
+        "anchorUrl": "https://www.jig.org/standards/",
+        "exampleAgentableWork": [
+          "Validating refinery Certificates of Analysis (CoA) and recertification test logs against ASTM D1655 and DEF STAN 91-91 criteria before airport tank release.",
+          "Calculating flow-rate-corrected differential pressure curves across filter-water separators to forecast element change-out schedules under EI/JIG 1530.",
+          "Reconciling into-plane fuel delivery tickets, meter prover factors, and temperature-density corrections against flight dispatch receipts.",
+          "Compiling daily apron quality control dossiers, water-sensor test logs, and deadman response-time compliance records for aviation audits."
+        ],
+        "knowledgeWorkVerdict": "High agent suitability. Involves strict document verification, differential pressure math, custody-transfer ticket reconciliation, and audit reporting.",
+        "oneLine": "Directs airport fuel storage, hydrant systems, and into-plane fueling operations under international aviation fuel quality standards.",
+        "overlapPct": 15,
+        "overlapsWith": "none",
+        "reason": "Dedicated to specialized airport apron hydrants and into-plane quality assurance under JIG/EI standards; not covered by bulk terminal or refinery personas.",
+        "recommendation": "keep",
+        "title": "Aviation Fuelling Supervisor",
+        "whereTheWorkHappens": "Airport fuel depots, hydrant pumping stations, and airport apron into-plane fueling zones"
+      },
+      {
+        "aliases": [
+          "Technical Services Engineer",
+          "Lubrication Specialist",
+          "Lube Application Specialist"
+        ],
+        "anchor": "Society of Tribologists and Lubrication Engineers (STLE) / International Organization for Standardization (ISO)",
+        "anchorCitation": "STLE Certified Lubrication Specialist (CLS) Body of Knowledge; ISO 18436-4",
+        "anchorUrl": "https://www.stle.org",
+        "exampleAgentableWork": [
+          "Interpreting laboratory used-oil test reports (elemental wear metals, FTIR oxidation, kinematic viscosity, TAN/TBN, ISO 4406 particle counts) to draft condition reports.",
+          "Synthesizing OEM equipment manuals to produce consolidated plant lubrication schedules and grade rationalization matrices.",
+          "Drafting root cause failure analysis (RCFA) reports on prematurely distressed bearings, gears, or hydraulic circuits using lubricant condition trends.",
+          "Formulating detailed product changeover, flushing, and compatibility protocols when transitioning industrial machinery between lubricant chemistries."
+        ],
+        "knowledgeWorkVerdict": "High agent suitability. High concentration of document synthesis, laboratory spectrum/data interpretation, OEM cross-referencing, and technical reporting.",
+        "oneLine": "Provides lubrication engineering consulting, plant lube surveys, oil condition monitoring interpretation, and tribological failure troubleshooting.",
+        "overlapPct": 30,
+        "overlapsWith": "none",
+        "reason": "Focuses on finished lubricant product performance, customer technical services, and tribological analysis. Minimal overlap (<30%) with general mechanical reliability engineering (P20).",
+        "recommendation": "keep",
+        "title": "Lubrication Technical Specialist",
+        "whereTheWorkHappens": "Technical services offices, lubricant testing laboratories, and client industrial facilities"
+      }
+    ],
+    "domain": "downstream",
+    "notes": "Mapped 4 industry-standard roles corresponding 1:1 to the prompt's four focus areas: retail stations, LPG bottling, aviation fuel, and finished lubricants. All four roles require substantial preparable knowledge work and have <30% overlap with existing personas.",
+    "subSegment": "Marketing & retail fuels (retail stations, LPG bottling, aviation fuel, lubricants)"
+  }
+]

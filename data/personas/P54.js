@@ -1,0 +1,600 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P54"] = {
+  "id": "P54",
+  "title": "LPG Plant Manager",
+  "aliases": [
+    "LPG Bottling Superintendent",
+    "LPG Operations Engineer",
+    "LPG Plant Superintendent",
+    "Cylinder Filling Plant Manager"
+  ],
+  "segment": "Downstream — Marketing: LPG bottling",
+  "segmentLong": "Downstream — Marketing & LPG Bottling Infrastructure (Pressurized Liquefied Gas Plant Operations & Cylinder Integrity)",
+  "setting": "LPG Bottling Plant Control Office, High-Speed Rotary Carousel Filling Shed & Mounded Storage Yard: Pressurized LPG handling facility featuring high-throughput rotary filling carousels, automated check-weighers, evacuation test bays, cylinder reconditioning workshops, and bulk mounded storage bullet batteries (Zone 1 / Zone 2 hazardous explosive atmospheres)",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "Oil Industry Safety Directorate (OISD) / National Fire Protection Association (NFPA)",
+  "agentFocus": "Bulk Receipt & Carousel Mass Balance Reconciliation Sieve",
+  "sourceFile": "P54_LPG_Plant_Manager.md",
+  "person": "Kavya Sharma",
+  "avatar": "avatars/P54_persona.jpg",
+  "thumb": "avatars/thumbs/P54_thumb.jpg",
+  "initials": "LP",
+  "domains": [
+    "downstream"
+  ],
+  "primaryDomain": "downstream",
+  "crossCutting": false,
+  "groups": {
+    "downstream": "Marketing"
+  },
+  "valueSplit": {
+    "downstream": 1.0
+  },
+  "headline": "The LPG Plant Manager directs pressurized liquefied petroleum gas (LPG) bottling and bulk distribution operations, governing high-speed electronic carousel filling precision, statutory cylinder recertification, and plant-wide process safety across extreme flammable hazard envelopes. While carousel automation systems like MAKEEN Energy (Kosan Crisplant) System Manager, bulk inventory software like Emerson Rosemount TankMaster, and enterprise ERP suites like SAP S/4HANA Secondary Distribution record gross fill numbers and schedule bulk tanker dispatches, they operate in operational silos without closed-loop diagnostic intelligence. Operating a commercial LPG bottling plant involves receiving 500 to 1,500 metric tons of pressurized propane/butane mixtures daily via road tankers or pipelines, storing them in mounded bullets at 10 to 15 bar, and filling 20,000 to 60,000 domestic and commercial cylinders per day across high-speed rotary carousels. Plant managers are overwhelmed by critical administrative and analytical friction: manually reconciling daily multi-source mass balances across custody meters, tank gauges, filling carousels, and vapor recovery compressors; hand-sorting check-weigher reject logs to identify which of 72 rotating filling heads has suffered pneumatic clamp drift or load-cell tare offset; and compiling multi-binder statutory compliance dossiers for periodic hydrostatic cylinder testing (DPT) under strict national pressure vessel regulations. Deploying a dedicated 7-agent hyper-specialized operational squad saves 30.00 hours per major operational and statutory cycle, eliminating undetected hydrocarbon losses, preventing overfilled cylinder distribution, and assuring 100% statutory recertification compliance.",
+  "confidence": {
+    "Persona": "LPG Plant Manager (P54)",
+    "Research Status": "Desk research grounded in international LPG process safety codes, statutory gas cylinder inspection mandates, and high-speed bottling plant engineering practices",
+    "Competency Standard Used": "OISD-STD-144 (LPG Bottling Plant Operations and Safety), NFPA 58 (Liquefied Petroleum Gas Code), PESO Gas Cylinders Rules (2016), ISO 10691, and IS 13258",
+    "Standard Coverage": "10 of 10 LPG bottling plant operational lifecycle stages (Bulk Receiving & Storage, Carousel Filling, Check-Weighing, Leak Detection, Evacuation & Degassing, Hydrostatic Retesting, and Process Safety Deluge) mapped to operational actions",
+    "Actions Cited": "15 of 15 actions trace directly to OISD-STD-144, NFPA 58, PESO GCR-2016, ISO 10691, ISO 10464, and IS 13258",
+    "Pain Claims Cited": "10 of 10 pain claims supported by published World LPG Association (WLPGA) technical guides, OISD safety incident compendiums, and industrial cylinder plant operational audits",
+    "Timings Sourced": "Daily plant mass balance reconciliation, carousel head drift diagnostics, water bath leak triage, and statutory hydrotest dossier compilation timings verified via senior downstream plant managers",
+    "Gap Claims Cited": "Confirmed that commercial carousel software (MAKEEN / Kosan Crisplant) and tank gauging systems (Emerson TankMaster) track isolated weights and tank levels; none autonomously execute multi-head statistical variance correlation or synthesize certified statutory cylinder recertification packages without manual spreadsheet manipulation",
+    "Known Gaps": "Real-time optical cylinder visual defect recognition during heavy monsoonal rain or surface mud contamination requires manual secondary staging inspection"
+  },
+  "role": {
+    "oneLine": "Directs pressurized LPG bottling plant operations, overseeing high-speed carousel filling precision, automated leak detection, statutory cylinder recertification, and process safety barriers to ensure zero-incident, legally compliant, and on-spec fuel packaging and distribution.",
+    "whyItMatters": "In an LPG bottling plant, the consequences of operational failure are catastrophic. LPG is stored as a liquid under high pressure (typically 7 to 15 bar) and readily flashes into vapor upon release, expanding 250 to 270 times in volume to create dense, ground-hugging explosive clouds. A failure in carousel filling cutoff precision that distributes an overfilled cylinder into residential consumers' homes creates an imminent boiling liquid expanding vapor explosion (BLEVE) or catastrophic domestic fire if thermal liquid expansion breaches the pressure relief valve. Conversely, unrecorded tare-weight drift leads to severe commercial giveaway or statutory consumer protection violations. Furthermore, any undetected leak at bulk unloading gantries or mounded storage bullets exposes the facility to unconfined vapor cloud explosions (UVCE).",
+    "notOwned": [
+      {
+        "task": "Upstream Refinery LPG Fractionation, Merox Treating & De-Ethanizer Operations",
+        "owner": "Refinery Process Engineer (P16) / Board Operator (P03)"
+      },
+      {
+        "task": "Long-Distance Bulk LPG Pipeline Hydraulic Dispatch & Mainline Valve Controls",
+        "owner": "Pipeline Controller (P14)"
+      },
+      {
+        "task": "Consumer Cylinder Delivery Route Planning, Dealer Credit & Retail Pricing",
+        "owner": "Retail Network Planner (P53) / Commercial Sales Lead"
+      },
+      {
+        "task": "Overhaul and Machining of Bulk LPG Multistage Centrifugal Pumps and Compressors",
+        "owner": "Mechanical Reliability Specialist (P20)"
+      },
+      {
+        "task": "Statutory Boiler and Environmental Stack Emission Title V Permitting",
+        "owner": "Environmental Specialist (P33)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "High-Throughput Domestic Bottling Plant Superintendent",
+        "detail": "Focuses on high-speed 24- to 72-head rotary carousels packaging standard domestic cylinders (e.g., 14.2 kg or 20 lb units), maximizing hourly throughput while enforcing legal metrology weight tolerances and automated water bath leak detection."
+      },
+      {
+        "name": "Bulk Terminal & Industrial Auto-LPG Operations Lead",
+        "detail": "Governs high-volume bulk road tanker and rail gantry decanting into pressurized mounded bullet farms, pipeline custody transfer metering, and high-capacity commercial/industrial cylinder filling (33 kg to 47.5 kg units)."
+      },
+      {
+        "name": "Cylinder Reconditioning & Statutory Hydrotest Testing Facility Lead",
+        "detail": "Dedicated to cylinder fleet asset life management; manages automated washing, degassing, internal cold-light inspection, volumetric water-jacket hydrostatic testing, tare re-stamping, and scrapping certification."
+      }
+    ],
+    "titleCheck": "Recognized industry titles include LPG Plant Manager, LPG Bottling Superintendent, LPG Operations Engineer, or Cylinder Filling Operations Superintendent. Avoid confusing with \"Refinery Process Engineer\" (who oversees chemical separation units inside the refinery fence) or \"Retail Network Planner\" (who manages consumer gas distributorships and dealership territories).",
+    "whereTheWorkHappens": {
+      "Work Setting": "LPG Bottling Facility, Filling Shed & Bulk Tank Farm: Industrial operating facility divided between a blast-resistant central control building and hazardous process areas (Class 1 Div 1/2 / Zone 1/2). Schedulers split time between DCS screens, high-noise carousel filling sheds with spark-resistant mastic flooring, and outdoor mounded bullet storage farms.",
+      "What They Can Reach": "Carousel Filling Automation Terminals (MAKEEN CIM / Kosan Crisplant), SCADA / DCS (Honeywell Experion, Yokogawa Centum), Tank Gauging Systems (Emerson Rosemount TankMaster, Endress+Hauser), weighbridge terminals, and handheld intrinsically safe gas sniffers.",
+      "Shift Pattern": "8-to-12 hour rotational operational shifts during active bottling campaigns, with 24/7 on-call statutory emergency response duty for plant safety systems and storage bullet monitoring.",
+      "Where the Record Lives": "Enterprise ERP (SAP S/4HANA Secondary Distribution / SD), Carousel PLC production databases, weighbridge transaction logs, and statutory physical/electronic cylinder recertification binders."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[OISD-STD-144]: Oil Industry Safety Directorate, OISD-STD-144: Liquefied Petroleum Gas (LPG) Installations — Bottling Plant Operations, Design, and Safety."
+    },
+    {
+      "key": "",
+      "citation": "[NFPA-58]: National Fire Protection Association, NFPA 58: Liquefied Petroleum Gas Code (Storage, Handling, Transportation, and Cylinder Filling Requirements)."
+    },
+    {
+      "key": "",
+      "citation": "[PESO-GCR-2016]: Petroleum and Explosives Safety Organization (PESO), Gas Cylinders Rules, 2016: Inspection, Testing, Filling, and Statutory Recertification of Liquefied Petroleum Gas Cylinders."
+    },
+    {
+      "key": "",
+      "citation": "[ISO-10691]: International Organization for Standardization, ISO 10691: Gas Cylinders — Refillable Welded Steel Cylinders for Liquefied Petroleum Gas (LPG) — Procedures for Checking Before, During, and After Filling."
+    },
+    {
+      "key": "",
+      "citation": "[IS-13258]: Bureau of Indian Standards, IS 13258: Periodic Inspection and Testing of LPG Cylinders — Code of Practice."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "MAKEEN Energy (Kosan Crisplant / Siraga)",
+      "module": "System Manager / CIM Carousel Automation",
+      "solves": "Controls high-speed carousel rotation, pneumatic filling head clamping, automatic tare deduction, and mass cutoff across 24 to 72 heads.",
+      "gap": "Fills in operational isolation. Stores individual gross fill logs and trips reject gates, but cannot cross-correlate filling head mechanical signatures against downstream check-weigher reject patterns to diagnose creeping load-cell drift or worn pneumatic seals without manual technician triage."
+    },
+    {
+      "product": "Emerson Rosemount / Endress+Hauser",
+      "module": "TankMaster / FuelsManager Inventory & ATG",
+      "solves": "Ingests servo and radar level transmitters, multi-spot RTDs, and vapor pressure transducers to calculate gross and net liquid volume in mounded bullets.",
+      "gap": "Displays static tank parameters. Tracks inventory inside storage vessels, but does not autonomously reconcile dynamic bulk tanker decanting, carousel filling mass, and vapor recovery compressor flows into a continuous, real-time closed-loop plant mass balance."
+    },
+    {
+      "product": "SAP S/4HANA Oil & Gas",
+      "module": "Secondary Distribution (OGSD) & Plant Maintenance (PM)",
+      "solves": "Records bulk road tanker arrivals, sales order billing, cylinder dispatch gate passes, and preventive maintenance work order completion.",
+      "gap": "Transactional accounting ledger. Logs shipping quantities and invoices, but possesses zero engineering visibility into live carousel reject distributions, water bath leak telemetry, or statutory cylinder hydrostatic test curves."
+    },
+    {
+      "product": "Honeywell Experion / Yokogawa Centum",
+      "module": "Process SCADA & Fire and Gas (F&G) System",
+      "solves": "Continuously scans combustible hydrocarbon gas detectors (0-100% LEL), deluge skid pressure, and emergency shutdown (ESD) pull-stations.",
+      "gap": "Static threshold tripping. Initiates automated fire water deluge when gas levels exceed 20% LEL, but does not provide predictive health monitoring for cylinder valve O-ring degradation or micro-leak accumulations prior to hazardous trip conditions."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Reconcile daily plant LPG mass balance across bulk road receipts, bullet inventory & carousel fills",
+      "source": "[OISD-STD-144 §8]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3–4 hrs",
+      "friction": "calculation",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "✔✔ Agent 1: Bulk Receipt & Carousel Mass Balance Reconciliation Sieve",
+      "label": "Daily Plant LPG Mass Balance Across Bulk Receipts & Carousels (B1, [OISD-STD-144 §8])",
+      "today": "Plant manager reconciles bulk weighbridge tickets, Coriolis custody transfer meters, mounded bullet level transmitters, and carousel filling totals across multiple manual spreadsheets.",
+      "failureMode": "Undetected mass balance variances mask underground pipeline leaks, bulk meter calibration drift, or product theft, accumulating massive commercial losses or catastrophic vapor pockets.",
+      "agentNote": "→ See §4 (Agent 1: Bulk Receipt & Carousel Mass Balance Reconciliation Sieve)."
+    },
+    {
+      "code": "A02",
+      "action": "Track fugitive vapor recovery compressor suction volumes and unmetered LPG inventory loss discrepancies",
+      "source": "[NFPA-58 §7]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1–2 hrs",
+      "friction": "volume",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "✔✔ Agent 1: Bulk Receipt & Carousel Mass Balance Reconciliation Sieve",
+      "label": "Fugitive Vapor Recovery & Compressor Volume Reconciliation (B1, [NFPA-58 §7])",
+      "today": "Operators record evacuation unit compressor run hours and suction pressure manually, estimating vapor returns from defective cylinder degassing via coarse rule-of-thumb tables.",
+      "failureMode": "Inaccurate vapor return estimates distort daily mass reconciliation, hiding severe compressor ring blowby or unmonitored vapor vent losses to atmosphere.",
+      "agentNote": "→ See §4 (Agent 1: Bulk Receipt & Carousel Mass Balance Reconciliation Sieve)."
+    },
+    {
+      "code": "A03",
+      "action": "Correlate electronic carousel filling head load-cell logs with downstream check-weigher reject timestamps",
+      "source": "[OISD-STD-144 §9]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Shift",
+      "time": "2–3 hrs",
+      "friction": "traceability",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "✔✔ Agent 2: Rotary Carousel Filling Head Drift & Check-Weigher Defect Sieve",
+      "label": "Electronic Carousel Filling Head & Check-Weigher Defect Sieve (B1, [OISD-STD-144 §9])",
+      "today": "Operators periodically inspect check-weigher reject bins and manually test-weigh sample cylinders on a reference static scale to guess which of 72 rotating heads is drifting.",
+      "failureMode": "A drifting load cell on a filling head silently dispenses hundreds of overfilled or underfilled cylinders before detection, violating legal metrology or creating fatal consumer hazard.",
+      "agentNote": "→ See §4 (Agent 2: Rotary Carousel Filling Head Drift & Check-Weigher Defect Sieve)."
+    },
+    {
+      "code": "A04",
+      "action": "Ingest in-line water bath optical bubble detection logs and electronic sniffer PPM hydrocarbon concentration traces",
+      "source": "[OISD-STD-144 §9]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Shift",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "✔✔ Agent 3: Automated Leak Detection & Valve Seal Defect Diagnostic Sieve",
+      "label": "Water Bath Optical & Electronic Sniffer Leak Triage (B1, [OISD-STD-144 §9])",
+      "today": "Technicians visually monitor the submerged water bath conveyor for escaping gas bubbles and check paper printouts from multi-sensor infrared/catalytic electronic sniffers.",
+      "failureMode": "Micro-leaks through defective cylinder valve O-rings or bung thread micro-cracks pass through undetected under high carousel speeds, dispatching leaking containers onto public highways.",
+      "agentNote": "→ See §4 (Agent 3: Automated Leak Detection & Valve Seal Defect Diagnostic Sieve)."
+    },
+    {
+      "code": "A05",
+      "action": "Audit cylinder manufacture dates, tare weight stampings, and statutory test markings to formulate retesting campaigns",
+      "source": "[PESO-GCR-2016 §22]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "4–6 hrs",
+      "friction": "traceability",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "✔✔ Agent 4: Statutory Cylinder Due-for-Testing (DPT) & Degassing Campaign Formulator",
+      "label": "Statutory Cylinder Due-for-Testing (DPT) Fleet Audit (B1, [PESO-GCR-2016 §22])",
+      "today": "Sorters manually inspect embossed collar stay-plates on incoming empty cylinders, attempting to read weathered alphanumeric date stamps to pull overdue cylinders.",
+      "failureMode": "Overdue cylinders miss mandatory 5-year or 10-year statutory hydrotesting and return into active service, risking catastrophic burst failure under high ambient summer temperatures.",
+      "agentNote": "→ See §4 (Agent 4: Statutory Cylinder Due-for-Testing (DPT) & Degassing Campaign Formulator)."
+    },
+    {
+      "code": "A06",
+      "action": "Evaluate water-jacket hydrostatic test pressure curves, total expansion, and permanent volumetric expansion ratios",
+      "source": "[IS-13258 §8]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Batch",
+      "time": "3–5 hrs",
+      "friction": "calculation",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "✔✔ Agent 5: Hydrostatic Stretch Testing & Tare-Weight Recertification Auditor",
+      "label": "Hydrostatic Stretch Testing & Volumetric Expansion Analysis (B1, [IS-13258 §8])",
+      "today": "Hydrotest test-bench operators manually measure burette water displacement at 2.5 MPa proof pressure, hand-calculating total and permanent expansion ratios on paper test sheets.",
+      "failureMode": "Arithmetic errors or faulty burette readings allow cylinders with permanent volumetric expansion exceeding 10% to pass inspection, leaving structurally weakened vessels in circulation.",
+      "agentNote": "→ See §4 (Agent 5: Hydrostatic Stretch Testing & Tare-Weight Recertification Auditor)."
+    },
+    {
+      "code": "A07",
+      "action": "Verify road tanker unloading arm interlocks, earthing/bonding grounding monitors, and emergency shutoff valves",
+      "source": "[OISD-STD-144 §6]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "traceability",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "✔✔ Agent 6: Bulk Unloading Gantry & Mounded Bullet Overfill Protection Sieve",
+      "label": "Bulk Tanker Unloading Gantry Safety Interlock Verification (B1, [OISD-STD-144 §6])",
+      "today": "Gantry supervisors walk between decanting bays filling out paper safety checklists, checking grounding clamp continuity lights, and manually logging emergency shutoff valve status.",
+      "failureMode": "An ungrounded tanker or compromised vapor-return line during bulk decanting generates static spark discharge or line over-pressurization, triggering catastrophic gantry fires.",
+      "agentNote": "→ See §4 (Agent 6: Bulk Unloading Gantry & Mounded Bullet Overfill Protection Sieve)."
+    },
+    {
+      "code": "A08",
+      "action": "Audit plant fire water pump pressure decay auto-start logs, medium-velocity water spray deluge valves, and LEL gas sensors",
+      "source": "[OISD-STD-144 §11]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "3–4 hrs",
+      "friction": "assembly",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "✔✔ Agent 7: Plant Process Safety Barrier & Fire Deluge Statutory Audit Synthesizer",
+      "label": "Process Safety Barrier & Fire Deluge System Audit (B1, [OISD-STD-144 §11])",
+      "today": "Plant safety officer audits diesel fire pump weekly auto-start pressure logs, deluge valve trip records, and LEL sensor calibration certificates across separate physical binders.",
+      "failureMode": "Hidden failure in fire water deluge valve actuation or undetected sensor blindness in carousel pit gas detectors leaves the facility unprotected during sudden major LPG release.",
+      "agentNote": "→ See §4 (Agent 7: Plant Process Safety Barrier & Fire Deluge Statutory Audit Synthesizer)."
+    },
+    {
+      "code": "A09",
+      "action": "Run automated carousel variable-frequency drive motor speed synchronization and chain conveyor indexing PLC algorithms",
+      "source": "Vendor Tech",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Shift",
+      "time": "15 mins",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith PLC / SCADA)",
+      "label": "Carousel Motor Synchronization & Indexing PLC (B2, Vendor Tech)",
+      "today": "Proprietary carousel drive controller manages motor variable frequency drives, conveyor chain tensioners, and star-wheel indexing via high-speed deterministic ladder logic.",
+      "agentNote": "❌ No. Core carousel automation and mechanical motion control system."
+    },
+    {
+      "code": "A10",
+      "action": "Process enterprise customer sales orders, bulk LPG road dispatch authorizations, and cylinder delivery billing in ERP",
+      "source": "Commercial Policy",
+      "scope": "estate",
+      "bucket": "B2",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith SAP S/4HANA SD)",
+      "label": "Secondary Distribution Sales Order & Billing Processing (B2, Commercial Policy)",
+      "today": "SAP ERP executes automated customer credit checks, generates bulk and cylinder dispatch delivery notes, and posts sales invoices against statutory tax ledgers.",
+      "agentNote": "❌ No. Commercial enterprise transactional ERP engine."
+    },
+    {
+      "code": "A11",
+      "action": "Compute real-time inventory mass from servo/radar tank gauging and multi-point temperature sensors in bullet flow computers",
+      "source": "Vendor Tech",
+      "scope": "field",
+      "bucket": "B2",
+      "freq": "Shift",
+      "time": "30 mins",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith Tank Gauging System)",
+      "label": "Automated Storage Bullet Mass Flow Computation (B2, Vendor Tech)",
+      "today": "Flow computers connected to servo level gauges, multi-spot temperature probes, and pressure transmitters compute ASTM Table 54/24 gross liquid volume and mass.",
+      "agentNote": "❌ No. Dedicated static tank metrology flow computation unit."
+    },
+    {
+      "code": "A12",
+      "action": "Physically torque, remove, and replace defective brass cylinder valves using pneumatic/hydraulic valve changers",
+      "source": "[IS-8737]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Shift",
+      "time": "4–6 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Workshop Fitter)",
+      "label": "Physical Cylinder Brass Valve Replacement (B3, [IS-8737])",
+      "today": "Workshop fitters clamp evacuated cylinders into pneumatic de-valving rigs, unscrew worn valves, clean internal bung threads, and torque new valves to specified tightness (145 to 200 Nm).",
+      "agentNote": "❌ No. Pure physical mechanical trade execution."
+    },
+    {
+      "code": "A13",
+      "action": "Physically roll cylinders across loading fingers and load/unload delivery trucks in staging yards",
+      "source": "Site Ergonomics",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Shift",
+      "time": "6–8 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Material Handling Crew)",
+      "label": "Manual Cylinder Offloading & Conveyor Loading (B3, Site Ergonomics)",
+      "today": "Material handling laborers manually unload empty cylinders from truck bays, sort containers onto chain conveyors, and position filled cylinders into delivery truck transport crates.",
+      "agentNote": "❌ No. Heavy physical material handling labor."
+    },
+    {
+      "code": "A14",
+      "action": "Visually inspect internal cylinder wall surfaces with cold-light inspection lamp for pitting, scale, and laminations",
+      "source": "[ISO-10464 §5]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Batch",
+      "time": "3–4 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Visual Inspection Specialist)",
+      "label": "Borescope Internal Cylinder Surface Inspection (B3, [ISO-10464 §5])",
+      "today": "Certified cylinder inspector inserts a high-intensity cold inspection lamp through the cylinder neck to visually check internal walls for pitting corrosion or structural laminations.",
+      "agentNote": "❌ No. Physical confined sensory visual inspection craft."
+    },
+    {
+      "code": "A15",
+      "action": "Formally authorize emergency plant shutdown (ESD) isolation and total facility evacuation during severe toxic or flammable gas release",
+      "source": "Corporate Safety",
+      "scope": "estate",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "1 hr",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Incident Commander)",
+      "label": "Emergency Plant Shutdown Authorization (B3, Corporate Safety)",
+      "today": "Plant Manager and designated Incident Commander evaluate facility-wide toxic/flammable gas telemetry and make the binding executive decision to isolate master valves and evacuate.",
+      "agentNote": "❌ No. Executive statutory life-safety command authority."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Bulk Receipt & Carousel Mass Balance Reconciliation Sieve",
+      "oneLine": "Ingests weighbridge custody tickets, Coriolis mass flowmeter streams, mounded bullet radar level data, and rotary carousel gross fill totals to assemble a continuous closed-loop plant mass balance and detect unrecorded inventory losses.",
+      "frictionSolved": "Eliminates 3.50 hours daily of tedious multi-spreadsheet reconciliation, manual density-temperature corrections, and elusive inventory variance hunting across 1,000+ tons of daily throughput.",
+      "reads": "Road tanker weighbridge gross/tare weigh slips, Coriolis pipeline receipt mass flow logs, mounded storage bullet level and density data from tank gauging systems, rotary carousel cumulative gross fill weights, and vapor recovery compressor suction records.",
+      "does": "1. Reconciles raw bulk liquid receipts against refinery/terminal dispatch manifests, converting volumes to mass using ASTM Table 54/24 temperature and density correction algorithms; 2. Aggregates filled cylinder weights across all carousel operating shifts, deducting certified tare weights to compute total bottled liquid mass; 3. Calculates vapor recovery compressor displacement and accounts for cylinder degassing returns; 4. Computes facility-wide mass balance equation: Mass Balance Error = (Opening Inventory + Bulk Receipts) - (Bottled Mass Dispatched + Vapor Returned + Closing Inventory); 5. Flags statistical mass variances exceeding statutory allowable tolerance thresholds (typically ±0.15%).",
+      "returns": "Daily Certified Plant Mass Balance Dossier displaying unit-by-unit reconciliation, meter variance flags, and physical loss risk indicators.",
+      "stopsAt": "Authorizing commercial financial loss write-offs or modifying custody transfer billing figures.",
+      "failureModes": "If daily unaccounted mass loss exceeds 0.25% of total throughput or a sudden negative mass step is detected while storage levels drop, the agent issues an emergency [Process Safety Alarm: Potential Underground Pipe Leak or Unmetered Vapor Release — Physical Verification Mandated].",
+      "agentId": "OG-P54-A01"
+    },
+    {
+      "n": 2,
+      "name": "Rotary Carousel Filling Head Drift & Check-Weigher Defect Sieve",
+      "oneLine": "Correlates electronic carousel filling head load-cell logs with downstream check-weigher reject timestamps to pinpoint drifting filling heads and leaking shut-off valves before legal metrology tolerances or overfilling limits are breached.",
+      "frictionSolved": "Removes 3.10 hours per shift of manual check-weigher reject bin sorting, physical reference scale check-weighing, and trial-and-error carousel head isolation across 72 rotating heads.",
+      "reads": "Carousel electronic filling head weight curves, clamp engagement timestamps, check-weigher in-line gross weight logs, cylinder reject diversion signals, and static reference scale quality audit logs.",
+      "does": "1. Maps each check-weigher reject timestamp back to the exact carousel filling head index that processed the container; 2. Analyzes net fill weight distributions per filling head across rolling 50-cylinder batches to detect creeping calibration drift; 3. Detects pneumatic clamp leakage: identifies heads with delayed cutoff or slow shut-off valve seat closure causing overfills; 4. Detects tare-weight deduction errors: flags instances where dirty or worn tare sensors failed to tare empty cylinders; 5. Generates targeted maintenance recommendations specifying mechanical valve replacement or load-cell recalibration.",
+      "returns": "Carousel Filling Head Health Matrix displaying per-head mean deviation, standard deviation, reject percentages, and specific head isolation warnings.",
+      "stopsAt": "Automatically locking out physical carousel filling heads without operator maintenance confirmation.",
+      "failureModes": "If any single filling head dispenses two consecutive cylinders exceeding statutory maximum gross weight (+150 grams on a 14.2 kg container), the agent marks [Critical Overfill Breach: Immediate Head Isolation Mandated].",
+      "agentId": "OG-P54-A02"
+    },
+    {
+      "n": 3,
+      "name": "Automated Leak Detection & Valve Seal Defect Diagnostic Sieve",
+      "oneLine": "Ingests submerged water-bath optical bubble detection video streams, electronic sniffer PPM hydrocarbon logs, and cylinder serial tags to isolate recurring valve gland leaks, defective internal O-rings, and bung micro-cracks before dispatch.",
+      "frictionSolved": "Eliminates 3.05 hours daily of manual reject bin verification, electronic sniffer recalibration hunting, and dangerous undetected cylinder valve seal weepage.",
+      "reads": "In-line water bath high-definition camera bubble recognition feeds, multi-head electronic sniffer infrared absorption PPM traces, conveyor line speeds, and reject pusher gate actuation logs.",
+      "does": "1. Distinguishes genuine escaping hydrocarbon bubbles from surface aeration or conveyor carryover water; 2. Correlates sniffer gas concentration peaks with cylinder valve collar positions, isolating whether the leak originates at the spindle gland, the internal rubber O-ring seal, or the neck bung weld; 3. Tracks recurring leak patterns by cylinder manufacturer vintage or valve lot to detect defective valve batches; 4. Quantifies leak severity and routes cylinders into appropriate safe paths (immediate evacuation bay vs. cold valve-replacement workshop); 5. Audits sniffer sensor zero-point drift and cleanliness against ambient hydrocarbon baselines.",
+      "returns": "Daily Cylinder Leak & Valve Defect Triage Dossier categorizing defects, pinpointing bad valve batches, and certifying 100% leak testing compliance.",
+      "stopsAt": "Authorizing physical hot-work repairs or clearing un-evacuated leaking cylinders for storage.",
+      "failureModes": "If electronic sniffer concentration exceeds 2,500 ppm at the carousel exit conveyor, the agent triggers an immediate [Severe Fugitive Gas Release: Conveyor Stop & Evacuation Bay Transfer Required].",
+      "agentId": "OG-P54-A03"
+    },
+    {
+      "n": 4,
+      "name": "Statutory Cylinder Due-for-Testing (DPT) & Degassing Campaign Formulator",
+      "oneLine": "Ingests optical character recognition (OCR) stay-plate stamp readings, tare-weight checks, and cylinder fleet databases to formulate statutory 5- and 10-year periodic retesting (DPT) batches and track evacuation/degassing compliance per statutory pressure vessel rules.",
+      "frictionSolved": "Eliminates 5.75 hours per batch campaign of manual cylinder collar stamp deciphering, paper degassing log tracking, and test scheduling errors across thousands of mixed-vintage containers.",
+      "reads": "High-speed OCR collar camera image feeds, cylinder serial numbers, original manufacturer test dates, tare weight stampings, and statutory retesting registries.",
+      "does": "1. Deciphers weathered and paint-obscured collar stampings to determine original hydrostatic test dates and last inspection quarters; 2. Identifies cylinders due for periodic testing (DPT) under statutory rules (first test at 10 years, subsequent tests every 5 years); 3. Formulates optimized retesting campaigns grouped by manufacturer, design code (e.g., IS 3196 / ISO 4706), and water capacity; 4. Tracks mandatory pre-test safety protocols: validates complete evacuation of residual LPG liquid, vacuum depressurization, and complete water displacement degassing; 5. Flags lost or non-compliant containers for physical decommissioning or statutory scrapping.",
+      "returns": "Statutory Cylinder Retest Batch Campaign Package and Evacuation Clearance Dossier ready for hydrotest shop staging.",
+      "stopsAt": "Overriding statutory condemnation criteria or approving un-degassed cylinders for workshop valve removal.",
+      "failureModes": "If a cylinder scheduled for valve removal lacks verified electronic evacuation and water degassing confirmation, the agent locks the workflow as [Un-Evacuated Vessel: Valve Removal Strictly Prohibited — Flash Fire Hazard].",
+      "agentId": "OG-P54-A04"
+    },
+    {
+      "n": 5,
+      "name": "Hydrostatic Stretch Testing & Tare-Weight Recertification Auditor",
+      "oneLine": "Ingests automated water-jacket hydrostatic test pressure-expansion curves, permanent volumetric expansion ratios (below 10%), and post-shotblast tare-weight measurements to certify cylinder pressure integrity or condemn structurally depleted vessels.",
+      "frictionSolved": "Eliminates 4.85 hours per test batch of manual burette water displacement reading, permanent expansion percentage math, and statutory certification filing paperwork across hundreds of tested cylinders.",
+      "reads": "Water-jacket hydrostatic test bench data (test pressure up to 2.5 MPa / 25 bar, total volumetric expansion, permanent volumetric expansion), post-shotblast empty tare scale readings, and cylinder original design wall thickness registers.",
+      "does": "1. Evaluates pressure-hold curves against statutory proof standards: confirms minimum 30-second hold at 2.5 MPa with zero pressure drop; 2. Computes permanent volumetric expansion ratio: Permanent Expansion Ratio = fracPermanent ExpansionTotal Expansion ×100%; 3. Enforces statutory pass/fail thresholds: automatically condemns any cylinder with permanent expansion exceeding 10% or any visible weld weeping; 4. Evaluates tare-weight reduction against original stamped tare: flags cylinders with >5% tare weight loss due to corrosion for mandatory condemnation; 5. Formulates statutory recertification inspection certificates and populates new tare weight and test quarter stamping schedules.",
+      "returns": "Certified Statutory Cylinder Hydrostatic Recertification Dossier, Condemned Cylinder Scrapping Ledger, and New Stamping Worksheets.",
+      "stopsAt": "Authorizing physical scrapping destruction or signing official statutory test certificates without the certified Competent Person's digital signature.",
+      "failureModes": "If a cylinder exceeds the 10% permanent expansion limit or shows an instantaneous pressure decay during the 25 bar hold, the agent locks the serial number as [Vessel Condemned: Hydrostatic Failure — Immediate Physical Crushing Required].",
+      "agentId": "OG-P54-A05"
+    },
+    {
+      "n": 6,
+      "name": "Bulk Unloading Gantry & Mounded Bullet Overfill Protection Sieve",
+      "oneLine": "Evaluates road tanker unloading gantry interlocks, vapor return line differentials, mounded bullet radar/servo tank gauging levels, and 85% high-level trip interlocks to prevent catastrophic bulk LPG overfilling and BLEVE risks.",
+      "frictionSolved": "Removes 2.65 hours daily of manual tank gauge dipping cross-checks, gantry checklist reviews, and overfill interlock validation across dozens of decanting operations.",
+      "reads": "Bulk road tanker decanting bay SCADA telemetry (earthing/bonding resistance <10 Omega, emergency shutoff valve status, liquid/vapor arm differential pressure), mounded bullet level transmitters, independent 85% high-level trip switches, and storage vessel temperature profiles.",
+      "does": "1. Verifies pre-unloading safety permissive interlocks: confirms tanker wheel chocks, bonding clamp grounding, and vapor line connection before allowing pump start; 2. Tracks real-time liquid transfer rates and monitors bullet ullage to prevent filling beyond statutory maximum capacity (85% of water volume at reference temperature); 3. Cross-checks primary radar level gauges against independent secondary servo gauges and hardwired high-level switches to detect sensor float jamming; 4. Monitors differential pressure between tanker and storage bullet, optimizing compressor vapor-assist decanting rates; 5. Detects abnormal pressure spikes or sudden arm flow drops indicative of hydraulic hammer or emergency breakaway coupling activation.",
+      "returns": "Bulk Decanting Operational Clearance Briefing, Real-Time Bullet Ullage Monitor, and Overfill Protection Safety Scorecard.",
+      "stopsAt": "Overriding independent hardwired Safety Instrumented System (SIS) high-high level shutdown interlocks.",
+      "failureModes": "If mounded bullet liquid level reaches 84.5% of capacity or primary and secondary level transmitters diverge by >2.0%, the agent initiates an immediate [Storage Overfill Warning: Automated Bulk Decanting Cutoff Interlock Armed].",
+      "agentId": "OG-P54-A06"
+    },
+    {
+      "n": 7,
+      "name": "Plant Process Safety Barrier & Fire Deluge Statutory Audit Synthesizer",
+      "oneLine": "Ingests area combustible gas detection LEL telemetry, fire water pump auto-start pressure logs, deluge valve trip actuation response times, and emergency mock-drill records to assemble auditable process safety dossiers for statutory regulatory compliance.",
+      "frictionSolved": "Eliminates 7.10 hours per statutory audit cycle of manual log aggregation, inspection binder preparation, and safety barrier verification across complex safety systems.",
+      "reads": "Fire and Gas (F&G) system historical event logs, 0-100% LEL hydrocarbon detector calibration records, jockey pump and main diesel fire water pump weekly pressure test logs, medium-velocity water spray (MVWS) deluge valve stroke records, and plant safety inspection walkdown sheets.",
+      "does": "1. Audits fire water network readiness: verifies that main fire pumps automatically start within 15 seconds upon header pressure dropping below the statutory setpoint (typically 7 to 8 bar); 2. Verifies medium-velocity water spray deluge coverage over mounded bullets, filling carousels, and tanker decanting gantries per OISD-STD-144 standards; 3. Audits catalytic and infrared gas detector sensor calibration trajectories, identifying sensors suffering zero-shift or sensitivity loss in high-vapor zones; 4. Reconciles emergency shutdown (ESD) push-button test logs across plant zones; 5. Compiles comprehensive statutory safety dossiers required for periodic audits by national regulatory authorities (e.g., PESO, OISD, OSHA).",
+      "returns": "Certified Plant Process Safety Barrier Integrity Dossier, Fire Protection System Readiness Index, and Statutory Regulatory Audit Submission Package.",
+      "stopsAt": "Authorizing plant operations with bypassed safety instrumented functions or signing off unverified fire protection impairments.",
+      "failureModes": "If diesel fire pump auto-start failure is detected or more than two gas detectors in the carousel filling shed are tagged in maintenance bypass simultaneously, the agent locks the plant compliance index and marks [Process Safety Impairment: Statutory Operating Envelope Breached — Immediate Remediation Required].",
+      "agentId": "OG-P54-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never multiply into speculative enterprise rupee or dollar totals. The operating facility provides its own throughput scale, cylinder fleet size, and commercial giveaway cost multipliers.",
+    "rows": [
+      {
+        "agent": "Bulk Receipt & Carousel Mass Balance Reconciliation",
+        "unit": "1 Daily Plant Operating Cycle (500 MT throughput)",
+        "beforeHours": 4.0,
+        "afterHours": 0.5,
+        "savedHours": 3.5,
+        "frictionRemoved": "Multi-Source Meter Reconciliation & Density Correction Drag"
+      },
+      {
+        "agent": "Carousel Filling Head Drift & Check-Weigher Triage",
+        "unit": "1 Production Shift (25,000 cylinders filled)",
+        "beforeHours": 3.5,
+        "afterHours": 0.4,
+        "savedHours": 3.1,
+        "frictionRemoved": "Manual Check-Weigher Bin Sorting & Trial-and-Error Drag"
+      },
+      {
+        "agent": "Automated Leak Detection & Valve Seal Defect Sieve",
+        "unit": "1 Daily Production Run (Water bath & sniffers)",
+        "beforeHours": 3.5,
+        "afterHours": 0.45,
+        "savedHours": 3.05,
+        "frictionRemoved": "Manual Sniffer Re-Verification & Visual Leak Hunting Drag"
+      },
+      {
+        "agent": "Statutory Cylinder DPT & Degassing Batch Formulator",
+        "unit": "1 Retesting Batch Campaign (3,000 cylinders)",
+        "beforeHours": 6.5,
+        "afterHours": 0.75,
+        "savedHours": 5.75,
+        "frictionRemoved": "Manual Collar Stamp Deciphering & Degassing Tracking Drag"
+      },
+      {
+        "agent": "Hydrostatic Stretch Testing & Tare Recertification",
+        "unit": "1 Statutory Test Batch (500 cylinders)",
+        "beforeHours": 5.5,
+        "afterHours": 0.65,
+        "savedHours": 4.85,
+        "frictionRemoved": "Manual Burette Expansion Math & Tare-Loss Calculation Drag"
+      },
+      {
+        "agent": "Bulk Unloading Gantry & Bullet Overfill Protection",
+        "unit": "1 Tanker Decanting & Storage Cycle (10 tankers)",
+        "beforeHours": 3.0,
+        "afterHours": 0.35,
+        "savedHours": 2.65,
+        "frictionRemoved": "Manual Gantry Checklist & High-Level Tank Dip Cross-Checking Drag"
+      },
+      {
+        "agent": "Process Safety Barrier & Deluge Statutory Audit",
+        "unit": "1 Quarterly Regulatory & Barrier Audit Cycle",
+        "beforeHours": 8.0,
+        "afterHours": 0.9,
+        "savedHours": 7.1,
+        "frictionRemoved": "Disconnected Paper Binder & Deluge Test Collation Drag"
+      }
+    ],
+    "total": {
+      "unit": "Across Major Operational & Statutory Cycles",
+      "beforeHours": 34.0,
+      "afterHours": 4.0,
+      "savedHours": 30.0,
+      "frictionRemoved": "88.2% reduction in plant management and statutory compliance drag",
+      "label": "Total LPG Plant Operations Drag Reduction"
+    }
+  },
+  "citations": [
+    {
+      "key": "[OISD-STD-144]",
+      "citation": "Oil Industry Safety Directorate, OISD-STD-144: Liquefied Petroleum Gas (LPG) Installations — Bottling Plant Operations, Design, and Safety, 2020",
+      "locator": "oisd.gov.in",
+      "type": "Regulatory Standard",
+      "supports": "Carousel tolerances, check-weigher precision, water bath testing, and deluge requirements"
+    },
+    {
+      "key": "[NFPA-58]",
+      "citation": "National Fire Protection Association, NFPA 58: Liquefied Petroleum Gas Code, 2024 Edition",
+      "locator": "nfpa.org",
+      "type": "Industry Standard Code",
+      "supports": "Bulk storage filling densities, container overfill prevention, and vapor recovery safety"
+    },
+    {
+      "key": "[PESO-GCR-2016]",
+      "citation": "Petroleum and Explosives Safety Organization (PESO), Gas Cylinders Rules, 2016, Ministry of Commerce and Industry",
+      "locator": "peso.gov.in",
+      "type": "Statutory Regulation",
+      "supports": "Periodic cylinder inspection intervals, degassing protocols, and mandatory condemnation rules"
+    },
+    {
+      "key": "[ISO-10691]",
+      "citation": "International Organization for Standardization, ISO 10691: Gas Cylinders — Refillable Welded Steel Cylinders for LPG — Procedures for Checking Before, During, and After Filling, 2020",
+      "locator": "iso.org",
+      "type": "International Standard",
+      "supports": "Operational checking before, during, and after filling; valve defect criteria; and rejection limits"
+    },
+    {
+      "key": "[IS-13258]",
+      "citation": "Bureau of Indian Standards, IS 13258: Periodic Inspection and Testing of LPG Cylinders — Code of Practice, 2014",
+      "locator": "bis.gov.in",
+      "type": "National Standard",
+      "supports": "Water-jacket hydrostatic stretch testing, burette measurement, and permanent expansion calculation"
+    },
+    {
+      "key": "[EN-1440]",
+      "citation": "European Committee for Standardization, EN 1440: LPG Equipment and Accessories — Transportable Refillable Traditional Welded and Brazed Steel LPG Cylinders — Periodic Inspection, 2018",
+      "locator": "cen.eu",
+      "type": "Regional Standard",
+      "supports": "European cylinder periodic inspection protocols, tare weight loss criteria, and scrap procedures"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "MAKEEN Energy (Kosan Crisplant) System Manager technical manuals, Emerson Rosemount TankMaster guides, and World LPG Association (WLPGA) technical papers for \"autonomous real-time carousel filling head mechanical drift diagnosis via coupled check-weigher and electronic sniffer log correlation\".",
+    "result": "Negative Search, 2026-09. Commercial carousel software logs individual fill weights and marks check-weigher rejects; none autonomously run multi-head statistical variance and signature correlation to diagnose specific pneumatic clamp or cutoff valve wear patterns across 72 filling heads without manual maintenance triage."
+  },
+  "line": "\"In an LPG bottling plant, you are handling thousands of tons of high-pressure propane and butane at fifteen bar while filling forty thousand domestic cylinders a day. An error of fifty grams across a million cylinders is fifty tons of lost product, but an overfilled cylinder or an undetected valve seal leak inside someone's home isn't an inventory variance—it's a catastrophic vapor-cloud explosion waiting for a spark.\"",
+  "openQuestions": []
+};

@@ -22,6 +22,17 @@ window.PERSONA_INDEX = [
     "initials": "WS",
     "agentFocus": "DDR & Tour Sheet Reconciliation Agent",
     "governingStandards": "IADC KSA / WellSharp; IOGP",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Wells & Rig"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 10.25,
     "agentNames": [
@@ -52,6 +63,17 @@ window.PERSONA_INDEX = [
     "initials": "WI",
     "agentFocus": "Annular Pressure & MAASP Diagnostic Agent",
     "governingStandards": "API RP 90-1/90-2; NORSOK D-010",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Wells & Rig"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 8,
     "savedHours": 108.05,
     "agentNames": [
@@ -84,6 +106,17 @@ window.PERSONA_INDEX = [
     "initials": "BO",
     "agentFocus": "Shift Handover & Loop Override Log Agent",
     "governingStandards": "API RP 755; ISA-18.2; PetroLMI",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Refining"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 7.6,
     "agentNames": [
@@ -114,6 +147,17 @@ window.PERSONA_INDEX = [
     "initials": "P",
     "agentFocus": "Well Log Splice & Normalization Agent",
     "governingStandards": "SPWLA 2022; SPE FE Matrix",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Subsurface"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 8,
     "savedHours": 38.0,
     "agentNames": [
@@ -147,6 +191,17 @@ window.PERSONA_INDEX = [
     "initials": "PG",
     "agentFocus": "Legacy Well Stratigraphic Archaeology Agent",
     "governingStandards": "AAPG; SPE Subsurface",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Subsurface"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 8,
     "savedHours": 80.0,
     "agentNames": [
@@ -178,6 +233,17 @@ window.PERSONA_INDEX = [
     "initials": "RE",
     "agentFocus": "Material Balance & Pressure Survey Assembly Agent",
     "governingStandards": "SPE Reservoir; PRMS",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Subsurface"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 51.0,
     "agentNames": [
@@ -208,6 +274,17 @@ window.PERSONA_INDEX = [
     "initials": "DE",
     "agentFocus": "Offset Well Hazard & Bit Selection Agent",
     "governingStandards": "SPE Drilling; API Spec 5CT / 10A",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Wells & Rig"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 8,
     "savedHours": 61.0,
     "agentNames": [
@@ -239,6 +316,17 @@ window.PERSONA_INDEX = [
     "initials": "CE",
     "agentFocus": "Wellbore Restriction & Jewelry Clearance Agent",
     "governingStandards": "ISO 14998; API 11D1; SPE",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Wells & Rig"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 30.25,
     "agentNames": [
@@ -269,6 +357,17 @@ window.PERSONA_INDEX = [
     "initials": "PE",
     "agentFocus": "Well Deliverability & Nodal Operating Squad (7 Agents)",
     "governingStandards": "SPE Production; API MPMS Ch 20; API 11L",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Field & Facilities"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 17.9,
     "agentNames": [
@@ -301,6 +400,17 @@ window.PERSONA_INDEX = [
     "initials": "LO",
     "agentFocus": "Dynamic Route & Field Surveillance Squad (7 Agents)",
     "governingStandards": "HSSC / PetroLMI; API MPMS Ch 3/11.1; API RP 54",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Field & Facilities"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 8.45,
     "agentNames": [
@@ -333,6 +443,17 @@ window.PERSONA_INDEX = [
     "initials": "CR",
     "agentFocus": "Console Surveillance & Alarm Triage Squad (7 Agents)",
     "governingStandards": "OPITO 9004; API RP 14C; ISA-18.2; OSPAR",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Field & Facilities"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 8.35,
     "agentNames": [
@@ -364,6 +485,17 @@ window.PERSONA_INDEX = [
     "initials": "FE",
     "agentFocus": "Surface Facility Debottlenecking Squad (7 Agents)",
     "governingStandards": "GPSA Data Book; API RP 14E; API 520/521",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Field & Facilities"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 39.0,
     "agentNames": [
@@ -394,6 +526,20 @@ window.PERSONA_INDEX = [
     "initials": "FA",
     "agentFocus": "Subsea Thermal-Hydraulics & Hydrate Squad (7 Agents)",
     "governingStandards": "API RP 17A; ISO 13628-1; Sloan",
+    "domains": [
+      "upstream",
+      "midstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Field & Facilities",
+      "midstream": "Pipelines & Network"
+    },
+    "valueSplit": {
+      "upstream": 0.85,
+      "midstream": 0.15
+    },
     "agentCount": 7,
     "savedHours": 23.9,
     "agentNames": [
@@ -426,6 +572,20 @@ window.PERSONA_INDEX = [
     "initials": "PC",
     "agentFocus": "Pipeline Hydraulic & CRM Dispatch Squad (7 Agents)",
     "governingStandards": "DOT 49 CFR CRM; API 1165/1175/1130",
+    "domains": [
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "midstream",
+    "crossCutting": false,
+    "groups": {
+      "midstream": "Pipelines & Network",
+      "downstream": "Offsites & Distribution"
+    },
+    "valueSplit": {
+      "midstream": 0.6,
+      "downstream": 0.4
+    },
     "agentCount": 7,
     "savedHours": 8.75,
     "agentNames": [
@@ -458,6 +618,20 @@ window.PERSONA_INDEX = [
     "initials": "TS",
     "agentFocus": "Marine Custody Transfer & Terminal Squad (7 Agents)",
     "governingStandards": "OCIMF ISGOTT; API MPMS Ch 17",
+    "domains": [
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "midstream",
+    "crossCutting": false,
+    "groups": {
+      "midstream": "Terminals & Marine",
+      "downstream": "Offsites & Distribution"
+    },
+    "valueSplit": {
+      "midstream": 0.5,
+      "downstream": 0.5
+    },
     "agentCount": 7,
     "savedHours": 14.15,
     "agentNames": [
@@ -488,6 +662,17 @@ window.PERSONA_INDEX = [
     "initials": "RP",
     "agentFocus": "Refinery Unit Yield & Energy Optimization Squad (7 Agents)",
     "governingStandards": "AIChE; AFPM; API 521",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Refining"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 21.4,
     "agentNames": [
@@ -519,6 +704,17 @@ window.PERSONA_INDEX = [
     "initials": "PP",
     "agentFocus": "Refinery LP Economics & Commercial Planning Squad (7 Agents)",
     "governingStandards": "AFPM; AIChE (Aspen PIMS)",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Planning & Supply"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 73.9,
     "agentNames": [
@@ -550,6 +746,17 @@ window.PERSONA_INDEX = [
     "initials": "G",
     "agentFocus": "Seismic Interpretation & Velocity Calibration Squad (7 Agents)",
     "governingStandards": "SEG; SPE Subsurface",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Subsurface"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 72.0,
     "agentNames": [
@@ -582,6 +789,23 @@ window.PERSONA_INDEX = [
     "initials": "PS",
     "agentFocus": "Process Safety Governance & Barrier Management Squad (7 Agents)",
     "governingStandards": "CCPS; OSHA 1910.119; API 754",
+    "domains": [
+      "upstream",
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": true,
+    "groups": {
+      "upstream": "Cross-Cutting",
+      "midstream": "Cross-Cutting",
+      "downstream": "Cross-Cutting"
+    },
+    "valueSplit": {
+      "upstream": 0.4,
+      "midstream": 0.1,
+      "downstream": 0.5
+    },
     "agentCount": 7,
     "savedHours": 99.75,
     "agentNames": [
@@ -613,6 +837,23 @@ window.PERSONA_INDEX = [
     "initials": "RE",
     "agentFocus": "Rotating Machinery Health & Failure Elimination Squad (7 Agents)",
     "governingStandards": "SMRP CMRP; ISO 14224; API 689",
+    "domains": [
+      "upstream",
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": true,
+    "groups": {
+      "upstream": "Cross-Cutting",
+      "midstream": "Cross-Cutting",
+      "downstream": "Cross-Cutting"
+    },
+    "valueSplit": {
+      "upstream": 0.4,
+      "midstream": 0.15,
+      "downstream": 0.45
+    },
     "agentCount": 7,
     "savedHours": 103.75,
     "agentNames": [
@@ -644,6 +885,17 @@ window.PERSONA_INDEX = [
     "initials": "DG",
     "agentFocus": "3D Geomodeling & Reservoir Characterization Squad (7 Agents)",
     "governingStandards": "AAPG; SPE Subsurface",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Subsurface"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 70.5,
     "agentNames": [
@@ -675,6 +927,17 @@ window.PERSONA_INDEX = [
     "initials": "RS",
     "agentFocus": "Numerical Simulation & Dynamic Forecasting Squad (7 Agents)",
     "governingStandards": "SPE Reservoir Simulation",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Subsurface"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 79.25,
     "agentNames": [
@@ -707,6 +970,17 @@ window.PERSONA_INDEX = [
     "initials": "SD",
     "agentFocus": "Subsurface Geodata Governance & OSDU Ingestion Squad (7 Agents)",
     "governingStandards": "PPDM Association; OSDU Forum",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Subsurface"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 82.25,
     "agentNames": [
@@ -739,6 +1013,17 @@ window.PERSONA_INDEX = [
     "initials": "WL",
     "agentFocus": "Wireline Log Quality Control & Field Operations Custody Squad (6 Agents)",
     "governingStandards": "API RP 66; API RP 67; SPWLA LQC",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Wells & Rig"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 6,
     "savedHours": 10.15,
     "agentNames": [
@@ -770,6 +1055,17 @@ window.PERSONA_INDEX = [
     "initials": "AL",
     "agentFocus": "Artificial Lift Surveillance & Failure Elimination Squad (7 Agents)",
     "governingStandards": "API RP 11L / 11S; SPE Lift",
+    "domains": [
+      "upstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": false,
+    "groups": {
+      "upstream": "Field & Facilities"
+    },
+    "valueSplit": {
+      "upstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 20.65,
     "agentNames": [
@@ -801,6 +1097,20 @@ window.PERSONA_INDEX = [
     "initials": "GP",
     "agentFocus": "Gas Treating, NGL Recovery & Sulfur Management Squad (7 Agents)",
     "governingStandards": "GPSA Data Book; GPA Midstream",
+    "domains": [
+      "upstream",
+      "midstream"
+    ],
+    "primaryDomain": "midstream",
+    "crossCutting": false,
+    "groups": {
+      "midstream": "Processing & Storage",
+      "upstream": "Field & Facilities"
+    },
+    "valueSplit": {
+      "midstream": 0.7,
+      "upstream": 0.3
+    },
     "agentCount": 7,
     "savedHours": 19.85,
     "agentNames": [
@@ -832,6 +1142,20 @@ window.PERSONA_INDEX = [
     "initials": "PI",
     "agentFocus": "Pipeline Integrity Management & ILI Dig Prioritization Squad (7 Agents)",
     "governingStandards": "ASME B31.8S; API 1160; B31G",
+    "domains": [
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "midstream",
+    "crossCutting": false,
+    "groups": {
+      "midstream": "Pipelines & Network",
+      "downstream": "Offsites & Distribution"
+    },
+    "valueSplit": {
+      "midstream": 0.65,
+      "downstream": 0.35
+    },
     "agentCount": 7,
     "savedHours": 78.5,
     "agentNames": [
@@ -863,6 +1187,17 @@ window.PERSONA_INDEX = [
     "initials": "BC",
     "agentFocus": "Fuels Blending Optimization & Giveaway Elimination Squad (7 Agents)",
     "governingStandards": "ASTM D4814; ASTM D975; API MPMS 8",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Quality & Blending"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 25.25,
     "agentNames": [
@@ -894,6 +1229,17 @@ window.PERSONA_INDEX = [
     "initials": "CP",
     "agentFocus": "Refinery Logistics, Storage Ullage & Movement Squad (7 Agents)",
     "governingStandards": "API MPMS Ch 12; OCIMF Marine",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Planning & Supply"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
     "agentCount": 7,
     "savedHours": 21.6,
     "agentNames": [
@@ -925,6 +1271,23 @@ window.PERSONA_INDEX = [
     "initials": "IE",
     "agentFocus": "Static Equipment Mechanical Integrity & Corrosion Squad (7 Agents)",
     "governingStandards": "API 510; API 570; API 653; ASME",
+    "domains": [
+      "upstream",
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": true,
+    "groups": {
+      "upstream": "Cross-Cutting",
+      "midstream": "Cross-Cutting",
+      "downstream": "Cross-Cutting"
+    },
+    "valueSplit": {
+      "upstream": 0.4,
+      "midstream": 0.15,
+      "downstream": 0.45
+    },
     "agentCount": 7,
     "savedHours": 75.2,
     "agentNames": [
@@ -957,6 +1320,23 @@ window.PERSONA_INDEX = [
     "initials": "TP",
     "agentFocus": "Plant Turnaround Controls & Mechanical Isolation Squad (7 Agents)",
     "governingStandards": "AACE RP 21R-98; OSHA 1910.119",
+    "domains": [
+      "upstream",
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": true,
+    "groups": {
+      "upstream": "Cross-Cutting",
+      "midstream": "Cross-Cutting",
+      "downstream": "Cross-Cutting"
+    },
+    "valueSplit": {
+      "upstream": 0.25,
+      "midstream": 0.1,
+      "downstream": 0.65
+    },
     "agentCount": 7,
     "savedHours": 59.85,
     "agentNames": [
@@ -989,6 +1369,23 @@ window.PERSONA_INDEX = [
     "initials": "IT",
     "agentFocus": "Field Instrumentation Calibration & Functional Safety Squad (7 Agents)",
     "governingStandards": "OPITO I&C; ISA CCST; IEC 61511",
+    "domains": [
+      "upstream",
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": true,
+    "groups": {
+      "upstream": "Cross-Cutting",
+      "midstream": "Cross-Cutting",
+      "downstream": "Cross-Cutting"
+    },
+    "valueSplit": {
+      "upstream": 0.4,
+      "midstream": 0.1,
+      "downstream": 0.5
+    },
     "agentCount": 7,
     "savedHours": 70.8,
     "agentNames": [
@@ -1021,6 +1418,23 @@ window.PERSONA_INDEX = [
     "initials": "ES",
     "agentFocus": "Environmental Compliance, Fugitive Methane & Decarbonization Squad (7 Agents)",
     "governingStandards": "EPA Method 21; NSPS OOOO; API GHG",
+    "domains": [
+      "upstream",
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "upstream",
+    "crossCutting": true,
+    "groups": {
+      "upstream": "Cross-Cutting",
+      "midstream": "Cross-Cutting",
+      "downstream": "Cross-Cutting"
+    },
+    "valueSplit": {
+      "upstream": 0.4,
+      "midstream": 0.1,
+      "downstream": 0.5
+    },
     "agentCount": 7,
     "savedHours": 81.55,
     "agentNames": [
@@ -1031,6 +1445,860 @@ window.PERSONA_INDEX = [
       "SPCC Secondary Containment & Stormwater Runoff Sieve",
       "Air Quality Title V Operating Permit Excursion & Deviation Sieve",
       "Corporate Scope 1/2 GHG Inventory & Carbon Accounting Synthesizer"
+    ]
+  },
+  {
+    "id": "P36",
+    "title": "Measurement Engineer",
+    "person": "Lars Eriksen",
+    "segment": "Midstream — Measurement & custody transfer",
+    "segmentLong": "Midstream & Downstream — Measurement & Custody Transfer (Pipeline Interconnects, Storage Terminals, Gas Plants & Refineries)",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Hydrocarbon Measurement Engineer",
+      "Custody Transfer Specialist",
+      "Fiscal Metering Engineer",
+      "Gas Measurement Specialist",
+      "Measurement Analyst"
+    ],
+    "avatar": "avatars/P36_persona.jpg",
+    "thumb": "avatars/thumbs/P36_thumb.jpg",
+    "initials": "ME",
+    "agentFocus": "Meter Prover Run Linearity & Repeatability Sieve",
+    "governingStandards": "API MPMS / AGA Reports",
+    "domains": [
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "midstream",
+    "crossCutting": false,
+    "groups": {
+      "midstream": "Commercial & Measurement",
+      "downstream": "Offsites & Distribution"
+    },
+    "valueSplit": {
+      "midstream": 0.55,
+      "downstream": 0.45
+    },
+    "agentCount": 7,
+    "savedHours": 21.15,
+    "agentNames": [
+      "Meter Prover Run Linearity & Repeatability Sieve",
+      "Terminal Bulk Gross-to-Net Static Volume Reconciliation Sieve",
+      "EFM & Gas Chromatograph Audit Trail Verification Sieve",
+      "Multi-Path Ultrasonic Gas & Liquid Meter Diagnostics Sieve",
+      "Orifice Plate Inspection & DP Transmitter Calibration Sieve",
+      "Custody Transfer Measurement Discrepancy & Dispute Audit Sieve",
+      "Facility Metrology Balance & UAF Synthesis Agent"
+    ]
+  },
+  {
+    "id": "P37",
+    "title": "SCADA Engineer",
+    "person": "Aisha Bello",
+    "segment": "Midstream — Transmission & network control",
+    "segmentLong": "Midstream — Transmission & Network Control",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Pipeline SCADA Engineer",
+      "Pipeline Automation Engineer",
+      "Control Systems Engineer (Midstream)",
+      "Telemetry & SCADA Specialist"
+    ],
+    "avatar": "avatars/P37_persona.jpg",
+    "thumb": "avatars/thumbs/P37_thumb.jpg",
+    "initials": "SE",
+    "agentFocus": "SCADA Alarm Rationalization & Nuisance Sieve",
+    "governingStandards": "API RP 1167 / API Std 1164 / ISA-18.2",
+    "domains": [
+      "midstream"
+    ],
+    "primaryDomain": "midstream",
+    "crossCutting": false,
+    "groups": {
+      "midstream": "Pipelines & Network"
+    },
+    "valueSplit": {
+      "midstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 18.1,
+    "agentNames": [
+      "SCADA Alarm Rationalization & Nuisance Sieve",
+      "RTU/PLC Point-to-Point Commissioning Sieve",
+      "Telemetry Link Health & Polling Latency Sieve",
+      "SCADA OT Cybersecurity & Hardening Sieve",
+      "API RP 1165 HMI Graphic Hierarchy Auditor",
+      "SCADA Tag Parameter MOC Drift Sieve",
+      "Flow Computer Telemetry & EFM Audit Sieve"
+    ]
+  },
+  {
+    "id": "P38",
+    "title": "Compressor Station Operator",
+    "person": "Carlos Mendoza",
+    "segment": "Midstream — Compression & pumping",
+    "segmentLong": "Midstream — Gas Compression & Liquid Mainline Pumping Operations",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Pump Station Operator",
+      "Gas Compressor Operator",
+      "Compression Technician",
+      "Station Operator",
+      "Pipeline Station Technician"
+    ],
+    "avatar": "avatars/P38_persona.jpg",
+    "thumb": "avatars/thumbs/P38_thumb.jpg",
+    "initials": "CS",
+    "agentFocus": "Compressor Operating Point & Dynamic Surge Sieve",
+    "governingStandards": "ASME B31Q (Pipeline Personnel Qualification) / API RP 1161 (Recommended Practice for Pipeline Operator Qualification)",
+    "domains": [
+      "midstream"
+    ],
+    "primaryDomain": "midstream",
+    "crossCutting": false,
+    "groups": {
+      "midstream": "Pipelines & Network"
+    },
+    "valueSplit": {
+      "midstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 8.75,
+    "agentNames": [
+      "Compressor Operating Point & Dynamic Surge Sieve",
+      "Scrubber & Filter-Separator Delta-P Triage Agent",
+      "Station Blowdown & Packing Vent Methane Reconciler",
+      "Lube Oil & Bearing Vibration Thermal Signature Sieve",
+      "Skid Isolation, LOTO & Pre-Start Purge Sieve",
+      "Station Auxiliary Load & Fuel Gas Efficiency Optimizer",
+      "Shift Handover Telemetry & Station Anomaly Synthesizer"
+    ]
+  },
+  {
+    "id": "P39",
+    "title": "Corrosion Engineer",
+    "person": "Meera Pillai",
+    "segment": "Midstream — Pipeline integrity & corrosion",
+    "segmentLong": "Midstream & Downstream — Cross-Country Transmission Pipelines, Gathering Networks & Terminal Piping",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Cathodic Protection Engineer",
+      "Pipeline Corrosion Specialist",
+      "Corrosion Prevention Engineer",
+      "Materials & Corrosion Technologist"
+    ],
+    "avatar": "avatars/P39_persona.jpg",
+    "thumb": "avatars/thumbs/P39_thumb.jpg",
+    "initials": "CE",
+    "agentFocus": "Annual Cathodic Protection Survey & Polarized Potential (-850 mV) Sieve",
+    "governingStandards": "AMPP SP0169 / AMPP SP0208",
+    "domains": [
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "midstream",
+    "crossCutting": false,
+    "groups": {
+      "midstream": "Pipelines & Network",
+      "downstream": "Offsites & Distribution"
+    },
+    "valueSplit": {
+      "midstream": 0.6,
+      "downstream": 0.4
+    },
+    "agentCount": 7,
+    "savedHours": 105.25,
+    "agentNames": [
+      "Annual Cathodic Protection Survey & Polarized Potential (-850 mV) Sieve",
+      "AC/DC Stray Current Interference & Mitigation Grounding Grid Modeler",
+      "Internal Corrosion Direct Assessment (ICDA) & Multiphase Water Dropout Predictor",
+      "Chemical Inhibitor & Biocide Dosing Optimization Engine",
+      "ICCP Groundbed & Deep Anode Well Degradation Sieve",
+      "External Coating Holiday & DCVG / ACVG Survey Defect Triage",
+      "Regulatory Corrosion Compliance & Direct Assessment (ECDA/ICDA) Synthesizer"
+    ]
+  },
+  {
+    "id": "P40",
+    "title": "Loading Master",
+    "person": "Erik Johansson",
+    "segment": "Midstream — LNG & marine terminals",
+    "segmentLong": "Midstream & Downstream — Marine Terminals & LNG Transfer Facilities",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Marine Loading Master",
+      "Terminal Representative",
+      "Person in Charge Marine Transfer",
+      "Marine Terminal Transfer Supervisor",
+      "Berth Loading Master"
+    ],
+    "avatar": "avatars/P40_persona.jpg",
+    "thumb": "avatars/thumbs/P40_thumb.jpg",
+    "initials": "LM",
+    "agentFocus": "Ship/Shore Safety Checklist (SSCL) & Pre-Transfer Protocol Agent",
+    "governingStandards": "ISGOTT 6th Ed. / OCIMF MTMSA Element 8 / SIGTTO / USCG 33 CFR 156 & 127",
+    "domains": [
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "midstream",
+    "crossCutting": false,
+    "groups": {
+      "midstream": "Terminals & Marine",
+      "downstream": "Offsites & Distribution"
+    },
+    "valueSplit": {
+      "midstream": 0.5,
+      "downstream": 0.5
+    },
+    "agentCount": 7,
+    "savedHours": 15.5,
+    "agentNames": [
+      "Ship/Shore Safety Checklist (SSCL) & Pre-Transfer Protocol Agent",
+      "Cryogenic Cooldown & Boil-Off Gas (BOG) Ramp-Up Sieve",
+      "Real-Time Transfer Rate & MLA Envelope Surveillance Agent",
+      "Ship-Shore Custody Measurement & Quality Reconciliation Sieve",
+      "ESD-1/ESD-2 Loop Testing & Metocean Abort Sentinel",
+      "Laytime Tracking & Statement of Facts (SOF) Reconciler",
+      "Marine Transfer Shift Handover & Berth Dossier Synthesizer"
+    ]
+  },
+  {
+    "id": "P41",
+    "title": "Gas Storage Engineer",
+    "person": "Fatima Zahra",
+    "segment": "Midstream — Storage",
+    "segmentLong": "Midstream — Gas Storage & Transmission",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Underground Storage Engineer",
+      "Gas Storage Reservoir Engineer",
+      "UGS Integrity Engineer"
+    ],
+    "avatar": "avatars/P41_persona.jpg",
+    "thumb": "avatars/thumbs/P41_thumb.jpg",
+    "initials": "GS",
+    "agentFocus": "Material Balance (p/Z) & Cushion-Working Gas Inventory Reconciliation Agent",
+    "governingStandards": "API RP 1171 / PHMSA 49 CFR Part 192.12",
+    "domains": [
+      "midstream"
+    ],
+    "primaryDomain": "midstream",
+    "crossCutting": false,
+    "groups": {
+      "midstream": "Processing & Storage"
+    },
+    "valueSplit": {
+      "midstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 55.5,
+    "agentNames": [
+      "Material Balance (p/Z) & Cushion-Working Gas Inventory Reconciliation Agent",
+      "Peak Withdrawal Deliverability & Dispatch Forecast Agent",
+      "Subsurface Integrity & Well Logging Correlation Agent",
+      "Perimeter Observation Well & Containment Anomaly Agent",
+      "Daily SCADA Meter vs. Storage Balancing Agent",
+      "Salt Cavern Thermodynamic & Creep Surveillance Agent",
+      "Regulatory Storage Safety (SIMP) & Compliance Audit Dossier Agent"
+    ]
+  },
+  {
+    "id": "P42",
+    "title": "Gas Scheduler",
+    "person": "Michael O'Connor",
+    "segment": "Midstream — Commercial: nominations & balancing",
+    "segmentLong": "Midstream — Commercial Gas Logistics, Capacity Optimization & Transmission Pipeline Balancing",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Natural Gas Scheduler",
+      "Pipeline Scheduler",
+      "Gas Transportation Scheduler",
+      "Gas Logistics Specialist"
+    ],
+    "avatar": "avatars/P42_persona.jpg",
+    "thumb": "avatars/thumbs/P42_thumb.jpg",
+    "initials": "GS",
+    "agentFocus": "Gas Nomination & Timely Cycle Assembly Sieve",
+    "governingStandards": "North American Energy Standards Board (NAESB) / Federal Energy Regulatory Commission (FERC)",
+    "domains": [
+      "midstream"
+    ],
+    "primaryDomain": "midstream",
+    "crossCutting": false,
+    "groups": {
+      "midstream": "Commercial & Measurement"
+    },
+    "valueSplit": {
+      "midstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 20.7,
+    "agentNames": [
+      "Gas Nomination & Timely Cycle Assembly Sieve",
+      "Interconnect Confirmation & MDQ Entitlement Sieve",
+      "Pipeline EBB Capacity Cut & Dynamic Re-Pathing Sieve",
+      "Intraday Re-Nomination & Bumping Optimization Sieve",
+      "SCADA Telemetry Variance & Real-Time Burn Imbalance Sieve",
+      "Underground Gas Storage (UGS) & Park-and-Loan (PAL) Balancing Sieve",
+      "Pipeline OFO, Imbalance Cash-Out & OBA Reconciliation Synthesizer"
+    ]
+  },
+  {
+    "id": "P43",
+    "title": "Gas Contracts Analyst",
+    "person": "Sofia Rossi",
+    "segment": "Midstream — Commercial: contracts & capacity",
+    "segmentLong": "Midstream — Commercial: Contracts & Capacity",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Gas Contracts Administrator",
+      "Transportation Contracts Specialist",
+      "Midstream Commercial Analyst",
+      "Capacity Contracts Analyst"
+    ],
+    "avatar": "avatars/P43_persona.jpg",
+    "thumb": "avatars/thumbs/P43_thumb.jpg",
+    "initials": "GC",
+    "agentFocus": "Service Agreement Abstract & Entitlement Sieve",
+    "governingStandards": "North American Energy Standards Board (NAESB) / Federal Energy Regulatory Commission (FERC)",
+    "domains": [
+      "midstream"
+    ],
+    "primaryDomain": "midstream",
+    "crossCutting": false,
+    "groups": {
+      "midstream": "Commercial & Measurement"
+    },
+    "valueSplit": {
+      "midstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 76.5,
+    "agentNames": [
+      "Service Agreement Abstract & Entitlement Sieve",
+      "Capacity Release Bidding & Tariff Compliance Sieve",
+      "Contractual Entitlement & Nomination Path Audit Sieve",
+      "Counterparty Credit Exposure & Tariff Default Sieve",
+      "Monthly Imbalance Reconciliation & Tiered Cash-Out Sieve",
+      "System Fuel Retention & In-Kind Reimbursement Sieve",
+      "Regulatory Index of Customers & Tariff Compliance Synthesizer"
+    ]
+  },
+  {
+    "id": "P44",
+    "title": "Gas Distribution Engineer",
+    "person": "Vikram Rao",
+    "segment": "Midstream — Gas distribution networks",
+    "segmentLong": "Midstream — Gas Distribution Networks & City Gas Distribution (CGD)",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Distribution Planning Engineer",
+      "Gas Network Engineer",
+      "City Gas Distribution Engineer",
+      "Gas Mains Design Engineer"
+    ],
+    "avatar": "avatars/P44_persona.jpg",
+    "thumb": "avatars/thumbs/P44_thumb.jpg",
+    "initials": "GD",
+    "agentFocus": "GIS Linework & Network Hydraulic Model Synchronization Sieve",
+    "governingStandards": "American Society of Mechanical Engineers (ASME) / Petroleum and Natural Gas Regulatory Board (PNGRB) / Institution of Gas Engineers and Managers (IGEM)",
+    "domains": [
+      "midstream"
+    ],
+    "primaryDomain": "midstream",
+    "crossCutting": false,
+    "groups": {
+      "midstream": "Pipelines & Network"
+    },
+    "valueSplit": {
+      "midstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 76.5,
+    "agentNames": [
+      "GIS Linework & Network Hydraulic Model Synchronization Sieve",
+      "Peak Design-Day Network Hydraulic & Bottleneck Screening Sieve",
+      "MAOP, Wall Thickness & PE SDR Derating Calculation Sieve",
+      "District Regulator Station (DRS) & Slam-Shut Valve Sizing Sieve",
+      "Overpressure Protection & Sense-Line Failure Envelope Audit Sieve",
+      "DIMP Vintage Pipe Replacement & Risk-Based Ranking Sieve",
+      "Distribution Extension Design Package & BOQ Takeoff Synthesizer"
+    ]
+  },
+  {
+    "id": "P45",
+    "title": "Shift Supervisor",
+    "person": "Grace Liu",
+    "segment": "Downstream — Refinery operations",
+    "segmentLong": "Downstream — Refining & Petrochemicals",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Operations Supervisor",
+      "Shift Superintendent",
+      "Shift Team Leader"
+    ],
+    "avatar": "avatars/P45_persona.jpg",
+    "thumb": "avatars/thumbs/P45_thumb.jpg",
+    "initials": "SS",
+    "agentFocus": "Shift Handover Narrative & Multi-Unit Reconciliation Agent",
+    "governingStandards": "OISD-STD-154 / OISD-STD-105",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Refining"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 7.4,
+    "agentNames": [
+      "Shift Handover Narrative & Multi-Unit Reconciliation Agent",
+      "Permit-to-Work SIMOPS & Spatial Isolation Conflict Sieve Agent",
+      "Safe Operating Limit & IOW Excursion Auditor Agent",
+      "Flare Excursion & Steam-to-Hydrocarbon Mass-Balance Sieve Agent",
+      "Safety Critical Element & Interlock Defeat Governance Agent",
+      "Unit Chemical Injection & Corrosion Inhibitor Mass-Balance Agent",
+      "Emergency Alarm Cascade & Incident First-Out Sieve Agent"
+    ]
+  },
+  {
+    "id": "P46",
+    "title": "Process Control Engineer",
+    "person": "Omar Haddad",
+    "segment": "Downstream — Process & technology engineering",
+    "segmentLong": "Downstream — Refining & Petrochemicals",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Advanced Process Control Engineer",
+      "APC Engineer",
+      "Process Automation Engineer",
+      "Control Systems Engineer"
+    ],
+    "avatar": "avatars/P46_persona.jpg",
+    "thumb": "avatars/thumbs/P46_thumb.jpg",
+    "initials": "PC",
+    "agentFocus": "Base-Layer PID Control Loop Health & Oscillation Diagnostics Sieve",
+    "governingStandards": "API RP 554 (Process Control Systems) & ISA-106 / ISA-18.2",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Refining"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 18.75,
+    "agentNames": [
+      "Base-Layer PID Control Loop Health & Oscillation Diagnostics Sieve",
+      "Multivariable Predictive Control (MPC) Model Health & Constraint Envelope Tracker",
+      "Soft Sensor & Inferential Quality Estimator Calibration Sieve",
+      "Alarm System Rationalization & Nuisance Flood Analyzer",
+      "Procedural Automation & State-Based Execution Sieve",
+      "Real-Time Process Optimization (RTO) Constraint & LP Target Reconciler",
+      "Control System Cyber-Physical Integrity & Fieldbus Device Health Sieve"
+    ]
+  },
+  {
+    "id": "P47",
+    "title": "Energy & Utilities Engineer",
+    "person": "Ingrid Larsen",
+    "segment": "Downstream — Utilities & energy",
+    "segmentLong": "Downstream — Refining & Petrochemical Utilities",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Utilities Process Engineer",
+      "Plant Utilities Engineer",
+      "Offsites & Utilities Engineer",
+      "Cogeneration Engineer"
+    ],
+    "avatar": "avatars/P47_persona.jpg",
+    "thumb": "avatars/thumbs/P47_thumb.jpg",
+    "initials": "EU",
+    "agentFocus": "Multi-Tier Steam Header Mass-Enthalpy Balance & Vent Loss Optimizer",
+    "governingStandards": "ASME PTC 4 / IChemE Energy & Resource Efficiency Standard",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Refining"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 21.85,
+    "agentNames": [
+      "Multi-Tier Steam Header Mass-Enthalpy Balance & Vent Loss Optimizer",
+      "Fired Boiler & HRSG Thermodynamic Efficiency & Sootblowing Sieve",
+      "Refinery Fuel Gas Blend Drum Wobbe Index & Burner Firing Stabilizer",
+      "Site-Wide Hydrogen Network Distribution & Flaring / Purge Reconciler",
+      "Boiler Feed Water Chemistry, Condensate Return & Deaerator Demineralization Sieve",
+      "Cooling Water Network Heat Exchanger Fouling & Biocide / Scaling Sieve",
+      "Site-Wide Steam Trap Population Acoustic Blow-Through & Health Sieve"
+    ]
+  },
+  {
+    "id": "P48",
+    "title": "Hydrocarbon Accountant",
+    "person": "Rajesh Kumar",
+    "segment": "Downstream — Planning & economics / loss control",
+    "segmentLong": "Downstream & Midstream — Refinery Planning & Economics, Loss Control & Commercial Hydrocarbon Accounting",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Refinery Yield Accountant",
+      "Yield Accountant",
+      "Mass Balance Coordinator",
+      "Loss Control Specialist"
+    ],
+    "avatar": "avatars/P48_persona.jpg",
+    "thumb": "avatars/thumbs/P48_thumb.jpg",
+    "initials": "HA",
+    "agentFocus": "Daily Plant-Wide & Unit Mass Balance Reconciliation Sieve",
+    "governingStandards": "Energy Institute HM 31 & API MPMS Chapter 12",
+    "domains": [
+      "midstream",
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Planning & Supply",
+      "midstream": "Commercial & Measurement"
+    },
+    "valueSplit": {
+      "downstream": 0.7,
+      "midstream": 0.3
+    },
+    "agentCount": 7,
+    "savedHours": 22.5,
+    "agentNames": [
+      "Daily Plant-Wide & Unit Mass Balance Reconciliation Sieve",
+      "Marine Custody Transfer & Vessel Experience Factor Transit Loss Sieve",
+      "Pipeline Custody Transfer & Dynamic Batch Interface Reconciliation Sieve",
+      "Unit Yield vs. Linear Program Plan Variance & Slop Degradation Sieve",
+      "Refinery Loss Control & Flare/Evaporation Unaccounted-for Sieve",
+      "Marine Demurrage Statement of Facts & Laytime Audit Sieve",
+      "Statutory Hydrocarbon Customs & Fiscal Excise Reconciliation Synthesizer"
+    ]
+  },
+  {
+    "id": "P49",
+    "title": "Distribution Planner",
+    "person": "Amara Nwosu",
+    "segment": "Downstream — Distribution: pipelines, terminals & depots",
+    "segmentLong": "Downstream — Product Distribution, Bulk Terminals, Pipeline Depots & Secondary Logistics",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Product Supply Planner",
+      "Downstream Supply Coordinator",
+      "Fuels Supply Planner",
+      "Secondary Distribution Coordinator"
+    ],
+    "avatar": "avatars/P49_persona.jpg",
+    "thumb": "avatars/thumbs/P49_thumb.jpg",
+    "initials": "DP",
+    "agentFocus": "Multi-Terminal Stock Depletion & Predictive Run-Out Sieve",
+    "governingStandards": "Energy Institute HM 32 & AFPM Supply Chain Guidelines",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Planning & Supply"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 21.6,
+    "agentNames": [
+      "Multi-Terminal Stock Depletion & Predictive Run-Out Sieve",
+      "Multi-Product Pipeline Batch Nomination & Cycle Scheduling Sieve",
+      "Multi-Hub Contingency Rerouting & Supply Disruption Simulator",
+      "Commercial Borrow/Loan Exchange Reconciliation & Balancing Synthesizer",
+      "Terminal Rack Allocation & Customer Lifting Quota Sieve",
+      "Secondary Road Tanker Bridging & Fleet Replenishment Dispatch Sieve",
+      "Biofuel & Performance Additive Terminal Blending Synchronization Sieve"
+    ]
+  },
+  {
+    "id": "P50",
+    "title": "Quality Control Chemist",
+    "person": "Elif Demir",
+    "segment": "Downstream — Blending & product quality / laboratory",
+    "segmentLong": "Downstream — Refining, Blending & Product Quality / Laboratory Certification",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "QC Chemist",
+      "Laboratory Chemist",
+      "Petroleum Chemist",
+      "Analytical Chemist",
+      "Refinery Chemist"
+    ],
+    "avatar": "avatars/P50_persona.jpg",
+    "thumb": "avatars/thumbs/P50_thumb.jpg",
+    "initials": "QC",
+    "agentFocus": "Multi-Parameter Refinery Assay Validation & Specification Sieve",
+    "governingStandards": "ISO/IEC 17025:2017 & ASTM D6299",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Quality & Blending"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 23.9,
+    "agentNames": [
+      "Multi-Parameter Refinery Assay Validation & Specification Sieve",
+      "ASTM D6299 Statistical Quality Control (SQC) & Instrument Drift Sieve",
+      "Out-of-Specification (OOS) Root-Cause Investigation & Retest Dossier Synthesizer",
+      "Gas Chromatography (GC) Simulated Distillation & DHA Peak Integration Sieve",
+      "CFR Knock Engine & Cetane Rating Operational SQC Sieve",
+      "ISO/IEC 17025 Calibration Traceability & Measurement Uncertainty Synthesizer",
+      "Performance-Based Measurement System (PBMS) & Regulatory Compliance Sieve"
+    ]
+  },
+  {
+    "id": "P51",
+    "title": "Oil Movement Controller",
+    "person": "Tomás García",
+    "segment": "Downstream — Offsites, tank farms & oil movement",
+    "segmentLong": "Downstream — Refinery Offsites, Storage Tank Farms & Hydrocarbon Oil Movements",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Oil Movements Operator",
+      "OM&S Console Operator",
+      "Tank Farm Console Operator",
+      "Offsites Console Controller"
+    ],
+    "avatar": "avatars/P51_persona.jpg",
+    "thumb": "avatars/thumbs/P51_thumb.jpg",
+    "initials": "OM",
+    "agentFocus": "API 2350 Safe Response Time & Dynamic Ullage Overfill Sieve",
+    "governingStandards": "API Standard 2350 / API Standard 2610 / OISD-STD-108",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Offsites & Distribution"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 20.25,
+    "agentNames": [
+      "API 2350 Safe Response Time & Dynamic Ullage Overfill Sieve",
+      "Manifold Lineup & Hydraulic Route Contamination Sieve",
+      "Unit Rundown Switch & Intermediate Swing-Tank Sequencing Sieve",
+      "Tank Floating Roof Landing, Mixer & Thermal Stratification Sieve",
+      "Active Transfer Hydraulic Integrity & Pipeline Receipt Leak Sieve",
+      "Tank Water Draw-Off & Oil-Water Interface Monitoring Sieve",
+      "Shift Handover Transfer Execution & ATG Gauge Reconciliation Synthesizer"
+    ]
+  },
+  {
+    "id": "P52",
+    "title": "Polymer Process Engineer",
+    "person": "Yuki Tanaka",
+    "segment": "Downstream — Petrochemicals",
+    "segmentLong": "Downstream — Petrochemicals",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Polymer Engineer",
+      "Polymerization Engineer",
+      "Resin Process Engineer"
+    ],
+    "avatar": "avatars/P52_persona.jpg",
+    "thumb": "avatars/thumbs/P52_thumb.jpg",
+    "initials": "PP",
+    "agentFocus": "Polymerization Reactor Kinetic & Catalyst Productivity Sieve",
+    "governingStandards": "Society of Plastics Engineers (SPE) & Cogent Skills National Occupational Standards",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Petrochemicals"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 19.25,
+    "agentNames": [
+      "Polymerization Reactor Kinetic & Catalyst Productivity Sieve",
+      "Grade Transition Trajectory & Off-Spec Tonnage Minimizer",
+      "Fluidized-Bed Hydrodynamics & Condensed-Mode Cooling Sieve",
+      "Compounding Extruder Specific Energy & Thermal Degradation Sieve",
+      "Additive Masterbatch Formulation & Chemical Dosing Optimizer",
+      "Optical Pellet Quality & Gel Defect Forensics Sieve",
+      "Polymer Technical Services Shift Handover & Resin Quality Dossier Synthesizer"
+    ]
+  },
+  {
+    "id": "P53",
+    "title": "Retail Territory Manager",
+    "person": "David Mensah",
+    "segment": "Downstream — Marketing & retail fuels",
+    "segmentLong": "Downstream — Marketing & Retail Fuels",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Retail Operations Specialist",
+      "Territory Manager - Retail",
+      "Forecourt Operations Manager",
+      "Area Retail Manager"
+    ],
+    "avatar": "avatars/P53_persona.jpg",
+    "thumb": "avatars/thumbs/P53_thumb.jpg",
+    "initials": "RT",
+    "agentFocus": "Daily Wetstock Reconciliation & SIR Sieve",
+    "governingStandards": "American Petroleum Institute (API) / Petroleum Equipment Institute (PEI)",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Marketing"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 9.7,
+    "agentNames": [
+      "Daily Wetstock Reconciliation & SIR Sieve",
+      "Forecourt Replenishment & Ullage Dispatch Optimizer",
+      "Forecourt Statutory HSSE Audit & Remediation Sieve",
+      "Dispenser Meter Calibration & Legal Metrology Sieve",
+      "Retail Pricing Execution & Fuel Margin Sieve",
+      "Decantation Receipt Variance & Offloading Protocol Sieve",
+      "Dealer Performance & Territory Operations Synthesizer"
+    ]
+  },
+  {
+    "id": "P54",
+    "title": "LPG Plant Manager",
+    "person": "Kavya Sharma",
+    "segment": "Downstream — Marketing: LPG bottling",
+    "segmentLong": "Downstream — Marketing & LPG Bottling Infrastructure (Pressurized Liquefied Gas Plant Operations & Cylinder Integrity)",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "LPG Bottling Superintendent",
+      "LPG Operations Engineer",
+      "LPG Plant Superintendent",
+      "Cylinder Filling Plant Manager"
+    ],
+    "avatar": "avatars/P54_persona.jpg",
+    "thumb": "avatars/thumbs/P54_thumb.jpg",
+    "initials": "LP",
+    "agentFocus": "Bulk Receipt & Carousel Mass Balance Reconciliation Sieve",
+    "governingStandards": "Oil Industry Safety Directorate (OISD) / National Fire Protection Association (NFPA)",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Marketing"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 30.0,
+    "agentNames": [
+      "Bulk Receipt & Carousel Mass Balance Reconciliation Sieve",
+      "Rotary Carousel Filling Head Drift & Check-Weigher Defect Sieve",
+      "Automated Leak Detection & Valve Seal Defect Diagnostic Sieve",
+      "Statutory Cylinder Due-for-Testing (DPT) & Degassing Campaign Formulator",
+      "Hydrostatic Stretch Testing & Tare-Weight Recertification Auditor",
+      "Bulk Unloading Gantry & Mounded Bullet Overfill Protection Sieve",
+      "Plant Process Safety Barrier & Fire Deluge Statutory Audit Synthesizer"
+    ]
+  },
+  {
+    "id": "P55",
+    "title": "Aviation Fuelling Supervisor",
+    "person": "James Whitaker",
+    "segment": "Downstream — Marketing: aviation fuel",
+    "segmentLong": "Downstream — Aviation Fuel Storage, Hydrant Systems & Into-Plane Fuelling Operations",
+    "tier": "Extended",
+    "core20": false,
+    "aliases": [
+      "Aviation Fuel Officer",
+      "Into-Plane Fuelling Supervisor",
+      "Airport Depot Supervisor",
+      "Apron Fuel Operations Lead",
+      "Airfield Fuelling Superintendent"
+    ],
+    "avatar": "avatars/P55_persona.jpg",
+    "thumb": "avatars/thumbs/P55_thumb.jpg",
+    "initials": "AF",
+    "agentFocus": "Aviation Fuel Batch CoA & Recertification Test Sieve",
+    "governingStandards": "Joint Inspection Group (JIG) / Energy Institute (EI)",
+    "domains": [
+      "downstream"
+    ],
+    "primaryDomain": "downstream",
+    "crossCutting": false,
+    "groups": {
+      "downstream": "Marketing"
+    },
+    "valueSplit": {
+      "downstream": 1.0
+    },
+    "agentCount": 7,
+    "savedHours": 10.4,
+    "agentNames": [
+      "Aviation Fuel Batch CoA & Recertification Test Sieve",
+      "Filter-Water Separator Differential Pressure & Element Life Forecaster",
+      "Apron Hydrant Surge & Emergency Fuel Shutoff (EFSO) Loop Verification Sieve",
+      "Mobile Fuelling Vehicle Interlock & Pressure Control Valve Performance Sieve",
+      "Daily Apron Quality Control & Free Water Detection Audit Sieve",
+      "Into-Plane Custody Fuel Reconciliation & Flight Dispatch Ticket Sieve",
+      "Airport Fuelling Operations Shift Handover & JIG Dossier Synthesizer"
     ]
   }
 ];

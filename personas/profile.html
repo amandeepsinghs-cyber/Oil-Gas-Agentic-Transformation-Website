@@ -827,7 +827,7 @@
 (function () {
   "use strict";
 
-  /* The rail needs all 33 personas; the page body needs exactly one. So the
+  /* The rail needs all personas (PERSONA_INDEX.length); the page body needs exactly one. So the
      index (40 KB) loads up front and each persona's detail (~35 KB) is pulled
      when it is first opened, instead of shipping 1.33 MB to show one role.
 
@@ -930,7 +930,7 @@
   }
 
   // Rail buckets. The dossier segment is finer-grained than is useful in a
-  // 33-item sidebar (6 of the 13 raw segments hold exactly one persona), so
+  // role sidebar (PERSONA_INDEX.length items; 6 of the 13 raw segments hold exactly one persona), so
   // collapse to value-chain order. The precise segment still shows on the hero.
   var RAIL_GROUPS = [
     "Subsurface & Geosciences",

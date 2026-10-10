@@ -1,0 +1,18 @@
+{
+  "id": "P42",
+  "seats": 40,
+  "assetCapital": {
+    "form": "volume",
+    "asset": "Gas transmission pipeline capacity",
+    "qtyPerYear": 1800000000,
+    "qtyLabel": "MMBtu transported",
+    "share": 0.0008,
+    "ratePerQty": 75,
+    "basis": "0.08% of throughput capacity recovered by avoiding confirmation cutbacks and dynamically re-routing around pipeline constraint notices",
+    "source": "~120-130 MMSCMD (~1.8B MMBtu/yr) transported across ~16,000 km network. ₹75/MMBtu reflects the blended two-zone unified national pipeline tariff (Zone 1 ₹54/MMBtu, Zone 2 ₹110/MMBtu) under statutory access codes. Recovering 0.08% of throughput via automated cycle matching and dynamic secondary pathing is well below typical 0.5-1.5% proration cut exposure."
+  },
+  "assetRisk": null,
+  "recovery": null,
+  "rationale": "P42 Gas Scheduler governs commercial natural gas nominations, confirmations, capacity allocations, and physical balancing across ~16,000 km of transmission network transporting 120-130 MMSCMD (~1.8B MMBtu/yr). Sizing: 40 seats represents ~0.83% of enterprise staff (4,800), providing 24/7/365 coverage for central dispatch and 6 regional zones across the 5 standardized daily nomination cycles, plus dedicated balancing and OBA reconciliation analysts. Asset Capital: In volume form, recovering 0.08% of pipeline capacity utilization (valued at the statutory blended unified tariff of ₹75/MMBtu) by eliminating confirmation cuts to the lesser quantity and dynamically re-routing around bottleneck notices. Asset Risk: Strictly null following the restraint of value_model.js peer scheduling roles (P15, P17, P29). Schedulers do not operate physical compressor valves or control room pressure safeguards (owned by P14 Pipeline Controller), nor do they manage containment barrier integrity (owned by P27 Pipeline Integrity). Imbalance cash-out penalties represent contractual settlements rather than loss of primary containment. Resource Recovery: Strictly null as midstream transmission does not discover or produce subsurface hydrocarbons.",
+  "caveats": "Never name any operator in citations or UI copy. Unified tariff rates are derived from published statutory regulations (PNGRB Zone 1 ₹54/MMBtu, Zone 2 ₹110.02/MMBtu). If an operator insists on parameterizing discrete Operational Flow Order (OFO) cash-out non-compliance as an operational risk event rather than absorbing it into capacity recovery, a conservative parameterization would be: unitsPerYear: 16 (thousand km of pipeline), frequency: 0.15, consequence: ₹25,000,000, alpha: 0.35, beta: 0.35 (alpha*beta = 12.25%, expected loss avoided ₹73.5 L/yr)."
+}

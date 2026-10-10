@@ -20,6 +20,17 @@
   "avatar": "avatars/P05_persona.jpg",
   "thumb": "avatars/thumbs/P05_thumb.jpg",
   "initials": "PG",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Subsurface"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Petroleum Geologist hunts for undiscovered hydrocarbon accumulations, integrating regional geophysics, stratigraphy, and basin thermodynamics into drillable prospects. While modern geological workstations like SLB Petrel and S&P Global Kingdom provide sophisticated 3D horizon surface gridding and geomodeling tools, they are utterly helpless at ingesting legacy unstructured well data. In any mature or frontier basin, up to 70% of historical well knowledge lives trapped inside scanned 1960s–1990s paper completion cards, typewriter scout tickets, and raster mudlogs. Geologists spend hundreds of hours manually keying formation tops, show descriptions, and Drill Stem Test (DST) recoveries into spreadsheets. Rather than an ungrounded \"AI exploration assistant,\" the Petroleum Geologist requires a federated squad of 7 hyper-specialized agents—each tackling one discrete, research-backed archaeological, geochemical, or volumetric audit workflow. Across a regional prospect maturation project, this squad returns ~26.0 hours of high-value geological evaluation time per play evaluation, directly accelerating licensing rounds, unearthing forgotten hydrocarbon shows, and preventing dry holes.",
   "confidence": {
     "Persona": "Petroleum Geologist (P05)",

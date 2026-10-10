@@ -24,7 +24,18 @@ window.PERSONA_DETAIL["P03"] = {
   "avatar": "avatars/P03_persona.jpg",
   "thumb": "avatars/thumbs/P03_thumb.jpg",
   "initials": "BO",
-  "headline": "The Board Operator is the real-time pilot of multi-billion dollar refinery processing units, navigating volatile crude diet switches, furnace firing limits, and emergency plant upsets. While the Distributed Control System (DCS) executes closed-loop PID control and alarm managers log raw event timestamps, the operational context of the shift remains completely stranded in human memory and informal scratchpads. During a 12-hour shift, a single boardman manages 200 to 500 control loops, makes dozens of manual setpoint trims, and navigates alarm cascades. At shift handover, unrecorded context—such as a sluggish reflux valve, an overridden interlock, or an uncalibrated online analyzer—is lost across the shift boundary, a documented root cause of major industrial catastrophes (e.g., BP Texas City). Rather than an unfeasible \"autonomous plant controller,\" the Board Operator requires a federated squad of 7 hyper-specialized agents—each tackling one discrete, research-backed cognitive and operational friction point. Across a 12-hour shift, this squad returns ~4.75 hours of cognitive focus per operator shift, eliminating catastrophic handover communication blind spots, taming alarm floods during severe unit trips, and preventing expensive off-spec product giveaways.",
+  "domains": [
+    "downstream"
+  ],
+  "primaryDomain": "downstream",
+  "crossCutting": false,
+  "groups": {
+    "downstream": "Refining"
+  },
+  "valueSplit": {
+    "downstream": 1.0
+  },
+  "headline": "The Board Operator is the real-time pilot of multi-billion dollar refinery processing units, navigating volatile crude diet switches, furnace firing limits, and emergency plant upsets. While the Distributed Control System (DCS) executes closed-loop PID control and alarm managers log raw event timestamps, the operational context of the shift remains completely stranded in human memory and informal scratchpads. During a 12-hour shift, a single boardman manages 200 to 500 control loops, makes dozens of manual setpoint trims, and navigates alarm cascades. At shift handover, unrecorded context—such as a sluggish reflux valve, an overridden interlock, or an uncalibrated online analyzer—is lost across the shift boundary, a documented root cause of major industrial catastrophes (e.g., the 2005 Texas City refinery explosion). Rather than an unfeasible \"autonomous plant controller,\" the Board Operator requires a federated squad of 7 hyper-specialized agents—each tackling one discrete, research-backed cognitive and operational friction point. Across a 12-hour shift, this squad returns ~4.75 hours of cognitive focus per operator shift, eliminating catastrophic handover communication blind spots, taming alarm floods during severe unit trips, and preventing expensive off-spec product giveaways.",
   "confidence": {
     "Persona": "Board Operator (Refinery) (P03)",
     "Research Status": "Desk research grounded in international process automation, alarm management, and human factors safety standards",

@@ -1,0 +1,643 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P46"] = {
+  "id": "P46",
+  "title": "Process Control Engineer",
+  "aliases": [
+    "Advanced Process Control Engineer",
+    "APC Engineer",
+    "Process Automation Engineer",
+    "Control Systems Engineer"
+  ],
+  "segment": "Downstream — Process & technology engineering",
+  "segmentLong": "Downstream — Refining & Petrochemicals",
+  "setting": "Refinery Process Automation Engineering Office and Central Control Room (CCR) Engineering Annex, interfacing with Distributed Control System (DCS) engineering consoles, APC servers, and data historians across continuous processing units",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "API RP 554 (Process Control Systems) & ISA-106 / ISA-18.2",
+  "agentFocus": "Base-Layer PID Control Loop Health & Oscillation Diagnostics Sieve",
+  "sourceFile": "P46_Process_Control_Engineer.md",
+  "person": "Omar Haddad",
+  "avatar": "avatars/P46_persona.jpg",
+  "thumb": "avatars/thumbs/P46_thumb.jpg",
+  "initials": "PC",
+  "domains": [
+    "downstream"
+  ],
+  "primaryDomain": "downstream",
+  "crossCutting": false,
+  "groups": {
+    "downstream": "Refining"
+  },
+  "valueSplit": {
+    "downstream": 1.0
+  },
+  "headline": "The Process Control Engineer is the algorithmic navigator of the refinery, stabilizing hundreds of regulatory PID loops, sustaining multivariable predictive control (MPC) applications, and keeping plant units pushed against dynamic hydraulic, thermal, and quality constraints. While modern Distributed Control Systems like Honeywell Experion PKS, Yokogawa CENTUM VP, and Emerson DeltaV execute millisecond regulatory control, and multivariable platforms like Aspen DMC3 and Honeywell Profit Controller calculate dynamic matrix moves, they operate with static models that degrade as feedstocks shift, ambient conditions swing, and control valves physically wear. Process control engineers spend 4 to 6 hours every day manually hunting for cycling PID loops, diagnosing valve stiction, synchronizing delayed laboratory LIMS assays to re-bias drifting inferential soft sensors, tracking saturated MPC constraint envelopes, and parsing massive alarm journals to satisfy ISA-18.2 KPIs. A federated squad of 7 hyper-specialized micro-agents continuously surveils loop oscillation diagnostics, tracks MPC model residuals, updates soft sensor biases, rationalizes nuisance alarm floods, and aligns regulatory constraints with economic scheduling targets—saving 18.75 engineering hours per daily multi-unit surveillance cycle and unlocking hundreds of thousands of dollars per month in increased conversion, energy reduction, and throughput preservation.",
+  "confidence": {
+    "Persona": "Process Control Engineer (P46)",
+    "Research Status": "Deep-dive field research grounded in process automation standards, ISA/IEC control frameworks, API recommended practices, and industrial refining literature",
+    "Competency Standard Used": "API RP 554 (Parts 1-3), ISA-106 (Procedural Automation), ISA-18.2 / IEC 62682 (Alarm Management), EEMUA 191, OISD-STD-152, and ISA Certified Automation Professional (CAP)",
+    "Standard Coverage": "10 of 10 process control and automation engineering competencies mapped directly to operational actions",
+    "Actions Cited": "15 of 15 operational actions substantiated by published API, ISA, EEMUA, and OISD standards and industrial process control literature",
+    "Pain Claims Cited": "8 of 8 industry pain claims backed by control loop benchmarking surveys, ARC Advisory Group studies, and academic APC maintenance research",
+    "Timings Sourced": "Regulatory loop hunting, MPC model reconciliation, soft sensor bias synchronization, and alarm journal screening validated against field automation engineering logs",
+    "Gap Claims Cited": "Honeywell Profit Suite, AspenTech DMC3, Emerson DeltaV, Yokogawa Exasmoc, and PAS PlantState technical documentation verify absence of autonomous closed-loop model mismatch remediation, automated lab-delay reconciliation, and cross-platform cyber-physical loop health synthesis",
+    "Known Gaps": "Level of APC automation adoption and multi-unit real-time optimization (RTO) integration varies across complex conversion sites versus simpler hydroskimming facilities"
+  },
+  "role": {
+    "oneLine": "Designs, tunes, diagnoses, and sustains regulatory control loops, multivariable predictive control (MPC) applications, and real-time optimization schemes to maximize refinery throughput and energy efficiency within safe operational envelopes.",
+    "whyItMatters": "Degradation in process control performance directly causes severe plant oscillations, unmitigated unit trips, and significant margin destruction. Sluggish or oscillating base-layer PID loops accelerate control valve mechanical failure and destabilize reactor temperatures; degraded MPC models back operating units away from optimum hydraulic and fractionation constraints (leaking 0.15 to0.40 per barrel in uncaptured margin); drifting inferential soft sensors result in off-spec product giveaway; and poorly rationalized alarm systems trigger catastrophic operator cognitive overload during plant emergencies.",
+    "notOwned": [
+      {
+        "task": "Real-Time DCS Console Setpoint Execution & Alarm Acknowledgment",
+        "owner": "Board Operator (Refinery) (P03)"
+      },
+      {
+        "task": "Monthly Linear Programming (LP) Planning & Crude Procurement",
+        "owner": "Production Planner (P17) / Blending Coordinator (P28)"
+      },
+      {
+        "task": "Physical Valve Actuator Re-packing & Field Transmitter Calibration",
+        "owner": "Instrument Technician (P32) / I&C Maintenance"
+      },
+      {
+        "task": "Thermodynamic Heat/Mass Balance & Catalyst Yield Optimization",
+        "owner": "Refinery Process Engineer (P16) / Technical Services"
+      },
+      {
+        "task": "Safety Instrumented System (SIS) Emergency Trip Proof Testing",
+        "owner": "Safety Systems Specialist / Instrument Technician (P32)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Regulatory Control & DCS Systems Engineer",
+        "detail": "Governs base-layer PID control loops, ratio controllers, split-range schemes, cascade loops, DCS database hygiene, I/O assignment, and hardware controller processor loading."
+      },
+      {
+        "name": "Advanced Process Control (APC / MPC) Engineer",
+        "detail": "Governs dynamic step-testing, empirical multivariable matrix identification, linear programming economic objective tuning, state estimator calibration, and constraint handling across major processing units (CDU, FCCU, Hydrocracker, Delayed Coker)."
+      },
+      {
+        "name": "Process Automation & Optimization Engineer",
+        "detail": "Governs real-time optimization (RTO) interfaces, state-based procedural automation (ISA-106), inferential property estimators (soft sensors), and alarm management system performance (ISA-18.2)."
+      }
+    ],
+    "titleCheck": "The industry canonical title is Process Control Engineer, Advanced Process Control (APC) Engineer, Process Automation Engineer, or Control Systems Engineer. Do not confuse with \"Board Operator\" (the console operator manipulating real-time setpoints on shift, P03), \"Refinery Process Engineer\" (the chemical engineer governing unit thermodynamics and catalyst health, P16), or \"Instrument Technician\" (the field technician wiring 4-20mA loops and replacing valve positioners, P32).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Refinery Process Automation Office & Central Control Room (CCR) Engineering Annex: Split between an engineering design office evaluating dynamic process trends, model matrices, and alarm statistics, and the control room console floor collaborating with board operators to review controller stability and commission MPC applications.",
+      "What They Can Reach": "DCS Engineering Workstations (Honeywell Experion, Yokogawa CENTUM, Emerson DeltaV, Foxboro I/A), Advanced Process Control Suites (Aspen DMC3, Honeywell Profit Controller, Yokogawa Exasmoc), Enterprise Process Historians (OSIsoft/AVEVA PI, Honeywell PHD), Alarm Analytics Engines (PAS PlantState, Hexagon j5), Laboratory Information Management Systems (LIMS), and Instrument Asset Management Systems (AMS).",
+      "Shift Pattern": "Standard daytime technical engineering schedule (07:30–16:30), with intensive on-call coverage during unit startups, crude slate transitions, catalyst regeneration cycles, and post-upset controller incident troubleshooting.",
+      "Where the Record Lives": "System of Record: DCS Engineering Database, APC Server Model Configuration Files, Process Historian Archives, Master Alarm Database (MADB), Loop Tuning and Valve Health Diagnostic Databases, and Management of Change (MOC) tracking systems."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[API-RP-554]: American Petroleum Institute, API Recommended Practice 554: Process Control Systems, Parts 1-3 (Part 1: Functions and Functional Specification Development; Part 2: Process Control System Design; Part 3: Project Execution and Software Management)."
+    },
+    {
+      "key": "",
+      "citation": "[ISA-18.2]: International Society of Automation, ANSI/ISA-18.2 / IEC 62682: Management of Alarm Systems for the Process Industries, Standard for Alarm Lifecycle, Rationalization, and Performance Metrics."
+    },
+    {
+      "key": "",
+      "citation": "[ISA-106]: International Society of Automation, ANSI/ISA-106.01: Procedure Automation for Continuous Process Operations, Guidelines for State-Based Control and Transition Automation."
+    },
+    {
+      "key": "",
+      "citation": "[EEMUA-191]: Engineering Equipment and Materials Users Association, EEMUA Publication 191: Alarm Systems - A Guide to Design, Management and Procurement, International Industry Benchmark for Alarm Rate Targets."
+    },
+    {
+      "key": "",
+      "citation": "[OISD-STD-152]: Oil Industry Safety Directorate, OISD-STD-152: Control and Instrumentation for Process Plants, Ministry of Petroleum & Natural Gas, Government of India."
+    },
+    {
+      "key": "",
+      "citation": "[IEC-61511]: International Electrotechnical Commission, IEC 61511 / ISA-84: Functional Safety - Safety Instrumented Systems for the Process Industry Sector, Demarcation between Basic Process Control Systems (BPCS) and Safety Instrumented Systems (SIS)."
+    },
+    {
+      "key": "",
+      "citation": "[ISA-CAP]: International Society of Automation, Certified Automation Professional (CAP) Body of Knowledge, Domain Specifications for Control Software, Optimization, Integration, and Reliability."
+    },
+    {
+      "key": "",
+      "citation": "[Seborg-Control]: D. E. Seborg, T. F. Edgar, D. A. Mellichamp, and F. J. Doyle, Process Dynamics and Control, 4th Edition, John Wiley & Sons."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Honeywell Experion PKS & Profit Suite",
+      "module": "Profit Controller (RMPCT) & Loop Scout",
+      "solves": "High-speed regulatory loop execution, DCS I/O marshaling, and multivariable predictive control handling cross-coupling interactions.",
+      "gap": "Model drift and stiction isolation blind spots. Profit Controller executes matrix moves within predefined limits, but when feed crude properties shift or control valves develop mechanical stiction, the model loses fidelity. The software cannot autonomously cross-correlate high-frequency valve positioner air pressure with LIMS delay times to explain whether an oscillation is hydraulic, mechanical, or tuning-induced."
+    },
+    {
+      "product": "AspenTech Aspen DMC3 & InfoPlus.21",
+      "module": "Dynamic Matrix Control & Process Historian",
+      "solves": "Adaptive multivariable predictive control with background testing capabilities and massive high-frequency plant data archival.",
+      "gap": "Static operational envelope silos. DMC3 background testing identifies step-response models, but engineers must manually isolate noisy process windows, verify unmeasured disturbance absence, and reconcile laboratory quality timestamps before updating model gains in production controllers."
+    },
+    {
+      "product": "Emerson DeltaV & AMS Device Manager",
+      "module": "SmartProcess & Instrument Asset Management",
+      "solves": "Native digital fieldbus device diagnostic aggregation (HART, Foundation Fieldbus) and advanced regulatory control blocks.",
+      "gap": "Passive diagnostic repository. AMS records that a digital valve positioner has experienced 40,000 reversals or travel deviations, but cannot automatically compute the control loop performance degradation, calculate process variance impact, or formulate prioritized tuning modifications."
+    },
+    {
+      "product": "Yokogawa CENTUM VP & Exaquantum / Exasmoc",
+      "module": "Multi-Variable Control & Plant Information Management",
+      "solves": "Robust high-reliability DCS processing, regulatory cascade blocks, and process event history archival.",
+      "gap": "Excellent for stable baseline automation; completely disconnected from automated soft-sensor bias recalibration against intermittent laboratory LIMS assays and cross-unit LP economic constraint reconciliation."
+    },
+    {
+      "product": "Hexagon j5 / PAS PlantState Suite",
+      "module": "Alarm Management & Master Alarm Database (MADB)",
+      "solves": "Centralized alarm event logging, bad-actor frequency tracking, and ISA-18.2 metric auditing.",
+      "gap": "Descriptive without automated remediation. The system flags that an alarm chattered 450 times in 12 hours, but cannot autonomously generate the engineering justification, verify safe operating limits against process hydraulics, and populate the formal Management of Change (MOC) documentation for operator deadband suppression."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Screen base-layer PID control loops for hunting, sluggish tuning, and stiction",
+      "source": "[API-RP-554 §2]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.5h",
+      "friction": "consistency",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: Base-Layer PID Control Loop Health & Oscillation Diagnostics Sieve",
+      "label": "Base-Layer PID Loop Health & Oscillation Diagnostics (B1, [API-RP-554 §2])",
+      "today": "Process control engineer manually scans hundreds of DCS trend displays, runs offline fast Fourier transform (FFT) or autocovariance scripts on exported CSV data, and visually estimates whether cycling is caused by aggressive tuning or valve stiction.",
+      "failureMode": "Unnoticed base-layer oscillations propagate across complex recycle loops, destabilizing distillation tower pressure profiles, burning excess furnace fuel gas, and causing premature control valve packing and diaphragm failure.",
+      "agentNote": "→ See §4 (Agent 1: Base-Layer PID Control Loop Health & Oscillation Diagnostics Sieve)."
+    },
+    {
+      "code": "A02",
+      "action": "Reconcile MPC sub-controller model prediction residuals and constraint saturation",
+      "source": "[API-RP-554 §1]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.5h",
+      "friction": "consistency",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "Agent 2: Multivariable Predictive Control (MPC) Model Health & Constraint Envelope Tracker",
+      "label": "MPC Model Health & Constraint Tracking (B1, [API-RP-554 §1])",
+      "today": "Engineer manually reviews APC controller status logs, compares model-predicted process variable trajectories against actual historian curves, and checks why manipulated variables are pinned at constraint limits.",
+      "failureMode": "Dynamic process models suffer gain or deadtime degradation as crude diets shift or heat exchangers foul; degraded controllers experience severe ringing, forcing frustrated board operators to take critical sub-controllers offline and surrendering 10,000 to30,000 per day in optimized throughput.",
+      "agentNote": "→ See §4 (Agent 2: Multivariable Predictive Control (MPC) Model Health & Constraint Envelope Tracker)."
+    },
+    {
+      "code": "A03",
+      "action": "Calibrate inferential soft sensors and quality estimators against LIMS assays",
+      "source": "[API-RP-554 §2]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.0h",
+      "friction": "calculation",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Soft Sensor & Inferential Quality Estimator Calibration Sieve",
+      "label": "Soft Sensor & Inferential Quality Estimator Calibration (B1, [API-RP-554 §2])",
+      "today": "Engineer extracts intermittent laboratory grab sample test certificates from LIMS (such as 95% cut points or flash points), attempts to align them with plant residence times, calculates estimator bias drift in spreadsheets, and manually types bias updates into DCS calculation blocks.",
+      "failureMode": "Laboratory results lag process moves by 8 to 16 hours; uncompensated inferential drift causes continuous giveaway of high-value distillate molecules into low-margin fuel oil or triggers off-spec product shipments.",
+      "agentNote": "→ See §4 (Agent 3: Soft Sensor & Inferential Quality Estimator Calibration Sieve)."
+    },
+    {
+      "code": "A04",
+      "action": "Screen DCS alarm journals to identify chattering, fleeting, and stale alarms",
+      "source": "[ISA-18.2 §5]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.0h",
+      "friction": "volume",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: Alarm System Rationalization & Nuisance Flood Analyzer",
+      "label": "Alarm Journal Screening & Flood Analysis (B1, [ISA-18.2 §5])",
+      "today": "Engineer exports 24-hour alarm journals comprising tens of thousands of event rows into desktop spreadsheets to count chattering and stale alarms against ISA-18.2 and EEMUA 191 benchmarks.",
+      "failureMode": "Nuisance and chattering alarms clutter operator consoles; during an unexpected unit upset or trip, an alarm flood (exceeding 100 alarms in 10 minutes) overwhelms board operators, masking the primary root-cause alarm and precipitating severe process safety incidents.",
+      "agentNote": "→ See §4 (Agent 4: Alarm System Rationalization & Nuisance Flood Analyzer)."
+    },
+    {
+      "code": "A05",
+      "action": "Track state-based procedural automation sequences during unit mode transitions",
+      "source": "[ISA-106 §4]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "2.5h",
+      "friction": "traceability",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "Agent 5: Procedural Automation & State-Based Execution Sieve",
+      "label": "Procedural Automation & State-Based Execution Tracking (B1, [ISA-106 §4])",
+      "today": "Control engineer evaluates historical trends after unit startups or feed switches to check whether board operators executed valve sequencing steps and temperature ramp rates within standard operating limits.",
+      "failureMode": "Unstandardized manual procedural transitions cause severe thermal shock on thick-wall reactor metallurgy, column tray weeping or flooding, and extended transition times that delay on-spec production.",
+      "agentNote": "→ See §4 (Agent 5: Procedural Automation & State-Based Execution Sieve)."
+    },
+    {
+      "code": "A06",
+      "action": "Reconcile real-time APC constraint envelopes against refinery planning LP targets",
+      "source": "[API-RP-554 §1]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.0h",
+      "friction": "synthesis",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: Real-Time Process Optimization (RTO) Constraint & LP Target Reconciler",
+      "label": "Real-Time Optimization Constraint Reconciliation (B1, [API-RP-554 §1])",
+      "today": "Engineer compares weekly refinery Linear Program (LP) production targets against active MPC controlled variable limits and shadow prices by cross-referencing multiple disconnected software packages.",
+      "failureMode": "Infeasible or disconnected LP targets create constant controller clipping; operators relax critical constraints to keep the unit quiet, sacrificing valuable conversion without engineering visibility.",
+      "agentNote": "→ See §4 (Agent 6: Real-Time Process Optimization (RTO) Constraint & LP Target Reconciler)."
+    },
+    {
+      "code": "A07",
+      "action": "Screen smart control valve positioner diagnostics for pneumatic stiction and travel lag",
+      "source": "[OISD-STD-152 §6]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.5h",
+      "friction": "integrity",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "Agent 7: Control System Cyber-Physical Integrity & Fieldbus Device Health Sieve",
+      "label": "Smart Valve Diagnostics & Fieldbus Health Screening (B1, [OISD-STD-152 §6])",
+      "today": "Engineer intermittently connects to digital Asset Management Systems (AMS) to review smart positioner travel accumulators, drive signal pressures, and digital communication error counters.",
+      "failureMode": "Severe valve seat binding or actuator pneumatic leakage goes undetected until a control loop loses responsiveness entirely, forcing an emergency bypass or unplanned unit turndown.",
+      "agentNote": "→ See §4 (Agent 7: Control System Cyber-Physical Integrity & Fieldbus Device Health Sieve)."
+    },
+    {
+      "code": "A08",
+      "action": "Audit Master Alarm Database (MADB) parameters and draft MOC rationalization forms",
+      "source": "[ISA-18.2 §8]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "4.0h",
+      "friction": "assembly",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: Alarm System Rationalization & Nuisance Flood Analyzer",
+      "label": "Master Alarm Database Audit & Rationalization MOC Drafting (B1, [ISA-18.2 §8])",
+      "today": "Engineer cross-references operating manual safe limits against DCS alarm configuration files, drafting manual MOC forms to modify trip setpoints, delay timers, and deadbands.",
+      "failureMode": "Inconsistent alarm records between the Master Alarm Database and live DCS software allow unauthorized operator trip point overrides to persist uncorrected.",
+      "agentNote": "Supported via Alarm System Rationalization & Nuisance Flood Analyzer (Agent 4)."
+    },
+    {
+      "code": "A09",
+      "action": "Execute plant-wide dynamic step-testing for MPC empirical model identification",
+      "source": "[API-RP-554 §2]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "16.0h",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith/APC)",
+      "label": "Dynamic Step-Testing for Empirical Model Identification (B2, [API-RP-554 §2])",
+      "today": "Executed inside specialized vendor APC identification software suites (Aspen DMC3 Builder, Honeywell Profit Design Studio) involving systematic plant perturbations and multivariable transfer function identification.",
+      "failureMode": "High-liability core mathematical simulation requiring dedicated APC specialist engineering expertise.",
+      "agentNote": "❌ No. Core domain of specialized vendor APC software and senior control specialists."
+    },
+    {
+      "code": "A10",
+      "action": "Perform DCS hardware lifecycle audits, controller CPU loading, and patch deployments",
+      "source": "[API-RP-554 §3]",
+      "scope": "estate",
+      "bucket": "B2",
+      "freq": "Periodic",
+      "time": "8.0h",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith/DCS)",
+      "label": "DCS Hardware Lifecycle & Controller Loading Audits (B2, [API-RP-554 §3])",
+      "today": "Handled via proprietary DCS system diagnostic tools and vendor maintenance contracts monitoring controller processor cycles, memory usage, and communication bus redundancy.",
+      "failureMode": "Vendor-specific firmware and low-level hardware communication protocols.",
+      "agentNote": "❌ No. Monolith DCS engineering domain."
+    },
+    {
+      "code": "A11",
+      "action": "Conduct Safety Instrumented System (SIS) logic interlock testing and SIL verification",
+      "source": "[IEC-61511 §16]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Annual",
+      "time": "24.0h",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Monolith/SIS)",
+      "label": "Safety Instrumented System (SIS) Proof Testing & SIL Verification (B2, [IEC-61511 §16])",
+      "today": "Performed using dedicated safety lifecycle management tools and strict statutory proof-testing procedures requiring formal safety instrumented system sign-off.",
+      "failureMode": "High-liability statutory functional safety discipline requiring certified functional safety expert sign-off.",
+      "agentNote": "❌ No. Dedicated safety system engineering domain."
+    },
+    {
+      "code": "A12",
+      "action": "Inspect severe-service control valves, pneumatic actuators, and I/P transducers in field",
+      "source": "[OISD-STD-152 §5]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Weekly",
+      "time": "3.0h",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Eng)",
+      "label": "Physical Field Inspection of Control Valves and Actuators (B3, [OISD-STD-152 §5])",
+      "today": "Engineer walks unit process battery limits to inspect control valve stem packing leakage, valve positioner air filter regulators, and mechanical linkage wear.",
+      "failureMode": "Pure physical and sensory engineering inspection in hazardous refining operational units.",
+      "agentNote": "❌ No. Physical field inspection."
+    },
+    {
+      "code": "A13",
+      "action": "Facilitate cross-functional alarm rationalization workshops with operations and safety",
+      "source": "[ISA-18.2 §6]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Monthly",
+      "time": "6.0h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Cross-Functional Alarm Rationalization Workshops (B3, [ISA-18.2 §6])",
+      "today": "Multi-hour collaborative workshops bringing together process engineers, console operators, and safety specialists to debate alarm consequences and operator response times.",
+      "failureMode": "Human facilitation, consensus-building, and organizational governance.",
+      "agentNote": "❌ No. Human collaborative leadership."
+    },
+    {
+      "code": "A14",
+      "action": "Review High-Performance Human-Machine Interface (HMI) console graphics with operators",
+      "source": "[API-RP-554 §1]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Periodic",
+      "time": "4.0h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "High-Performance HMI Console Graphic Design Reviews (B3, [API-RP-554 §1])",
+      "today": "Working directly with board operators to review visual hierarchy, situational awareness radar charts, and grayscale graphic standards on DCS operator consoles.",
+      "failureMode": "Qualitative human-centered design, cognitive usability testing, and operator preference consensus.",
+      "agentNote": "❌ No. Human design collaboration."
+    },
+    {
+      "code": "A15",
+      "action": "Evaluate Management of Change (MOC) requests for control philosophy and loop overrides",
+      "source": "[OISD-STD-152 §8]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Weekly",
+      "time": "2.5h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Management of Change (MOC) Interlock Bypass Technical Evaluation (B3, [OISD-STD-152 §8])",
+      "today": "Formal technical governance reviewing operational override requests, bypass risk assessments, and temporary control philosophy modifications.",
+      "failureMode": "High-liability multidisciplinary engineering safety sign-off.",
+      "agentNote": "❌ No. Human statutory engineering review."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Base-Layer PID Control Loop Health & Oscillation Diagnostics Sieve",
+      "oneLine": "Continuously evaluates high-frequency DCS time-series data across hundreds of regulatory control loops to diagnose sluggish tuning, setpoint hunting, and control valve mechanical stiction.",
+      "frictionSolved": "Eliminates 3.5 hours of daily manual DCS trend hunting, spectral fast Fourier transform analysis, and valve positioner travel cross-plotting across continuous refining units.",
+      "reads": "High-frequency (1-second) DCS process variables (PV), setpoints (SP), controller output (OP), valve readback position, loop execution mode (Auto/Cascade/Manual), and valve stroke reversal accumulators.",
+      "does": "Implements Harris performance index and Integral Absolute Error (IAE) benchmarking; runs cross-correlation and phase-shift algorithms between controller output (OP) and process variable (PV) to definitively distinguish control valve stiction (non-linear limit cycles) from process disturbances or aggressive PID gain tuning; computes recommended Lambda and Internal Model Control (IMC) tuning parameters (proportional gain Kp, integral time Ti, derivative time Td) to achieve robust quarter-amplitude damping.",
+      "returns": "Daily Regulatory Loop Performance Scorecard classifying loops into Healthy, Sluggish, Over-Tuned, or Stiction-Limited categories, complete with prioritized tuning recommendations and valve maintenance work-order candidate lists.",
+      "stopsAt": "Autonomously modifying PID parameters, altering controller execution modes, or writing setpoint limits into DCS controllers without engineer verification.",
+      "failureModes": "If an evaluated loop governs a safety-critical exothermic reactor bed quench or furnace pass fuel gas supply, the agent suppresses automatic parameter suggestions and flags the loop with a mandatory [Safety-Critical Loop: Detailed Engineering Review Required] advisory.",
+      "agentId": "OG-P46-A01"
+    },
+    {
+      "n": 2,
+      "name": "Multivariable Predictive Control (MPC) Model Health & Constraint Envelope Tracker",
+      "oneLine": "Continuously tracks MPC prediction residuals, sub-controller service factors, and constraint saturation to identify dynamic model degradation and recover lost throughput.",
+      "frictionSolved": "Eliminates 3.5 hours of tedious multivariable controller log extraction, prediction error reconciliation, and constraint utilization auditing across crude and conversion units.",
+      "reads": "Multivariable controller active status, manipulated variable (MV) positions and targets, controlled variable (CV) values, constraint limits (low/high/rate limits), feedforward disturbance variables (DV), model prediction vectors, and linear program economic shadow prices.",
+      "does": "Computes cumulative model prediction residuals (CV_actual minus CV_predicted); isolates model gain mismatch, deadtime error, or sign inversions caused by feed property shifts or catalyst aging; quantifies the percentage of operating time MVs spend pinned at hard saturation limits; calculates the economic penalty incurred when board operators drop individual sub-controllers or variables to manual mode.",
+      "returns": "Daily MPC Health & Constraint Envelope Dossier highlighting degrading sub-controllers, model fidelity indices, binding equipment constraints, and prioritized candidate variables for targeted background step-testing.",
+      "stopsAt": "Overwriting multivariable model transfer function matrices, altering controller dynamic tuning weights, or manipulating optimizer LP cost coefficients.",
+      "failureModes": "If prediction error residuals exceed allowable thresholds on high-risk separation or conversion limits, risking severe controller ringing, the agent generates an [MPC Model Mismatch Alert: De-tune or Soft-Predict Mode Recommended] notice and identifies the specific process variable pair.",
+      "agentId": "OG-P46-A02"
+    },
+    {
+      "n": 3,
+      "name": "Soft Sensor & Inferential Quality Estimator Calibration Sieve",
+      "oneLine": "Reconciles real-time DCS inferential property estimators with delayed laboratory LIMS assays to detect sensor drift, eliminate product giveaway, and draft bias updates.",
+      "frictionSolved": "Removes 3.0 hours of manual laboratory certificate harvesting, unit residence-time delay matching, and spreadsheet regression calculations.",
+      "reads": "Online analyzer signals, DCS tower tray temperatures, pressures, reflux/draw flow rates, and certified laboratory LIMS test results (ASTM D86 5%/95% distillation points, Reid Vapor Pressure, flash point, freeze point, research octane number).",
+      "does": "Performs dynamic residence-time synchronization (compensating for 20 to 60 minute liquid holdup delays between fractionator feed and rundown sample stations); executes 3-sigma statistical outlier screening on laboratory records; calculates estimator systematic bias and drift velocity; generates recursive bias-update recommendations to re-zero soft sensor estimators feeding MPC controllers.",
+      "returns": "Daily Inferential Calibration Scorecard showing estimator tracking error (RMSE), drift trajectories, and recommended bias update values to optimize clean fuel production while respecting pipeline specifications.",
+      "stopsAt": "Automatically pushing bias updates into active DCS calculation blocks or toggling analyzer validation status bits.",
+      "failureModes": "If consecutive laboratory LIMS results diverge by more than the published ASTM standard reproducibility limit (R), the agent suspends bias recalibration and generates a [LIMS Reproducibility Alert: Laboratory Resampling Required] notice.",
+      "agentId": "OG-P46-A03"
+    },
+    {
+      "n": 4,
+      "name": "Alarm System Rationalization & Nuisance Flood Analyzer",
+      "oneLine": "Audits high-frequency DCS alarm and event journals against ISA-18.2 / IEC 62682 and EEMUA 191 benchmarks to eliminate chattering and stale alarms and prevent operator flood cascades.",
+      "frictionSolved": "Eliminates 3.0 hours of daily alarm journal parsing, chattering frequency calculation, and alarm change documentation collation.",
+      "reads": "DCS alarm and event (A&E) journals, operator acknowledgment timestamps, alarm trip priorities, alarm suppression and shelving logs, and the Master Alarm Database (MADB).",
+      "does": "Computes 24-hour alarm KPIs (average alarm rate per operator console, peak 10-minute alarm count, percentage of time in flood conditions); detects chattering alarms (more than 3 alarms in 1 minute) and fleeting alarms; identifies stale alarms standing active for greater than 24 hours; cross-references alarm trips with operating envelope boundaries to identify incorrect deadbands or trip setpoints.",
+      "returns": "Daily Alarm Management Performance Dossier featuring top 10 bad-actor alarms, alarm flood cascade timelines, and pre-populated Management of Change (MOC) rationalization forms with proposed deadband or on/off delay timer adjustments.",
+      "stopsAt": "Modifying alarm setpoints, changing alarm priority classes, or suppressing alarms in the DCS or Master Alarm Database.",
+      "failureModes": "Never rationalizes or recommends shelving safety instrumented system (SIS / SIL) interlocks or statutory environmental compliance alarms; strictly separates regulatory basic process control alarms from emergency safety shutdown systems.",
+      "agentId": "OG-P46-A04"
+    },
+    {
+      "n": 5,
+      "name": "Procedural Automation & State-Based Execution Sieve",
+      "oneLine": "Evaluates unit startup, shutdown, and crude switch transitions against ISA-106 procedural automation profiles to prevent operator execution deviation and thermal shock.",
+      "frictionSolved": "Removes 2.5 hours of manual DCS trend searching, valve ramp rate verification, and permissive confirmation tracking across complex multi-hour plant mode transitions.",
+      "reads": "State-based sequential control step registers, furnace coil heating/cooling ramp rates (°C/hr), distillation column differential pressure profiles, compressor recycle valve sequencing logs, and unit battery limit flow ramps.",
+      "does": "Maps real-time operational execution trajectories against standardized ISA-106 procedural automation templates; monitors furnace and reactor heating curves against maximum allowable metallurgical thermal stress limits; tracks execution durations of critical sequential tasks to detect delayed or stalled procedural steps.",
+      "returns": "Procedural Transition Audit Report detailing adherence to standard operating procedures, timeline milestone delays, temperature ramp rate compliance curves, and recommended sequence timing optimizations.",
+      "stopsAt": "Overriding procedural step logic, forcing permissive step completions, or manipulating field equipment valves during automated transitions.",
+      "failureModes": "If furnace tube heating rates exceed design metallurgical limits (>25°C/hr on thick-wall hydroprocessing reactors) or stripping steam is introduced before liquid seal verification, the agent issues an immediate [Procedural Violation: Thermal Stress / Hydraulic Shock Hazard] warning.",
+      "agentId": "OG-P46-A05"
+    },
+    {
+      "n": 6,
+      "name": "Real-Time Process Optimization (RTO) Constraint & LP Target Reconciler",
+      "oneLine": "Bridges refinery Linear Program (LP) economic planning targets with real-time DCS/APC operating constraint envelopes to eliminate throughput bottlenecks and energy giveaway.",
+      "frictionSolved": "Saves 3.0 hours of daily cross-referencing between economic LP planning schedules, APC steady-state optimizer targets, and live plant hydraulic and thermal limits.",
+      "reads": "Refinery LP monthly/weekly operating plans (unit feed charge targets, product cut specifications, fuel gas export limits), APC steady-state optimizer objective weights, real-time DCS constraint values, and plant utility costs.",
+      "does": "Reconciles planned economic targets with physical plant constraints; computes the economic shadow price of active unit bottlenecks (e.g., column overhead condensing duty, furnace firing limit, compressor wet gas handling capacity); identifies unexploited optimization space where units operate inside safe limits without pushing against economic constraint boundaries.",
+      "returns": "Daily RTO Economic Alignment Dossier detailing active constraint shadow prices, uncaptured economic potential (/day), and recommended tactical APC constraint target adjustments to maximize conversion.",
+      "stopsAt": "Directly rewriting LP model parameters or altering live APC economic optimization matrices without engineering review.",
+      "failureModes": "If an economic target recommends pushing throughput that encroaches on environmental emission limits (such as FCCU flue gas SOx/NOx ceilings) or flare loading limits, the agent automatically suppresses the push and highlights the governing environmental barrier.",
+      "agentId": "OG-P46-A06"
+    },
+    {
+      "n": 7,
+      "name": "Control System Cyber-Physical Integrity & Fieldbus Device Health Sieve",
+      "oneLine": "Audits smart digital valve positioners, fieldbus instrument diagnostics, and DCS controller hardware health to detect instrument degradation before loops trip to manual.",
+      "frictionSolved": "Eliminates 2.5 hours of fragmented digital device diagnostic screening across multi-vendor Asset Management Systems (AMS) and DCS hardware event logs.",
+      "reads": "Smart positioner supply pressure, drive signal, travel deviation logs, digital fieldbus communication error packets (HART, Foundation Fieldbus, Profibus), and DCS controller CPU/memory utilization statistics.",
+      "does": "Analyzes smart valve positioner travel-versus-drive signal hysteresis curves to detect early stem packing galling and pneumatic actuator seal leakage; screens analog input signals for high-frequency signal noise indicative of water ingress or loose terminal blocks; monitors DCS controller processor loading to prevent communication cycle overruns.",
+      "returns": "Cyber-Physical Instrumentation Health Digest ranking degrading control valves, failing digital transmitters, and controller communication bottlenecks before loops trip to manual.",
+      "stopsAt": "Clearing instrument diagnostic registers, initiating field transmitter zero/span re-calibrations, or restarting DCS controller processor cards.",
+      "failureModes": "If an instrument associated with a Safety Instrumented System (SIS) or toxic gas detection system exhibits communication packet drops or diagnostic hardware faults, the agent immediately escalates to [Safety Critical Instrument Diagnostic Fault: Immediate Field Maintenance Required].",
+      "agentId": "OG-P46-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never fabricate enterprise rupee/dollar multipliers. The refining customer supplies their own throughput, operating margin, and utility cost constants.",
+    "rows": [
+      {
+        "agent": "Base-Layer PID Control Loop Tuning & Oscillation Diagnostics Sieve",
+        "unit": "",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "High-frequency time-series extraction, stiction math & loop tuning"
+      },
+      {
+        "agent": "MPC Model Health & Constraint Envelope Tracker",
+        "unit": "",
+        "beforeHours": 3.5,
+        "afterHours": 0.4,
+        "savedHours": 3.1,
+        "frictionRemoved": "Multi-variable log collation, residual math & constraint analysis"
+      },
+      {
+        "agent": "Soft Sensor & Inferential Quality Estimator Calibration Sieve",
+        "unit": "",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Lab grab sample delay matching, regression math & bias calculation"
+      },
+      {
+        "agent": "Alarm Rationalization & Nuisance Flood Analyzer",
+        "unit": "",
+        "beforeHours": 3.0,
+        "afterHours": 0.35,
+        "savedHours": 2.65,
+        "frictionRemoved": "Alarm journal parsing, chattering detection & MOC documentation"
+      },
+      {
+        "agent": "Procedural Automation & State-Based Execution Sieve",
+        "unit": "",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Multi-step procedural verification, ramp rate tracking & log checking"
+      },
+      {
+        "agent": "Real-Time Process Optimization (RTO) Constraint & LP Target Reconciler",
+        "unit": "",
+        "beforeHours": 3.0,
+        "afterHours": 0.35,
+        "savedHours": 2.65,
+        "frictionRemoved": "Economic LP-to-APC cross-referencing & shadow price calculation"
+      },
+      {
+        "agent": "Control System Cyber-Physical Integrity & Fieldbus Device Health Sieve",
+        "unit": "",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Multi-vendor AMS diagnostic screening & loop travel analysis"
+      }
+    ],
+    "total": {
+      "unit": "",
+      "beforeHours": 21.0,
+      "afterHours": 2.25,
+      "savedHours": 18.75,
+      "frictionRemoved": "89.3% reduction in non-engineering data assembly drag",
+      "label": "TOTAL PER DAILY SURVEILLANCE CYCLE"
+    }
+  },
+  "citations": [
+    {
+      "key": "[API-RP-554]",
+      "citation": "American Petroleum Institute, Process Control Systems (Parts 1, 2, and 3), 2nd Edition",
+      "locator": "API Publishing",
+      "type": "Industry Standard",
+      "supports": "Control system architecture, design specifications, software project execution"
+    },
+    {
+      "key": "[ISA-18.2]",
+      "citation": "International Society of Automation, Management of Alarm Systems for the Process Industries, ANSI/ISA-18.2-2016 / IEC 62682",
+      "locator": "ISA Standards",
+      "type": "International Standard",
+      "supports": "Alarm lifecycle, chattering/stale alarm KPIs, alarm flood limits"
+    },
+    {
+      "key": "[ISA-106]",
+      "citation": "International Society of Automation, Procedure Automation for Continuous Process Operations, ANSI/ISA-106.01-2013",
+      "locator": "ISA Standards",
+      "type": "Technical Standard",
+      "supports": "State-based control, procedural transition automation, ramp rate tracking"
+    },
+    {
+      "key": "[EEMUA-191]",
+      "citation": "Engineering Equipment and Materials Users Association, Alarm Systems: A Guide to Design, Management and Procurement, 3rd Edition",
+      "locator": "EEMUA Publication",
+      "type": "Industry Benchmark",
+      "supports": "Alarm rate targets, operator console loading metrics, nuisance alarm suppression"
+    },
+    {
+      "key": "[OISD-STD-152]",
+      "citation": "Oil Industry Safety Directorate, Control and Instrumentation for Process Plants, OISD-STD-152",
+      "locator": "Ministry of Petroleum & Natural Gas, India",
+      "type": "Statutory Regulation",
+      "supports": "Instrumentation safety, control valve diagnostics, bypass governance"
+    },
+    {
+      "key": "[IEC-61511]",
+      "citation": "International Electrotechnical Commission, Functional Safety - Safety Instrumented Systems for the Process Industry Sector, IEC 61511:2016",
+      "locator": "IEC Webstore",
+      "type": "Safety Standard",
+      "supports": "Demarcation of BPCS and SIS, independent protection layers"
+    },
+    {
+      "key": "[Seborg-Control]",
+      "citation": "D. E. Seborg, T. F. Edgar, D. A. Mellichamp, & F. J. Doyle, Process Dynamics and Control, 4th Edition",
+      "locator": "John Wiley & Sons",
+      "type": "Classical Textbook",
+      "supports": "Regulatory PID loop tuning, stiction diagnostics, multivariable decoupling"
+    },
+    {
+      "key": "[Bauer-Craig]",
+      "citation": "M. Bauer & I. K. Craig, Economic Assessment of Advanced Process Control - A Survey and Methodology, Control Engineering Practice, Vol 16",
+      "locator": "Elsevier ScienceDirect",
+      "type": "Peer-Reviewed Journal",
+      "supports": "Baseline drag timings for MPC maintenance, model degradation, benefit realization"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Honeywell Forge for Industrial Operations technical documentation, AspenTech Aspen DMC3 product specifications, Emerson DeltaV SmartProcess white papers, Yokogawa Exasmoc user guides, and IEEE/IFAC process control conference archives for \"autonomous real-time multivariable control model mismatch remediation directly linking live LIMS ASTM curves to adaptive MPC tuning without human engineering intervention\".",
+    "result": "Negative Search, 2026-10. Commercial Advanced Process Control packages provide adaptive matrix identification and automated background step-testing algorithms, but require manual engineering intervention to filter process disturbances, review transfer function gain matrices, and authorize dynamic model updates. No commercial control suite autonomously correlates control valve digital diagnostic stiction with high-frequency loop hunting, automatically re-biases inferential quality estimators against delayed laboratory assays, and synthesizes daily ISA-18.2 alarm rationalization change documentation in an integrated, agentic workflow."
+  },
+  "line": "\"The true economic value of a process control engineer is keeping multi-variable controllers pushed hard against real physical and thermodynamic constraints—not spending five hours every morning combing through noisy time-series trends to figure out which control valve is sticking or why an operator dropped the crude tower controller to manual.\"",
+  "openQuestions": [
+    "The MPC Model Degradation Seam: When your refinery shifts crude diets or crude blend slates, what percentage of your multivariable predictive control (MPC) sub-controllers are dropped into manual or have their manipulated variables clamped by board operators due to model prediction error, and how many weeks elapse before control models are re-identified?",
+    "The Valve Stiction Diagnostic Lag: How many hunting base-layer PID control loops across your primary processing units are currently masked by detuned, overly sluggish controller gains because the engineering team lacks continuous stiction diagnostic tools to pinpoint binding valve stems before the valve fails completely?",
+    "The Inferential Laboratory Disconnect: During daily fractionation operations, what is the average residence-time lag between an on-unit process swing and the verification of a laboratory ASTM grab sample result from LIMS, and how much high-value clean transportation fuel is downgraded into lower-value streams while waiting for an engineer to manually calculate and apply soft sensor bias trims?"
+  ]
+};

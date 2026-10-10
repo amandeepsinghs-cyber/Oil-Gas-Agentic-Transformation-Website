@@ -23,6 +23,17 @@ window.PERSONA_DETAIL["P16"] = {
   "avatar": "avatars/P16_persona.jpg",
   "thumb": "avatars/thumbs/P16_thumb.jpg",
   "initials": "RP",
+  "domains": [
+    "downstream"
+  ],
+  "primaryDomain": "downstream",
+  "crossCutting": false,
+  "groups": {
+    "downstream": "Refining"
+  },
+  "valueSplit": {
+    "downstream": 1.0
+  },
   "headline": "The Refinery Process Engineer is the technical conscience and thermodynamic guardian of the refinery, diagnosing daily unit yield loss, catalyst deactivation, furnace coking, and utility network imbalances across multi-billion-dollar chemical transformation units. While thermodynamic steady-state process simulators like Aspen HYSYS Petroleum Refining and KBC Petro-SIM rigorously model distillation towers and kinetic reactor loops, they live as static simulation silos completely disconnected from daily operational drift and asynchronous laboratory LIMS data. When crude slates shift or catalyst beds age, process engineers spend 4 to 6 hours every day manually extracting LIMS ASTM D86/D2887 distillation curves, cross-referencing DCS column temperature profiles, balancing furnace tube skin thermocouples, tracking hydroprocessing bed exotherms, and sifting through steam/hydrogen network letdown stations. An integrated squad of 7 hyper-specialized micro-agents continuously reconciles cut-point giveaway, audits furnace pass hydraulics, monitors tray flooding limits, tracks catalyst kinetic deactivation, and synthesizes morning yield loss dossiers—saving 21.40 engineering hours per daily unit surveillance cycle and stopping tens of thousands of dollars per day in downgraded distillate giveaway and unnecessary energy waste.",
   "confidence": {
     "Persona": "Refinery Process Engineer (P16)",

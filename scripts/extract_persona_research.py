@@ -73,7 +73,31 @@ PERSONA_PEOPLE: dict[str, str] = {
     "P29": "Hana Yoshida",       "P30": "Ian MacLeod",
     "P31": "André Laurent",      "P32": "Ridwan Santoso",
     "P33": "Sophie Larsen",
+    # Midstream (added 2026-10-10)
+    "P36": "Lars Eriksen",       "P37": "Aisha Bello",
+    "P38": "Carlos Mendoza",     "P39": "Meera Pillai",
+    "P40": "Erik Johansson",     "P41": "Fatima Zahra",
+    "P42": "Michael O'Connor",   "P43": "Sofia Rossi",
+    "P44": "Vikram Rao",
+    # Downstream (added 2026-10-10)
+    "P45": "Grace Liu",          "P46": "Omar Haddad",
+    "P47": "Ingrid Larsen",      "P48": "Rajesh Kumar",
+    "P49": "Amara Nwosu",        "P50": "Elif Demir",
+    "P51": "Tomás García",       "P52": "Yuki Tanaka",
+    "P53": "David Mensah",       "P54": "Kavya Sharma",
+    "P55": "James Whitaker",
 }
+
+# Domain membership, board grouping and cross-domain value apportionment live in
+# one registry, read here and stamped onto every record. See the file's _doc.
+REGISTRY_FILE = REPO / "persona_research" / "persona_registry.json"
+
+
+def load_registry() -> dict:
+    if not REGISTRY_FILE.exists():
+        print(f"  ! registry not found: {REGISTRY_FILE}", file=sys.stderr)
+        return {}
+    return json.loads(REGISTRY_FILE.read_text(encoding="utf-8")).get("personas", {})
 
 
 
@@ -679,6 +703,21 @@ def repair_source(raw: str) -> str:
     return _TAB_MANGLED.sub(lambda m: "\\t" + m.group(1), raw)
 
 
+_REGISTRY: dict | None = None
+
+
+def _registry_fields(pid: str) -> dict:
+    """domains / primaryDomain / crossCutting / groups / valueSplit from the registry."""
+    global _REGISTRY
+    if _REGISTRY is None:
+        _REGISTRY = load_registry()
+    r = _REGISTRY.get(pid)
+    if not r:
+        print(f"  ! {pid} has no entry in persona_registry.json", file=sys.stderr)
+        return {"domains": [], "primaryDomain": "", "crossCutting": False, "groups": {}, "valueSplit": {}}
+    return {k: r[k] for k in ("domains", "primaryDomain", "crossCutting", "groups", "valueSplit")}
+
+
 def parse_dossier(path: Path, roster: dict[str, dict]) -> dict:
     text = path.read_text(encoding="utf-8", errors="replace").replace("\r\n", "\n")
     text = repair_source(text)
@@ -715,6 +754,7 @@ def parse_dossier(path: Path, roster: dict[str, dict]) -> dict:
         "avatar": f"avatars/{pid}_persona.jpg",
         "thumb": f"avatars/thumbs/{pid}_thumb.jpg",
         "initials": initials,
+        **_registry_fields(pid),
         **parse_status(section_like(secs, "Status")),
         "role": parse_role(section_like(secs, "The Role")),
         **parse_standards(section_like(secs, "Sources", "Competency")),
@@ -817,6 +857,7 @@ def summarise(rec: dict) -> str:
 INDEX_FIELDS = (
     "id", "title", "person", "segment", "segmentLong", "tier", "core20",
     "aliases", "avatar", "thumb", "initials", "agentFocus", "governingStandards",
+    "domains", "primaryDomain", "crossCutting", "groups", "valueSplit",
 )
 
 
@@ -842,6 +883,13 @@ def write_split(records: list[dict], outdir: Path, prune: bool = True) -> None:
     )
 
     index = [_index_entry(r) for r in records]
+    # A partial run (--only) must not shrink the shared index to the batch.
+    if not prune and (outdir / "index.json").exists():
+        fresh = {e["id"]: e for e in index}
+        old = json.loads((outdir / "index.json").read_text(encoding="utf-8"))
+        merged = {e["id"]: e for e in old}
+        merged.update(fresh)
+        index = [merged[k] for k in sorted(merged, key=lambda s: int(re.sub(r"\D", "", s) or 0))]
     (outdir / "index.js").write_text(
         banner
         + "window.PERSONA_INDEX = "

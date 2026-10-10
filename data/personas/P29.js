@@ -24,6 +24,17 @@ window.PERSONA_DETAIL["P29"] = {
   "avatar": "avatars/P29_persona.jpg",
   "thumb": "avatars/thumbs/P29_thumb.jpg",
   "initials": "CP",
+  "domains": [
+    "downstream"
+  ],
+  "primaryDomain": "downstream",
+  "crossCutting": false,
+  "groups": {
+    "downstream": "Planning & Supply"
+  },
+  "valueSplit": {
+    "downstream": 1.0
+  },
   "headline": "The Crude & Product Scheduler orchestrates the continuous, multi-million-barrel flow of feedstocks into the refinery and commercial transportation fuels out to market across marine berths, pipelines, railheads, and truck racks. While commercial ERP systems like SAP S/4HANA IS-Oil (TSW - Trader's and Scheduler's Workbench) and specialized scheduling software like Aspen Petroleum Scheduler (APS / Orion) store planned logistics nominations, they operate as brittle, static record-keepers that collapse when live logistics disruptions hit. In any operating refinery, crude tankers arrive delayed by coastal fog, export pipelines suffer unexpected pump trips, or finished fuel batches fail certification. When a disruption occurs, the scheduler faces an immediate operational nightmare: \"tank-top\" (storage tanks reach maximum safe filling limits, forcing refinery conversion units to slash run rates or shut down entirely) or \"tank-bottom\" (crude tanks run dry, starving atmospheric distillation columns). Schedulers spend exhausting hours manually calculating tank level projections in personal Excel spreadsheets, re-allocating swing tanks, and negotiating tanker laytime to avoid astronomical demurrage penalties ($30k to $80k/day per vessel). Deploying a dedicated 7-agent hyper-specialized scheduling squad saves 21.60 hours per operational logistics cycle, eliminating emergency unit run-rate cuts, preventing product cross-contamination, and minimizing demurrage losses.",
   "confidence": {
     "Persona": "Crude & Product Scheduler (P29)",

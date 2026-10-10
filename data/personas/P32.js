@@ -25,6 +25,23 @@ window.PERSONA_DETAIL["P32"] = {
   "avatar": "avatars/P32_persona.jpg",
   "thumb": "avatars/thumbs/P32_thumb.jpg",
   "initials": "IT",
+  "domains": [
+    "upstream",
+    "midstream",
+    "downstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": true,
+  "groups": {
+    "upstream": "Cross-Cutting",
+    "midstream": "Cross-Cutting",
+    "downstream": "Cross-Cutting"
+  },
+  "valueSplit": {
+    "upstream": 0.4,
+    "midstream": 0.1,
+    "downstream": 0.5
+  },
   "headline": "The Instrument Technician serves as the sensory guardian of oil and gas production, ensuring that tens of thousands of field transmitters, final control elements, and emergency safety instrumented loops measure physical reality with absolute mathematical truth. While enterprise Instrument Asset Management systems (IAMS) like Emerson AMS Device Manager, Yokogawa PRM (Plant Resource Manager), and ABB Asset Master communicate with smart field devices over digital HART, Foundation Fieldbus, and Profibus PA protocols, they require massive manual technician effort to verify physical calibration math, diagnose analog signal loop degradation, evaluate dynamic valve signatures, and compile statutory Safety Instrumented Function (SIF) proof-test records. In a standard 250,000 bpd refinery or major offshore production hub, technicians maintain over 8,000 field instruments (pressure, differential pressure, temperature, level, flow), 1,500 control valves, and 600 emergency shutdown (ESD) loops. Technicians spend hundreds of hours manually calculating 5-point ascending/descending span errors, linearity deviations, and hysteresis against tight manufacturer tolerance bands (±0.05%to ±0.25% of span) using handheld documenting calibrators and grease-stained field log sheets. Furthermore, under statutory functional safety standards (IEC 61511 / ISA-84), documenting SIF proof-tests requires cross-referencing trip setpoints, valve stroke times, and solenoid dropouts across disconnected paper binders and calibration databases. Deploying a hyper-specialized 7-agent squad that autonomously ingests documenting calibrator data, computes calibration error curves, verifies tolerance compliance, triages valve signatures, evaluates fieldbus loop health, and pre-populates certified IEC 61511 proof-test dossiers saves 70.80 hours per comprehensive maintenance & calibration campaign, eliminating unrecorded sensor drift, hidden valve stiction, and dangerous undetected safety instrument failures.",
   "confidence": {
     "Persona": "Instrument Technician (P32)",

@@ -1,0 +1,28 @@
+{
+  "id": "P45",
+  "seats": 180,
+  "assetCapital": {
+    "form": "time",
+    "asset": "Refinery process units",
+    "units": 11,
+    "unitLabel": "refineries",
+    "hoursPerYear": 8760,
+    "share": 0.002,
+    "ratePerHour": 2500000,
+    "basis": "0.20% of refinery calendar hours recovered by compressing post-trip first-out diagnostic restart timelines and avoiding emergency throughput throttling during flare header excursions (~17.5 h/refinery/yr)",
+    "source": "11 refineries, ~1.6 Mbbl/d total capacity (~80 MMTPA). ₹25 L/refinery-hour is the established value_model.js benchmark for discounted operational margin loss. Shaving 1-2 hours off restart critical path via automated sequence-of-events first-out isolation (Agent 7) and preventing precautionary unit feed curtailments during flare header backpressure events (Agent 4) recovers 17.5 hours per refinery annually, well below the 1% ceiling."
+  },
+  "assetRisk": {
+    "scenario": "Maintenance SIMOPS clash or uncommunicated shift-handover barrier failure",
+    "unitsPerYear": 11,
+    "unitLabel": "refineries",
+    "frequency": 0.2,
+    "consequence": 500000000,
+    "alpha": 0.35,
+    "beta": 0.4,
+    "source": "11 refineries. Frequency reflects a major maintenance ignition or handover-related barrier failure once every ~5 operating years per refinery (~2.2 events/yr across the estate). Consequence of ₹50 Cr reflects direct fire/explosion asset repair, emergency shutdown margin loss, product contamination, and regulatory penalties under OISD-STD-105/154 frameworks. High alpha (0.35) and beta (0.40) because spatial permit clash detection and handover state synthesis directly eliminate the informational root cause; alpha*beta (0.14) remains well below the 0.18 ceiling."
+  },
+  "recovery": null,
+  "rationale": "P45 Shift Supervisor is the 24/7 CCR operational commander across primary, secondary, and utilities/offsites units for an ~80 MMTPA (~1.6 Mbbl/d) downstream footprint. Sizing: 180 seats (~0.58% of enterprise staff) provides continuous 24/7/365 coverage across ~42 concurrent supervisory consoles across 11 refineries and integrated petrochemical complexes using a standard 4-panel rotation with a 4.25x relief factor (~16 supervisors per refinery, governing ~3.5 board operators each). Asset Capital: In time form, recovers 0.20% of annual operating hours (~17.5 h/refinery/yr valued at ₹25 L/refinery-hour, totaling ₹48.18 Cr/yr) on the critical path of post-upset restart sequencing (compressing first-out SOE diagnostics from 90 mins to under 10 mins) and preventing precautionary feed curtailments during flare header backpressure surges. Asset Risk: Eliminates spatial SIMOPS permit conflicts (e.g., hot work directly above open drains or conflicting LOTO boundaries) and blind shift handover barrier defeats, avoiding an expected loss of ₹15.40 Cr/yr across 11 refineries at alpha*beta = 0.14 (well within the <=0.18 restraint). Resource Recovery: Strictly null as the role operates downstream of the extraction boundary and cannot carry both Integrity and Recovery.",
+  "caveats": "Never name any specific operator in UI or deck copy. All valuations use discounted operational margins and peer-benchmarked incident consequences. If an operator prefers attributing all critical-path unit uptime strictly to console operators (P03) and turnaround planners (P31), assetCapital can be set to null without compromising model coherence, leaving value anchored in Human Capital (₹40.50 Cr/yr at 180 seats, 1,800 h/yr, 50% on-task, ₹2,500/h) and Asset Risk (₹15.40 Cr/yr)."
+}

@@ -1,0 +1,27 @@
+{
+  "id": "P46",
+  "seats": 130,
+  "assetCapital": {
+    "form": "volume",
+    "asset": "Advanced process control constraint margin",
+    "qtyPerYear": 584000000,
+    "qtyLabel": "bbl processed",
+    "share": 0.0008,
+    "ratePerQty": 300,
+    "basis": "0.08% margin uplift from sustained APC constraint tracking, dynamic model reconciliation, and inferential bias alignment",
+    "source": "~1.6 Mbbl/d x 365 = ~584 Mbbl/yr processed across 11 refineries. APC multivariable controllers (Aspen DMC3, Honeywell Profit Controller) push continuous units to hydraulic, thermal, and quality constraints. As crude diets shift and valves stick, degraded models cause operators to clamp manipulated variables or drop sub-controllers to manual, leaking an estimated $0.15-$0.40/bbl in uncaptured margin (Bauer & Craig, 2008). ₹300/bbl is the standard incremental refining margin uplift. Recovering 0.08% of throughput margin (~₹14.0 Cr/yr) captures a modest fraction of typical 1-3% APC benefits, while remaining strictly distinct from P16 (catalyst/yield), P17 (planning schedule), and P28 (blend giveaway)."
+  },
+  "assetRisk": {
+    "scenario": "Alarm flood or runaway loop cycling escalating to an emergency unit trip",
+    "unitsPerYear": 11,
+    "unitLabel": "refineries",
+    "frequency": 0.35,
+    "consequence": 180000000,
+    "alpha": 0.35,
+    "beta": 0.35,
+    "source": "11 refineries. Frequency reflects ~1 alarm flood or severe loop-cycling induced emergency trip every 2.85 refinery-years. Consequence (₹18 Cr) covers emergency shutdown, flaring product loss, thermal shock stress, and 24-48 hours of unit restart downtime. Grounded in Abnormal Situation Management (ASM) Consortium data showing alarm floods (>10 alarms/10 min) cause 40-50% of operator cognitive failures during upsets, and EEMUA 191 / ISA-18.2 benchmarks. Alpha (0.35) reflects the causal share attributable to alarm configuration and loop tuning; beta (0.35) reflects the agent squad's verified efficacy in pre-upset rationalization and stiction detection."
+  },
+  "recovery": null,
+  "rationale": "P46 Process Control Engineer governs regulatory PID loop tuning, multivariable predictive control (MPC/APC) applications, inferential soft sensors, and alarm management systems across continuous refining units. Sized at 130 seats across the downstream footprint: ~110 seats across 11 refineries (~10 engineers per refinery covering crude distillation, secondary conversion, treatment, and offsites), 12 seats dedicated to integrated petrochemical complexes (steam crackers, aromatics, polymers), and 8 seats in corporate technical services / APC Center of Excellence (~0.42% of enterprise staff, ~4.2% of downstream technical population). Asset Capital is parameterized in volume form, capturing 0.08% margin uplift (~₹14.0 Cr/yr) on ~584 Mbbl/yr processed at ₹300/bbl incremental margin, by sustaining controller service factors, resolving valve stiction, and aligning inferential biases without encroaching on catalyst yield (P16), scheduling (P17), or blend giveaway (P28). Asset Risk captures avoided emergency unit trips from unrationalized alarm floods or runaway base-layer loop hunting across 11 refineries (0.35 events/refinery-yr, ₹18 Cr consequence, alpha*beta = 0.1225, avoiding ₹8.49 Cr/yr in expected losses). Resource Recovery is strictly null as downstream refining does not discover or book subsurface hydrocarbons.",
+  "caveats": "If an operator prefers time-form asset capital over volume-form margin uplift, the equivalent defensible parameterization is: {form: 'time', asset: 'Refinery process units, via APC constraint uptime', units: 11, unitLabel: 'refineries', hoursPerYear: 8760, share: 0.0006, ratePerHour: 2500000, basis: '0.06% of calendar time of APC-drop turndowns avoided (~5.3 h/refinery/yr)', source: '11 refineries; ₹25 L/refinery-hour discounted margin rate; delivers ~₹14.4 Cr/yr'}. Volume form is recommended as it directly tracks the standard refining metric for APC performance ($/bbl margin uplift and variance reduction). Metocean/physical transmitter calibration remains with P32 Instrument Technicians."
+}

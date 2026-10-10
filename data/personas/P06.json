@@ -18,6 +18,17 @@
   "avatar": "avatars/P06_persona.jpg",
   "thumb": "avatars/thumbs/P06_thumb.jpg",
   "initials": "RE",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Subsurface"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Reservoir Engineer manages the thermodynamic bank account of the oil company, calculating how much hydrocarbon remains in the ground, how fast it can be extracted, and what it is commercially worth. While analytical monoliths like Petex MBAL, Kappa Saphir, and S&P Harmony possess mature mathematical engines for material balance, well testing, and decline analysis, they require pristine, un-corrupted input data that almost never exists in reality. The reservoir engineer spends 50–70% of surveillance cycles manually cleaning noisy surface test separator data, transcribing sporadic bottom-hole pressure (BHP) build-up surveys, and hunting down laboratory fluid PVT reports. Rather than an unfeasible \"AI reservoir simulator,\" the Reservoir Engineer requires a federated squad of 7 hyper-specialized agents—each tackling one discrete, research-backed data conditioning, diagnostic classification, or reserves reconciliation workflow. Across a monthly field surveillance cycle, this squad returns ~24.0 hours of high-value recovery optimization time per reservoir asset, eliminating allocation errors, diagnosing water breakthrough mechanisms, and compiling audit-ready PRMS reserves statements.",
   "confidence": {
     "Persona": "Reservoir Engineer (P06)",

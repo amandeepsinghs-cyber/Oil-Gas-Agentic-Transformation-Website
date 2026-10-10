@@ -1,0 +1,791 @@
+{
+  "_doc": "Single source of truth for persona domain membership, board grouping and cross-domain value apportionment. valueSplit: a persona's value is computed once at its full footprint and apportioned across the domains it serves; the Full value chain view is the sum (= the persona's full value). Read by scripts/extract_persona_research.py and scripts/build_matrix.js; emitted to data/persona_registry.js for the pages.",
+  "domains": {
+    "upstream": "Upstream",
+    "midstream": "Midstream",
+    "downstream": "Downstream"
+  },
+  "domainOrder": [
+    "upstream",
+    "midstream",
+    "downstream"
+  ],
+  "groupOrder": {
+    "upstream": [
+      "Subsurface",
+      "Wells & Rig",
+      "Field & Facilities",
+      "Cross-Cutting"
+    ],
+    "midstream": [
+      "Pipelines & Network",
+      "Processing & Storage",
+      "Terminals & Marine",
+      "Commercial & Measurement",
+      "Cross-Cutting"
+    ],
+    "downstream": [
+      "Refining",
+      "Planning & Supply",
+      "Quality & Blending",
+      "Offsites & Distribution",
+      "Petrochemicals",
+      "Marketing",
+      "Cross-Cutting"
+    ]
+  },
+  "personas": {
+    "P01": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Wells & Rig"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P02": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Wells & Rig"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P03": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Refining"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P04": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Subsurface"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P05": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Subsurface"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P06": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Subsurface"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P07": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Wells & Rig"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P08": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Wells & Rig"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P09": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Field & Facilities"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P10": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Field & Facilities"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P11": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Field & Facilities"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P12": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Field & Facilities"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P13": {
+      "domains": [
+        "upstream",
+        "midstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Field & Facilities",
+        "midstream": "Pipelines & Network"
+      },
+      "valueSplit": {
+        "upstream": 0.85,
+        "midstream": 0.15
+      }
+    },
+    "P14": {
+      "domains": [
+        "midstream",
+        "downstream"
+      ],
+      "primaryDomain": "midstream",
+      "crossCutting": false,
+      "groups": {
+        "midstream": "Pipelines & Network",
+        "downstream": "Offsites & Distribution"
+      },
+      "valueSplit": {
+        "midstream": 0.6,
+        "downstream": 0.4
+      }
+    },
+    "P15": {
+      "domains": [
+        "midstream",
+        "downstream"
+      ],
+      "primaryDomain": "midstream",
+      "crossCutting": false,
+      "groups": {
+        "midstream": "Terminals & Marine",
+        "downstream": "Offsites & Distribution"
+      },
+      "valueSplit": {
+        "midstream": 0.5,
+        "downstream": 0.5
+      }
+    },
+    "P16": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Refining"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P17": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Planning & Supply"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P18": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Subsurface"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P19": {
+      "domains": [
+        "upstream",
+        "midstream",
+        "downstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": true,
+      "groups": {
+        "upstream": "Cross-Cutting",
+        "midstream": "Cross-Cutting",
+        "downstream": "Cross-Cutting"
+      },
+      "valueSplit": {
+        "upstream": 0.4,
+        "midstream": 0.1,
+        "downstream": 0.5
+      }
+    },
+    "P20": {
+      "domains": [
+        "upstream",
+        "midstream",
+        "downstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": true,
+      "groups": {
+        "upstream": "Cross-Cutting",
+        "midstream": "Cross-Cutting",
+        "downstream": "Cross-Cutting"
+      },
+      "valueSplit": {
+        "upstream": 0.4,
+        "midstream": 0.15,
+        "downstream": 0.45
+      }
+    },
+    "P21": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Subsurface"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P22": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Subsurface"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P23": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Subsurface"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P24": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Wells & Rig"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P25": {
+      "domains": [
+        "upstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": false,
+      "groups": {
+        "upstream": "Field & Facilities"
+      },
+      "valueSplit": {
+        "upstream": 1.0
+      }
+    },
+    "P26": {
+      "domains": [
+        "upstream",
+        "midstream"
+      ],
+      "primaryDomain": "midstream",
+      "crossCutting": false,
+      "groups": {
+        "midstream": "Processing & Storage",
+        "upstream": "Field & Facilities"
+      },
+      "valueSplit": {
+        "midstream": 0.7,
+        "upstream": 0.3
+      }
+    },
+    "P27": {
+      "domains": [
+        "midstream",
+        "downstream"
+      ],
+      "primaryDomain": "midstream",
+      "crossCutting": false,
+      "groups": {
+        "midstream": "Pipelines & Network",
+        "downstream": "Offsites & Distribution"
+      },
+      "valueSplit": {
+        "midstream": 0.65,
+        "downstream": 0.35
+      }
+    },
+    "P28": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Quality & Blending"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P29": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Planning & Supply"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P30": {
+      "domains": [
+        "upstream",
+        "midstream",
+        "downstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": true,
+      "groups": {
+        "upstream": "Cross-Cutting",
+        "midstream": "Cross-Cutting",
+        "downstream": "Cross-Cutting"
+      },
+      "valueSplit": {
+        "upstream": 0.4,
+        "midstream": 0.15,
+        "downstream": 0.45
+      }
+    },
+    "P31": {
+      "domains": [
+        "upstream",
+        "midstream",
+        "downstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": true,
+      "groups": {
+        "upstream": "Cross-Cutting",
+        "midstream": "Cross-Cutting",
+        "downstream": "Cross-Cutting"
+      },
+      "valueSplit": {
+        "upstream": 0.25,
+        "midstream": 0.1,
+        "downstream": 0.65
+      }
+    },
+    "P32": {
+      "domains": [
+        "upstream",
+        "midstream",
+        "downstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": true,
+      "groups": {
+        "upstream": "Cross-Cutting",
+        "midstream": "Cross-Cutting",
+        "downstream": "Cross-Cutting"
+      },
+      "valueSplit": {
+        "upstream": 0.4,
+        "midstream": 0.1,
+        "downstream": 0.5
+      }
+    },
+    "P33": {
+      "domains": [
+        "upstream",
+        "midstream",
+        "downstream"
+      ],
+      "primaryDomain": "upstream",
+      "crossCutting": true,
+      "groups": {
+        "upstream": "Cross-Cutting",
+        "midstream": "Cross-Cutting",
+        "downstream": "Cross-Cutting"
+      },
+      "valueSplit": {
+        "upstream": 0.4,
+        "midstream": 0.1,
+        "downstream": 0.5
+      }
+    },
+    "P36": {
+      "domains": [
+        "midstream",
+        "downstream"
+      ],
+      "primaryDomain": "midstream",
+      "crossCutting": false,
+      "groups": {
+        "midstream": "Commercial & Measurement",
+        "downstream": "Offsites & Distribution"
+      },
+      "valueSplit": {
+        "midstream": 0.55,
+        "downstream": 0.45
+      }
+    },
+    "P37": {
+      "domains": [
+        "midstream"
+      ],
+      "primaryDomain": "midstream",
+      "crossCutting": false,
+      "groups": {
+        "midstream": "Pipelines & Network"
+      },
+      "valueSplit": {
+        "midstream": 1.0
+      }
+    },
+    "P38": {
+      "domains": [
+        "midstream"
+      ],
+      "primaryDomain": "midstream",
+      "crossCutting": false,
+      "groups": {
+        "midstream": "Pipelines & Network"
+      },
+      "valueSplit": {
+        "midstream": 1.0
+      }
+    },
+    "P39": {
+      "domains": [
+        "midstream",
+        "downstream"
+      ],
+      "primaryDomain": "midstream",
+      "crossCutting": false,
+      "groups": {
+        "midstream": "Pipelines & Network",
+        "downstream": "Offsites & Distribution"
+      },
+      "valueSplit": {
+        "midstream": 0.6,
+        "downstream": 0.4
+      }
+    },
+    "P40": {
+      "domains": [
+        "midstream",
+        "downstream"
+      ],
+      "primaryDomain": "midstream",
+      "crossCutting": false,
+      "groups": {
+        "midstream": "Terminals & Marine",
+        "downstream": "Offsites & Distribution"
+      },
+      "valueSplit": {
+        "midstream": 0.5,
+        "downstream": 0.5
+      }
+    },
+    "P41": {
+      "domains": [
+        "midstream"
+      ],
+      "primaryDomain": "midstream",
+      "crossCutting": false,
+      "groups": {
+        "midstream": "Processing & Storage"
+      },
+      "valueSplit": {
+        "midstream": 1.0
+      }
+    },
+    "P42": {
+      "domains": [
+        "midstream"
+      ],
+      "primaryDomain": "midstream",
+      "crossCutting": false,
+      "groups": {
+        "midstream": "Commercial & Measurement"
+      },
+      "valueSplit": {
+        "midstream": 1.0
+      }
+    },
+    "P43": {
+      "domains": [
+        "midstream"
+      ],
+      "primaryDomain": "midstream",
+      "crossCutting": false,
+      "groups": {
+        "midstream": "Commercial & Measurement"
+      },
+      "valueSplit": {
+        "midstream": 1.0
+      }
+    },
+    "P44": {
+      "domains": [
+        "midstream"
+      ],
+      "primaryDomain": "midstream",
+      "crossCutting": false,
+      "groups": {
+        "midstream": "Pipelines & Network"
+      },
+      "valueSplit": {
+        "midstream": 1.0
+      }
+    },
+    "P45": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Refining"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P46": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Refining"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P47": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Refining"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P48": {
+      "domains": [
+        "midstream",
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Planning & Supply",
+        "midstream": "Commercial & Measurement"
+      },
+      "valueSplit": {
+        "downstream": 0.7,
+        "midstream": 0.3
+      }
+    },
+    "P49": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Planning & Supply"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P50": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Quality & Blending"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P51": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Offsites & Distribution"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P52": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Petrochemicals"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P53": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Marketing"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P54": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Marketing"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    },
+    "P55": {
+      "domains": [
+        "downstream"
+      ],
+      "primaryDomain": "downstream",
+      "crossCutting": false,
+      "groups": {
+        "downstream": "Marketing"
+      },
+      "valueSplit": {
+        "downstream": 1.0
+      }
+    }
+  }
+}

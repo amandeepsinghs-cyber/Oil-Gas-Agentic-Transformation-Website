@@ -24,6 +24,17 @@ window.PERSONA_DETAIL["P21"] = {
   "avatar": "avatars/P21_persona.jpg",
   "thumb": "avatars/thumbs/P21_thumb.jpg",
   "initials": "DG",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Subsurface"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Development Geologist constructs the 3D static cellular architecture of the reservoir, mapping millions of grid cells of sedimentological facies, porosity, and permeability between wellbores to dictate multi-million-dollar infill drilling campaigns. While 3D geological modeling monoliths like SLB Petrel Geology and Emerson / AspenTech RMS possess sophisticated stochastic algorithms (Sequential Indicator Simulation, multipoint geostatistics), they suffer from severe manual data preparation bottlenecks and unstructured data seams. Geologists spend up to 40% of their geomodeling cycles manually reformatting laboratory core description text, standardizing electrofacies cluster picks across dozens of legacy wells, fitting trial-and-error variogram curves, auditing 3D grids for inverted \"negative\" cells, and sifting through cellular properties to identify unswept pay pockets. An integrated squad of 7 hyper-specialized micro-agents digitizes core descriptions, standardizes electrofacies clusters, automates directional variogram fitting, audits 3D cellular grid geometry, identifies bypassed pay sweet-spots, resolves well-top-to-seismic misties, and synthesizes Field Development Plan (FDP) dossiers—saving 70.50 engineering hours per reservoir modeling study and preventing infill dry holes caused by misplaced sand-body connectivity assumptions.",
   "confidence": {
     "Persona": "Development Geologist (P21)",

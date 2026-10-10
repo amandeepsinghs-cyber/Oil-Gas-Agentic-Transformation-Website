@@ -1,0 +1,27 @@
+{
+  "id": "P47",
+  "seats": 90,
+  "assetCapital": {
+    "form": "volume",
+    "asset": "Refinery utility energy and fuel consumption",
+    "qtyPerYear": 584000000,
+    "qtyLabel": "bbl processed",
+    "share": 0.001,
+    "ratePerQty": 300,
+    "basis": "0.10% of utility and fuel energy giveaway recovered through closed-loop steam balancing, dynamic ASME PTC 4 sootblowing, and acoustic steam trap surveillance",
+    "source": "1.6 Mbbl/d x 365 (~584M bbl/yr). Refinery energy consumption and fuel loss typically account for 50-60% of operating cash costs (~6-8% of crude throughput, ~₹400-500/bbl). Credited to reduced steam letdown exergy destruction, dynamic sootblowing heat recovery, steam trap acoustic surveillance, and hydrogen purge optimization. ₹300/bbl is the standard incremental margin uplift used in P16/P17/P28, recovering ₹0.30/bbl."
+  },
+  "assetRisk": {
+    "scenario": "Severe steam header imbalance or utility disruption triggering multi-unit trips",
+    "unitsPerYear": 11,
+    "unitLabel": "refineries",
+    "frequency": 0.25,
+    "consequence": 350000000,
+    "alpha": 0.3,
+    "beta": 0.35,
+    "source": "~11 refineries; frequency reflects utility-initiated steam header collapses, unmonitored PRDS letdown failures, or sudden fuel gas Wobbe swings forcing multi-unit process shutdowns (~1 event every 4 years per site). Consequence covers 24-48 hours of deferred throughput margin across dependent conversion units, flaring loss, and restart costs (~₹35 Cr). Alpha reflects the informational, balancing, and detection share; beta reflects multi-tier steam and fuel gas agent surveillance efficacy."
+  },
+  "recovery": null,
+  "rationale": "P47 Energy & Utilities Engineer governs thermodynamic steam generation, captive power cogeneration, boiler feed water conditioning, fuel gas blending, cooling water systems, and hydrogen balancing across ~10-11 refineries (~80 MMTPA / 1.6 Mbbl/d) and integrated petrochemical complexes. Sizing of 90 seats represents ~0.29% of enterprise headcount (~31,000), supporting 6-12 utility engineers per complex across boiler/cogen houses, water treatment, fuel/H2 networks, and central energy management cells (comparable to P17 Planning at 90 and P28 Blending at 75). Asset Capital operates in volume form across 584M bbl/yr processed, recovering 0.10% of energy and fuel giveaway (~₹17.52 Cr/yr at ₹300/bbl margin uplift, or ₹0.30/bbl against a total energy cost of ₹400-500/bbl). This is kept distinct from P16 (yield giveaway) and P17 (planning schedule uplift). Asset Risk protects against severe steam header collapses and utility imbalances that trigger cascading multi-unit shutdowns and flaring (~1 event every 4 years per refinery, ₹35 Cr consequence, alpha*beta = 10.5%, ~₹1.01 Cr/yr expected loss avoided). Resource Recovery is null as the role operates in downstream utilities and carries an Integrity risk lever.",
+  "caveats": "Never name any operator or facility in UI or source copy. If an operator applies the strictest definition of ASSET_CAPITAL where only assets waiting on real-time operational decisions qualify (analogous to P19/P30/P33), assetCapital can be set to null without compromising model integrity, anchoring value in Human Capital (₹20.25 Cr/yr) and Asset Risk (₹1.01 Cr/yr). All physical valve actuations, boiler burner firing adjustments, and emergency trip responses remain under licensed board operator and automated safety instrumented system control."
+}

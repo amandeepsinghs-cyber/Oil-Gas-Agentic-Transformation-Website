@@ -27,7 +27,7 @@
 | **Pain Claims Cited** | 8 of 8 industry pain claims backed by published NPRA/AFPM operational papers, KBC margin gap benchmarks, and practitioner case studies |
 | **Timings Sourced** | Monthly operating plan (MOP) assembly, spot crude evaluation, sub-model vector recalibration, and margin gap forensics validated against professional refinery planner logs |
 | **Gap Claims Cited** | Aspen PIMS, Haverly GRTMPS, Honeywell Spiral Plan, and KBC Petro-SIM technical documentation confirm absence of autonomous closed-loop sub-model vector recalibration from reconciled mass balances, automated spot assay mapping, and gross margin variance root-cause decomposition |
-| **Known Gaps** | Extent of non-linear recursion and distributive property blending approximations (e.g., Chevron non-linear method vs. pooling delta vectors) varies between high-conversion coking refineries and simple hydroskimming plants |
+| **Known Gaps** | Extent of non-linear recursion and distributive property blending approximations (e.g., a major operator's non-linear method vs. pooling delta vectors) varies between high-conversion coking refineries and simple hydroskimming plants |
 
 ---
 
@@ -155,7 +155,7 @@
   * *Agent Candidate*: **→ See §4 (Agent 4: Gross Refining Margin Gap & Variance Attribution Sieve)**.
 
 * **A10 · Finished Product Blending Property Formulation (B2, `[PIMS-Manual §6]`)**:
-  * *Today*: Handled through non-linear blending index algorithms (e.g., Ethyl RT-70 for octane, Chevron blending index for flash/pour points) embedded within PIMS / Haverly.
+  * *Today*: Handled through non-linear blending index algorithms (e.g., Ethyl RT-70 for octane, a major operator's blending index for flash/pour points) embedded within PIMS / Haverly.
   * *Failure Mode*: Core mathematical formulation within the commercial planning software.
   * *Agent Candidate*: `❌ No`. Monolith modeling domain.
 

@@ -20,6 +20,17 @@
   "avatar": "avatars/P23_persona.jpg",
   "thumb": "avatars/thumbs/P23_thumb.jpg",
   "initials": "SD",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Subsurface"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Subsurface Data Manager safeguards the multi-billion-dollar sovereign digital asset of the enterprise—governing the spatial accuracy, geodetic integrity, petrophysical consistency, and cloud accessibility of every well header, seismic volume, directional survey, and core record across the upstream portfolio. While contemporary cloud repositories like the Open Subsurface Data Universe (OSDU Forum) provide standardized API schemas and relational datastores (Landmark OpenWorks, SLB Delfi), they are entirely defenseless against corrupt, unstandardized legacy metadata. In a typical upstream operator portfolio, 15% to 25% of vintage wells suffer from latent Coordinate Reference System (CRS) datum shifts (e.g., conflating WGS84 with local geodetic datums like ED50, NAD27, or Everest 1956), displacing borehole locations by 50 to 300 meters and causing exploration teams to drill on the downthrown side of bounding faults. Subsurface data managers spend up to 70% of their time manually cross-referencing paper drilling permits against spatial registries, reconciling conflicting Kelly Bushing elevation datums, standardizing thousands of vendor log mnemonics, and validating SEG-Y binary trace headers. Deploying a dedicated 7-agent hyper-specialized subsurface data squad saves 82.25 hours per major data ingestion and governance campaign, turning unsearchable data lakes into verified, audit-ready subsurface intelligence.",
   "confidence": {
     "Persona": "Subsurface Data Manager (P23)",

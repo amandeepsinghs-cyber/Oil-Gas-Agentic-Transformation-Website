@@ -24,6 +24,20 @@ window.PERSONA_DETAIL["P26"] = {
   "avatar": "avatars/P26_persona.jpg",
   "thumb": "avatars/thumbs/P26_thumb.jpg",
   "initials": "GP",
+  "domains": [
+    "upstream",
+    "midstream"
+  ],
+  "primaryDomain": "midstream",
+  "crossCutting": false,
+  "groups": {
+    "midstream": "Processing & Storage",
+    "upstream": "Field & Facilities"
+  },
+  "valueSplit": {
+    "midstream": 0.7,
+    "upstream": 0.3
+  },
   "headline": "The Gas Plant Engineer commands the complex thermodynamic and cryogenic process units that purify raw field gas, separating high-value Natural Gas Liquids (NGLs) and guaranteeing pipeline-quality sales gas. While specialized gas processing simulation suites like Bryan Research & Engineering ProMax and AspenTech Aspen HYSYS model amine reaction kinetics and turbo-expander cryogenics, they operate as static desktop tools incapable of autonomously responding to erratic field gas composition swings. When upstream wellpads slug sour acid gas (H2S, CO2) or heavy hydrocarbon liquids into the facility, the amine sweetening unit is thrown out of balance: solvent circulation rates lag, contactor columns experience violent hydrodynamic foaming, and treated gas breaches pipeline tariffs (>4 ppm H2S), risking immediate automated pipeline shut-ins ($100k to $500k/day in shut-in penalties). Engineers spend 3 to 5 hours daily manually cross-referencing gas chromatography assays, computing rich/lean amine loadings, auditing mole sieve regeneration heating curves, and reconciling NGL mass balances. Deploying a dedicated 7-agent hyper-specialized gas plant squad saves 19.85 hours per operational optimization cycle, preventing amine foaming upsets, maximizing cryogenic ethane/propane recovery, and eliminating off-spec product giveaway.",
   "confidence": {
     "Persona": "Gas Plant Engineer (P26)",

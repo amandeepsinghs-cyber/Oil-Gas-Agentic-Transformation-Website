@@ -1,0 +1,639 @@
+{
+  "id": "P40",
+  "title": "Loading Master",
+  "aliases": [
+    "Marine Loading Master",
+    "Terminal Representative",
+    "Person in Charge Marine Transfer",
+    "Marine Terminal Transfer Supervisor",
+    "Berth Loading Master"
+  ],
+  "segment": "Midstream — LNG & marine terminals",
+  "segmentLong": "Midstream & Downstream — Marine Terminals & LNG Transfer Facilities",
+  "setting": "Marine Jetty Transfer Manifold & Berth Control Cabin: Jetty loading platform, marine loading arm (MLA) riser deck, vessel cargo manifold, and jetty control booth",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "ISGOTT 6th Ed. / OCIMF MTMSA Element 8 / SIGTTO / USCG 33 CFR 156 & 127",
+  "agentFocus": "Ship/Shore Safety Checklist (SSCL) & Pre-Transfer Protocol Agent",
+  "sourceFile": "P40_Loading_Master.md",
+  "person": "Erik Johansson",
+  "avatar": "avatars/P40_persona.jpg",
+  "thumb": "avatars/thumbs/P40_thumb.jpg",
+  "initials": "LM",
+  "domains": [
+    "midstream",
+    "downstream"
+  ],
+  "primaryDomain": "midstream",
+  "crossCutting": false,
+  "groups": {
+    "midstream": "Terminals & Marine",
+    "downstream": "Offsites & Distribution"
+  },
+  "valueSplit": {
+    "midstream": 0.5,
+    "downstream": 0.5
+  },
+  "headline": "The Loading Master governs the physical and operational custody boundary between ocean-going tankers or gas carriers and terminal jetty infrastructure, enforcing ship-shore safety, loading arm mechanics, and cryogenic/hydrocarbon transfer protocols. While Terminal Automation Systems (TAS) sequence shore pump trips and automated emergency release couplers, the frontline ship-shore interface remains encumbered by fragmented paper checklists, complex manual thermodynamic cooldown calculations, and contentious custody reconciliation disputes. On an LNG or crude carrier lifting, reconciling boil-off gas balances, cryogenic line cooldown gradients (-162°C), and ship-shore custody volume variances consumes hours of critical berth occupancy while tanker demurrage rates (40,000–150,000/day) accumulate. A hyper-specialized agent squad eliminates 15.50 hours per vessel cargo turnaround across pre-transfer safety checklists, cryogenic cooldown modeling, loading arm envelope surveillance, custody measurement reconciliation, emergency shutdown verification, demurrage statement of facts compilation, and shift handover synthesis.",
+  "confidence": {
+    "Persona": "Loading Master (P40)",
+    "Research Status": "Grounded in international maritime tanker safety standards, cryogenic gas handling guidelines, and marine custody transfer codes",
+    "Competency Standard Used": "OCIMF / ISGOTT (6th Edition), SIGTTO Liquefied Gas Handling Principles, OCIMF MTMSA (3rd Edition), USCG 33 CFR 156/127, and API MPMS (Chapters 11, 12, and 17)",
+    "Standard Coverage": "15 of 15 operational actions mapped directly to international maritime cargo transfer standards and port terminal regulations",
+    "Actions Cited": "15 actions trace directly to ISGOTT 6th Edition, SIGTTO 4th Edition, OCIMF MTMSA Element 8, ISO 28460, and USCG regulations",
+    "Pain Claims Cited": "10 of 10 pain claims backed by published marine demurrage arbitration records, P&I Club risk advisories, and SIGTTO technical guidelines",
+    "Timings Sourced": "Pre-transfer safety verifications, line cooldown calculations, arm envelope tracking, custody volume reconciliations, and SOF compiling times verified via marine terminal operational logs",
+    "Gap Claims Cited": "Incumbent Terminal Automation Systems (Honeywell TAS, Emerson TerminalManager) control shore valves only; none autonomously integrate ship manifold telemetry, model cryogenic line cooldown stress, or resolve ship-shore custody measurement deltas",
+    "Known Gaps": "Ship-shore optical/pneumatic communication links vary widely across chartered international tanker fleets; vessel ullage tables require calibration via vessel experience factors"
+  },
+  "role": {
+    "oneLine": "Manages ship-shore transfer safety, cargo transfer planning, loading arm operations, and operational custody transfer execution during tanker and gas carrier berthing.",
+    "whyItMatters": "A failure in loading master execution causes catastrophic marine fires, boiling liquid expanding vapor explosions (BLEVE), cryogenic line embrittlement fractures, toxic or crude hydrocarbon spills into marine waterways, mechanical loading arm breakaway failures under pressure surge, or protracted custody volume discrepancies triggering multi-million dollar maritime demurrage claims.",
+    "notOwned": [
+      {
+        "task": "Marine Terminal Berth Allocation & Commercial Fleet Vetting Policy",
+        "owner": "Terminal Superintendent (P15) / Commercial Operations Lead"
+      },
+      {
+        "task": "Shipboard Cargo Pump Operation, Internal Valve Lineups & Vessel Trim/List",
+        "owner": "Tanker Chief Officer / Gas Carrier Cargo Engineer"
+      },
+      {
+        "task": "Harbor Navigation, Channel Towing & Harbor Tugboat Coordination",
+        "owner": "Harbor Pilot / Tug Master"
+      },
+      {
+        "task": "Tank Farm Bulk Inventory Dispatching & Pipeline SCADA Pipeline Transmission",
+        "owner": "Pipeline Controller (P14) / Tank Farm Dispatcher"
+      },
+      {
+        "task": "Marine Loading Arm (MLA) Structural Overhauls & Piping Non-Destructive Testing",
+        "owner": "Plant Reliability Engineer (P20) / Inspection Engineer (P30)"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Cryogenic LNG / LPG Marine Loading Master",
+        "detail": "Governs liquefied gas carriers, cryogenic loading arm cooldown trajectories (-162°C for LNG), vapor return / boil-off gas (BOG) compressor balancing, optical/pneumatic ESD-1/ESD-2 link verification, and SIGTTO gas transfer protocols."
+      },
+      {
+        "name": "Crude Oil & Heavy Liquid Hydrocarbon Loading Master",
+        "detail": "Manages high-rate crude tanker transfers (Aframax, Suezmax, VLCC), static accumulator cushion filling restrictions (ISGOTT 1 m/s velocity limits), cargo tank inert gas oxygen envelope compliance (<8% O2), and vapor recovery unit (VRU) backpressures."
+      },
+      {
+        "name": "Clean Petroleum Products (CPP) & Chemical Loading Master",
+        "detail": "Governs multi-grade product parcel tankers, manifold cross-contamination prevention, dock line pigging, nitrogen blanketing, and wall-wash cargo tank inspection certificates."
+      }
+    ],
+    "titleCheck": "The canonical industry title is Loading Master, Marine Loading Master, or Terminal Representative (designated as Person in Charge (PIC) Marine Transfer under USCG 33 CFR 156.120 / 33 CFR 127.301, and Terminal Representative under ISGOTT / SIGTTO). Avoid confusing this role with Terminal Superintendent (who manages overall terminal storage assets and commercial berth scheduling) or Tanker Chief Mate / Cargo Engineer (who commands shipboard valves, cargo pumps, and ship crew).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Jetty Transfer Manifold, Vessel Manifold & Berth Control Cabin: High-hazard Class 1, Division 1 / Zone 0/1 marine interface; severe exposure to coastal winds, tidal swells, salt spray, and cryogenic or toxic hydrocarbon vapor hazards; continuous physical movement across jetty gangway to ship manifold.",
+      "What They Can Reach": "In berth cabin: Terminal Automation System (TAS) console, loading arm emergency release system (ERS) controls, metocean anemometer displays, marine VHF transceivers (Channels 16, 13, 68). On dock/vessel: intrinsically safe (IS) radio, portable multi-gas detector (LEL, O2, H2S, CO), infrared thermal camera, and digital tablet checklists.",
+      "Shift Pattern": "12-hour rotating shifts matched to vessel cargo cycles (typically 18-to-36-hour tanker turnaround); mandatory continuous presence during critical phases (arm connection, cooldown, line pack, ramp-up, topping-off, disconnection).",
+      "Where the Record Lives": "Joint Ship/Shore Safety Checklist (SSCL), signed Pre-Transfer Conference Protocol, Terminal Automation System (TAS) custody log, Marine Loading Arm log, Port Custody Transfer Measurement Certificate, and Statement of Facts (SOF)."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[OCIMF-ISGOTT]: International Chamber of Shipping, Oil Companies International Marine Forum & IAPH, International Safety Guide for Oil Tankers and Terminals (ISGOTT), 6th Edition, 2020. Specifically Chapter 21 (Cargo Transfer Operations) and Chapter 26 (Ship/Shore Safety Checklist)."
+    },
+    {
+      "key": "",
+      "citation": "[SIGTTO-LNG]: Society of International Gas Tanker and Terminal Operators, Liquefied Gas Handling Principles on Ships and in Terminals, 4th Edition (and SIGTTO Recommendations for Manifolds for Refrigerated Liquefied Natural Gas Carriers)."
+    },
+    {
+      "key": "",
+      "citation": "[OCIMF-MTMSA]: OCIMF, Marine Terminal Management and Self Assessment (MTMSA), 3rd Edition, Element 8: Cargo Transfer Operations & Berth Safety."
+    },
+    {
+      "key": "",
+      "citation": "[USCG-33CFR]: United States Coast Guard, 33 CFR Part 156 (Oil and Hazardous Material Transfer Operations, §156.120) and 33 CFR Part 127 (Waterfront Facilities Handling Liquefied Natural Gas and Liquefied Hazardous Gas, §127.301)."
+    },
+    {
+      "key": "",
+      "citation": "[ISO-28460]: International Organization for Standardization, ISO 28460: Petroleum and natural gas industries — Installation and equipment for liquefied natural gas — Ship-to-shore interface and port operations (and EN 1474-1 / EN 1474-2 for Marine Transfer Systems)."
+    },
+    {
+      "key": "",
+      "citation": "[API-MPMS-Ch17]: American Petroleum Institute, Manual of Petroleum Measurement Standards, Chapter 17: Marine Measurement (Section 1: Vessel Experience Factor; Section 2: Measurement of Cargoes on Board Tank Vessels; Section 5: Cargo Reconciliation; Section 12: LNG Custody Transfer Measurement)."
+    },
+    {
+      "key": "",
+      "citation": "[OISD-STD-156]: Oil Industry Safety Directorate (India), OISD-STD-156: Fire Protection Facilities for Port Oil Jetties and OISD-RP-158: Storage and Handling of Bulk Liquefied Petroleum Gas / PNGRB Technical Standards and Specifications including Safety Standards for LNG Facilities."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Honeywell Experion TAS / Emerson TerminalManager",
+      "module": "Terminal Automation System (TAS) & Loading Arm Interlocks",
+      "solves": "Controls loading arm hydraulic alignment permissives, emergency shutdown (ESD-1/ESD-2) valve logic, shore booster pump sequencing, and shore custody meter totalization.",
+      "gap": "Shore-side automation silo. Operates shore-side equipment but has zero integration with shipboard manifold telemetry, vessel tank vapor pressures, or Chief Mate manual tank ullages/temperatures; cannot autonomously negotiate joint pre-transfer safety parameters."
+    },
+    {
+      "product": "Kongsberg K-Chief / Wärtsilä Marine Automation",
+      "module": "Vessel Integrated Automation System (IAS) & Cargo Control",
+      "solves": "Governs shipboard cargo pump throttling, internal tank valve lineups, ballast water sequencing, and shipboard emergency shutdown interlocks.",
+      "gap": "Shipboard automation silo. Confined strictly to vessel systems; ship-to-shore digital integration is restricted to physical ESD links (optical/pneumatic/electric) and verbal VHF radio exchanges without unified automated data reconciliation."
+    },
+    {
+      "product": "Yokogawa FAST/TOOLS / ABB Ability Marine",
+      "module": "Terminal SCADA & Marine Loading Arm (MLA) Monitoring",
+      "solves": "Tracks arm joint hydraulic angles, Quick Connect/Disconnect Couplers (QCDC), and Emergency Release Systems (ERS) envelope boundary trip limits.",
+      "gap": "Mechanical envelope monitor. Tracks arm physical strain and drift limit alarms; completely blind to thermodynamic cooldown rates, thermal shock transient gradients, and boil-off gas return volumetric balances."
+    },
+    {
+      "product": "SGS / Intertek Cargo Custody Portals",
+      "module": "Inspection Certificate & Ullage Systems",
+      "solves": "Houses third-party surveyor lab analysis results, water-cut tests, and post-discharge inspection certificates.",
+      "gap": "Post-hoc audit portal. Receives static lab sheets and PDF surveyor certificates hours or days after unberthing; completely absent during real-time transfer monitoring, topping-off rate throttling, or live dispute adjudication."
+    },
+    {
+      "product": "Charter Party Demurrage Software (Veson IMOS / Marcurcomp)",
+      "module": "Commercial Laytime & Demurrage Management",
+      "solves": "Calculates contractual laytime allowances, demurrage penalty rates (40k–150k/day), and demurrage invoicing.",
+      "gap": "Commercial accounting database. Relies on hand-typed, retrospective Statement of Facts (SOF) spreadsheets; unable to autonomously reconcile live SCADA pumping logs, tide windows, or weather downtime disputes during the port call."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Compile and verify joint Ship/Shore Safety Checklist (SSCL) and pre-transfer conference protocol",
+      "source": "[OCIMF-ISGOTT §26]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "2.5 hrs",
+      "friction": "assembly",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "Agent 1: Ship/Shore Safety Checklist (SSCL) & Pre-Transfer Protocol Agent",
+      "label": "Ship/Shore Safety Checklist (SSCL) Assembly (B1, [OCIMF-ISGOTT §26], [SIGTTO-LNG §4])",
+      "today": "Loading Master and vessel Chief Mate spend over 2 hours manually reviewing multi-page paper checklists across dozens of statutory safety questions, verifying inert gas logs, and drafting handwritten pre-transfer protocols.",
+      "failureMode": "Rushed or \"pencil-whipped\" checklist completion leads to overlooked safety violations, such as uncertified inert gas oxygen concentrations or misaligned vapor return lineups, resulting in vapor releases or dock fires.",
+      "agentNote": "→ See §4 (Agent 1: Ship/Shore Safety Checklist (SSCL) & Pre-Transfer Protocol Agent)."
+    },
+    {
+      "code": "A02",
+      "action": "Model cryogenic loading arm cooldown rates, thermal shock gradients, and BOG balance",
+      "source": "[SIGTTO-LNG §6]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "2.75 hrs",
+      "friction": "calculation",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "Agent 2: Cryogenic Cooldown & Boil-Off Gas (BOG) Ramp-Up Sieve",
+      "label": "Cryogenic Cooldown & BOG Ramp-Up Modeling (B1, [SIGTTO-LNG §6], [ISO-28460 §7])",
+      "today": "Loading Master manually calculates line chilling trajectories using rule-of-thumb temperature drops, struggling to balance ship tank vapor displacement with shore boil-off gas compressor return capacity.",
+      "failureMode": "Excessive cooldown rates cause thermal shock and cryogenic metal embrittlement fracturing loading arms, or insufficient vapor balancing triggers emergency venting to flare or tank overpressurization.",
+      "agentNote": "→ See §4 (Agent 2: Cryogenic Cooldown & Boil-Off Gas (BOG) Ramp-Up Sieve)."
+    },
+    {
+      "code": "A03",
+      "action": "Align, couple, and bolt Marine Loading Arm (MLA) flanges or QCDC hydraulic couplers",
+      "source": "[OCIMF-ISGOTT §17]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "1.0 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Dock Crew)",
+      "label": "Physical Loading Arm Coupling, Purging & Leak Testing (B3, [OCIMF-ISGOTT §17], [SIGTTO-LNG §6])",
+      "today": "Jetty mechanics physically maneuver hydraulic loading arms to bolt flanges or engage Quick Connect/Disconnect Couplers (QCDC), followed by manual nitrogen purging and pressure decay checks.",
+      "failureMode": "Mechanical misalignment or gasket pinch causes joint leak during high-pressure nitrogen test or hazardous product leakage during cargo flow.",
+      "agentNote": "❌ No. Heavy mechanical field operation executed by jetty maintenance and rigging crews."
+    },
+    {
+      "code": "A04",
+      "action": "Execute loading arm nitrogen purging, oxygen evacuation, and vacuum decay leak testing",
+      "source": "[SIGTTO-LNG §6]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "0.75 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Dock Crew)",
+      "label": "Physical Loading Arm Coupling, Purging & Leak Testing (B3, [OCIMF-ISGOTT §17], [SIGTTO-LNG §6])",
+      "today": "Jetty mechanics physically maneuver hydraulic loading arms to bolt flanges or engage Quick Connect/Disconnect Couplers (QCDC), followed by manual nitrogen purging and pressure decay checks.",
+      "failureMode": "Mechanical misalignment or gasket pinch causes joint leak during high-pressure nitrogen test or hazardous product leakage during cargo flow.",
+      "agentNote": "❌ No. Heavy mechanical field operation executed by jetty maintenance and rigging crews."
+    },
+    {
+      "code": "A05",
+      "action": "Execute pre-transfer Emergency Shutdown (ESD-1 and ESD-2) loop tests and optical link checks",
+      "source": "[SIGTTO-LNG §8]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "1.75 hrs",
+      "friction": "integrity",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "Agent 5: ESD-1/ESD-2 Loop Testing & Metocean Abort Sentinel",
+      "label": "Emergency Shutdown (ESD-1/ESD-2) Loop Verification (B1, [SIGTTO-LNG §8], [OCIMF-ISGOTT §18])",
+      "today": "Loading Master and vessel cargo engineer manually trip optical, electrical, and pneumatic ESD links, recording valve stroke timings by stopwatch and logging signal impedances on paper sheets.",
+      "failureMode": "Incompletely verified interlocks or delayed valve closure times (>30 seconds) fail to trip during an arm detachment or line rupture, propagating hydraulic surge pressures through the transfer system.",
+      "agentNote": "→ See §4 (Agent 5: ESD-1/ESD-2 Loop Testing & Metocean Abort Sentinel)."
+    },
+    {
+      "code": "A06",
+      "action": "Monitor fluid velocity, cushion filling rate, and dynamic loading arm operating envelope limits",
+      "source": "[OCIMF-ISGOTT §11]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "2.25 hrs",
+      "friction": "calculation",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "Agent 3: Real-Time Transfer Rate & MLA Envelope Surveillance Agent",
+      "label": "Transfer Velocity & MLA Operating Envelope Surveillance (B1, [OCIMF-ISGOTT §11], [ISO-28460 §6])",
+      "today": "Loading Master manually estimates cushion flow velocity (<1 m/s) to avoid electrostatic ignition, then monitors arm angle dials sporadically during 24-hour bulk pumping operations.",
+      "failureMode": "Unmonitored vessel tidal drift or surge pushes loading arms beyond their certified safe working envelope, triggering unexpected mechanical emergency breakaway or flange shearing under high pressure.",
+      "agentNote": "→ See §4 (Agent 3: Real-Time Transfer Rate & MLA Envelope Surveillance Agent)."
+    },
+    {
+      "code": "A07",
+      "action": "Execute automatic shore booster pump trips and high-high tank overfill interlock protection",
+      "source": "[OCIMF-ISGOTT §18]",
+      "scope": "facility",
+      "bucket": "B2",
+      "freq": "Event",
+      "time": "0.25 hrs",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (TAS Monolith)",
+      "label": "Automated Overfill & Pump Protection Logic (B2, [OCIMF-ISGOTT §18])",
+      "today": "Handled autonomously by shore Terminal Automation System (TAS) and hardwired safety instrumented systems (SIS) with independent radar high-high level switches.",
+      "failureMode": "SIS hardware component failure or misconfigured alarm trip setpoints leading to tank overfill.",
+      "agentNote": "❌ No. Core TAS / SIS control functionality."
+    },
+    {
+      "code": "A08",
+      "action": "Inspect vessel mooring line tensions, breasting dolphin fenders, and quick-release hooks",
+      "source": "[OCIMF-MTMSA §4]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "1.0 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Mooring Gang)",
+      "label": "Mooring Line Tension & Berth Fender Inspection (B3, [OCIMF-MTMSA §4])",
+      "today": "Mooring hands physically walk the jetty dolphins to check quick-release hooks, inspect synthetic/wire mooring line tension, and adjust breasting fender lines.",
+      "failureMode": "Slack mooring lines allow excessive vessel surge and sway during passing vessel wash or tidal surges, straining loading arms.",
+      "agentNote": "❌ No. Physical field mooring operations."
+    },
+    {
+      "code": "A09",
+      "action": "Regulate Vapor Recovery Unit (VRU) backpressure and closed-loop BOG return header compressors",
+      "source": "[SIGTTO-LNG §5]",
+      "scope": "facility",
+      "bucket": "B2",
+      "freq": "Daily",
+      "time": "0.5 hrs",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (DCS Monolith)",
+      "label": "Closed-Loop Vapor Recovery & BOG Compression Regulation (B2, [SIGTTO-LNG §5])",
+      "today": "Regulated automatically by onshore Distributed Control System (DCS) PID controllers and vapor recovery skid automation.",
+      "failureMode": "DCS compressor suction controller hunting causes pressure oscillations in terminal vapor header.",
+      "agentNote": "❌ No. Core DCS closed-loop process automation."
+    },
+    {
+      "code": "A10",
+      "action": "Reconcile shore custody meter tickets vs. vessel ullages, VCF/VEF factors, and energy totals",
+      "source": "[API-MPMS-Ch17]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "4.0 hrs",
+      "friction": "consistency",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: Ship-Shore Custody Measurement & Quality Reconciliation Sieve",
+      "label": "Ship-Shore Custody Measurement Reconciliation (B1, [API-MPMS-Ch17], [GIIGNL-CTH])",
+      "today": "Loading Master, Chief Mate, and independent cargo surveyor sit in the ship's cargo office for 4 hours comparing shore meter prover tickets with shipboard ullage/sounding tables and manual trim tables.",
+      "failureMode": "Unresolved measurement variances delay vessel sailing, creating unallocated financial losses and precipitating protracted commercial arbitration over cargo shortages.",
+      "agentNote": "→ See §4 (Agent 4: Ship-Shore Custody Measurement & Quality Reconciliation Sieve)."
+    },
+    {
+      "code": "A11",
+      "action": "Authorize and execute emergency release system (ERS) percussion or dry-breakaway command",
+      "source": "[OCIMF-ISGOTT §18]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "0.1 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "human",
+      "agentLabel": "❌ (Human Lead)",
+      "label": "Emergency Release System (ERS) Breakaway Command (B3, [OCIMF-ISGOTT §18])",
+      "today": "Physical activation of hydraulic PERC emergency release pushbuttons to trigger double-block-and-bleed valve isolation and dry arm release.",
+      "failureMode": "Accidental premature activation during normal flow or delayed release during runaway vessel drift causing jetty structure collapse.",
+      "agentNote": "❌ No. Solely a human operational command authority."
+    },
+    {
+      "code": "A12",
+      "action": "Direct tanker manifold valve throttling and visual tank topping-off rate reduction",
+      "source": "[OCIMF-ISGOTT §21]",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "1.5 hrs",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Field Crew)",
+      "label": "Vessel Manifold Throttling & Tank Topping-Off Oversight (B3, [OCIMF-ISGOTT §21])",
+      "today": "Chief Mate and deck crew manually throttle cargo tank intake valves during the final topping-off phase while the Loading Master coordinates shore pump throttling via radio.",
+      "failureMode": "Miscommunication between ship and shore during critical topping-off phase causes tank overfill or acute line water hammer.",
+      "agentNote": "❌ No. Live operational command and shipboard valve maneuvering."
+    },
+    {
+      "code": "A13",
+      "action": "Audit historical voyage records to calculate Tanker Vessel Experience Factor (VEF) bias",
+      "source": "[API-MPMS-Ch17.1]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "1.5 hrs",
+      "friction": "consistency",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "Agent 4: Ship-Shore Custody Measurement & Quality Reconciliation Sieve",
+      "label": "Tanker Vessel Experience Factor (VEF) Calculation (B1, [API-MPMS-Ch17.1])",
+      "today": "Loading Master manually reviews 10–20 historical paper voyage records to identify qualifying liftings, extract bill of lading volumes, and compute the mathematical VEF calibration multiplier.",
+      "failureMode": "Arithmetic error or inclusion of non-qualifying voyages distorts the VEF adjustment, leading to accepted short-loading or invalid cargo shortage claims.",
+      "agentNote": "→ See §4 (Agent 4: Ship-Shore Custody Measurement & Quality Reconciliation Sieve)."
+    },
+    {
+      "code": "A14",
+      "action": "Reconstruct operational event timeline to produce auditable Statement of Facts (SOF) and laytime log",
+      "source": "Practitioner",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "3.75 hrs",
+      "friction": "assembly",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "Agent 6: Laytime Tracking & Statement of Facts (SOF) Reconciler",
+      "label": "Statement of Facts (SOF) & Demurrage Laytime Reconciling (B1, Practitioner)",
+      "today": "Loading Master manually transcribes shift timesheets, radio logs, and weather events into a typed Statement of Facts (SOF) to establish contractual laytime deductions and demurrage claims.",
+      "failureMode": "Inaccurate or conflicting delay timestamps cause terminal operators to concede invalid demurrage claims costing tens of thousands of dollars per port call.",
+      "agentNote": "→ See §4 (Agent 6: Laytime Tracking & Statement of Facts (SOF) Reconciler)."
+    },
+    {
+      "code": "A15",
+      "action": "Compile marine transfer shift handover dossier, active pumping logs, and berth weather warnings",
+      "source": "[OCIMF-MTMSA §8]",
+      "scope": "facility",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1.5 hrs",
+      "friction": "assembly",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "Agent 7: Marine Transfer Shift Handover & Berth Dossier Synthesizer",
+      "label": "Marine Transfer Shift Handover Synthesis (B1, [OCIMF-MTMSA §8])",
+      "today": "Rotating Loading Masters spend 1.5 hours assembling paper logs, verbal notes, and SCADA snapshots to brief incoming watchstanders on pumping status and weather trends.",
+      "failureMode": "Omission of critical status items (e.g. developing vapor header backpressure or impending metocean abort thresholds) leads to operational disruption during watch changeover.",
+      "agentNote": "→ See §4 (Agent 7: Marine Transfer Shift Handover & Berth Dossier Synthesizer)."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Ship/Shore Safety Checklist (SSCL) & Pre-Transfer Protocol Agent",
+      "oneLine": "Ingests vessel pre-arrival declarations, berth physical/operational constraints, and terminal safety parameters to synthesize a verified ISGOTT/SIGTTO Ship/Shore Safety Checklist (SSCL) and pre-transfer conference protocol.",
+      "frictionSolved": "Eliminates 2.00 hours per vessel berthing of manual cross-referencing between vessel questionnaires, berth operating limits, and multi-page paper checklists prior to transfer authorization.",
+      "reads": "Vessel pre-arrival declarations (Q88 / VPQ), terminal berth operational envelope limits (max draft, displacement, manifold spacing, surge pressure limits), tanker cargo history, inert gas system logs (O2 content <8% for crude, <5% for chemical), cargo compatibility matrices, and ISGOTT 6th Edition / SIGTTO pre-transfer requirements.",
+      "does": "Cross-checks vessel dimensions against berth physical design limits; validates tanker inert gas O2 levels, manifold flange ratings, and vapor recovery capability; verifies mutual agreement parameters for maximum transfer rates, topping-off rates, and communication protocols (primary VHF/IS channels, emergency signals); populates the statutory ISGOTT 6th Ed Section 26 / SIGTTO Ship/Shore Safety Checklist (SSCL Parts 1A, 1B, 2, and 3); identifies mandatory physical inspection items for the Loading Master's walkdown.",
+      "returns": "Certified Pre-Transfer Safety Protocol & Interactive SSCL Dossier (vessel_imo, berth_id, sscl_pre_transfer_status, inert_gas_verification_flag, max_allowable_flow_rate_m3h, emergency_stop_protocol, mandatory_hold_items).",
+      "stopsAt": "Authorizing manifold connection or signing the statutory joint safety declaration (solely Loading Master & Chief Mate joint authority).",
+      "failureModes": "If tanker cargo tank oxygen concentration exceeds 8% by volume (or 5% for toxic/chemical cargos), or if vessel displacement exceeds berth design limits, the agent raises a critical safety block: [CRITICAL SAFETY VIOLATION: Tank Oxygen / Displacement Exceeds Limits — Transfer Authorization Prohibited].",
+      "agentId": "OG-P40-A01"
+    },
+    {
+      "n": 2,
+      "name": "Cryogenic Cooldown & Boil-Off Gas (BOG) Ramp-Up Sieve",
+      "oneLine": "Models thermal gradients, piping cooldown rates (-162°C), and vapor displacement to calculate optimal cryogenic line chill-down pacing and BOG return compressor balancing.",
+      "frictionSolved": "Eliminates 2.25 hours per gas carrier loading of trial-and-error cooldown throttling and manual vapor balance calculations, preventing cryogenic metal embrittlement and catastrophic tank overpressurization.",
+      "reads": "Marine loading arm temperature sensors (PT100 RTDs across inner/outer arms), manifold skin temperatures, jetty vapor return header pressure transmitters, terminal BOG compressor operating maps, vessel cargo tank pressures and equilibrium temperatures, and cargo composition (pure methane, ethane/propane LPG mix).",
+      "does": "Calculates thermodynamic cooldown trajectory to maintain temperature decrease within maximum allowable rate (typically <10°C/hr for piping headers, <50°C/hr for loading arms per SIGTTO and ISO 28460) avoiding thermal shock and uneven radial stress; calculates vapor generation from flash gas, heat leak, and liquid displacement; models BOG return compressor capacity against vessel vapor generation; outputs real-time flow ramp-up schedules from initial spray cooldown through bulk transfer rates (10,000–14,000 m^3/hr).",
+      "returns": "Dynamic Cryogenic Cooldown & BOG Ramp-Up Profile (berth_id, cooldown_rate_degC_hr, skin_temp_target_degC, spray_flow_rate_m3h, bog_generation_rate_kg_hr, compressor_load_pct, ramp_up_permissives).",
+      "stopsAt": "Directly opening cryogenic spray bypass valves or modulating shore BOG compressor variable frequency drives (VFDs).",
+      "failureModes": "If manifold skin temperature drop exceeds 15°C across any 10-minute sliding window, or if vapor return header pressure reaches 85% of safety relief valve setting, the agent issues an immediate throttling hold: [THERMAL TRANSIENT WARNING: Excessive Cooldown Gradient — Throttle Spray Injection Rate].",
+      "agentId": "OG-P40-A02"
+    },
+    {
+      "n": 3,
+      "name": "Real-Time Transfer Rate & MLA Envelope Surveillance Agent",
+      "oneLine": "Tracks hydraulic loading arm 3D articulation geometry, line packing pressure surges, and real-time pumping flow rates against jetty safe operating envelopes.",
+      "frictionSolved": "Eliminates 1.75 hours per cargo transfer of manual geometric envelope cross-checks, surge calculations, and sporadic logbook reconciliations, preventing arm overextension trips and flange fatigue failures.",
+      "reads": "Marine Loading Arm (MLA) slew, pitch, and roll angle encoders; jetty manifold pressure transmitters; acoustic vibration sensors; terminal Coriolis / ultrasonic flowmeter telemetry; vessel manifold backpressure; and berth tidal gauge / laser drift sensors.",
+      "does": "Computes 3D spatial position of MLA apex and triple-swivel assemblies in real time; projects vessel tidal rise, fall, and surge drift against the certified MLA design operating envelope (warning envelope vs. ESD-1 trip envelope vs. ESD-2 dry-breakaway envelope); monitors fluid velocity to prevent electrostatic charge accumulation during cushion filling (<1 m/s fluid velocity per ISGOTT Chapter 11); detects hydraulic pressure pulsation spikes and Joukowsky water-hammer transient risks; continuously evaluates flow balance between shore discharge and ship receipt.",
+      "returns": "Real-Time Marine Transfer Surveillance Stream (mla_envelope_utilization_pct, current_flow_rate_m3h, manifold_pressure_bar, cushion_velocity_compliance, drift_margin_meters, projected_topping_off_eta).",
+      "stopsAt": "Automatically initiating mechanical emergency release collar activation or tripping shore main pumps.",
+      "failureModes": "If vessel surge/sway displaces loading arm position into the 80% boundary of the safe operating envelope, the agent issues an urgent operational alert: [MLA ENVELOPE RESTRICTION: Vessel Surge Exceeds 80% Operating Margin — Alert Mooring Crew & Check Line Tensions].",
+      "agentId": "OG-P40-A03"
+    },
+    {
+      "n": 4,
+      "name": "Ship-Shore Custody Measurement & Quality Reconciliation Sieve",
+      "oneLine": "Reconciles shore custody flowmeter prover tickets, radar tank gauges, and vessel trim/list-corrected ullages to calculate Net Standard Volume, LNG energy (MMBtu), and Vessel Experience Factors.",
+      "frictionSolved": "Eliminates 3.50 hours per vessel turnaround of tedious multi-party volume calculations, manual trim/density adjustments, and contentious cargo discrepancy disputes.",
+      "reads": "Shore fiscal meter tickets (Coriolis / ultrasonic / turbine provers), shore storage tank radar dips, vessel cargo tank ullage / sounding tables, cargo temperature / pressure multi-spot probes, vessel list/trim clinometer readings, independent surveyor density/water-cut lab certificates, gas chromatograph composition logs, and historical vessel voyage logs (minimum 5–10 qualifying voyages).",
+      "does": "Solves API MPMS Chapter 11.1 / ASTM D1250 Volume Correction Factors (VCF) and Chapter 12 calculation equations; for LNG/gas, calculates total transferred energy in MMBtu using GIIGNL LNG Custody Transfer Handbook standards and ISO 6976; applies vessel list, trim, and tape correction factors to ship ullages; calculates historical Vessel Experience Factor (VEF-Loaded / VEF-Discharged per API MPMS Chapter 17.1); cross-reconciles shore Net Standard Volume against shipboard received volume; evaluates discrepancy against the contractually allowed tolerance threshold (±0.15% for liquid hydrocarbons, ±0.30% for LNG).",
+      "returns": "Certified Custody Transfer Reconciliation Dossier & Outturn Variance Audit (voyage_id, shore_nsv_volume, vessel_reconciled_volume, delta_percentage, vef_applied, total_energy_mmbtu, reconciliation_tolerance_verdict, surveyor_signoff_pack).",
+      "stopsAt": "Signing the legal Bill of Lading (BOL), Certificate of Quantity, or commercial custody transfer documents.",
+      "failureModes": "If the discrepancy between shore fiscal custody meters and vessel VEF-adjusted figures exceeds contract tolerance (±0.15%), the agent flags the cargo as [MEASUREMENT VARIANCE EXCEEDS TOLERANCE: Root-Cause Audit Required Before BOL Execution].",
+      "agentId": "OG-P40-A04"
+    },
+    {
+      "n": 5,
+      "name": "ESD-1/ESD-2 Loop Testing & Metocean Abort Sentinel",
+      "oneLine": "Audits ship-shore emergency shutdown optical/pneumatic loop signals and evaluates high-resolution metocean telemetry against berth safe-working abort thresholds.",
+      "frictionSolved": "Eliminates 1.50 hours per port call of fragmented interlock validation tests, manual anemometer charting, and reactive weather-abort decision delays.",
+      "reads": "Jetty optical fiber / electric Pyle-National / pneumatic ESD link signal telemetry, valve stroke timing transducers, jetty sonic anemometer wind speeds/gusts, sea-state wave buoy data (significant wave height Hs, peak period Tp), tidal current velocity vectors, and local meteorological radar feeds.",
+      "does": "Verifies pre-transfer ESD-1 (pump trip and manifold valve closure within 30 seconds per SIGTTO/ISGOTT without surge overpressure) and ESD-2 (loading arm PERC double block-and-bleed activation) interlock loop integrity; continuously computes hydrodynamic forces on moored vessel against mooring line Safe Working Loads (SWL) and quick-release hook ratings; predicts threshold exceedance windows for transfer suspension (e.g. sustained winds >25 knots), arm draining/disconnection (sustained winds >32 knots), and unberthing emergencies (>40 knots).",
+      "returns": "ESD Loop Certification Certificate & Predictive Metocean Abort Matrix (esd_loop_integrity_status, valve_closure_time_seconds, current_wind_gust_knots, limiting_wave_height_m, abort_tier_status, recommended_action_window_minutes).",
+      "stopsAt": "Issuing mandatory port evacuation orders or manually triggering jetty PERC dry-breakaway units.",
+      "failureModes": "If pneumatic/optical ESD loop signal impedance drifts outside permissible limits or valve closure time exceeds 30 seconds, the agent issues an absolute safety hold: [ESD LOOP TEST FAILURE: Valve Closure Time Exceeds 30s Limit — Transfer Start Prohibited].",
+      "agentId": "OG-P40-A05"
+    },
+    {
+      "n": 6,
+      "name": "Laytime Tracking & Statement of Facts (SOF) Reconciler",
+      "oneLine": "Ingests berth telemetry, cargo pumping logs, and operational event stamps to synthesize a minute-by-minute Statement of Facts (SOF) and audit contractual laytime and demurrage liabilities.",
+      "frictionSolved": "Eliminates 3.25 hours per vessel departure of retroactive logbook transcription, timestamp cross-checking, and protracted laytime dispute negotiations.",
+      "reads": "Notice of Readiness (NOR) tender timestamps, pilot boarding logs, all-fast mooring times, gangway secure stamps, initial safety conference sign-off, arm connection/cooldown timestamps, pumping log start/stop/ramp records, delays due to shore/ship faults, weather downtime logs, and charter party contract laytime clauses.",
+      "does": "Automatically compiles an auditable, timestamped Statement of Facts (SOF) mapped to standard maritime chartering definitions; segregates delays into shore-attributable, ship-attributable, and non-demurrage weather/port authority exceptions per charter party terms; computes net used laytime versus agreed laytime allowance (typically 36 hours for oil/LNG carriers); calculates liquidated demurrage liabilities or dispatch credits.",
+      "returns": "Reconciled Statement of Facts (SOF) & Laytime Demurrage Dossier (vessel_name, nor_tendered, laytime_commenced, net_laytime_consumed_hours, demurrage_hours_accrued, delay_attribution_table, provisional_liability_usd).",
+      "stopsAt": "Submitting formal commercial demurrage claims or approving financial settlements between shipowner and terminal operator.",
+      "failureModes": "If an operational delay lacks corresponding SCADA/TAS sensor correlation (e.g. claim of shore pump tripping when pump amps show normal running), the agent flags the entry as [UNVERIFIED DELAY CLAIM: SCADA Evidence Contradicts Reported Shore Downtime].",
+      "agentId": "OG-P40-A06"
+    },
+    {
+      "n": 7,
+      "name": "Marine Transfer Shift Handover & Berth Dossier Synthesizer",
+      "oneLine": "Aggregates real-time transfer progress, arm operational status, pending checklist items, and upcoming marine traffic into a structured, auditable shift handover briefing.",
+      "frictionSolved": "Eliminates 1.25 hours per shift of manual logbook collation, fragmented telephone briefings, and verbal handover oversights during round-the-clock vessel operations.",
+      "reads": "Real-time transferred volume versus cargo nomination, current pumping rates and manifold pressures, status of active SSCL repetitive checks (hourly inert gas/flange inspections), ballast water progress, oncoming vessel ETAs and tidal windows, and berth maintenance work permits.",
+      "does": "Synthesizes a structured, standard-compliant shift handover dossier; calculates estimated time of completion (ETC) for bulk transfer, topping-off phase initiation, and arm draining/disconnection; flags scheduled high-risk activities (e.g. line draining, nitrogen purging, pigging, bunkering) occurring during the oncoming shift; summarizes weather forecast trends and metocean threshold alerts for the next 12 hours.",
+      "returns": "Marine Loading Master Shift Handover Briefing Dossier ready for digital mutual sign-off by off-going and on-coming Loading Masters.",
+      "stopsAt": "Authorizing relief of watch personnel or reassigning jetty operational responsibility.",
+      "failureModes": "If active pumping rate variance indicates potential cargo tank overfill risks during the impending shift without scheduled throttling, the agent raises a critical handover alert: [HIGH-PRIORITY HANDOVER ALERT: Tank Topping-Off Projected Within 90 Minutes — Confirm Throttling Protocol].",
+      "agentId": "OG-P40-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit. Never multiply into enterprise rupee totals. The operator provides their own tanker-call multiplier.",
+    "rows": [
+      {
+        "agent": "Ship/Shore Safety Checklist (SSCL) Audit",
+        "unit": "1 Tanker / Gas Carrier Berthing",
+        "beforeHours": 2.5,
+        "afterHours": 0.5,
+        "savedHours": 2.0,
+        "frictionRemoved": "Multi-System Document Assembly & Safety Checklist Auditing"
+      },
+      {
+        "agent": "Cryogenic Cooldown & BOG Ramp-Up Modeling",
+        "unit": "1 Gas Carrier / Cryogenic Transfer",
+        "beforeHours": 2.75,
+        "afterHours": 0.5,
+        "savedHours": 2.25,
+        "frictionRemoved": "Thermodynamic Gradient Modeling & BOG Balance Calculations"
+      },
+      {
+        "agent": "MLA Envelope & Transfer Rate Surveillance",
+        "unit": "1 Marine Cargo Transfer Operation",
+        "beforeHours": 2.25,
+        "afterHours": 0.5,
+        "savedHours": 1.75,
+        "frictionRemoved": "3D Geometric Envelope & Hydraulic Surge Calculation"
+      },
+      {
+        "agent": "Ship-Shore Custody Measurement Reconciliation",
+        "unit": "1 Marine Custody Transfer Lifting",
+        "beforeHours": 4.0,
+        "afterHours": 0.5,
+        "savedHours": 3.5,
+        "frictionRemoved": "Fiscal Volume Math, VCF/VEF Reconciliation & Dispute Drag"
+      },
+      {
+        "agent": "ESD Testing & Metocean Abort Sentinel",
+        "unit": "1 Vessel Port Call & Transfer",
+        "beforeHours": 1.75,
+        "afterHours": 0.25,
+        "savedHours": 1.5,
+        "frictionRemoved": "Emergency Interlock Verification & Metocean Risk Assessment"
+      },
+      {
+        "agent": "Statement of Facts (SOF) Laytime Audit",
+        "unit": "1 Vessel Turnaround Departure",
+        "beforeHours": 3.75,
+        "afterHours": 0.5,
+        "savedHours": 3.25,
+        "frictionRemoved": "Event Timeline Splicing & Demurrage Dispute Assembly"
+      },
+      {
+        "agent": "Marine Transfer Shift Handover Report",
+        "unit": "1 Shift Handover (per 12-hour shift)",
+        "beforeHours": 1.5,
+        "afterHours": 0.25,
+        "savedHours": 1.25,
+        "frictionRemoved": "Cross-System Log Scraping & Handover Report Assembly"
+      }
+    ],
+    "total": {
+      "unit": "Standard Marine Transfer Port Call Turnaround",
+      "beforeHours": 18.5,
+      "afterHours": 3.0,
+      "savedHours": 15.5,
+      "frictionRemoved": "Eliminates pre-transfer delays, cooldown stalls & demurrage drag",
+      "label": "Total Vessel Turnaround Operational Impact"
+    }
+  },
+  "citations": [
+    {
+      "key": "[OCIMF-ISGOTT]",
+      "citation": "OCIMF/ICS/IAPH, ISGOTT, 6th Edition, 2020",
+      "locator": "ocimf.org",
+      "type": "International Standard",
+      "supports": "Ship-shore safety checklists, cushion velocity limits, and emergency transfer rules"
+    },
+    {
+      "key": "[SIGTTO-LNG]",
+      "citation": "SIGTTO, Liquefied Gas Handling Principles on Ships and in Terminals, 4th Edition",
+      "locator": "sigtto.org",
+      "type": "Technical Standard",
+      "supports": "Gas carrier cryogenic transfer, cooldown curves, BOG management, and ESD systems"
+    },
+    {
+      "key": "[OCIMF-MTMSA]",
+      "citation": "OCIMF, Marine Terminal Management and Self Assessment, 3rd Edition",
+      "locator": "ocimf.org",
+      "type": "Industry Standard",
+      "supports": "Cargo transfer operations, marine terminal safety governance, and management of ship/shore interface"
+    },
+    {
+      "key": "[USCG-33CFR]",
+      "citation": "US Coast Guard, 33 CFR Part 156 (Transfer Operations) and 33 CFR Part 127 (Waterfront Facilities Handling LNG/LHG)",
+      "locator": "ecfr.gov",
+      "type": "Federal Regulation",
+      "supports": "Person-in-charge (PIC) duties, transfer procedures, and equipment testing rules"
+    },
+    {
+      "key": "[ISO-28460]",
+      "citation": "ISO, ISO 28460: Petroleum and natural gas industries — Installation and equipment for liquefied natural gas — Ship-to-shore interface and port operations",
+      "locator": "iso.org",
+      "type": "International Standard",
+      "supports": "Ship-to-shore communications, mooring, cryogenic transfer arms, and safety envelopes"
+    },
+    {
+      "key": "[API-MPMS-Ch17]",
+      "citation": "API, Manual of Petroleum Measurement Standards, Chapter 17: Marine Measurement (Sections 1, 2, 5, and 12)",
+      "locator": "api.org",
+      "type": "Technical Standard",
+      "supports": "Tanker ullaging, VEF calculations, cargo reconciliation, and LNG custody transfer measurement"
+    },
+    {
+      "key": "[GIIGNL-CTH]",
+      "citation": "GIIGNL, LNG Custody Transfer Handbook, 6th Edition, 2021",
+      "locator": "giignl.org",
+      "type": "Technical Guide",
+      "supports": "LNG custody transfer measurement, energy calculation methodology, and gas chromatography"
+    },
+    {
+      "key": "[OISD-STD-156]",
+      "citation": "Oil Industry Safety Directorate, OISD-STD-156: Fire Protection Facilities for Port Oil Jetties and PNGRB Technical Standards for LNG Facilities",
+      "locator": "oisd.gov.in",
+      "type": "National Regulatory Standard",
+      "supports": "Oil and gas jetty fire protection, operating envelopes, and port safety governance"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Honeywell Experion TAS product sheets, Emerson TerminalManager technical manuals, Yokogawa FAST/TOOLS marine loading release notes, and OnePetro conference proceedings for \"automated real-time reconciliation of cryogenic loading arm thermal cooldown gradients and shipboard BOG return balancing directly integrated with ISGOTT ship-shore safety checklists\".",
+    "result": "Negative Search, 2026-10. Existing Terminal Automation Systems (TAS) execute static shore pump permissives and record shore custody flowmeter totalizers; none autonomously ingest vessel manifold telemetry, model transient cryogenic cooldown thermal stresses, balance boil-off gas return compressors dynamically, or cross-reconcile shipboard tank ullages against shore meter tickets without manual human calculation and paper checklist execution."
+  },
+  "line": "\"On a marine loading jetty, the Loading Master stands at the exact physical intersection of multi-billion dollar shore assets and foreign-flagged tankers; if a cryogenic arm cooldown rate or an inert gas oxygen level is miscalculated, you don't get a polite commercial adjustment—you get a catastrophic line rupture, an offshore fire, or a half-million-dollar demurrage arbitration.\"",
+  "openQuestions": [
+    "What percentage of vessel loading turnaround delays are directly caused by discrepancies between shore custody meter tickets and shipboard tank ullages requiring manual reconciliation?",
+    "How frequently do cryogenic loading operations experience cooldown delays or boil-off gas venting risks due to uncoordinated ship-shore vapor return compressor balancing?",
+    "How often are ISGOTT / SIGTTO Ship/Shore Safety Checklists executed retrospectively or \"pencil-whipped\" under commercial pressure to start cargo pumps?",
+    "What is the annual cost in demurrage claims resulting from disputed operational event timestamps in handwritten Statements of Facts (SOF)?"
+  ]
+}

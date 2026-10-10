@@ -1,0 +1,18 @@
+{
+  "id": "P49",
+  "seats": 100,
+  "assetCapital": {
+    "form": "volume",
+    "asset": "Finished product secondary distribution and bridging",
+    "qtyPerYear": 584000000,
+    "qtyLabel": "bbl distributed",
+    "share": 0.0008,
+    "ratePerQty": 160,
+    "basis": "0.08% of secondary distribution freight and terminal handling value recovered by eliminating emergency road bridging, rack detention, and batch cycle misallocations",
+    "source": "~80 MMTPA (~584 Mbbl/yr) finished products distributed across ~120 terminals & depots and ~37,000 retail stations. ₹160/bbl reflects blended secondary distribution economics (~₹1,000/KL or ~₹3.50/tonne-km road/rail freight, terminal handling, and depot bridging premiums). Dynamic stockout horizon forecasting and secondary fleet balancing recover 0.08% in avoided logistics premiums and bay detention."
+  },
+  "assetRisk": null,
+  "recovery": null,
+  "rationale": "P49 Distribution Planner balances regional product supply and demand by coordinating refinery bulk off-takes, multi-product pipeline batch nominations, terminal inventory allocations, and secondary transport replenishment across ~120 terminals & depots, ~90 LPG bottling plants, ~120 aviation fuel stations, and ~37,000 retail outlets. Sizing at 100 seats represents ~0.32% of enterprise headcount (~31,000 staff): 18 central primary pipeline and refinery off-take planners, 50 regional secondary distribution planners across 5 operating zones (~10 per zone managing ~2.4 depots each), 14 LPG bottling supply planners, 8 aviation fuel coordinators, and 10 commercial borrow/loan exchange reconciliation analysts. Asset Capital is volume-form, recovering 0.08% (8 bps) of secondary distribution value (~₹7.48 Cr/yr) on 584M bbl/yr throughput via dynamic stockout horizon projection, gantry lifting quota balancing, and reduced emergency road tanker bridging. Asset Risk is strictly null following the restraint of value_model.js peer scheduling and planning roles (P15, P17, P28, P29, P42); distribution planners do not operate physical containment valves or control room pressure systems (owned by P14 Pipeline Controller and P15 Terminal Superintendent). Resource Recovery is strictly null as downstream distribution does not discover or book subsurface hydrocarbons.",
+  "caveats": "Secondary distribution freight and handling rates reflect published road tank truck tenders (~₹3.00-4.50/KL-RTKM, or ~₹160/bbl over typical 120-150 km secondary leads plus terminal handling) without naming any operator. Value model strictly isolates secondary distribution economics from P14 (pipeline hydraulic throughput), P15 (marine berth turnaround), P16 (refinery yield giveaway), P17 (refinery LP margin), and P28 (fuel blend giveaway). If an operator insists on parameterizing acute terminal dry-outs (triggering retail station stockouts and statutory supply continuity penalties) as a discrete operational risk scenario rather than absorbing it into distribution capital recovery, a conservative parameterization is: unitsPerYear: 120 (terminals & depots), frequency: 0.05 (1 event per 20 depot-years), consequence: ₹25,000,000 (emergency bridging premiums, forecourt remediation, and statutory penalties), alpha: 0.35, beta: 0.40 (alpha*beta = 14%, expected loss avoided ₹2.10 Cr/yr)."
+}

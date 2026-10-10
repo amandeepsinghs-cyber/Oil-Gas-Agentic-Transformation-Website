@@ -1,6 +1,6 @@
 # Persona Portraits
 
-33 portrait headshots, one per research persona, plus 2 held in reserve.
+One portrait headshot per research persona (53 as of 2026-10-10), plus 2 held in reserve.
 
 Styled after editorial portraits: clean, warm, natural lighting, soft neutral
 backgrounds, everyday professional attire, no theatrical props or stage sets.
@@ -70,3 +70,23 @@ dossiers are written.
 | :--- | :--- |
 | `reserved/p34_persona.jpg` | Well Intervention & Workover Engineer |
 | `reserved/p35_persona.jpg` | Crude Trader & Supply Optimizer |
+| **P36** | Lars Eriksen | Measurement Engineer | Midstream — Measurement & custody transfer | Extended |
+| **P37** | Aisha Bello | SCADA Engineer | Midstream — Transmission & network control | Extended |
+| **P38** | Carlos Mendoza | Compressor Station Operator | Midstream — Compression & pumping | Extended |
+| **P39** | Meera Pillai | Corrosion Engineer | Midstream — Pipeline integrity & corrosion | Extended |
+| **P40** | Erik Johansson | Loading Master | Midstream — LNG & marine terminals | Extended |
+| **P41** | Fatima Zahra | Gas Storage Engineer | Midstream — Storage | Extended |
+| **P42** | Michael O'Connor | Gas Scheduler | Midstream — Commercial: nominations & balancing | Extended |
+| **P43** | Sofia Rossi | Gas Contracts Analyst | Midstream — Commercial: contracts & capacity | Extended |
+| **P44** | Vikram Rao | Gas Distribution Engineer | Midstream — Gas distribution networks | Extended |
+| **P45** | Grace Liu | Shift Supervisor | Downstream — Refinery operations | Extended |
+| **P46** | Omar Haddad | Process Control Engineer | Downstream — Process & technology engineering | Extended |
+| **P47** | Ingrid Larsen | Energy & Utilities Engineer | Downstream — Utilities & energy | Extended |
+| **P48** | Rajesh Kumar | Hydrocarbon Accountant | Downstream — Planning & economics / loss control | Extended |
+| **P49** | Amara Nwosu | Distribution Planner | Downstream — Distribution: pipelines, terminals & depots | Extended |
+| **P50** | Elif Demir | Quality Control Chemist | Downstream — Blending & product quality / laboratory | Extended |
+| **P51** | Tomás García | Oil Movement Controller | Downstream — Offsites, tank farms & oil movement | Extended |
+| **P52** | Yuki Tanaka | Polymer Process Engineer | Downstream — Petrochemicals | Extended |
+| **P53** | David Mensah | Retail Territory Manager | Downstream — Marketing & retail fuels | Extended |
+| **P54** | Kavya Sharma | LPG Plant Manager | Downstream — Marketing: LPG bottling | Extended |
+| **P55** | James Whitaker | Aviation Fuelling Supervisor | Downstream — Marketing: aviation fuel | Extended |

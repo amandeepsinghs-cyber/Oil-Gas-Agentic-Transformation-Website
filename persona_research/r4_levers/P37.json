@@ -1,0 +1,18 @@
+{
+  "id": "P37",
+  "seats": 60,
+  "assetCapital": null,
+  "assetRisk": {
+    "scenario": "Alarm flood or telemetry failure masking a pipeline emergency",
+    "unitsPerYear": 16,
+    "unitLabel": "thousand km of pipeline",
+    "frequency": 0.04,
+    "consequence": 400000000,
+    "alpha": 0.35,
+    "beta": 0.40,
+    "source": "~16,000 km transmission network; frequency reflects SCADA blind spots, unrationalized alarm cascades, or corrupted RTU telemetry delaying emergency valve isolation during an operational upset. Consequence covers unmitigated product release escalation, emergency repairs, environmental remediation, and statutory penalties (benchmark ₹40 Cr / ~$4.8M per severe transmission incident)."
+  },
+  "recovery": null,
+  "caveats": "Asset capital is deliberately null: SCADA engineering workflows (alarm rationalization, HMI audits, MOC drift checks, cybersecurity compliance) occur offline and do not sit on the critical path of flowing gas or running compressor machinery; claiming asset uptime would violate value_model.js critical-path rules and double-count pipeline throughput managed by P14. Resource recovery is null because midstream transmission does not alter subsurface reserve recovery or misallocate reservoir capital, and value_model.js enforces that no role carries both Integrity and Recovery.",
+  "rationale": "Sized for a large national gas transmission and marketing operator (~4,800 staff, ~16,000 km gas pipeline network, ~120-130 MMSCMD throughput, 5-7 gas processing/LPG plants, and shared terminal infrastructure). Seats (60) account for 18 central SCADA host/OT cyber/alarm management engineers, 32 regional transmission network engineers across 6 operating corridors, and 10 plant/terminal automation specialists, representing 1.25% of total staff. Asset risk captures the core operational failure mode of pipeline SCADA: unrationalized alarm floods or degraded telemetry blinding pipeline controllers during an upset, delaying the statutory 10-15 minute emergency valve isolation window and escalating an initial leak or overpressure transient into a major loss of containment."
+}

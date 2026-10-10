@@ -27,7 +27,7 @@
 | **Pain Claims Cited** | 10 of 10 pain claims supported by published AFPM (American Fuel & Petrochemical Manufacturers) papers, AIChE fuels blending proceedings, and refinery operations post-mortems |
 | **Timings Sourced** | Batch recipe optimization, online analyzer drift reconciliation, tank stratification tracking, and off-spec remediation timings verified via senior fuels blending coordinators and offsites superintendents |
 | **Gap Claims Cited** | Confirmed that commercial DCS blend controllers (Honeywell Profit Blend, Foxboro BOSS) track DCS setpoints blindly; none autonomously reconcile online analyzer drift with offline LIMS laboratory grab samples to trim non-linear giveaways without human manual bias entry |
-| **Known Gaps** | Non-linear octane blending equations (Ethyl RT-70, Chevron models) exhibit localized prediction scatter when blending high concentrations of renewable oxygenates (ethanol $>15\text{ vol}\%$ or bio-butanol) |
+| **Known Gaps** | Non-linear octane blending equations (Ethyl RT-70, a major operator's blending models) exhibit localized prediction scatter when blending high concentrations of renewable oxygenates (ethanol $>15\text{ vol}\%$ or bio-butanol) |
 
 ---
 
@@ -165,12 +165,12 @@
 ## 4 · Candidate Agent Deep-Dive
 
 ### Agent 1: Gasoline Octane & RVP Non-Linear Recipe Optimizer & Giveaway Sieve
-* **In One Line**: Formulates multi-component gasoline blend recipes using non-linear octane interaction models (Ethyl RT-70, Chevron method) and dynamic RVP blending curves, driving finished fuel directly to specification while targeting $<0.1\text{ RON}$ giveaway.
+* **In One Line**: Formulates multi-component gasoline blend recipes using non-linear octane interaction models (Ethyl RT-70, a major operator's non-linear method) and dynamic RVP blending curves, driving finished fuel directly to specification while targeting $<0.1\text{ RON}$ giveaway.
 * **Friction Solved**: Eliminates 4.05 hours per batch of manual spreadsheet recalculation, conservative over-formulation, and high-octane component waste.
 * **The Specification**:
   * **Reads**: Intermediate component tank inventories and assays (FCC naphtha, alkylate, reformate, isomerate, butane, ethanol), component unit costs, and finished gasoline specification limits (RON, MON, AKI, RVP, benzene, sulfur, distillation $T_{10}, T_{50}, T_{90}$).
   * **Does**:
-    1. Implements Ethyl RT-70 and Chevron non-linear octane blending equations, accounting for olefin-aromatic and paraffin-aromatic antagonistic interaction coefficients;
+    1. Implements Ethyl RT-70 and a major operator's non-linear octane blending equations, accounting for olefin-aromatic and paraffin-aromatic antagonistic interaction coefficients;
     2. Computes Reid Vapor Pressure (RVP) using non-linear blending index methods;
     3. Calculates the optimal economic blend recipe that satisfies all physical and statutory constraints at minimum cost;
     4. Eliminates defensive safety cushions, targeting finished octane at tariff $+ 0.08\text{ RON}$ rather than standard industry $+ 0.50\text{ RON}$;

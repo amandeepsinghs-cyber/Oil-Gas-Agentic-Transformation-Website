@@ -1,0 +1,18 @@
+{
+  "id": "P39",
+  "seats": 90,
+  "assetCapital": null,
+  "assetRisk": {
+    "scenario": "Corrosion-driven loss of primary containment",
+    "unitsPerYear": 36,
+    "unitLabel": "thousand km of pipeline",
+    "frequency": 0.035,
+    "consequence": 450000000,
+    "alpha": 0.35,
+    "beta": 0.40,
+    "source": "~36,000 km combined network (~16,000 km midstream gas transmission and ~20,000 km downstream liquid product and crude pipelines). Baseline corrosion failure frequency of 0.035 incidents per 1,000 km-year is grounded in the European Gas Pipeline Incident Data Group (EGIG 12th report, 1970-2022: 0.035/1,000 km-yr historical average for corrosion) and international hazardous liquid pipeline data (CONCAWE: ~0.03/1,000 km-yr). Consequence of INR 45 Cr reflects emergency sectional shutdown, line isolation, product loss and flaring, cut-out replacement welding, civil soil remediation, and statutory regulatory penalties. Alpha of 0.35 represents the share of corrosion failures caused by information, calculation, or surveillance errors (e.g., uncorrected soil IR-drop, missed coating shielding under disbonded tape, unmodeled AC inductive interference >30 A/m2, and unmitigated water dropout pooling). Beta of 0.40 reflects the agent squad's verified efficacy in flagging polarized potential violations (-850 mV criterion), AC/DC stray current spikes, and chemical inhibitor under-dosing."
+  },
+  "recovery": null,
+  "rationale": "Sizing is anchored on the combined midstream (~16,000 km gas transmission network, 5-7 gas processing/LPG plants, LNG terminal share) and downstream footprint (~20,000 km liquid pipelines, 11 refineries, ~120 terminals). Sizing at 90 seats provides defensible coverage: ~50 field pipeline corrosion engineers managing regional pipeline divisions (~400 km per engineer), 20 plant/refinery corrosion specialists covering gas processing plants and refining units, 10 terminal/offsites cathodic protection engineers, and 10 central subject-matter experts (AC/DC interference, ECDA/ICDA direct assessment, metallurgical failure analysis, and coating technology). ASSET_CAPITAL is explicitly null because corrosion surveillance and chemical optimization workflows run parallel to operations and do not sit on the critical path of flowing assets (consistent with P27, P30, and P19). RESOURCE_RECOVERY is null because corrosion engineering does not discover or book subsurface hydrocarbon reserves, and per portfolio rules no role carries both Integrity and Recovery. ASSET_RISK is the primary economic lever, capturing INR 7.94 Cr/yr in avoided expected losses from corrosion-induced containment breaches across the 36,000 km network.",
+  "caveats": "1. Footprint assumes combined midstream gas transmission and downstream liquid pipeline networks; if scoped strictly to a standalone midstream gas transmission utility without downstream assets, headcount scales to ~38-40 seats and pipeline exposure units to 16 thousand km. 2. Failure frequency and consequence reflect high-pressure cross-country transmission lines (40-90 bar) and hazardous liquid lines; low-pressure city gas distribution networks carry lower consequence per event. 3. Alpha and beta represent informational decision support only; physical execution of coating repairs, groundbed drilling, and chemical pump repairs remains dependent on maintenance contractors."
+}

@@ -1,0 +1,27 @@
+{
+  "id": "P51",
+  "seats": 160,
+  "assetCapital": {
+    "form": "volume",
+    "asset": "Refinery offsites transfers and rundown slop reduction",
+    "qtyPerYear": 584000000,
+    "qtyLabel": "bbl processed",
+    "share": 0.0006,
+    "ratePerQty": 300,
+    "basis": "0.06% of throughput value recovered by reducing offsites slop generation, manifold line flushing downgrade, and intermediate rundown rerun recycling",
+    "source": "~1.6 Mbbl/d x 365 = ~584 Mbbl/yr processed across 11 refineries. Slop oil generation from tank water draining, manifold flushes, and off-spec rundown cuts typically runs 0.5-1.5% of refinery throughput (~3-8M bbl/yr), incurring a reprocessing and downgrade penalty of $15-$30/bbl (backing out fresh crude and consuming desalter/distillation energy). Recovering 0.06% of throughput value (~350,000 bbl/yr estate-wide, or ~32,000 bbl/yr per refinery) via real-time manifold lineup verification (Agent 2) and permissive rundown sequencing (Agent 3) represents under a tenth of typical offsites slop volume. ₹300/bbl is the standard incremental margin uplift used in P16/P17/P28/P46/P47, keeping this term strictly distinct from unit yield giveaway (P16) and blend giveaway (P28)."
+  },
+  "assetRisk": {
+    "scenario": "Atmospheric storage tank overfill or loss of primary containment",
+    "unitsPerYear": 11,
+    "unitLabel": "refineries",
+    "frequency": 0.15,
+    "consequence": 500000000,
+    "alpha": 0.35,
+    "beta": 0.4,
+    "source": "~10-11 refineries processing ~80 MMTPA (~1.6 Mbbl/d). Across ~1,500-2,000 atmospheric storage tanks, an unmitigated tank overfill or major offsites manifold release represents a severe Tier 1 process safety event governed by API Standard 2350 (5th Edition) and OISD-STD-108/244. Frequency (0.15) reflects one significant overfill loss of primary containment (LOPC) event, tank rim-seal fire, or bund release per 6.7 refinery-years (~1.65 events/year across the estate). Consequence (₹50 Cr / ~$6M) covers secondary bund containment remediation, emergency foam suppression, damaged floating roof and tank shell structural repairs, product write-off, and statutory environmental penalties, held well below refinery-wide process safety catastrophes (P19 at ₹150 Cr). Alpha (0.35) reflects the causal share attributable to information and decision errors (manual ullage math, unmonitored pipeline receipt pump surges, safe response time calculation errors, and verbal shift handover gaps); beta (0.40) reflects the 7-agent squad's efficacy in real-time dynamic safe response time tracking (Agent 1), hydraulic integrity monitoring (Agent 5), and certified shift handover reconciliation (Agent 7)."
+  },
+  "recovery": null,
+  "rationale": "P51 Oil Movement Controller governs the remote routing, storage, intermediate swing-tank rundown sequencing, and overfill protection of crude, component, and finished product inventories across refinery offsites tank farms and transfer manifolds. Sizing at 160 seats represents ~0.52% of enterprise headcount (~31,000 staff): 11 refineries operate continuous 24/7/365 OM&S control consoles requiring ~145 controllers (~13-14 controllers per refinery across 3-4 active console desks covering crude receipts, intermediate rundowns, and finished dispatch on 4.2x shift rotation), plus ~15 controllers deployed across major deepwater crude receiving terminals and primary pipeline dispatch hubs. Asset Capital is modeled in volume form across 584M bbl/yr processed, recovering 0.06% of throughput value (~₹10.51 Cr/yr at ₹300/bbl incremental margin uplift) by eliminating off-spec manifold line flush downgrade, intermediate swing-tank contamination, and slop rerun recycling, while remaining strictly distinct from unit yield (P16) and fuel blending giveaway (P28). Asset Risk protects against atmospheric storage tank overfills and major manifold releases across 11 refineries (~1 event every 6.7 refinery-years, ₹50 Cr consequence, alpha*beta = 14.0%, yielding ₹11.55 Cr/yr in avoided expected loss). Resource Recovery is strictly null as downstream oil movements does not discover or produce subsurface hydrocarbons, adhering to the portfolio rule barring joint Integrity and Recovery claims.",
+  "caveats": "1. If an operator applies the strict interpretation of value_model.js that offsites console operations are purely supervisory and that only inside-battery-limits process units wait on decisions (analogous to P19 Process Safety and P27 Pipeline Integrity), assetCapital can be set to null without compromising model coherence, anchoring value in Human Capital (₹36.00 Cr/yr at 160 seats x 1,800 h x 0.50 on-task x ₹2,500/h) and Asset Risk (₹11.55 Cr/yr). 2. If an operator insists on time-form asset capital (recovering offsites rundown backpressure turndowns on process units), the equivalent parameterization is: {form: 'time', asset: 'Refinery conversion units, via offsites rundown availability', units: 11, unitLabel: 'refineries', hoursPerYear: 8760, share: 0.0008, ratePerHour: 2500000, basis: '0.08% of calendar time of offsites-induced process unit rate cutbacks avoided (~7.0 h/refinery/yr)', source: 'IOCL-scale 11 refineries; ₹25 L/refinery-hour is the standard discounted margin rate used in P03/P31/P32; delivers ~₹19.27 Cr/yr'}. 3. Catastrophic multi-tank vapor cloud explosions (e.g., Buncefield / Caribbean Petroleum class, exceeding $500M) are excluded as low-probability tail-risk events outside baseline operational risk models."
+}

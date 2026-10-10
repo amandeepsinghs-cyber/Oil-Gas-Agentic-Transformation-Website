@@ -1,0 +1,28 @@
+{
+  "id": "P54",
+  "seats": 110,
+  "assetCapital": {
+    "form": "time",
+    "asset": "LPG bottling plants",
+    "units": 90,
+    "unitLabel": "bottling plants",
+    "hoursPerYear": 8760,
+    "share": 0.0015,
+    "ratePerHour": 80000,
+    "basis": "0.15% of bottling plant calendar hours recovered by eliminating carousel filling head drift stoppages, check-weigher reject bin jams, and manual test-weighing interruptions (~13.1 h/plant/yr)",
+    "source": "~90 LPG bottling plants packaging ~12 MMTPA across the national downstream network. ₹80,000/plant-hour reflects idle plant processing capacity (~25 MT/hr carousel throughput at ~₹1,100/MT benchmark bottling tariff), truck gantry detention across bulk and packed fleets, and distributor delivery bridging costs. 0.15% recovery (~13.1 h/plant/yr) is well below the 1% calendar hour ceiling."
+  },
+  "assetRisk": {
+    "scenario": "LPG bottling shed vapor cloud explosion or bulk decanting fire",
+    "unitsPerYear": 90,
+    "unitLabel": "bottling plants",
+    "frequency": 0.025,
+    "consequence": 350000000,
+    "alpha": 0.3,
+    "beta": 0.35,
+    "source": "~90 LPG bottling plants in the national downstream network. LPG is stored under 10-15 bar pressure and expands 250-270x into dense, flammable vapor clouds upon release. Governed by OISD-STD-144, OISD-STD-150, and PESO Gas Cylinders Rules (2016). Frequency (0.025) reflects one significant loss of primary containment, filling shed vapor cloud explosion (VCE), or bulk decanting fire every ~40 plant-years (~2.25 events/year across the estate). Consequence (₹35 Cr) covers carousel and conveyor equipment reconstruction, structural repairs, 3-6 months of statutory plant shutdown during PESO/OISD inquiry, emergency secondary bridging freight (~₹15-20 Cr to supply retail distributors from alternate plants), and regulatory penalties. Alpha (0.30) reflects causation attributable to information and monitoring failures (unmonitored carousel filling head drift, delayed sniffer PPM leak detection, unverified decanting earthing interlocks, and impaired fire deluge auto-start valves); beta (0.35) reflects the 7-agent squad's efficacy in real-time barrier surveillance; alpha*beta (0.105) remains well below the 0.18 portfolio ceiling."
+  },
+  "recovery": null,
+  "rationale": "P54 LPG Plant Manager directs pressurized liquefied petroleum gas bottling, carousel filling accuracy, automated leak detection, statutory cylinder recertification, and major accident hazard (MAH) process safety across ~90 LPG bottling plants distributing ~12 MMTPA (~800-850M cylinders/yr). Sizing at 110 seats represents ~0.35% of total enterprise headcount (~31,000 staff): ~90 Plant Managers / Bottling Superintendents (one per facility across the ~90 LPG bottling plants), ~12 Assistant Plant Managers / Operations Superintendents at high-throughput multi-carousel regional hub plants packaging >40,000 cylinders/day across multiple shifts, and ~8 Regional LPG Operations Coordinators across marketing zones. Asset Capital operates in time form, recovering 0.15% of annual calendar operating hours (~13.1 h/plant/yr valued at ₹80,000/plant-hour, delivering ₹9.46 Cr/yr across 90 plants) on the critical path of carousel line availability—pinpointing drifting carousel load-cells and pneumatic cutoff valves before check-weigher reject bin overflows halt conveyors, and automating multi-source mass balance closures. Asset Risk protects against major loss of primary containment, filling shed vapor cloud explosions, or bulk decanting fires across 90 bottling plants (0.025 events/plant-yr, ₹35 Cr consequence, alpha*beta = 0.105, avoiding ₹8.27 Cr/yr in expected loss). Resource Recovery is strictly null as downstream packaging does not discover or book subsurface hydrocarbons, respecting the portfolio rule that prohibits joint Integrity and Recovery claims.",
+  "caveats": "1. If an operator prefers volume-form product giveaway recovery over time-form plant uptime, an equivalent defensible parameterization is: {form: 'volume', asset: 'LPG cylinder packaging giveaway', qtyPerYear: 12000000, qtyLabel: 'MT bottled', share: 0.0002, ratePerQty: 60000, basis: '0.020% of packaged LPG product giveaway recovered through closed-loop carousel head load-cell calibration and tare-drift suppression (~2,400 MT/yr)', source: 'Under Legal Metrology Packaged Commodities Rules and OISD-STD-144, MPE on a 14.2 kg cylinder is ±150 g; operators routinely bias filling targets positive by 50-80 g to avoid underweight penalties, incurring 0.35-0.55% giveaway. Delivering ~₹14.4 Cr/yr at ₹60,000/MT bulk LPG value'}. 2. If an operator applies the strictest interpretation of ASSET_CAPITAL from value_model.js where plant bottleneck resolution is absorbed into Human Capital, assetCapital can be set to null, anchoring value cleanly in Human Capital (₹24.75 Cr/yr across 110 seats) and Asset Risk (₹8.27 Cr/yr). 3. Physical mechanical maintenance (valve replacement torque, de-valving rigs), physical cylinder cold inspection, and statutory Competent Person test endorsements remain strictly under human trade execution and licensed authority."
+}

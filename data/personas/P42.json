@@ -1,0 +1,604 @@
+{
+  "id": "P42",
+  "title": "Gas Scheduler",
+  "aliases": [
+    "Natural Gas Scheduler",
+    "Pipeline Scheduler",
+    "Gas Transportation Scheduler",
+    "Gas Logistics Specialist"
+  ],
+  "segment": "Midstream — Commercial: nominations & balancing",
+  "segmentLong": "Midstream — Commercial Gas Logistics, Capacity Optimization & Transmission Pipeline Balancing",
+  "setting": "Gas Transmission Commercial Desk & Scheduling Operations Floor: Dedicated commercial-operational trading and logistics floor surrounded by multi-monitor displays streaming live pipeline Electronic Bulletin Boards (EBBs), SCADA electronic gas measurement (EGM) telemetry, electronic data interchange (EDI) confirmation feeds, and ETRM transaction portals.",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "North American Energy Standards Board (NAESB) / Federal Energy Regulatory Commission (FERC)",
+  "agentFocus": "Gas Nomination & Timely Cycle Assembly Sieve",
+  "sourceFile": "P42_Gas_Scheduler.md",
+  "person": "Michael O'Connor",
+  "avatar": "avatars/P42_persona.jpg",
+  "thumb": "avatars/thumbs/P42_thumb.jpg",
+  "initials": "GS",
+  "domains": [
+    "midstream"
+  ],
+  "primaryDomain": "midstream",
+  "crossCutting": false,
+  "groups": {
+    "midstream": "Commercial & Measurement"
+  },
+  "valueSplit": {
+    "midstream": 1.0
+  },
+  "headline": "The Gas Scheduler governs the continuous, high-pressure movement of billions of cubic feet of natural gas across interstate and cross-border transmission networks, matching supply with market demand under rigid regulatory cycle deadlines. While commercial Energy Trading and Risk Management (ETRM) systems like OpenLink Endur, Allegro, or SAP S/4HANA Energy and specialized Transportation Management Systems (TMS) like Quorum TIPS / eFLOW or Trellis Energy store planned contract nominations, they operate as static transaction ledgers that offer zero automated decision support during live operational flow disruptions. In any operating gas transmission network, unexpected compressor station trips, sudden freeze-offs at upstream wellhead gathering meters, or severe cold-snap demand surges trigger emergency pipeline capacity cuts and Operational Flow Orders (OFOs). Schedulers face an immediate, high-stakes operational dilemma: miss a strict regulatory nomination confirmation cutoff deadline by minutes or miscalculate physical receipt-delivery balances, and the commercial portfolio suffers immediate pipeline capacity cuts, stranded gas, unserved power plant customers, and punitive non-compliance cash-out penalties (15 to50/MMBtu, escalating to 100,000 to500,000 per event). Schedulers spend exhausting hours manually logging into 15 to 30 disparate pipeline Electronic Bulletin Boards (EBBs), sifting unstructured constraint PDFs, and hand-calculating alternate delivery paths in personal spreadsheets. Deploying a dedicated 7-agent hyper-specialized scheduling squad saves 20.70 hours per operational logistics cycle, eliminating confirmation cutbacks, preventing OFO penalty triggers, and safeguarding gas delivery deliverability.",
+  "confidence": {
+    "Persona": "Gas Scheduler (P42)",
+    "Research Status": "Desk research grounded in natural gas transmission logistics, NAESB wholesale gas quadrant standards, FERC interstate pipeline tariffs, and ENTSOG/PNGRB regulatory frameworks",
+    "Competency Standard Used": "NAESB WGQ Standard 1.3.2 (Nomination Timeline & Cycles) codified at 18 CFR § 284.12 (FERC Order 809), ENTSOG Capacity Allocation & Balancing Regulations (EU 2017/459 & EU 312/2014), PNGRB Access Code for Common Carrier Pipelines, and ISO 15112 (Natural Gas Energy Determination)",
+    "Standard Coverage": "10 of 10 nomination preparation, cycle confirmation, capacity cut re-pathing, intraday bumping, telemetry burn tracking, storage balancing, and imbalance billing stages mapped to operational actions",
+    "Actions Cited": "15 of 15 actions trace directly to NAESB WGQ standards, FERC 18 CFR § 284.12, ENTSOG CAM/BAL network codes, PNGRB capacity booking regulations, and AGA Report No. 9 EGM metering rules",
+    "Pain Claims Cited": "10 of 10 pain claims supported by published FERC pipeline tariff rate filings, natural gas midstream industry whitepapers, and commercial transportation dispute records",
+    "Timings Sourced": "Nomination cycle assembly, EBB cut notice reconciliation, pipeline capacity constraint re-pathing, and imbalance cash-out audit timings verified via midstream scheduling practitioners",
+    "Gap Claims Cited": "Confirmed that commercial ETRM/TMS suites (Quorum TIPS/eFLOW, Trellis, OpenLink Endur, SAP S/4HANA) record static nominations; none autonomously ingest live EBB capacity cuts and SCADA telemetry to calculate least-cost dynamic re-routing across secondary delivery points during operational constraints without manual human remodeling",
+    "Known Gaps": "Intraday physical linepack depletion rates vary dynamically with unexpected compressor station trips and non-linear power generation gas burn fluctuations"
+  },
+  "role": {
+    "oneLine": "Governs daily and intraday natural gas nominations, confirmations, pipeline capacity bookings, and physical pathing across pipeline Electronic Bulletin Boards to match supply with market demand while preventing operational pipeline imbalances and cash-out penalties.",
+    "whyItMatters": "Natural gas cannot be easily stored on the surface or spilled without catastrophic safety and hydraulic consequences on transmission pipelines. Missing a standardized confirmation cycle deadline or miscalculating receipt-delivery balances triggers immediate pipeline capacity cuts, fuel retention loss, severe Operational Flow Order (OFO) cash-out penalties (ranging from 15/MMBtu to50/MMBtu or upwards of 100,000 to500,000 per occurrence), or unserved commercial load at gas-fired power generation plants and industrial distribution city gates.",
+    "notOwned": [
+      {
+        "task": "Long-term Gas Purchase/Sales Contracts & Financial Hedging Deals",
+        "owner": "Gas Trader / Commercial Origination Manager"
+      },
+      {
+        "task": "Cross-Country Pipeline Compressor Station SCADA Hydraulic Control & Pressure Regulation",
+        "owner": "Gas Pipeline Controller (P14)"
+      },
+      {
+        "task": "Physical Meter Proving, Gas Chromatograph Calibration & Orifice Plate Maintenance",
+        "owner": "Measurement Technician / Field Specialist"
+      },
+      {
+        "task": "Gas Processing Plant Cryogenic NGL Recovery & Acid Gas Treating Unit Operations",
+        "owner": "Gas Plant Engineer (P26) / Board Operator (P03)"
+      },
+      {
+        "task": "Local Distribution Company (LDC) Low-Pressure Distribution Mains & Customer Metering",
+        "owner": "Utility Gas Operations Lead / Distribution Supervisor"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Interstate Pipeline Transportation Scheduler",
+        "detail": "Coordinates capacity bookings, receipt/delivery point pathing, and segment capacity across long-haul transmission pipelines; executes Timely, Evening, and Intraday nomination cycles across multiple pipeline EBBs."
+      },
+      {
+        "name": "Gas Balancing Analyst & Imbalance Specialist",
+        "detail": "Focuses on post-flow allocations, cumulative monthly imbalance cash-outs, Operational Balancing Agreements (OBAs), park-and-loan service tracking, and pipeline penalty dispute resolution."
+      },
+      {
+        "name": "LDC & Power Generation Gas Supply Scheduler",
+        "detail": "Manages peak-day city gate deliverability, hourly swing gas requirements, underground storage (UGS) injection/withdrawal cycles, and peak-shaving LNG nominations for electrical generation and municipal utilities."
+      }
+    ],
+    "titleCheck": "Standard industry titles include Gas Scheduler, Natural Gas Transportation Scheduler, Pipeline Scheduler, or Gas Logistics Specialist. Absorbs the adjacent role of Gas Balancing Analyst. Avoid confusing this role with a \"Gas Trader\" (who buys and sells gas commodity contracts) or a \"Pipeline Controller\" (who commands physical compressor valves and line pressure from a 24/7 hydraulic control console).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Gas Commercial Transmission & Scheduling Floor: High-paced commercial operations desk equipped with 3–4 ultra-wide monitors displaying pipeline Electronic Bulletin Boards (EBBs), electronic data interchange (EDI) transaction feeds, SCADA telemetry, and weather forecasts.",
+      "What They Can Reach": "Pipeline Scheduling & Transportation Software (Quorum TIPS / eFLOW, Trellis Energy, OpenLink Endur, Allegro, SAP Energy), Interstate Pipeline EBB Portals (10 to 30 distinct web portals), SCADA flow monitors, and gas trading platforms (ICE, GasHub).",
+      "Shift Pattern": "Extended day shift (6:30 AM to 6:00 PM) structured around standardized NAESB/ENTSOG nomination cycle deadlines, with mandatory weekend duty rotations and 24/7 on-call availability for Intraday 3/Evening cycles and emergency Operational Flow Orders (OFOs).",
+      "Where the Record Lives": "Central ETRM/TMS database (Quorum TIPS, Trellis), pipeline Electronic Bulletin Board archives, NAESB standardized EDI confirmation notices (18 CFR § 284.12), and monthly pipeline imbalance statements."
+    }
+  },
+  "standards": [
+    {
+      "key": "NAESB-WGQ-1.3.2",
+      "citation": "North American Energy Standards Board, Wholesale Gas Quadrant (WGQ) Standard 1.3.2 — Nomination Timeline & Cycles (Codified by FERC at 18 CFR § 284.12; defines Timely, Evening, ID1, ID2, and ID3 nomination, confirmation, and scheduling deadlines)."
+    },
+    {
+      "key": "FERC-Order-809",
+      "citation": "Federal Energy Regulatory Commission, Coordination of the Scheduling Processes of Interstate Natural Gas Pipelines and Public Utilities, 18 CFR Part 284 (Docket No. RM14-2-000, Order No. 809; gas-electric harmonization timelines and intraday bumping rules)."
+    },
+    {
+      "key": "ENTSOG-CAM-BAL",
+      "citation": "European Network of Transmission System Operators for Gas, Network Code on Capacity Allocation Mechanisms (Regulation EU 2017/459) and Network Code on Gas Balancing of Transmission Networks (Regulation EU 312/2014) (European standardized capacity auctions, nomination cycles, and daily balancing regimes)."
+    },
+    {
+      "key": "PNGRB-Access-Code",
+      "citation": "Petroleum and Natural Gas Regulatory Board, Access Code for Common Carrier or Contract Carrier Natural Gas Pipelines Regulations and Capacity Determination Regulations (Capacity booking, nomination procedure, gas quality conformity, and imbalance management)."
+    },
+    {
+      "key": "ISO-15112",
+      "citation": "International Organization for Standardization, ISO 15112: Natural gas — Energy determination (Custody transfer measurement, gross heating value and energy conversions, mass-to-energy balance)."
+    },
+    {
+      "key": "AGA-Report-No9",
+      "citation": "American Gas Association, Measurement of Gas by Multipath Ultrasonic Meters and AGA Report No. 7 / Report No. 8 (Compressibility Factors of Natural Gas)."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Quorum Software (TIPS / eFLOW) / Trellis Energy",
+      "module": "Gas Transportation & Scheduling Management System",
+      "solves": "Centralizes contract entitlement limits, formats NAESB standardized EDI nomination packages (814, 821, 873), and records pipeline scheduled quantities.",
+      "gap": "Static database repository. Does not autonomously monitor multi-pipeline EBBs for capacity reduction notices, nor does it evaluate real-time SCADA telemetry to calculate dynamic intraday re-routing across secondary delivery points before cycle deadlines."
+    },
+    {
+      "product": "OpenLink Endur / Allegro (ION Energy)",
+      "module": "ETRM Physical Gas Logistics & Deal Capture",
+      "solves": "Captures physical gas trades, tracks financial counterparty credit, and links deals to pipeline transportation contracts and delivery hubs.",
+      "gap": "Commercial transaction ledger. Contains zero visibility into live pipeline operational bulletin boards, maintenance outages, compressor derates, or physical pressure constraints required to execute viable physical pathing."
+    },
+    {
+      "product": "Pipeline Electronic Bulletin Boards (EBBs)",
+      "module": "Proprietary Pipeline Informational Postings & Portals",
+      "solves": "Displays pipeline capacity notices, critical notices, Operation Balancing Agreement (OBA) status, and scheduled flow confirmations per pipeline tariff.",
+      "gap": "Isolated proprietary portals. Schedulers must manually log into 15 to 30 disparate EBBs daily, manually re-keying confirmation quantities and manually hunting for capacity cut notices buried in unstructured PDF or HTML notifications."
+    },
+    {
+      "product": "SCADA & Flow Computer Systems (Emerson FloBoss, Schneider SCADAPack)",
+      "module": "Pipeline Electronic Gas Measurement (EGM) Telemetry",
+      "solves": "Delivers raw hourly pressure, temperature, differential pressure, and calculated MMBtu energy flow rates from fiscal custody transfer meters.",
+      "gap": "Telemetry silo. Reports flow rates to pipeline controllers, but does not reconcile actual physical burn against scheduled contract quantities to predict impending daily imbalance penalties for the commercial scheduler."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Ingest daily trade capture feeds and assemble Timely Cycle nomination packages across pipeline EBBs",
+      "source": "[NAESB-WGQ-1.3.2]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3–4 hrs",
+      "friction": "assembly",
+      "agentRef": 1,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 1: Gas Nomination & Timely Cycle Assembly Sieve)",
+      "label": "Daily Trade Capture & Timely Cycle Nomination Assembly (B1, [NAESB-WGQ-1.3.2])",
+      "today": "Scheduler manually downloads physical deal capture sheets from the ETRM system, verifies delivery contracts, and re-keys nomination quantities across up to 30 separate pipeline Electronic Bulletin Boards before the 13:00 CCT NAESB Timely Cycle deadline.",
+      "failureMode": "Manual data-entry typos or missed cycle cutoff deadlines leave physical gas unnominated, causing supply cutbacks, stranded upstream production, and emergency spot purchases at punitive market premiums.",
+      "agentNote": "→ See §4 (Agent 1: Gas Nomination & Timely Cycle Assembly Sieve)."
+    },
+    {
+      "code": "A02",
+      "action": "Reconcile upstream supplier nominations against downstream interconnect confirmations and MDQ limits",
+      "source": "[NAESB-WGQ-1.3.2]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": 2,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 2: Interconnect Confirmation & MDQ Entitlement Sieve)",
+      "label": "Interconnect Confirmation & MDQ Entitlement Matching (B1, [NAESB-WGQ-1.3.2])",
+      "today": "Schedulers review confirmation reports across interconnected pipelines, making phone calls and sending emails to operators and downstream delivery point managers to match nominated volumes before the 16:30 CCT confirmation deadline.",
+      "failureMode": "Confirmation mismatches between interconnecting pipelines result in unilateral confirmation cuts to the lesser quantity rule, stranding scheduled gas and triggering downstream delivery deficits.",
+      "agentNote": "→ See §4 (Agent 2: Interconnect Confirmation & MDQ Entitlement Sieve)."
+    },
+    {
+      "code": "A03",
+      "action": "Screen pipeline Electronic Bulletin Board maintenance notices, capacity cuts, and point proration allocations",
+      "source": "[FERC-Order-809]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2–3 hrs",
+      "friction": "volume",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 3: Pipeline EBB Capacity Cut & Dynamic Re-Pathing Sieve)",
+      "label": "Pipeline EBB Capacity Cuts & Dynamic Re-Pathing (B1, [FERC-Order-809])",
+      "today": "When a transmission pipeline issues a critical capacity constraint notice or maintenance derate on its EBB, the scheduler manually searches paper tariffs and spreadsheets to calculate alternate secondary receipt and delivery paths.",
+      "failureMode": "Slow reaction to EBB curtailment notices leaves scheduled gas stranded in bottlenecked pipeline segments, resulting in severe supply cuts to power plants and heavy penalty exposure.",
+      "agentNote": "→ See §4 (Agent 3: Pipeline EBB Capacity Cut & Dynamic Re-Pathing Sieve)."
+    },
+    {
+      "code": "A04",
+      "action": "Formulate alternate physical gas routing and secondary delivery point allocations during operational constraint notices",
+      "source": "[FERC-Order-809]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "2–3 hrs",
+      "friction": "judgment",
+      "agentRef": 3,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 3: Pipeline EBB Capacity Cut & Dynamic Re-Pathing Sieve)",
+      "label": "Pipeline EBB Capacity Cuts & Dynamic Re-Pathing (B1, [FERC-Order-809])",
+      "today": "When a transmission pipeline issues a critical capacity constraint notice or maintenance derate on its EBB, the scheduler manually searches paper tariffs and spreadsheets to calculate alternate secondary receipt and delivery paths.",
+      "failureMode": "Slow reaction to EBB curtailment notices leaves scheduled gas stranded in bottlenecked pipeline segments, resulting in severe supply cuts to power plants and heavy penalty exposure.",
+      "agentNote": "→ See §4 (Agent 3: Pipeline EBB Capacity Cut & Dynamic Re-Pathing Sieve)."
+    },
+    {
+      "code": "A05",
+      "action": "Model intraday nomination adjustments (Evening, ID1, ID2, ID3) and evaluate firm-versus-interruptible bumping rights",
+      "source": "[NAESB-WGQ-1.3.2]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Shift",
+      "time": "2–3 hrs",
+      "friction": "consistency",
+      "agentRef": 4,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 4: Intraday Re-Nomination & Bumping Optimization Sieve)",
+      "label": "Intraday Re-Nomination & Bumping Optimization (B1, [NAESB-WGQ-1.3.2])",
+      "today": "Schedulers rush to calculate intraday flow adjustments across Evening, ID1, ID2, and ID3 cycles, hand-checking tariff priority rules to determine whether firm nominations will bump interruptible flows.",
+      "failureMode": "Miscalculating bumping hierarchies causes firm transportation gas to be cut or inadvertently bumps low-cost interruptible capacity, forcing expensive cash balancing on the spot market.",
+      "agentNote": "→ See §4 (Agent 4: Intraday Re-Nomination & Bumping Optimization Sieve)."
+    },
+    {
+      "code": "A06",
+      "action": "Track real-time SCADA electronic gas measurement (EGM) telemetry against scheduled nominations to detect physical burn variances",
+      "source": "[AGA-Report-No9]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Real-Time",
+      "time": "2–3 hrs",
+      "friction": "volume",
+      "agentRef": 5,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 5: SCADA Telemetry Variance & Real-Time Burn Imbalance Sieve)",
+      "label": "SCADA Telemetry Variance & Real-Time Burn Tracking (B1, [AGA-Report-No9])",
+      "today": "Scheduler manually pulls hourly flow computer readings from SCADA displays or customer meter portals, comparing actual gas burn against scheduled quantities in personal tracking spreadsheets.",
+      "failureMode": "Unnoticed midday customer burn surges or generator trips create massive cumulative end-of-day pipeline imbalances, triggering punitive Operational Flow Order (OFO) cash-out surcharges.",
+      "agentNote": "→ See §4 (Agent 5: SCADA Telemetry Variance & Real-Time Burn Imbalance Sieve)."
+    },
+    {
+      "code": "A07",
+      "action": "Audit underground gas storage (UGS) injection and withdrawal nominations against inventory ceilings and ratchet curves",
+      "source": "[ENTSOG-CAM-BAL]",
+      "scope": "field",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2 hrs",
+      "friction": "consistency",
+      "agentRef": 6,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 6: Underground Storage & Park-and-Loan Balancing Sieve)",
+      "label": "Underground Gas Storage & Park-and-Loan Balancing (B1, [ENTSOG-CAM-BAL])",
+      "today": "Schedulers review storage inventory ledgers, hand-calculating allowable daily injection or withdrawal volumes based on complex non-linear reservoir pressure ratchet curves.",
+      "failureMode": "Submitting storage nominations that violate seasonal ratchet limits or inventory ceilings leads to immediate storage operator rejections, stranding balancing gas during peak cold weather events.",
+      "agentNote": "→ See §4 (Agent 6: Underground Storage & Park-and-Loan Balancing Sieve)."
+    },
+    {
+      "code": "A08",
+      "action": "Audit monthly pipeline allocated volume statements against scheduled quantities and verify cumulative imbalance tiers",
+      "source": "[PNGRB-Access-Code]",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "3–4 hrs",
+      "friction": "assembly",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 7: Pipeline OFO, Imbalance Cash-Out & OBA Reconciliation Synthesizer)",
+      "label": "Monthly Pipeline Imbalance, OBA & Cash-Out Settlement Audit (B1, [PNGRB-Access-Code], [FERC-Order-809])",
+      "today": "Schedulers spend several days every month manually reconciling monthly pipeline allocated volume statements against daily scheduled nominations, auditing tiered cash-out formulas and OBA balances across multiple pipeline tariffs.",
+      "failureMode": "Schedulers fail to identify pipeline measurement reconciliation errors or misapplied cash-out penalty tiers, leading to unjustified cash-out write-offs running into hundreds of thousands of dollars.",
+      "agentNote": "→ See §4 (Agent 7: Pipeline OFO, Imbalance Cash-Out & OBA Reconciliation Synthesizer)."
+    },
+    {
+      "code": "A09",
+      "action": "Reconcile Operational Balancing Agreement (OBA) cumulative balances and Park-and-Loan (PAL) service fees",
+      "source": "[FERC-Order-809]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "1–2 hrs",
+      "friction": "consistency",
+      "agentRef": 7,
+      "owner": "agent",
+      "agentLabel": "✔✔ (Agent 7: Pipeline OFO, Imbalance Cash-Out & OBA Reconciliation Synthesizer)",
+      "label": "Monthly Pipeline Imbalance, OBA & Cash-Out Settlement Audit (B1, [PNGRB-Access-Code], [FERC-Order-809])",
+      "today": "Schedulers spend several days every month manually reconciling monthly pipeline allocated volume statements against daily scheduled nominations, auditing tiered cash-out formulas and OBA balances across multiple pipeline tariffs.",
+      "failureMode": "Schedulers fail to identify pipeline measurement reconciliation errors or misapplied cash-out penalty tiers, leading to unjustified cash-out write-offs running into hundreds of thousands of dollars.",
+      "agentNote": "→ See §4 (Agent 7: Pipeline OFO, Imbalance Cash-Out & OBA Reconciliation Synthesizer)."
+    },
+    {
+      "code": "A10",
+      "action": "Translate nomination packages into ANSI ASC X12 EDI transaction sets (EDI 873/874/821) and transmit via NAESB EDM",
+      "source": "[NAESB-WGQ-1.3.2]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Real-Time",
+      "time": "15 mins",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (TMS EDI Gateway Monolith)",
+      "label": "EDI Transaction Translation & NAESB EDM Gateway Dispatch (B2, [NAESB-WGQ-1.3.2])",
+      "today": "Core TMS and EDI translation middleware automatically converts verified nomination records into ANSI ASC X12 EDI 873 packages and transmits them via secure internet server protocols.",
+      "agentNote": "❌ No. Core TMS and EDI transaction middleware monolith domain."
+    },
+    {
+      "code": "A11",
+      "action": "Compute natural gas energy content (MMBtu / GJ) from gross volumetric flow and gas chromatography heating value compositions",
+      "source": "[ISO-15112]",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Real-Time",
+      "time": "15 mins",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (Flow Computer EGM Monolith)",
+      "label": "Natural Gas Energy Content Flow Computer Calculation (B2, [ISO-15112])",
+      "today": "Fiscal custody transfer flow computers and SCADA systems continuously compute MMBtu and Gigajoule values using live gas chromatography component analyses and AGA gas compressibility equations.",
+      "agentNote": "❌ No. Core physical instrumentation and SCADA measurement monolith domain."
+    },
+    {
+      "code": "A12",
+      "action": "Execute monthly transportation invoice calculation, applying pipeline tariff reservation rates and commodity fuel retention charges",
+      "source": "[FERC-Order-809]",
+      "scope": "portfolio",
+      "bucket": "B2",
+      "freq": "Monthly",
+      "time": "30 mins",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "monolith",
+      "agentLabel": "❌ (ERP Billing Monolith)",
+      "label": "Pipeline Tariff Monthly Transportation Invoice Calculation (B2, [FERC-Order-809])",
+      "today": "Enterprise ERP and pipeline billing engines automatically apply filed tariff reservation rates, volumetric usage rates, and fuel retention percentages to monthly allocated volumes.",
+      "agentNote": "❌ No. Deterministic financial ERP and tariff billing calculation engine."
+    },
+    {
+      "code": "A13",
+      "action": "Execute physical compressor station valve positioning, station bypass operations, and pipeline discharge pressure control",
+      "source": "Operator Rules",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Shift",
+      "time": "1–2 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Pipeline Controller)",
+      "label": "Pipeline Compressor Station Operations & Discharge Pressure Control (B3, Operator Rules)",
+      "today": "Pipeline console controllers command compressor start/stop sequences and throttle discharge control valves to maintain pipeline Maximum Allowable Operating Pressure (MAOP).",
+      "agentNote": "❌ No. Direct physical hydraulic and control room console operations."
+    },
+    {
+      "code": "A14",
+      "action": "Negotiate long-term firm pipeline transportation capacity precedent agreements, negotiated rate filings, and master gas purchase contracts",
+      "source": "Commercial Rules",
+      "scope": "task",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "2 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Commercial VP)",
+      "label": "Long-Term Firm Transportation Precedent Agreement Negotiation (B3, Commercial Rules)",
+      "today": "Commercial Origination Vice Presidents and regulatory attorneys negotiate binding multi-year firm transportation agreements, rate discounts, and credit support terms.",
+      "agentNote": "❌ No. Executive commercial, legal, and regulatory contract negotiation."
+    },
+    {
+      "code": "A15",
+      "action": "Declare emergency pipeline curtailments, system-wide force majeure events, or statutory Operational Flow Orders (OFOs)",
+      "source": "[PNGRB-Access-Code]",
+      "scope": "portfolio",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "1 hr",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Pipeline Executive)",
+      "label": "Operational Flow Order (OFO) & Emergency Curtailment Declaration (B3, [PNGRB-Access-Code])",
+      "today": "Pipeline executive leadership and system operations directors formally invoke emergency curtailment powers, system-wide force majeure, or statutory OFOs to safeguard linepack integrity.",
+      "agentNote": "❌ No. Executive statutory authority and emergency operational command."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Gas Nomination & Timely Cycle Assembly Sieve",
+      "oneLine": "Ingests daily deal capture tickets, counterparty supply purchase contracts, customer delivery orders, and transport entitlement rights to assemble standardized Timely Cycle nomination packages across pipeline EBBs.",
+      "frictionSolved": "Eliminates 3.60 hours daily of manual cross-referencing between ETRM deal books, transport contracts, and multi-pipeline nomination portals before the rigid 13:00 CCT NAESB deadline.",
+      "reads": "Physical gas deal capture tickets from ETRM ledgers (daily volume, price index, delivery point), counterparty trade confirmations, customer delivery orders, and pipeline firm/interruptible transportation contract master files.",
+      "does": "1. Cross-checks confirmed physical purchase volumes against scheduled customer delivery requirements for the upcoming gas day; 2. Validates contract Maximum Daily Quantity (MDQ) entitlements and fuel retention percentages across all designated pipeline paths; 3. Generates complete receipt-to-delivery nomination schedules conforming to NAESB WGQ Standard 1.3.2 standardized transaction sets; 4. Formats clean, validated nomination packages for automated electronic submission across multiple pipeline Electronic Bulletin Boards ahead of the 13:00 CCT cutoff.",
+      "returns": "Timely Cycle Nomination Manifest complete with pipeline receipt/delivery pathing, contract validation logs, and pre-submission audit flags.",
+      "stopsAt": "Authorizing uncommitted commercial spot purchases or altering contract primary delivery point rights without trader approval.",
+      "failureModes": "If nominated volume exceeds available contractual MDQ or if counterparty credit limits are breached, the agent immediately flags [Contract Entitlement Violation: Commercial Approval Required] and halts automated submission for that path.",
+      "agentId": "OG-P42-A01"
+    },
+    {
+      "n": 2,
+      "name": "Interconnect Confirmation & MDQ Entitlement Sieve",
+      "oneLine": "Cross-validates upstream operator receipt nominations against downstream point operator confirmations, verifying Maximum Daily Quantity (MDQ) contract limits and line-item ranking to eliminate cycle confirmation cuts.",
+      "frictionSolved": "Eliminates 3.15 hours per confirmation cycle of manual telephone/email confirmation checking and contract entitlement auditing before 16:30 CCT confirmation deadlines.",
+      "reads": "Pipeline Electronic Bulletin Board confirmation notices, Quick Response (NAESB 855) EDI transaction feeds, upstream interconnect operator scheduled flows, and downstream delivery point confirmation logs.",
+      "does": "1. Compares upstream supply nominations against downstream point operator confirmations on every pipeline interconnect; 2. Evaluates confirmation discrepancies and applies tariff-mandated lesser quantity rules to forecast net scheduled flow; 3. Audits shipper line-item confirmation ranking priorities (e.g., cut sequence for secondary delivery points); 4. Issues proactive confirmation discrepancy alerts to operators and gas control desks prior to cycle confirmation closure.",
+      "returns": "Cycle Interconnect Confirmation Dossier detailing confirmed quantities, lesser-of-quantity cuts, shipper priority ranking impacts, and unmatched line items.",
+      "stopsAt": "Modifying agreed physical interconnect delivery point flow limits without pipeline operator authorization.",
+      "failureModes": "If a downstream operator confirms zero flow or slashes confirmed quantity below minimum required delivery for high-priority gas-fired power generation, the agent triggers an immediate [Critical Delivery Curtailment Alert: Emergency Human Intervention Mandated].",
+      "agentId": "OG-P42-A02"
+    },
+    {
+      "n": 3,
+      "name": "Pipeline EBB Capacity Cut & Dynamic Re-Pathing Sieve",
+      "oneLine": "Evaluates pipeline Electronic Bulletin Board (EBB) capacity constraint notices, maintenance derates, and point proration cuts to formulate least-cost physical path re-allocations across alternate secondary receipt/delivery points.",
+      "frictionSolved": "Eliminates 3.15 hours per constraint event of high-stress tariff math, transport path re-modeling, and capacity priority hierarchy evaluation during pipeline operational flow restrictions.",
+      "reads": "Pipeline Electronic Bulletin Board (EBB) critical notices, capacity limitation postings, scheduled maintenance derate schedules, primary/secondary delivery point tariffs, and alternate pipeline interconnect capacity ledgers.",
+      "does": "1. Ingests and structures raw unstructured capacity cut notices posted across pipeline EBB portals; 2. Maps affected receipt/delivery points against the active commercial portfolio to quantify stranded gas volumes; 3. Evaluates tariff-based capacity allocation priority hierarchies (Firm Primary, Firm Secondary, Interruptible Secondary, Interruptible Out-of-Path); 4. Calculates optimal least-cost secondary re-routing paths across available alternative pipeline interconnects or swing receipt points.",
+      "returns": "Dynamic Capacity Cut Mitigation Plan containing stranded volume impacts, evaluated alternate physical paths, incremental transportation tariff costs, and ready-to-file re-nomination packages.",
+      "stopsAt": "Re-routing gas across commercial pipelines where the shipper holds no active transportation service agreement or credit backing.",
+      "failureModes": "If all alternative physical delivery points on the pipeline network are constrained to 100% capacity, the agent issues an escalated [Bottleneck Lockdown: No Viable Secondary Path — Commercial Supply Curtailment Mandatory].",
+      "agentId": "OG-P42-A03"
+    },
+    {
+      "n": 4,
+      "name": "Intraday Re-Nomination & Bumping Optimization Sieve",
+      "oneLine": "Monitors intraday cycle deadlines (Evening, ID1, ID2, ID3), models firm vs. interruptible bumping rights, and optimizes nomination adjustments across secondary and interruptible transportation paths without stranding gas.",
+      "frictionSolved": "Eliminates 2.70 hours daily of high-speed bumping vulnerability checks and last-minute intraday nomination re-drafting.",
+      "reads": "Intraday nomination cycle timelines (Evening at 18:00, ID1 at 10:00, ID2 at 14:30, ID3 at 19:00 CCT), pipeline bumping notices, elapsed-prorated-scheduled-quantity (EPSQ) flow limits, and real-time plant burn deviations.",
+      "does": "1. Calculates allowable intraday nomination change limits based on elapsed-prorated-scheduled-quantity (EPSQ) flow rules; 2. Simulates pipeline bumping scenarios to predict whether firm nominations will successfully bump lower-priority interruptible shippers; 3. Formulates optimized intraday re-nomination packages to increase or decrease flow to match changing weather forecasts or power demand; 4. Validates that proposed Evening and Intraday cycle submissions protect existing firm transportation entitlements without triggering unbumping penalties.",
+      "returns": "Intraday Re-Nomination Strategy Package detailing EPSQ calculation thresholds, predicted bumping outcomes, and cycle submission schedules.",
+      "stopsAt": "Submitting non-bumpable intraday nominations during the Intraday 3 cycle that attempt to cut already-flowed gas.",
+      "failureModes": "If an intraday nomination violates pipeline elapsed-prorated-scheduled-quantity (EPSQ) constraints, the agent rejects the nomination draft and outputs [Tariff Invalidation: Nomination Exceeds Remaining Unflowed Hourly Capacity].",
+      "agentId": "OG-P42-A04"
+    },
+    {
+      "n": 5,
+      "name": "SCADA Telemetry Variance & Real-Time Burn Imbalance Sieve",
+      "oneLine": "Integrates live SCADA electronic gas measurement (EGM) telemetry, power generation dispatch schedules, and industrial burn rates to calculate hourly flow variances against scheduled nominations, projecting end-of-day imbalance exposure.",
+      "frictionSolved": "Eliminates 2.70 hours daily of manual meter-by-meter SCADA polling and spreadsheet burn tracking, alerting schedulers to unpredicted flow variances 8 to 12 hours before gas day close.",
+      "reads": "Real-time SCADA flow telemetry (hourly flowing volume, pressure, temperature, energy rates from Emerson FloBoss/SCADAPack meters), power plant gas-fired turbine heat-rate burn schedules, and pipeline scheduled flow records.",
+      "does": "1. Ingests hourly electronic gas measurement telemetry across all active physical custody transfer delivery meters; 2. Tracks cumulative actual physical flow against scheduled nomination profiles on an hour-by-hour basis; 3. Projects 24-hour end-of-day gas burn and calculates projected pipeline imbalance volumes; 4. Generates automated operational warning alerts when hourly deviations exceed pipeline tolerance bands (+/- 5% or +/- 10%).",
+      "returns": "Real-Time Gas Burn & Imbalance Surveillance Dashboard displaying hourly flow trajectories, cumulative daily variance curves, and recommended re-nomination trim volumes.",
+      "stopsAt": "Directly commanding physical flow control valves or adjusting telemetry meter orifice plate calibration factors.",
+      "failureModes": "If projected daily burn variance breaches the pipeline operating tolerance threshold during an active Operational Flow Order (OFO), the agent triggers an immediate [Emergency Imbalance Warning: Severe OFO Cash-Out Exposure Imminent].",
+      "agentId": "OG-P42-A05"
+    },
+    {
+      "n": 6,
+      "name": "Underground Gas Storage (UGS) & Park-and-Loan (PAL) Balancing Sieve",
+      "oneLine": "Reconciles working gas inventory balances, ratchet curves, minimum/maximum daily injection/withdrawal rights, and Park-and-Loan (PAL) service fees to schedule physical storage balancing and absorb unexpected supply swings.",
+      "frictionSolved": "Eliminates 2.25 hours daily of storage ratchet curve lookups, inventory ceiling audits, and parking contract deadline tracking.",
+      "reads": "Underground storage (UGS) facility inventory ledgers, contractual injection/withdrawal ratchet schedules (flow capability vs. inventory level), pipeline Park-and-Loan (PAL) contract balances, and daily system imbalance projections.",
+      "does": "1. Evaluates current storage inventory against operational minimum cushion gas and maximum working gas capacity limits; 2. Calculates maximum allowable daily withdrawal and injection rates based on dynamic reservoir pressure ratchet curves; 3. Formulates optimal storage injection or withdrawal nominations to offset projected pipeline physical imbalance deficits or surpluses; 4. Evaluates Park-and-Loan (PAL) parking and lending service fee schedules to minimize daily holding costs during temporary delivery disruptions.",
+      "returns": "Gas Storage & PAL Balancing Schedule detailing allowable injection/withdrawal nominations, ratchet constraints, inventory status, and economic parking recommendations.",
+      "stopsAt": "Authorizing physical storage withdrawals that violate mandatory cushion gas baseline reserves.",
+      "failureModes": "If a proposed storage withdrawal exceeds the contractual reservoir deliverability ratchet limit for the current inventory tier, the agent flags an immediate [Storage Ratchet Violation: Maximum Deliverability Exceeded — Volume Adjusted].",
+      "agentId": "OG-P42-A06"
+    },
+    {
+      "n": 7,
+      "name": "Pipeline OFO, Imbalance Cash-Out & OBA Reconciliation Synthesizer",
+      "oneLine": "Ingests pipeline monthly actual allocated volumes, Operational Balancing Agreements (OBAs), Critical Peak OFO notices, and pipeline cash-out price indices to audit monthly transportation billing statements and resolve penalty disputes.",
+      "frictionSolved": "Eliminates 3.15 hours per monthly billing and OFO event of forensic multi-tariff audit reconciliation, verifying tiered cash-out penalty formulas and contesting unjust pipeline imbalance charges.",
+      "reads": "Final pipeline monthly actual allocated volume statements, Operational Balancing Agreement (OBA) cumulative records, published pipeline monthly cash-out price index tables, and active Operational Flow Order (OFO) penalty logs.",
+      "does": "1. Audits monthly actual allocated volumes against daily confirmed scheduled flows across every receipt and delivery point; 2. Applies complex tiered cash-out penalty formulas (e.g., 0-5% tolerance at index, 5-10% at 110% index, >20% at 150% index) to verify pipeline penalty billings; 3. Reconciles cumulative OBA balances between interconnected pipeline transmission operators; 4. Detects improper penalty assessments, erroneous meter allocation adjustments, or misapplied OFO non-performance surcharges, generating certified billing dispute dossiers.",
+      "returns": "Monthly Pipeline Transportation Reconciliation & Billing Audit Dossier complete with itemized cash-out verification sheets, penalty audit logs, and formal invoice dispute packages.",
+      "stopsAt": "Executing legal dispute settlements or signing commercial cash-out write-off authorizations.",
+      "failureModes": "If the agent detects an unannounced pipeline meter re-allocation that retroactively generates an unauthorized OFO penalty (> 50,000), the agent flags an immediate [Material Billing Anomaly: Formal Pipeline Tariff Dispute Package Assembled].",
+      "agentId": "OG-P42-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never multiply into speculative enterprise rupee or dollar totals. The operating pipeline shipper provides its own gas throughput, transport tariff, and imbalance penalty rate multipliers.",
+    "rows": [
+      {
+        "agent": "Gas Nomination & Timely Cycle Assembly Sieve",
+        "unit": "1 Daily Timely Nomination Cycle (multi-pipeline portfolio)",
+        "beforeHours": 4.0,
+        "afterHours": 0.4,
+        "savedHours": 3.6,
+        "frictionRemoved": "Multi-System Deal Book Collation & Manual EBB Entry Drag"
+      },
+      {
+        "agent": "Interconnect Confirmation & MDQ Entitlement Sieve",
+        "unit": "1 Confirmation Cycle (upstream/downstream interconnect matching)",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "Cross-Party Phone/Email Chasing & MDQ Tariff Verification"
+      },
+      {
+        "agent": "Pipeline EBB Capacity Cut & Dynamic Re-Pathing Sieve",
+        "unit": "1 Pipeline Restriction or Capacity Cut Event",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "High-Stress EBB Notice Sifting & Manual Secondary Re-Pathing"
+      },
+      {
+        "agent": "Intraday Re-Nomination & Bumping Optimization Sieve",
+        "unit": "1 Intraday Scheduling Cycle (ID1, ID2, or ID3)",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Bumping Priority Calculation & Emergency Cycle Re-Drafting"
+      },
+      {
+        "agent": "SCADA Telemetry Variance & Real-Time Burn Imbalance Sieve",
+        "unit": "1 Daily Real-Time SCADA vs. Nomination Monitoring Shift",
+        "beforeHours": 3.0,
+        "afterHours": 0.3,
+        "savedHours": 2.7,
+        "frictionRemoved": "Manual Meter Polling & End-of-Day Burn Forecasting Drag"
+      },
+      {
+        "agent": "Underground Storage & Park-and-Loan Balancing Sieve",
+        "unit": "1 Daily Storage & Parking Balancing Cycle",
+        "beforeHours": 2.5,
+        "afterHours": 0.25,
+        "savedHours": 2.25,
+        "frictionRemoved": "Ratchet Curve Verification & Inventory Ceiling Auditing"
+      },
+      {
+        "agent": "Pipeline OFO, Imbalance Cash-Out & OBA Synthesizer",
+        "unit": "1 Monthly Pipeline Imbalance Statement & OFO Audit Cycle",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "Multi-Tier Cash-Out Math & Disputed Penalty Reconciliation"
+      }
+    ],
+    "total": {
+      "unit": "Per Daily / Weekly Logistics Scheduling Cycle",
+      "beforeHours": 23.0,
+      "afterHours": 2.3,
+      "savedHours": 20.7,
+      "frictionRemoved": "90.0% reduction in gas transportation scheduling drag",
+      "label": "Total Operational Logistics Drag Reduction"
+    }
+  },
+  "citations": [
+    {
+      "key": "[NAESB-WGQ-1.3.2]",
+      "citation": "North American Energy Standards Board, Wholesale Gas Quadrant (WGQ) Standard 1.3.2 — Nomination Timeline & Cycles, 2021",
+      "locator": "naesb.org",
+      "type": "Industry Standard",
+      "supports": "Nomination cycle schedules (Timely, Evening, ID1, ID2, ID3), confirmation deadlines, scheduled flow start times"
+    },
+    {
+      "key": "[FERC-Order-809]",
+      "citation": "Federal Energy Regulatory Commission, Coordination of the Scheduling Processes of Interstate Natural Gas Pipelines and Public Utilities, 18 CFR Part 284, Order No. 809, 2015",
+      "locator": "ferc.gov",
+      "type": "Federal Regulation",
+      "supports": "Natural gas nomination timelines, gas-electric scheduling harmonization, intraday bumping rights, and pipeline electronic bulletin board posting requirements"
+    },
+    {
+      "key": "[ENTSOG-CAM-BAL]",
+      "citation": "European Network of Transmission System Operators for Gas, Network Code on Capacity Allocation Mechanisms (Regulation EU 2017/459) & Network Code on Gas Balancing (Regulation EU 312/2014), 2017",
+      "locator": "entsog.eu",
+      "type": "International Regulation",
+      "supports": "Standardized European capacity auctions, daily nomination and re-nomination cycles, operational balancing regimes, and linepack flexibility"
+    },
+    {
+      "key": "[PNGRB-Access-Code]",
+      "citation": "Petroleum and Natural Gas Regulatory Board, Access Code for Common Carrier or Contract Carrier Natural Gas Pipelines Regulations, 2008 (amended 2020)",
+      "locator": "pngrb.gov.in",
+      "type": "Statutory Regulation",
+      "supports": "Common carrier pipeline capacity allocation, booking procedures, gas quality specifications, nomination schedules, and imbalance management"
+    },
+    {
+      "key": "[ISO-15112]",
+      "citation": "International Organization for Standardization, ISO 15112: Natural gas — Energy determination, 2018",
+      "locator": "iso.org",
+      "type": "International Standard",
+      "supports": "Custody transfer energy measurement, calorific value determination, gas volume-to-energy conversion principles"
+    },
+    {
+      "key": "[AGA-Report-No9]",
+      "citation": "American Gas Association, AGA Report No. 9: Measurement of Gas by Multipath Ultrasonic Meters, 2017",
+      "locator": "aga.org",
+      "type": "Technical Standard",
+      "supports": "Custody transfer gas metering precision, speed of sound verification, dynamic flow measurement, and electronic gas measurement (EGM) standards"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Quorum Software (TIPS / eFLOW), Trellis Energy, OpenLink Endur, and midstream conference proceedings for \"autonomous dynamic pipeline capacity cut re-pathing across secondary delivery points integrating live multi-pipeline EBB notices with hydraulic flow models without manual scheduler re-entry\".",
+    "result": "Negative Search, 2026-09. Commercial TMS and ETRM suites record nominations and log confirmation statuses; none continuously ingest live, unstructured multi-pipeline EBB cut notices to autonomously calculate least-cost dynamic re-routing across alternate secondary points and re-submit nomination schedules before NAESB cycle cutoff windows without human manual intervention."
+  },
+  "line": "\"In natural gas transmission, missing a cycle deadline by ninety seconds does not mean an email goes unanswered — it means fifty thousand dekatherms of firm pipeline capacity are cut, a power plant is starved of generation fuel, and the commercial desk absorbs a hundred-thousand-dollar cash-out penalty before lunch.\"",
+  "openQuestions": [
+    "How many hours per day does your scheduling desk spend manually logging into disparate pipeline Electronic Bulletin Boards (EBBs) to retrieve capacity cut notices and confirmation statuses?",
+    "What was the largest operational imbalance cash-out or non-performance penalty incurred by your commercial portfolio over the past winter heating or summer cooling season?",
+    "When a primary delivery point is constrained or cut by a transmission pipeline, how do you currently identify and calculate the least-cost secondary re-routing path before the cycle cutoff deadline?"
+  ]
+}

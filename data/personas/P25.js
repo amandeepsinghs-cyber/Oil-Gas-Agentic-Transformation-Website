@@ -25,6 +25,17 @@ window.PERSONA_DETAIL["P25"] = {
   "avatar": "avatars/P25_persona.jpg",
   "thumb": "avatars/thumbs/P25_thumb.jpg",
   "initials": "AL",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Field & Facilities"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Artificial Lift Specialist sustains the artificial heartbeat of mature oilfields—keeping thousands of beam pumps, electrical submersible pumps (ESPs), gas lift mandrels, and progressing cavity pumps (PCPs) operating reliably after natural reservoir pressure declines. While specialized vendor surveillance applications like ChampionX XSPOC (for rod pumps) and Baker Hughes Vision / SLB Lift IQ (for ESPs) record high-frequency electrical telemetry and downhole pump dyno cards, they subject the specialist to overwhelming visual screening fatigue. In a mature field containing 1,500 producing wells, an artificial lift engineer faces a crushing morning flood: manually clicking through hundreds of surface and downhole dynamometer cards to spot fluid pound, gas interference, or parted rods, while simultaneously sifting through cryptic ESP variable speed drive (VFD) trip logs. Engineers spend 3 to 4 hours every morning manually scrolling through cards, frequently overlooking early mechanical distress until downhole equipment burns out or snaps, precipitating an emergency $80k to $250k workover pulling job. Deploying a dedicated 7-agent hyper-specialized artificial lift squad saves 20.65 hours per operational surveillance cycle, pre-empting mechanical burnouts, optimizing power consumption, and extending mean time between failures (MTBF).",
   "confidence": {
     "Persona": "Artificial Lift Specialist (P25)",

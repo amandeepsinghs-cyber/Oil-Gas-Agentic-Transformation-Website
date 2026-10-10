@@ -19,6 +19,17 @@
   "avatar": "avatars/P12_persona.jpg",
   "thumb": "avatars/thumbs/P12_thumb.jpg",
   "initials": "FE",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Field & Facilities"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Facilities Engineer designs, debottlenecks, and optimizes the surface processing plant, ensuring raw reservoir fluids from wellheads are safely and economically separated into marketable crude oil, sales-spec natural gas, and environmentally compliant water. While thermodynamic process simulators like Aspen HYSYS and Petro-SIM excel at steady-state phase equilibrium and column hydraulics, they function as static design silos detached from live field operations. In maturing fields, water cuts surge from 15% to 80% and gas-oil ratios swing wildly, but evaluating whether existing 3-phase separators provide sufficient liquid retention time or if gathering headers exceed API RP 14E erosional velocity limits is still performed using manual, fragmented Excel spreadsheets. Facilities engineers spend over 45% of their working hours manually pulling SCADA trends, searching for equipment design datasheets in legacy archives, and recalculating vessel retention times. A hyper-specialized agent squad eliminates 39.00 hours per engineering surveillance and project cycle across separator capacity sieving, plant mass balancing, piping erosional velocity audits, TEG dehydration optimization, electrostatic treater diagnostics, water train compliance, and tie-in debottlenecking.",
   "confidence": {
     "Persona": "Facilities Engineer (P12)",

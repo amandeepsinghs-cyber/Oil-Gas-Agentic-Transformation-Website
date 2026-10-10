@@ -19,6 +19,17 @@
   "avatar": "avatars/P22_persona.jpg",
   "thumb": "avatars/thumbs/P22_thumb.jpg",
   "initials": "RS",
+  "domains": [
+    "upstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": false,
+  "groups": {
+    "upstream": "Subsurface"
+  },
+  "valueSplit": {
+    "upstream": 1.0
+  },
   "headline": "The Reservoir Simulation Engineer builds the dynamic digital twin of the reservoir, solving non-linear multiphase fluid flow equations across millions of 3D grid cells to predict decades of oil and gas recovery and justify multi-billion-dollar field development capital. While advanced numerical flow solvers like SLB ECLIPSE / Intersect, RFD tNavigator, and CMG GEM / STARS solve mass and momentum conservation equations across parallel compute nodes, the pre-processing and debugging of simulation decks remains a brutal manual chore. Before an engineer can history-match a multi-decade field, they must manually transcribe hundreds of unstructured well completion records, reperforation logs, and production allocations into rigid, unforgiving simulator schedule keywords (WELSPECS, COMPDAT, WCONHIST). Furthermore, when an 8-hour parallel simulation crashes at year 15 due to numerical time-step chopping, the engineer spends hours manually sifting through 100MB+ .PRT log files to identify which grid cell caused the non-convergence. An integrated squad of 7 hyper-specialized micro-agents compiles well event schedules, diagnoses numerical convergence failures, normalizes relative permeability curves, audits pattern voidage replacement, validates PVT tables, computes history-match error metrics, and synthesizes dynamic recovery forecasts—saving 79.25 engineering hours per simulation study and accelerating Field Development Plans (FDP).",
   "confidence": {
     "Persona": "Reservoir Simulation Engineer (P22)",

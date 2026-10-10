@@ -19,6 +19,23 @@
   "avatar": "avatars/P20_persona.jpg",
   "thumb": "avatars/thumbs/P20_thumb.jpg",
   "initials": "RE",
+  "domains": [
+    "upstream",
+    "midstream",
+    "downstream"
+  ],
+  "primaryDomain": "upstream",
+  "crossCutting": true,
+  "groups": {
+    "upstream": "Cross-Cutting",
+    "midstream": "Cross-Cutting",
+    "downstream": "Cross-Cutting"
+  },
+  "valueSplit": {
+    "upstream": 0.4,
+    "midstream": 0.15,
+    "downstream": 0.45
+  },
   "headline": "The Reliability Engineer protects the mechanical heartbeat of the facility, hunting down microscopic vibration harmonic frequencies, bearing fatigue, and lubricating oil breakdown before a catastrophic pump seizure or compressor trip halts production. While advanced vibration condition monitoring suites like GE Bently Nevada System 1 and Emerson AMS Machinery Manager capture high-frequency dynamic accelerometer and eddy-current displacement signals, they operate as closed signal processing silos completely isolated from lube oil laboratory spectrometry, DCS process flows, and CMMS maintenance histories. Across a refinery or offshore production facility with 400 to 1,200 rotating machines, reliability engineers spend 4 to 5 hours every day toggling between System 1 waterfall spectra, third-party lube oil PDF laboratory reports, and SAP PM maintenance records. An integrated squad of 7 hyper-specialized micro-agents continuously correlates vibration Fourier harmonic peaks with wear-metal spectrometry, reconstructs multi-system RCFA timelines, auto-classifies unstructured CMMS failure text into ISO 14224 taxonomy, monitors mechanical seal flush health, diagnoses reciprocating compressor PV valve leaks, and prioritizes turnaround overhaul scopes—saving 103.75 engineering hours per monthly machinery reliability cycle and preventing catastrophic high-energy mechanical failures that trigger multi-million-dollar plant shutdowns.",
   "confidence": {
     "Persona": "Reliability Engineer (Rotating Machinery) (P20)",

@@ -1,10 +1,14 @@
 /* ─────────────────────────────────────────────────────────────────────────
-   build_matrix_33.js — generates working_deck/data/matrix_33.js
+   build_matrix.js — generates working_deck/data/matrix.js
+   (and, until every page is re-pointed, an identical working_deck/data/matrix_33.js shim)
 
    Feeds the rebuilt vulnerability board (page_07.html) from the persona
    research instead of the hand-written cells that predated it.
 
-   33 personas x 15 operational actions = 495 cells.
+   N personas x >=15 operational actions each. N is whatever the persona index
+   holds -- nothing here assumes a count. Domain membership, board group and
+   cross-domain value apportionment come from persona_research/persona_registry.json
+   (stamped onto every persona by the extractor).
 
    WHAT EACH FIELD COMES FROM
      row.name      persona title
@@ -28,7 +32,7 @@
      picks it up. That also matches what this slide is for: identifying and
      prioritising risk and friction, not pricing it cell by cell.
 
-   Run:  node scripts/build_matrix_33.js
+   Run:  node scripts/build_matrix.js
    ───────────────────────────────────────────────────────────────────────── */
 
 "use strict";
@@ -284,6 +288,10 @@ const PRIO_LABEL = {
 
 /* ── build ──────────────────────────────────────────────────────────────── */
 const rows = [];
+const slug = s => String(s).toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+let REGISTRY = {};
+try { REGISTRY = JSON.parse(fs.readFileSync(path.join(ROOT, "persona_research/persona_registry.json"), "utf8")); }
+catch (e) { console.error("registry not found -- falling back to regex groups"); }
 const tally = { critical: 0, friction: 0, baseline: 0 };
 const prios = { first: 0, next: 0, routine: 0, "": 0 };
 const cover  = { agent: 0, human: 0, open: 0 };
@@ -294,7 +302,12 @@ let cellCount = 0;
 INDEX.forEach((meta, i) => {
   const p = DETAIL[meta.id];
   const v = squadValue(p);
-  const grp = groupFor(p.segment || meta.segment);
+  /* Board group now comes from the registry (per primary domain); the regex is
+     kept only as a fallback for a persona that has not been registered yet. */
+  const regGroups = meta.groups || {};
+  const grpLabel = regGroups[meta.primaryDomain] || null;
+  const grp = grpLabel ? slug(grpLabel) : groupFor(p.segment || meta.segment);
+  if (grpLabel) GROUP_LABEL[grp] = grpLabel;
 
   const mix = { critical: 0, friction: 0, baseline: 0 };
   const cmix = { agent: 0, human: 0, open: 0 };
@@ -361,6 +374,11 @@ INDEX.forEach((meta, i) => {
     segment:   p.segment || meta.segment || "",
     group:     grp,
     groupLabel: GROUP_LABEL[grp],
+    domains:   meta.domains || [],
+    primaryDomain: meta.primaryDomain || "",
+    crossCutting: !!meta.crossCutting,
+    groups:    regGroups,
+    valueSplit: meta.valueSplit || {},
     tier:      meta.tier || "",
     core20:    !!meta.core20,
     monolith:  (p.vendorGaps && p.vendorGaps[0] && p.vendorGaps[0].product) || "",
@@ -417,9 +435,9 @@ console.log("groups         ", JSON.stringify(byGroup));
 /* ── emit ───────────────────────────────────────────────────────────────── */
 const banner =
 `/* ─────────────────────────────────────────────────────────────────────────
-   matrix_33.js — GENERATED. Do not hand-edit.
+   matrix.js — GENERATED. Do not hand-edit.
      source:    data/personas/*.js  +  data/value_model.js
-     generator: scripts/build_matrix_33.js
+     generator: scripts/build_matrix.js
      built:     ${new Date().toISOString()}
 
    ${rows.length} personas, ${cellCount} operational actions in total.
@@ -429,7 +447,7 @@ const banner =
    status: critical ${tally.critical} · friction ${tally.friction} · baseline ${tally.baseline}
    estate: Rs ${Math.round(estate)} Cr/yr across the three savings
 
-   Consumed by working_deck/pages/page_07.html via the pre-existing
+   Consumed by working_deck/persona_map.html (and legacy page_07 copies) via the
    window.ENTERPRISE_MATRIX_DATA override hook.
    ───────────────────────────────────────────────────────────────────────── */
 
@@ -449,11 +467,16 @@ const out = banner +
     coverage: cover,
     estateCr: Math.round(estate),
     groups: GROUP_LABEL,
+    domains: REGISTRY.domains || {},
+    domainOrder: REGISTRY.domainOrder || [],
+    groupOrder: REGISTRY.groupOrder || {},
     frictionClass: FRICTION_CLASS
   }, null, 1) + ";\n";
 
-const dest = path.join(ROOT, "working_deck/data/matrix_33.js");
+const dest = path.join(ROOT, "working_deck/data/matrix.js");
 fs.mkdirSync(path.dirname(dest), { recursive: true });
 fs.writeFileSync(dest, out);
+/* Legacy shim: older pages still load matrix_33.js. Same bytes. */
+fs.writeFileSync(path.join(ROOT, "working_deck/data/matrix_33.js"), out);
 console.log("\nwrote          ", path.relative(ROOT, dest),
             "(" + (out.length / 1024).toFixed(0) + " KB)");

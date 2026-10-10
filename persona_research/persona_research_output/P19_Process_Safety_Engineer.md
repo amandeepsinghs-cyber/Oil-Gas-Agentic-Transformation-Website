@@ -35,7 +35,7 @@
 
 **One Line**: Establishes, audits, and enforces the facility's Risk-Based Process Safety (RBPS) framework (Management of Change, Process Hazard Analysis, Safety Critical Elements, and Incident Investigation) to prevent catastrophic loss of primary containment of hazardous hydrocarbons and toxic chemicals.
 
-**Why Their Output Matters**: A failure in process safety governance leads directly to multi-fatality industrial explosions (e.g., BP Texas City disaster killing 15 workers), total offshore asset destruction (Piper Alpha, 167 fatalities), toxic vapor releases imperiling surrounding communities (Bhopal), or billions of dollars in asset replacement and environmental remediation costs.
+**Why Their Output Matters**: A failure in process safety governance leads directly to multi-fatality industrial explosions (e.g., the 2005 Texas City refinery explosion killing 15 workers), total offshore asset destruction (Piper Alpha, 167 fatalities), toxic vapor releases imperiling surrounding communities (Bhopal), or billions of dollars in asset replacement and environmental remediation costs.
 
 **They do NOT Own:**
 | Not Theirs | Whose |
@@ -301,7 +301,7 @@
 | `[API-RP-754]` | API, *Process Safety Performance Indicators*, 3rd Ed, 2021 | API Standards Store | Technical Standard | Tier 1/2 release mass classification tables & formulas |
 | `[OSHA-1910-119]` | US OSHA, *Process Safety Management of Highly Hazardous Chemicals*| osha.gov/laws-regs | Federal Regulation | Statutory MOC, PSI, PHA, and PSSR compliance mandates |
 | `[API-RP-520-521]` | API, *Sizing, Selection, Installation of Pressure-Relieving Devices*| API Standards Store | Technical Standard | PSV design bases, overpressure contingencies, and relieving math |
-| `[CSB-TexasCity]` | US CSB, *BP Texas City Disaster Final Investigation Report*, 2007 | csb.gov/investigations | Disaster Case Study | Catastrophic MOC, PSSR, and safety critical instrument failure |
+| `[CSB-TexasCity]` | US CSB, *Texas City Refinery Explosion Final Investigation Report*, 2007 | csb.gov/investigations | Disaster Case Study | Catastrophic MOC, PSSR, and safety critical instrument failure |
 | `[UK-HSE-MOC]` | UK Health and Safety Executive, *Plant Modification and MOC*, 2018 | hse.gov.uk/risk | Regulatory Guidance | Baseline drag timings for MOC engineering reviews and barrier audits |
 
 ### Negative Search Registry

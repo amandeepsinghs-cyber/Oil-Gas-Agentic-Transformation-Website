@@ -1,0 +1,613 @@
+{
+  "id": "P43",
+  "title": "Gas Contracts Analyst",
+  "aliases": [
+    "Gas Contracts Administrator",
+    "Transportation Contracts Specialist",
+    "Midstream Commercial Analyst",
+    "Capacity Contracts Analyst"
+  ],
+  "segment": "Midstream — Commercial: contracts & capacity",
+  "segmentLong": "Midstream — Commercial: Contracts & Capacity",
+  "setting": "Commercial Midstream Operations Center (located adjacent to Gas Scheduling, Pipeline Gas Control and Dispatch console, and Commercial Structuring desks)",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "North American Energy Standards Board (NAESB) / Federal Energy Regulatory Commission (FERC)",
+  "agentFocus": "Service Agreement Abstract & Entitlement Sieve",
+  "sourceFile": "P43_Gas_Contracts_Analyst.md",
+  "person": "Sofia Rossi",
+  "avatar": "avatars/P43_persona.jpg",
+  "thumb": "avatars/thumbs/P43_thumb.jpg",
+  "initials": "GC",
+  "domains": [
+    "midstream"
+  ],
+  "primaryDomain": "midstream",
+  "crossCutting": false,
+  "groups": {
+    "midstream": "Commercial & Measurement"
+  },
+  "valueSplit": {
+    "midstream": 1.0
+  },
+  "headline": "The Gas Contracts Analyst holds the commercial and regulatory foundation of the natural gas pipeline system, administering firm and interruptible transportation service agreements, enforcing open-access pipeline tariff compliance, administering secondary capacity release auctions, and preparing statutory regulatory filings. While commercial Transportation Management Systems (TMS) like Quorum TIPS, W Energy Software, and Trellis Energy automate standard nomination scheduling cutoffs and monthly demand billing calculations, they function as rigid rules engines that cannot interpret unstructured legal contract provisions, detect mid-month shipper credit exposure surges, or prevent fuel cost under-recovery. Under open-access transportation regulations (such as FERC 18 CFR Part 284, NAESB Wholesale Gas Quadrant standards, and international equivalents like PNGRB Access Code and EU CAM NC), pipelines must strictly enforce capacity entitlements, prevent unauthorized overrun, publish customer indices, and settle monthly imbalances without discriminatory preference. In operating pipeline transmission networks, commercial analysts spend over 80 hours per monthly accounting and nomination cycle manually transcribing complex transportation service agreements (TSAs), evaluating capacity release tie-breaker bids, calculating mark-to-market shipper credit risks, auditing compressor fuel burn against in-kind fuel retention schedules, and investigating cash-out imbalances across tiered tariff brackets. Deploying a hyper-specialized squad of 7 micro-agents to ingest executed service agreements, audit nomination entitlements, evaluate capacity release bids, track counterparty credit, reconcile tiered imbalance cash-outs, balance system fuel retention, and synthesize certified regulatory filings saves 76.50 hours per monthly contract governance cycle, eliminating commercial revenue leakage, unauthorized capacity leaning, and regulatory audit non-compliance.",
+  "confidence": {
+    "Persona": "Gas Contracts Analyst (P43)",
+    "Research Status": "Desk research grounded in midstream commercial operations, open-access natural gas transportation tariffs, NAESB standards, and regulatory compliance filings",
+    "Competency Standard Used": "NAESB Wholesale Gas Quadrant (WGQ) Standards (v3.2), FERC 18 CFR Part 284 (Open Access Transportation), PNGRB Access Code for Common Carrier or Contract Carrier Pipelines, EU Regulation 2017/459 (CAM NC), and ISO 15112 (Gas Energy Determination)",
+    "Standard Coverage": "10 of 10 commercial contract administration, capacity allocation, tariff enforcement, credit monitoring, and regulatory reporting competencies mapped directly to operational actions",
+    "Actions Cited": "15 of 15 operational actions substantiated by published NAESB WGQ standard provisions, FERC open-access regulations, PNGRB guidelines, and midstream commercial contract manuals",
+    "Pain Claims Cited": "8 of 8 industry pain claims supported by published American Gas Association (AGA) proceedings, INGAA white papers, and midstream commercial practice benchmarks",
+    "Timings Sourced": "Contract abstraction, capacity release bid evaluation, nomination entitlement cross-checks, credit exposure monitoring, and Form 549B assembly timings validated against midstream commercial operations workflow studies",
+    "Gap Claims Cited": "Quorum TIPS, W Energy Software, Trellis Energy, and SAP technical specifications confirm software handles structured scheduling cutoffs and standardized billing formulas; none autonomously parse non-standard legal service agreement PDFs, dynamically monitor composite credit exposure, or reconcile multi-tier imbalance cash-outs across disparate measurement and nomination databases without manual intervention",
+    "Known Gaps": "Specificity of electronic bulletin board (EBB) capacity release bidding mechanisms and credit rating thresholds varies between regulated interstate pipelines and state-regulated intrastate gathering networks"
+  },
+  "role": {
+    "oneLine": "Administers natural gas transportation, storage, and gathering agreements, enforces pipeline tariff and open-access compliance, evaluates secondary capacity release transactions, monitors counterparty credit exposure, and prepares certified regulatory customer index and rate filings.",
+    "whyItMatters": "The Gas Contracts Analyst safeguards the commercial viability, cash flow integrity, and legal standing of the pipeline transmission business. A missed tariff constraint, an inaccurate Maximum Daily Quantity (MDQ) contract record, or an overlooked secondary capacity release condition allows shippers to lean on pipeline linepack without paying reservation fees, triggers unlawful preferential capacity allocation, or results in catastrophic uncollateralized credit losses when an over-extended shipper defaults on monthly transportation and cash-out liabilities. Furthermore, submitting delayed or inaccurate customer index disclosures triggers immediate regulatory enforcement actions, mandatory customer rate refunds, and severe financial penalties.",
+    "notOwned": [
+      {
+        "task": "Physical Supervisory Control, Compressor Station Remote Control, and Pipeline Pressure Dispatch",
+        "owner": "Pipeline Controller (P14) / Gas Control Operator (P42)"
+      },
+      {
+        "task": "Daily and Intraday Pipeline Nominations Scheduling and Confirmation Matching",
+        "owner": "Pipeline Gas Scheduler"
+      },
+      {
+        "task": "Commercial Negotiation of Long-Term Foundation Shipper Precedent Agreements and Capital Expansion Tariffs",
+        "owner": "Commercial Vice President / Director of Business Development"
+      },
+      {
+        "task": "Custody Transfer Meter Proving, Flow Computer Calibration, and Gas Chromatograph Maintenance",
+        "owner": "Gas Measurement Specialist / Measurement Technician"
+      },
+      {
+        "task": "Formal Statutory Rate Case Litigation and Legal Dispute Proceedings Before Regulatory Commissions",
+        "owner": "Regulatory Affairs Director / General Counsel"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Transportation & Capacity Release Specialist",
+        "detail": "Focuses heavily on daily capacity release auctions, pre-arranged release validation, recall and reput rights, biddable reservation rate ceilings, replacement shipper credit qualification, and secondary market Electronic Bulletin Board (EBB) administration under NAESB WGQ Quadrant 5."
+      },
+      {
+        "name": "Midstream Contracts Administrator",
+        "detail": "Specializes in ingesting, abstracting, and executing long-term Firm Transportation (FT), Interruptible Transportation (IT), Firm Storage Service (FSS), and Gathering Agreements; tracking evergreen contract rollovers, Right of First Refusal (ROFR) notification windows, primary receipt and delivery meter entitlements, and contract amendments."
+      },
+      {
+        "name": "Commercial Regulatory & Settlement Analyst",
+        "detail": "Manages monthly shipper physical-versus-scheduled imbalance reconciliation, tiered tariff cash-out calculations, operational balancing agreements (OBAs), system fuel retention percentage audits, and statutory filings including FERC Form 549B (Index of Customers)."
+      }
+    ],
+    "titleCheck": "The canonical industry title is Gas Contracts Analyst, Gas Contracts Administrator, or Transportation Contracts Specialist. Do not confuse with \"Pipeline Scheduler\" (who manages daily nomination cycle confirmation matching and point scheduling cuts) or \"Gas Trader\" (who buys and sells physical gas molecules and financial basis swaps).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Commercial Midstream Operations Center: Professional corporate headquarters or commercial operations office located immediately adjacent to the Pipeline Gas Scheduling desk, Gas Control Room, and Commercial Structuring desks. Frequent operational interfaces with pipeline dispatchers, credit analysts, and regulatory compliance attorneys.",
+      "What They Can Reach": "Multi-monitor commercial workstation equipped with pipeline Transportation Management Systems (Quorum TIPS, W Energy Software, Trellis Energy), customer Electronic Bulletin Boards (EBB), Electronic Data Interchange (EDI) transaction feeds, measurement accounting databases (Emerson Flow-Cal, PGAS), counterparty credit monitoring systems, credit agency terminals, and enterprise ERP systems (SAP S/4HANA).",
+      "Shift Pattern": "Standard professional corporate business hours (08:00–17:00), with urgent time-compressed peak activity during standard NAESB nomination cycle deadlines (Timely 13:00 CCT, Evening 18:00 CCT, Intraday cycles), monthly financial billing close, and quarterly regulatory filing submission windows.",
+      "Where the Record Lives": "System of Record: Master Transportation Service Agreements (TSAs), pipeline Electronic Bulletin Board contract matrices, executed capacity release assignment orders, approved customer credit exposure ledgers, certified FERC Form 549B quarterly index archives, and monthly imbalance cash-out settlement statements."
+    }
+  },
+  "standards": [
+    {
+      "key": "NAESB-WGQ",
+      "citation": "North American Energy Standards Board, Wholesale Gas Quadrant (WGQ) Standards, Version 3.2 — Standard 6.3.1 (Base Contract for Sale and Purchase of Natural Gas), Quadrant 1 (Nominations & Confirmations), Quadrant 3 (Invoicing & Financial Settlement), and Quadrant 5 (Capacity Release Standards)."
+    },
+    {
+      "key": "FERC-Part-284",
+      "citation": "Federal Energy Regulatory Commission, 18 CFR Part 284 — Certain Sales and Transportation of Natural Gas Under the Natural Gas Policy Act and Open Access Transportation (§284.7 Firm and interruptible transportation rates, §284.12 Standards for pipeline business practices, §284.13 Information to be posted on EBB, and §284.106/§284.126 Form 549B Index of Customers)."
+    },
+    {
+      "key": "PNGRB-Access-Code",
+      "citation": "Petroleum and Natural Gas Regulatory Board (India), Access Code for Common Carrier or Contract Carrier Natural Gas Pipelines Regulations (2008 & 2020 Amendments) and Guiding Principles for Declaring/Authorising Natural Gas Pipelines (Open-access capacity allocation, Gas Transmission Agreements [GTA], imbalance settlement, and capacity disclosure)."
+    },
+    {
+      "key": "EU-CAM-NC",
+      "citation": "European Commission, Regulation (EU) 2017/459 — Network Code on Capacity Allocation Mechanisms in Gas Transmission Networks (CAM NC) and Regulation (EU) No 312/2014 (Balancing Network Code) (Third-party open access capacity allocation, standardized capacity products, and commercial balancing)."
+    },
+    {
+      "key": "ISO-15112",
+      "citation": "International Organization for Standardization, ISO 15112: Natural Gas — Energy Determination and ISO 13686: Natural Gas — Quality Designation (Energy billing calculations, gross calorific value specifications, and custody transfer energy measurement)."
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Quorum Software TIPS / Energy Center",
+      "module": "Transportation Management System (TMS) & Pipeline Scheduling",
+      "solves": "Automates online nomination ingestion, scheduled volume confirmations, electronic bulletin board (EBB) postings, and capacity allocation rules.",
+      "gap": "Rules-engine silo. Validates standard nominations against rigid parameter tables, but cannot read or abstract unstructured PDF contract language, identify nuanced negotiated rate covenants, evaluate complex capacity release tie-breaker economic values, or detect composite credit exposure surges across imbalance and forward reservation liabilities."
+    },
+    {
+      "product": "W Energy Software / Trellis Energy",
+      "module": "Transportation Contracts & Customer Billing Portal",
+      "solves": "Manages active shipper contracts, rate schedules, monthly reservation and commodity billing calculation, and cash-out invoicing.",
+      "gap": "Requires manual data entry to transcribe executed service agreements into rate tables; lacks automated capability to cross-audit physical compressor fuel burned against shipper in-kind fuel retention schedules or synthesize certified quarterly Form 549B regulatory index filings from disparate databases."
+    },
+    {
+      "product": "SAP S/4HANA / Oracle Financials",
+      "module": "Enterprise Resource Planning (ERP) & Accounts Receivable",
+      "solves": "Issues commercial invoices, tracks general ledger accounts receivable, processes cash receipts, and logs customer payment history.",
+      "gap": "Commercial context disconnect. Completely blind to pipeline operational tariffs, NAESB nomination cycles, and capacity release rules. Cannot determine if a shipper's nomination exceeds primary receipt-to-delivery path rights or whether an outstanding imbalance position creates an uncollateralized credit risk under tariff rules."
+    },
+    {
+      "product": "Emerson Flow-Cal / Quorum PGAS",
+      "module": "Measurement Data Management (MDM)",
+      "solves": "Ingests raw hourly and daily flow computer telemetry, calculates gross heating values, and reconciles physical custody transfer volumes.",
+      "gap": "Confined strictly to physical volume and energy measurement. Totally disconnected from commercial transportation contract entitlements, reservation billing caps, capacity release rights, or shipper imbalance trading windows."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Ingest and abstract executed transportation, storage, and gathering agreements",
+      "source": "[NAESB-WGQ §6.3.1]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "4.5h",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Service Agreement Ingestion & Contract Parameter Abstraction (B1, [NAESB-WGQ §6.3.1])",
+      "today": "Analyst spends 4 to 6 hours manually reviewing 30-to-80 page executed Transportation Service Agreements (TSAs), transcribing primary meter pins, Maximum Daily Quantities (MDQ/MHQ), reservation rates, and fuel tier matrix schedules into TMS database tables.",
+      "failureMode": "Manual transcription typos in receipt meter pin numbers or fuel tier schedules result in incorrect monthly reservation invoices, invalid nomination rejections, and costly customer billing disputes.",
+      "agentNote": "→ See §4 (Agent 1: Service Agreement Abstract & Entitlement Sieve)."
+    },
+    {
+      "code": "A02",
+      "action": "Compute monthly demand/reservation charges and commodity billing determinants",
+      "source": "[FERC-Part-284 §284.7]",
+      "scope": "estate",
+      "bucket": "B2",
+      "freq": "Monthly",
+      "time": "12.0h",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Quorum TIPS)",
+      "label": "Monthly Reservation & Commodity Billing Computation (B2, [FERC-Part-284 §284.7])",
+      "today": "Executed inside commercial transportation management systems (Quorum TIPS / W Energy). The software multiplies active contract MDQ reservation determinants by approved tariff rates and applies commodity charges to scheduled deliveries.",
+      "failureMode": "Standard deterministic calculation within the commercial billing engine; formula execution belongs to monolith transportation billing software.",
+      "agentNote": "❌ No. Monolith TMS billing engine."
+    },
+    {
+      "code": "A03",
+      "action": "Evaluate secondary market capacity release postings, biddable rates, and recall conditions",
+      "source": "[NAESB-WGQ Quadrant 5]",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "3.0h",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Capacity Release Bidding & Tariff Rule Evaluation (B1, [NAESB-WGQ Quadrant 5])",
+      "today": "When releasing shippers post capacity offers, the analyst manually verifies biddable rates against maximum tariff ceilings, checks recall terms against standard operational cycles, validates replacement shipper creditworthiness, and calculates Net Present Value (NPV) tie-breakers in complex spreadsheets.",
+      "failureMode": "Planning delays cause missed regulatory bidding deadlines; awarding capacity release bids above maximum tariff rates or to non-creditworthy replacement shippers exposes the pipeline to regulatory penalties or default losses.",
+      "agentNote": "→ See §4 (Agent 2: Capacity Release Bidding & Tariff Compliance Sieve)."
+    },
+    {
+      "code": "A04",
+      "action": "Audit proposed shipper daily nomination paths and volume requests against contractual MDQ entitlements",
+      "source": "[NAESB-WGQ Quadrant 1]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.5h",
+      "friction": "integrity",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Nomination Entitlement & Primary Path Audit (B1, [NAESB-WGQ Quadrant 1])",
+      "today": "Analyst manually cross-checks time-compressed shipper daily nominations against contractual primary receipt-to-delivery path rights and segment MDQ caps during high-demand peak flow cycles.",
+      "failureMode": "Shippers lean on unscheduled linepack or flow gas through secondary out-of-path bottlenecks without paying applicable overrun charges, degrading pipeline pressure stability for firm shippers.",
+      "agentNote": "→ See §4 (Agent 3: Contractual Entitlement & Nomination Path Audit Sieve)."
+    },
+    {
+      "code": "A05",
+      "action": "Publish Available Operational Capacity (AOC) matrices and operationally restricted point notices on pipeline EBB",
+      "source": "[FERC-Part-284 §284.13]",
+      "scope": "estate",
+      "bucket": "B2",
+      "freq": "Daily",
+      "time": "1.5h",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Pipeline EBB Portal)",
+      "label": "EBB Capacity Posting & Restriction Publishing (B2, [FERC-Part-284 §284.13])",
+      "today": "Automated Electronic Bulletin Board (EBB) portal publishes available capacity and maintenance curtailment notices based on hydraulic model and scheduling outputs.",
+      "failureMode": "Monolith customer portal and automated web publishing infrastructure.",
+      "agentNote": "❌ No. Monolith EBB web portal."
+    },
+    {
+      "code": "A06",
+      "action": "Monitor counterparty shipper credit exposure, collateral adequacy, and agency rating downgrades",
+      "source": "[FERC-Part-284 §284.12]",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.0h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Counterparty Credit Exposure & Tariff Default Monitoring (B1, [FERC-Part-284 §284.12])",
+      "today": "Analyst manually correlates accounts receivable aging sheets, mid-month physical imbalance exposures, and forward 3-month reservation liabilities against posted letters of credit and credit agency rating updates.",
+      "failureMode": "A financially distressed shipper quietly accumulates millions of dollars in unbilled imbalance debt and unpaid transportation fees before commercial analysts detect that collateral has been exhausted, resulting in catastrophic bad debt write-offs.",
+      "agentNote": "→ See §4 (Agent 4: Counterparty Credit Exposure & Tariff Default Sieve)."
+    },
+    {
+      "code": "A07",
+      "action": "Reconcile monthly physical-versus-scheduled shipper imbalances and compute tiered tariff cash-out settlements",
+      "source": "[PNGRB-Access-Code §15]",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "16.0h",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Monthly Imbalance Reconciliation & Tiered Cash-Out Settlement (B1, [PNGRB-Access-Code §15])",
+      "today": "Analyst spends several days after monthly production close reconciling meter-allocated physical receipts and deliveries against confirmed scheduled volumes, applying tiered tariff cash-out penalty brackets (e.g., 0-5%, 5-10%, 10-15%, >20%) and index pricing to settle shipper imbalances.",
+      "failureMode": "Misaligned meter allocations or incorrect price index mappings lead to multi-hundred-thousand-dollar settlement disputes and delayed customer billing close.",
+      "agentNote": "→ See §4 (Agent 5: Monthly Imbalance Reconciliation & Tiered Cash-Out Sieve)."
+    },
+    {
+      "code": "A08",
+      "action": "Audit pipeline system fuel retention percentages, compressor fuel burn, and in-kind reimbursement",
+      "source": "[ISO-15112 §7]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "10.0h",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "System Fuel Retention & UAF Gas Reconciliation (B1, [ISO-15112 §7])",
+      "today": "Analyst manually collects compressor station fuel meter logs, electric compressor run-times, and pipeline flow data in spreadsheets to compare actual fuel consumed and lost-and-unaccounted-for (UAF) gas against in-kind shipper fuel retention recoveries.",
+      "failureMode": "Undetected commercial fuel under-recovery persists for months, forcing the pipeline operator to absorb hundreds of thousands of dollars in unrecovered compressor operating costs before filing tariff rate adjustments.",
+      "agentNote": "→ See §4 (Agent 6: System Fuel Retention & In-Kind Reimbursement Sieve)."
+    },
+    {
+      "code": "A09",
+      "action": "Compile quarterly Index of Customers (FERC Form 549B) and tariff negotiated/discount rate compliance filings",
+      "source": "[FERC-Part-284 §284.106]",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Quarterly",
+      "time": "14.0h",
+      "friction": "traceability",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Quarterly Regulatory Index of Customers Compilation (B1, [FERC-Part-284 §284.106])",
+      "today": "Analyst spends weeks every quarter querying multiple contract databases, formatting customer identifiers, rates, and capacity entitlements, and cross-checking discount disclosures to assemble statutory FERC Form 549B filing dossiers.",
+      "failureMode": "Data omission or format discrepancies trigger regulatory filing rejections, audit inquiries, and potential civil enforcement penalties for inaccurate customer disclosure.",
+      "agentNote": "→ See §4 (Agent 7: Regulatory Index of Customers & Tariff Compliance Synthesizer)."
+    },
+    {
+      "code": "A10",
+      "action": "Manage legal contract digital execution, counterparty officer authority verification, and master archive repository",
+      "source": "Commercial Practice",
+      "scope": "task",
+      "bucket": "B2",
+      "freq": "Weekly",
+      "time": "2.0h",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (DocuSign / OpenText)",
+      "label": "Legal Contract Execution & Document Archival (B2, Commercial Practice)",
+      "today": "Coordinated through commercial document management platforms (DocuSign, Adobe Sign, OpenText) for digital signatures, corporate resolutions, and secure archival.",
+      "failureMode": "Enterprise legal document repository and electronic signature routing domain.",
+      "agentNote": "❌ No. Monolith document management platform."
+    },
+    {
+      "code": "A11",
+      "action": "Track contract evergreen renewal notification windows, termination triggers, and Right of First Refusal deadlines",
+      "source": "[FERC-Part-284 §284.221]",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "3.5h",
+      "friction": "recall",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Evergreen Rollover & ROFR Notification Tracking (B1, [FERC-Part-284 §284.221])",
+      "today": "Analyst tracks contract expiration dates and notice periods in personal calendar alerts and spreadsheets to ensure timely issuance of contract termination or evergreen extension notices.",
+      "failureMode": "Missed notice windows result in unwanted automatic contract extensions or forfeiture of pipeline capacity remarketing opportunities.",
+      "agentNote": "Supported via Service Agreement Abstract & Entitlement Sieve (Agent 1)."
+    },
+    {
+      "code": "A12",
+      "action": "Audit Interconnect Agreements and Operational Balancing Agreements for point variance cumulative drift",
+      "source": "[NAESB-WGQ Quadrant 2]",
+      "scope": "estate",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "4.0h",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Interconnect & Operational Balancing Agreement Audit (B1, [NAESB-WGQ Quadrant 2])",
+      "today": "Analyst manually reviews monthly physical vs. scheduled exchange records at pipeline interconnects, monitoring cumulative balance drift across operational balancing agreements (OBAs).",
+      "failureMode": "Excessive OBA drift threatens physical pipeline pack pressure and creates uncollateralized inter-pipeline credit exposure.",
+      "agentNote": "Supported via Monthly Imbalance Reconciliation Sieve (Agent 5)."
+    },
+    {
+      "code": "A13",
+      "action": "Prequalify prospective replacement shippers for technical EBB access, tax exemptions, and credit readiness",
+      "source": "[NAESB-WGQ Standard 4.3]",
+      "scope": "task",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "2.5h",
+      "friction": "integrity",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Replacement Shipper Technical Prequalification (B1, [NAESB-WGQ Standard 4.3])",
+      "today": "Analyst manually reviews incoming shipper registration forms, tax exemption certificates, and EDI communication parameters before granting pipeline EBB trading credentials.",
+      "failureMode": "Administrative delays prevent qualified shippers from bidding on active capacity release auctions, dampening secondary market liquidity.",
+      "agentNote": "Supported via Capacity Release Bidding & Tariff Compliance Sieve (Agent 2)."
+    },
+    {
+      "code": "A14",
+      "action": "Synthesize monthly commercial pipeline capacity utilization, revenue yield, and uncontracted capacity briefing",
+      "source": "Commercial Practice",
+      "scope": "portfolio",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "5.0h",
+      "friction": "synthesis",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔",
+      "label": "Commercial Capacity Utilization & Revenue Synthesis (B1, Commercial Practice)",
+      "today": "Analyst spends 4 to 6 hours every month compiling contract capacity metrics, uncontracted capacity summaries, and revenue yields into presentation decks for executive leadership.",
+      "failureMode": "High administrative drag diverting analytical focus from tariff enforcement and revenue leakage elimination.",
+      "agentNote": "Synthesized directly via Regulatory Index & Tariff Compliance Synthesizer (Agent 7)."
+    },
+    {
+      "code": "A15",
+      "action": "Negotiate bespoke precedent agreement commercial terms, foundation shipper rates, and expansion commitments",
+      "source": "Commercial Practice",
+      "scope": "portfolio",
+      "bucket": "B3",
+      "freq": "Periodic",
+      "time": "6.0h",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Commercial VP)",
+      "label": "Bespoke Precedent Agreement & Rate Design Negotiation (B3, Commercial Practice)",
+      "today": "Commercial Vice President and Business Development leads negotiate multi-year precedent agreements, capital expansion rate structures, and anchor shipper credit terms with prospective customers.",
+      "failureMode": "High-stakes commercial relationship management and corporate strategic risk commitment.",
+      "agentNote": "❌ No. Human commercial executive leadership."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Service Agreement Abstract & Entitlement Sieve",
+      "oneLine": "Ingests executed natural gas transportation, storage, and gathering agreements to extract commercial terms, primary path rights, Maximum Daily Quantities (MDQ/MHQ), and billing formulas into enterprise contract repositories.",
+      "frictionSolved": "Eliminates 12.0 hours per month of manual multi-page PDF contract parsing, clause interpretation, and repetitive data entry into pipeline transportation management systems.",
+      "reads": "Executed transportation service agreements (FT, IT), firm storage agreements (FSS, ISS), gathering agreements, interconnect agreements, contract exhibits, rate schedules, and legal amendments.",
+      "does": "Parses structured and unstructured PDF contracts; extracts key commercial metadata including shipper legal entity, contract type, execution/effective/termination dates, rollover/evergreen notice windows, primary receipt and delivery meter pins, Maximum Daily Quantity (MDQ in Dth/d or GJ/d), Maximum Hourly Quantity (MHQ), primary path routing, reservation rates (/Dth/month), commodity rates, fuel retention matrix tiers, and overrun penalty formulas; validates extracted parameters against active pipeline tariff rate bands; formats data into native TMS ingestion schemas (Quorum TIPS / W Energy / SAP).",
+      "returns": "Contract Ingestion & Abstraction Dossier with structured parameter tables, side-by-side verification view with source PDF snippet highlights, evergreen expiration schedule alerts, and tariff discrepancy flags.",
+      "stopsAt": "Authorizing deviations from published open-access pipeline tariff rates or committing unexecuted contract drafts.",
+      "failureModes": "If contract terms contain non-standard negotiated clauses (e.g., custom pressure commitments, lateral construction reimbursement offsets, or non-conforming indemnities) that deviate from pro forma tariff service agreements, the agent flags [Non-Conforming Tariff Clause Detected: Legal & Regulatory Review Required] and suppresses automated TMS sync until commercial counsel approves.",
+      "agentId": "OG-P43-A01"
+    },
+    {
+      "n": 2,
+      "name": "Capacity Release Bidding & Tariff Compliance Sieve",
+      "oneLine": "Evaluates secondary market capacity release postings, pre-arranged transactions, and incoming competitive bids against tariff rate ceilings, bidding timelines, credit prequalification, and recall conditions.",
+      "frictionSolved": "Eliminates 11.5 hours per month of manual bid evaluation, net present value (NPV) tie-breaker calculations, tariff maximum rate validation, and replacement shipper eligibility verification.",
+      "reads": "Capacity release offer postings (releasing shipper ID, contract number, quantity in Dth/d, primary path, release term, minimum acceptable bid rate, recall/reput rights), competitive electronic bids, pipeline tariff rate schedule limits, and replacement shipper credit status tables.",
+      "does": "Audits release postings against regulatory timelines (NAESB WGQ Quadrant 5 bidding windows based on release duration); verifies proposed bid rates against maximum tariff reservation rate caps (or flags short-term release exemption under FERC Order 712 / market-based caps); calculates bid economic value using tariff-specified Net Present Value (NPV) formulas for tie-breaking; verifies recall/reput conditions against standard operational notice requirements; confirms replacement shipper satisfies tariff creditworthiness prequalification; prepares award notifications for Electronic Bulletin Board (EBB) publication.",
+      "returns": "Capacity Release Evaluation & Award Dossier with calculated bid NPV scores, tariff compliance verification tags, credit prequalification clearance status, and ready-to-post electronic award summaries.",
+      "stopsAt": "Declaring official capacity release auction winners or executing contract assignments on the pipeline EBB without commercial analyst sign-off.",
+      "failureModes": "If a winning bid proposes a rate exceeding the statutory maximum tariff rate on a long-term release (> 1 year), or if a pre-arranged release rate is below maximum tariff rate and requires mandatory competitive bidding but is submitted without the required public bidding window, the agent issues [Tariff Rate Ceiling / Bidding Window Violation] and halts award processing.",
+      "agentId": "OG-P43-A02"
+    },
+    {
+      "n": 3,
+      "name": "Contractual Entitlement & Nomination Path Audit Sieve",
+      "oneLine": "Cross-checks shipper daily and intraday nomination requests against contractual firm entitlements, primary receipt-to-delivery path rights, Maximum Hourly Quantities, and tariff segmentation rules.",
+      "frictionSolved": "Eliminates 10.5 hours per month of frantic, time-compressed nomination window cross-checking across thousands of daily shipper nomination line items.",
+      "reads": "Scheduled and proposed shipper nomination batches across all NAESB cycles (Timely, Evening, Intraday 1, Intraday 2, Intraday 3), active contract master records (MDQ, MHQ, primary receipt points, primary delivery points, secondary out-of-path allowances), and pipeline operational flow order (OFO) notices.",
+      "does": "Validates nominated volumes against contract MDQ limits; verifies whether requested receipt and delivery point combinations follow contract primary paths or constitute secondary out-of-path nominations; audits segmentation rights to ensure multiple segment nominations do not exceed contract MDQ in any single physical pipeline segment; flags nominations exceeding Maximum Hourly Quantity (MHQ) flow rates; cross-references active OFO restrictions to identify unauthorized deliveries or non-compliant receipts during emergency operational alerts.",
+      "returns": "Nomination Entitlement Audit Dossier highlighting over-entitlement volume requests, out-of-path scheduling penalties, unauthorized secondary point cuts, and recommended tariff overrun billing tags.",
+      "stopsAt": "Directly executing pipeline nomination scheduling cuts, issuing physical confirmation rejections, or altering operator flow orders.",
+      "failureModes": "If a shipper's nomination exceeds contract MDQ during a critical Operational Flow Order (OFO) or Critical Period alert, the agent flags [Critical OFO Over-Nomination: Unauthorized Overrun Penalty Alert] and immediately alerts the contracts analyst and pipeline gas controller before confirmation cutoffs.",
+      "agentId": "OG-P43-A03"
+    },
+    {
+      "n": 4,
+      "name": "Counterparty Credit Exposure & Tariff Default Sieve",
+      "oneLine": "Continuously monitors shipper credit exposure across forward transportation liabilities, outstanding imbalance cash-out balances, and collateral coverage against open-access tariff creditworthiness rules.",
+      "frictionSolved": "Eliminates 9.0 hours per month of manual accounts receivable aging cross-referencing, credit rating monitoring, and tariff collateral adequacy calculations.",
+      "reads": "Daily shipper billed and unbilled accounts receivable aging, mark-to-market physical imbalance positions, three-month forward reservation fee obligations, letters of credit (LOC) and parental guarantees in the collateral vault, and credit rating agency feeds (S&P, Moody's, Fitch).",
+      "does": "Calculates total credit exposure for each active shipper as the sum of outstanding transportation invoices, unbilled mid-month gas deliveries, mark-to-market cumulative imbalance liabilities, and 3-month forward reservation charge obligations per tariff formula; compares total exposure against approved unsecured credit limits and posted collateral (LOCs, cash deposits); tracks letter of credit expiration dates with 30/60/90-day warning triggers; monitors credit agency rating downgrades below investment-grade thresholds; calculates additional collateral call demands required under tariff terms.",
+      "returns": "Shipper Credit Exposure & Margin Call Dossier showing credit headroom/deficit per shipper, expiring collateral watchlists, rating downgrade impact reports, and drafted tariff-compliant demand letters.",
+      "stopsAt": "Issuing formal statutory notices of contract suspension, calling bank letters of credit, or terminating transportation service.",
+      "failureModes": "If a shipper's uncollateralized exposure exceeds their allowable tariff credit limit or if an active Letter of Credit falls within 15 calendar days of expiration without renewal, the agent flags [Urgent Tariff Credit Default Risk: Collateral Demand Required] and prepares a high-priority commercial risk escalation package.",
+      "agentId": "OG-P43-A04"
+    },
+    {
+      "n": 5,
+      "name": "Monthly Imbalance Reconciliation & Tiered Cash-Out Sieve",
+      "oneLine": "Reconciles monthly physical metered gas volumes against scheduled transportation quantities, determining net shipper imbalance positions and calculating tiered tariff cash-out settlements.",
+      "frictionSolved": "Eliminates 13.5 hours per month of complex multi-meter volume reconciliation, imbalance netting, index price matching, and tiered cash-out penalty calculations.",
+      "reads": "Monthly validated custody transfer meter volumes from measurement systems (Flow-Cal/PGAS), confirmed scheduled quantities from transportation management systems, contractual fuel retention deductions, inter-shipper imbalance trade logs, and published spot price indices (Gas Daily, Platts, Henry Hub, regional trading hubs).",
+      "does": "Calculates net monthly imbalance for each shipper as Total Scheduled Deliveries plus Fuel minus Total Allocated Receipts; accounts for authorized inter-shipper imbalance trades completed during the post-month trading window; evaluates final imbalance percentage relative to total scheduled deliveries; maps imbalance percentages into tariff-mandated tiered cash-out penalty brackets (e.g., 0%–5% at 100% index price; >5%–10% at 110%/90%; >10%–15% at 120%/80%; >20% at 150%/50%); applies appropriate regional hub daily high/low index prices to determine financial settlement amounts; audits Operational Balancing Agreements (OBAs) at pipeline interconnects.",
+      "returns": "Monthly Imbalance Cash-Out Settlement Dossier detailing meter-by-meter allocations, post-trade net imbalance volumes, tiered settlement calculations, and billing credit/debit files formatted for general ledger ingestion.",
+      "stopsAt": "Posting financial journal entries or transmitting final billing invoices to shippers without commercial analyst authorization.",
+      "failureModes": "If allocated physical meter receipts at an interconnect disagree with scheduled volumes by more than the allowable Operational Balancing Agreement (OBA) tolerance threshold (e.g., > 2.0% cumulative linepack drift), the agent logs [OBA Interconnect Variance Exceeded: Upstream Measurement Audit Required] and quarantines cash-out processing for that interconnect point.",
+      "agentId": "OG-P43-A05"
+    },
+    {
+      "n": 6,
+      "name": "System Fuel Retention & In-Kind Reimbursement Sieve",
+      "oneLine": "Audits monthly pipeline compression fuel burned, gas-fired auxiliary consumption, and unaccounted-for (UAF) lost gas against contractual in-kind shipper fuel retention recoveries to prevent commercial fuel under-recovery.",
+      "frictionSolved": "Eliminates 8.5 hours per month of manual compressor telemetry harvesting, fuel allocation cross-checking, and in-kind gas inventory reconciliation.",
+      "reads": "SCADA and flow computer fuel gas meter data at pipeline compressor stations, electric motor-driven compressor power consumption telemetry, heating value and gas composition chromatography logs, scheduled shipper gas receipts, and contractual fuel retention percentage schedules.",
+      "does": "Computes total system fuel consumption (measured in Dth or GJ) across all compressor units, dehydration reboilers, and heater stations; aggregates total in-kind fuel gas retained from shippers based on contractually applied fuel retention percentages; calculates physical Unaccounted-For (UAF) gas volume by balancing total system receipts, deliveries, compressor fuel burn, and linepack changes; evaluates fuel recovery position (over-recovery or under-recovery); tracks fuel tracking tracker account balances against tariff true-up provisions; computes recommended semi-annual or annual tariff fuel retention rate adjustments.",
+      "returns": "Pipeline System Fuel & UAF Balance Dossier with compressor-by-compressor fuel burn breakdowns, shipper in-kind recovery variance waterfall charts, UAF percentage trends, and regulatory fuel tracker adjustment filings.",
+      "stopsAt": "Modifying filed tariff fuel retention percentage schedules or altering physical compressor station fuel regulator setpoints.",
+      "failureModes": "If cumulative unaccounted-for (UAF) loss across the pipeline system exceeds tariff-mandated threshold limits (e.g., > 0.5% of total throughput) in a billing cycle, the agent issues [Excessive UAF Gas Loss: Measurement Error or Unreported Line Leak Suspected] and alerts both commercial contracts and pipeline integrity teams.",
+      "agentId": "OG-P43-A06"
+    },
+    {
+      "n": 7,
+      "name": "Regulatory Index of Customers & Tariff Compliance Synthesizer",
+      "oneLine": "Synthesizes active transportation contract terms, customer capacity entitlements, discounted rate agreements, and operational service parameters into certified quarterly regulatory filings (FERC Form 549B and open-access disclosures).",
+      "frictionSolved": "Eliminates 11.5 hours per quarter of labor-intensive cross-database extraction, customer portfolio reconciliation, and regulatory XML/tabular dossier compilation.",
+      "reads": "Active contract portfolio databases (FT, IT, FSS, ISS agreements), rate discount addenda, negotiated rate agreements, customer corporate identifiers (DUNS number, Legal Entity Identifier [LEI], parent company linkages), and regulatory filing templates (FERC Form 549B specifications, PNGRB open-access capacity registries, EU transparency platform data dictionaries).",
+      "does": "Extracts all transportation and storage contracts active during the reporting quarter; identifies customer corporate affiliations and pipeline ownership relationships; tabulates contract capacity entitlements (Peak MDQ, Annualized Quantity), primary receipt/delivery point locations, and contract expiration dates; identifies all contracts receiving discounted or negotiated rates below standard maximum tariff levels, cross-referencing tariff discount reporting rules; validates customer identification codes against regulatory master directories; formats the dataset into strict regulatory electronic schemas (e.g., FERC Form 549B XML submission packages or open-access transparency spreadsheets).",
+      "returns": "Certified Regulatory Index of Customers & Discount Rate Dossier with completed filing tables, cross-quarter contract change deltas (new executions, terminations, capacity amendments), and audit exception logs.",
+      "stopsAt": "Submitting formal regulatory filings to government agency portals (e.g., FERC eFiling or PNGRB portal) or signing legal officer certification statements.",
+      "failureModes": "If an active transportation agreement contains a negotiated rate or discount that lacks corresponding public tariff authority or board approval reference, the agent flags [Unsubstantiated Tariff Discount: Regulatory Audit Risk] and excludes the contract from final submission until commercial regulatory counsel verifies the legal tariff reference.",
+      "agentId": "OG-P43-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit of work. Never fabricate enterprise rupee/dollar multipliers. The pipeline client supplies their own transportation tariffs, shipper throughput volumes, and commercial labor rates.",
+    "rows": [
+      {
+        "agent": "Service Agreement Abstract & Entitlement Sieve",
+        "unit": "",
+        "beforeHours": 14.0,
+        "afterHours": 2.0,
+        "savedHours": 12.0,
+        "frictionRemoved": "Multi-page PDF contract parsing, clause extraction & TMS entry"
+      },
+      {
+        "agent": "Capacity Release Bidding & Tariff Compliance Sieve",
+        "unit": "",
+        "beforeHours": 13.0,
+        "afterHours": 1.5,
+        "savedHours": 11.5,
+        "frictionRemoved": "Manual bid evaluation, NPV tie-breaking & tariff ceiling verification"
+      },
+      {
+        "agent": "Contractual Entitlement & Nomination Path Audit Sieve",
+        "unit": "",
+        "beforeHours": 12.0,
+        "afterHours": 1.5,
+        "savedHours": 10.5,
+        "frictionRemoved": "Time-compressed nomination cross-checking against primary path MDQ"
+      },
+      {
+        "agent": "Counterparty Credit Exposure & Tariff Default Sieve",
+        "unit": "",
+        "beforeHours": 10.5,
+        "afterHours": 1.5,
+        "savedHours": 9.0,
+        "frictionRemoved": "Manual accounts receivable aging, mark-to-market imbalance & LOC audit"
+      },
+      {
+        "agent": "Monthly Imbalance Reconciliation & Tiered Cash-Out Sieve",
+        "unit": "",
+        "beforeHours": 16.0,
+        "afterHours": 2.5,
+        "savedHours": 13.5,
+        "frictionRemoved": "Multi-meter volume reconciliation, imbalance netting & tiered pricing"
+      },
+      {
+        "agent": "System Fuel Retention & In-Kind Reimbursement Sieve",
+        "unit": "",
+        "beforeHours": 10.0,
+        "afterHours": 1.5,
+        "savedHours": 8.5,
+        "frictionRemoved": "Compressor telemetry harvesting, fuel burn audit & UAF reconciliation"
+      },
+      {
+        "agent": "Regulatory Index of Customers & Tariff Compliance Synthesizer",
+        "unit": "",
+        "beforeHours": 13.5,
+        "afterHours": 2.0,
+        "savedHours": 11.5,
+        "frictionRemoved": "Cross-database contract aggregation & Form 549B filing compilation"
+      }
+    ],
+    "total": {
+      "unit": "",
+      "beforeHours": 89.0,
+      "afterHours": 12.5,
+      "savedHours": 76.5,
+      "frictionRemoved": "86.0% reduction in manual commercial data assembly and reconciliation drag",
+      "label": "TOTAL PER MONTHLY CONTRACT GOVERNANCE CYCLE"
+    }
+  },
+  "citations": [
+    {
+      "key": "[NAESB-WGQ]",
+      "citation": "NAESB, Wholesale Gas Quadrant (WGQ) Standards, Version 3.2, Standards 6.3.1, Quadrants 1, 3, 5",
+      "locator": "naesb.org/wgq",
+      "type": "Industry Standard",
+      "supports": "Base gas sales contract, capacity release, nomination timelines, invoicing"
+    },
+    {
+      "key": "[FERC-Part-284]",
+      "citation": "FERC, 18 CFR Part 284 — Open Access Transportation of Natural Gas, 2023",
+      "locator": "ferc.gov/natural-gas",
+      "type": "Federal Regulation",
+      "supports": "Open access regulations, Form 549B index of customers, capacity release rules"
+    },
+    {
+      "key": "[PNGRB-Access-Code]",
+      "citation": "PNGRB, Access Code for Common Carrier or Contract Carrier Natural Gas Pipelines Regulations, 2008 & 2020",
+      "locator": "pngrb.gov.in/regulations",
+      "type": "Statutory Regulation",
+      "supports": "Open access capacity allocation, gas transmission agreements (GTA), imbalance settlement"
+    },
+    {
+      "key": "[EU-CAM-NC]",
+      "citation": "European Commission, Regulation (EU) 2017/459 establishing a network code on capacity allocation mechanisms, 2017",
+      "locator": "eur-lex.europa.eu",
+      "type": "International Standard",
+      "supports": "Standard capacity products, auction mechanisms, third-party access (TPA)"
+    },
+    {
+      "key": "[ISO-15112]",
+      "citation": "ISO, ISO 15112: Natural Gas — Energy Determination, 2nd Edition, 2018",
+      "locator": "iso.org/standard",
+      "type": "International Standard",
+      "supports": "Energy billing determinants, heating value calculations, custody transfer energy"
+    },
+    {
+      "key": "[AGA-Gas-Contracts]",
+      "citation": "American Gas Association, Gas Transportation and Capacity Management Best Practices, 2021",
+      "locator": "aga.org/resources",
+      "type": "Industry Guide",
+      "supports": "Baseline timings for contract abstraction, capacity release bidding, and tariff filings"
+    },
+    {
+      "key": "[INGAA-Tariff-Guide]",
+      "citation": "Interstate Natural Gas Association of America, Pipeline Tariff and Open-Access Transportation Administration, 2022",
+      "locator": "ingaa.org/guidelines",
+      "type": "Industry Report",
+      "supports": "Quantification of commercial drag, credit risk governance, and regulatory compliance"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Quorum Software (TIPS / Energy Center), W Energy Software, Trellis Energy, SAP S/4HANA Energy, and OnePetro / American Gas Association technical archives for \"autonomous closed-loop transportation service agreement PDF ingestion, secondary capacity release NPV tie-breaker optimization, and multi-tier tariff cash-out imbalance reconciliation\".",
+    "result": "Negative Search, 2026-10. Incumbent commercial transportation management systems provide rules engines for scheduled nominations and monthly invoice generation based on manual rate inputs; none provide autonomous, agentic parsing of non-standard executed legal contract PDFs, real-time dynamic shipper credit exposure alerting combining mark-to-market imbalances and forward reservation obligations, or closed-loop reconciliation of system fuel retention against compressor telemetry without manual spreadsheet manipulation."
+  },
+  "line": "\"A pipeline company doesn't lose money on pipeline hydraulics or compressor engine trips; it loses money when a bankrupt shipper quietly builds up a thirty-day imbalance deficit while leaning on firm capacity rights that expired three weeks ago.\"",
+  "openQuestions": [
+    "Contract Ingestion Latency & Rate Accuracy: When commercial business development executes a complex, negotiated-rate firm transportation agreement with non-standard fuel tiers and receipt-delivery path rights, how many business days elapse before all tariff parameters are accurately reflected in your transportation management system, and how often do post-effective-date billing adjustments occur?",
+    "Real-Time Shipper Credit Exposure Blind Spots: During periods of extreme regional spot gas price volatility, does your commercial team have automated, daily visibility into the combined credit exposure of each shipper—incorporating mark-to-market unbilled imbalances, forward 3-month reservation liabilities, and expiring letters of credit—or do credit deficits only surface during end-of-month accounting cash-outs?",
+    "Fuel Retention Under-Recovery & UAF Tracking: How closely is your contractual in-kind shipper fuel retention percentage reconciled against actual physical compressor fuel consumption and system linepack drift, and what is your annual unrecovered fuel cost variance due to stale tariff fuel tracker filing adjustments?"
+  ]
+}

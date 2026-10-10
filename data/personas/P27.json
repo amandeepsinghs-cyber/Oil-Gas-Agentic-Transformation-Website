@@ -19,6 +19,20 @@
   "avatar": "avatars/P27_persona.jpg",
   "thumb": "avatars/thumbs/P27_thumb.jpg",
   "initials": "PI",
+  "domains": [
+    "midstream",
+    "downstream"
+  ],
+  "primaryDomain": "midstream",
+  "crossCutting": false,
+  "groups": {
+    "midstream": "Pipelines & Network",
+    "downstream": "Offsites & Distribution"
+  },
+  "valueSplit": {
+    "midstream": 0.65,
+    "downstream": 0.35
+  },
   "headline": "The Pipeline Integrity Engineer protects buried steel energy transmission arteries from the destructive forces of internal and external corrosion, third-party mechanical dents, and geohazard ground movement. While specialized integrity management software suites like Dynamic Risk IRIS and ROSEN NIMA serve as enterprise data repositories, they require immense manual engineering labor to align, cleanse, and reconcile In-Line Inspection (ILI / smart pig) run datasets. In a 500-kilometer transmission pipeline, comparing a 2018 Magnetic Flux Leakage (MFL) run against a 2024 Ultrasonic (UT) pig run requires aligning over 40,000 individual pipe joints and hundreds of thousands of metal-loss anomalies. Because inspection contractors utilize divergent odometer tracking, tool speeds, and girth weld numbering conventions, integrity engineers spend months manually matching weld tallies in spreadsheets to compute corrosion growth rates (mm/year). An error in alignment leads to spending $50k excavating the wrong pipe joint while an unmonitored critical defect corrodes to failure two miles away. Deploying a dedicated 7-agent hyper-specialized pipeline integrity squad saves 78.50 hours per major pipeline segment integrity assessment campaign, accelerating excavation dig package creation, identifying high-risk coincident dent-corrosion features, and automating statutory compliance filings.",
   "confidence": {
     "Persona": "Pipeline Integrity Engineer (P27)",

@@ -35,7 +35,7 @@
 
 **One Line**: Governs the mechanical integrity, non-destructive examination (NDE), corrosion rate monitoring, and remaining operational life of all static pressurized equipment (pressure vessels, distillation columns, heat exchangers, piping circuits, and atmospheric storage tanks) to prevent loss-of-containment disasters and guarantee statutory code compliance.
 
-**Why Their Output Matters**: Failures in static equipment integrity cause the most lethal and economically ruinous disasters in the hydrocarbon processing industry: catastrophic piping ruptures releasing boiling hydrocarbons into high-pressure vapor clouds; lethal hydrogen sulfide ($H_2S$) releases; boiling liquid expanding vapor explosions (BLEVEs); and refinery infernos (e.g., the 2012 Chevron Richmond refinery crude column pipe rupture from sulfidic corrosion that endangered 19 workers). Inaccurate corrosion modeling either results in unpredicted pipe blowouts or forces premature, multi-million-dollar emergency equipment replacements during plant turnarounds.
+**Why Their Output Matters**: Failures in static equipment integrity cause the most lethal and economically ruinous disasters in the hydrocarbon processing industry: catastrophic piping ruptures releasing boiling hydrocarbons into high-pressure vapor clouds; lethal hydrogen sulfide ($H_2S$) releases; boiling liquid expanding vapor explosions (BLEVEs); and refinery infernos (e.g., the 2012 Richmond refinery crude column pipe rupture from sulfidic corrosion that endangered 19 workers). Inaccurate corrosion modeling either results in unpredicted pipe blowouts or forces premature, multi-million-dollar emergency equipment replacements during plant turnarounds.
 
 **They do NOT Own:**
 | Not Theirs | Whose |

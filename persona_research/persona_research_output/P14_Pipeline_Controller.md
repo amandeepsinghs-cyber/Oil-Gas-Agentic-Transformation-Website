@@ -35,7 +35,7 @@
 
 **One Line**: Directs the 24/7 remote operational transmission of crude oil, natural gas, or refined products through high-pressure pipeline networks, operating compressor/pump stations, maintaining linepack, and serving as the primary guardian against pipeline ruptures.
 
-**Why Their Output Matters**: A failure in pipeline control room operations leads directly to catastrophic environmental pipeline ruptures (e.g., Enbridge Marshall spill leaking 20,000 barrels into a river system), explosive natural gas urban pipeline ruptures (San Bruno disaster), or severe regional supply shortages paralyzing entire economies.
+**Why Their Output Matters**: A failure in pipeline control room operations leads directly to catastrophic environmental pipeline ruptures (e.g., the 2010 Marshall, Michigan crude pipeline spill leaking 20,000 barrels into a river system), explosive natural gas urban pipeline ruptures (the 2010 San Bruno gas pipeline rupture), or severe regional supply shortages paralyzing entire economies.
 
 **They do NOT Own:**
 | Not Theirs | Whose |
@@ -302,7 +302,7 @@
 | `[API-RP-1165]` | API, *Pipeline SCADA Displays*, 2nd Edition, 2022 | API Standards Store | Recommended Practice | SCADA human factors & console design |
 | `[API-RP-1175]` | API, *Pipeline Leak Detection Program Management*, 2017 | API Standards Store | Recommended Practice | Leak alarm triage & operational culture |
 | `[API-RP-1130]` | API, *Computational Pipeline Monitoring for Liquids*, 3rd Ed | API Standards Store | Technical Standard | CPM mass balance & negative pressure wave rules |
-| `[NTSB-PAR-1201]`| US NTSB, *Enbridge Pipeline Rupture Investigation*, 2012 | ntsb.gov | Incident Investigation | Leak alarm desensitization as root cause |
+| `[NTSB-PAR-1201]`| US NTSB, *Marshall, Michigan Crude Pipeline Rupture Investigation*, 2012 | ntsb.gov | Incident Investigation | Leak alarm desensitization as root cause |
 | `[ASME-B31-4-8]` | ASME, *Pipeline Transportation Systems (B31.4 / B31.8)*, 2019 | asme.org | Technical Standard | MAOP safety margins & pressure transient limits |
 
 ### Negative Search Registry

@@ -1,0 +1,614 @@
+/* GENERATED FILE, DO NOT EDIT BY HAND.
+ * Source:     persona_research/persona_research_output/*.md
+ * Regenerate: python3 scripts/extract_persona_research.py
+ */
+window.PERSONA_DETAIL = window.PERSONA_DETAIL || {};
+window.PERSONA_DETAIL["P36"] = {
+  "id": "P36",
+  "title": "Measurement Engineer",
+  "aliases": [
+    "Hydrocarbon Measurement Engineer",
+    "Custody Transfer Specialist",
+    "Fiscal Metering Engineer",
+    "Gas Measurement Specialist",
+    "Measurement Analyst"
+  ],
+  "segment": "Midstream — Measurement & custody transfer",
+  "segmentLong": "Midstream & Downstream — Measurement & Custody Transfer (Pipeline Interconnects, Storage Terminals, Gas Plants & Refineries)",
+  "setting": "Custody Transfer Metering Skids & Terminal Control Office: Fiscal liquid metering skids, natural gas metering stations, LACT units, pipe/compact prover loops, automatic tank gauging (ATG) storage farms, and flow computer control racks",
+  "tier": "Extended",
+  "core20": false,
+  "governingStandards": "API MPMS / AGA Reports",
+  "agentFocus": "Meter Prover Run Linearity & Repeatability Sieve",
+  "sourceFile": "P36_Measurement_Engineer.md",
+  "person": "Lars Eriksen",
+  "avatar": "avatars/P36_persona.jpg",
+  "thumb": "avatars/thumbs/P36_thumb.jpg",
+  "initials": "ME",
+  "domains": [
+    "midstream",
+    "downstream"
+  ],
+  "primaryDomain": "midstream",
+  "crossCutting": false,
+  "groups": {
+    "midstream": "Commercial & Measurement",
+    "downstream": "Offsites & Distribution"
+  },
+  "valueSplit": {
+    "midstream": 0.55,
+    "downstream": 0.45
+  },
+  "headline": "The Measurement Engineer serves as the financial cash-register guardian of the hydrocarbon value chain, ensuring that every barrel of crude oil, cubic meter of natural gas, and ton of refined product transferred between operating entities is measured with unimpeachable metrological accuracy and statutory compliance. While smart flow computers (Omni Flow, Daniel, Emerson ROC) calculate real-time gross pulses and terminal automation systems (TAS) log load rack transactions, custody transfer reconciliation and metrology auditing remain an intense, high-friction battle of fragmented spreadsheets, unlogged parameter investigations, and meter drift disputes. Across a transmission pipeline network moving 500,000 barrels per day or 2 billion cubic feet of natural gas per day, a systematic measurement bias of just 0.10% represents USD 25,000,000 to USD 35,000,000 in disputed annual commodity value. Measurement engineers and analysts spend hundreds of hours manually verifying meter proving factor repeatability against API MPMS Chapter 12 tolerance envelopes, reconciling gross-to-net volume correction factors (CTL/CPL) across bulk storage tanks, auditing electronic flow measurement (EFM) event audit trails for unlogged orifice plate changes, and compiling contractual custody dispute dossiers under tight commercial deadlines. Deploying a hyper-specialized 7-agent squad eliminates 21.15 hours per comprehensive fiscal reconciliation and proving campaign, eliminating unrecorded measurement drift, resolving shipper imbalance disputes, and ensuring total audit compliance.",
+  "confidence": {
+    "Persona": "Measurement Engineer (P36)",
+    "Research Status": "Grounded in international hydrocarbon measurement standards, custody transfer contracts, and statutory metrology codes",
+    "Competency Standard Used": "API MPMS (Chapters 2, 3, 4, 5, 11, 12, 14, and 21), AGA Reports (Nos. 3, 7, 8, 9, 11), ISO 5167 / ISO 17089, and OISD-STD-109 / PNGRB Regulations",
+    "Standard Coverage": "15 of 15 fiscal measurement and custody transfer actions mapped directly to recognized international metrology and statutory standards",
+    "Actions Cited": "15 actions trace directly to API MPMS, AGA Reports, ISO metrology standards, and OISD/PNGRB regulatory mandates",
+    "Pain Claims Cited": "10 of 10 pain claims backed by published flow measurement conference proceedings, pipeline custody transfer arbitration records, and metrology audit reports",
+    "Timings Sourced": "Meter proving analysis, gross-to-net volume reconciliation, EFM/GC configuration audit, and measurement ticket dispute compilation times verified via measurement specialist audit records",
+    "Gap Claims Cited": "Flow computer systems (Omni Flow, Daniel, Emerson ROC, Spirit IT) calculate real-time custody totals; commercial measurement databases (Quorum Flow-Cal, Schneider ClearSCADA) ingest hourly logs, but neither autonomously reconstructs discrepancy audit trails across mismatched sampling intervals, unlogged orifice changes, and prover runs without intensive manual engineering intervention",
+    "Known Gaps": "Multi-path ultrasonic meter diagnostic path velocity profiles under severe upstream swirl or asymmetric flow distortion require physical flow conditioner inspection"
+  },
+  "role": {
+    "oneLine": "Ensures accuracy, auditability, and regulatory compliance of fiscal metering, automatic tank gauging, and volume correction calculations across storage facilities and transfer custody points.",
+    "whyItMatters": "Measurement error directly corrupts commercial revenue and statutory taxation. A 0.15% undetected calibration bias on a fiscal pipeline interconnect or marine loading terminal transfers millions of dollars between pipeline operators, joint venture partners, and shippers without contractual basis, triggering protracted arbitration and regulatory penalties from governing bodies (FERC, PNGRB, PESO). In gas systems, undetected moisture or unlogged orifice plate wear corrupts energy billing (MMBtu/MJ), leading to severe contract non-compliance and unrecovered hydrocarbon losses.",
+    "notOwned": [
+      {
+        "task": "Long-Distance Pipeline SCADA Dispatching & Hydraulic Pressure Control",
+        "owner": "Pipeline Controller (P14)"
+      },
+      {
+        "task": "Marine Tanker Mooring, Berth Safety Checklists & Gangway Management",
+        "owner": "Terminal Superintendent (P15)"
+      },
+      {
+        "task": "Physical Flange Unbolting, Pipe Fitting & Mechanical Meter Removal",
+        "owner": "Maintenance Machinist / Pipefitter"
+      },
+      {
+        "task": "Commercial Commodity Trading & Pipeline Shipper Contract Negotiation",
+        "owner": "Crude & Gas Trader (P29)"
+      },
+      {
+        "task": "Master DCS Architecture Design & Enterprise IT Network Infrastructure",
+        "owner": "Control Systems Engineer / DCS Architect"
+      }
+    ],
+    "variants": [
+      {
+        "name": "Liquid Custody Transfer Specialist",
+        "detail": "Focuses on Lease Automatic Custody Transfer (LACT) units, Coriolis mass flowmeters, turbine meters, pipe/compact provers, automatic tank gauging (ATG) strapping tables, and API MPMS Chapter 11 CTL/CPL volume correction calculations."
+      },
+      {
+        "name": "Gas Measurement Engineer",
+        "detail": "Focuses on high-pressure natural gas transmission measurement, multi-path ultrasonic meters (AGA 9), orifice meter runs (AGA 3 / ISO 5167), gas chromatograph energy billing (AGA 5 / AGA 8), and EFM audit trail compliance (API MPMS 21.1)."
+      },
+      {
+        "name": "Measurement & Loss Control Analyst",
+        "detail": "Operates primarily in regional corporate offices or terminal hubs, reconciling pipeline linepack balances, terminal physical inventory gain/loss ledgers, and joint venture discrepancy claims."
+      }
+    ],
+    "titleCheck": "The industry title is Measurement Engineer, Hydrocarbon Measurement Engineer, or Custody Transfer Specialist. In gas transmission, the role is often titled Gas Measurement Specialist or Measurement Analyst. Avoid confusing this role with \"Instrument Technician\" (who executes physical field wiring and transmitter bench calibrations) or \"Production Accountant\" (who manages back-office financial ledger posting).",
+    "whereTheWorkHappens": {
+      "Work Setting": "Custody Transfer Metering Skids & Terminal Control Office: Split between field metering skids (outdoor skid shelters, LACT units, prover loops, gas chromatograph shelters) and the terminal measurement office. Field work involves witnessing proving runs, inspecting meter internals, and verifying primary element dimensions.",
+      "What They Can Reach": "In the office: Custody flow computer remote consoles (Omni, Daniel, Spirit IT), measurement accounting software (Flow-Cal), chromatograph diagnostic software (Danalyzer), and tank gauging displays. In the field: Handheld communicator (HART/Modbus), micrometer calipers, certified hydrometers/thermometers, and intrinsically safe laptops.",
+      "Shift Pattern": "Primarily regular daytime engineering hours (40–50 hours/week), with urgent on-call mobilization during disputed custody transfer proving runs, joint shipper measurement witness audits, and monthly billing closeout windows.",
+      "Where the Record Lives": "Custody flow computer non-volatile audit memory, certified meter proving tickets, daily gross-to-net inventory balance reports, independent surveyor certificates, and commercial measurement accounting systems (Quorum Flow-Cal)."
+    }
+  },
+  "standards": [
+    {
+      "key": "",
+      "citation": "[API-MPMS]: American Petroleum Institute, Manual of Petroleum Measurement Standards:"
+    },
+    {
+      "key": "",
+      "citation": "[AGA-REPORTS]: American Gas Association, Transmission Measurement Committee Reports:"
+    },
+    {
+      "key": "",
+      "citation": "[ISO-METROLOGY]: International Organization for Standardization:"
+    },
+    {
+      "key": "",
+      "citation": "[OISD-PNGRB]: Oil Industry Safety Directorate & Petroleum and Natural Gas Regulatory Board:"
+    },
+    {
+      "key": "",
+      "citation": "[GPA-MIDSTREAM]: GPA Midstream Association:"
+    }
+  ],
+  "vendorGaps": [
+    {
+      "product": "Omni Flow / Emerson Daniel / Spirit IT",
+      "module": "Custody Flow Computer Firmware",
+      "solves": "Executes high-frequency pulse accumulation, API MPMS Chapter 11 CTL/CPL math, and AGA 3/8/9 real-time flow rate integration on dedicated hardware.",
+      "gap": "Skid-level silo. Operates strictly on instantaneous sensor inputs. Cannot retrospectively reconstruct why a meter factor shifted over consecutive months, nor correlate multi-station linepack discrepancies across shipper delivery schedules."
+    },
+    {
+      "product": "Quorum Flow-Cal / Schneider ClearSCADA",
+      "module": "Measurement Data Management (MDM)",
+      "solves": "Ingests daily and hourly flow computer EFM archives, normalizes gas compositions, and calculates monthly volume billing statements.",
+      "gap": "Post-processing accounting engine. Ingests historical data after transactions close; flags broad volumetric discrepancies but does not autonomously isolate whether drift stemmed from an unlogged orifice plate swap, SOS deviation, or gas chromatograph calibration gas contamination without extensive manual engineering forensics."
+    },
+    {
+      "product": "Endress+Hauser Tankvision / Rosemount TankMaster",
+      "module": "Automatic Tank Gauging (ATG)",
+      "solves": "Displays real-time radar level, multi-spot temperature averages, and water bottom interface depths in storage tanks.",
+      "gap": "Generates raw physical level values; relies on manual engineer intervention to verify strapping table datum shifts, roof immersion corrections, and temperature stratification adjustments during custody transfers."
+    },
+    {
+      "product": "Emerson Danalyzer / ABB Totalflow GC",
+      "module": "Online Gas Chromatography",
+      "solves": "Analyzes C1–C6+ / C9+ gas compositions every 3 to 5 minutes, normalizes mole fractions, and computes gross heating value (GHV).",
+      "gap": "Analyzes sample streams locally; fails to autonomously cross-check calibration cylinder expiration dates, monitor carrier gas drift trajectories, or flag invalid unnormalized sum overrides without manual specialist inspection."
+    }
+  ],
+  "actions": [
+    {
+      "code": "A01",
+      "action": "Validate meter factor linearity and repeatability from pipe and compact prover runs",
+      "source": "[API-MPMS-Ch12]",
+      "scope": "skid",
+      "bucket": "B1",
+      "freq": "Batch",
+      "time": "3.5 hrs",
+      "friction": "calculation",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Meter Prover Run Linearity & Repeatability (B1, [API-MPMS-Ch12])",
+      "today": "Engineer manually copies raw pulse counts and temperatures across 5 proving passes into a spreadsheet to verify that run repeatability satisfies the 0.05% (0.0005) tolerance envelope.",
+      "failureMode": "Math mistakes or undetected 4-way diverter valve leakage cause invalid meter factors to be locked into flow computers, biasing billing across millions of barrels.",
+      "agentNote": "→ See §4 (Agent 1: Meter Prover Run Linearity & Repeatability Sieve)."
+    },
+    {
+      "code": "A02",
+      "action": "Reconcile bulk terminal gross-to-net volumes using tank strapping and CTL/CPL factors",
+      "source": "[API-MPMS-Ch11]",
+      "scope": "facility",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "4.0 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Bulk Terminal Gross-to-Net Static Volume Reconciliation (B1, [API-MPMS-Ch11])",
+      "today": "Engineer interpolates tank strapping tables and manually calculates temperature and pressure correction factors (CTL/CPL) and BS&W deductions to reconcile end-of-day terminal stock.",
+      "failureMode": "Manual dipping calculation errors obscure real pipeline batch interface contamination or underground tank leakages, triggering inventory audit fines.",
+      "agentNote": "→ See §4 (Agent 2: Terminal Bulk Gross-to-Net Static Volume Reconciliation Sieve)."
+    },
+    {
+      "code": "A03",
+      "action": "Audit EFM event trails and gas chromatograph configuration logs for unlogged changes",
+      "source": "[API-MPMS-Ch21]",
+      "scope": "station",
+      "bucket": "B1",
+      "freq": "Weekly",
+      "time": "3.5 hrs",
+      "friction": "traceability",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "EFM & Gas Chromatograph Audit Trail Verification (B1, [API-MPMS-Ch21])",
+      "today": "Engineer reviews thousands of chronological EFM event records to confirm that field technician orifice plate swaps, differential pressure zero-trims, and gas composition updates were properly documented.",
+      "failureMode": "Unlogged orifice plate size changes or expired calibration gas cylinder usage skew heating value calculations, resulting in multi-thousand-dollar shipper billing disputes.",
+      "agentNote": "→ See §4 (Agent 3: EFM & Gas Chromatograph Audit Trail Verification Sieve)."
+    },
+    {
+      "code": "A04",
+      "action": "Evaluate multi-path ultrasonic meter speed of sound and acoustic path ratios",
+      "source": "[AGA-Report-9]",
+      "scope": "skid",
+      "bucket": "B1",
+      "freq": "Periodic",
+      "time": "2.5 hrs",
+      "friction": "consistency",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Multi-Path Ultrasonic Acoustic Path Diagnostics (B1, [AGA-Report-9])",
+      "today": "Engineer manually exports chordal velocity logs and compares path speed of sound against theoretical AGA 10 equation of state values to identify meter drift or swirl.",
+      "failureMode": "Flow conditioner fouling or transducer face liquid film deposition goes unnoticed until chordal velocity failure trips the primary meter, halting pipeline deliveries.",
+      "agentNote": "→ See §4 (Agent 4: Multi-Path Ultrasonic Gas & Liquid Meter Diagnostics Sieve)."
+    },
+    {
+      "code": "A05",
+      "action": "Inspect orifice plate geometry, edge sharpness, and DP cell calibration logs",
+      "source": "[AGA-Report-3]",
+      "scope": "skid",
+      "bucket": "B1",
+      "freq": "Monthly",
+      "time": "2.25 hrs",
+      "friction": "integrity",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Orifice Plate Inspection & DP Transmitter Calibration (B1, [AGA-Report-3])",
+      "today": "Engineer verifies 4-point micrometer bore measurements, bevel angle logs, and 5-point DP calibration curves against AGA 3 beta ratio tolerance criteria.",
+      "failureMode": "Nicked or rounded orifice plate edges cause systemic under-measurement exceeding 1.0%, silently leaking commercial revenue to pipeline interconnect partners.",
+      "agentNote": "→ See §4 (Agent 5: Orifice Plate Inspection & DP Transmitter Calibration Sieve)."
+    },
+    {
+      "code": "A06",
+      "action": "Reconcile shipper custody transfer discrepancies and compile dispute settlement dossiers",
+      "source": "[API-MPMS-Ch13]",
+      "scope": "network",
+      "bucket": "B1",
+      "freq": "Event",
+      "time": "6.0 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Custody Transfer Discrepancy & Dispute Settlement (B1, [API-MPMS-Ch13])",
+      "today": "Engineer spends days pulling conflicting flow tickets, historical prover factor curves, and temperature logs to defend against joint venture shipper discrepancy claims.",
+      "failureMode": "Failure to substantiate measurement uncertainty per ISO 5168 / GUM forces operators into expensive commercial settlements or legal arbitration.",
+      "agentNote": "→ See §4 (Agent 6: Custody Transfer Measurement Discrepancy & Dispute Audit Sieve)."
+    },
+    {
+      "code": "A07",
+      "action": "Synthesize daily facility metrology mass/energy balances and line balance loss reports",
+      "source": "[OISD-STD-109]",
+      "scope": "facility",
+      "bucket": "B1",
+      "freq": "Daily",
+      "time": "2.25 hrs",
+      "friction": "assembly",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "✔✔",
+      "label": "Facility Metrology Mass/Energy Balance Synthesis (B1, [OISD-STD-109])",
+      "today": "Engineer manually collates liquid run tickets, gas totalizers, tank movements, and flare meter logs into daily spreadsheets to compute facility line balance loss.",
+      "failureMode": "Late or inaccurate line loss reporting hides physical equipment leaks or meter drift, causing statutory non-compliance with OISD/PNGRB reporting thresholds.",
+      "agentNote": "→ See §4 (Agent 7: Facility Metrology Balance & UAF Synthesis Agent)."
+    },
+    {
+      "code": "A08",
+      "action": "Execute automated proving pass sequences and pulse accumulation on custody skids",
+      "source": "[API-MPMS-Ch4]",
+      "scope": "skid",
+      "bucket": "B2",
+      "freq": "Batch",
+      "time": "0.5 hrs",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Flow Computer)",
+      "label": "Automated Skid Proving Sequence Execution (B2, [API-MPMS-Ch4])",
+      "today": "Dedicated flow computer firmware executes high-speed pulse gating and diverter valve sequencing across prover detector switches.",
+      "agentNote": "❌ No. Core flow computer firmware task."
+    },
+    {
+      "code": "A09",
+      "action": "Transmit real-time custody telemetry, static pressures, and gas flows to pipeline SCADA",
+      "source": "[API-MPMS-Ch21]",
+      "scope": "station",
+      "bucket": "B2",
+      "freq": "Continuous",
+      "time": "0.25 hrs",
+      "friction": "waiting",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (SCADA Host)",
+      "label": "Real-Time Custody Telemetry SCADA Transmission (B2, [API-MPMS-Ch21])",
+      "today": "Handled by dedicated RTU / SCADA polling loops transmitting flow rates, line pressures, and accumulator values every 1 to 5 seconds.",
+      "agentNote": "❌ No. Core SCADA communication infrastructure."
+    },
+    {
+      "code": "A10",
+      "action": "Physically pull, clean, micrometer-measure, and caliper-inspect orifice plates",
+      "source": "[API-MPMS-Ch5]",
+      "scope": "skid",
+      "bucket": "B3",
+      "freq": "Monthly",
+      "time": "2.0 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Field Technician)",
+      "label": "Physical Orifice Plate Pull & Caliper Inspection (B3, [API-MPMS-Ch5])",
+      "today": "Field technicians use senior meter fitting gear to isolate line pressure, remove the orifice plate, clean residue, and micrometer-measure bore dimensions.",
+      "agentNote": "❌ No. Pure mechanical field maintenance."
+    },
+    {
+      "code": "A11",
+      "action": "Witness joint physical custody meter proving and sign mutual meter proving tickets",
+      "source": "[API-MPMS-Ch12]",
+      "scope": "skid",
+      "bucket": "B3",
+      "freq": "Event",
+      "time": "2.5 hrs",
+      "friction": "judgment",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Witness Engineer)",
+      "label": "Joint Meter Proving Witnessing & Sign-Off (B3, [API-MPMS-Ch12])",
+      "today": "Measurement engineer and shipper representative physically witness prover passes on-site, inspect prover sphere condition, and sign paper meter proving certificates.",
+      "agentNote": "❌ No. Statutory human witness verification."
+    },
+    {
+      "code": "A12",
+      "action": "Execute continuous gas chromatograph carrier gas backflush and stream switching",
+      "source": "[GPA-2261]",
+      "scope": "skid",
+      "bucket": "B2",
+      "freq": "Continuous",
+      "time": "0.2 hrs",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (GC Controller)",
+      "label": "Online Gas Chromatograph Continuous Operation (B2, [GPA-2261])",
+      "today": "Microprocessor-controlled thermal conductivity detectors and sample valves cycle automatically every 3 minutes inside certified field shelters.",
+      "agentNote": "❌ No. Proprietary analyzer controller operation."
+    },
+    {
+      "code": "A13",
+      "action": "Conduct manual tank dip gauging, water cut tape measurement, and lab thief sampling",
+      "source": "[API-MPMS-Ch3]",
+      "scope": "tank",
+      "bucket": "B3",
+      "freq": "Daily",
+      "time": "1.5 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Field Gauger)",
+      "label": "Manual Tank Dipping & Thief Sampling (B3, [API-MPMS-Ch3])",
+      "today": "Field gaugers climb storage tanks, drop innage/outage gauging tapes, apply water-finding paste, and draw bottom thief samples for lab testing.",
+      "agentNote": "❌ No. Physical field measurement."
+    },
+    {
+      "code": "A14",
+      "action": "Generate automated electronic custody transfer run tickets and dispatch BOL records",
+      "source": "[API-MPMS-Ch12]",
+      "scope": "facility",
+      "bucket": "B2",
+      "freq": "Daily",
+      "time": "0.5 hrs",
+      "friction": "execution",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (TAS Software)",
+      "label": "Automated Custody Run Ticket Generation (B2, [API-MPMS-Ch12])",
+      "today": "Flow computers and terminal automation software automatically close batches and print legal run tickets at midnight or batch termination.",
+      "agentNote": "❌ No. Core TAS / flow computer software function."
+    },
+    {
+      "code": "A15",
+      "action": "Replace worn compact prover optical switches, seals, and detector switches on skid",
+      "source": "[API-MPMS-Ch4]",
+      "scope": "skid",
+      "bucket": "B3",
+      "freq": "Periodic",
+      "time": "3.0 hrs",
+      "friction": "physical",
+      "agentRef": null,
+      "owner": "none",
+      "agentLabel": "❌ (Maintenance Crew)",
+      "label": "Prover Mechanical Seal & Switch Overhaul (B3, [API-MPMS-Ch4])",
+      "today": "Maintenance crew disassembles compact prover body, replaces piston seals, and inspects optical detector switches during scheduled outages.",
+      "agentNote": "❌ No. Mechanical workshop and skid maintenance."
+    }
+  ],
+  "agents": [
+    {
+      "n": 1,
+      "name": "Meter Prover Run Linearity & Repeatability Sieve",
+      "oneLine": "Ingests pipe prover, compact prover, and master meter run data to validate meter factors, pulse repeatability, and linearity against API MPMS Chapter 12 tolerance limits.",
+      "frictionSolved": "Eliminates 3.10 hours per proving campaign of manual pulse count verification, temperature/pressure correction calculations, and historical meter factor trend auditing.",
+      "reads": "Prover base volume (PBV) certificates, raw detector switch pulse counts, temperature and pressure transmitter logs at the meter and prover, fluid API gravity or density, and historical meter factor control charts.",
+      "does": "Calculates temperature and pressure correction factors for liquid (CTL, CPL) and steel (CTS, CPS) per API MPMS Chapter 11 and Chapter 12.2; computes meter factors across 5 consecutive runs; validates that run repeatability satisfies the 0.05% (0.0005) tolerance envelope; tracks meter factor shifts against historical baseline; flags meter factor drift greater than 0.25% or mechanical displacement degradation.",
+      "returns": "Certified Meter Prover Run Report (meter_tag, prover_id, operating_flow_rate, raw_meter_factor, repeatability_spread_pct, historical_deviation_pct, proving_status, degradation_flags).",
+      "stopsAt": "Overriding a failed meter proving run or manually recalibrating prover base volume registers in the custody flow computer.",
+      "failureModes": "If 5 consecutive prover runs fail to repeat within 0.05%, the agent flags: [Prover Run Repeatability Failure: Seal Leakage or Flow Instability Suspected — Proving Rejected].",
+      "agentId": "OG-P36-A01"
+    },
+    {
+      "n": 2,
+      "name": "Terminal Bulk Gross-to-Net Static Volume Reconciliation Sieve",
+      "oneLine": "Reconciles bulk terminal tank gauge telemetry with lab quality certificates to compute net standard volumes and isolate physical inventory loss/gain anomalies per API MPMS Chapters 11 and 12.",
+      "frictionSolved": "Eliminates 3.50 hours per daily storage reconciliation of transcribing tank dipping tapes, manual strapping table interpolations, and volume correction lookups.",
+      "reads": "Automatic tank gauging (ATG) radar levels, multi-spot temperature averages, free water bottom cuts, certified tank strapping capacity tables, laboratory density (API gravity/density at 15°C or 60°F), and BS&W centrifuge assays.",
+      "does": "Converts observed liquid level to total observed volume (TOV) using certified strapping tables with floating roof adjustment; subtracts free water to yield gross observed volume (GOV); applies CTL and CPL per API MPMS Chapter 11.1/11.2 to compute gross standard volume (GSV); deducts sediment and water to determine net standard volume (NSV); compares daily tank inventory deltas against pipeline receipts and rack dispatches to compute net gain or loss.",
+      "returns": "Bulk Terminal Gross-to-Net Reconciliation Dossier (tank_id, observed_level_mm, gross_standard_volume_bbls, net_standard_volume_bbls, daily_variance_pct, inventory_reconciliation_flag, anomaly_explanation).",
+      "stopsAt": "Adjusting financial inventory ledgers in enterprise ERP systems or re-strapping physical storage tanks.",
+      "failureModes": "If daily inventory loss or gain exceeds statutory or contractual thresholds (typically ±0.25%), the agent triggers: [Inventory Anomaly Detected: Storage Loss Exceeds Tolerance — Physical Tank Walkdown and Valve Audit Required].",
+      "agentId": "OG-P36-A02"
+    },
+    {
+      "n": 3,
+      "name": "EFM & Gas Chromatograph Audit Trail Verification Sieve",
+      "oneLine": "Audits electronic flow measurement configuration logs and online gas chromatograph telemetry to detect unlogged orifice plate changes, calibration gas drifts, and heating value discrepancies per API MPMS Chapter 21.1 and AGA Report No. 9.",
+      "frictionSolved": "Eliminates 3.15 hours per station audit of manually sifting through thousands of chronological EFM event records, parameter change logs, and unverified gas quality certificates.",
+      "reads": "EFM flow computer configuration change logs, daily event audit trails, differential pressure cell zero-drift archives, online gas chromatograph 11-component composition streams, calibration gas cylinder certificates, and heating value (BTU/scf, MJ/Sm3) logs.",
+      "does": "Cross-references EFM parameter change logs against authorized maintenance work tickets per API MPMS Chapter 21.1; detects unauthorized orifice plate bore size changes or transmitter span modifications; evaluates gas chromatograph normalization sums (99.0% to 101.0% per GPA 2261 / ISO 10723); tracks calibration gas cylinder expiry dates; computes gross heating value and Wobbe index discrepancies against pipeline tariff specifications.",
+      "returns": "EFM & Gas Quality Audit Verification Dossier (station_id, unlogged_parameter_changes_count, gc_normalization_status, heating_value_variance_pct, tariff_compliance_flag, discrepancy_audit_trail).",
+      "stopsAt": "Authorizing billing adjustments or updating live gas chromatograph response factors in flow computers.",
+      "failureModes": "If unlogged changes to primary element dimensions (orifice bore or meter factor) are detected in the audit trail, the agent flags: [Critical Metrology Breach: Unlogged Primary Element Modification Detected — Station Volume Recalculation Triggered].",
+      "agentId": "OG-P36-A03"
+    },
+    {
+      "n": 4,
+      "name": "Multi-Path Ultrasonic Gas & Liquid Meter Diagnostics Sieve",
+      "oneLine": "Evaluates acoustic path speed of sound, path velocity ratios, and turbulence indices to diagnose flow profile distortion, transducer fouling, and meter drift per AGA Report No. 9 and ISO 17089.",
+      "frictionSolved": "Eliminates 2.20 hours per meter inspection of downloading proprietary diagnostic logs, calculating theoretical speed of sound, and manually plotting chordal velocity profiles.",
+      "reads": "Ultrasonic flowmeter (USM) chordal transit times, individual acoustic path velocities, gain levels, signal-to-noise ratios (SNR), gas composition from upstream chromatograph, and operating pressure and temperature.",
+      "does": "Calculates theoretical gas speed of sound (SOS) using AGA Report No. 10 / AGA Report No. 8 equation of state; compares path-measured SOS against theoretical SOS (verifying ±0.2% tolerance envelope); analyzes chordal path velocity ratios (outer-to-inner chord ratios), profile factor, symmetry, and cross-flow; identifies signs of upstream flow conditioner clogging, transducer face liquid film deposition, or acoustic noise interference from throttling control valves.",
+      "returns": "Ultrasonic Meter Health Diagnostic Scorecard (meter_tag, theoretical_vs_measured_sos_delta_pct, profile_symmetry_index, path_gain_margin_db, fouling_risk_status, diagnostic_recommendations).",
+      "stopsAt": "Removing ultrasonic meter spools from service or executing physical transducer zero-flow calibrations.",
+      "failureModes": "If measured speed of sound on any path deviates from theoretical EOS calculation by more than 0.2%, the agent alerts: [Acoustic Velocity Out of Envelope: SOS Delta Exceeds AGA 9 Limit — Transducer Contamination or Composition Mismatch].",
+      "agentId": "OG-P36-A04"
+    },
+    {
+      "n": 5,
+      "name": "Orifice Plate Inspection & DP Transmitter Calibration Sieve",
+      "oneLine": "Verifies orifice plate geometry, edge sharpness, and differential pressure transmitter 5-point calibration drift against AGA Report No. 3 and ISO 5167 standards.",
+      "frictionSolved": "Eliminates 2.00 hours per meter run inspection of manual micrometer averaging, edge radius verification, and differential pressure square-root cutoff calculations.",
+      "reads": "Orifice plate micrometer bore readings (minimum 4-point internal diameter measurements), plate thickness, bevel angle inspection logs, edge sharpness optical records, transmitter 5-point calibration curves, and static line pressure telemetry.",
+      "does": "Verifies bore roundness and diameter tolerance per AGA Report No. 3 / API MPMS Chapter 14.3 / ISO 5167; calculates beta ratio (d/D) and checks that beta falls within the certified 0.10 to 0.75 range; validates upstream/downstream straight pipe run compliance; checks DP transmitter zero-shift and calibration span linearity (±0.1% tolerance); flags low-flow operation below valid square-root extraction cutoffs where measurement uncertainty spikes.",
+      "returns": "Orifice Meter Compliance Dossier (meter_run_id, plate_serial_no, calculated_beta_ratio, edge_sharpness_status, dp_calibration_linearity_pct, metrology_compliance_verdict).",
+      "stopsAt": "Physically replacing damaged orifice plates or recalibrating smart multivariable transmitters in hazardous field zones.",
+      "failureModes": "If plate edge inspection shows edge rounding or nicking, the agent flags: [Orifice Edge Non-Compliant: Dull Edge Detected — Systemic Under-Measurement Exceeding 1.0% Likely].",
+      "agentId": "OG-P36-A05"
+    },
+    {
+      "n": 6,
+      "name": "Custody Transfer Measurement Discrepancy & Dispute Audit Sieve",
+      "oneLine": "Reconciles custody transfer batch discrepancies between delivery and receipt points, models measurement uncertainty per ISO 5168 / GUM, and generates contractual shipper true-up audit packages.",
+      "frictionSolved": "Eliminates 5.25 hours per custody batch dispute of cross-referencing conflicting flow tickets, propagating uncertainty budgets, and negotiating commercial volume adjustments.",
+      "reads": "Shipper custody transfer tickets, receipt and delivery flow computer hourly records, pipeline batch tracking logs, historical proving tickets, gas chromatograph heating value logs, and interconnect commercial operating agreements.",
+      "does": "Reconstructs minute-by-minute custody batch deliveries; compares delivery volumes against custody receipt meter readings; propagates total measurement uncertainty per ISO 5168 and API MPMS Chapter 13 using Monte Carlo or root-sum-square methodology; calculates net volume and energy variance; determines whether variance is within combined expanded measurement uncertainty; computes retrospective volume adjustments and financial billing impact.",
+      "returns": "Custody Transfer Measurement Dispute & Retrospective True-Up Dossier (batch_id, shipper_id, delivery_gross_net_volume, receipt_gross_net_volume, measurement_uncertainty_pct, financial_variance_usd, commercial_reconciliation_verdict).",
+      "stopsAt": "Authorizing formal commercial settlements or executing bank financial wire transfers.",
+      "failureModes": "If custody transfer discrepancy exceeds the combined meter station expanded uncertainty (k=2, 95% confidence level), the agent issues: [Unresolved Custody Discrepancy: Imbalance Exceeds Expanded Uncertainty Budget — Contractual Dispute Notice Prepared].",
+      "agentId": "OG-P36-A06"
+    },
+    {
+      "n": 7,
+      "name": "Facility Metrology Balance & UAF Synthesis Agent",
+      "oneLine": "Aggregates multi-skid custody flows, tank farm movements, and fuel gas consumptions to synthesize facility daily metrology balances and track unaccounted-for hydrocarbon losses per OISD and statutory rules.",
+      "frictionSolved": "Eliminates 1.95 hours per daily balancing cycle of assembling disparate meter totals across liquid skids, gas stations, flare lines, and storage tanks into regulatory reporting formats.",
+      "reads": "Fiscal liquid meter skid run tickets, gas metering station totalizers, tank farm gross-to-net movements, refinery/gas plant fuel gas consumptions, flare meter logs, and dual-pulse fidelity alarm logs (ISO 6551 Level A).",
+      "does": "Aggregates facility mass and energy inputs versus outputs; calculates daily unaccounted-for hydrocarbon (UAFH / line balance loss) percentages across the facility; identifies meter station pulse integrity errors; correlates balance variations with weather, line pack, and transient operational line swings; compiles statutory daily metrology compliance dossiers satisfying PNGRB, OISD, and internal corporate metrology governance.",
+      "returns": "Facility Master Metrology Balance & UAF Reconciliation Dossier (facility_id, total_hydrocarbon_receipts_tons, total_hydrocarbon_deliveries_tons, facility_uafh_pct, pulse_integrity_alarm_count, metrology_audit_readiness_flag).",
+      "stopsAt": "Closing monthly regulatory tax/royalty returns or altering custody transfer ledger entries.",
+      "failureModes": "If daily facility balance loss exceeds statutory loss thresholds (typically 0.25% to 0.50% depending on liquid/gas stream), the agent flags: [Facility UAFH Alert: Hydrocarbon Imbalance Exceeds Statutory Threshold — Meter Drift or Unmetered Loss Investigation Initiated].",
+      "agentId": "OG-P36-A07"
+    }
+  ],
+  "valueModel": {
+    "rule": "Quantify the unit. Never multiply into enterprise rupee totals. The operator provides their own facility/meter-skid multiplier.",
+    "rows": [
+      {
+        "agent": "Meter Prover Linearity & Repeatability Audit",
+        "unit": "1 Meter Proving Campaign (5-run sequence)",
+        "beforeHours": 3.5,
+        "afterHours": 0.4,
+        "savedHours": 3.1,
+        "frictionRemoved": "Multi-Run Repeatability & Linearity Math"
+      },
+      {
+        "agent": "Terminal Gross-to-Net Static Volume Reconciliation",
+        "unit": "1 Daily Bulk Terminal Storage Reconciliation",
+        "beforeHours": 4.0,
+        "afterHours": 0.5,
+        "savedHours": 3.5,
+        "frictionRemoved": "Tank Strapping & CTL/CPL Correction Friction"
+      },
+      {
+        "agent": "EFM & Gas Chromatograph Audit Trail Verification",
+        "unit": "1 EFM Station Configuration & Gas Quality Audit",
+        "beforeHours": 3.5,
+        "afterHours": 0.35,
+        "savedHours": 3.15,
+        "frictionRemoved": "Unlogged Orifice & Heating Value Discrepancy Sifting"
+      },
+      {
+        "agent": "Multi-Path Ultrasonic Acoustic Path Diagnostics",
+        "unit": "1 Ultrasonic Custody Meter Diagnostic Run",
+        "beforeHours": 2.5,
+        "afterHours": 0.3,
+        "savedHours": 2.2,
+        "frictionRemoved": "Acoustic Speed of Sound & Path Ratio Math"
+      },
+      {
+        "agent": "Orifice Plate Inspection & DP Transmitter Calibration",
+        "unit": "1 Orifice Meter Run Inspection & Calibration Pack",
+        "beforeHours": 2.25,
+        "afterHours": 0.25,
+        "savedHours": 2.0,
+        "frictionRemoved": "Caliper Dimension QC & Square-Root Cutoff Auditing"
+      },
+      {
+        "agent": "Custody Transfer Discrepancy & Dispute Settlement",
+        "unit": "1 Disputed Custody Transfer Batch / Shipper True-Up",
+        "beforeHours": 6.0,
+        "afterHours": 0.75,
+        "savedHours": 5.25,
+        "frictionRemoved": "Uncertainty Propagation & Dispute Dossier Assembly"
+      },
+      {
+        "agent": "Facility Metrology Balance & UAF Synthesis",
+        "unit": "1 Daily Metrology Balance & Compliance Dossier",
+        "beforeHours": 2.25,
+        "afterHours": 0.3,
+        "savedHours": 1.95,
+        "frictionRemoved": "Multi-Skid Volume Aggregation & Balance Loss Tracking"
+      }
+    ],
+    "total": {
+      "unit": "Standard Fiscal Reconciliation & Metering Campaign",
+      "beforeHours": 24.0,
+      "afterHours": 2.85,
+      "savedHours": 21.15,
+      "frictionRemoved": "Eliminates measurement disputes & meter drift drag",
+      "label": "Total Measurement & Custody Transfer Squad Impact"
+    }
+  },
+  "citations": [
+    {
+      "key": "[API-MPMS-Ch12]",
+      "citation": "API, Manual of Petroleum Measurement Standards Chapter 12: Calculation of Petroleum Quantities (Section 2)",
+      "locator": "api.org",
+      "type": "Technical Standard",
+      "supports": "Meter proving calculations and repeatability tolerance"
+    },
+    {
+      "key": "[API-MPMS-Ch11]",
+      "citation": "API, Manual of Petroleum Measurement Standards Chapter 11: Physical Properties Data (ASTM D1250)",
+      "locator": "api.org",
+      "type": "Technical Standard",
+      "supports": "Temperature and pressure volume correction factors (CTL/CPL)"
+    },
+    {
+      "key": "[API-MPMS-Ch21]",
+      "citation": "API, Manual of Petroleum Measurement Standards Chapter 21: Flow Measurement Using Electronic Metering Systems (21.1/21.2)",
+      "locator": "api.org",
+      "type": "Technical Standard",
+      "supports": "Electronic flow measurement audit trail and configuration integrity"
+    },
+    {
+      "key": "[AGA-Report-9]",
+      "citation": "American Gas Association, AGA Report No. 9: Measurement of Gas by Multipath Ultrasonic Meters",
+      "locator": "agascatalog.com",
+      "type": "Technical Standard",
+      "supports": "Ultrasonic chordal speed of sound and path ratio diagnostics"
+    },
+    {
+      "key": "[AGA-Report-3]",
+      "citation": "American Gas Association, AGA Report No. 3: Orifice Metering of Natural Gas (API MPMS Ch 14.3)",
+      "locator": "agascatalog.com",
+      "type": "Technical Standard",
+      "supports": "Orifice plate dimensional tolerance and beta ratio compliance"
+    },
+    {
+      "key": "[ISO-5167]",
+      "citation": "ISO, ISO 5167: Measurement of fluid flow by means of pressure differential devices",
+      "locator": "iso.org",
+      "type": "International Standard",
+      "supports": "Differential pressure meter calculation and edge sharpness"
+    },
+    {
+      "key": "[OISD-STD-109]",
+      "citation": "OISD, OISD-STD-109: Setup, Operation and Inspection of Petroleum Storage Facilities & Metering",
+      "locator": "oisd.gov.in",
+      "type": "Statutory Standard",
+      "supports": "Terminal tank storage reconciliation and metrology balancing"
+    }
+  ],
+  "negativeSearch": {
+    "searched": "Quorum Flow-Cal user documentation, Emerson Daniel flow computer technical manuals, and CEESI / OnePetro flow measurement archives for \"automated multi-path ultrasonic path ratio diagnosis coupled with EFM audit trail parameter change reconciliation directly in flow computers\".",
+    "result": "Negative Search, 2026-09. Incumbent flow computers log raw pulses, alarms, and configuration edits; commercial measurement accounting tools (Flow-Cal) store hourly volume archives. Neither tool autonomously correlates acoustic path velocity ratios against theoretical gas EOS equations, detects unlogged orifice plate swaps from differential pressure signature shifts, or reconstructs dispute packages with full Monte Carlo uncertainty propagation without extensive manual specialist analysis."
+  },
+  "line": "\"In hydrocarbon custody transfer, a zero-point-one percent measurement error is not an academic rounding tolerance; on a major transmission trunkline or crude terminal, it is a million-dollar accounting hemorrhage that ends in commercial dispute and regulatory scrutiny.\"",
+  "openQuestions": [
+    "How many hours per month does the measurement engineering team spend auditing EFM configuration event logs to identify unrecorded orifice plate changes or manual override setpoints?",
+    "What percentage of custody transfer meter proving runs fail initial API MPMS Chapter 12 repeatability criteria due to temperature instability or prover 4-way valve seal leakage?",
+    "How frequently do unaccounted-for hydrocarbon (UAFH) imbalance investigations discover that meter station gas chromatographs were calculating energy content using outdated calibration gas certificates?"
+  ]
+};

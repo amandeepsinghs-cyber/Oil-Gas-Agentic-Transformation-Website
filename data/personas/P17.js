@@ -24,6 +24,17 @@ window.PERSONA_DETAIL["P17"] = {
   "avatar": "avatars/P17_persona.jpg",
   "thumb": "avatars/thumbs/P17_thumb.jpg",
   "initials": "PP",
+  "domains": [
+    "downstream"
+  ],
+  "primaryDomain": "downstream",
+  "crossCutting": false,
+  "groups": {
+    "downstream": "Planning & Supply"
+  },
+  "valueSplit": {
+    "downstream": 1.0
+  },
   "headline": "The Production Planner holds the economic steering wheel of the refinery, running high-dimensional Linear Programming (LP) optimization models that dictate which crude oils to buy, how hard to push conversion units, and what finished fuel slate to deliver. While commercial mathematical solvers like Aspen PIMS, Haverly GRTMPS, and Honeywell Spiral Plan solve millions of linear equations in minutes, they suffer from severe model bias, calibration drift, and static sub-model decay. In operating refineries, the LP model's predicted monthly margin routinely deviates from actual reconciled financial accounting by 15% to 30% because unit yield sub-models, crude assay cuts, and utility network constraints sit uncalibrated for months or years. Planners spend weeks manually reconciling monthly mass balances, sifting through spot crude assay sheets, cross-checking hydrogen limits, and preparing post-mortem variance reports to explain why the refinery missed its planned crack spread. An integrated squad of 7 hyper-specialized micro-agents continuously reconciles plant mass balances, maps spot crude assays, recalibrates LP yield vectors, attributes gross margin variances, and validates utility feasibility—saving 73.90 hours per monthly planning cycle and closing multi-million-dollar blind spots in commercial crude procurement and unit utilization.",
   "confidence": {
     "Persona": "Production Planner (LP Modeler) (P17)",
@@ -34,7 +45,7 @@ window.PERSONA_DETAIL["P17"] = {
     "Pain Claims Cited": "8 of 8 industry pain claims backed by published NPRA/AFPM operational papers, KBC margin gap benchmarks, and practitioner case studies",
     "Timings Sourced": "Monthly operating plan (MOP) assembly, spot crude evaluation, sub-model vector recalibration, and margin gap forensics validated against professional refinery planner logs",
     "Gap Claims Cited": "Aspen PIMS, Haverly GRTMPS, Honeywell Spiral Plan, and KBC Petro-SIM technical documentation confirm absence of autonomous closed-loop sub-model vector recalibration from reconciled mass balances, automated spot assay mapping, and gross margin variance root-cause decomposition",
-    "Known Gaps": "Extent of non-linear recursion and distributive property blending approximations (e.g., Chevron non-linear method vs. pooling delta vectors) varies between high-conversion coking refineries and simple hydroskimming plants"
+    "Known Gaps": "Extent of non-linear recursion and distributive property blending approximations (e.g., a major operator's non-linear method vs. pooling delta vectors) varies between high-conversion coking refineries and simple hydroskimming plants"
   },
   "role": {
     "oneLine": "Formulates the refinery's commercial optimization strategy using mathematical Linear Programming (LP) models, determining the most profitable crude purchasing slate, processing unit operating severities, and finished product delivery mix while strictly honoring physical plant, logistics, and environmental constraints.",
@@ -294,7 +305,7 @@ window.PERSONA_DETAIL["P17"] = {
       "owner": "none",
       "agentLabel": "❌ (PIMS)",
       "label": "Finished Product Blending Property Formulation (B2, [PIMS-Manual §6])",
-      "today": "Handled through non-linear blending index algorithms (e.g., Ethyl RT-70 for octane, Chevron blending index for flash/pour points) embedded within PIMS / Haverly.",
+      "today": "Handled through non-linear blending index algorithms (e.g., Ethyl RT-70 for octane, a major operator's blending index for flash/pour points) embedded within PIMS / Haverly.",
       "failureMode": "Core mathematical formulation within the commercial planning software.",
       "agentNote": "❌ No. Monolith modeling domain."
     },

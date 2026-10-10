@@ -20,6 +20,20 @@
   "avatar": "avatars/P14_persona.jpg",
   "thumb": "avatars/thumbs/P14_thumb.jpg",
   "initials": "PC",
+  "domains": [
+    "midstream",
+    "downstream"
+  ],
+  "primaryDomain": "midstream",
+  "crossCutting": false,
+  "groups": {
+    "midstream": "Pipelines & Network",
+    "downstream": "Offsites & Distribution"
+  },
+  "valueSplit": {
+    "midstream": 0.6,
+    "downstream": 0.4
+  },
   "headline": "The Pipeline Controller commands the continent-spanning arteries of the energy infrastructure, steering high-pressure crude oil, natural gas, and refined fuel batches across thousands of kilometers of pipeline corridors. While enterprise SCADA systems (Schneider OASyS, AVEVA) reliably execute remote valve strokes and Computational Pipeline Monitoring (CPM) engines (Atmos Pipe, PipelineManager) run continuous hydraulic mass balances, the leak detection systems suffer from chronic, dangerous false-alarm fatigue. Transient hydraulic pressure waves caused by routine pump starts, mainline valve maneuvers, or product density shifts generate dozens of false leak alarms every week. Controllers face intense statutory countdown pressure (regulations mandate segment isolation within 10–15 minutes if an alarm cannot be disproven), tempting operators to rationalize away ambiguous alarms—the exact root cause of historic pipeline catastrophes (e.g., the 17-hour delayed response in the Marshall, Michigan spill). An agent that correlates hydraulic wave physics with recent pipeline maneuvers to classify leak alarm validity saves ~1.80 hours per shift, ending alarm numbness and protecting public safety.",
   "confidence": {
     "Persona": "Pipeline Controller (P14)",
@@ -34,7 +48,7 @@
   },
   "role": {
     "oneLine": "Directs the 24/7 remote operational transmission of crude oil, natural gas, or refined products through high-pressure pipeline networks, operating compressor/pump stations, maintaining linepack, and serving as the primary guardian against pipeline ruptures.",
-    "whyItMatters": "A failure in pipeline control room operations leads directly to catastrophic environmental pipeline ruptures (e.g., Enbridge Marshall spill leaking 20,000 barrels into a river system), explosive natural gas urban pipeline ruptures (San Bruno disaster), or severe regional supply shortages paralyzing entire economies.",
+    "whyItMatters": "A failure in pipeline control room operations leads directly to catastrophic environmental pipeline ruptures (e.g., the 2010 Marshall, Michigan crude pipeline spill leaking 20,000 barrels into a river system), explosive natural gas urban pipeline ruptures (the 2010 San Bruno gas pipeline rupture), or severe regional supply shortages paralyzing entire economies.",
     "notOwned": [
       {
         "task": "Physical Excavation, Sleeving, and Smart Pig Dig Verification in the Field",
@@ -562,7 +576,7 @@
     },
     {
       "key": "[NTSB-PAR-1201]",
-      "citation": "US NTSB, Enbridge Pipeline Rupture Investigation, 2012",
+      "citation": "US NTSB, Marshall, Michigan Crude Pipeline Rupture Investigation, 2012",
       "locator": "ntsb.gov",
       "type": "Incident Investigation",
       "supports": "Leak alarm desensitization as root cause"

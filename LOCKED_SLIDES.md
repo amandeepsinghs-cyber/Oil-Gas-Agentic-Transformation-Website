@@ -18,7 +18,7 @@
 | **Stage 05** | **Structural Resilience of an Agentic Organisation** | `final_slides/slide_05_the_jenga_metaphor.LOCKED.html` | 2026-09-08 09:52 UTC | **LOCKED & FROZEN** |
 | **Stage 06** | **The Petrophysical AI Agent** | `final_slides/slide_06_the_petrophysical_ai_agent.LOCKED.html` | 2026-09-08 10:51 UTC | **LOCKED & FROZEN** |
 | **Stage 07** | **Architecture of the Petrophysical AI Agent** | `final_slides/slide_07_the_headless_petrophysical_agent.LOCKED.html` | 2026-09-08 11:35 UTC | **LOCKED & FROZEN** |
-| **Stage 08** | **Agentic Transformation Across Workforce & Workflows (300 Seams)** | `final_slides/slide_08_the_enterprise_chessboard.LOCKED.html` | 2026-09-08 16:25 UTC | **LOCKED & FROZEN** |
+| **Stage 08** | **Agentic Transformation Across Workforce & Workflows (300 Seams)** | `final_slides/slide_08_the_enterprise_chessboard.LOCKED.html` (historical snapshot, kept) | 2026-09-08 16:25 UTC | **UNLOCKED 2026-10-10 — superseded by the central persona map** (`working_deck/persona_map.html`). The fixed persona grid was unlocked so personas can be added or removed as data; the map is filtered by Upstream / Midstream / Downstream / Full value chain and has no hardcoded counts. |
 | **Stage 09** | **The Agentic Value Topology (3D Prioritization Terrain)** | `final_slides/slide_09_the_agentic_value_topology.LOCKED.html` | 2026-09-08 15:15 UTC | **LOCKED & FROZEN** |
 | **Stage 10** | **100 Days to Proof of Value: Building an Agentic Workforce** | `final_slides/slide_10_the_discovery_sprint.LOCKED.html` | 2026-09-11 04:20 UTC | **LOCKED & FROZEN (FINAL SLIDE)** |
 | **Stage 11** | *(Retired / Consolidated into Stage 10)* | deleted 2026-09-14 — `git checkout d1f0ba9 -- legacy_strategic_files/retired_slides/` | 2026-09-11 | **RETIRED** |
