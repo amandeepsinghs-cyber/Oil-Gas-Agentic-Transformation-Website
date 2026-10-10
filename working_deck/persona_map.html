@@ -574,10 +574,11 @@
     overflow: hidden;
   }
 
-  /* the scroll area. 33 rows do not fit a screen and are not meant to --
-     the filter chips above are how you make them fit. */
+  /* the scroll area. Sized by fitBoardRows() to show exactly the first ten
+     visible roles; the rest scroll inside the frame, so the page below the
+     board comes into view. 580px is only the pre-script fallback. */
   .board-scroll {
-    max-height: min(70vh, 720px);
+    max-height: 580px;
     overflow: auto;
     overscroll-behavior: contain;
   }
@@ -1009,7 +1010,7 @@
 
   /* ═══ DRAWER ══════════════════════════════════════════════════════════ */
   .drawer {
-    flex: none; width: 400px;
+    flex: none; width: 480px;   /* widened from 400px: lever cards and agent names fit without wrapping */
     position: sticky; top: 132px;
     max-height: calc(100vh - 160px);
     overflow: auto;
@@ -1326,6 +1327,7 @@
   .domain-tab .n { font-family: var(--mono, "Roboto Mono", monospace); font-weight: 500; opacity: .7; margin-left: 6px; }
   .domain-tab[aria-selected="true"] { background: #1A73E8; border-color: #1A73E8; color: #FFF; }
   .domain-tab:hover:not([aria-selected="true"]) { border-color: #1A73E8; color: #1A73E8; }
+  .lv-v { white-space: nowrap; }
   .chips .chip-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; width: 100%; }
   .chips .chip-row-sub { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border-strong, #DADCE0); }
   .chips .domain-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; }
@@ -1731,6 +1733,30 @@
     applyFilter();
   });
 
+  /* Show ten roles, scroll the rest. Measured, not assumed: rows vary in
+     height with the persona name, so the frame ends exactly at the bottom
+     edge of the tenth visible row (sticky header included). The detail
+     drawer is held to the same height so the two columns end together. */
+  var VISIBLE_ROWS = 10;
+  function fitBoardRows() {
+    var sc = document.getElementById("boardScroll");
+    if (!sc) return;
+    var rows = [].filter.call(sc.querySelectorAll(".brow"), function (r) {
+      return !r.classList.contains("is-hidden");
+    });
+    var h;
+    if (rows.length <= VISIBLE_ROWS) { sc.style.maxHeight = "none"; h = sc.scrollHeight; }
+    else {
+      var prev = sc.scrollTop; sc.scrollTop = 0;
+      h = Math.ceil(rows[VISIBLE_ROWS - 1].getBoundingClientRect().bottom - sc.getBoundingClientRect().top) + 1;
+      sc.style.maxHeight = h + "px"; sc.scrollTop = prev;
+    }
+    var dr = document.querySelector(".drawer"), frame = sc.parentElement;
+    if (dr && frame) dr.style.maxHeight = frame.getBoundingClientRect().height + "px";
+  }
+  window.addEventListener("resize", fitBoardRows);
+  window.addEventListener("load", fitBoardRows);
+
   function applyFilter() {
     var shown = 0, cells = 0, cr = 0;
     [].forEach.call(board.querySelectorAll(".brow"), function (row) {
@@ -1746,6 +1772,7 @@
                        crs(cr) + "/yr" +
                        (filter === "all" ? "" : "  (filtered)");
     document.getElementById("boardScroll").scrollTop = 0;
+    fitBoardRows();
   }
 
   /* ── value map model ───────────────────────────────────────────────────
@@ -2174,19 +2201,9 @@
     openCell = btn;
     if (pin) pinned = btn;
 
-    /* Lead with the build priority where we own the step. Where we don't, say
-       so -- the old code printed "Critical" over monolith steps, which is how
-       the board came to look urgent about software we are not replacing. The
-       underlying friction tag is still shown; it is descriptive, not a claim. */
-    var PL = (META.prioLabel || {});
-    var prioTag = a.prio
-      ? '<span class="tag prio-' + a.prio + '">' + esc(PL[a.prio]) + " \u00b7 " + esc(a.friction) + "</span>"
-      : '<span class="tag not-ours">' + esc(PL[""] || "Not a build target") +
-        " \u00b7 " + esc(a.friction) + "</span>";
-
-    var OWN = (META.ownerLabel || {});
-    var covTag = '<span class="tag own-' + a.own + '">' + esc(OWN[a.own] || a.own) + "</span>";
-
+    /* Status tags (priority, owner, frequency, bucket) were removed from this
+       panel: the square's colour and edge already say them, and the panel did
+       not fit. The board legend still explains the encoding. */
     var right;
     if (a.own !== "agentic") {
       /* This card used to be two grey lines, because 55 of the 161 not-ours
@@ -2239,7 +2256,6 @@
 
     drawer.innerHTML =
       '<div class="d-head">' +
-        '<span class="d-code">' + esc(r.id + wcode(a.code)) + "</span>" +
         '<span class="d-title">' +
           '<span class="d-action">' + esc(a.name) + "</span>" +
           '<span class="d-who">' + esc(r.name) + (r.person ? " — " + esc(r.person) : "") +
@@ -2248,31 +2264,21 @@
         '<button class="d-close" type="button" aria-label="Close">\u2715</button>' +
       "</div>" +
 
-      '<div class="d-tags">' +
-        prioTag +
-        covTag +
-        /* Only while the value map is on. In build-priority view this number
-           is not what the reader is being asked to look at, and a rupee
-           figure sitting on every card dilutes the one view where it matters.
-           Labelled "modelled" because it is a split of the role total, not a
-           measured per-workflow figure. */
-        (view === "value" && cellCr[ri] != null
-          ? '<span class="tag" title="A share of this role\u2019s annual value, ' +
-            'apportioned across its workflows by criticality. Modelled, ' +
-            'not measured.">' + crCell(cellCr[ri][ci]) + " \u00b7 modelled</span>"
-          : "") +
-        (a.freq ? '<span class="tag">' + esc(a.freq) + "</span>" : "") +
-        (a.bucket ? '<span class="tag">' + esc(a.bucket) + "</span>" : "") +
-      "</div>" +
+      /* Only while the value map is on: the modelled share of this square. */
+      (view === "value" && cellCr[ri] != null
+        ? '<div class="d-tags"><span class="tag" title="A share of this role\u2019s annual value, ' +
+          'apportioned across its workflows by criticality. Modelled, not measured.">' +
+          crCell(cellCr[ri][ci]) + " \u00b7 modelled</span></div>"
+        : "") +
 
       '<div class="d-body">' +
+        /* Levers lead, where the step is ours: what the squad is worth is the
+           first question in the room. On a monolith or human cell the role's
+           lever mix is real but irrelevant, so it is not claimed there. */
+        (a.own === "agentic" ? leverStrip(r) : "") +
         blk("today", "How it runs today", a.today, true) +
         blk("vuln",  "What goes wrong",   a.vuln,  false) +
         right +
-        /* Levers only where the step is ours. On a monolith or human cell the
-           role's lever mix is real but irrelevant -- we are not building it,
-           so claiming value against it there would be dishonest. */
-        (a.own === "agentic" ? leverStrip(r) : "") +
         /* On a monolith cell the holder panel above already names this exact
            string -- printing it twice made the card look padded. */
         (a.own === "system" ? "" : blk("", "System of record", r.monolith, true)) +
