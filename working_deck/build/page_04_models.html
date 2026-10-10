@@ -125,7 +125,7 @@
         <span>Light Mode</span>
       </button>
       <a href="page_03_architecture.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
-      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;" data-bnum="4">10 / 14</span>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;" data-bnum="4">11 / 15</span>
       <a href="page_05_govern.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
       <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
         All Slides ↗
@@ -153,9 +153,6 @@
   .mc-zone.dim { opacity: .9; }
   .mc-zone.pass { border-color: var(--zc); border-width: 2px; }
   .mc-zone.pick { border-color: var(--zc); border-style: solid; border-width: 2.5px; box-shadow: 0 10px 30px rgba(18,19,23,.12); transform: scale(1.03); z-index: 3; }
-  .mc-tag { position: absolute; top: -12px; right: 14px; font: 500 11px var(--font-mono); color: #FFF; background: var(--zc); border-radius: 999px; padding: 3px 10px; opacity: 0; transition: opacity .3s; white-space: nowrap; }
-  .mc-zone.pick .mc-tag { opacity: 1; }
-  .mc-zone.zo .mc-tag { color: var(--g-grey-1200); }
   .mc-side { display: flex; flex-direction: column; gap: 16px; }
   .mc-rec .k { font: 500 11.5px var(--font-mono); letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-dim); }
   .mc-rec h2 { margin: 6px 0 2px; font: 600 26px/1.15 var(--font-display); color: var(--text); display: flex; align-items: center; gap: 10px; }
@@ -182,7 +179,7 @@
      Gemini 4 Argon is on a staged rollout -- confirm availability for the client before presenting. -->
 <div class="bx-in">
   <div class="bx-kick"><i></i>From personas to production · Model choice</div>
-  <h1>The right model for each task: big cost savings, same results.</h1>
+  <h1>The right model for the right task cost-optimises the agentic transformation.</h1>
   <p class="bx-sub">One size does not fit all. <b>Set the quality bar for the task, then use the smallest model that clears it.</b> Pick a task to see where it lands.</p>
   <div class="mc-tasks"><span class="bx-lbl">Pick a task</span>
     <div class="bx-seg" role="group" aria-label="Task" id="mcSeg"></div>
@@ -238,7 +235,7 @@
     var z = Z[k], d = document.createElement("div");
     d.className = "mc-zone" + (z.zo ? " zo" : ""); d.id = "mcZ_" + k;
     d.style.cssText = "left:" + z.pos[0] + "%;top:" + z.pos[1] + "%;width:" + z.pos[2] + "%;--zc:" + z.c + ";--zt:" + z.t;
-    d.innerHTML = '<span class="mc-tag">smallest that passes</span><h4>' + z.n + '<small>' + z.s + '</small></h4>' +
+    d.innerHTML = '<h4>' + z.n + '<small>' + z.s + '</small></h4>' +
       z.m.map(function (m, i) { return '<div class="mc-m' + (m[3] ? ' star' : '') + '" data-i="' + i + '"><img src="' + M + m[0] + '" alt=""><span>' + m[1] + ' <small>' + m[2] + '</small></span></div>'; }).join("");
     area.appendChild(d);
   });
@@ -288,7 +285,7 @@
    so their running number depends on the track picked on the main page (deck-domain). */
 (function () {
   var d = ""; try { d = (localStorage.getItem("deck-domain") || "").toLowerCase(); } catch (e) {}
-  var off = 6, tot = off + 8;
+  var off = 7, tot = off + 8;
   document.querySelectorAll("[data-bnum]").forEach(function (el) {
     var n = off + parseInt(el.getAttribute("data-bnum"), 10);
     el.textContent = (n < 10 ? "0" : "") + n + " / " + tot;

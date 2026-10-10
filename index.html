@@ -71,13 +71,13 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 max(20px, 4vw); }
+  .wrap { width: 100%; max-width: none; margin: 0 auto; padding: 0 max(24px, 4vw); }
 
   /* ── masthead ─────────────────────────────────────────────────────────── */
   .mast {
     position: sticky; top: 0; z-index: 50;
     display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
-    padding: 14px max(20px, 4vw);
+    padding: 14px max(24px, 4vw);
     background: color-mix(in srgb, var(--surface) 88%, transparent);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border, #E2E6F0);
@@ -128,17 +128,17 @@
   }
   h1 {
     margin: 0 0 14px;
-    font-size: clamp(32px, 4.4vw, 54px); font-weight: 800;
+    font-size: clamp(32px, 3.6vw, 48px); font-weight: 800;
     line-height: 1.1; letter-spacing: -1.2px;
   }
   .tagline {
-    margin: 0 0 10px; max-width: 720px;
+    margin: 0 0 10px; max-width: none;
     font-size: clamp(16px, 1.5vw, 20px); line-height: 1.55;
     color: var(--text-muted);
   }
   .note {
-    margin: 0; max-width: 720px;
-    font-size: 14px; line-height: 1.6; color: var(--text-muted);
+    margin: 0; max-width: none;
+    font-size: 14.5px; line-height: 1.6; color: var(--text-muted);
   }
 
   /* ── section heads ────────────────────────────────────────────────────── */
@@ -272,7 +272,7 @@
       <span class="kicker-txt">Strategic Transformation Blueprint</span>
       <span class="kicker-sub">// Energy Enterprise Giants</span>
     </div>
-    <h1>Agentic Transformation<br>for India's Energy Giants</h1>
+    <h1>Agentic Transformation for India's Energy Giants</h1>
     <p class="tagline">Operationalizing AI from the control room to the boardroom.</p>
     <p class="note">
       One briefing, three tracks. Start with the executive overview, pick
@@ -310,9 +310,10 @@
         <li><a href="working_deck/upstream/03_great_crew_change.html"><span class="n">03</span><span>The Great Crew Change</span><span></span></a></li>
         <li><a href="working_deck/upstream/04_plug_is_an_agent.html"><span class="n">04</span><span>The Plug is an Agent</span><span></span></a></li>
         <li><a href="working_deck/upstream/05_sagar_drishti_demo.html"><span class="n">05</span><span>Sagar Drishti · live demo</span><span></span></a></li>
-        <li class="map"><a href="working_deck/upstream/06_persona_map.html"><span class="n">06</span><span>Persona Map · Upstream</span><span></span></a></li>
+        <li><a href="working_deck/bridge/06_one_to_many.html?track=upstream"><span class="n">06</span><span>One agent → an agentic organisation</span><span></span></a></li>
+        <li class="map"><a href="working_deck/upstream/07_persona_map.html"><span class="n">07</span><span>Persona Map · Upstream</span><span></span></a></li>
       </ol>
-      <div class="track-end">Then Build 1–8 &middot; pages 07–14</div>
+      <div class="track-end">Then Build 1–8 &middot; pages 08–15</div>
     </section>
     <section class="track" style="--tc:var(--g-purple)">
       <a class="track-h" href="working_deck/midstream/01_capital_reality.html"><span class="track-k">Track</span><span class="track-name">Midstream</span><span class="track-sub">Pipelines &amp; gas grid</span></a>
@@ -323,9 +324,10 @@
         <li><a href="working_deck/midstream/04_plug_is_an_agent.html"><span class="n">04</span><span>The Plug is an Agent</span><span></span></a></li>
         <li><a href="working_deck/midstream/05_gas_supply_decision_agent.html"><span class="n">05</span><span>The Gas Supply Decision Agent</span><span></span></a></li>
         <li class="sub"><a href="working_deck/midstream/appendix_architecture.html"><span>Appendix · agent architecture</span></a></li>
-        <li class="map"><a href="working_deck/midstream/06_persona_map.html"><span class="n">06</span><span>Persona Map · Midstream</span><span></span></a></li>
+        <li><a href="working_deck/bridge/06_one_to_many.html?track=midstream"><span class="n">06</span><span>One agent → an agentic organisation</span><span></span></a></li>
+        <li class="map"><a href="working_deck/midstream/07_persona_map.html"><span class="n">07</span><span>Persona Map · Midstream</span><span></span></a></li>
       </ol>
-      <div class="track-end">Then Build 1–8 &middot; pages 07–14</div>
+      <div class="track-end">Then Build 1–8 &middot; pages 08–15</div>
     </section>
     <section class="track" style="--tc:var(--g-green)">
       <a class="track-h" href="working_deck/downstream/01_capital_reality.html"><span class="track-k">Track</span><span class="track-name">Downstream</span><span class="track-sub">Refining &amp; petrochemicals</span></a>
@@ -335,15 +337,16 @@
         <li><a href="working_deck/downstream/03_great_crew_change.html"><span class="n">03</span><span>The Great Crew Change</span><span></span></a></li>
         <li><a href="working_deck/downstream/04_plug_is_an_agent.html"><span class="n">04</span><span>The Plug is an Agent</span><span></span></a></li>
         <li><a href="working_deck/downstream/05_fcc_agentic_optimisation.html"><span class="n">05</span><span>FCC Agentic Optimisation · live demo</span><span></span></a></li>
-        <li class="map"><a href="working_deck/downstream/06_persona_map.html"><span class="n">06</span><span>Persona Map · Downstream</span><span></span></a></li>
+        <li><a href="working_deck/bridge/06_one_to_many.html?track=downstream"><span class="n">06</span><span>One agent → an agentic organisation</span><span></span></a></li>
+        <li class="map"><a href="working_deck/downstream/07_persona_map.html"><span class="n">07</span><span>Persona Map · Downstream</span><span></span></a></li>
       </ol>
-      <div class="track-end">Then Build 1–8 &middot; pages 07–14</div>
+      <div class="track-end">Then Build 1–8 &middot; pages 08–15</div>
     </section>
   </div>
 
   <div class="sec">
     <h2>From Personas to Production</h2>
-    <span>the shared ending every track converges on after the Persona Map &middot; pages 07–14</span>
+    <span>the shared ending every track converges on after the Persona Map &middot; pages 08–15</span>
   </div>
 
   <nav class="grid" aria-label="Build section">
@@ -355,12 +358,12 @@
     <a class="card" href="working_deck/build/page_02_surface.html">
       <div class="card-top"><span class="card-num">BUILD 02</span><span class="pill">Interactive</span></div>
       <div class="card-title">Where People Meet the Agent</div>
-      <div class="card-desc">One agent, four surfaces: Gemini Enterprise, custom apps, existing systems, background processes.</div>
+      <div class="card-desc">An agent built once, exposed in different interfaces, integrated into different workflows and used in different processes.</div>
     </a>
     <a class="card" href="working_deck/build/page_03_architecture.html">
       <div class="card-top"><span class="card-num">BUILD 03</span><span class="pill">Interactive</span></div>
       <div class="card-title">Typical Agent Architecture</div>
-      <div class="card-desc">Build the agent once, run it where your data and your plant are.</div>
+      <div class="card-desc">A flexible, adaptable agentic architecture with robust governance built in.</div>
     </a>
     <a class="card" href="working_deck/build/page_04_models.html">
       <div class="card-top"><span class="card-num">BUILD 04</span><span class="pill">Interactive</span></div>

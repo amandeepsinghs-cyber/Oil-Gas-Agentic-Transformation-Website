@@ -125,7 +125,7 @@
         <span>Light Mode</span>
       </button>
       <a href="../persona_map.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
-      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;" data-bnum="1">07 / 14</span>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;" data-bnum="1">08 / 15</span>
       <a href="page_02_surface.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
       <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
         All Slides ↗
@@ -137,13 +137,14 @@
   <main id="viewport-scaler" style="padding-top: 60px;">
 <section class="bx hb">
 <style>
+
   .hb-cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
   .hb-pane { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
   .hb-ph .k2 { font: 500 11.5px var(--font-mono); letter-spacing: 1.2px; text-transform: uppercase; color: var(--pc); display: flex; align-items: center; gap: 8px; }
   .hb-ph .k2 i { width: 10px; height: 10px; border-radius: 3px; background: var(--pb); }
   .hb-ph h2 { font: 600 24px/1.15 var(--font-display); margin: 4px 0 2px; color: var(--text); }
   .hb-ph p { margin: 0; font-size: 14px; line-height: 1.45; color: var(--text-muted); }
-  .hb-win { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 18px; box-shadow: var(--shadow-md); overflow: hidden; display: flex; flex-direction: column; height: 340px; cursor: pointer; }
+  .hb-win { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 18px; box-shadow: var(--shadow-md); overflow: hidden; display: flex; flex-direction: column; height: 350px; cursor: pointer; }
   .hb-wbar { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-bottom: 1px solid var(--border-subtle); }
   .hb-wbar .dots { display: flex; gap: 5px; } .hb-wbar .dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--border-strong); }
   .hb-wbar .t { font: 500 12.5px var(--font-display); color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -230,7 +231,7 @@
   .e-bar { height: 4px; border-radius: 2px; background: #262833; margin: 5px 0; overflow: hidden; } .e-bar i { display: block; height: 100%; width: 0; background: var(--g-green); transition: width 1.6s linear; }
   .e-ok { color: #5BB974; opacity: 0; transition: opacity .4s; }
   /* base: portfolio bar + shelf */
-  .hb-base { margin-top: 18px; background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 20px; box-shadow: var(--shadow-sm); padding: 14px 18px; display: flex; flex-direction: column; gap: 12px; }
+  .hb-base { margin-top: 12px; background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 20px; box-shadow: var(--shadow-sm); padding: 14px 18px; display: flex; flex-direction: column; gap: 12px; }
   .hb-row { display: grid; grid-template-columns: 200px minmax(0,1fr); gap: 16px; align-items: center; }
   .hb-rl { font: 500 14px var(--font-display); color: var(--text); }
   .hb-bar { display: flex; height: 38px; border-radius: 12px; overflow: hidden; gap: 3px; }
@@ -247,7 +248,7 @@
 </style>
 <div class="bx-in">
   <div class="bx-kick"><i></i>From personas to production · How agents are built</div>
-  <h1>Horses for courses: a portfolio of agents and agentic workflows.</h1>
+  <h1>Horses for courses: how a portfolio of agents will be built for agentic workflows.</h1>
   <p class="bx-sub">A portfolio approach to the agentic workforce — <b>no-code, low-code and high-code, each matched to the job</b>. Most agents are easy to build right in Gemini Enterprise: open Agents, describe what you need, and it is built, published and governed in one place.</p>
   <div class="hb-cols">
     <div class="hb-pane">
@@ -335,7 +336,6 @@
   </div>
   <div class="hb-base">
     <div class="hb-row"><span class="hb-rl">The agent portfolio</span><div class="hb-bar" id="hbBar"></div></div>
-    <div class="hb-row"><span class="hb-rl"><span class="bx-ge"><img src="../../assets/media/gemini_enterprise_logo.svg" alt="Gemini Enterprise"></span></span><div class="hb-tiles" id="hbShelf"></div></div>
     <div class="hb-cap">Typical mix of an agent estate by how it is built — a planning guide, not a measurement. Every agent, however it is built, lands in Gemini Enterprise.</div>
   </div>
 </div>
@@ -343,10 +343,12 @@
 (function () {
   var $ = function (id) { return document.getElementById(id); };
   var RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var SEG = [["No-code · describe it", 35, "30–40 %", "var(--g-blue)"], ["Low-code · design it", 25, "20–30 %", "var(--g-purple)"], ["High-code · engineer it", 25, "20–30 %", "var(--g-green)"], ["Ready-made", 15, "10–20 %", "var(--border-strong)", 1]];
-  $("hbBar").innerHTML = SEG.map(function (sg) { return '<div class="hb-seg2' + (sg[4] ? ' ready' : '') + '" style="flex:' + sg[1] + ';background:' + sg[3] + '"><span>' + sg[0] + '</span><b>' + sg[2] + '</b></div>'; }).join("");
+  /* soft tints so the bar supports the page instead of dominating it */
+  var SEG = [["No-code · describe it", 35, "30–40 %", "rgba(49,134,255,.14)", "var(--blue-ink)"], ["Low-code · design it", 25, "20–30 %", "rgba(75,49,227,.12)", "var(--purple-ink)"], ["High-code · engineer it", 25, "20–30 %", "rgba(0,175,87,.13)", "var(--green-ink)"], ["Ready-made", 15, "10–20 %", "var(--surface-sunk)", "var(--text-muted)"]];
+  $("hbBar").innerHTML = SEG.map(function (sg) { return '<div class="hb-seg2" style="flex:' + sg[1] + ';background:' + sg[3] + ';color:' + sg[4] + '"><span>' + sg[0] + '</span><b>' + sg[2] + '</b></div>'; }).join("");
   var shelf = $("hbShelf"), have = {};
   function addTile(t, key) {
+    if (!shelf) return;
     if (have[key]) return; have[key] = 1;
     var d = document.createElement("span"); d.className = "hb-tile"; d.style.setProperty("--tc", t[3]);
     d.innerHTML = "<i>" + t[0] + "</i><span>" + t[1] + "<small>" + t[2] + "</small></span>"; shelf.appendChild(d);
@@ -481,7 +483,7 @@
    so their running number depends on the track picked on the main page (deck-domain). */
 (function () {
   var d = ""; try { d = (localStorage.getItem("deck-domain") || "").toLowerCase(); } catch (e) {}
-  var off = 6, tot = off + 8;
+  var off = 7, tot = off + 8;
   document.querySelectorAll("[data-bnum]").forEach(function (el) {
     var n = off + parseInt(el.getAttribute("data-bnum"), 10);
     el.textContent = (n < 10 ? "0" : "") + n + " / " + tot;

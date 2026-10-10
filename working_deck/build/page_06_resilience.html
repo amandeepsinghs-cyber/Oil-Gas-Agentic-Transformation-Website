@@ -123,7 +123,7 @@
         <span>Light Mode</span>
       </button>
       <a href="page_05_govern.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
-      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;" data-bnum="6">12 / 14</span>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;" data-bnum="6">13 / 15</span>
       <a href="page_07_gartner.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
       <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
         All Slides ↗
@@ -158,7 +158,7 @@
         </div>
 
         <!-- Monumental Heading & Subheading -->
-        <h1 style="font-family: var(--font-display); font-size: clamp(34px, 4vw, 50px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; color: var(--text); margin: 0 0 8px 0;">
+        <h1 style="font-family: var(--font-display); font-size: clamp(28px, 2.4vw, 36px); font-weight: 800; line-height: 1.1; letter-spacing: -1.5px; color: var(--text); margin: 0 0 8px 0;">
           Structural Resilience of an <span class="au-display-grad">Agentic Organisation</span>
         </h1>
 
@@ -251,7 +251,7 @@
    so their running number depends on the track picked on the main page (deck-domain). */
 (function () {
   var d = ""; try { d = (localStorage.getItem("deck-domain") || "").toLowerCase(); } catch (e) {}
-  var off = 6, tot = off + 8;
+  var off = 7, tot = off + 8;
   document.querySelectorAll("[data-bnum]").forEach(function (el) {
     var n = off + parseInt(el.getAttribute("data-bnum"), 10);
     el.textContent = (n < 10 ? "0" : "") + n + " / " + tot;

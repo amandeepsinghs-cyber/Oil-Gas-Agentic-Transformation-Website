@@ -18,9 +18,9 @@
 .bx-kick { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono);
            font-size: 11.5px; font-weight: 500; letter-spacing: 1.4px; text-transform: uppercase; color: var(--text-muted); }
 .bx-kick i { width: 28px; height: 3px; border-radius: 2px; background: var(--gemini-spark); }
-.bx h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 2.9vw, 44px);
+.bx h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(28px, 2.4vw, 36px);
          line-height: 1.12; letter-spacing: -0.6px; margin: 10px 0 6px; color: var(--text); }
-.bx-sub { font-size: 16px; line-height: 1.5; color: var(--text-muted); margin: 0 0 18px; max-width: 1000px; }
+.bx-sub { font-size: 16px; line-height: 1.5; color: var(--text-muted); margin: 0 0 18px; max-width: none; }
 .bx-sub b { color: var(--text); font-weight: 500; }
 
 /* segmented control (Architecture "Runs on" pattern) */
