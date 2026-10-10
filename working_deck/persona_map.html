@@ -1553,11 +1553,12 @@
     /* Track-aware deck navigation: the map sits at Stage 07 of each track. */
     var NAV = {
       /* After the persona conversation every track converges on the shared
-         Build section (govern -> build -> architecture -> resilience ->
-         leadership -> 100 days). */
-      upstream:   { prev: "upstream/page_05.html",   next: "build/page_01_build.html", count: "7 / 9" },
-      midstream:  { prev: "midstream/page_05.html",  next: "build/page_01_build.html", count: "7 / 8" },
-      downstream: { prev: "downstream/page_06.html", next: "build/page_01_build.html", count: "8 / 10" },
+         Build section (build -> surface -> architecture -> models -> govern ->
+         resilience -> why Google -> 100 days). Journey numbers: 00 main page,
+         track pages, this map, then the 8 Build pages. */
+      upstream:   { prev: "upstream/05_sagar_drishti_demo.html",   next: "build/page_01_build.html", count: "06 / 14" },
+      midstream:  { prev: "midstream/05_gas_supply_decision_agent.html",  next: "build/page_01_build.html", count: "06 / 14" },
+      downstream: { prev: "downstream/06_agent_architecture.html", next: "build/page_01_build.html", count: "07 / 15" },
       all:        { prev: "pages/page_00.html",      next: "build/page_01_build.html", count: "" }
     }[d];
     var pv = document.getElementById("navPrev"), nx = document.getElementById("navNext"),
