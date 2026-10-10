@@ -207,6 +207,28 @@
   .row-desc { font-size: 13.5px; color: var(--text-muted); flex: 1 1 260px; }
   .row-go { font-size: 13px; font-weight: 700; color: var(--blue-ink); }
 
+  /* ── tracks ───────────────────────────────────────────────── */
+  .start { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 14px; align-items: stretch; }
+  .start .card { justify-content: center; }
+  .start-how { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 18px; border: 1px dashed var(--border, #E2E6F0); border-radius: 12px; font-size: 13.5px; color: var(--text-muted); }
+  .start-how b { color: var(--text-primary, #202124); font-weight: 700; }
+  .start-how i { font-style: normal; color: var(--text-muted); }
+  .tracks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .track { background: var(--surface); border: 1px solid var(--border, #E2E6F0); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+  .track-h { display: block; padding: 16px 18px 12px; text-decoration: none; color: inherit; border-top: 3px solid var(--tc); }
+  .track-h:hover .track-name { color: var(--blue-ink); }
+  .track-k { font-family: var(--font-mono); font-size: 11px; font-weight: 800; letter-spacing: 1.2px; color: var(--text-muted); text-transform: uppercase; }
+  .track-name { display: block; font-size: 19px; font-weight: 700; margin: 4px 0 2px; }
+  .track-sub { font-size: 13px; color: var(--text-muted); }
+  .track ol { list-style: none; margin: 0; padding: 4px 8px 10px; }
+  .track li a { display: grid; grid-template-columns: 30px 1fr auto; gap: 8px; align-items: center; padding: 8px 10px; border-radius: 8px; text-decoration: none; color: inherit; font-size: 14px; }
+  .track li a:hover { background: var(--surface-sunk); }
+  .track li .n { font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text-muted); }
+  .track li .x { font-family: var(--font-mono); font-size: 9.5px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; color: var(--text-muted); border: 1px dashed var(--border, #E2E6F0); border-radius: 10px; padding: 2px 7px; }
+  .track li.map a { color: var(--blue-ink); font-weight: 600; }
+  .track li.sub a { padding-left: 48px; font-size: 12.5px; color: var(--text-muted); grid-template-columns: 1fr auto; }
+  .track-end { margin-top: auto; padding: 10px 18px 14px; font-size: 12.5px; color: var(--text-muted); border-top: 1px solid var(--border, #E2E6F0); }
+  @media (max-width: 960px) { .tracks, .start { grid-template-columns: 1fr; } }
   footer {
     margin: 52px 0 40px; padding-top: 22px;
     border-top: 1px solid var(--border, #E2E6F0);
@@ -253,119 +275,81 @@
     <h1>Agentic Transformation<br>for India's Energy Giants</h1>
     <p class="tagline">Operationalizing AI from the control room to the boardroom.</p>
     <p class="note">
-      Ten surfaces, presented in order. Use <strong>Start the briefing</strong> to
-      run it end to end, or jump to any surface below &mdash; every page carries
+      One briefing, three tracks. Start with the executive overview, pick
+      <strong>Upstream</strong>, <strong>Midstream</strong> or <strong>Downstream</strong>, and every
+      track converges on the Persona Map and the shared Build section. Every page carries
       Prev / Next, so you can enter anywhere.
     </p>
   </section>
 
   <div class="sec">
-    <h2>The Briefing</h2>
-    <span>10 surfaces &middot; in presentation order</span>
+    <h2>Start here</h2>
+    <span>the front door for every track</span>
   </div>
 
-  <nav class="grid" aria-label="Deck surfaces">
-
+  <div class="start">
     <a class="card" href="working_deck/pages/page_00.html">
-      <div class="card-top"><span class="card-num">STAGE 00</span><span class="pill">Open</span></div>
+      <div class="card-top"><span class="card-num">00</span><span class="pill">Open</span></div>
       <div class="card-title">Executive Overview</div>
-      <div class="card-desc">Title, sovereignty framing, and the Gemini Enterprise command cockpit.</div>
+      <div class="card-desc">Sovereignty framing, the Gemini Enterprise cockpit, and the Upstream / Midstream / Downstream choice.</div>
     </a>
+    <div class="start-how"><b>00 Overview</b><i>&#8594;</i><b>pick a track</b><i>&#8594;</i>track pages<i>&#8594;</i><b>Persona Map</b><i>&#8594;</i>Build 1–8<i>&#8594;</i>back to 00</div>
+  </div>
 
-    <a class="card" href="working_deck/pages/page_01.html">
-      <div class="card-top"><span class="card-num">STAGE 01</span><span class="pill">Problem</span></div>
-      <div class="card-title">The Capital Reality</div>
-      <div class="card-desc">In energy there are no low-consequence mistakes &mdash; what a single day costs.</div>
-    </a>
+  <div class="sec">
+    <h2>Choose your track</h2>
+    <span>the middle of the briefing differs by part of the value chain</span>
+  </div>
 
-    <a class="card" href="working_deck/pages/page_02.html">
-      <div class="card-top"><span class="card-num">STAGE 02</span><span class="pill">Problem</span></div>
-      <div class="card-title">Swiss Cheese Model &amp; Plugs</div>
-      <div class="card-desc">Four barrier layers, and how latent gaps line up into one incident.</div>
-    </a>
-
-    <a class="card" href="working_deck/pages/alternate_story.html">
-      <div class="card-top"><span class="card-num">STAGE 03</span><span class="pill">Problem</span></div>
-      <div class="card-title">The Great Crew Change</div>
-      <div class="card-desc">The demographic cliff beneath the operating model.</div>
-    </a>
-
-    <!-- Stages 03 and 04 were consolidated into one slide. The two said the
-         same five things twice: the old page_04's own section label read
-         "MAPPED FROM SLIDE 03 CRITERIA", and the old page_03's closing card
-         already delivered page_04's punchline. Both originals are kept,
-         unlinked, at working_deck/pages/_parked_page_03_criteria.html and
-         _parked_page_04_microservice.html. -->
-    <a class="card" href="working_deck/pages/page_03.html">
-      <div class="card-top"><span class="card-num">STAGE 04</span><span class="pill pill-i">Pivot</span></div>
-      <div class="card-title">The Plug is an Agent</div>
-      <div class="card-desc">The five defining attributes, and where agents sit beside the monoliths.</div>
-    </a>
-
-    <a class="card" href="working_deck/pages/page_05.html">
-      <div class="card-top"><span class="card-num">STAGE 05</span><span class="pill pill-p">Proof</span></div>
-      <div class="card-title">The Petrophysical AI Agent</div>
-      <div class="card-desc">Kansas Well A-12: wireline depth alignment, worked end to end.</div>
-    </a>
-
-    <a class="card" href="working_deck/pages/page_06.html">
-      <div class="card-top"><span class="card-num">STAGE 06</span><span class="pill pill-p">Proof</span></div>
-      <div class="card-title">Sovereign Reference Architecture</div>
-      <div class="card-desc">ADK, agent registry, deterministic solvers, and the governance path.</div>
-    </a>
-
-    <a class="card" href="working_deck/persona_map.html">
-      <div class="card-top"><span class="card-num">STAGE 07</span><span class="pill pill-p">Interactive</span></div>
-      <div class="card-title">Persona Map</div>
-      <div class="card-desc">Every role across the value chain, filtered by Upstream, Midstream or Downstream &mdash; or the full value chain.</div>
-    </a>
-
-    <!-- Stage 09 "The Agentic Value Topology" (the 3D terrain) was pulled from
-         the narrative deliberately. The plot asked a boardroom to decode a
-         camera angle, a colour ramp and a height axis before it learned
-         anything, and a confused CXO says no. Stage 07 already carries the
-         same data in a form that reads instantly, and the per-role value
-         story now lands on the persona dossiers instead.
-
-         The page is NOT deleted. It lives, fully working, at
-             working_deck/pages/_parked_value_topology.html
-         with its relative paths intact, so it can still be opened directly
-         and adapted later. It is simply unlinked from the deck.
-
-    <a class="card" href="working_deck/pages/_parked_value_topology.html">
-      <div class="card-top"><span class="card-num">PARKED</span><span class="pill pill-p">Value</span></div>
-      <div class="card-title">The Agentic Value Topology</div>
-      <div class="card-desc">Where the value concentrates across the estate.</div>
-    </a>
-    -->
-
-    <!-- Structural Resilience moved here from Stage 05. Its subhead describes
-         the board's own two axes - workflows and workforce - so placed after
-         the board it reads as the verdict on the evidence, rather than a claim
-         made three slides before the evidence arrives. -->
-    <a class="card" href="working_deck/pages/page_04.html">
-      <div class="card-top"><span class="card-num">STAGE 08</span><span class="pill pill-i">Solution</span></div>
-      <div class="card-title">Structural Resilience</div>
-      <div class="card-desc">The Jenga organisation &mdash; fragile versus fortified.</div>
-    </a>
-
-    <a class="card" href="working_deck/pages/page_08.html">
-      <div class="card-top"><span class="card-num">STAGE 09</span><span class="pill pill-g">The Ask</span></div>
-      <div class="card-title">100 Days to Proof of Value</div>
-      <div class="card-desc">The sprint, the lighthouse asset, and what we need to begin.</div>
-    </a>
-
-  </nav>
-
+  <div class="tracks">
+    <section class="track" style="--tc:var(--g-blue)">
+      <a class="track-h" href="working_deck/upstream/01_capital_reality.html"><span class="track-k">Track</span><span class="track-name">Upstream</span><span class="track-sub">Exploration &amp; production</span></a>
+      <ol>
+        <li><a href="working_deck/upstream/01_capital_reality.html"><span class="n">01</span><span>The Capital Reality</span><span></span></a></li>
+        <li><a href="working_deck/upstream/02_swiss_cheese.html"><span class="n">02</span><span>Swiss Cheese Model &amp; Plugs</span><span></span></a></li>
+        <li><a href="working_deck/upstream/03_great_crew_change.html"><span class="n">03</span><span>The Great Crew Change</span><span></span></a></li>
+        <li><a href="working_deck/upstream/04_plug_is_an_agent.html"><span class="n">04</span><span>The Plug is an Agent</span><span></span></a></li>
+        <li><a href="working_deck/upstream/05_sagar_drishti_demo.html"><span class="n">05</span><span>Sagar Drishti · live demo</span><span></span></a></li>
+        <li class="map"><a href="working_deck/upstream/06_persona_map.html"><span class="n">06</span><span>Persona Map · Upstream</span><span></span></a></li>
+      </ol>
+      <div class="track-end">Then Build 1–8 &middot; pages 07–14</div>
+    </section>
+    <section class="track" style="--tc:var(--g-purple)">
+      <a class="track-h" href="working_deck/midstream/01_capital_reality.html"><span class="track-k">Track</span><span class="track-name">Midstream</span><span class="track-sub">Pipelines &amp; gas grid</span></a>
+      <ol>
+        <li><a href="working_deck/midstream/01_capital_reality.html"><span class="n">01</span><span>The Capital Reality</span><span></span></a></li>
+        <li><a href="working_deck/midstream/02_swiss_cheese.html"><span class="n">02</span><span>Swiss Cheese Model &amp; Plugs</span><span></span></a></li>
+        <li><a href="working_deck/midstream/03_great_crew_change.html"><span class="n">03</span><span>The Great Crew Change</span><span></span></a></li>
+        <li><a href="working_deck/midstream/04_plug_is_an_agent.html"><span class="n">04</span><span>The Plug is an Agent</span><span></span></a></li>
+        <li><a href="working_deck/midstream/05_gas_supply_decision_agent.html"><span class="n">05</span><span>The Gas Supply Decision Agent</span><span></span></a></li>
+        <li class="sub"><a href="working_deck/midstream/appendix_architecture.html"><span>Appendix · agent architecture</span></a></li>
+        <li class="map"><a href="working_deck/midstream/06_persona_map.html"><span class="n">06</span><span>Persona Map · Midstream</span><span></span></a></li>
+      </ol>
+      <div class="track-end">Then Build 1–8 &middot; pages 07–14</div>
+    </section>
+    <section class="track" style="--tc:var(--g-green)">
+      <a class="track-h" href="working_deck/downstream/01_capital_reality.html"><span class="track-k">Track</span><span class="track-name">Downstream</span><span class="track-sub">Refining &amp; petrochemicals</span></a>
+      <ol>
+        <li><a href="working_deck/downstream/01_capital_reality.html"><span class="n">01</span><span>The Capital Reality</span><span></span></a></li>
+        <li><a href="working_deck/downstream/02_swiss_cheese.html"><span class="n">02</span><span>Swiss Cheese Model &amp; Plugs</span><span></span></a></li>
+        <li><a href="working_deck/downstream/03_great_crew_change.html"><span class="n">03</span><span>The Great Crew Change</span><span></span></a></li>
+        <li><a href="working_deck/downstream/04_plug_is_an_agent.html"><span class="n">04</span><span>The Plug is an Agent</span><span></span></a></li>
+        <li><a href="working_deck/downstream/05_demo_agent.html"><span class="n">05</span><span>Demo agent</span><span class="x">in build</span></a></li>
+        <li><a href="working_deck/downstream/06_agent_architecture.html"><span class="n">06</span><span>Agent architecture</span><span class="x">in build</span></a></li>
+        <li class="map"><a href="working_deck/downstream/07_persona_map.html"><span class="n">07</span><span>Persona Map · Downstream</span><span></span></a></li>
+      </ol>
+      <div class="track-end">Then Build 1–8 &middot; pages 08–15</div>
+    </section>
+  </div>
 
   <div class="sec">
     <h2>From Personas to Production</h2>
-    <span>the shared Build section every track converges on after the persona map</span>
+    <span>the shared ending every track converges on after the Persona Map &middot; pages 07–14 (08–15 on Downstream)</span>
   </div>
 
   <nav class="grid" aria-label="Build section">
     <a class="card" href="working_deck/build/page_01_build.html">
-      <div class="card-top"><span class="card-num">BUILD 01</span><span class="pill">First pass</span></div>
+      <div class="card-top"><span class="card-num">BUILD 01</span><span class="pill">Interactive</span></div>
       <div class="card-title">How Agents Are Built</div>
       <div class="card-desc">Horses for courses: no-code, low-code and high-code agents in one portfolio.</div>
     </a>
@@ -380,7 +364,7 @@
       <div class="card-desc">Build the agent once, run it where your data and your plant are.</div>
     </a>
     <a class="card" href="working_deck/build/page_04_models.html">
-      <div class="card-top"><span class="card-num">BUILD 04</span><span class="pill">First pass</span></div>
+      <div class="card-top"><span class="card-num">BUILD 04</span><span class="pill">Interactive</span></div>
       <div class="card-title">Model Choice</div>
       <div class="card-desc">The right model for each task: Frontier, Workhorse, Scale, Open weight.</div>
     </a>
@@ -414,14 +398,14 @@
   <div class="rows">
     <a class="row" href="personas/dossier.html">
       <span class="row-title">Persona Dossiers</span>
-      <span class="row-desc">Every role in depth &mdash; agents, workflows and value per role. Reached from any cell on Stage 08.</span>
+      <span class="row-desc">Every role in depth &mdash; agents, workflows and value per role. Reached from any cell on the Persona Map.</span>
       <span class="row-go">Open &#8594;</span>
     </a>
   </div>
 
   <footer>
     Google Cloud Sovereign Energy Solutions Practice &middot; Executive Briefing<br>
-    The deck is hand-authored in <code>working_deck/pages/</code>. There is no build step &mdash;
+    The deck is hand-authored in <code>working_deck/</code> (<code>pages/</code>, the three track folders and <code>build/</code>). There is no build step &mdash;
     edit the pages directly.
   </footer>
 
