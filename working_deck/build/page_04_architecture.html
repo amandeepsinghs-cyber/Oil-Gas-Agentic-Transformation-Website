@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Architecture | From Personas to Production</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/aurora.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    .jenga-card {
+      background: var(--surface-sunk);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+    .jenga-card-fragile {
+      border-top: 3px solid var(--border-strong);
+    }
+    .jenga-card-fragile:hover {
+      border-color: var(--text-dim);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(18,19,23,.10);
+    }
+    .jenga-card-fortified {
+      border-top: 3px solid var(--g-blue);
+      background: var(--surface);
+    }
+    .jenga-card-fortified:hover {
+      border-color: var(--g-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(49,134,255,.16);
+    }
+    .jenga-img-box {
+      position: relative;
+      width: 100%;
+      height: 390px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--canvas);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .jenga-img-box img {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .jenga-card:hover .jenga-img-box img {
+      transform: scale(1.02);
+    }
+    .jenga-img-light {
+      display: none !important;
+    }
+    .jenga-img-dark {
+      display: block !important;
+    }
+    .theme-light .jenga-img-dark {
+      display: none !important;
+    }
+    .theme-light .jenga-img-light {
+      display: block !important;
+    }
+    .ar-ge-mark { display: inline-flex; align-items: center; background: #121317; border-radius: 10px; padding: 9px 12px; }
+    .ar-ge-mark img { width: auto !important; height: 18px !important; }
+    .ar-lane { grid-template-columns: 178px minmax(0, 1fr) !important; gap: 14px !important; }
+    .ar-nodes { gap: 4px 6px !important; }
+    .ar-node { padding: 6px 10px 6px 6px !important; gap: 8px !important; }
+    .ar-node img, .ar-mono { width: 32px !important; height: 32px !important; }
+    .ar-node b { font-size: 13.5px !important; }
+    .ar-grid { grid-template-columns: minmax(0, 1fr) 320px !important; }
+    .ar-node .ar-ge-mark img { width: auto !important; height: 20px !important; }
+    .ar-node.ar-ge small { font-size: 12px; }
+  </style>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('deck-theme') || 'light';
+      if (saved === 'dark') {
+        document.documentElement.classList.add('theme-dark');
+      }
+    })();
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('theme-dark');
+      if (document.body) document.body.classList.toggle('theme-dark', isDark);
+      localStorage.setItem('deck-theme', isDark ? 'dark' : 'light');
+      updateThemeButtons(!isDark);
+    }
+    function updateThemeButtons(isLight) {
+      document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+        btn.innerHTML = isLight 
+          ? '<span style="font-size: 13px; line-height: 1;">🌙</span><span>Dark Mode</span>' 
+          : '<span style="font-size: 13px; line-height: 1;">☀️</span><span>Light Mode</span>';
+        btn.setAttribute('title', isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const isLight = !document.documentElement.classList.contains('theme-dark');
+      updateThemeButtons(isLight);
+    });
+  </script>
+
+  <style>
+    /* aurora: light is native, so the *_light image of each pair is the
+       default and the dark twin is the opt-in. The rules these replace live
+       in styles.css under .theme-light, which this page no longer sets. */
+    [class*="-img-dark"]  { display: none  !important; }
+    [class*="-img-light"] { display: block !important; }
+    html.theme-dark [class*="-img-dark"]  { display: block !important; }
+    html.theme-dark [class*="-img-light"] { display: none  !important; }
+  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Google+Sans+Text:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap">
+</head>
+<body style="background: var(--canvas); color: var(--text-muted); font-family: var(--font-display); margin: 0; padding: 0; overflow-x: hidden;">
+
+  <!-- Single-Page Executive Top Navigation Bar -->
+  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(248, 249, 252, 0.85); border-bottom: 1px solid var(--border-subtle); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
+    <a href="../../index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
+      <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
+      <div style="width: 1px; height: 20px; background: var(--surface-sunk);"></div>
+      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text); letter-spacing: 1.5px; text-transform: uppercase;">BUILD 04 // ARCHITECTURE</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: 16px;">
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Light Mode">
+        <span style="font-size: 13px; line-height: 1;">☀️</span>
+        <span>Light Mode</span>
+      </button>
+      <a href="page_03_govern.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;">4 / 8</span>
+      <a href="page_05_deploy.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
+      <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
+        All Slides ↗
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Viewport -->
+  <main id="viewport-scaler" style="padding-top: 60px;">
+  <section class="ar" aria-label="Agent architecture">
+  <style>
+    .ar { min-height: 100vh; box-sizing: border-box; padding: 26px max(24px, 4vw) 104px; background: var(--canvas); font-family: var(--font-body); color: var(--text); }
+    .ar * { box-sizing: border-box; }
+    .ar-in { max-width: 1520px; margin: 0 auto; }
+    .ar-kick { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11.5px; font-weight: 500; letter-spacing: 1.4px; text-transform: uppercase; color: var(--text-muted); }
+    .ar-kick i { width: 28px; height: 3px; border-radius: 2px; background: var(--gemini-spark); }
+    .ar h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 2.9vw, 44px); line-height: 1.12; letter-spacing: -0.6px; margin: 10px 0 6px; color: var(--text); }
+    .ar-sub { font-size: 16px; line-height: 1.5; color: var(--text-muted); margin: 0 0 18px; max-width: 980px; }
+    .ar-sub b { color: var(--text); font-weight: 500; }
+    .ar-bar { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 16px; }
+    .ar-seg { display: inline-flex; background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 999px; padding: 4px; box-shadow: var(--shadow-sm); }
+    .ar-seg button { font: 500 13.5px var(--font-display); color: var(--text-muted); background: none; border: 0; border-radius: 999px; padding: 8px 16px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+    .ar-seg button img { width: 20px; height: 20px; }
+    .ar-seg button[aria-pressed="true"] { background: var(--g-blue); color: #FFF; }
+    .ar-lbl { font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-dim); }
+    .ar-trace { font: 500 13.5px var(--font-display); color: var(--blue-ink); background: var(--surface); border: 1px solid var(--g-blue); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+    .ar-trace:hover { background: var(--g-blue); color: #FFF; }
+    .ar-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 22px; align-items: start; }
+
+    /* The governance envelope: one boundary around every layer. The approved
+       Red -> Purple "security governance" pair, used as a border, never a fill. */
+    .ar-env { position: relative; border-radius: 22px; padding: 2px; background: var(--boundary-grad); }
+    .ar-env-in { border-radius: 20px; background: var(--surface); padding: 6px 22px 10px; }
+    .ar-env-tag { position: absolute; top: -12px; right: 22px; font: 500 11px var(--font-mono); letter-spacing: 1px; text-transform: uppercase; color: var(--red-ink); background: var(--canvas); padding: 3px 10px; border-radius: 999px; border: 1px solid var(--border-subtle); }
+
+    .ar-lane { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 18px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--border-subtle); }
+    .ar-lane:last-child { border-bottom: 0; }
+    .ar-ln { font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--lc); letter-spacing: 1px; }
+    .ar-lt { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--text); margin-top: 2px; }
+    .ar-ls { font-size: 12.5px; color: var(--text-muted); line-height: 1.4; margin-top: 2px; }
+    .ar-nodes { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .ar-node { display: inline-flex; align-items: center; gap: 10px; padding: 8px 12px 8px 8px; border-radius: 14px; border: 1px solid transparent; cursor: pointer; transition: background .2s, border-color .2s, box-shadow .2s, transform .2s; background: transparent; font: inherit; color: inherit; text-align: left; }
+    .ar-node img { width: 36px; height: 36px; flex: none; }
+    .ar-node b { display: block; font: 500 14px var(--font-display); color: var(--text); line-height: 1.2; }
+    .ar-node small { display: block; font-size: 11.5px; color: var(--text-muted); }
+    .ar-node:hover, .ar-node.sel { background: var(--surface-sunk); border-color: var(--border-subtle); }
+    .ar-node.hot { border-color: var(--g-blue); box-shadow: 0 0 0 4px rgba(49,134,255,.16); background: var(--surface); transform: translateY(-1px); }
+    .ar-mono { width: 36px; height: 36px; border-radius: 10px; flex: none; display: flex; align-items: center; justify-content: center; font: 500 12px var(--font-mono); color: var(--purple-ink); border: 1.5px solid var(--g-purple); background: var(--surface); }
+    .ar-arrow { color: var(--text-dim); font-size: 18px; }
+    .ar-chip { font: 500 11.5px var(--font-mono); color: var(--text-muted); border: 1px dashed var(--border-strong); border-radius: 999px; padding: 4px 10px; }
+    .ar-chip.red { color: var(--red-ink); border-color: var(--g-red); border-style: solid; }
+    .ar-run { transition: opacity .25s; }
+    .ar-run.fade { opacity: 0; }
+
+    .ar-side { position: sticky; top: 84px; display: flex; flex-direction: column; gap: 14px; }
+    .ar-card { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 18px; padding: 16px 18px; box-shadow: var(--shadow-sm); }
+    .ar-card h3 { margin: 0 0 4px; font: 600 16px var(--font-display); color: var(--text); display: flex; align-items: center; gap: 10px; }
+    .ar-card h3 img { width: 28px; height: 28px; }
+    .ar-card p { margin: 6px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--text-muted); }
+    .ar-card .why { margin-top: 10px; padding-left: 12px; border-left: 3px solid var(--g-green); font-size: 13.5px; color: var(--text); line-height: 1.45; }
+    .ar-card .prod { display: inline-block; margin-top: 10px; font: 500 11.5px var(--font-mono); color: var(--blue-ink); }
+    .ar-gov { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+    .ar-gov li { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; font-size: 13px; line-height: 1.4; color: var(--text-muted); }
+    .ar-gov li img { width: 24px; height: 24px; }
+    .ar-gov li b { color: var(--text); font-weight: 500; }
+    .ar-steps { counter-reset: s; list-style: none; margin: 8px 0 0; padding: 0; font-size: 13px; color: var(--text-dim); }
+    .ar-steps li { padding: 5px 0 5px 28px; position: relative; transition: color .2s; }
+    .ar-steps li::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 4px; width: 19px; height: 19px; border-radius: 50%; border: 1px solid var(--border-strong); font: 500 11px/19px var(--font-mono); text-align: center; }
+    .ar-steps li.on { color: var(--text); }
+    .ar-steps li.on::before { background: var(--g-blue); border-color: var(--g-blue); color: #FFF; }
+    @media (max-width: 1200px) { .ar-grid { grid-template-columns: 1fr; } .ar-lane { grid-template-columns: 1fr; } .ar-side { position: static; } }
+    @media (prefers-reduced-motion: reduce) { .ar * { transition: none !important; } }
+  </style>
+  <div class="ar-in">
+    <div class="ar-kick"><i></i>From personas to production · Agent architecture</div>
+    <h1>Build the agent once. Run it where your data and your plant are.</h1>
+    <p class="ar-sub">One pattern behind every squad on the persona map: <b>models compute, agents reason over what the models computed, and a named person decides</b>. Click any component, switch where it runs, or trace a request.</p>
+    <div class="ar-bar">
+      <span class="ar-lbl">Runs on</span>
+      <div class="ar-seg" role="group" aria-label="Where the agents run">
+        <button data-rt="gc" aria-pressed="true"><img src="../../assets/media/gcp/VertexAI.svg" alt="">Google Cloud</button>
+        <button data-rt="op" aria-pressed="false"><img src="../../assets/media/gcp/DistributedCloud.svg" alt="">On-premises &amp; air-gapped</button>
+        <button data-rt="mc" aria-pressed="false"><img src="../../assets/media/gcp/HybridMulticloud.svg" alt="">Other clouds</button>
+      </div>
+      <button class="ar-trace" id="arTrace">▶ Trace a request</button>
+    </div>
+    <div class="ar-grid">
+      <div class="ar-env"><span class="ar-env-tag">Governed end to end</span><div class="ar-env-in">
+        <div class="ar-lane" style="--lc: var(--blue-ink)">
+          <div><div class="ar-ln">01 · EXPERIENCE</div><div class="ar-lt">Where people decide</div><div class="ar-ls">Ask, review, approve</div></div>
+          <div class="ar-nodes">
+            <button class="ar-node ar-ge" data-k="ge"><span class="ar-ge-mark"><img src="../../assets/media/gemini_enterprise_logo.svg" alt="Gemini Enterprise"></span><span><small>The front door</small></span></button>
+            <button class="ar-node" data-k="voice"><img src="../../assets/media/brand/gemini_spark_fullcolor_768.png" alt=""><span><b>Gemini Live</b><small>Voice, in the field</small></span></button>
+            <button class="ar-node" data-k="apps"><img src="../../assets/media/gcp/CloudRun.svg" alt=""><span><b>Custom apps</b><small>Cloud Run</small></span></button>
+            <button class="ar-node" data-k="systems"><img src="../../assets/media/gcp/IntegrationServices.svg" alt=""><span><b>Existing systems</b><small>ERP, maintenance, historian</small></span></button>
+          </div>
+        </div>
+        <div class="ar-lane" style="--lc: var(--purple-ink)">
+          <div><div class="ar-ln">02 · AGENTS</div><div class="ar-lt">One orchestrator, specialists</div><div class="ar-ls">Each agent has one job</div></div>
+          <div class="ar-nodes">
+            <button class="ar-node" data-k="orch"><img src="../../assets/media/gcp/Agents.svg" alt=""><span><b>Orchestrator</b><small>Plans, routes, ranks</small></span></button>
+            <span class="ar-arrow">⇄</span>
+            <button class="ar-node" data-k="agentA"><span class="ar-mono">A</span><span><b>Agent A</b><small>One job</small></span></button>
+            <button class="ar-node" data-k="agentB"><span class="ar-mono">B</span><span><b>Agent B</b><small>One job</small></span></button>
+            <button class="ar-node" data-k="agentC"><span class="ar-mono">C</span><span><b>Agent C</b><small>One job</small></span></button>
+            <button class="ar-node" data-k="model"><img src="../../assets/media/brand/gemini_spark_fullcolor_768.png" alt=""><span><b>Gemini</b><small>Model Garden</small></span></button>
+            <button class="ar-node" data-k="memory"><img src="../../assets/media/gcp/VertexAI.svg" alt=""><span><b>Memory Bank</b><small>Agent Engine</small></span></button>
+          </div>
+        </div>
+        <div class="ar-lane" style="--lc: var(--green-ink)">
+          <div><div class="ar-ln">03 · TOOLS &amp; ENGINES</div><div class="ar-lt">Models compute</div><div class="ar-ls">The agent never guesses the physics</div></div>
+          <div class="ar-nodes">
+            <span class="ar-chip" data-k="mcp" style="cursor:pointer">MCP · A2A — open protocols</span>
+            <button class="ar-node" data-k="physics"><img src="../../assets/media/gcp/AIMachineLearning.svg" alt=""><span><b>Physics &amp; ML models</b><small>Vertex AI · BigQuery ML</small></span></button>
+            <button class="ar-node" data-k="calc"><img src="../../assets/media/gcp/Compute.svg" alt=""><span><b>Calculation engines</b><small>Solvers, simulators</small></span></button>
+            <button class="ar-node" data-k="apis"><img src="../../assets/media/gcp/Apigee.svg" alt=""><span><b>Enterprise APIs</b><small>Apigee</small></span></button>
+          </div>
+        </div>
+        <div class="ar-lane" style="--lc: var(--amber-ink)">
+          <div><div class="ar-ln">04 · DATA, WHERE IT LIVES</div><div class="ar-lt">Connected, not moved</div><div class="ar-ls">Every answer cites its source</div></div>
+          <div class="ar-nodes">
+            <button class="ar-node" data-k="plant"><img src="../../assets/media/gcp/Databases.svg" alt=""><span><b>Plant historian / DCS</b><small>On-premises · one-way</small></span></button>
+            <span class="ar-chip red">no route back to control</span>
+            <button class="ar-node" data-k="clouds"><img src="../../assets/media/gcp/HybridMulticloud.svg" alt=""><span><b>Other clouds</b><small>Data stays put</small></span></button>
+            <button class="ar-node" data-k="bq"><img src="../../assets/media/gcp/BigQuery.svg" alt=""><span><b>BigQuery</b><small>Analytics &amp; vector search</small></span></button>
+            <button class="ar-node" data-k="rag"><img src="../../assets/media/gcp/VertexAI.svg" alt=""><span><b>RAG Engine</b><small>SOPs, records, citations</small></span></button>
+          </div>
+        </div>
+        <div class="ar-lane" style="--lc: var(--blue-ink)">
+          <div><div class="ar-ln">05 · RUNTIME</div><div class="ar-lt" id="arRtTitle">Google Cloud</div><div class="ar-ls">Same agent, same governance</div></div>
+          <div class="ar-nodes ar-run" id="arRun"></div>
+        </div>
+      </div></div>
+      <aside class="ar-side">
+        <div class="ar-card" id="arDetail"></div>
+        <div class="ar-card"><h3>Governance on every layer</h3>
+          <ul class="ar-gov">
+            <li><img src="../../assets/media/gcp/SecurityIdentity.svg" alt=""><span><b>Identity per agent</b> — IAM agent identity, least privilege</span></li>
+            <li><img src="../../assets/media/gcp/SecurityCommandCenter.svg" alt=""><span><b>Prompt &amp; response safety</b> — Model Armor</span></li>
+            <li><img src="../../assets/media/gcp/Networking.svg" alt=""><span><b>Perimeter &amp; keys</b> — VPC Service Controls, customer-managed keys</span></li>
+            <li><img src="../../assets/media/gcp/Observability.svg" alt=""><span><b>Audit &amp; trace</b> — Cloud Audit Logs, Cloud Trace</span></li>
+            <li><img src="../../assets/media/gcp/VertexAI.svg" alt=""><span><b>Evaluated</b> — Gen AI evaluation before and after go-live</span></li>
+          </ul></div>
+      </aside>
+    </div>
+  </div>
+  <script>
+  (function () {
+    var G = "../../assets/media/gcp/", M = "../../assets/media/";
+    var RT = {
+      gc: { t: "Google Cloud", n: [["VertexAI.svg","Agent Engine","Managed agent runtime","rt_ae"],["CloudRun.svg","Cloud Run","Serverless containers","rt_cr"],["GKE.svg","GKE","Kubernetes","rt_gke"]] },
+      op: { t: "On-premises & air-gapped", n: [["DistributedCloud.svg","Google Distributed Cloud","In your plant or data centre","rt_gdc"],["GKE.svg","GKE on GDC","Agents as containers","rt_gke"],["#gemma","Gemini & Gemma on-site","Models run locally","rt_local"]] },
+      mc: { t: "Other clouds", n: [["HybridMulticloud.svg","GKE Enterprise","One fleet across clouds","rt_mc"],["GKE.svg","Containers","Same agent image","rt_gke"],["Marketplace.svg","Model Garden","Models, one catalogue","model"]] }
+    };
+    var D = {
+      intro: { img: M + "brand/gemini_spark_fullcolor_768.png", t: "The rule behind every agent", p: "Models compute. Agents reason over what the models computed. A named person decides.", why: "Nothing in this picture can move a valve: the agents advise, people act through the normal permit.", prod: "Click any component for detail" },
+      ge: { img: M + "gemini_enterprise_logo.svg", dark: 1, t: "Gemini Enterprise", p: "Where every persona finds, uses and approves their agents — no-code, low-code and high-code agents side by side.", why: "One front door means one identity, one audit trail and one place to switch an agent off.", prod: "Gemini Enterprise" },
+      voice: { img: M + "brand/gemini_spark_fullcolor_768.png", t: "Gemini Live", p: "Real-time voice for people on the plant floor, the jetty or the rig — in their own language.", why: "A field operator can ask and be answered hands-free, with the same governed agents behind it.", prod: "Gemini Live API" },
+      apps: { img: G + "CloudRun.svg", t: "Custom applications", p: "Purpose-built screens — a unit workbench, a twin, a cockpit — when a chat window is not enough.", why: "Domain screens keep the engineer's context; the agent sits inside them.", prod: "Cloud Run" },
+      systems: { img: G + "IntegrationServices.svg", t: "Inside existing systems", p: "Agents surfaced in the monoliths people already use, or triggered by events in their processes.", why: "Nobody changes tools to benefit from an agent.", prod: "Application Integration · Apigee" },
+      orch: { img: G + "Agents.svg", t: "Orchestrator", p: "Breaks a request into steps, routes each to the right specialist, and ranks what matters most across the plant.", why: "Specialists stay simple and testable; the orchestrator carries the plan.", prod: "Agent Development Kit · A2A" },
+      agentA: { img: G + "Agents.svg", t: "Agent A · B · C", p: "Specialists with one job each — for example, a reconciliation agent, a monitoring agent, an advisory agent.", why: "One job per agent is what makes an agent evaluable, and therefore trustworthy.", prod: "Agent Development Kit" },
+      model: { img: M + "brand/gemini_spark_fullcolor_768.png", t: "The model", p: "Gemini by default; any tier or partner model from Model Garden, chosen per agent and swapped without a rebuild.", why: "The right model per task is how hundreds of agents stay affordable.", prod: "Gemini on Vertex AI · Model Garden" },
+      memory: { img: G + "VertexAI.svg", t: "Memory", p: "Sessions and long-term memory: the shift, the case, the decisions already taken.", why: "A handover agent that remembers last night is worth more than one that starts cold.", prod: "Agent Engine Sessions · Memory Bank" },
+      mcp: { img: G + "Agents.svg", t: "Open protocols", p: "MCP connects agents to tools and data; A2A lets agents — ours, yours or a partner's — work together.", why: "Open standards are what make 'build once, run anywhere' true.", prod: "MCP · A2A · MCP Toolbox" },
+      physics: { img: G + "AIMachineLearning.svg", t: "Physics & ML models", p: "Soft sensors, forecasts and physics-informed models do the numbers; the agent reasons over their output and its uncertainty.", why: "If the models disagree, the agent withholds advice — and says why.", prod: "Vertex AI · BigQuery ML" },
+      calc: { img: G + "Compute.svg", t: "Calculation engines", p: "Existing solvers, simulators and engineering calculations, called as tools.", why: "Decades of engineering IP is reused, not replaced.", prod: "Compute Engine · your engines" },
+      apis: { img: G + "Apigee.svg", t: "Enterprise APIs", p: "ERP, maintenance, laboratory and scheduling systems exposed as governed APIs.", why: "One policy layer for every tool an agent may call.", prod: "Apigee" },
+      plant: { img: G + "Databases.svg", t: "Plant historian / DCS", p: "Readings leave the plant one way. Tags and values can be abstracted before they leave site.", why: "No agent holds a credential or route back to the control system.", prod: "One-way connectors" },
+      clouds: { img: G + "HybridMulticloud.svg", t: "Data in other clouds", p: "Agents read data where it already lives, through connectors and open table formats.", why: "No migration project stands between you and the first agent.", prod: "Connectors · BigLake" },
+      bq: { img: G + "BigQuery.svg", t: "BigQuery", p: "History, analytics and vector search for the data you choose to bring together.", why: "One governed place to train the models and ground the agents.", prod: "BigQuery" },
+      rag: { img: G + "VertexAI.svg", t: "Grounding & citations", p: "SOPs, work orders and incident records retrieved and cited in every answer.", why: "'No cited source' is a valid answer — and the agent will say so.", prod: "Vertex AI RAG Engine · Vertex AI Search" },
+      rt_ae: { img: G + "VertexAI.svg", t: "Agent Engine", p: "Managed runtime for agents: scaling, sessions, memory and evaluation built in.", why: "Fastest path from a built agent to a governed, running one.", prod: "Vertex AI Agent Engine" },
+      rt_cr: { img: G + "CloudRun.svg", t: "Cloud Run", p: "Agents and their apps as serverless containers.", why: "Pay per use; scale to zero between shifts.", prod: "Cloud Run" },
+      rt_gke: { img: G + "GKE.svg", t: "Containers on Kubernetes", p: "The same agent image runs on GKE in Google Cloud, on-premises or in another cloud.", why: "Portability is a property of the agent, not of the hosting deal.", prod: "GKE" },
+      rt_gdc: { img: G + "DistributedCloud.svg", t: "Google Distributed Cloud", p: "Google Cloud services in your own plant or data centre, including air-gapped.", why: "For sites where data and models must never leave.", prod: "Google Distributed Cloud" },
+      rt_local: { img: G + "DistributedCloud.svg", t: "Models on-site", p: "Gemini on Google Distributed Cloud, or open-weight Gemma you host and version yourself.", why: "Sovereignty without giving up the model.", prod: "Gemini on GDC · Gemma" },
+      rt_mc: { img: G + "HybridMulticloud.svg", t: "GKE Enterprise", p: "One managed fleet of clusters across Google Cloud and other clouds.", why: "One policy and one rollout process, wherever the agent runs.", prod: "GKE Enterprise" }
+    };
+    var detail = document.getElementById("arDetail");
+    function show(k) {
+      var d = D[k] || D.intro;
+      detail.innerHTML = '<h3><img src="' + d.img + '" alt=""' + (d.dark ? ' style="background:#121317;border-radius:8px;padding:5px"' : '') + '>' + d.t + '</h3><p>' + d.p + '</p><div class="why">' + d.why + '</div><span class="prod">' + d.prod + '</span>';
+      document.querySelectorAll(".ar-node.sel").forEach(function (n) { n.classList.remove("sel"); });
+      document.querySelectorAll('[data-k="' + k + '"]').forEach(function (n) { n.classList.add("sel"); });
+    }
+    function bind(root) {
+      root.querySelectorAll("[data-k]").forEach(function (n) {
+        n.addEventListener("click", function () { show(n.dataset.k); });
+        n.addEventListener("mouseenter", function () { show(n.dataset.k); });
+      });
+    }
+    var run = document.getElementById("arRun");
+    function setRt(key) {
+      document.querySelectorAll(".ar-seg button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.rt === key)); });
+      run.classList.add("fade");
+      setTimeout(function () {
+        document.getElementById("arRtTitle").textContent = RT[key].t;
+        run.innerHTML = RT[key].n.map(function (n) {
+          var ic = n[0] === "#gemma" ? '<img src="' + M + 'models/gemma-color.svg" alt="">' : '<img src="' + G + n[0] + '" alt="">';
+          return '<button class="ar-node" data-k="' + n[3] + '">' + ic + '<span><b>' + n[1] + '</b><small>' + n[2] + '</small></span></button>';
+        }).join("") + '<span class="ar-chip">upper layers unchanged</span>';
+        bind(run); run.classList.remove("fade");
+      }, 220);
+    }
+    document.querySelectorAll(".ar-seg button").forEach(function (b) { b.addEventListener("click", function () { setRt(b.dataset.rt); }); });
+    bind(document);
+    setRt("gc"); show("intro");
+
+    /* Trace: one request, top to bottom and back. */
+    var STEPS = [["ge","A controller asks in Gemini Enterprise"],["orch","The orchestrator plans and routes"],["agentB","Agent B takes the job"],["physics","The models compute — with their uncertainty"],["plant","Readings come from the plant, one way"],["rag","The answer is grounded and cited"],["ge","A named person reviews and approves"]];
+    document.getElementById("arTrace").addEventListener("click", function () {
+      var list = '<h3><img src="' + G + 'Agents.svg" alt="">One request, end to end</h3><ol class="ar-steps">' + STEPS.map(function (s) { return "<li>" + s[1] + "</li>"; }).join("") + "</ol>";
+      detail.innerHTML = list;
+      var lis = detail.querySelectorAll("li");
+      STEPS.forEach(function (s, i) {
+        setTimeout(function () {
+          document.querySelectorAll(".ar-node.hot").forEach(function (n) { n.classList.remove("hot"); });
+          var n = document.querySelector('.ar-node[data-k="' + s[0] + '"]'); if (n) n.classList.add("hot");
+          lis.forEach(function (l, j) { l.classList.toggle("on", j <= i); });
+          if (i === STEPS.length - 1) setTimeout(function () { document.querySelectorAll(".ar-node.hot").forEach(function (x) { x.classList.remove("hot"); }); }, 1400);
+        }, 200 + i * 900);
+      });
+    });
+  })();
+  </script>
+  </section>
+</main>
+
+  <!-- Floating Page Dock -->
+  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(18,19,23,.14); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+    <a href="page_03_govern.html" style="background: var(--surface-sunk); border: 1px solid var(--border); color: var(--text-muted); width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none;">
+      ◀
+    </a>
+    <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: var(--text-muted); white-space: nowrap;">
+      BUILD 04 // ARCHITECTURE
+    </div>
+    <a href="page_05_deploy.html" style="background: var(--g-blue); border: none; color: #FFF; padding: 7px 16px; border-radius: 20px; font-family: var(--font-display); font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+      <span>Next Page</span>
+      <span>▶</span>
+    </a>
+  </aside>
+
+</body>
+</html>

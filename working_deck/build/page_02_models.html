@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model Choice | From Personas to Production</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/aurora.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    .jenga-card {
+      background: var(--surface-sunk);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+    .jenga-card-fragile {
+      border-top: 3px solid var(--border-strong);
+    }
+    .jenga-card-fragile:hover {
+      border-color: var(--text-dim);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(18,19,23,.10);
+    }
+    .jenga-card-fortified {
+      border-top: 3px solid var(--g-blue);
+      background: var(--surface);
+    }
+    .jenga-card-fortified:hover {
+      border-color: var(--g-blue);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(49,134,255,.16);
+    }
+    .jenga-img-box {
+      position: relative;
+      width: 100%;
+      height: 390px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: var(--canvas);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .jenga-img-box img {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .jenga-card:hover .jenga-img-box img {
+      transform: scale(1.02);
+    }
+    .jenga-img-light {
+      display: none !important;
+    }
+    .jenga-img-dark {
+      display: block !important;
+    }
+    .theme-light .jenga-img-dark {
+      display: none !important;
+    }
+    .theme-light .jenga-img-light {
+      display: block !important;
+    }
+  </style>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('deck-theme') || 'light';
+      if (saved === 'dark') {
+        document.documentElement.classList.add('theme-dark');
+      }
+    })();
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('theme-dark');
+      if (document.body) document.body.classList.toggle('theme-dark', isDark);
+      localStorage.setItem('deck-theme', isDark ? 'dark' : 'light');
+      updateThemeButtons(!isDark);
+    }
+    function updateThemeButtons(isLight) {
+      document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+        btn.innerHTML = isLight 
+          ? '<span style="font-size: 13px; line-height: 1;">🌙</span><span>Dark Mode</span>' 
+          : '<span style="font-size: 13px; line-height: 1;">☀️</span><span>Light Mode</span>';
+        btn.setAttribute('title', isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const isLight = !document.documentElement.classList.contains('theme-dark');
+      updateThemeButtons(isLight);
+    });
+  </script>
+
+  <style>
+    /* aurora: light is native, so the *_light image of each pair is the
+       default and the dark twin is the opt-in. The rules these replace live
+       in styles.css under .theme-light, which this page no longer sets. */
+    [class*="-img-dark"]  { display: none  !important; }
+    [class*="-img-light"] { display: block !important; }
+    html.theme-dark [class*="-img-dark"]  { display: block !important; }
+    html.theme-dark [class*="-img-light"] { display: none  !important; }
+  </style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Google+Sans+Text:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../../assets/build.css">
+</head>
+<body style="background: var(--canvas); color: var(--text-muted); font-family: var(--font-display); margin: 0; padding: 0; overflow-x: hidden;">
+
+  <!-- Single-Page Executive Top Navigation Bar -->
+  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(248, 249, 252, 0.85); border-bottom: 1px solid var(--border-subtle); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
+    <a href="../../index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
+      <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
+      <div style="width: 1px; height: 20px; background: var(--surface-sunk);"></div>
+      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text); letter-spacing: 1.5px; text-transform: uppercase;">BUILD 02 // MODEL CHOICE</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: 16px;">
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Light Mode">
+        <span style="font-size: 13px; line-height: 1;">☀️</span>
+        <span>Light Mode</span>
+      </button>
+      <a href="page_01_build.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;">2 / 8</span>
+      <a href="page_03_govern.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
+      <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
+        All Slides ↗
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Viewport -->
+  <main id="viewport-scaler" style="padding-top: 60px;">
+<section class="bx mc">
+<style>
+  .mc-grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 22px; align-items: stretch; }
+  .mc-tasks { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+  .mc-plot { position: relative; background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 20px; box-shadow: var(--shadow-sm); height: 520px; overflow: hidden; }
+  .mc-axis { position: absolute; font: 500 11px var(--font-mono); letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-dim); }
+  .mc-ax-x { left: 64px; right: 24px; bottom: 14px; display: flex; justify-content: space-between; }
+  .mc-ax-y { left: 18px; top: 24px; bottom: 44px; writing-mode: vertical-rl; transform: rotate(180deg); display: flex; justify-content: space-between; }
+  .mc-area { position: absolute; left: 56px; right: 20px; top: 18px; bottom: 40px; border-left: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); }
+  .mc-zone { position: absolute; border: 1.5px dashed var(--border-strong); border-radius: 18px; padding: 12px 14px; background: var(--surface); transition: opacity .35s, box-shadow .35s, border-color .35s, transform .35s; }
+  .mc-zone h4 { margin: 0 0 8px; font: 600 16px var(--font-display); color: var(--zt); display: flex; align-items: baseline; gap: 8px; }
+  .mc-zone h4 small { font: 400 12px var(--font-body); color: var(--text-muted); }
+  .mc-m { display: flex; align-items: center; gap: 8px; padding: 4px 0; font: 500 13.5px var(--font-display); color: var(--text); }
+  .mc-m img { width: 22px; height: 22px; } .mc-m small { font: 400 11.5px var(--font-body); color: var(--text-muted); }
+  .mc-m.star { font-weight: 600; }
+  .mc-zone.dim { opacity: .9; }
+  .mc-zone.pass { border-color: var(--zc); border-width: 2px; }
+  .mc-zone.pick { border-color: var(--zc); border-style: solid; border-width: 2.5px; box-shadow: 0 10px 30px rgba(18,19,23,.12); transform: scale(1.03); z-index: 3; }
+  .mc-tag { position: absolute; top: -12px; right: 14px; font: 500 11px var(--font-mono); color: #FFF; background: var(--zc); border-radius: 999px; padding: 3px 10px; opacity: 0; transition: opacity .3s; white-space: nowrap; }
+  .mc-zone.pick .mc-tag { opacity: 1; }
+  .mc-zone.zo .mc-tag { color: var(--g-grey-1200); }
+  .mc-side { display: flex; flex-direction: column; gap: 16px; }
+  .mc-rec .k { font: 500 11.5px var(--font-mono); letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-dim); }
+  .mc-rec h2 { margin: 6px 0 2px; font: 600 26px/1.15 var(--font-display); color: var(--text); display: flex; align-items: center; gap: 10px; }
+  .mc-rec h2 img { width: 30px; height: 30px; }
+  .mc-rec .tier { font: 500 14px var(--font-display); }
+  .mc-rec p { margin: 10px 0 0; font-size: 14.5px; line-height: 1.5; color: var(--text-muted); }
+  .mc-meter { margin-top: 14px; }
+  .mc-meter .row { display: grid; grid-template-columns: 110px 1fr 70px; gap: 10px; align-items: center; font-size: 12.5px; color: var(--text-muted); margin-top: 6px; }
+  .mc-meter .tr { height: 8px; border-radius: 4px; background: var(--surface-sunk); overflow: hidden; } .mc-meter .tr i { display: block; height: 100%; border-radius: 4px; transition: width .5s; }
+  .mc-meter b { font: 500 12px var(--font-mono); color: var(--text); text-align: right; }
+  .mc-src { margin-top: 8px; font-size: 11px; color: var(--text-dim); }
+  .mc-how { margin-top: 18px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 14.5px; color: var(--text-muted); }
+  .mc-how b { color: var(--text); font-weight: 500; }
+  .mc-how .s { display: inline-flex; align-items: center; gap: 8px; } .mc-how .s i { font: 500 11px var(--font-mono); font-style: normal; width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--g-blue); color: var(--blue-ink); display: inline-flex; align-items: center; justify-content: center; }
+  .mc-how .arr { color: var(--text-dim); }
+  .mc-how .garden { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; font: 500 13px var(--font-display); color: var(--text); }
+  .mc-how .garden img { width: 24px; height: 24px; }
+  @media (max-width: 1150px) { .mc-grid { grid-template-columns: 1fr; } }
+</style>
+<!-- Speaker notes: "When building out your AI strategy, one size does not fit all, and selecting the right model for each
+     specific task is key to achieving massive cost-efficiency without sacrificing quality. By strategically matching your
+     workloads across these tiers -- right-sizing your architecture -- you can dramatically optimise operational costs while
+     ensuring peak performance." Positions and meters are relative and qualitative; no prices are claimed.
+     Gemini 4 Argon is on a staged rollout -- confirm availability for the client before presenting. -->
+<div class="bx-in">
+  <div class="bx-kick"><i></i>From personas to production · Model choice</div>
+  <h1>The right model for each task: big cost savings, same results.</h1>
+  <p class="bx-sub">One size does not fit all. <b>Set the quality bar for the task, then use the smallest model that clears it.</b> Pick a task to see where it lands.</p>
+  <div class="mc-tasks"><span class="bx-lbl">Pick a task</span>
+    <div class="bx-seg" role="group" aria-label="Task" id="mcSeg"></div>
+  </div>
+  <div class="mc-grid">
+    <div class="mc-plot">
+      <div class="mc-axis mc-ax-y"><span>Reasoning depth needed →</span></div>
+      <div class="mc-axis mc-ax-x"><span>Lower cost per task</span><span>Higher cost per task →</span></div>
+      <div class="mc-area" id="mcArea"></div>
+    </div>
+    <div class="mc-side">
+      <div class="bx-card mc-rec" id="mcRec"></div>
+      <div class="bx-card"><h3>Why it matters at estate scale</h3>
+        <p>Hundreds of agents run thousands of times a day. Putting routine steps on Scale and Workhorse models, and saving Frontier models for judgement, is where most of the running cost is won — <b style="color:var(--text);font-weight:500">without a drop in quality</b>, because every step is evaluated against its own bar.</p></div>
+    </div>
+  </div>
+  <div class="mc-how">
+    <span class="s"><i>1</i><b>Set the bar</b> for each step</span><span class="arr">→</span>
+    <span class="s"><i>2</i><b>Evaluate</b> on each tier</span><span class="arr">→</span>
+    <span class="s"><i>3</i><b>Pick the smallest</b> that passes</span><span class="arr">→</span>
+    <span class="s"><i>4</i><b>Re-check</b> as models improve</span>
+    <span class="garden"><img src="../../assets/media/gcp/VertexAI.svg" alt="">Every tier in Vertex AI Model Garden — swapped without rebuilding the agent</span>
+  </div>
+</div>
+<script>
+(function () {
+  var M = "../../assets/media/models/";
+  var Z = {
+    frontier: { n: "Frontier", s: "premium reasoning", c: "var(--g-blue)", t: "var(--blue-ink)", pos: [60, 1, 38], lv: 3,
+                m: [["gemini-color.svg", "Gemini 4 Argon", "Google · flagship", 1], ["claude-color.svg", "Claude Opus", "Anthropic"], ["gemini-color.svg", "Gemini Pro", "Google"]], cost: 95, depth: 95 },
+    workhorse: { n: "Workhorse", s: "balanced", c: "var(--g-purple)", t: "var(--purple-ink)", pos: [35, 36, 30], lv: 2,
+                m: [["gemini-color.svg", "Gemini Flash", "Google", 1], ["claude-color.svg", "Claude Sonnet", "Anthropic"]], cost: 45, depth: 65 },
+    scale: { n: "Scale", s: "high throughput", c: "var(--g-green)", t: "var(--green-ink)", pos: [9, 72, 30], lv: 1,
+                m: [["gemini-color.svg", "Gemini Flash-Lite", "Google", 1], ["claude-color.svg", "Claude Haiku", "Anthropic"]], cost: 15, depth: 35 },
+    open: { n: "Open weight", s: "you host it", c: "var(--g-yellow)", t: "var(--amber-ink)", pos: [3, 36, 28], lv: 2, zo: 1,
+                m: [["gemma-color.svg", "Gemma", "Google", 1], ["zhipu-color.svg", "GLM", "Zhipu AI"], ["kimi-color.svg", "Kimi", "Moonshot AI"]], cost: 25, depth: 60 }
+  };
+  /* need = depth level the task requires (1 Scale, 2 Workhorse / Open weight, 3 Frontier). */
+  var TASKS = [
+    { k: "alarms", l: "Triage 10,000 alarms a day", need: 1, pick: "scale", model: 0, onsite: 0,
+      why: "High volume, simple judgement per item. Flash-Lite clears the bar at a fraction of the cost — the Shift Supervisor's alarm-triage agent runs here." },
+    { k: "recon", l: "Reconcile a tank balance", need: 2, pick: "workhorse", model: 0, onsite: 0,
+      why: "Structured reasoning over numbers and rules, every shift. Flash holds the bar; nothing bigger is needed — the Hydrocarbon Accountant's squad runs here." },
+    { k: "trip", l: "Root-cause a compressor trip", need: 3, pick: "frontier", model: 2, onsite: 0,
+      why: "Multi-source evidence, physics and history, with a costly wrong answer. Worth a Frontier model — Gemini Pro clears the bar." },
+    { k: "ta", l: "Plan a plant-wide turnaround", need: 3, pick: "frontier", model: 0, onsite: 0,
+      why: "Long-horizon planning across thousands of tasks and constraints. This is what the flagship is for: Gemini 4 Argon." },
+    { k: "gap", l: "Run on an air-gapped site", need: 2, pick: "open", model: 0, onsite: 1,
+      why: "The constraint is where it runs, not how deep it thinks. Open-weight Gemma, hosted on-site on Google Distributed Cloud, clears the same bar." }
+  ];
+  var area = document.getElementById("mcArea");
+  Object.keys(Z).forEach(function (k) {
+    var z = Z[k], d = document.createElement("div");
+    d.className = "mc-zone" + (z.zo ? " zo" : ""); d.id = "mcZ_" + k;
+    d.style.cssText = "left:" + z.pos[0] + "%;top:" + z.pos[1] + "%;width:" + z.pos[2] + "%;--zc:" + z.c + ";--zt:" + z.t;
+    d.innerHTML = '<span class="mc-tag">smallest that passes</span><h4>' + z.n + '<small>' + z.s + '</small></h4>' +
+      z.m.map(function (m, i) { return '<div class="mc-m' + (m[3] ? ' star' : '') + '" data-i="' + i + '"><img src="' + M + m[0] + '" alt=""><span>' + m[1] + ' <small>' + m[2] + '</small></span></div>'; }).join("");
+    area.appendChild(d);
+  });
+  var seg = document.getElementById("mcSeg"), cur = "recon";
+  seg.innerHTML = TASKS.map(function (t) { return '<button data-k="' + t.k + '" aria-pressed="false">' + t.l + '</button>'; }).join("");
+  function pick(k) {
+    cur = k;
+    var T = TASKS.filter(function (t) { return t.k === k; })[0], P = Z[T.pick];
+    seg.querySelectorAll("button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.k === k)); });
+    Object.keys(Z).forEach(function (zk) {
+      var el = document.getElementById("mcZ_" + zk), z = Z[zk];
+      var clears = z.lv >= T.need && (!T.onsite || zk === "open");
+      el.classList.remove("dim", "pass", "pick");
+      if (zk === T.pick) el.classList.add("pick"); else el.classList.add(clears ? "pass" : "dim");
+    });
+    var m = P.m[T.model];
+    var depth = '<span class="tr"><i style="width:' + P.depth + '%;background:' + P.c + '"></i></span><b>' + (P.depth > 80 ? "high" : P.depth > 50 ? "medium" : "light") + '</b>';
+    document.getElementById("mcRec").innerHTML = '<div class="k">Recommended for this task</div><h2><img src="' + M + m[0] + '" alt="">' + m[1] + '</h2>' +
+      '<div class="tier" style="color:' + P.t + '">' + P.n + ' tier · ' + P.s + '</div><p>' + T.why + '</p>' +
+      '<div class="mc-meter"><div class="row"><span>Reasoning depth</span>' + depth + '</div>' +
+      '<div class="row"><span>Cost per task</span><span class="tr"><i style="width:' + P.cost + '%;background:' + P.c + '"></i></span><b>' + (P.cost > 80 ? "high" : P.cost > 35 ? "medium" : "low") + '</b></div></div>' +
+      '<div class="mc-src">Qualitative, not to scale.</div>';
+  }
+  seg.querySelectorAll("button").forEach(function (b) { b.addEventListener("click", function () { pick(b.dataset.k); }); });
+  pick("recon");
+})();
+</script>
+</section>
+</main>
+
+  <!-- Floating Page Dock -->
+  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(18,19,23,.14); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+    <a href="page_01_build.html" style="background: var(--surface-sunk); border: 1px solid var(--border); color: var(--text-muted); width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none;">
+      ◀
+    </a>
+    <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: var(--text-muted); white-space: nowrap;">
+      BUILD 02 // MODEL CHOICE
+    </div>
+    <a href="page_03_govern.html" style="background: var(--g-blue); border: none; color: #FFF; padding: 7px 16px; border-radius: 20px; font-family: var(--font-display); font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px;">
+      <span>Next Page</span>
+      <span>▶</span>
+    </a>
+  </aside>
+
+</body>
+</html>

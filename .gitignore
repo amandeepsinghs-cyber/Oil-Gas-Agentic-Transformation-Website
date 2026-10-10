@@ -26,6 +26,12 @@ assets/media/*
 !assets/media/evidence/*
 !assets/media/gartner/
 !assets/media/gartner/*
+# Official Google Cloud product icons (cloud.google.com/icons) and LobeHub
+# model logos (MIT) used by the Build section pages in working_deck/build/.
+!assets/media/gcp/
+!assets/media/gcp/*
+!assets/media/models/
+!assets/media/models/*
 !assets/media/photos/swiss_cheese_nebula.jpg
 !assets/media/photos/swiss_cheese_fortified.jpg
 

@@ -1481,6 +1481,8 @@
   var d = (q.get("domain") || "").toLowerCase();
   if (!d) { try { d = (localStorage.getItem("deck-domain") || localStorage.getItem("selected-domain") || "").toLowerCase(); } catch (e) {} }
   if (ORDER.indexOf(d) < 0) d = "all";
+  /* Remember the tab, so returning from the Build section lands on it. */
+  try { localStorage.setItem("deck-domain", d); } catch (e) {}
   var slug = function (t) { return String(t).toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, ""); };
   var RAW = window.ENTERPRISE_MATRIX_DATA || [];
 
@@ -1550,10 +1552,13 @@
   document.addEventListener("DOMContentLoaded", function () {
     /* Track-aware deck navigation: the map sits at Stage 07 of each track. */
     var NAV = {
-      upstream:   { prev: "upstream/page_05.html",   next: "upstream/page_04.html",   count: "7 / 9" },
-      midstream:  { prev: "midstream/page_05.html",  next: "midstream/page_04.html",  count: "7 / 8" },
-      downstream: { prev: "downstream/page_06.html", next: "downstream/page_04.html", count: "8 / 10" },
-      all:        { prev: "pages/page_00.html",      next: "../index.html",           count: "" }
+      /* After the persona conversation every track converges on the shared
+         Build section (govern -> build -> architecture -> resilience ->
+         leadership -> 100 days). */
+      upstream:   { prev: "upstream/page_05.html",   next: "build/page_01_build.html", count: "7 / 9" },
+      midstream:  { prev: "midstream/page_05.html",  next: "build/page_01_build.html", count: "7 / 8" },
+      downstream: { prev: "downstream/page_06.html", next: "build/page_01_build.html", count: "8 / 10" },
+      all:        { prev: "pages/page_00.html",      next: "build/page_01_build.html", count: "" }
     }[d];
     var pv = document.getElementById("navPrev"), nx = document.getElementById("navNext"),
         ct = document.getElementById("navCount"), mk = document.getElementById("mastKicker");
