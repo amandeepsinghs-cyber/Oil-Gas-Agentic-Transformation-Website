@@ -24,6 +24,8 @@ assets/media/*
 # lives in the repo and has to be allowed through the assets/media/* block.
 !assets/media/evidence/
 !assets/media/evidence/*
+!assets/media/gartner/
+!assets/media/gartner/*
 !assets/media/photos/swiss_cheese_nebula.jpg
 !assets/media/photos/swiss_cheese_fortified.jpg
 

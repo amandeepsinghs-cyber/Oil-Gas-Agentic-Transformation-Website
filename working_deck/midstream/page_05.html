@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gas Supply Decision Agent | GAIL Agentic Transformation</title>
+  <link rel="stylesheet" href="../../assets/styles.css">
+  <link rel="stylesheet" href="../../assets/aurora.css">
+  <style>
+    /* Full-width set-up for the live demo. The slide poses the question and
+       shows the path; it deliberately does NOT reveal the recommendation or
+       the ₹ outcome -- the audience watches Gemini Enterprise get there. */
+    .hero {
+      display: grid; grid-template-columns: 1fr minmax(360px, 500px);
+      gap: 32px; align-items: center; margin-bottom: 30px;
+    }
+    .clip {
+      margin: 0; background: #FFFFFF; border: 1px solid var(--border);
+      border-radius: 6px; padding: 8px 8px 6px;
+      box-shadow: 0 14px 34px rgba(18,19,23,.16);
+      transform: rotate(-1.2deg);
+    }
+    .clip img { display: block; width: 100%; height: auto; border-radius: 2px; }
+    .clip figcaption {
+      font-family: var(--font-mono); font-size: 10.5px; color: #5F6368;
+      margin-top: 6px; text-align: right;
+    }
+    @media (max-width: 1080px) {
+      .hero { grid-template-columns: 1fr; }
+      .clip { transform: none; max-width: 520px; }
+    }
+    .setup-line {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 3px solid var(--g-yellow); border-radius: 12px;
+      padding: 12px 18px; margin: 0;
+      font-size: 15px; color: var(--text); line-height: 1.45;
+    }
+    .setup-line .muted { color: var(--text-muted); }
+
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 16px; }
+    .kpi {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 12px 16px; box-shadow: var(--shadow-sm);
+    }
+    .kpi-v { font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--text); line-height: 1.1; }
+    .kpi-l { font-size: 12.5px; color: var(--text-muted); margin-top: 3px; }
+
+    .flow {
+      display: grid;
+      grid-template-columns: 1.25fr auto 1fr auto 1fr auto 0.9fr;
+      gap: 10px; align-items: stretch; margin-bottom: 16px;
+    }
+    .arrow {
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; color: var(--text-dim);
+    }
+    .stage {
+      background: var(--surface); border: 1px solid var(--border);
+      border-top: 4px solid var(--stage-c); border-radius: 12px;
+      padding: 14px 14px 12px; display: flex; flex-direction: column; gap: 8px;
+      box-shadow: var(--shadow-sm);
+    }
+    .stage-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+    .stage-name {
+      font-family: var(--font-mono); font-size: 12px; font-weight: 800;
+      letter-spacing: 1.4px; text-transform: uppercase; color: var(--stage-c);
+    }
+    .stage-verb { font-family: var(--font-display); font-size: 13px; font-weight: 700; color: var(--text); }
+    .st-data     { --stage-c: var(--blue-ink); }
+    .st-analysis { --stage-c: var(--purple-ink, #4B31E3); }
+    .st-decision { --stage-c: var(--amber-ink); }
+    .st-action   { --stage-c: var(--green-ink); }
+    .q {
+      display: grid; grid-template-columns: 26px 1fr; gap: 6px; align-items: start;
+      background: var(--canvas); border: 1px solid var(--border-subtle); border-radius: 8px;
+      padding: 8px 10px; font-size: 13.5px; color: var(--text); line-height: 1.4;
+      flex: 1;
+    }
+    .q-n { font-family: var(--font-mono); font-size: 11px; font-weight: 800; color: var(--text-dim); padding-top: 2px; }
+    .q-src { display: block; font-size: 12px; margin-top: 4px; color: var(--text-dim); }
+    .stage-foot { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+
+    .bottom-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch; }
+    .outcome {
+      background: rgba(0, 175, 87, 0.05); border: 1px solid var(--border);
+      border-left: 4px solid var(--g-green); border-radius: 12px;
+      padding: 14px 20px; display: flex; flex-direction: column; justify-content: center; gap: 4px;
+    }
+    .outcome-k {
+      font-family: var(--font-mono); font-size: 11px; font-weight: 800;
+      letter-spacing: 1.4px; text-transform: uppercase; color: var(--green-ink);
+    }
+    .outcome-t { font-size: 15px; color: var(--text); line-height: 1.45; }
+
+    .demo-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--g-blue);
+      border-radius: 12px;
+      padding: 14px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-sizing: border-box;
+      transition: all 0.25s ease;
+    }
+    .demo-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .gemini-btn {
+      background: var(--gemini-spark);
+      color: #FFFFFF;
+      font-family: var(--font-display);
+      font-size: 14.5px;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 24px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-md);
+      transition: all 0.2s ease;
+    }
+    .gemini-btn:hover {
+      transform: scale(1.03);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+
+    @media (max-width: 1080px) {
+      .flow { grid-template-columns: 1fr; }
+      .arrow { transform: rotate(90deg); }
+      .bottom-row { grid-template-columns: 1fr; }
+      .kpis { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('deck-theme') || 'light';
+      if (saved === 'dark') {
+        document.documentElement.classList.add('theme-dark');
+      }
+    })();
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle('theme-dark');
+      if (document.body) document.body.classList.toggle('theme-dark', isDark);
+      localStorage.setItem('deck-theme', isDark ? 'dark' : 'light');
+      updateThemeButtons(!isDark);
+    }
+    function updateThemeButtons(isLight) {
+      document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+        btn.innerHTML = isLight 
+          ? '<span style="font-size: 13px; line-height: 1;">🌙</span><span>Dark Mode</span>' 
+          : '<span style="font-size: 13px; line-height: 1;">☀️</span><span>Light Mode</span>';
+        btn.setAttribute('title', isLight ? 'Switch to Dark Mode' : 'Switch to Light Mode');
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const isLight = !document.documentElement.classList.contains('theme-dark');
+      updateThemeButtons(isLight);
+    });
+  </script>
+</head>
+<body style="background: var(--canvas); color: var(--text-muted); font-family: var(--font-display); margin: 0; padding: 0; overflow-x: hidden;">
+
+  <!-- Single-Page Executive Top Navigation Bar -->
+  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(248, 249, 252, 0.85); border-bottom: 1px solid var(--border-subtle); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
+    <a href="../../index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
+      <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
+      <div style="width: 1px; height: 20px; background: var(--surface-sunk);"></div>
+      <span style="font-family: var(--font-mono); font-size: 11.5px; font-weight: 700; color: var(--text); letter-spacing: 1.5px; text-transform: uppercase;">STAGE 04 // THE GAS SUPPLY DECISION AGENT</span>
+    </a>
+    <nav style="display: flex; align-items: center; gap: 16px;">
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Switch to Light Mode">
+        <span style="font-size: 13px; line-height: 1;">☀️</span>
+        <span>Light Mode</span>
+      </button>
+      <a href="page_03.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;">5 / 7</span>
+      <a href="page_07.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--blue-ink); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
+      <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
+        All Slides ↗
+      </a>
+    </nav>
+  </header>
+
+  <!-- Main Viewport -->
+  <main id="viewport-scaler" style="padding-top: 60px;">
+    <section class="slide narrative-stage theme-blue" id="stage-06" style="min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 44px max(24px, 4vw) 90px; position: relative; background: var(--canvas); box-sizing: border-box;">
+
+      <div class="editorial-container" style="max-width: 1440px; margin: 0 auto; width: 100%; position: relative; z-index: 2;">
+
+        <div class="hero">
+          <div>
+            <!-- Top Eyebrow -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 12px;">
+              <div class="title-kicker" style="display: flex; align-items: center; gap: 10px;">
+                <span class="kicker-bar" style="width: 24px; height: 3px; background: var(--gemini-spark); border-radius: 2px;"></span>
+                <span style="color: var(--green-ink); font-family: var(--font-display); font-size: 13px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">
+                  LIVE DEMO
+                </span>
+                <span style="color: var(--text-dim);">//</span>
+                <span style="color: var(--text-muted); font-family: var(--font-mono); font-size: 13px; font-weight: 700; letter-spacing: 0.5px;">
+                  DATA → ANALYSIS → DECISION → ACTION
+                </span>
+              </div>
+            </div>
+
+            <h1 style="font-family: var(--font-display); font-size: clamp(30px, 3.5vw, 44px); font-weight: 800; line-height: 1.15; letter-spacing: -1.2px; color: var(--text); margin: 0 0 8px 0;">
+              The <span class="au-display-grad">Gas Supply Decision Agent</span>
+            </h1>
+
+            <p style="font-family: var(--font-display); font-size: clamp(14px, 1.1vw, 17px); line-height: 1.45; color: var(--text-muted); margin: 0 0 12px 0;">
+              Qatar LNG is under force majeure. It hits GAIL as hard as it hits India and the global gas market, and GAIL is short of gas this winter.
+              <strong style="color: var(--text);">Do we lock in replacement cargoes now, or wait?</strong>
+            </p>
+          </div>
+
+          <!-- Real headline: makes the problem real before the demo -->
+          <figure class="clip">
+            <img src="../../assets/media/evidence/qatar_fm_bloomberg.png"
+                 alt="Bloomberg India headline, 28 August 2026: Qatar Extends LNG Force Majeure as Hormuz Traffic Remains Halted">
+            <figcaption>Source: Bloomberg India, 28 Aug 2026 (headline only)</figcaption>
+          </figure>
+        </div>
+
+        <!-- The conversation: seven questions, four stages -->
+        <div class="flow">
+          <div class="stage st-data">
+            <div class="stage-head"><span class="stage-name">01 Data</span><span class="stage-verb">Fetches</span></div>
+            <div class="q"><span class="q-n">Q1</span><span>What is the impact of the Qatar force majeure on our winter gas supply?<span class="q-src">🏢 contracts · 🌐 live news</span></span></div>
+            <div class="q"><span class="q-n">Q2</span><span>Check our own position: inventory, customer commitments.<span class="q-src">🏢 Dahej tanks · customers</span></span></div>
+            <div class="q"><span class="q-n">Q3</span><span>What is gas costing today, and what does it mean for our contracts and budget?<span class="q-src">🌐 TTF · JKM · Henry Hub · 🏢 budget</span></span></div>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="stage st-analysis">
+            <div class="stage-head"><span class="stage-name">02 Analysis</span><span class="stage-verb">Analyses</span></div>
+            <div class="q"><span class="q-n">Q4</span><span>How have gas prices moved over the last 5 years, and what drove them?<span class="q-src">🌐 5-year price history</span></span></div>
+            <div class="q"><span class="q-n">Q5</span><span>What do the experts expect?<span class="q-src">🌐 analyst forecasts</span></span></div>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="stage st-decision">
+            <div class="stage-head"><span class="stage-name">03 Decision</span><span class="stage-verb">Recommends</span></div>
+            <div class="q"><span class="q-n">Q6</span><span>Run a Monte Carlo simulation: lock in now, lock in half, or wait? What do you recommend?<span class="q-src">🏢 risk limit · deadlines · 🌐 prices</span></span></div>
+            <div class="stage-foot">10,000 simulated winters, tested against GAIL’s own rules.</div>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div class="stage st-action">
+            <div class="stage-head"><span class="stage-name">04 Action</span><span class="stage-verb">Acts</span></div>
+            <div class="q"><span class="q-n">Q7</span><span>Prepare the approval and stage it in SAP.<span class="q-src">🏢 approval memo · SAP</span></span></div>
+            <div class="stage-foot">A human approves before anything is committed.</div>
+          </div>
+        </div>
+
+        <div class="bottom-row">
+          <div class="outcome">
+            <span class="outcome-k">Where it ends</span>
+            <span class="outcome-t">A recommendation, an approval memo and a staged SAP requisition. <strong>The expert makes the call.</strong></span>
+          </div>
+
+          <div class="demo-card">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <img src="../../assets/media/brand/gemini_spark_fullcolor_768.png" alt="Gemini Enterprise" style="width: 34px; height: 34px; flex-shrink: 0;">
+              <div>
+                <div style="font-family: var(--font-display); font-size: 17px; font-weight: 800; color: var(--text);">
+                  Live: GAIL Gas Supply Decision Agent
+                </div>
+                <div style="font-family: var(--font-mono); font-size: 11px; color: var(--text-dim);">
+                  Deployed on Gemini Enterprise · <span style="color: var(--text-muted);">ID: 7dab71a6...5c05</span>
+                </div>
+              </div>
+            </div>
+            <a href="https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05?hl=en_US" target="_blank" rel="noopener noreferrer" class="gemini-btn" title="Launch the Gas Supply Decision Agent on Gemini Enterprise">
+              <span>Launch Demo</span>
+              <span style="font-size: 16px;">↗</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Page Dock -->
+  <aside class="floating-dock" style="display: flex; align-items: center; gap: 12px; padding: 10px 18px; background: var(--surface-sunk); border: 1px solid var(--border-hairline); border-radius: 30px; backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(18,19,23,.14); position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+    <a href="page_03.html" style="background: var(--surface-sunk); border: 1px solid var(--border); color: var(--text-muted); width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; text-decoration: none;" title="Previous Slide (Stage 03)">
+      ◀
+    </a>
+    <div style="font-family: var(--font-mono); font-size: 13.5px; font-weight: 700; color: var(--text-muted); white-space: nowrap;">
+      PAGE 04 // THE GAS SUPPLY DECISION AGENT <span style="color: var(--g-blue); margin-left: 6px;">[5 / 7]</span>
+    </div>
+    <a href="page_06.html" style="background: var(--surface-sunk); border: 1px solid var(--border); color: var(--text-dim); padding: 5px 12px; border-radius: 16px; font-family: var(--font-mono); font-size: 11px; font-weight: 700; text-decoration: none; white-space: nowrap;" title="View Architecture Blueprint (Appendix)">
+      Appendix: Arch ↗
+    </a>
+    <a href="page_07.html" style="background: var(--g-blue); border: none; color: #FFF; padding: 7px 16px; border-radius: 20px; font-family: var(--font-display); font-size: 14px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 6px; white-space: nowrap;">
+      <span>Next Page (Board)</span>
+      <span>▶</span>
+    </a>
+  </aside>
+
+</body>
+</html>
