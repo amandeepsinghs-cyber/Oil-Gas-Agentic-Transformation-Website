@@ -72,16 +72,17 @@
     }
     .ar-ge-mark { display: inline-flex; align-items: center; background: #121317; border-radius: 10px; padding: 9px 12px; }
     .ar-ge-mark img { width: auto !important; height: 18px !important; }
-    .ar-lane { grid-template-columns: 215px minmax(0, 1fr) !important; gap: 14px !important; }
-    .ar-nodes { gap: 4px 10px !important; }
+    .ar-lane { grid-template-columns: 200px minmax(0, 1fr) !important; gap: 14px !important; }
+    .ar-nodes { gap: 4px 6px !important; }
     .ar-monos { display: flex; flex: none; }
-    .ar-monos .ar-mono { width: 26px !important; height: 26px !important; margin-left: -9px; font-size: 11px; }
+    .ar-monos .ar-mono { width: 32px !important; height: 32px !important; margin-left: -10px; font-size: 12px; }
     .ar-monos .ar-mono:first-child { margin-left: 0; }
     .ar-node { padding: 6px 6px 6px 6px !important; gap: 8px !important; }
-    .ar-node img, .ar-mono { width: 32px !important; height: 32px !important; }
-    .ar-node b { font-size: 13.5px !important; }
-    .ar-node .ar-ge-mark img { width: auto !important; height: 16px !important; }
-    .ar-node.ar-ge .ar-ge-mark { padding: 8px 10px; }
+    .ar-node img, .ar-mono { width: 38px !important; height: 38px !important; }
+    .ar-node b { font-size: 14px !important; }
+    .ar-node small { font-size: 12px !important; }
+    .ar-node .ar-ge-mark img { width: auto !important; height: 20px !important; }
+    .ar-node.ar-ge .ar-ge-mark { padding: 11px 14px; }
     .ar-node.ar-ge small { font-size: 12px; }
   </style>
   <script>
@@ -166,11 +167,6 @@
     .ar-trace { font: 500 13.5px var(--font-display); color: var(--blue-ink); background: var(--surface); border: 1px solid var(--g-blue); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
     .ar-trace:hover { background: var(--g-blue); color: #FFF; }
     .ar-grid { display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 22px; align-items: start; }
-    /* the architecture box is held at the right-hand column's height (set by script on load, resize and
-       runtime switch, never on hover); its lanes share the extra space */
-    .ar-env { display: flex; flex-direction: column; }
-    .ar-env-in { flex: 1; display: flex; flex-direction: column; }
-    .ar-env-in > .ar-lane { flex: 1; }
 
     /* The governance envelope: one boundary around every layer. The approved
        Red -> Purple "security governance" pair, used as a border, never a fill. */
@@ -187,7 +183,7 @@
     .ar-node { display: inline-flex; align-items: center; gap: 10px; padding: 8px 12px 8px 8px; border-radius: 14px; border: 1px solid transparent; cursor: pointer; transition: background .2s, border-color .2s, box-shadow .2s, transform .2s; background: transparent; font: inherit; color: inherit; text-align: left; }
     .ar-node img { width: 36px; height: 36px; flex: none; }
     .ar-mg-logos { display: flex; align-items: center; gap: 6px; margin-top: 3px; }
-    .ar-node .ar-mg-logos img { width: 15px !important; height: 15px !important; }
+    .ar-node .ar-mg-logos img { width: 17px !important; height: 17px !important; }
     .ar-node b { display: block; font: 500 14px var(--font-display); color: var(--text); line-height: 1.2; }
     .ar-node small { display: block; font-size: 11.5px; color: var(--text-muted); }
     .ar-node:hover, .ar-node.sel { background: var(--surface-sunk); border-color: var(--border-subtle); }
@@ -207,7 +203,6 @@
     .ar-card .why { margin-top: 10px; padding-left: 12px; border-left: 3px solid var(--g-green); font-size: 13.5px; color: var(--text); line-height: 1.45; }
     .ar-card .prod { display: inline-block; margin-top: 10px; font: 500 11.5px var(--font-mono); color: var(--blue-ink); }
     .ar-gov { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
-    #arDetail { overflow-y: auto; }
     .ar-gov li { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; font-size: 13px; line-height: 1.4; color: var(--text-muted); }
     .ar-gov li img { width: 24px; height: 24px; }
     .ar-gov li b { color: var(--text); font-weight: 500; }
@@ -366,7 +361,6 @@
         govRt.innerHTML = RT[key].g ? '<span class="ar-gov-ic" aria-hidden="true">↻</span><span>' + RT[key].g + '</span>' : "";
         govRt.hidden = !RT[key].g;
         bind(run); bind(data); run.classList.remove("fade"); data.classList.remove("fade"); govRt.classList.remove("fade");
-        if (window.arLayout) window.arLayout();
       }, 220);
     }
     document.querySelectorAll(".ar-seg button").forEach(function (b) { b.addEventListener("click", function () { setRt(b.dataset.rt); }); });
@@ -389,29 +383,6 @@
       });
     });
 
-    /* Stable layout: hovering only changes the detail card's CONTENT, never the page geometry.
-       1. The detail card is reserved at the height of its tallest possible content.
-       2. The architecture box is then matched to the right-hand column once. */
-    var env = document.querySelector(".ar-env"), side = document.querySelector(".ar-side");
-    function reserveDetail() {
-      var keep = detail.innerHTML, max = 0;
-      detail.style.height = "";
-      var all = Object.keys(D).map(function (k) { show(k); return detail.innerHTML; });
-      all.push('<h3><img src="' + G + 'Agents.svg" alt="">One request, end to end</h3><ol class="ar-steps">' + STEPS.map(function (s) { return "<li>" + s[1] + "</li>"; }).join("") + "</ol>");
-      all.forEach(function (h) { detail.innerHTML = h; max = Math.max(max, detail.offsetHeight); });
-      detail.innerHTML = keep;
-      document.querySelectorAll(".ar-node.sel").forEach(function (n) { n.classList.remove("sel"); });
-      detail.style.height = max + "px";
-    }
-    window.arLayout = function () {
-      env.style.minHeight = "";
-      if (getComputedStyle(side).position !== "sticky") return;   /* stacked layout on narrow screens */
-      env.style.minHeight = side.offsetHeight + "px";
-    };
-    function relayout() { reserveDetail(); window.arLayout(); }
-    relayout();
-    window.addEventListener("resize", relayout);
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(relayout);
   })();
   </script>
   </section>
