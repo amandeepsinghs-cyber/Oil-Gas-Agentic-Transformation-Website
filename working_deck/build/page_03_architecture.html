@@ -202,6 +202,7 @@
     .ar-gov li { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; font-size: 13px; line-height: 1.4; color: var(--text-muted); }
     .ar-gov li img { width: 24px; height: 24px; }
     .ar-gov li b { color: var(--text); font-weight: 500; }
+    .ar-gov-ic { width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid var(--g-green); color: var(--green-ink); font: 600 12px/21px var(--font-display); text-align: center; }
     .ar-steps { counter-reset: s; list-style: none; margin: 8px 0 0; padding: 0; font-size: 13px; color: var(--text-dim); }
     .ar-steps li { padding: 5px 0 5px 28px; position: relative; transition: color .2s; }
     .ar-steps li::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 4px; width: 19px; height: 19px; border-radius: 50%; border: 1px solid var(--border-strong); font: 500 11px/19px var(--font-mono); text-align: center; }
@@ -252,17 +253,12 @@
             <button class="ar-node" data-k="physics"><img src="../../assets/media/gcp/AIMachineLearning.svg" alt=""><span><b>Physics &amp; ML models</b><small>Vertex AI · BigQuery ML</small></span></button>
             <button class="ar-node" data-k="calc"><img src="../../assets/media/gcp/Compute.svg" alt=""><span><b>Calculation engines</b><small>Solvers, simulators</small></span></button>
             <button class="ar-node" data-k="apis"><img src="../../assets/media/gcp/Apigee.svg" alt=""><span><b>Enterprise APIs</b><small>Apigee</small></span></button>
+            <button class="ar-node" data-k="mcp"><img src="../../assets/media/gcp/IntegrationServices.svg" alt=""><span><b>MCP Toolbox · A2A</b><small>Open protocols</small></span></button>
           </div>
         </div>
-        <div class="ar-lane" style="--lc: var(--amber-ink)">
-          <div><div class="ar-ln">04 · DATA, WHERE IT LIVES</div><div class="ar-lt">Connected, not moved</div><div class="ar-ls">Every answer cites its source</div></div>
-          <div class="ar-nodes">
-            <button class="ar-node" data-k="plant"><img src="../../assets/media/gcp/Databases.svg" alt=""><span><b>Plant historian / DCS</b><small>On-premises · one-way</small></span></button>
-            
-            <button class="ar-node" data-k="clouds"><img src="../../assets/media/gcp/HybridMulticloud.svg" alt=""><span><b>Other clouds</b><small>Data stays put</small></span></button>
-            <button class="ar-node" data-k="bq"><img src="../../assets/media/gcp/BigQuery.svg" alt=""><span><b>BigQuery</b><small>Analytics &amp; vector search</small></span></button>
-            <button class="ar-node" data-k="rag"><img src="../../assets/media/gcp/VertexAI.svg" alt=""><span><b>RAG Engine</b><small>SOPs, records, citations</small></span></button>
-          </div>
+        <div class="ar-lane" style="--lc: var(--cyan-ink)">
+          <div><div class="ar-ln">04 · DATA, WHERE IT LIVES</div><div class="ar-lt">Connected where it lives, unified where it helps</div><div class="ar-ls">Every answer cites its source</div></div>
+          <div class="ar-nodes ar-run" id="arData"></div>
         </div>
         <div class="ar-lane" style="--lc: var(--blue-ink)">
           <div><div class="ar-ln">05 · RUNTIME</div><div class="ar-lt" id="arRtTitle">Google Cloud</div><div class="ar-ls">Same agent, same governance</div></div>
@@ -274,10 +270,14 @@
         <div class="ar-card"><h3>Governance on every layer</h3>
           <ul class="ar-gov">
             <li><img src="../../assets/media/gcp/SecurityIdentity.svg" alt=""><span><b>Identity per agent</b> — IAM agent identity, least privilege</span></li>
+            <li><img src="../../assets/media/gcp/Agents.svg" alt=""><span><b>Agent registry</b> — every agent listed, owned and switchable off</span></li>
             <li><img src="../../assets/media/gcp/SecurityCommandCenter.svg" alt=""><span><b>Prompt &amp; response safety</b> — Model Armor</span></li>
             <li><img src="../../assets/media/gcp/Networking.svg" alt=""><span><b>Perimeter &amp; keys</b> — VPC Service Controls, customer-managed keys</span></li>
+            <li><img src="../../assets/media/gcp/Databases.svg" alt=""><span><b>Data governance</b> — Dataplex catalogue, lineage, data quality</span></li>
+            <li><span class="ar-gov-ic" aria-hidden="true">✓</span><span><b>Human approval</b> — a named person approves before anything acts</span></li>
             <li><img src="../../assets/media/gcp/Observability.svg" alt=""><span><b>Audit &amp; trace</b> — Cloud Audit Logs, Cloud Trace</span></li>
             <li><img src="../../assets/media/gcp/VertexAI.svg" alt=""><span><b>Evaluated</b> — Gen AI evaluation before and after go-live</span></li>
+            <li id="arGovRt" class="ar-run" hidden></li>
           </ul></div>
       </aside>
     </div>
@@ -286,9 +286,18 @@
   (function () {
     var G = "../../assets/media/gcp/", M = "../../assets/media/";
     var RT = {
-      gc: { t: "Google Cloud", n: [["VertexAI.svg","Agent Engine","Managed agent runtime","rt_ae"],["CloudRun.svg","Cloud Run","Serverless containers","rt_cr"],["GKE.svg","GKE","Kubernetes","rt_gke"]] },
-      op: { t: "On-premises & air-gapped", n: [["DistributedCloud.svg","Google Distributed Cloud","In your plant or data centre","rt_gdc"],["GKE.svg","GKE on GDC","Agents as containers","rt_gke"],["#gemma","Gemini & Gemma on-site","Models run locally","rt_local"]] },
-      mc: { t: "Other clouds", n: [["HybridMulticloud.svg","GKE Enterprise","One fleet across clouds","rt_mc"],["GKE.svg","Containers","Same agent image","rt_gke"],["Marketplace.svg","Model Garden","Models, one catalogue","model"]] }
+      gc: { t: "Google Cloud",
+            d: [["Databases.svg","Plant historian / DCS","On-premises · one-way","plant"],["HybridMulticloud.svg","Other clouds","Data stays put","clouds"],["Cloud_Storage.svg","Cloud Storage","Lakehouse · open formats","gcs"],["BigQuery.svg","BigQuery","Analytics &amp; vector search","bq"],["VertexAI.svg","RAG Engine","SOPs, records, citations","rag"]],
+            g: "",
+            n: [["VertexAI.svg","Agent Engine","Managed agent runtime","rt_ae"],["CloudRun.svg","Cloud Run","Serverless containers","rt_cr"],["GKE.svg","GKE","Kubernetes","rt_gke"]] },
+      op: { t: "On-premises & air-gapped",
+            d: [["Databases.svg","Plant historian / DCS","On-site · never leaves","plant_op"],["Cloud_Storage.svg","GDC object storage","Files, logs, documents","objstore"],["AlloyDB.svg","AlloyDB Omni","Records &amp; vector search","alloy"],["brand/gemini_spark_fullcolor_768.png","On-site grounding","Gemini on GDC, cited","rag_op"]],
+            g: "<b>On GDC</b> — GDC's own identity, audit logs and monitoring stand in for the cloud services; nothing leaves the site. Summaries can sync to a cloud lakehouse where policy allows.",
+            n: [["DistributedCloud.svg","Google Distributed Cloud","In your plant or data centre","rt_gdc"],["GKE.svg","GKE on GDC","Agents as containers","rt_gke"],["#gemma","Gemini & Gemma on-site","Models run locally","rt_local"]] },
+      mc: { t: "Other clouds",
+            d: [["Databases.svg","Plant historian / DCS","On-premises · one-way","plant"],["HybridMulticloud.svg","Data in AWS / Azure","Stays where it is","mc_data"],["BigQuery.svg","BigQuery Omni","Queries it in place","bqomni"],["VertexAI.svg","RAG Engine","SOPs, records, citations","rag"]],
+            g: "<b>Other clouds</b> — the same identity, policy and audit apply; data governance extends to the tables BigQuery Omni reads in AWS and Azure.",
+            n: [["HybridMulticloud.svg","GKE Enterprise","One fleet across clouds","rt_mc"],["GKE.svg","Containers","Same agent image","rt_gke"],["Marketplace.svg","Model Garden","Models, one catalogue","model"]] }
     };
     var D = {
       intro: { img: M + "brand/gemini_spark_fullcolor_768.png", t: "The rule behind every agent", p: "Models compute. Agents reason over what the models computed. A named person decides.", why: "Nothing in this picture can move a valve: the agents advise, people act through the normal permit.", prod: "Click any component for detail" },
@@ -300,14 +309,21 @@
       agentA: { img: G + "Agents.svg", t: "Agent A · B · C", p: "Specialist agents, each with a clear scope that can cover one or several related tasks — for example, a reconciliation agent, a monitoring agent, an advisory agent.", why: "A clear scope is what makes an agent evaluable, and therefore trustworthy.", prod: "Agent Development Kit" },
       model: { img: M + "brand/gemini_spark_fullcolor_768.png", t: "The model", p: "Gemini by default, plus partner and open models in Model Garden (Claude, OpenAI open-weight models and more), chosen per agent and swapped without a rebuild.", why: "The right model per task is how hundreds of agents stay affordable.", prod: "Gemini on Vertex AI · Model Garden" },
       memory: { img: G + "VertexAI.svg", t: "Memory", p: "Sessions and long-term memory: the shift, the case, the decisions already taken.", why: "A handover agent that remembers last night is worth more than one that starts cold.", prod: "Agent Engine Sessions · Memory Bank" },
-      mcp: { img: G + "Agents.svg", t: "Open protocols", p: "MCP connects agents to tools and data; A2A lets agents — ours, yours or a partner's — work together.", why: "Open standards are what make 'build once, run anywhere' true.", prod: "MCP · A2A · MCP Toolbox" },
+      mcp: { img: G + "IntegrationServices.svg", t: "Open protocols", p: "MCP connects agents to tools and data; A2A lets agents — ours, yours or a partner's — work together.", why: "Open standards are what make 'build once, run anywhere' true.", prod: "MCP · A2A · MCP Toolbox" },
       physics: { img: G + "AIMachineLearning.svg", t: "Physics & ML models", p: "Soft sensors, forecasts and physics-informed models do the numbers; the agent reasons over their output and its uncertainty.", why: "If the models disagree, the agent withholds advice — and says why.", prod: "Vertex AI · BigQuery ML" },
       calc: { img: G + "Compute.svg", t: "Calculation engines", p: "Existing solvers, simulators and engineering calculations, called as tools.", why: "Decades of engineering IP is reused, not replaced.", prod: "Compute Engine · your engines" },
       apis: { img: G + "Apigee.svg", t: "Enterprise APIs", p: "ERP, maintenance, laboratory and scheduling systems exposed as governed APIs.", why: "One policy layer for every tool an agent may call.", prod: "Apigee" },
       plant: { img: G + "Databases.svg", t: "Plant historian / DCS", p: "Readings leave the plant one way. Tags and values can be abstracted before they leave site.", why: "No agent holds a credential or route back to the control system.", prod: "One-way connectors" },
-      clouds: { img: G + "HybridMulticloud.svg", t: "Data in other clouds", p: "Agents read data where it already lives, through connectors and open table formats.", why: "No migration project stands between you and the first agent.", prod: "Connectors · BigLake" },
-      bq: { img: G + "BigQuery.svg", t: "BigQuery", p: "History, analytics and vector search for the data you choose to bring together.", why: "One governed place to train the models and ground the agents.", prod: "BigQuery" },
+      clouds: { img: G + "HybridMulticloud.svg", t: "Data in other clouds", p: "Agents read data where it already lives, through connectors and open table formats.", why: "No migration project stands between you and the first agent.", prod: "Connectors · open table formats" },
+      gcs: { img: G + "Cloud_Storage.svg", t: "Cloud Storage", p: "The lakehouse floor: seismic, well logs, drawings, scanned reports and historian extracts, kept in open formats.", why: "Open formats mean BigQuery, Spark and other clouds read the same data without copies.", prod: "Cloud Storage" },
+      bq: { img: G + "BigQuery.svg", t: "BigQuery", p: "Queries the lakehouse in place, tables and files in Cloud Storage alike, with analytics and vector search on top.", why: "One governed place to train the models and ground the agents.", prod: "BigQuery" },
       rag: { img: G + "VertexAI.svg", t: "Grounding & citations", p: "SOPs, work orders and incident records retrieved and cited in every answer.", why: "'No cited source' is a valid answer — and the agent will say so.", prod: "Vertex AI RAG Engine · Vertex AI Search" },
+      plant_op: { img: G + "Databases.svg", t: "Plant historian / DCS, on-site", p: "Agents read the historian inside the site boundary; there is no route out and none needed.", why: "For sites where readings may not leave at all.", prod: "On-site connectors" },
+      objstore: { img: G + "Cloud_Storage.svg", t: "GDC object storage", p: "Files, logs, drawings and documents stored on-site, in the same open formats.", why: "The same lakehouse pattern, inside the fence.", prod: "Google Distributed Cloud object storage" },
+      alloy: { img: G + "AlloyDB.svg", t: "AlloyDB Omni", p: "PostgreSQL-compatible database with built-in vector search, running on GDC.", why: "Records and embeddings for grounding stay on-site.", prod: "AlloyDB Omni on GDC" },
+      rag_op: { img: M + "brand/gemini_spark_fullcolor_768.png", t: "On-site grounding", p: "SOPs and records retrieved from on-site stores and cited by Gemini running on GDC.", why: "'No cited source' is still a valid answer, offline too.", prod: "Gemini on GDC · AlloyDB vector search" },
+      mc_data: { img: G + "HybridMulticloud.svg", t: "Data in AWS or Azure", p: "Data stays in the other cloud's own storage; nothing is migrated to start.", why: "No migration project stands between you and the first agent.", prod: "Connectors" },
+      bqomni: { img: G + "BigQuery.svg", t: "BigQuery Omni", p: "BigQuery's engine runs next to the data in AWS or Azure and queries it in place.", why: "One SQL and one governance model across clouds.", prod: "BigQuery Omni" },
       rt_ae: { img: G + "VertexAI.svg", t: "Agent Engine", p: "Managed runtime for agents: scaling, sessions, memory and evaluation built in.", why: "Fastest path from a built agent to a governed, running one.", prod: "Vertex AI Agent Engine" },
       rt_cr: { img: G + "CloudRun.svg", t: "Cloud Run", p: "Agents and their apps as serverless containers.", why: "Pay per use; scale to zero between shifts.", prod: "Cloud Run" },
       rt_gke: { img: G + "GKE.svg", t: "Containers on Kubernetes", p: "The same agent image runs on GKE in Google Cloud, on-premises or in another cloud.", why: "Portability is a property of the agent, not of the hosting deal.", prod: "GKE" },
@@ -328,17 +344,22 @@
         n.addEventListener("mouseenter", function () { show(n.dataset.k); });
       });
     }
-    var run = document.getElementById("arRun");
+    var run = document.getElementById("arRun"), data = document.getElementById("arData"), govRt = document.getElementById("arGovRt");
+    function nodes(list) {
+      return list.map(function (n) {
+        var src = n[0] === "#gemma" ? M + "models/gemma-color.svg" : (n[0].indexOf("/") > -1 ? M + n[0] : G + n[0]);
+        return '<button class="ar-node" data-k="' + n[3] + '"><img src="' + src + '" alt=""><span><b>' + n[1] + '</b><small>' + n[2] + '</small></span></button>';
+      }).join("");
+    }
     function setRt(key) {
       document.querySelectorAll(".ar-seg button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.rt === key)); });
-      run.classList.add("fade");
+      run.classList.add("fade"); data.classList.add("fade"); govRt.classList.add("fade");
       setTimeout(function () {
         document.getElementById("arRtTitle").textContent = RT[key].t;
-        run.innerHTML = RT[key].n.map(function (n) {
-          var ic = n[0] === "#gemma" ? '<img src="' + M + 'models/gemma-color.svg" alt="">' : '<img src="' + G + n[0] + '" alt="">';
-          return '<button class="ar-node" data-k="' + n[3] + '">' + ic + '<span><b>' + n[1] + '</b><small>' + n[2] + '</small></span></button>';
-        }).join("");
-        bind(run); run.classList.remove("fade");
+        run.innerHTML = nodes(RT[key].n); data.innerHTML = nodes(RT[key].d);
+        govRt.innerHTML = RT[key].g ? '<span class="ar-gov-ic" aria-hidden="true">↻</span><span>' + RT[key].g + '</span>' : "";
+        govRt.hidden = !RT[key].g;
+        bind(run); bind(data); run.classList.remove("fade"); data.classList.remove("fade"); govRt.classList.remove("fade");
       }, 220);
     }
     document.querySelectorAll(".ar-seg button").forEach(function (b) { b.addEventListener("click", function () { setRt(b.dataset.rt); }); });
@@ -346,7 +367,7 @@
     setRt("gc"); show("intro");
 
     /* Trace: one request, top to bottom and back. */
-    var STEPS = [["ge","A controller asks in Gemini Enterprise"],["orch","The orchestrator plans and routes"],["agentB","Agent B takes the job"],["physics","The models compute — with their uncertainty"],["plant","Readings come from the plant, one way"],["rag","The answer is grounded and cited"],["ge","A named person reviews and approves"]];
+    var STEPS = [["ge","A controller asks in Gemini Enterprise"],["orch","The orchestrator plans and routes"],["agentB","Agent B takes the job"],["physics","The models compute — with their uncertainty"],["plant|plant_op","Readings come from the plant"],["gcs|objstore|bqomni","History pulled from the lakehouse"],["rag|rag_op","The answer is grounded and cited"],["ge","A named person reviews and approves"]];
     document.getElementById("arTrace").addEventListener("click", function () {
       var list = '<h3><img src="' + G + 'Agents.svg" alt="">One request, end to end</h3><ol class="ar-steps">' + STEPS.map(function (s) { return "<li>" + s[1] + "</li>"; }).join("") + "</ol>";
       detail.innerHTML = list;
@@ -354,7 +375,7 @@
       STEPS.forEach(function (s, i) {
         setTimeout(function () {
           document.querySelectorAll(".ar-node.hot").forEach(function (n) { n.classList.remove("hot"); });
-          var n = document.querySelector('.ar-node[data-k="' + s[0] + '"]'); if (n) n.classList.add("hot");
+          s[0].split("|").some(function (k) { var n = document.querySelector('.ar-node[data-k="' + k + '"]'); if (n) n.classList.add("hot"); return !!n; });
           lis.forEach(function (l, j) { l.classList.toggle("on", j <= i); });
           if (i === STEPS.length - 1) setTimeout(function () { document.querySelectorAll(".ar-node.hot").forEach(function (x) { x.classList.remove("hot"); }); }, 1400);
         }, 200 + i * 900);
