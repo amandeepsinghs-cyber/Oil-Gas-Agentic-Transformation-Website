@@ -3,8 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Agentic Transformation for India's Energy Giants | Google Cloud Executive Briefing</title>
-
+<title>Agentic Transformation for India's Energy Giants | Briefing Map</title>
+<!--
+  Launcher page: the briefing map.
+  Purpose: brief a stakeholder on the structure of the deck in one look.
+    1. Everyone starts at the same opening (00).
+    2. The journey forks by the client's sector: Upstream / Midstream / Downstream (01-05),
+       each ending in its own live demo.
+    3. All tracks converge at agentic workflows and share the close (06-15).
+  The fork and merge lines are drawn by script from the real card positions, so they
+  stay attached to the cards at any width. Aurora tokens only (assets/aurora.css).
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&family=Google+Sans+Text:wght@400;500;700&family=Roboto+Mono:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="assets/aurora.css">
 <script>
   (function () {
@@ -13,720 +25,384 @@
         document.documentElement.classList.add('theme-dark');
         document.documentElement.classList.remove('theme-light');
       }
-    } catch (err) {}
+    } catch (e) {}
   })();
 </script>
-
 <style>
   *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; background: var(--canvas); color: var(--text); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
 
-  body {
-    margin: 0;
-    background: var(--canvas);
-    color: var(--text-primary, #202124);
-    font-family: var(--font-display);
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .wrap {
-    width: 100%;
-    max-width: none;
-    margin: 0 auto;
-    padding: 0 max(24px, 4vw) 48px;
-  }
+  /* track colours: Aurora 500 for lines and fills, ink tokens for text */
+  .up   { --tc: var(--g-blue);   --ti: var(--blue-ink); }
+  .mid  { --tc: var(--g-purple); --ti: var(--purple-ink); }
+  .down { --tc: var(--g-green);  --ti: var(--green-ink); }
 
   /* ── masthead ─────────────────────────────────────────────────────────── */
-  .mast {
-    position: sticky; top: 0; z-index: 50;
-    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
-    padding: 14px max(24px, 4vw);
-    background: color-mix(in srgb, var(--surface) 90%, transparent);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--border, #E2E6F0);
-  }
-  .mast-brand {
-    display: flex; align-items: center; gap: 12px;
-    text-decoration: none; color: inherit;
-  }
-  .mast-brand img { height: 26px; width: auto; display: block; }
-  .mast-rule { width: 1px; height: 18px; background: var(--border, #E2E6F0); }
-  .mast-tag {
-    font-family: var(--font-mono);
-    font-size: 11px; font-weight: 700; letter-spacing: 1.3px;
-    text-transform: uppercase; color: var(--text-muted);
-  }
-  .mast-spacer { flex: 1 1 auto; }
-  .mast-btn {
-    font-size: 12.5px; font-weight: 700; cursor: pointer;
-    padding: 7px 14px; border-radius: 20px;
-    border: 1px solid var(--border, #E2E6F0);
-    background: var(--surface); color: var(--text-primary, #202124);
-    font-family: var(--font-display);
-  }
-  .mast-btn:hover { border-color: var(--blue-ink); color: var(--blue-ink); }
-  .mast-cta {
-    font-size: 12.5px; font-weight: 700; text-decoration: none;
-    padding: 8px 16px; border-radius: 20px;
-    background: var(--g-blue); color: #FFFFFF;
-  }
-  .mast-cta:hover { filter: brightness(1.08); }
+  .mast { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 14px;
+          padding: 12px max(24px, 4vw); background: color-mix(in srgb, var(--surface) 88%, transparent);
+          backdrop-filter: blur(14px); border-bottom: 1px solid var(--border-subtle); }
+  .mast img { height: 26px; display: block; }
+  .mast-rule { width: 1px; height: 18px; background: var(--border-subtle); }
+  .mast-tag { font: 500 11px var(--font-mono); letter-spacing: 1.3px; text-transform: uppercase; color: var(--text-muted); }
+  .mast-sp { flex: 1; }
+  .btn-ghost { font: 500 13px var(--font-display); padding: 7px 14px; border-radius: 999px; cursor: pointer;
+               border: 1px solid var(--border-subtle); background: var(--surface); color: var(--text); }
+  .btn-ghost:hover { border-color: var(--g-blue); color: var(--blue-ink); }
+  .btn-cta { font: 600 13px var(--font-display); padding: 8px 16px; border-radius: 999px; background: var(--g-blue); color: #FFF; }
+  .btn-cta:hover { filter: brightness(1.06); }
+
+  .wrap { max-width: 1440px; margin: 0 auto; padding: 0 max(24px, 4vw) 56px; }
 
   /* ── hero ─────────────────────────────────────────────────────────────── */
-  .hero {
-    padding: clamp(22px, 2.8vh, 34px) 0 20px;
-    border-bottom: 1px solid var(--border, #E2E6F0);
-    margin-bottom: 24px;
-  }
-  .kicker {
-    display: flex; align-items: center; gap: 10px;
-    margin-bottom: 8px; flex-wrap: wrap;
-  }
-  .kicker-bar {
-    width: 24px; height: 3px; border-radius: 2px;
-    background: linear-gradient(90deg, #217BFE 0%, #078EFB 50%, #AC87EB 100%);
-  }
-  .kicker-txt {
-    font-size: 12px; font-weight: 800; letter-spacing: 1.8px;
-    text-transform: uppercase; color: var(--blue-ink);
-  }
-  .kicker-sub {
-    font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);
-  }
-  h1 {
-    margin: 0 0 8px;
-    font-size: clamp(30px, 3.3vw, 44px); font-weight: 800;
-    line-height: 1.1; letter-spacing: -1.1px;
-  }
-  .tagline {
-    margin: 0 0 8px;
-    font-size: clamp(16px, 1.4vw, 19px); font-weight: 500; line-height: 1.4;
-    color: var(--text-primary, #202124);
-  }
-  .note {
-    margin: 0;
-    font-size: 14px; line-height: 1.55; color: var(--text-muted);
-  }
+  .hero { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 32px; align-items: end; padding: 34px 0 26px; }
+  .kick { display: flex; align-items: center; gap: 10px; font: 500 11.5px var(--font-mono); letter-spacing: 1.4px; text-transform: uppercase; color: var(--text-muted); }
+  .kick i { width: 28px; height: 3px; border-radius: 2px; background: var(--gemini-spark); }
+  h1 { font: 600 clamp(30px, 3vw, 44px)/1.1 var(--font-display); letter-spacing: -0.8px; margin: 12px 0 10px; }
+  .lede { font-size: 17px; line-height: 1.5; color: var(--text-muted); margin: 0; max-width: 760px; }
+  .lede b { color: var(--text); font-weight: 500; }
+  .glance { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--surface); border: 1px solid var(--border-subtle);
+            border-radius: 18px; box-shadow: var(--shadow-sm); overflow: hidden; }
+  .glance div { padding: 14px 16px; border-left: 1px solid var(--border-subtle); }
+  .glance div:first-child { border-left: 0; }
+  .glance b { display: block; font: 600 28px/1 var(--font-mono); color: var(--text); }
+  .glance span { display: block; margin-top: 6px; font-size: 12.5px; line-height: 1.3; color: var(--text-muted); }
 
-  /* ── shared slim card style across the entire top-down flow ──────────── */
-  .flow-card {
-    max-width: 820px;
-    margin: 0 auto;
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 15px 20px;
-    background: var(--surface);
-    border: 1px solid var(--border, #E2E6F0);
-    border-left: 3.5px solid #217BFE;
-    border-radius: 12px;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color .16s, transform .16s, box-shadow .16s;
-  }
-  .flow-card:hover {
-    border-color: #217BFE;
-    transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
-  }
-  .f-num {
-    font-family: var(--font-mono);
-    font-size: 11.5px;
-    font-weight: 700;
-    min-width: 34px;
-    height: 28px;
-    padding: 0 8px;
-    border-radius: 7px;
-    background: rgba(33, 123, 254, 0.09);
-    color: #217BFE;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-  .f-body { flex: 1 1 auto; }
-  .f-title { font-size: 16px; font-weight: 700; color: var(--text-primary, #202124); margin-bottom: 3px; }
-  .f-desc { font-size: 13.5px; color: var(--text-muted); line-height: 1.45; }
-  .f-go { font-size: 13px; font-weight: 600; color: #217BFE; white-space: nowrap; align-self: center; }
+  /* ── the flow ─────────────────────────────────────────────────────────── */
+  .flow { position: relative; }
+  .flow > svg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: visible; }
+  .stage { position: relative; z-index: 1; display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 24px; }
+  .gap { height: 84px; position: relative; z-index: 1; display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 24px; }
+  .gap .note { align-self: center; justify-self: center; font: 500 12.5px var(--font-display); color: var(--text-muted);
+               background: var(--canvas); border: 1px solid var(--border-subtle); border-radius: 999px; padding: 5px 14px; }
+  .gap .note b { color: var(--text); font-weight: 600; }
 
-  /* ── refined thin SVG branch & merge connectors ───────────────────────── */
-  .bus-wrap {
-    position: relative;
-    width: 100%;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .bus-wrap svg {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    pointer-events: none;
-  }
-  .bus-note {
-    position: relative;
-    z-index: 2;
-    font-size: 12.5px;
-    font-weight: 500;
-    color: var(--text-muted);
-    background: var(--canvas);
-    padding: 3px 14px;
-    border-radius: 999px;
-    border: 1px solid var(--border, #E2E6F0);
-  }
-  .bus-note strong {
-    color: var(--text-primary, #202124);
-    font-weight: 600;
-  }
+  .sl { padding-top: 6px; }
+  .sl .n { font: 600 12px var(--font-mono); color: var(--blue-ink); letter-spacing: 1.2px; }
+  .sl h2 { font: 600 20px/1.2 var(--font-display); margin: 6px 0 4px; }
+  .sl p { margin: 0; font-size: 13px; line-height: 1.45; color: var(--text-muted); }
 
-  /* ── 3 slim vertical track cards (matching the cards below) ───────────── */
-  .tracks {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-    align-items: stretch;
-  }
-  .track-card {
-    background: var(--surface);
-    border: 1px solid var(--border, #E2E6F0);
-    border-left: 3.5px solid var(--tc);
-    border-radius: 12px;
-    padding: 16px 20px 16px;
-    display: flex;
-    flex-direction: column;
-    transition: border-color .16s, box-shadow .16s;
-  }
-  .track-card:hover {
-    border-color: var(--tc);
-    box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
-  }
-  .track-up   { --tc: #217BFE; }
-  .track-mid  { --tc: #7B61FF; }
-  .track-down { --tc: #008A45; }
+  /* stage 1: common start */
+  .start { justify-self: center; width: min(640px, 100%); display: flex; align-items: center; gap: 18px; padding: 18px 22px;
+           background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 18px; box-shadow: var(--shadow-md);
+           position: relative; transition: transform .18s, box-shadow .18s; }
+  .start::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; border-radius: 18px 18px 0 0; background: var(--gemini-spark); }
+  .start:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+  .num { font: 600 13px var(--font-mono); min-width: 40px; height: 32px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center;
+         background: var(--surface-sunk); color: var(--text); flex-shrink: 0; }
+  .start h3 { margin: 0; font: 600 18px var(--font-display); }
+  .start p { margin: 3px 0 0; font-size: 13.5px; color: var(--text-muted); line-height: 1.45; }
+  .start .go { margin-left: auto; font: 600 13px var(--font-display); color: var(--blue-ink); white-space: nowrap; }
 
-  .t-head {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    padding-bottom: 12px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid var(--border, #E2E6F0);
-  }
-  .t-head:hover .t-title { color: var(--tc); }
-  .t-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--text-primary, #202124);
-    line-height: 1.25;
-    transition: color .15s;
-  }
-  .t-subtitle {
-    font-size: 13px;
-    color: var(--text-muted);
-    margin-top: 2px;
-  }
+  /* stage 2: three tracks */
+  .tracks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+  .track { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 18px; box-shadow: var(--shadow-sm);
+           overflow: hidden; display: flex; flex-direction: column; transition: opacity .2s, transform .2s, box-shadow .2s, border-color .2s; }
+  .track:hover { border-color: var(--tc); box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+  .flow.hl .track { opacity: .45; }
+  .flow.hl .track.on { opacity: 1; }
+  .t-photo { position: relative; height: 128px; display: block; overflow: hidden; }
+  .t-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+  .track:hover .t-photo img { transform: scale(1.04); }
+  .t-photo::after { content: ""; position: absolute; inset: 0; background: rgba(18, 19, 23, .48); }
+  .t-photo .lbl { position: absolute; left: 18px; bottom: 14px; right: 18px; z-index: 1; color: #FFF; }
+  .t-photo .lbl small { display: block; font: 500 11px var(--font-mono); letter-spacing: 1.3px; text-transform: uppercase; opacity: .9; }
+  .t-photo .lbl strong { display: block; font: 600 24px/1.1 var(--font-display); margin-top: 4px; }
+  .t-photo .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--tc); z-index: 1; }
+  .t-for { padding: 12px 18px 4px; font-size: 13px; color: var(--text-muted); }
+  .t-for b { color: var(--ti); font-weight: 600; }
+  .steps { list-style: none; margin: 0; padding: 6px 12px 12px; position: relative; flex: 1; display: flex; flex-direction: column; }
+  .steps a { display: flex; align-items: center; gap: 12px; padding: 7px 8px; border-radius: 10px; position: relative; }
+  .steps a:hover { background: var(--surface-sunk); }
+  .steps li:not(:last-child) a::after { content: ""; position: absolute; left: 21px; top: 31px; height: 14px; width: 2px;
+                                         background: color-mix(in srgb, var(--tc) 30%, transparent); }
+  .dot { width: 28px; height: 26px; border-radius: 7px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center;
+         font: 600 11px var(--font-mono); color: var(--ti); background: color-mix(in srgb, var(--tc) 10%, var(--surface));
+         border: 1px solid color-mix(in srgb, var(--tc) 35%, transparent); }
+  .steps .nm { font: 500 14px/1.3 var(--font-display); color: var(--text); }
+  .steps .demo { margin-top: auto; }
+  .steps .demo a { margin-top: 6px; background: color-mix(in srgb, var(--tc) 9%, var(--surface)); border: 1px solid color-mix(in srgb, var(--tc) 40%, transparent); padding: 10px; }
+  .steps .demo a:hover { background: color-mix(in srgb, var(--tc) 15%, var(--surface)); }
+  .steps .demo .dot { background: var(--tc); color: #FFF; border-color: var(--tc); }
+  .steps .demo .nm { font-weight: 600; }
+  .steps .demo .nm small { display: block; font: 400 12px var(--font-body); color: var(--text-muted); margin-top: 2px; }
+  .badge { margin-left: auto; flex-shrink: 0; display: inline-flex; align-items: center; gap: 5px; font: 600 10.5px var(--font-mono);
+           letter-spacing: .8px; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; background: var(--tc); color: #FFF; }
+  .badge.soft { background: var(--surface-sunk); color: var(--text-muted); border: 1px solid var(--border-subtle); }
+  .appx { display: block; padding: 0 10px 0 50px; margin-top: 6px; font-size: 12px; color: var(--text-muted); }
+  .appx:hover { color: var(--ti); text-decoration: underline; }
 
-  /* Slim timeline list inside each track card */
-  .t-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-  }
-  /* Thin vertical guide line connecting numbers 01 -> 05 */
-  .t-list::before {
-    content: "";
-    position: absolute;
-    left: 13px;
-    top: 16px;
-    bottom: 16px;
-    width: 1px;
-    background: var(--border, #E2E6F0);
-    z-index: 0;
-  }
-  .t-item {
-    position: relative;
-    z-index: 1;
-  }
-  .t-link {
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-    padding: 7px 6px 7px 0;
-    border-radius: 8px;
-    text-decoration: none;
-    color: inherit;
-    transition: color .15s;
-  }
-  .t-link:hover .t-name {
-    color: var(--tc);
-  }
-  .t-num {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    font-weight: 700;
-    width: 27px;
-    height: 24px;
-    border-radius: 6px;
-    background: var(--surface);
-    border: 1px solid var(--border, #E2E6F0);
-    color: var(--text-muted);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  .t-item.is-demo .t-num {
-    background: color-mix(in srgb, var(--tc) 10%, var(--surface));
-    border-color: color-mix(in srgb, var(--tc) 40%, transparent);
-    color: var(--tc);
-  }
-  .t-text {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-  }
-  .t-name {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text-primary, #202124);
-    line-height: 1.3;
-    transition: color .15s;
-  }
-  .t-sub {
-    font-size: 12.5px;
-    font-weight: 400;
-    color: var(--text-muted);
-    line-height: 1.35;
-  }
-  .t-item.is-demo .t-name {
-    color: var(--tc);
-    font-weight: 700;
-  }
-  .t-appx {
-    display: block;
-    padding: 0 0 4px 39px;
-    font-size: 12px;
-    color: var(--text-muted);
-    text-decoration: none;
-  }
-  .t-appx:hover {
-    color: var(--tc);
-    text-decoration: underline;
-  }
+  /* stage 3: converged */
+  .shared { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 20px; box-shadow: var(--shadow-md);
+            padding: 20px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 2.6fr); gap: 20px; position: relative; }
+  .shared::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; border-radius: 20px 20px 0 0; background: var(--gemini-spark); }
+  .grp-h { font: 500 11px var(--font-mono); letter-spacing: 1.3px; text-transform: uppercase; color: var(--text-muted); margin: 2px 0 10px; }
+  .col-a { display: flex; flex-direction: column; gap: 12px; }
+  .grid-b { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  .tile { display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: 14px; background: var(--surface-sunk);
+          border: 1px solid transparent; transition: border-color .16s, transform .16s, background .16s; min-height: 118px; }
+  .tile:hover { border-color: var(--g-blue); background: var(--surface); transform: translateY(-2px); }
+  .tile .top { display: flex; align-items: center; gap: 10px; }
+  .tile .top img { width: 26px; height: 26px; }
+  .tile .num { min-width: 34px; height: 26px; font-size: 11.5px; background: var(--surface); }
+  .tile h4 { margin: 0; font: 600 14.5px/1.3 var(--font-display); color: var(--text); }
+  .tile p { margin: 0; font-size: 12.5px; line-height: 1.4; color: var(--text-muted); }
+  .tile > .badge { margin: auto 0 0; align-self: flex-start; }
+  .tile .top .badge { margin-left: auto; }
+  .tile.feature { flex: 1; }
+  .faces { display: flex; align-items: center; margin-top: 2px; }
+  .faces img { width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--surface); object-fit: cover; margin-left: -8px; }
+  .faces img:first-child { margin-left: 0; }
+  .faces span { margin-left: 10px; font: 500 12px var(--font-mono); color: var(--text-muted); }
+  .pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+  .pill { font: 500 11.5px var(--font-display); padding: 4px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--border-subtle); color: var(--text); }
+  .pill:hover { border-color: var(--tc, var(--g-blue)); color: var(--ti, var(--blue-ink)); }
 
-  /* ── single slim vertical connector stem between shared slides ────────── */
-  .v-line {
-    width: 1.5px;
-    height: 16px;
-    margin: 0 auto;
-    background: var(--border, #D0D7E6);
-  }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 22px; font-size: 12.5px; color: var(--text-muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .legend .badge { margin: 0; }
+  footer { margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--border-subtle); text-align: center; font-size: 12.5px; color: var(--text-muted); }
 
-  .domain-jumps {
-    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
-    margin-top: 9px;
-  }
-  .d-pill {
-    font-family: var(--font-display); font-size: 12px; font-weight: 600;
-    padding: 3.5px 11px; border-radius: 999px;
-    text-decoration: none;
-    background: var(--surface-sunk); color: var(--text-primary, #202124);
-    border: 1px solid var(--border, #E2E6F0);
-    transition: border-color .15s, color .15s;
-  }
-  .d-pill:hover { border-color: #217BFE; color: #217BFE; }
+  /* connector lines */
+  .ln-base { fill: none; stroke-width: 3; opacity: .3; transition: opacity .2s; }
+  .ln-flow { fill: none; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 1 11; animation: flow 1.1s linear infinite; transition: opacity .2s; }
+  .ln-end { transition: opacity .2s; }
+  @keyframes flow { to { stroke-dashoffset: -12; } }
+  .flow.hl [data-ln]:not(.on) { opacity: .08; }
 
-  @media (max-width: 1024px) {
-    .tracks { grid-template-columns: 1fr; }
-    .bus-wrap svg { display: none; }
-    .bus-wrap { height: 42px; }
+  @media (prefers-reduced-motion: reduce) { .ln-flow { animation: none; } * { transition: none !important; } }
+  @media (max-width: 1180px) {
+    .stage, .gap { grid-template-columns: 1fr; }
+    .sl { padding: 0 0 10px; } .gap .sp { display: none; }
+    .hero { grid-template-columns: 1fr; }
+    .shared { grid-template-columns: 1fr; }
   }
-
-  footer {
-    margin: 34px auto 0;
-    padding-top: 16px;
-    border-top: 1px solid var(--border, #E2E6F0);
-    font-size: 12.5px;
-    color: var(--text-muted);
-    text-align: center;
-  }
+  @media (max-width: 900px) { .tracks { grid-template-columns: 1fr; } .grid-b { grid-template-columns: repeat(2, 1fr); } .flow > svg { display: none; } }
 </style>
 </head>
-
 <body>
 
 <header class="mast">
-  <a class="mast-brand" href="index.html">
+  <a href="index.html" style="display:flex;align-items:center;gap:12px;">
     <img src="assets/media/wip/image25.png" alt="Google Cloud">
-    <span class="mast-rule" aria-hidden="true"></span>
-    <span class="mast-tag">Sovereign Agentic Systems</span>
+    <span class="mast-rule"></span>
+    <span class="mast-tag">Executive briefing · Oil &amp; Gas</span>
   </a>
-  <span class="mast-spacer"></span>
-  <button class="mast-btn" id="themeToggle" type="button">Dark</button>
-  <a class="mast-cta" href="working_deck/pages/page_00.html">Start the briefing &#8594;</a>
+  <span class="mast-sp"></span>
+  <button class="btn-ghost" id="themeToggle" type="button">Dark</button>
+  <a class="btn-cta" href="working_deck/pages/page_00.html">Start the briefing →</a>
 </header>
 
 <main class="wrap">
 
   <section class="hero">
-    <div class="kicker">
-      <span class="kicker-bar" aria-hidden="true"></span>
-      <span class="kicker-txt">Strategic Transformation Blueprint</span>
-      <span class="kicker-sub">// Energy Enterprise Giants</span>
+    <div>
+      <div class="kick"><i></i>Briefing map · how the story flows</div>
+      <h1>Agentic Transformation for India's Energy Giants</h1>
+      <p class="lede">One briefing for oil and gas executives. <b>Everyone starts together</b>, the story is <b>tailored to the client's sector</b> with its own live demo, and every journey <b>converges</b> on agentic workflows and how we deliver them.</p>
     </div>
-    <h1>Agentic Transformation for India's Energy Giants</h1>
-    <p class="tagline">Operationalizing AI from the control room to the boardroom.</p>
-    <p class="note">
-      The briefing follows a top-down flow that adapts to the sector you select on this page or on the opening screen (<strong>Slide 00</strong>). Your choice routes through <strong>Upstream</strong>, <strong>Midstream</strong>, or <strong>Downstream (Slides 01–05)</strong> up to that domain's live agent demo, after which all three paths converge into one shared sequence covering the <strong>Agentic Workforce, Workflows &amp; Enterprise Architecture (Slides 06–15)</strong>.
-    </p>
+    <div class="glance" id="glance">
+      <div><b data-count="start">1</b><span>shared opening</span></div>
+      <div><b data-count="tracks">3</b><span>sector-tailored tracks</span></div>
+      <div><b data-count="demos">3</b><span>live demos</span></div>
+      <div><b data-count="shared">10</b><span>shared pages to close</span></div>
+    </div>
   </section>
 
-  <!-- SLIDE 00: OPENING SCREEN -->
-  <a class="flow-card" href="working_deck/pages/page_00.html">
-    <span class="f-num">00</span>
-    <div class="f-body">
-      <div class="f-title">Executive Overview</div>
-      <div class="f-desc">Opening screen: sovereign AI foundation, Gemini Enterprise workspace, and sector selection for Upstream, Midstream, or Downstream.</div>
+  <div class="flow" id="flow">
+    <svg id="lines" aria-hidden="true"></svg>
+
+    <!-- ── 1 · COMMON START ─────────────────────────────────────────────── -->
+    <div class="stage">
+      <div class="sl"><div class="n">STAGE 1</div><h2>Everyone starts here</h2><p>The same opening for every audience.</p></div>
+      <a class="start" id="nStart" href="working_deck/pages/page_00.html" data-start>
+        <span class="num">00</span>
+        <div><h3>Executive Overview</h3><p>The thesis, the sovereign AI foundation, and the choice of sector that tailors the rest of the briefing.</p></div>
+        <span class="go">Open →</span>
+      </a>
     </div>
-    <span class="f-go">Open &#8594;</span>
-  </a>
 
-  <!-- THIN ARCHITECTURAL 1 -> 3 FORK CONNECTOR -->
-  <div class="bus-wrap" aria-hidden="true">
-    <svg viewBox="0 0 1200 54" preserveAspectRatio="none">
-      <line x1="600" y1="0" x2="600" y2="27" stroke="#CBD2E1" stroke-width="1.4"/>
-      <path d="M194,54 L194,27 L1006,27 L1006,54" fill="none" stroke="#CBD2E1" stroke-width="1.4"/>
-      <line x1="600" y1="27" x2="600" y2="54" stroke="#CBD2E1" stroke-width="1.4"/>
-    </svg>
-    <span class="bus-note"><strong>Flow depends on your selection here or on Slide 00</strong> &middot; choose Upstream, Midstream, or Downstream (Slides 01–05)</span>
-  </div>
+    <div class="gap"><span class="sp"></span><span class="note"><b>The journey forks</b> · pick the client's sector</span></div>
 
-  <!-- THREE CONSISTENT SLIM DOMAIN TRACK BOXES (SLIDES 01-05) -->
-  <div class="tracks">
+    <!-- ── 2 · TAILORED BY SECTOR ───────────────────────────────────────── -->
+    <div class="stage">
+      <div class="sl"><div class="n">STAGE 2</div><h2>Tailored to the client</h2><p>Same five-beat story, told in each sector's language, ending in its own live demo.</p></div>
+      <div class="tracks">
 
-    <!-- UPSTREAM -->
-    <section class="track-card track-up">
-      <a class="t-head" href="working_deck/upstream/01_capital_reality.html">
-        <div class="t-title">Upstream</div>
-        <div class="t-subtitle">Exploration &amp; production</div>
-      </a>
-      <ol class="t-list">
-        <li class="t-item">
-          <a class="t-link" href="working_deck/upstream/01_capital_reality.html">
-            <span class="t-num">01</span>
-            <div class="t-text">
-              <span class="t-name">Upstream Capital Reality</span>
-              <span class="t-sub">Deepwater CAPEX, offshore rigs &amp; non-productive drilling time</span>
-            </div>
+        <section class="track up" data-track="upstream">
+          <a class="t-photo" href="working_deck/upstream/01_capital_reality.html" data-domain="upstream">
+            <img src="assets/media/wip/image77.jpg" alt="">
+            <span class="lbl"><small>Track A</small><strong>Upstream</strong></span><span class="bar"></span>
           </a>
-        </li>
-        <li class="t-item">
-          <a class="t-link" href="working_deck/upstream/02_swiss_cheese.html">
-            <span class="t-num">02</span>
-            <div class="t-text">
-              <span class="t-name">Subsurface &amp; Well-Control Barriers</span>
-              <span class="t-sub">Preventing kicks, blowouts &amp; drilling barrier gaps</span>
-            </div>
-          </a>
-        </li>
-        <li class="t-item">
-          <a class="t-link" href="working_deck/upstream/03_great_crew_change.html">
-            <span class="t-num">03</span>
-            <div class="t-text">
-              <span class="t-name">Retiring Subsurface Expertise</span>
-              <span class="t-sub">Capturing petrophysical, seismic &amp; well-engineering judgement</span>
-            </div>
-          </a>
-        </li>
-        <li class="t-item">
-          <a class="t-link" href="working_deck/upstream/04_plug_is_an_agent.html">
-            <span class="t-num">04</span>
-            <div class="t-text">
-              <span class="t-name">Upstream Operational Agents</span>
-              <span class="t-sub">Specialist agents for drilling safety, logs &amp; field production</span>
-            </div>
-          </a>
-        </li>
-        <li class="t-item is-demo">
-          <a class="t-link" href="working_deck/upstream/05_sagar_drishti_demo.html">
-            <span class="t-num">05</span>
-            <div class="t-text">
-              <span class="t-name">Sagar Drishti &middot; Live Demo</span>
-              <span class="t-sub">Real-time offshore field &amp; production optimisation cockpit</span>
-            </div>
-          </a>
-        </li>
-      </ol>
-    </section>
+          <div class="t-for">For <b>exploration &amp; production</b> companies</div>
+          <ol class="steps">
+            <li><a href="working_deck/upstream/01_capital_reality.html" data-domain="upstream"><span class="dot">01</span><span class="nm">Capital reality</span></a></li>
+            <li><a href="working_deck/upstream/02_swiss_cheese.html" data-domain="upstream"><span class="dot">02</span><span class="nm">Well-control barriers</span></a></li>
+            <li><a href="working_deck/upstream/03_great_crew_change.html" data-domain="upstream"><span class="dot">03</span><span class="nm">Retiring subsurface expertise</span></a></li>
+            <li><a href="working_deck/upstream/04_plug_is_an_agent.html" data-domain="upstream"><span class="dot">04</span><span class="nm">Upstream agents</span></a></li>
+            <li class="demo"><a href="working_deck/upstream/05_sagar_drishti_demo.html" data-domain="upstream" data-demo><span class="dot">05</span><span class="nm">Sagar Drishti<small>Offshore field &amp; production cockpit</small></span><span class="badge">▶ Live demo</span></a></li>
+          </ol>
+        </section>
 
-    <!-- MIDSTREAM -->
-    <section class="track-card track-mid">
-      <a class="t-head" href="working_deck/midstream/01_capital_reality.html">
-        <div class="t-title">Midstream</div>
-        <div class="t-subtitle">Pipelines &amp; gas grid</div>
-      </a>
-      <ol class="t-list">
-        <li class="t-item">
-          <a class="t-link" href="working_deck/midstream/01_capital_reality.html">
-            <span class="t-num">01</span>
-            <div class="t-text">
-              <span class="t-name">Midstream Grid Reality</span>
-              <span class="t-sub">Cross-country pipelines, LNG terminals &amp; transmission compression</span>
-            </div>
+        <section class="track mid" data-track="midstream">
+          <a class="t-photo" href="working_deck/midstream/01_capital_reality.html" data-domain="midstream">
+            <img src="assets/media/photos/midstream_terminal.jpg" alt="">
+            <span class="lbl"><small>Track B</small><strong>Midstream</strong></span><span class="bar"></span>
           </a>
-        </li>
-        <li class="t-item">
-          <a class="t-link" href="working_deck/midstream/02_swiss_cheese.html">
-            <span class="t-num">02</span>
-            <div class="t-text">
-              <span class="t-name">Network Integrity &amp; Linepack Barriers</span>
-              <span class="t-sub">Guarding against pressure transients, leaks &amp; supply curtailment</span>
-            </div>
-          </a>
-        </li>
-        <li class="t-item">
-          <a class="t-link" href="working_deck/midstream/03_great_crew_change.html">
-            <span class="t-num">03</span>
-            <div class="t-text">
-              <span class="t-name">Retiring Dispatch &amp; Grid Know-How</span>
-              <span class="t-sub">Preserving gas controller &amp; pipeline integrity expertise</span>
-            </div>
-          </a>
-        </li>
-        <li class="t-item">
-          <a class="t-link" href="working_deck/midstream/04_plug_is_an_agent.html">
-            <span class="t-num">04</span>
-            <div class="t-text">
-              <span class="t-name">Midstream Network Agents</span>
-              <span class="t-sub">Specialist agents for nominations, compressor telemetry &amp; dispatch</span>
-            </div>
-          </a>
-        </li>
-        <li class="t-item is-demo">
-          <a class="t-link" href="working_deck/midstream/05_gas_supply_decision_agent.html">
-            <span class="t-num">05</span>
-            <div class="t-text">
-              <span class="t-name">Gas Supply Decision Agent &middot; Live Demo</span>
-              <span class="t-sub">National gas grid allocation &amp; pressure balancing agent</span>
-            </div>
-          </a>
-          <a class="t-appx" href="working_deck/midstream/appendix_architecture.html">Appendix &middot; Agent Architecture</a>
-        </li>
-      </ol>
-    </section>
+          <div class="t-for">For <b>pipeline &amp; gas grid</b> operators</div>
+          <ol class="steps">
+            <li><a href="working_deck/midstream/01_capital_reality.html" data-domain="midstream"><span class="dot">01</span><span class="nm">Grid reality</span></a></li>
+            <li><a href="working_deck/midstream/02_swiss_cheese.html" data-domain="midstream"><span class="dot">02</span><span class="nm">Network integrity barriers</span></a></li>
+            <li><a href="working_deck/midstream/03_great_crew_change.html" data-domain="midstream"><span class="dot">03</span><span class="nm">Retiring dispatch know-how</span></a></li>
+            <li><a href="working_deck/midstream/04_plug_is_an_agent.html" data-domain="midstream"><span class="dot">04</span><span class="nm">Midstream agents</span></a></li>
+            <li class="demo"><a href="working_deck/midstream/05_gas_supply_decision_agent.html" data-domain="midstream" data-demo><span class="dot">05</span><span class="nm">Gas Supply Decision Agent<small>Grid allocation &amp; pressure balancing</small></span><span class="badge">▶ Live demo</span></a>
+              <a class="appx" href="working_deck/midstream/appendix_architecture.html" data-domain="midstream">+ Appendix · agent architecture</a></li>
+          </ol>
+        </section>
 
-    <!-- DOWNSTREAM -->
-    <section class="track-card track-down">
-      <a class="t-head" href="working_deck/downstream/01_capital_reality.html">
-        <div class="t-title">Downstream</div>
-        <div class="t-subtitle">Refining &amp; petrochemicals</div>
-      </a>
-      <ol class="t-list">
-        <li class="t-item">
-          <a class="t-link" href="working_deck/downstream/01_capital_reality.html">
-            <span class="t-num">01</span>
-            <div class="t-text">
-              <span class="t-name">Refining Margin Reality</span>
-              <span class="t-sub">Complex refineries, gross refining margin ($/bbl) &amp; product giveaway</span>
-            </div>
+        <section class="track down" data-track="downstream">
+          <a class="t-photo" href="working_deck/downstream/01_capital_reality.html" data-domain="downstream">
+            <img src="assets/media/photos/refinery_day.jpg" alt="">
+            <span class="lbl"><small>Track C</small><strong>Downstream</strong></span><span class="bar"></span>
           </a>
-        </li>
-        <li class="t-item">
-          <a class="t-link" href="working_deck/downstream/02_swiss_cheese.html">
-            <span class="t-num">02</span>
-            <div class="t-text">
-              <span class="t-name">Process Unit &amp; Containment Barriers</span>
-              <span class="t-sub">Preventing excursion events, catalyst coking &amp; unplanned trips</span>
-            </div>
-          </a>
-        </li>
-        <li class="t-item">
-          <a class="t-link" href="working_deck/downstream/03_great_crew_change.html">
-            <span class="t-num">03</span>
-            <div class="t-text">
-              <span class="t-name">Retiring Console &amp; Process Know-How</span>
-              <span class="t-sub">Retaining chief operator, process engineer &amp; turnaround wisdom</span>
-            </div>
-          </a>
-        </li>
-        <li class="t-item">
-          <a class="t-link" href="working_deck/downstream/04_plug_is_an_agent.html">
-            <span class="t-num">04</span>
-            <div class="t-text">
-              <span class="t-name">Downstream Process Agents</span>
-              <span class="t-sub">Specialist agents for unit optimisation, blending &amp; reliability</span>
-            </div>
-          </a>
-        </li>
-        <li class="t-item is-demo">
-          <a class="t-link" href="working_deck/downstream/05_fcc_agentic_optimisation.html">
-            <span class="t-num">05</span>
-            <div class="t-text">
-              <span class="t-name">FCC Agentic Optimisation &middot; Live Demo</span>
-              <span class="t-sub">Fluid catalytic cracker yield &amp; severity optimisation cockpit</span>
-            </div>
-          </a>
-        </li>
-      </ol>
-    </section>
+          <div class="t-for">For <b>refining &amp; petrochemicals</b> companies</div>
+          <ol class="steps">
+            <li><a href="working_deck/downstream/01_capital_reality.html" data-domain="downstream"><span class="dot">01</span><span class="nm">Refining margin reality</span></a></li>
+            <li><a href="working_deck/downstream/02_swiss_cheese.html" data-domain="downstream"><span class="dot">02</span><span class="nm">Process &amp; containment barriers</span></a></li>
+            <li><a href="working_deck/downstream/03_great_crew_change.html" data-domain="downstream"><span class="dot">03</span><span class="nm">Retiring console know-how</span></a></li>
+            <li><a href="working_deck/downstream/04_plug_is_an_agent.html" data-domain="downstream"><span class="dot">04</span><span class="nm">Downstream agents</span></a></li>
+            <li class="demo"><a href="working_deck/downstream/05_fcc_agentic_optimisation.html" data-domain="downstream" data-demo><span class="dot">05</span><span class="nm">FCC Agentic Optimisation<small>Cracker yield &amp; severity cockpit</small></span><span class="badge">▶ Live demo</span></a></li>
+          </ol>
+        </section>
 
-  </div>
-
-  <!-- THIN ARCHITECTURAL 3 -> 1 CONFLUENCE CONNECTOR -->
-  <div class="bus-wrap" aria-hidden="true">
-    <svg viewBox="0 0 1200 54" preserveAspectRatio="none">
-      <path d="M194,0 L194,27 L1006,27 L1006,0" fill="none" stroke="#CBD2E1" stroke-width="1.4"/>
-      <line x1="600" y1="0" x2="600" y2="54" stroke="#CBD2E1" stroke-width="1.4"/>
-    </svg>
-    <span class="bus-note"><strong>All three tracks converge here</strong> &middot; shared workforce, workflows &amp; enterprise architecture (Slides 06–15)</span>
-  </div>
-
-  <!-- SHARED CONVERGED VERTICAL SEQUENCE (SLIDES 06-15) -->
-  <a class="flow-card" href="working_deck/bridge/06_one_to_many.html?track=upstream">
-    <span class="f-num">06</span>
-    <div class="f-body">
-      <div class="f-title">From One Agent to an Agentic Organisation</div>
-      <div class="f-desc">Scaling from a single high-value domain agent to coordinated agents across mission-critical operations.</div>
-    </div>
-    <span class="f-go">Open &#8594;</span>
-  </a>
-
-  <div class="v-line"></div>
-
-  <div class="flow-card">
-    <span class="f-num">07</span>
-    <div class="f-body">
-      <a href="working_deck/persona_map.html" style="text-decoration:none;color:inherit;display:block;">
-        <div class="f-title">The Agentic Workforce &amp; Workflows (Persona Map)</div>
-        <div class="f-desc">Interactive enterprise map across operational roles, workflows, and human decision gates.</div>
-      </a>
-      <div class="domain-jumps">
-        <a class="d-pill" href="working_deck/upstream/07_persona_map.html">Upstream Workforce &#8594;</a>
-        <a class="d-pill" href="working_deck/midstream/07_persona_map.html">Midstream Workforce &#8594;</a>
-        <a class="d-pill" href="working_deck/downstream/07_persona_map.html">Downstream Workforce &#8594;</a>
-        <a class="d-pill" href="personas/dossier.html">All Role Dossiers &#8594;</a>
       </div>
     </div>
-    <a class="f-go" href="working_deck/persona_map.html" style="text-decoration:none;">Open &#8594;</a>
+
+    <div class="gap"><span class="sp"></span><span class="note"><b>All journeys converge</b> · from one agent to an agentic organisation</span></div>
+
+    <!-- ── 3 · CONVERGED CLOSE ──────────────────────────────────────────── -->
+    <div class="stage">
+      <div class="sl"><div class="n">STAGE 3</div><h2>Everyone converges here</h2><p>The workforce view, then how we build, run, govern and deliver it.</p></div>
+      <div class="shared" id="nShared">
+        <div class="col-a">
+          <div class="grp-h">Agentic workflows &amp; workforce</div>
+          <a class="tile" href="working_deck/bridge/06_one_to_many.html" data-shared>
+            <div class="top"><span class="num">06</span><img src="assets/media/gcp/Agents.svg" alt=""></div>
+            <h4>From one agent to an agentic organisation</h4>
+            <p>The demo was one workflow; many agents run across operations.</p>
+          </a>
+          <div class="tile feature" data-shared>
+            <a href="working_deck/persona_map.html" style="display:flex;flex-direction:column;gap:8px;">
+              <div class="top"><span class="num">07</span><span class="badge soft">Interactive</span></div>
+              <h4>Persona map: the agentic workforce</h4>
+              <div class="faces">
+                <img src="personas/avatars/thumbs/P04_thumb.jpg" alt=""><img src="personas/avatars/thumbs/P07_thumb.jpg" alt="">
+                <img src="personas/avatars/thumbs/P14_thumb.jpg" alt=""><img src="personas/avatars/thumbs/P27_thumb.jpg" alt="">
+                <img src="personas/avatars/thumbs/P16_thumb.jpg" alt=""><img src="personas/avatars/thumbs/P03_thumb.jpg" alt="">
+                <span>Every role, mapped</span>
+              </div>
+            </a>
+            <div class="pills">
+              <a class="pill up" href="working_deck/persona_map.html?domain=upstream" data-domain="upstream">Upstream</a>
+              <a class="pill mid" href="working_deck/persona_map.html?domain=midstream" data-domain="midstream">Midstream</a>
+              <a class="pill down" href="working_deck/persona_map.html?domain=downstream" data-domain="downstream">Downstream</a>
+              <a class="pill" href="personas/dossier.html">Role dossiers</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="grp-h">From personas to production</div>
+          <div class="grid-b">
+            <a class="tile" href="working_deck/build/page_01_build.html" data-shared><div class="top"><span class="num">08</span><img src="assets/media/gcp/AIMachineLearning.svg" alt=""></div><h4>How agents are built</h4><p>No-code, low-code, high-code, ready-made.</p></a>
+            <a class="tile" href="working_deck/build/page_02_surface.html" data-shared><div class="top"><span class="num">09</span><img src="assets/media/gcp/CloudRun.svg" alt=""></div><h4>Where people meet the agent</h4><p>Built once, used on every surface.</p></a>
+            <a class="tile" href="working_deck/build/page_03_architecture.html" data-shared><div class="top"><span class="num">10</span><img src="assets/media/gcp/HybridMulticloud.svg" alt=""></div><h4>Architecture</h4><p>Runs where the data and the plant are.</p><span class="badge soft">Interactive</span></a>
+            <a class="tile" href="working_deck/build/page_04_models.html" data-shared><div class="top"><span class="num">11</span><img src="assets/media/gcp/VertexAI.svg" alt=""></div><h4>Model choice</h4><p>The right model for the right task.</p><span class="badge soft">Interactive</span></a>
+            <a class="tile" href="working_deck/build/page_05_govern.html" data-shared><div class="top"><span class="num">12</span><img src="assets/media/gcp/SecurityIdentity.svg" alt=""></div><h4>Governance</h4><p>Identity, policy, human approval, audit.</p><span class="badge soft">Interactive</span></a>
+            <a class="tile" href="working_deck/build/page_06_resilience.html" data-shared><div class="top"><span class="num">13</span><img src="assets/media/gcp/Observability.svg" alt=""></div><h4>Structural resilience</h4><p>A workforce and workflows that hold.</p></a>
+            <a class="tile" href="working_deck/build/page_07_gartner.html" data-shared><div class="top"><span class="num">14</span><img src="assets/media/gcp/Compute.svg" alt=""></div><h4>Why Google</h4><p>The full AI stack, plus Gartner.</p><span class="badge" style="--tc:var(--g-blue)">▶ Video</span></a>
+            <a class="tile" href="working_deck/build/page_08_100_days.html" data-shared><div class="top"><span class="num">15</span><img src="assets/media/gcp/Marketplace.svg" alt=""></div><h4>100 days to proof of value</h4><p>The engagement and the ask.</p></a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="v-line"></div>
+  <div class="legend">
+    <span><span class="badge" style="--tc:var(--g-blue)">▶ Live demo</span> working agent shown live</span>
+    <span><span class="badge" style="--tc:var(--g-blue)">▶ Video</span> embedded video</span>
+    <span><span class="badge soft">Interactive</span> presenter can click through</span>
+  </div>
 
-  <a class="flow-card" href="working_deck/build/page_01_build.html">
-    <span class="f-num">08</span>
-    <div class="f-body">
-      <div class="f-title">How Agents Are Built</div>
-      <div class="f-desc">Horses for courses: combining no-code, low-code, and high-code agents into one enterprise portfolio.</div>
-    </div>
-    <span class="f-go">Open &#8594;</span>
-  </a>
-
-  <div class="v-line"></div>
-
-  <a class="flow-card" href="working_deck/build/page_02_surface.html">
-    <span class="f-num">09</span>
-    <div class="f-body">
-      <div class="f-title">Where People Meet the Agent</div>
-      <div class="f-desc">One agent built once, exposed across Gemini Enterprise, custom applications, and existing ERP workflows.</div>
-    </div>
-    <span class="f-go">Open &#8594;</span>
-  </a>
-
-  <div class="v-line"></div>
-
-  <a class="flow-card" href="working_deck/build/page_03_architecture.html">
-    <span class="f-num">10</span>
-    <div class="f-body">
-      <div class="f-title">Typical Agent Architecture</div>
-      <div class="f-desc">Flexible, adaptable agentic architecture with identity, tool permissions, and governance built into every layer.</div>
-    </div>
-    <span class="f-go">Open &#8594;</span>
-  </a>
-
-  <div class="v-line"></div>
-
-  <a class="flow-card" href="working_deck/build/page_04_models.html">
-    <span class="f-num">11</span>
-    <div class="f-body">
-      <div class="f-title">Model Choice</div>
-      <div class="f-desc">Cost-optimising transformation by matching Frontier, Workhorse, Scale, and Open-weight models to each task.</div>
-    </div>
-    <span class="f-go">Open &#8594;</span>
-  </a>
-
-  <div class="v-line"></div>
-
-  <a class="flow-card" href="working_deck/build/page_05_govern.html">
-    <span class="f-num">12</span>
-    <div class="f-body">
-      <div class="f-title">Governance &amp; Management</div>
-      <div class="f-desc">Agent identity, approved tool boundaries, mandatory human approval gates, audit logs, and evaluation.</div>
-    </div>
-    <span class="f-go">Open &#8594;</span>
-  </a>
-
-  <div class="v-line"></div>
-
-  <a class="flow-card" href="working_deck/build/page_06_resilience.html">
-    <span class="f-num">13</span>
-    <div class="f-body">
-      <div class="f-title">Structural Resilience</div>
-      <div class="f-desc">Fortifying institutional knowledge against operational fragility and workforce retirement.</div>
-    </div>
-    <span class="f-go">Open &#8594;</span>
-  </a>
-
-  <div class="v-line"></div>
-
-  <a class="flow-card" href="working_deck/build/page_07_gartner.html">
-    <span class="f-num">14</span>
-    <div class="f-body">
-      <div class="f-title">Why Google: The Full AI Stack</div>
-      <div class="f-desc">First-party solutions across all six layers alongside the 2026 Gartner Magic Quadrant.</div>
-    </div>
-    <span class="f-go">Open &#8594;</span>
-  </a>
-
-  <div class="v-line"></div>
-
-  <a class="flow-card" href="working_deck/build/page_08_100_days.html">
-    <span class="f-num">15</span>
-    <div class="f-body">
-      <div class="f-title">100 Days to Proof of Value</div>
-      <div class="f-desc">The execution sprint, lighthouse asset selection, and joint milestones to launch.</div>
-    </div>
-    <span class="f-go">Open &#8594;</span>
-  </a>
-
-  <footer>
-    Google Cloud Sovereign Energy Solutions Practice &middot; Executive Briefing
-  </footer>
-
+  <footer>Google Cloud · Executive briefing for oil &amp; gas leaders</footer>
 </main>
 
 <script>
-  (function () {
-    var KEY = 'deck-theme';
-    var btn = document.getElementById('themeToggle');
-    function paint() {
-      var dark = document.documentElement.classList.contains('theme-dark');
-      btn.textContent = dark ? 'Light' : 'Dark';
-      btn.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
-    }
+(function () {
+  /* theme */
+  var btn = document.getElementById('themeToggle');
+  function paint() { btn.textContent = document.documentElement.classList.contains('theme-dark') ? 'Light' : 'Dark'; }
+  paint();
+  btn.addEventListener('click', function () {
+    var el = document.documentElement, dark = el.classList.toggle('theme-dark');
+    el.classList.toggle('theme-light', !dark);
+    try { localStorage.setItem('deck-theme', dark ? 'dark' : 'light'); } catch (e) {}
     paint();
-    btn.addEventListener('click', function () {
-      var el = document.documentElement;
-      var dark = el.classList.toggle('theme-dark');
-      el.classList.toggle('theme-light', !dark);
-      try { localStorage.setItem(KEY, dark ? 'dark' : 'light'); } catch (err) {}
-      paint();
-    });
-  })();
-</script>
+  });
 
+  /* any sector link remembers the sector, so Slide 06 and the persona map follow it */
+  document.querySelectorAll('[data-domain]').forEach(function (a) {
+    a.addEventListener('click', function () { try { localStorage.setItem('deck-domain', a.dataset.domain); } catch (e) {} });
+  });
+
+  /* at-a-glance counts come from the page itself, not typed numbers */
+  var C = { start: document.querySelectorAll('[data-start]').length, tracks: document.querySelectorAll('[data-track]').length,
+            demos: document.querySelectorAll('[data-demo]').length, shared: document.querySelectorAll('[data-shared]').length };
+  document.querySelectorAll('[data-count]').forEach(function (b) { b.textContent = C[b.dataset.count]; });
+
+  /* fork + merge lines, drawn from the real card positions */
+  var flow = document.getElementById('flow'), svg = document.getElementById('lines');
+  var start = document.getElementById('nStart'), shared = document.getElementById('nShared');
+  var tracks = [].slice.call(document.querySelectorAll('.track'));
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs) { var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); return e; }
+  function curve(x1, y1, x2, y2) { var m = (y1 + y2) / 2; return 'M' + x1 + ',' + y1 + ' C' + x1 + ',' + m + ' ' + x2 + ',' + m + ' ' + x2 + ',' + y2; }
+  function draw() {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+    if (getComputedStyle(svg).display === 'none') return;
+    var f = flow.getBoundingClientRect(), s = start.getBoundingClientRect(), h = shared.getBoundingClientRect();
+    var sx = s.left + s.width / 2 - f.left, sy = s.bottom - f.top;
+    var hx = h.left + h.width / 2 - f.left, hy = h.top - f.top;
+    tracks.forEach(function (t, i) {
+      var r = t.getBoundingClientRect(), c = getComputedStyle(t).getPropertyValue('--tc').trim() || '#3186FF';
+      var tx = r.left + r.width / 2 - f.left, top = r.top - f.top, bot = r.bottom - f.top;
+      var off = (i - 1) * 14; /* fan the three merge points slightly apart */
+      [[sx + off, sy, tx, top], [tx, bot, hx + off, hy]].forEach(function (p) {
+        var g = el('g', { 'data-ln': t.dataset.track });
+        var d = curve(p[0], p[1], p[2], p[3]);
+        g.appendChild(el('path', { d: d, stroke: c, class: 'ln-base' }));
+        g.appendChild(el('path', { d: d, stroke: c, class: 'ln-flow' }));
+        g.appendChild(el('circle', { cx: p[0], cy: p[1], r: 4, fill: c, class: 'ln-end' }));
+        g.appendChild(el('circle', { cx: p[2], cy: p[3], r: 4, fill: c, class: 'ln-end' }));
+        svg.appendChild(g);
+      });
+    });
+  }
+  /* hovering a track lights up its route end to end */
+  tracks.forEach(function (t) {
+    t.addEventListener('mouseenter', function () {
+      flow.classList.add('hl'); t.classList.add('on');
+      svg.querySelectorAll('[data-ln="' + t.dataset.track + '"]').forEach(function (g) { g.classList.add('on'); });
+    });
+    t.addEventListener('mouseleave', function () {
+      flow.classList.remove('hl'); t.classList.remove('on');
+      svg.querySelectorAll('.on').forEach(function (g) { g.classList.remove('on'); });
+    });
+  });
+  draw();
+  window.addEventListener('resize', draw);
+  window.addEventListener('load', draw);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+})();
+</script>
 </body>
 </html>
