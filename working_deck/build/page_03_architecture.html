@@ -72,13 +72,16 @@
     }
     .ar-ge-mark { display: inline-flex; align-items: center; background: #121317; border-radius: 10px; padding: 9px 12px; }
     .ar-ge-mark img { width: auto !important; height: 18px !important; }
-    .ar-lane { grid-template-columns: 178px minmax(0, 1fr) !important; gap: 14px !important; }
-    .ar-nodes { gap: 4px 6px !important; }
-    .ar-node { padding: 6px 10px 6px 6px !important; gap: 8px !important; }
+    .ar-lane { grid-template-columns: 215px minmax(0, 1fr) !important; gap: 14px !important; }
+    .ar-nodes { gap: 4px 10px !important; }
+    .ar-monos { display: flex; flex: none; }
+    .ar-monos .ar-mono { width: 26px !important; height: 26px !important; margin-left: -9px; font-size: 11px; }
+    .ar-monos .ar-mono:first-child { margin-left: 0; }
+    .ar-node { padding: 6px 6px 6px 6px !important; gap: 8px !important; }
     .ar-node img, .ar-mono { width: 32px !important; height: 32px !important; }
     .ar-node b { font-size: 13.5px !important; }
-    .ar-grid { grid-template-columns: minmax(0, 1fr) 320px !important; }
-    .ar-node .ar-ge-mark img { width: auto !important; height: 20px !important; }
+    .ar-node .ar-ge-mark img { width: auto !important; height: 16px !important; }
+    .ar-node.ar-ge .ar-ge-mark { padding: 8px 10px; }
     .ar-node.ar-ge small { font-size: 12px; }
   </style>
   <script>
@@ -146,9 +149,9 @@
   <main id="viewport-scaler" style="padding-top: 60px;">
   <section class="ar" aria-label="Agent architecture">
   <style>
-    .ar { min-height: 100vh; box-sizing: border-box; padding: 26px max(24px, 4vw) 104px; background: var(--canvas); font-family: var(--font-body); color: var(--text); }
+    .ar { min-height: 100vh; box-sizing: border-box; padding: 26px max(20px, 2vw) 104px; background: var(--canvas); font-family: var(--font-body); color: var(--text); }
     .ar * { box-sizing: border-box; }
-    .ar-in { max-width: 1520px; margin: 0 auto; }
+    .ar-in { max-width: 1680px; margin: 0 auto; }
     .ar-kick { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 11.5px; font-weight: 500; letter-spacing: 1.4px; text-transform: uppercase; color: var(--text-muted); }
     .ar-kick i { width: 28px; height: 3px; border-radius: 2px; background: var(--gemini-spark); }
     .ar h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(28px, 2.4vw, 36px); line-height: 1.12; letter-spacing: -0.6px; margin: 10px 0 6px; color: var(--text); }
@@ -162,7 +165,12 @@
     .ar-lbl { font-family: var(--font-mono); font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--text-dim); }
     .ar-trace { font: 500 13.5px var(--font-display); color: var(--blue-ink); background: var(--surface); border: 1px solid var(--g-blue); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
     .ar-trace:hover { background: var(--g-blue); color: #FFF; }
-    .ar-grid { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 22px; align-items: start; }
+    .ar-grid { display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 22px; align-items: start; }
+    /* the architecture box is held at the right-hand column's height (set by script on load, resize and
+       runtime switch, never on hover); its lanes share the extra space */
+    .ar-env { display: flex; flex-direction: column; }
+    .ar-env-in { flex: 1; display: flex; flex-direction: column; }
+    .ar-env-in > .ar-lane { flex: 1; }
 
     /* The governance envelope: one boundary around every layer. The approved
        Red -> Purple "security governance" pair, used as a border, never a fill. */
@@ -173,7 +181,7 @@
     .ar-lane { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 18px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--border-subtle); }
     .ar-lane:last-child { border-bottom: 0; }
     .ar-ln { font-family: var(--font-mono); font-size: 11px; font-weight: 500; color: var(--lc); letter-spacing: 1px; }
-    .ar-lt { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: var(--text); margin-top: 2px; }
+    .ar-lt { font-family: var(--font-display); font-size: 16px; line-height: 1.25; font-weight: 600; color: var(--text); margin-top: 2px; }
     .ar-ls { font-size: 12.5px; color: var(--text-muted); line-height: 1.4; margin-top: 2px; }
     .ar-nodes { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
     .ar-node { display: inline-flex; align-items: center; gap: 10px; padding: 8px 12px 8px 8px; border-radius: 14px; border: 1px solid transparent; cursor: pointer; transition: background .2s, border-color .2s, box-shadow .2s, transform .2s; background: transparent; font: inherit; color: inherit; text-align: left; }
@@ -191,21 +199,22 @@
     .ar-run { transition: opacity .25s; }
     .ar-run.fade { opacity: 0; }
 
-    .ar-side { position: sticky; top: 84px; display: flex; flex-direction: column; gap: 14px; }
+    .ar-side { align-self: start; position: sticky; top: 84px; display: flex; flex-direction: column; gap: 14px; }
     .ar-card { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 18px; padding: 16px 18px; box-shadow: var(--shadow-sm); }
     .ar-card h3 { margin: 0 0 4px; font: 600 16px var(--font-display); color: var(--text); display: flex; align-items: center; gap: 10px; }
     .ar-card h3 img { width: 28px; height: 28px; }
     .ar-card p { margin: 6px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--text-muted); }
     .ar-card .why { margin-top: 10px; padding-left: 12px; border-left: 3px solid var(--g-green); font-size: 13.5px; color: var(--text); line-height: 1.45; }
     .ar-card .prod { display: inline-block; margin-top: 10px; font: 500 11.5px var(--font-mono); color: var(--blue-ink); }
-    .ar-gov { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+    .ar-gov { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+    #arDetail { overflow-y: auto; }
     .ar-gov li { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; font-size: 13px; line-height: 1.4; color: var(--text-muted); }
     .ar-gov li img { width: 24px; height: 24px; }
     .ar-gov li b { color: var(--text); font-weight: 500; }
     .ar-gov-ic { width: 24px; height: 24px; border-radius: 50%; border: 1.5px solid var(--g-green); color: var(--green-ink); font: 600 12px/21px var(--font-display); text-align: center; }
     .ar-steps { counter-reset: s; list-style: none; margin: 8px 0 0; padding: 0; font-size: 13px; color: var(--text-dim); }
-    .ar-steps li { padding: 5px 0 5px 28px; position: relative; transition: color .2s; }
-    .ar-steps li::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 4px; width: 19px; height: 19px; border-radius: 50%; border: 1px solid var(--border-strong); font: 500 11px/19px var(--font-mono); text-align: center; }
+    .ar-steps li { padding: 2px 0 2px 28px; position: relative; transition: color .2s; }
+    .ar-steps li::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 1px; width: 19px; height: 19px; border-radius: 50%; border: 1px solid var(--border-strong); font: 500 11px/19px var(--font-mono); text-align: center; }
     .ar-steps li.on { color: var(--text); }
     .ar-steps li.on::before { background: var(--g-blue); border-color: var(--g-blue); color: #FFF; }
     @media (max-width: 1200px) { .ar-grid { grid-template-columns: 1fr; } .ar-lane { grid-template-columns: 1fr; } .ar-side { position: static; } }
@@ -229,20 +238,17 @@
         <div class="ar-lane" style="--lc: var(--blue-ink)">
           <div><div class="ar-ln">01 · EXPERIENCE</div><div class="ar-lt">Where people decide</div><div class="ar-ls">Ask, review, approve</div></div>
           <div class="ar-nodes">
-            <button class="ar-node ar-ge" data-k="ge"><span class="ar-ge-mark"><img src="../../assets/media/gemini_enterprise_logo.svg" alt="Gemini Enterprise"></span><span><small>The front door</small></span></button>
+            <button class="ar-node ar-ge" data-k="ge"><span class="ar-ge-mark"><img src="../../assets/media/gemini_enterprise_logo.svg" alt="Gemini Enterprise"></span></button>
             <button class="ar-node" data-k="voice"><img src="../../assets/media/brand/gemini_spark_fullcolor_768.png" alt=""><span><b>Gemini Live</b><small>Voice, in the field</small></span></button>
             <button class="ar-node" data-k="apps"><img src="../../assets/media/gcp/CloudRun.svg" alt=""><span><b>Custom apps</b><small>Cloud Run</small></span></button>
-            <button class="ar-node" data-k="systems"><img src="../../assets/media/gcp/IntegrationServices.svg" alt=""><span><b>Existing systems</b><small>ERP, maintenance, historian</small></span></button>
+            <button class="ar-node" data-k="systems"><img src="../../assets/media/gcp/IntegrationServices.svg" alt=""><span><b>Existing systems</b><small>ERP, CMMS, historian</small></span></button>
           </div>
         </div>
         <div class="ar-lane" style="--lc: var(--purple-ink)">
           <div><div class="ar-ln">02 · AGENTS</div><div class="ar-lt">One orchestrator, specialists</div><div class="ar-ls">Specialist agents, each with a clear scope</div></div>
           <div class="ar-nodes">
             <button class="ar-node" data-k="orch"><img src="../../assets/media/gcp/Agents.svg" alt=""><span><b>Orchestrator</b><small>Plans, routes, ranks</small></span></button>
-            <span class="ar-arrow">⇄</span>
-            <button class="ar-node" data-k="agentA"><span class="ar-mono">A</span><span><b>Agent A</b><small>Specialist</small></span></button>
-            <button class="ar-node" data-k="agentB"><span class="ar-mono">B</span><span><b>Agent B</b><small>Specialist</small></span></button>
-            <button class="ar-node" data-k="agentC"><span class="ar-mono">C</span><span><b>Agent C</b><small>Specialist</small></span></button>
+            <button class="ar-node" data-k="agentA"><span class="ar-monos"><span class="ar-mono">A</span><span class="ar-mono">B</span><span class="ar-mono">C</span></span><span><b>Specialists</b><small>Agents A · B · C</small></span></button>
             <button class="ar-node ar-mg" data-k="model"><img src="../../assets/media/brand/gemini_spark_fullcolor_768.png" alt=""><span><b>Model Garden</b><span class="ar-mg-logos"><img src="../../assets/media/models/gemini-color.svg" alt="Gemini" title="Gemini"><img src="../../assets/media/models/claude-color.svg" alt="Claude" title="Claude"><img src="../../assets/media/models/openai.svg" alt="OpenAI" title="OpenAI open-weight models"></span></span></button>
             <button class="ar-node" data-k="memory"><img src="../../assets/media/gcp/VertexAI.svg" alt=""><span><b>Memory Bank</b><small>Agent Engine</small></span></button>
           </div>
@@ -287,13 +293,13 @@
     var G = "../../assets/media/gcp/", M = "../../assets/media/";
     var RT = {
       gc: { t: "Google Cloud",
-            d: [["Databases.svg","Plant historian / DCS","On-premises · one-way","plant"],["HybridMulticloud.svg","Other clouds","Data stays put","clouds"],["Cloud_Storage.svg","Cloud Storage","Lakehouse · open formats","gcs"],["BigQuery.svg","BigQuery","Analytics &amp; vector search","bq"],["VertexAI.svg","RAG Engine","SOPs, records, citations","rag"]],
+            d: [["Databases.svg","Plant historian / DCS","On-premises · one-way","plant"],["Cloud_Storage.svg","Cloud Storage","Lakehouse storage","gcs"],["BigQuery.svg","BigQuery","Analytics &amp; vector search","bq"],["VertexAI.svg","RAG Engine","SOPs, records, citations","rag"]],
             g: "",
             n: [["VertexAI.svg","Agent Engine","Managed agent runtime","rt_ae"],["CloudRun.svg","Cloud Run","Serverless containers","rt_cr"],["GKE.svg","GKE","Kubernetes","rt_gke"]] },
       op: { t: "On-premises & air-gapped",
             d: [["Databases.svg","Plant historian / DCS","On-site · never leaves","plant_op"],["Cloud_Storage.svg","GDC object storage","Files, logs, documents","objstore"],["AlloyDB.svg","AlloyDB Omni","Records &amp; vector search","alloy"],["brand/gemini_spark_fullcolor_768.png","On-site grounding","Gemini on GDC, cited","rag_op"]],
             g: "<b>On GDC</b> — GDC's own identity, audit logs and monitoring stand in for the cloud services; nothing leaves the site. Summaries can sync to a cloud lakehouse where policy allows.",
-            n: [["DistributedCloud.svg","Google Distributed Cloud","In your plant or data centre","rt_gdc"],["GKE.svg","GKE on GDC","Agents as containers","rt_gke"],["#gemma","Gemini & Gemma on-site","Models run locally","rt_local"]] },
+            n: [["DistributedCloud.svg","Distributed Cloud","Plant or data centre","rt_gdc"],["GKE.svg","GKE on GDC","Agents as containers","rt_gke"],["#gemma","Models on-site","Gemini &amp; Gemma, local","rt_local"]] },
       mc: { t: "Other clouds",
             d: [["Databases.svg","Plant historian / DCS","On-premises · one-way","plant"],["HybridMulticloud.svg","Data in AWS / Azure","Stays where it is","mc_data"],["BigQuery.svg","BigQuery Omni","Queries it in place","bqomni"],["VertexAI.svg","RAG Engine","SOPs, records, citations","rag"]],
             g: "<b>Other clouds</b> — the same identity, policy and audit apply; data governance extends to the tables BigQuery Omni reads in AWS and Azure.",
@@ -308,7 +314,7 @@
       orch: { img: G + "Agents.svg", t: "Orchestrator", p: "Breaks a request into steps, routes each to the right specialist, and ranks what matters most across the plant.", why: "Specialists stay simple and testable; the orchestrator carries the plan.", prod: "Agent Development Kit · A2A" },
       agentA: { img: G + "Agents.svg", t: "Agent A · B · C", p: "Specialist agents, each with a clear scope that can cover one or several related tasks — for example, a reconciliation agent, a monitoring agent, an advisory agent.", why: "A clear scope is what makes an agent evaluable, and therefore trustworthy.", prod: "Agent Development Kit" },
       model: { img: M + "brand/gemini_spark_fullcolor_768.png", t: "The model", p: "Gemini by default, plus partner and open models in Model Garden (Claude, OpenAI open-weight models and more), chosen per agent and swapped without a rebuild.", why: "The right model per task is how hundreds of agents stay affordable.", prod: "Gemini on Vertex AI · Model Garden" },
-      memory: { img: G + "VertexAI.svg", t: "Memory", p: "Sessions and long-term memory: the shift, the case, the decisions already taken.", why: "A handover agent that remembers last night is worth more than one that starts cold.", prod: "Agent Engine Sessions · Memory Bank" },
+      memory: { img: G + "VertexAI.svg", t: "Memory", p: "Sessions keep the current conversation; Memory Bank keeps distilled facts across sessions: the unit, the case, the decisions already taken.", why: "A handover agent that remembers last night is worth more than one that starts cold.", prod: "Agent Engine Sessions · Memory Bank" },
       mcp: { img: G + "IntegrationServices.svg", t: "Open protocols", p: "MCP connects agents to tools and data; A2A lets agents — ours, yours or a partner's — work together.", why: "Open standards are what make 'build once, run anywhere' true.", prod: "MCP · A2A · MCP Toolbox" },
       physics: { img: G + "AIMachineLearning.svg", t: "Physics & ML models", p: "Soft sensors, forecasts and physics-informed models do the numbers; the agent reasons over their output and its uncertainty.", why: "If the models disagree, the agent withholds advice — and says why.", prod: "Vertex AI · BigQuery ML" },
       calc: { img: G + "Compute.svg", t: "Calculation engines", p: "Existing solvers, simulators and engineering calculations, called as tools.", why: "Decades of engineering IP is reused, not replaced.", prod: "Compute Engine · your engines" },
@@ -360,6 +366,7 @@
         govRt.innerHTML = RT[key].g ? '<span class="ar-gov-ic" aria-hidden="true">↻</span><span>' + RT[key].g + '</span>' : "";
         govRt.hidden = !RT[key].g;
         bind(run); bind(data); run.classList.remove("fade"); data.classList.remove("fade"); govRt.classList.remove("fade");
+        if (window.arLayout) window.arLayout();
       }, 220);
     }
     document.querySelectorAll(".ar-seg button").forEach(function (b) { b.addEventListener("click", function () { setRt(b.dataset.rt); }); });
@@ -367,7 +374,7 @@
     setRt("gc"); show("intro");
 
     /* Trace: one request, top to bottom and back. */
-    var STEPS = [["ge","A controller asks in Gemini Enterprise"],["orch","The orchestrator plans and routes"],["agentB","Agent B takes the job"],["physics","The models compute — with their uncertainty"],["plant|plant_op","Readings come from the plant"],["gcs|objstore|bqomni","History pulled from the lakehouse"],["rag|rag_op","The answer is grounded and cited"],["ge","A named person reviews and approves"]];
+    var STEPS = [["ge","A controller asks in Gemini Enterprise"],["orch","The orchestrator plans and routes"],["agentA","A specialist agent takes the job"],["physics","The models compute — with their uncertainty"],["plant|plant_op","Readings come from the plant"],["gcs|objstore|bqomni","History pulled from the lakehouse"],["rag|rag_op","The answer is grounded and cited"],["ge","A named person reviews and approves"]];
     document.getElementById("arTrace").addEventListener("click", function () {
       var list = '<h3><img src="' + G + 'Agents.svg" alt="">One request, end to end</h3><ol class="ar-steps">' + STEPS.map(function (s) { return "<li>" + s[1] + "</li>"; }).join("") + "</ol>";
       detail.innerHTML = list;
@@ -381,6 +388,30 @@
         }, 200 + i * 900);
       });
     });
+
+    /* Stable layout: hovering only changes the detail card's CONTENT, never the page geometry.
+       1. The detail card is reserved at the height of its tallest possible content.
+       2. The architecture box is then matched to the right-hand column once. */
+    var env = document.querySelector(".ar-env"), side = document.querySelector(".ar-side");
+    function reserveDetail() {
+      var keep = detail.innerHTML, max = 0;
+      detail.style.height = "";
+      var all = Object.keys(D).map(function (k) { show(k); return detail.innerHTML; });
+      all.push('<h3><img src="' + G + 'Agents.svg" alt="">One request, end to end</h3><ol class="ar-steps">' + STEPS.map(function (s) { return "<li>" + s[1] + "</li>"; }).join("") + "</ol>");
+      all.forEach(function (h) { detail.innerHTML = h; max = Math.max(max, detail.offsetHeight); });
+      detail.innerHTML = keep;
+      document.querySelectorAll(".ar-node.sel").forEach(function (n) { n.classList.remove("sel"); });
+      detail.style.height = max + "px";
+    }
+    window.arLayout = function () {
+      env.style.minHeight = "";
+      if (getComputedStyle(side).position !== "sticky") return;   /* stacked layout on narrow screens */
+      env.style.minHeight = side.offsetHeight + "px";
+    };
+    function relayout() { reserveDetail(); window.arLayout(); }
+    relayout();
+    window.addEventListener("resize", relayout);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(relayout);
   })();
   </script>
   </section>
