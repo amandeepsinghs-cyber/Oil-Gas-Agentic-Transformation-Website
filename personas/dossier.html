@@ -391,6 +391,26 @@
   h2 { margin: 0; font-size: var(--fs-20); font-weight: 600; letter-spacing: -0.01em; }
   .section-note { font-size: var(--fs-12); color: var(--text-dim); }
 
+  /* ── Live agents (data/live_agents.js) ─────────────────────────────── */
+  .block.live { border: 1.5px solid #00AF57; box-shadow: 0 0 0 4px rgba(0, 175, 87, .10), var(--shadow-sm); scroll-margin-top: 90px; }
+  .live-badge { display: inline-flex; align-items: center; gap: 6px; font: 700 10.5px/1 var(--mono); letter-spacing: .08em;
+                text-transform: uppercase; color: #FFF; background: #00AF57; border-radius: 999px; padding: 5px 10px; }
+  .live-badge::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #FFF; }
+  .live-badge::before, .live-dot { animation: livePulse 1.6s ease-in-out infinite; }
+  .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #00AF57; margin-right: 6px; vertical-align: 1px; }
+  @keyframes livePulse { 0%,100% { box-shadow: 0 0 0 0 rgba(0,175,87,.55); } 50% { box-shadow: 0 0 0 5px rgba(0,175,87,0); } }
+  @media (prefers-reduced-motion: reduce) { .live-badge::before, .live-dot { animation: none; } }
+  .live-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 12px; }
+  .live-item { border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; background: var(--surface-sunk, transparent); }
+  .live-item h3 { margin: 0 0 4px; font-size: var(--fs-15, 15px); font-weight: 600; }
+  .live-item p { margin: 0 0 10px; font-size: var(--fs-12); color: var(--text-dim); line-height: 1.45; }
+  .live-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .live-links a { font: 600 12px/1 var(--font-display, inherit); padding: 7px 12px; border-radius: 999px; text-decoration: none;
+                  border: 1px solid #00AF57; color: #0A6E3C; background: rgba(0, 175, 87, .08); }
+  html.theme-dark .live-links a { color: #35D68A; }
+  .live-links a:hover { background: #00AF57; color: #FFF; }
+  .live-note { margin-top: 10px; font-size: var(--fs-11, 11px); color: var(--text-dim); }
+
   /* ── Today vs with the agent ──────────────────────────────────────
      The contrast IS the argument, so the halves are placed against each other
      rather than in sequence. Neutral versus green: red is reserved for the
@@ -999,6 +1019,7 @@
      first so a caller can override it before anything renders. -->
 <script src="../data/value_model.js"></script>
 <script src="../data/persona_registry.js"></script>
+<script src="../data/live_agents.js"></script>
 <script src="../data/personas/index.js"></script>
 <script>
 (function () {
@@ -2193,6 +2214,27 @@
         "</div>" +
       "</section>" +
 
+      (function () {
+        var live = window.liveAgentsFor ? window.liveAgentsFor(p.id) : [];
+        if (!live.length) return "";
+        var LBL = { agent: '<span class="live-dot"></span>Live in Gemini Enterprise \u2197', app: "Open live app \u2197", repo: "Code repository \u2197" };
+        return '<section class="block live" id="live-agents">' +
+          '<div class="section-head"><span class="live-badge">Live agent' + (live.length > 1 ? "s" : "") + "</span>" +
+            "<h2>Built and running for this role</h2></div>" +
+          '<div class="live-list">' +
+            live.map(function (a) {
+              return '<div class="live-item"><h3>' + esc(a.name) + "</h3><p>" + esc(a.oneLine) + "</p>" +
+                '<div class="live-links">' +
+                  ["agent", "app", "repo"].filter(function (k) { return a.links && a.links[k]; }).map(function (k) {
+                    return '<a href="' + esc(a.links[k]) + '" target="_blank" rel="noopener noreferrer">' + LBL[k] + "</a>";
+                  }).join("") +
+                "</div></div>";
+            }).join("") +
+          "</div>" +
+          '<div class="live-note">Gemini Enterprise and live app links need an Argolis sign-in.</div>' +
+        "</section>";
+      })() +
+
       /* Order is deliberate: the agents are what the reader came for, so the
          only thing between the person and the squad is the work bar -- ten
          lines that say how much of this role is even ours to take. The scene
@@ -2236,6 +2278,10 @@
       "</p>";
 
     window.scrollTo({ top: 0, behavior: "auto" });
+    if (window.location.hash === "#live-agents") {
+      var liveEl = document.getElementById("live-agents");
+      if (liveEl) setTimeout(function () { liveEl.scrollIntoView({ behavior: "smooth", block: "start" }); }, 60);
+    }
 
     if (pendingOpenAgent) {
       var card = rootEl.querySelector('.agent[data-agent="' + pendingOpenAgent + '"]');

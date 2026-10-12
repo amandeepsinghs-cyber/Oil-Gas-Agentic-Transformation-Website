@@ -32,6 +32,9 @@ assets/media/*
 !assets/media/gcp/*
 !assets/media/models/
 !assets/media/models/*
+# Voiced demo videos + posters embedded on the three demo (05) pages.
+!assets/media/video/
+!assets/media/video/*
 !assets/media/photos/swiss_cheese_nebula.jpg
 !assets/media/photos/swiss_cheese_fortified.jpg
 

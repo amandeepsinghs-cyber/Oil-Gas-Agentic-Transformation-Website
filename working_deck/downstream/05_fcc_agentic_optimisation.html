@@ -197,6 +197,11 @@
   .fc-launch img { width: 30px; height: 30px; }
   .fc-launch div { font: 700 14px var(--font-display); color: var(--text); } .fc-launch small { display: block; font: 500 11px var(--font-mono); color: var(--text-dim); }
   .fc-btn { margin-left: auto; background: var(--gemini-spark); color: #FFF; font: 700 13.5px var(--font-display); padding: 10px 18px; border-radius: 22px; text-decoration: none; white-space: nowrap; box-shadow: var(--shadow-md); }
+  .fc-vid { border: 0; cursor: pointer; background: #00AF57; }
+  .fc-modal { position: fixed; inset: 0; z-index: 2000; display: none; align-items: center; justify-content: center; background: rgba(10, 12, 16, .82); backdrop-filter: blur(6px); }
+  .fc-modal.open { display: flex; }
+  .fc-modal video { width: min(92vw, 1500px); max-height: 84vh; border-radius: 12px; background: #000; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+  .fc-modal .x { position: absolute; top: 22px; right: 28px; width: 42px; height: 42px; border-radius: 50%; border: 0; cursor: pointer; font-size: 20px; background: #FFF; color: #121317; }
   /* proof strip */
   .fc-proof { margin-top: 12px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
   .fc-p { background: var(--surface); border: 1px solid var(--border-subtle); border-radius: 14px; padding: 12px 14px; }
@@ -232,7 +237,8 @@
       <div class="fc-move"><div class="k">The agent advises</div><div class="v" id="fcMove"></div><div class="w" id="fcWhy"></div></div>
       <div class="fc-next" id="fcNext"></div>
       <div class="fc-launch"><img src="../../assets/media/brand/gemini_spark_fullcolor_768.png" alt=""><div>Launch the live FCC cockpit<small>Cloud Run · Google sign-in · Ask Gemini inside</small></div>
-        <a class="fc-btn" href="https://fcc-cockpit-1099437687941.us-central1.run.app" target="_blank" rel="noopener noreferrer">Launch demo ↗</a></div>
+        <button class="fc-btn fc-vid" type="button" id="fcVidBtn">▶ Watch video</button>
+        <a class="fc-btn" style="margin-left: 8px;" href="https://fcc-cockpit-1099437687941.us-central1.run.app" target="_blank" rel="noopener noreferrer">Launch demo ↗</a></div>
     </div>
   </div>
 
@@ -326,6 +332,25 @@
   });
   addEventListener("resize", cam);
   show(4);
+})();
+</script>
+<div class="fc-modal" id="fcModal" role="dialog" aria-label="FCC Agentic Optimisation demo video">
+  <button class="x" type="button" aria-label="Close video">✕</button>
+  <video id="fcVideo" controls preload="metadata" playsinline poster="../../assets/media/video/downstream_fcc_poster.jpg">
+    <source src="../../assets/media/video/downstream_fcc.mp4" type="video/mp4">
+  </video>
+</div>
+<script>
+(function () {
+  var m = document.getElementById("fcModal"), v = document.getElementById("fcVideo");
+  function close() { v.pause(); m.classList.remove("open"); }
+  document.getElementById("fcVidBtn").addEventListener("click", function () { m.classList.add("open"); v.play().catch(function () {}); });
+  m.addEventListener("click", function (e) { if (e.target === m || e.target.closest(".x")) close(); });
+  document.addEventListener("keydown", function (e) {
+    if (!m.classList.contains("open")) return;
+    if (e.key === "Escape") close();
+    e.stopImmediatePropagation();   /* keep slide/stop navigation keys inside the player */
+  }, true);
 })();
 </script>
     </section>
