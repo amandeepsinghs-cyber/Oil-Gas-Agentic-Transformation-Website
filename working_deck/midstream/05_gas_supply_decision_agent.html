@@ -277,14 +277,44 @@
                 </div>
               </div>
             </div>
+            <div style="display: flex; gap: 8px; align-items: center;">
+            <button type="button" id="msVidBtn" class="gemini-btn" style="background: #00AF57; border: 0; cursor: pointer;" title="Watch the recorded demo with voice">
+              <span>▶ Watch video</span>
+            </button>
             <a href="https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/13029231145782247335/session/-?mods=" target="_blank" rel="noopener noreferrer" class="gemini-btn" title="Launch the Gas Supply Decision Agent on Gemini Enterprise">
               <span>Launch Demo</span>
               <span style="font-size: 16px;">↗</span>
             </a>
+            </div>
           </div>
         </div>
 
       </div>
+      <style>
+        .ms-modal { position: fixed; inset: 0; z-index: 2000; display: none; align-items: center; justify-content: center; background: rgba(10, 12, 16, .82); backdrop-filter: blur(6px); }
+        .ms-modal.open { display: flex; }
+        .ms-modal video { width: min(92vw, 1500px); max-height: 84vh; border-radius: 12px; background: #000; box-shadow: 0 30px 80px rgba(0,0,0,.5); }
+        .ms-modal .x { position: absolute; top: 22px; right: 28px; width: 42px; height: 42px; border-radius: 50%; border: 0; cursor: pointer; font-size: 20px; background: #FFF; color: #121317; }
+      </style>
+      <div class="ms-modal" id="msModal" role="dialog" aria-label="Gas Supply Decision Agent demo video">
+        <button class="x" type="button" aria-label="Close video">✕</button>
+        <video id="msVideo" controls preload="metadata" playsinline poster="../../assets/media/video/midstream_gas_supply_agent_poster.jpg">
+          <source src="../../assets/media/video/midstream_gas_supply_agent.mp4" type="video/mp4">
+        </video>
+      </div>
+      <script>
+      (function () {
+        var m = document.getElementById("msModal"), v = document.getElementById("msVideo");
+        function close() { v.pause(); m.classList.remove("open"); }
+        document.getElementById("msVidBtn").addEventListener("click", function () { m.classList.add("open"); v.play().catch(function () {}); });
+        m.addEventListener("click", function (e) { if (e.target === m || e.target.closest(".x")) close(); });
+        document.addEventListener("keydown", function (e) {
+          if (!m.classList.contains("open")) return;
+          if (e.key === "Escape") close();
+          e.stopImmediatePropagation();
+        }, true);
+      })();
+      </script>
     </section>
   </main>
 

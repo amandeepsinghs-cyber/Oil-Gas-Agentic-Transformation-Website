@@ -67,8 +67,8 @@ window.LIVE_AGENTS = [
   },
   {
     name: "PPAC Energy Intelligence Agent",
-    oneLine: "Audits hydrocarbon production and consumption data and drafts planning and economics reports.",
-    personas: ["P17"],
+    oneLine: "Gemini Enterprise agent: aggregates monthly hydrocarbon data, forecasts demand and drafts the Ready Reckoner and Flash Report, with an audit checklist on top.",
+    personas: ["P42", "P17"],
     links: {
       agent: "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/5546604378236005227/session/-?mods="
     }
