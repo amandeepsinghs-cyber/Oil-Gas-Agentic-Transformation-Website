@@ -331,8 +331,9 @@
 
     // Auto-initialize selected domain from storage
     try {
-      const savedDomain = localStorage.getItem('selected-domain') || 'upstream';
-      selectDomain(savedDomain);
+      /* Every briefing starts on Upstream; ?domain=midstream|downstream opens another track. */
+      const q = new URLSearchParams(location.search).get('domain');
+      selectDomain(['upstream', 'midstream', 'downstream'].indexOf(q) !== -1 ? q : 'upstream');
     } catch (e) {}
     function toggleHeroCockpitDemo() {
       const drawer = document.getElementById('hero-cockpit-drawer');
