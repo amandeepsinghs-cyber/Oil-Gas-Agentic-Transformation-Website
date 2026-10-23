@@ -19,7 +19,7 @@ window.LIVE_AGENTS = [
     oneLine: "Turns scanned well logs into calibrated LAS curves with an interactive log chart.",
     personas: ["P04"],
     links: {
-      agent: "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/10364749965176844252/session/-?mods="
+      agent: "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/10364749965176844252/session/-?mods=&authuser=admin@amandeepsinghs.altostrat.com"
     }
   },
   {
@@ -27,7 +27,7 @@ window.LIVE_AGENTS = [
     oneLine: "Ranks workover candidates using lift-failure risk, water-cut diagnostics and decline curves.",
     personas: ["P09"],
     links: {
-      agent: "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/9133818840672638712/session/-?mods=",
+      agent: "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/9133818840672638712/session/-?mods=&authuser=admin@amandeepsinghs.altostrat.com",
       repo:  "https://github.com/amandeepsinghs-cyber/well-workover-intervention"
     }
   },
@@ -53,7 +53,7 @@ window.LIVE_AGENTS = [
     oneLine: "Gemini Enterprise agent that joins company data with live market data for the winter supply call.",
     personas: ["P42", "P14"],
     links: {
-      agent: "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/13029231145782247335/session/-?mods=",
+      agent: "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/13029231145782247335/session/-?mods=&authuser=admin@amandeepsinghs.altostrat.com",
       repo:  "https://github.com/amandeepsinghs-cyber/gail-midstream-ge-demo"
     }
   },
@@ -62,7 +62,7 @@ window.LIVE_AGENTS = [
     oneLine: "Splices and depth-matches log runs into one continuous, QC'd petrophysical curve set.",
     personas: ["P04", "P24"],
     links: {
-      agent: "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/16397021713347413121/session/-?mods="
+      agent: "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/16397021713347413121/session/-?mods=&authuser=admin@amandeepsinghs.altostrat.com"
     }
   },
   {
@@ -70,7 +70,7 @@ window.LIVE_AGENTS = [
     oneLine: "Gemini Enterprise agent: aggregates monthly hydrocarbon data, forecasts demand and drafts the Ready Reckoner and Flash Report, with an audit checklist on top.",
     personas: ["P42", "P17"],
     links: {
-      agent: "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/5546604378236005227/session/-?mods="
+      agent: "https://vertexaisearch.cloud.google.com/home/cid/7dab71a6-8f69-48ba-841f-492144d75c05/r/agent/5546604378236005227/session/-?mods=&authuser=admin@amandeepsinghs.altostrat.com"
     }
   },
   {
