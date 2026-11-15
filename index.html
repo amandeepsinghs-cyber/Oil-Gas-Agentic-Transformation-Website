@@ -10,9 +10,7 @@
     1. Everyone starts at the same opening (00).
     2. The journey forks by the client's sector: Upstream / Midstream / Downstream (01-05),
        each ending in its own live demo.
-    3. All tracks converge at agentic workflows and share the close (06-11).
-    4. Deep dives A1-A4 (architecture, models, governance, surfaces) sit outside the
-       numbered story and are opened on a question, usually from Why Google (10).
+    3. All tracks converge at agentic workflows and share the close (06-15).
   The fork and merge lines are drawn by script from the real card positions, so they
   stay attached to the cards at any width. Aurora tokens only (assets/aurora.css).
 -->
@@ -63,7 +61,7 @@
   h1 { font: 600 clamp(30px, 3vw, 44px)/1.1 var(--font-display); letter-spacing: -0.8px; margin: 12px 0 10px; }
   .lede { font-size: 17px; line-height: 1.5; color: var(--text-muted); margin: 0; max-width: 760px; }
   .lede b { color: var(--text); font-weight: 500; }
-  .glance { display: grid; grid-template-columns: repeat(5, 1fr); background: var(--surface); border: 1px solid var(--border-subtle);
+  .glance { display: grid; grid-template-columns: repeat(4, 1fr); background: var(--surface); border: 1px solid var(--border-subtle);
             border-radius: 18px; box-shadow: var(--shadow-sm); overflow: hidden; }
   .glance div { padding: 14px 16px; border-left: 1px solid var(--border-subtle); }
   .glance div:first-child { border-left: 0; }
@@ -205,8 +203,7 @@
       <div><b data-count="start">1</b><span>shared opening</span></div>
       <div><b data-count="tracks">3</b><span>sector-tailored tracks</span></div>
       <div><b data-count="demos">3</b><span>live demos</span></div>
-      <div><b data-count="shared">6</b><span>shared pages to close</span></div>
-      <div><b data-count="deep">4</b><span>deep dives on demand</span></div>
+      <div><b data-count="shared">10</b><span>shared pages to close</span></div>
     </div>
   </section>
 
@@ -282,7 +279,7 @@
 
     <!-- ── 3 · CONVERGED CLOSE ──────────────────────────────────────────── -->
     <div class="stage">
-      <div class="sl"><div class="n">STAGE 3</div><h2>Everyone converges here</h2><p>The workforce view, how it gets built, what it makes of the organisation, why Google, and the 100-day start. Deep dives on demand.</p></div>
+      <div class="sl"><div class="n">STAGE 3</div><h2>Everyone converges here</h2><p>The workforce view, then how we build, run, govern and deliver it.</p></div>
       <div class="shared" id="nShared">
         <div class="col-a">
           <div class="grp-h">Agentic workflows &amp; workforce</div>
@@ -314,16 +311,13 @@
           <div class="grp-h">From personas to production</div>
           <div class="grid-b">
             <a class="tile" href="working_deck/build/page_01_build.html" data-shared><div class="top"><span class="num">08</span><img src="assets/media/gcp/AIMachineLearning.svg" alt=""></div><h4>How agents are built</h4><p>No-code, low-code, high-code, ready-made.</p></a>
-            <a class="tile" href="working_deck/build/page_06_resilience.html" data-shared><div class="top"><span class="num">09</span><img src="assets/media/gcp/Observability.svg" alt=""></div><h4>Structural resilience</h4><p>A workforce and workflows that hold.</p></a>
-            <a class="tile" href="working_deck/build/page_07_gartner.html" data-shared><div class="top"><span class="num">10</span><img src="assets/media/gcp/Compute.svg" alt=""></div><h4>Why Google</h4><p>The full AI stack, plus Gartner.</p><span class="badge" style="--tc:var(--g-blue)">▶ Video</span></a>
-            <a class="tile" href="working_deck/build/page_08_100_days.html" data-shared><div class="top"><span class="num">11</span><img src="assets/media/gcp/Marketplace.svg" alt=""></div><h4>100 days to proof of value</h4><p>The engagement and the ask.</p></a>
-          </div>
-          <div class="grp-h" style="margin-top: 18px;">Deep dives · opened on a question</div>
-          <div class="grid-b">
-            <a class="tile" href="working_deck/build/page_03_architecture.html" data-deep><div class="top"><span class="num">A1</span><img src="assets/media/gcp/HybridMulticloud.svg" alt=""></div><h4>Architecture</h4><p>Runs where the data and the plant are.</p><span class="badge soft">Interactive</span></a>
-            <a class="tile" href="working_deck/build/page_04_models.html" data-deep><div class="top"><span class="num">A2</span><img src="assets/media/gcp/VertexAI.svg" alt=""></div><h4>Model choice</h4><p>The right model for the right task.</p><span class="badge soft">Interactive</span></a>
-            <a class="tile" href="working_deck/build/page_05_govern.html" data-deep><div class="top"><span class="num">A3</span><img src="assets/media/gcp/SecurityIdentity.svg" alt=""></div><h4>Governance</h4><p>Identity, policy, human approval, audit.</p><span class="badge soft">Interactive</span></a>
-            <a class="tile" href="working_deck/build/page_02_surface.html" data-deep><div class="top"><span class="num">A4</span><img src="assets/media/gcp/CloudRun.svg" alt=""></div><h4>Where people meet the agent</h4><p>Built once, used on every surface.</p></a>
+            <a class="tile" href="working_deck/build/page_03_architecture.html" data-shared><div class="top"><span class="num">09</span><img src="assets/media/gcp/HybridMulticloud.svg" alt=""></div><h4>Architecture</h4><p>Runs where the data and the plant are.</p><span class="badge soft">Interactive</span></a>
+            <a class="tile" href="working_deck/build/page_04_models.html" data-shared><div class="top"><span class="num">10</span><img src="assets/media/gcp/VertexAI.svg" alt=""></div><h4>Model choice</h4><p>The right model for the right task.</p><span class="badge soft">Interactive</span></a>
+            <a class="tile" href="working_deck/build/page_05_govern.html" data-shared><div class="top"><span class="num">11</span><img src="assets/media/gcp/SecurityIdentity.svg" alt=""></div><h4>Governance</h4><p>Identity, policy, human approval, audit.</p><span class="badge soft">Interactive</span></a>
+            <a class="tile" href="working_deck/build/page_02_surface.html" data-shared><div class="top"><span class="num">12</span><img src="assets/media/gcp/CloudRun.svg" alt=""></div><h4>Where people meet the agent</h4><p>Built once, used on every surface.</p></a>
+            <a class="tile" href="working_deck/build/page_06_resilience.html" data-shared><div class="top"><span class="num">13</span><img src="assets/media/gcp/Observability.svg" alt=""></div><h4>Structural resilience</h4><p>A workforce and workflows that hold.</p></a>
+            <a class="tile" href="working_deck/build/page_07_gartner.html" data-shared><div class="top"><span class="num">14</span><img src="assets/media/gcp/Compute.svg" alt=""></div><h4>Why Google</h4><p>The full AI stack, plus Gartner.</p><span class="badge" style="--tc:var(--g-blue)">▶ Video</span></a>
+            <a class="tile" href="working_deck/build/page_08_100_days.html" data-shared><div class="top"><span class="num">15</span><img src="assets/media/gcp/Marketplace.svg" alt=""></div><h4>100 days to proof of value</h4><p>The engagement and the ask.</p></a>
           </div>
         </div>
       </div>
@@ -359,7 +353,7 @@
 
   /* at-a-glance counts come from the page itself, not typed numbers */
   var C = { start: document.querySelectorAll('[data-start]').length, tracks: document.querySelectorAll('[data-track]').length,
-            demos: document.querySelectorAll('[data-demo]').length, shared: document.querySelectorAll('[data-shared]').length, deep: document.querySelectorAll('[data-deep]').length };
+            demos: document.querySelectorAll('[data-demo]').length, shared: document.querySelectorAll('[data-shared]').length };
   document.querySelectorAll('[data-count]').forEach(function (b) { b.textContent = C[b.dataset.count]; });
 
   /* fork + merge lines, drawn from the real card positions */
