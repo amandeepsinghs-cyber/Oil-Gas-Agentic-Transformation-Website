@@ -8,4 +8,4 @@ Used by `working_deck/build/page_03_architecture.html`.
 
 Products without their own icon in the library are shown with their category icon and a text label:
 Model Armor → Security Command Center · VPC Service Controls → Networking · Cloud Audit Logs → Observability ·
-Agent Development Kit / Agent Engine / Memory Bank → Agents / Vertex AI.
+Agent Development Kit / Agent Runtime / Memory Bank → Agents / Vertex AI.

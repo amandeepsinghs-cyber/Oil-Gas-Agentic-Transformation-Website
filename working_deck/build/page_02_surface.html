@@ -113,7 +113,7 @@
 <body style="background: var(--canvas); color: var(--text-muted); font-family: var(--font-display); margin: 0; padding: 0; overflow-x: hidden;">
 
   <!-- Single-Page Executive Top Navigation Bar -->
-  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: rgba(248, 249, 252, 0.85); border-bottom: 1px solid var(--border-subtle); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
+  <header class="executive-top-nav" style="backdrop-filter: blur(20px); background: color-mix(in srgb, var(--canvas) 85%, transparent); border-bottom: 1px solid var(--border-subtle); padding: 14px max(24px, 4vw); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center;">
     <a href="../../index.html" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
       <img src="../../assets/media/wip/image25.png" alt="Google Cloud" style="height: 32px; width: auto;">
       <div style="width: 1px; height: 20px; background: var(--surface-sunk);"></div>
@@ -125,7 +125,7 @@
         <span>Light Mode</span>
       </button>
       <a href="page_05_govern.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--text-dim); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: var(--surface-sunk); transition: color 0.2s;">← Prev Page</a>
-      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;" data-bnum="2">12 / 15</span>
+      <span style="font-family: var(--font-mono); font-size: 13px; color: var(--g-blue); font-weight: 700;" data-bnum="5">12 / 15</span>
       <a href="page_06_resilience.html" style="font-family: var(--font-display); font-size: 13.5px; font-weight: 700; color: var(--security-azure); text-decoration: none; padding: 4px 10px; border-radius: 6px; background: rgba(49, 134, 255, 0.10); transition: color 0.2s;">Next Page →</a>
       <a href="../../index.html" style="font-family: var(--font-display); font-size: 12.5px; font-weight: 700; color: #000; background: #FFF; padding: 6px 14px; border-radius: 20px; text-decoration: none; margin-left: 8px;">
         All Slides ↗
@@ -242,7 +242,7 @@
   .sf-arch { margin-top: 10px; font-size: 12.5px; color: var(--text-dim); } .sf-arch a { color: var(--blue-ink); text-decoration: none; }
   @media (max-width: 1150px) { .sf-grid { grid-template-columns: 1fr; } .sf-same { grid-template-columns: 1fr; } }
 </style>
-<!-- Speaker notes: "Where the agent RUNS is the Architecture page (Agent Engine, Cloud Run, GKE, on-prem). This page is
+<!-- Speaker notes: "Where the agent RUNS is the Architecture page (Agent Runtime, Cloud Run, GKE, on-prem). This page is
      about where people MEET it. One governed agent, built once in Gemini Enterprise, shows up in four places, so people
      don't change how they work. Same agent ID, same Model Armor checks, same audit trail on every surface."
      Embedding in third-party systems (ERP / maintenance) is via API or an embedded panel; confirm the integration pattern
@@ -317,7 +317,7 @@
     <span class="k">Same agent on every surface</span>
     <div class="sf-chips">
       <span><img src="../../assets/media/gcp/Agents.svg" alt="">One registry entry</span>
-      <span><img src="../../assets/media/gcp/VertexAI.svg" alt="">Agent Engine</span>
+      <span><img src="../../assets/media/gcp/VertexAI.svg" alt="">Agent Runtime</span>
       <span><img src="../../assets/media/gcp/SecurityCommandCenter.svg" alt="">Model Armor</span>
       <span><img src="../../assets/media/gcp/SecurityIdentity.svg" alt="">Grace's permissions</span>
       <span><img src="../../assets/media/gcp/Observability.svg" alt="">One audit log</span>
