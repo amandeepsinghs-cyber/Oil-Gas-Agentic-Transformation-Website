@@ -1568,10 +1568,10 @@
       /* After the persona conversation every track converges on the shared
          Build section (build -> surface -> architecture -> models -> govern ->
          resilience -> why Google -> 100 days). Journey numbers: 00 main page,
-         track pages, this map, then the 8 Build pages. */
-      upstream:   { prev: "bridge/06_one_to_many.html", next: "build/page_01_build.html", count: "07 / 15" },
-      midstream:  { prev: "bridge/06_one_to_many.html", next: "build/page_01_build.html", count: "07 / 15" },
-      downstream: { prev: "bridge/06_one_to_many.html", next: "build/page_01_build.html", count: "07 / 15" },
+         track pages, this map, then the 4 main-story Build pages (deep dives carry no number). */
+      upstream:   { prev: "bridge/06_one_to_many.html", next: "build/page_01_build.html", count: "07 / 11" },
+      midstream:  { prev: "bridge/06_one_to_many.html", next: "build/page_01_build.html", count: "07 / 11" },
+      downstream: { prev: "bridge/06_one_to_many.html", next: "build/page_01_build.html", count: "07 / 11" },
       all:        { prev: "pages/page_00.html",      next: "build/page_01_build.html", count: "" }
     }[d];
     var pv = document.getElementById("navPrev"), nx = document.getElementById("navNext"),
@@ -1579,7 +1579,7 @@
     if (pv) pv.href = NAV.prev;
     if (nx) nx.href = NAV.next;
     if (ct) { ct.textContent = NAV.count; ct.hidden = !NAV.count; }
-    if (mk) mk.innerHTML = (d === "all" ? "Full value chain" : LABEL[d]) + " &nbsp;//&nbsp; Persona Map";
+    if (mk) mk.innerHTML = (d === "all" ? "Full value chain &nbsp;//&nbsp; Persona Map" : "Stage 07 &nbsp;//&nbsp; " + LABEL[d] + " persona map");
   });
 })();
 </script>
