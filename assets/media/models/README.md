@@ -1,6 +1,6 @@
 # Model family marks
 
-Used on `working_deck/build/page_04_models.html` and `page_03_architecture.html` to identify model families.
+Used on `working_deck/build/page_03_models.html` and `page_02_architecture.html` to identify model families.
 
 | File | Model family | Owner |
 |---|---|---|
